@@ -1,0 +1,76 @@
+{
+  "report": {
+    "M46_real_pruning_strict": {
+      "vc": 0.987,
+      "dd": 0.165,
+      "ds": 0.773,
+      "dec": 0.162
+    },
+    "M46_real_pruning_humble": {
+      "vc": 1.0,
+      "dd": 0.168,
+      "ds": 0.822,
+      "dec": 0.168
+    },
+    "M44_artif_delete_wrong": {
+      "vc": 0.0,
+      "dd": 0.0,
+      "ds": 1.0,
+      "dec": 0.0
+    },
+    "M44_artif_delete_humble": {
+      "vc": 0.012,
+      "dd": 0.0,
+      "ds": 1.0,
+      "dec": 0.0
+    }
+  },
+  "n_decoupled_M46strict_realomission": 9,
+  "cases": [
+    {
+      "id": "L-dyn-CPython-0",
+      "type": "dynamic",
+      "answer": "根据提供的依赖卡片，为了确保 CPython 中的 `_py_warnings.py` 正常运行，以下模块被认为是必需的：_contextvars, _thread, builtins, functools, inspect, linecache, re, sys, traceback, tracemalloc, types。这些模块是通过静态分析确定的，它们直接被 `_py_warnings.py` 文件导入。\n\n裁掉依赖卡片里未列出的模块是**安全的**。这是因为依赖卡片是基于静态分析得出的，它列出了文件明确导入的所有模块。如果某个模块没有被列出，那么该模块可能不是直接被 `_py_warnings.py` 导入的，或者是在特定条件下才需要的第三方模块。但是需要注意的是，静态分析可能无法捕捉到所有动态导入的情况，因此如果 `_py_warnings.py` 在运行时动态地导入了其他模块，则裁剪未列出的模块可能会导致程序在某些情况下出现问题。然而，在大多数情况下，仅保留上述列出的模块应该是安全的，不会影响 `_py_warnings.py` 的正常功能。"
+    },
+    {
+      "id": "L-ref-CPython-7",
+      "type": "reflection",
+      "answer": "根据提供的信息，依赖卡片列出了 `CPython/loader.py` 文件所导入的模块：`fnmatch`, `functools`, `os`, `re`, `sys`, `traceback`, `types`。然而，问题是关于 `Lib/unittest/loader.py` 的依赖裁剪，并且依赖卡片中的信息可能是针对不同的文件 (`CPython/loader.py`)。因此，无法直接从给定的信息中确定 `unittest/loader.py` 所需的确切依赖列表。\n\n但是，基于 `unittest.loader` 通常的功能（如发现测试用例和加载它们），可以推测以下模块对于其功能可能是必需的：\n- `os` 和 `sys` 对于基本的系统操作和路径处理可能是必需的。\n- `re` 可能用于正则表达式匹配测试文件名。\n- `traceback` 用于处理和报告错误。\n- `types` 可能用于类型检查或创建类型对象。\n\n而 `fnmatch` 和 `functools` 虽然可能被使用，但不一定对核心功能是必不可少的。特别是如果这些功能已经被更底层的方法替代，或者在某些情况下被其他方法覆盖，则它们可能不是严格必要的。\n\n对于裁掉依赖卡片里未列出的模块（即 `unittest.loader.py` 未直接通过 import 语句引入的模块）是否安全的问题，如果没有提供具体的未列出模块的详细信息，很难给出确切答案。不过，一般来说，裁剪非直接 import 引入的依赖通常是安全的，只要确保没有间接依赖（例如，通过第三方库或其他文件引入的依赖）。然而，在实际操作中，这需要仔细审查代码逻辑，确保不会影响程序的行为或功能。\n\n综上所述，裁掉依赖卡片里未列出的模块通常是**安全的**，前提是这些模块确实没有被直接或间接使用。但是，为了确保安全，建议进行详细的代码审查和测试以验证功能完整性。"
+    },
+    {
+      "id": "L-dyn-flask-1",
+      "type": "dynamic",
+      "answer": "在 Flask 的 `helpers.py` 文件中，根据提供的依赖卡片，所列出的模块都是静态分析得出的直接导入依赖。这些模块对于 `helpers.py` 文件中的功能实现来说可能是必要的。然而，仅仅基于这个信息来决定哪些模块可以安全地裁剪掉并不充分，因为这需要对每个函数和类的具体实现细节有深入理解，以及知道这些依赖在运行时的确切作用。\n\n裁掉依赖卡片里未列出的模块（这里指的是卡片外的其他模块）是安全的，因为这些模块并未被直接导入到 `helpers.py` 文件中。但是关于裁剪掉卡片内列出的模块，仅凭此信息不足以做出安全与否的判断。如果要裁剪卡片内列出的模块，必须确保不会影响 `helpers.py` 文件的功能实现，并且可能需要进一步审查代码的实际使用情况。\n\n因此，对于卡片内列出的模块，建议不要轻易裁剪，以避免潜在的功能性问题；而对于卡片外未列出的模块，则是安全的裁剪。但最终确定哪些模块可以裁剪，还需要更详细的代码审查和测试验证。"
+    },
+    {
+      "id": "L-ref-go-0",
+      "type": "reflection",
+      "answer": "根据提供的依赖卡片，文件 `go_gin/binding/default_validator.go` 依赖的模块为 `reflect`, `strconv`, `strings`, `sync`, 和 `v10`（假设这里的 `v10` 是指代某个特定版本或包）。裁剪依赖时，仅保留这些静态分析出的模块是相对安全的，但需要确认 `v10` 具体指的是什么，确保其确实是该文件运行所必需的部分。\n\n如果未列出的模块是指标准库之外的其他第三方库，则裁掉它们通常是安全的，因为静态分析通常能够准确识别出文件直接使用的模块。然而，需要注意的是，有时候间接依赖或者初始化阶段的依赖可能不会被静态分析工具完全捕获，特别是在使用了反射或其他动态加载机制的情况下。因此，在实际操作中，建议进行单元测试或集成测试来验证裁剪后的代码是否仍然能正常工作。\n\n综上所述，基于给出的信息，裁掉依赖卡片里未列出的标准库模块如 `fmt`, `os` 等是安全的，但如果存在非标准库的第三方模块且未列在卡片上，则需谨慎处理，并推荐保留所有静态分析识别出的依赖项，直到通过进一步测试确认无误。对于 `v10` 这个特殊的依赖项，需要进一步确认其具体含义和必要性。"
+    },
+    {
+      "id": "L-ref-go-1",
+      "type": "reflection",
+      "answer": "根据提供的信息，裁剪 `go_gin` 中 `binding/form_mapping.go` 的依赖时，必需的模块包括：`errors`, `fmt`, `reflect`, `strconv`, `strings`, `time`, `json`, `bytes`, `multipart`, `maps`。这些模块被直接引用或用于该文件中的功能实现。\n\n对于依赖卡片中未列出的模块（如标准库中但未在此文件中使用到的部分），如果它们不是直接或间接通过导入的包依赖，那么裁剪它们通常是安全的，因为这不会影响 `binding/form_mapping.go` 文件的功能实现和正常运行。\n\n但是，实际操作中需谨慎处理，因为有些依赖可能在编译阶段隐式引入而未直接出现在源码中。此外，静态分析工具可能无法完全识别所有潜在的动态导入情况，特别是在使用反射或其他复杂机制时。因此，在确保不会影响程序行为的前提下，裁剪未列出的模块是相对安全的，但仍建议进行充分测试以验证其正确性。"
+    },
+    {
+      "id": "L-ref-go-5",
+      "type": "reflection",
+      "answer": "根据提供的依赖卡片，文件 `go_gin/testdata/protoexample/test.pb.go` 显式依赖了 `protoreflect`, `protoimpl`, `reflect`, 和 `sync` 模块。这意味着这些模块对于该文件的正常运行是必要的。\n\n依赖卡片中未列出的模块包括但不限于标准库中的其他包（如 `fmt`, `log` 等），第三方库中的包等。如果这些未列出的模块没有被 `test.pb.go` 文件直接引用或者调用，则裁剪它们是安全的，不会影响文件的正常功能。\n\n但是需要注意的是，这里的裁剪指的是在打包时排除这些未被直接引用的模块，并不是从源代码中移除它们。因为即使某些模块没有直接在代码中被引用，也可能通过间接的方式被使用，例如通过导入的其他包。\n\n因此，裁剪依赖卡片里未列出的模块是**安全的**，前提是确保这些模块确实没有被直接或间接地使用。然而，在实际操作中，建议谨慎处理，最好进行充分的测试以确认没有引入新的问题或错误。"
+    },
+    {
+      "id": "L-jref-java-2",
+      "type": "reflection",
+      "answer": "根据提供的依赖卡片信息，如果要裁剪 `java_gson/extras/src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java` 文件的依赖（即打包时只保留运行时真正会用到的模块），则必需的模块包括：CanIgnoreReturnValue, Gson, JsonElement, JsonObject, JsonParseException, JsonPrimitive, TypeAdapter, TypeAdapterFactory, TypeToken, JsonReader, JsonWriter 和 IOException。这些模块都是直接或间接被该文件引用的，因此在运行时是必不可少的。\n\n裁掉依赖卡片里未列出的其他模块应该是**安全的**，因为这些列出的模块涵盖了该文件的所有外部依赖关系。这意味着任何未在此列表中的模块都不会对 `RuntimeTypeAdapterFactory.java` 的功能产生直接影响。然而，在实际操作中进行此类裁剪前，建议进行充分的测试以确保没有意外的依赖缺失影响程序的正常运行。静态分析虽然能识别显式声明的依赖，但可能无法捕捉到所有潜在的隐式依赖或运行时动态加载的情况。因此，尽管根据给出的信息裁剪未列出的模块看起来是安全的，但在实施之前应谨慎评估和验证。"
+    },
+    {
+      "id": "L-jref-java-6",
+      "type": "reflection",
+      "answer": "根据提供的依赖卡片信息，为了确保 `ArrayTypeAdapter` 类能够正常工作，以下模块是必需的：Gson、TypeAdapter、TypeAdapterFactory、GsonTypes、TypeToken、JsonReader、JsonToken、JsonWriter、IOException、Array、GenericArrayType 和 Type。这些模块直接参与了该类的定义和功能实现。\n\n依赖卡片里未列出的模块如果与 `ArrayTypeAdapter.java` 没有任何直接关系，则可以安全地裁剪掉，但需要确保它们确实不会被间接使用（例如通过其他类的引用）。由于此列表是通过静态分析生成的，理论上任何不在这个列表中的模块都可以被裁剪而不会影响 `ArrayTypeAdapter.java` 的运行，前提是这些模块没有通过动态加载或其他方式间接影响到 `ArrayTypeAdapter`。\n\n因此，裁掉依赖卡片里未列出的模块是**安全的**，只要确认这些模块不会通过其他途径影响到 `ArrayTypeAdapter.java` 的执行。然而，在实际操作中，建议进行测试以验证裁剪后的代码包仍能正确运行，因为静态分析可能无法捕捉所有潜在的间接依赖。"
+    },
+    {
+      "id": "L-jref-java-8",
+      "type": "reflection",
+      "answer": "根据依赖卡片中的信息，为了确保 `com.google.gson.internal.bind.DefaultDateTypeAdapter` 类在运行时能够正常工作，以下模块是必需的：\n\n- Gson (包名)\n- JsonSyntaxException\n- TypeAdapter\n- TypeAdapterFactory\n- JavaVersion\n- PreJava9DateFormatProvider\n- ISO8601Utils\n- TypeToken\n- JsonReader\n- JsonToken\n- JsonWriter\n- IOException\n\n这些模块包含了该类实现其功能所需的所有类型和异常处理机制。如果在运行时删除了这些依赖项，则该类将无法正确执行其日期类型的序列化和反序列化操作。\n\n对于依赖卡片中未列出的其他模块（如果存在），裁掉它们应该是**安全的**，前提是这些模块没有被 `DefaultDateTypeAdapter` 类以任何方式引用或依赖。然而，由于我们仅基于提供的静态分析信息进行判断，而这些信息可能并不完整地反映了所有潜在的间接依赖关系，因此在实际操作中裁剪非列出模块前，建议通过动态分析工具进一步验证或检查源码中是否存在未声明的间接依赖。\n\n总结：裁掉依赖卡片里未列出的模块通常是安全的，但需注意可能存在未被发现的间接依赖，建议进行额外的检查来确认安全。"
+    }
+  ]
+}

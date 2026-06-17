@@ -1,0 +1,26 @@
+# M11 融合检索对照:纯依赖卡片(5 dep, 0 sim)。索引/检索栈与 werkzeug_pe_cot 完全一致,只加 fusion 槽位。
+name: werkzeug_dep_only
+repo_root: repos/werkzeug
+commits_path: null
+index_dir: indexes/werkzeug_full
+chunking:
+  strategy: function
+  include_graph_cards: true
+embedder:
+  type: sentence_transformer
+  model_name: models/bge-small-en-v1.5  # M65 审计:英文/代码任务用 en(R@5 0.93≫zh 0.32),零成本;勿改回 zh(冒烟测试会拦)
+backend:
+  type: hybrid
+  top_k: 5
+  rerank: true
+  rerank_candidates: 12
+  rerank_scorer: cross_encoder
+  rerank_model: models/bge-reranker-base
+  fusion_dep: 5
+  fusion_sim: 0
+llm:
+  type: api
+  model: Qwen/Qwen2.5-14B-Instruct
+  base_url: http://localhost:8001/v1
+  temperature: 0.0
+prompt_file: configs/prompts/pe_cot.yaml

@@ -1,0 +1,28 @@
+{
+ "decouple_rate": 0.8700564971751412,
+ "decouple_n_tokens": 177,
+ "pairs": {
+  "baseline_vs_RAGfull": {
+   "n": 56,
+   "det_recall_baseline": 0.159,
+   "det_recall_rag": 0.7474,
+   "det_recall_delta": 0.5883,
+   "ttest_t": 8.681,
+   "ttest_p": 6.861144246400593e-12,
+   "allkw_acc_baseline": 0.125,
+   "allkw_acc_rag": 0.7143,
+   "allkw_acc_delta": 0.5893
+  },
+  "purellm_vs_graphcards": {
+   "n": 56,
+   "det_recall_baseline": 0.2871,
+   "det_recall_rag": 0.5816,
+   "det_recall_delta": 0.2945,
+   "ttest_t": 3.515,
+   "ttest_p": 0.0008877487602656899,
+   "allkw_acc_baseline": 0.125,
+   "allkw_acc_rag": 0.5179,
+   "allkw_acc_delta": 0.3929
+  }
+ }
+}

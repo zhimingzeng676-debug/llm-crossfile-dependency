@@ -1,0 +1,267 @@
+{
+ "forward": {
+  "app.py": [
+   "ctx.py",
+   "debughelpers.py",
+   "globals.py",
+   "helpers.py",
+   "sansio/app.py",
+   "sansio/scaffold.py",
+   "sessions.py",
+   "signals.py",
+   "templating.py",
+   "testing.py",
+   "typing.py",
+   "wrappers.py"
+  ],
+  "blueprints.py": [
+   "cli.py",
+   "globals.py",
+   "helpers.py",
+   "sansio/blueprints.py",
+   "sansio/scaffold.py",
+   "wrappers.py"
+  ],
+  "cli.py": [
+   "app.py",
+   "globals.py",
+   "helpers.py"
+  ],
+  "config.py": [
+   "sansio/app.py"
+  ],
+  "ctx.py": [
+   "app.py",
+   "globals.py",
+   "sessions.py",
+   "signals.py",
+   "wrappers.py"
+  ],
+  "debughelpers.py": [
+   "blueprints.py",
+   "globals.py",
+   "sansio/app.py",
+   "sansio/scaffold.py",
+   "wrappers.py"
+  ],
+  "globals.py": [
+   "app.py",
+   "ctx.py",
+   "sessions.py",
+   "wrappers.py"
+  ],
+  "helpers.py": [
+   "globals.py",
+   "signals.py",
+   "wrappers.py"
+  ],
+  "logging.py": [
+   "globals.py",
+   "sansio/app.py"
+  ],
+  "sessions.py": [
+   "app.py",
+   "json/tag.py",
+   "wrappers.py"
+  ],
+  "templating.py": [
+   "app.py",
+   "debughelpers.py",
+   "globals.py",
+   "helpers.py",
+   "sansio/app.py",
+   "sansio/scaffold.py",
+   "signals.py"
+  ],
+  "testing.py": [
+   "app.py",
+   "cli.py",
+   "sessions.py"
+  ],
+  "views.py": [
+   "globals.py"
+  ],
+  "wrappers.py": [
+   "debughelpers.py",
+   "globals.py",
+   "helpers.py"
+  ],
+  "__init__.py": [
+   "app.py",
+   "blueprints.py",
+   "config.py",
+   "ctx.py",
+   "globals.py",
+   "helpers.py",
+   "json/__init__.py",
+   "signals.py",
+   "templating.py",
+   "wrappers.py"
+  ],
+  "__main__.py": [
+   "cli.py"
+  ],
+  "json/provider.py": [
+   "sansio/app.py"
+  ],
+  "json/tag.py": [
+   "json/__init__.py"
+  ],
+  "json/__init__.py": [
+   "globals.py",
+   "json/provider.py",
+   "wrappers.py"
+  ],
+  "sansio/app.py": [
+   "config.py",
+   "ctx.py",
+   "helpers.py",
+   "json/provider.py",
+   "logging.py",
+   "sansio/blueprints.py",
+   "sansio/scaffold.py",
+   "templating.py",
+   "testing.py"
+  ],
+  "sansio/blueprints.py": [
+   "sansio/app.py",
+   "sansio/scaffold.py"
+  ],
+  "sansio/scaffold.py": [
+   "helpers.py",
+   "templating.py"
+  ]
+ },
+ "reverse": {
+  "helpers.py": [
+   "__init__.py",
+   "app.py",
+   "blueprints.py",
+   "cli.py",
+   "sansio/app.py",
+   "sansio/scaffold.py",
+   "templating.py",
+   "wrappers.py"
+  ],
+  "globals.py": [
+   "__init__.py",
+   "app.py",
+   "blueprints.py",
+   "cli.py",
+   "ctx.py",
+   "debughelpers.py",
+   "helpers.py",
+   "json/__init__.py",
+   "logging.py",
+   "templating.py",
+   "views.py",
+   "wrappers.py"
+  ],
+  "signals.py": [
+   "__init__.py",
+   "app.py",
+   "ctx.py",
+   "helpers.py",
+   "templating.py"
+  ],
+  "templating.py": [
+   "__init__.py",
+   "app.py",
+   "sansio/app.py",
+   "sansio/scaffold.py"
+  ],
+  "wrappers.py": [
+   "__init__.py",
+   "app.py",
+   "blueprints.py",
+   "ctx.py",
+   "debughelpers.py",
+   "globals.py",
+   "helpers.py",
+   "json/__init__.py",
+   "sessions.py"
+  ],
+  "sessions.py": [
+   "app.py",
+   "ctx.py",
+   "globals.py",
+   "testing.py"
+  ],
+  "typing.py": [
+   "app.py"
+  ],
+  "debughelpers.py": [
+   "app.py",
+   "templating.py",
+   "wrappers.py"
+  ],
+  "sansio/app.py": [
+   "app.py",
+   "config.py",
+   "debughelpers.py",
+   "json/provider.py",
+   "logging.py",
+   "sansio/blueprints.py",
+   "templating.py"
+  ],
+  "ctx.py": [
+   "__init__.py",
+   "app.py",
+   "globals.py",
+   "sansio/app.py"
+  ],
+  "testing.py": [
+   "app.py",
+   "sansio/app.py"
+  ],
+  "sansio/scaffold.py": [
+   "app.py",
+   "blueprints.py",
+   "debughelpers.py",
+   "sansio/app.py",
+   "sansio/blueprints.py",
+   "templating.py"
+  ],
+  "cli.py": [
+   "__main__.py",
+   "blueprints.py",
+   "testing.py"
+  ],
+  "sansio/blueprints.py": [
+   "blueprints.py",
+   "sansio/app.py"
+  ],
+  "app.py": [
+   "__init__.py",
+   "cli.py",
+   "ctx.py",
+   "globals.py",
+   "sessions.py",
+   "templating.py",
+   "testing.py"
+  ],
+  "blueprints.py": [
+   "__init__.py",
+   "debughelpers.py"
+  ],
+  "json/tag.py": [
+   "sessions.py"
+  ],
+  "json/__init__.py": [
+   "__init__.py",
+   "json/tag.py"
+  ],
+  "config.py": [
+   "__init__.py",
+   "sansio/app.py"
+  ],
+  "json/provider.py": [
+   "json/__init__.py",
+   "sansio/app.py"
+  ],
+  "logging.py": [
+   "sansio/app.py"
+  ]
+ },
+ "n_files": 24
+}

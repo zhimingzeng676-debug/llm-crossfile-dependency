@@ -1,0 +1,5250 @@
+{
+ "A_cpy_T1_over_strict": {
+  "Lib/_android_support.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_apple_support.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_ast_unparse.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyio.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pylong.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/__main__.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/_threading_handler.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/commands.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/fancy_termios.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/input.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/layout.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/unix_eventqueue.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/antigravity.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/__main__.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_futures.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_subprocess.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_tasks.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/constants.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/format_helpers.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/mixins.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/proactor_events.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/selector_events.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/sslproto.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/staggered.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/trsock.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/windows_utils.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/cProfile.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/compileall.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/compression/_common/_streams.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/compression/bz2.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  }
+ },
+ "A_cpy_T1_over_humble": {
+  "Lib/_android_support.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_apple_support.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_ast_unparse.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyio.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pylong.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/__main__.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/_threading_handler.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/commands.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/fancy_termios.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/input.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/layout.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/unix_eventqueue.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/antigravity.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/__main__.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_futures.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_subprocess.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_tasks.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/constants.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/format_helpers.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/mixins.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/proactor_events.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/selector_events.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/sslproto.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/staggered.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/trsock.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/windows_utils.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/cProfile.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/compileall.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/compression/_common/_streams.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/compression/bz2.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  }
+ },
+ "A_cpy_T1_correct": {
+  "Lib/_android_support.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_apple_support.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_ast_unparse.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyio.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pylong.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/__main__.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/_threading_handler.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/commands.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/fancy_termios.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/input.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/layout.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/unix_eventqueue.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/antigravity.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/__main__.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_futures.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_subprocess.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_tasks.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/constants.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/format_helpers.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/mixins.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/proactor_events.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/selector_events.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/sslproto.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/staggered.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/trsock.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/windows_utils.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/cProfile.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/compileall.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/compression/_common/_streams.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/compression/bz2.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  }
+ },
+ "A_cpy_T2_over_strict": {
+  "Lib/_android_support.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_apple_support.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_ast_unparse.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyio.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pylong.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/__main__.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/_threading_handler.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/commands.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/fancy_termios.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/input.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/layout.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/unix_eventqueue.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/antigravity.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/__main__.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_futures.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_subprocess.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_tasks.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/constants.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/format_helpers.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/mixins.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/proactor_events.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/selector_events.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/sslproto.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/staggered.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/trsock.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/windows_utils.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/cProfile.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/compileall.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/compression/_common/_streams.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/compression/bz2.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  }
+ },
+ "A_cpy_T2_over_humble": {
+  "Lib/_android_support.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_apple_support.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_ast_unparse.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyio.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pylong.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/__main__.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/_threading_handler.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/commands.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/fancy_termios.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/input.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/layout.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/unix_eventqueue.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/antigravity.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/__main__.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_futures.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_subprocess.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_tasks.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/constants.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/format_helpers.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/mixins.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/proactor_events.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/selector_events.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/sslproto.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/staggered.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/trsock.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/asyncio/windows_utils.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/cProfile.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/compileall.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/compression/_common/_streams.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  },
+  "Lib/compression/bz2.py": {
+   "gold_rev": [],
+   "fake": [
+    "ElementInclude",
+    "ElementPath"
+   ],
+   "true_safe": true
+  }
+ },
+ "A_cpy_T2_correct": {
+  "Lib/_android_support.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_apple_support.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_ast_unparse.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyio.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pylong.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/__main__.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/_threading_handler.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/commands.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/fancy_termios.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/input.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/layout.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/_pyrepl/unix_eventqueue.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/antigravity.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/__main__.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_futures.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_subprocess.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/base_tasks.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/constants.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/format_helpers.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/mixins.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/proactor_events.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/selector_events.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/sslproto.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/staggered.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/trsock.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/asyncio/windows_utils.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/cProfile.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/compileall.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/compression/_common/_streams.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "Lib/compression/bz2.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  }
+ },
+ "A_wz_T1_over_strict": {
+  "__init__.py": {
+   "gold_rev": [],
+   "fake": [
+    "_internal",
+    "_reloader"
+   ],
+   "true_safe": true
+  },
+  "local.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "middleware/http_proxy.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "middleware/lint.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "middleware/proxy_fix.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "routing/__init__.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "testapp.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  }
+ },
+ "A_wz_T1_over_humble": {
+  "__init__.py": {
+   "gold_rev": [],
+   "fake": [
+    "_internal",
+    "_reloader"
+   ],
+   "true_safe": true
+  },
+  "local.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "middleware/http_proxy.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "middleware/lint.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "middleware/proxy_fix.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "routing/__init__.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "testapp.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  }
+ },
+ "A_wz_T1_correct": {
+  "__init__.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "local.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "middleware/http_proxy.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "middleware/lint.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "middleware/proxy_fix.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "routing/__init__.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "testapp.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  }
+ },
+ "A_wz_T2_over_strict": {
+  "__init__.py": {
+   "gold_rev": [],
+   "fake": [
+    "_internal",
+    "_reloader"
+   ],
+   "true_safe": true
+  },
+  "local.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "middleware/http_proxy.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "middleware/lint.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "middleware/proxy_fix.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "routing/__init__.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "testapp.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  }
+ },
+ "A_wz_T2_over_humble": {
+  "__init__.py": {
+   "gold_rev": [],
+   "fake": [
+    "_internal",
+    "_reloader"
+   ],
+   "true_safe": true
+  },
+  "local.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "middleware/http_proxy.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "middleware/lint.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "middleware/proxy_fix.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "routing/__init__.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  },
+  "testapp.py": {
+   "gold_rev": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ],
+   "true_safe": true
+  }
+ },
+ "A_wz_T2_correct": {
+  "__init__.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "local.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "middleware/http_proxy.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "middleware/lint.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "middleware/proxy_fix.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "routing/__init__.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  },
+  "testapp.py": {
+   "gold_rev": [],
+   "fake": [],
+   "true_safe": true
+  }
+ },
+ "B_shortC_strict": {
+  "Lib/_pyrepl/base_eventqueue.py": {
+   "gold_rev": [
+    "unix_eventqueue",
+    "windows_eventqueue"
+   ],
+   "shown": [
+    "unix_eventqueue",
+    "windows_eventqueue"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/_pyrepl/fancycompleter.py": {
+   "gold_rev": [
+    "_module_completer",
+    "readline"
+   ],
+   "shown": [
+    "_module_completer",
+    "readline"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/_pyrepl/simple_interact.py": {
+   "gold_rev": [
+    "__main__",
+    "main"
+   ],
+   "shown": [
+    "__main__",
+    "main"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/_pyrepl/unix_console.py": {
+   "gold_rev": [
+    "readline",
+    "simple_interact"
+   ],
+   "shown": [
+    "readline",
+    "simple_interact"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/_pyrepl/windows_console.py": {
+   "gold_rev": [
+    "readline",
+    "simple_interact"
+   ],
+   "shown": [
+    "readline",
+    "simple_interact"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/_sitebuiltins.py": {
+   "gold_rev": [
+    "commands",
+    "simple_interact"
+   ],
+   "shown": [
+    "commands",
+    "simple_interact"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/asyncio/streams.py": {
+   "gold_rev": [
+    "__init__",
+    "base_events"
+   ],
+   "shown": [
+    "__init__",
+    "base_events"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/asyncio/tasks.py": {
+   "gold_rev": [
+    "__init__",
+    "streams"
+   ],
+   "shown": [
+    "__init__",
+    "streams"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/asyncio/unix_events.py": {
+   "gold_rev": [
+    "__init__",
+    "events"
+   ],
+   "shown": [
+    "__init__",
+    "events"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/asyncio/windows_events.py": {
+   "gold_rev": [
+    "__init__",
+    "events"
+   ],
+   "shown": [
+    "__init__",
+    "events"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/compression/__init__.py": {
+   "gold_rev": [
+    "shutil",
+    "tarfile"
+   ],
+   "shown": [
+    "shutil",
+    "tarfile"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/concurrent/futures/process.py": {
+   "gold_rev": [
+    "__init__",
+    "compileall"
+   ],
+   "shown": [
+    "__init__",
+    "compileall"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/email/charset.py": {
+   "gold_rev": [
+    "contentmanager",
+    "utils"
+   ],
+   "shown": [
+    "contentmanager",
+    "utils"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/email/mime/base.py": {
+   "gold_rev": [
+    "multipart",
+    "nonmultipart"
+   ],
+   "shown": [
+    "multipart",
+    "nonmultipart"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/email/parser.py": {
+   "gold_rev": [
+    "__init__",
+    "client"
+   ],
+   "shown": [
+    "__init__",
+    "client"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/email/quoprimime.py": {
+   "gold_rev": [
+    "charset",
+    "header"
+   ],
+   "shown": [
+    "charset",
+    "header"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/encodings/__init__.py": {
+   "gold_rev": [
+    "codecs",
+    "locale"
+   ],
+   "shown": [
+    "codecs",
+    "locale"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/ensurepip/__init__.py": {
+   "gold_rev": [
+    "__main__",
+    "_uninstall"
+   ],
+   "shown": [
+    "__main__",
+    "_uninstall"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/genericpath.py": {
+   "gold_rev": [
+    "ntpath",
+    "posixpath"
+   ],
+   "shown": [
+    "ntpath",
+    "posixpath"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/gettext.py": {
+   "gold_rev": [
+    "getopt",
+    "optparse"
+   ],
+   "shown": [
+    "getopt",
+    "optparse"
+   ],
+   "dropped": [],
+   "card_len": 2
+  }
+ },
+ "B_shortC_humble": {
+  "Lib/_pyrepl/base_eventqueue.py": {
+   "gold_rev": [
+    "unix_eventqueue",
+    "windows_eventqueue"
+   ],
+   "shown": [
+    "unix_eventqueue",
+    "windows_eventqueue"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/_pyrepl/fancycompleter.py": {
+   "gold_rev": [
+    "_module_completer",
+    "readline"
+   ],
+   "shown": [
+    "_module_completer",
+    "readline"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/_pyrepl/simple_interact.py": {
+   "gold_rev": [
+    "__main__",
+    "main"
+   ],
+   "shown": [
+    "__main__",
+    "main"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/_pyrepl/unix_console.py": {
+   "gold_rev": [
+    "readline",
+    "simple_interact"
+   ],
+   "shown": [
+    "readline",
+    "simple_interact"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/_pyrepl/windows_console.py": {
+   "gold_rev": [
+    "readline",
+    "simple_interact"
+   ],
+   "shown": [
+    "readline",
+    "simple_interact"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/_sitebuiltins.py": {
+   "gold_rev": [
+    "commands",
+    "simple_interact"
+   ],
+   "shown": [
+    "commands",
+    "simple_interact"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/asyncio/streams.py": {
+   "gold_rev": [
+    "__init__",
+    "base_events"
+   ],
+   "shown": [
+    "__init__",
+    "base_events"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/asyncio/tasks.py": {
+   "gold_rev": [
+    "__init__",
+    "streams"
+   ],
+   "shown": [
+    "__init__",
+    "streams"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/asyncio/unix_events.py": {
+   "gold_rev": [
+    "__init__",
+    "events"
+   ],
+   "shown": [
+    "__init__",
+    "events"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/asyncio/windows_events.py": {
+   "gold_rev": [
+    "__init__",
+    "events"
+   ],
+   "shown": [
+    "__init__",
+    "events"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/compression/__init__.py": {
+   "gold_rev": [
+    "shutil",
+    "tarfile"
+   ],
+   "shown": [
+    "shutil",
+    "tarfile"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/concurrent/futures/process.py": {
+   "gold_rev": [
+    "__init__",
+    "compileall"
+   ],
+   "shown": [
+    "__init__",
+    "compileall"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/email/charset.py": {
+   "gold_rev": [
+    "contentmanager",
+    "utils"
+   ],
+   "shown": [
+    "contentmanager",
+    "utils"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/email/mime/base.py": {
+   "gold_rev": [
+    "multipart",
+    "nonmultipart"
+   ],
+   "shown": [
+    "multipart",
+    "nonmultipart"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/email/parser.py": {
+   "gold_rev": [
+    "__init__",
+    "client"
+   ],
+   "shown": [
+    "__init__",
+    "client"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/email/quoprimime.py": {
+   "gold_rev": [
+    "charset",
+    "header"
+   ],
+   "shown": [
+    "charset",
+    "header"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/encodings/__init__.py": {
+   "gold_rev": [
+    "codecs",
+    "locale"
+   ],
+   "shown": [
+    "codecs",
+    "locale"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/ensurepip/__init__.py": {
+   "gold_rev": [
+    "__main__",
+    "_uninstall"
+   ],
+   "shown": [
+    "__main__",
+    "_uninstall"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/genericpath.py": {
+   "gold_rev": [
+    "ntpath",
+    "posixpath"
+   ],
+   "shown": [
+    "ntpath",
+    "posixpath"
+   ],
+   "dropped": [],
+   "card_len": 2
+  },
+  "Lib/gettext.py": {
+   "gold_rev": [
+    "getopt",
+    "optparse"
+   ],
+   "shown": [
+    "getopt",
+    "optparse"
+   ],
+   "dropped": [],
+   "card_len": 2
+  }
+ },
+ "B_shortI_strict": {
+  "Lib/contextvars.py": {
+   "gold_rev": [
+    "__main__",
+    "_pydecimal",
+    "base_events",
+    "events",
+    "futures",
+    "runners",
+    "tasks",
+    "threads"
+   ],
+   "shown": [
+    "__main__",
+    "_pydecimal"
+   ],
+   "dropped": [
+    "base_events",
+    "events",
+    "futures",
+    "runners",
+    "tasks",
+    "threads"
+   ],
+   "card_len": 2
+  },
+  "Lib/ctypes/__init__.py": {
+   "gold_rev": [
+    "_aix",
+    "_endian",
+    "_ios_support",
+    "platform",
+    "sharedctypes",
+    "util",
+    "windows_console",
+    "wintypes"
+   ],
+   "shown": [
+    "_aix",
+    "_endian"
+   ],
+   "dropped": [
+    "_ios_support",
+    "platform",
+    "sharedctypes",
+    "util",
+    "windows_console",
+    "wintypes"
+   ],
+   "card_len": 2
+  },
+  "Lib/importlib/machinery.py": {
+   "gold_rev": [
+    "__init__",
+    "_module_completer",
+    "modulefinder",
+    "pathbrowser",
+    "profile",
+    "py_compile",
+    "pydoc",
+    "runpy"
+   ],
+   "shown": [
+    "__init__",
+    "_module_completer"
+   ],
+   "dropped": [
+    "modulefinder",
+    "pathbrowser",
+    "profile",
+    "py_compile",
+    "pydoc",
+    "runpy"
+   ],
+   "card_len": 2
+  },
+  "Lib/logging/__init__.py": {
+   "gold_rev": [
+    "_base",
+    "config",
+    "cookiejar",
+    "futures",
+    "handlers",
+    "hashlib",
+    "log",
+    "util"
+   ],
+   "shown": [
+    "_base",
+    "config"
+   ],
+   "dropped": [
+    "cookiejar",
+    "futures",
+    "handlers",
+    "hashlib",
+    "log",
+    "util"
+   ],
+   "card_len": 2
+  },
+  "Lib/pickle.py": {
+   "gold_rev": [
+    "__init__",
+    "_zoneinfo",
+    "handlers",
+    "reduction",
+    "rpc",
+    "shelve",
+    "trace",
+    "tracemalloc"
+   ],
+   "shown": [
+    "__init__",
+    "_zoneinfo"
+   ],
+   "dropped": [
+    "handlers",
+    "reduction",
+    "rpc",
+    "shelve",
+    "trace",
+    "tracemalloc"
+   ],
+   "card_len": 2
+  },
+  "Lib/selectors.py": {
+   "gold_rev": [
+    "cli",
+    "connection",
+    "forkserver",
+    "selector_events",
+    "socket",
+    "socketserver",
+    "subprocess",
+    "unix_events"
+   ],
+   "shown": [
+    "cli",
+    "connection"
+   ],
+   "dropped": [
+    "forkserver",
+    "selector_events",
+    "socket",
+    "socketserver",
+    "subprocess",
+    "unix_events"
+   ],
+   "card_len": 2
+  },
+  "Lib/asyncio/log.py": {
+   "gold_rev": [
+    "base_events",
+    "base_subprocess",
+    "proactor_events",
+    "selector_events",
+    "sslproto",
+    "streams",
+    "subprocess",
+    "unix_events",
+    "windows_events"
+   ],
+   "shown": [
+    "base_events",
+    "base_subprocess"
+   ],
+   "dropped": [
+    "proactor_events",
+    "selector_events",
+    "sslproto",
+    "streams",
+    "subprocess",
+    "unix_events",
+    "windows_events"
+   ],
+   "card_len": 2
+  },
+  "Lib/email/message.py": {
+   "gold_rev": [
+    "_adapters",
+    "client",
+    "contentmanager",
+    "feedparser",
+    "handlers",
+    "mailbox",
+    "policy",
+    "pydoc",
+    "smtplib"
+   ],
+   "shown": [
+    "_adapters",
+    "client"
+   ],
+   "dropped": [
+    "contentmanager",
+    "feedparser",
+    "handlers",
+    "mailbox",
+    "policy",
+    "pydoc",
+    "smtplib"
+   ],
+   "card_len": 2
+  },
+  "Lib/getopt.py": {
+   "gold_rev": [
+    "base64",
+    "filecmp",
+    "fileinput",
+    "imaplib",
+    "modulefinder",
+    "pydoc",
+    "pyshell",
+    "quopri",
+    "tabnanny"
+   ],
+   "shown": [
+    "base64",
+    "filecmp"
+   ],
+   "dropped": [
+    "fileinput",
+    "imaplib",
+    "modulefinder",
+    "pydoc",
+    "pyshell",
+    "quopri",
+    "tabnanny"
+   ],
+   "card_len": 2
+  },
+  "Lib/json/__init__.py": {
+   "gold_rev": [
+    "__main__",
+    "config",
+    "decoder",
+    "gecko_collector",
+    "heatmap_collector",
+    "jsonl_collector",
+    "resource_tracker",
+    "stack_collector",
+    "tool"
+   ],
+   "shown": [
+    "__main__",
+    "config"
+   ],
+   "dropped": [
+    "decoder",
+    "gecko_collector",
+    "heatmap_collector",
+    "jsonl_collector",
+    "resource_tracker",
+    "stack_collector",
+    "tool"
+   ],
+   "card_len": 2
+  },
+  "Lib/reprlib.py": {
+   "gold_rev": [
+    "base_futures",
+    "base_tasks",
+    "bdb",
+    "debugger",
+    "debugger_r",
+    "debugobj",
+    "format_helpers",
+    "functools",
+    "pydoc"
+   ],
+   "shown": [
+    "base_futures",
+    "base_tasks"
+   ],
+   "dropped": [
+    "bdb",
+    "debugger",
+    "debugger_r",
+    "debugobj",
+    "format_helpers",
+    "functools",
+    "pydoc"
+   ],
+   "card_len": 2
+  },
+  "Lib/copy.py": {
+   "gold_rev": [
+    "ElementInclude",
+    "cookiejar",
+    "generator",
+    "gettext",
+    "handlers",
+    "mailbox",
+    "smtplib",
+    "tarfile",
+    "weakref",
+    "xmlbuilder"
+   ],
+   "shown": [
+    "ElementInclude",
+    "cookiejar"
+   ],
+   "dropped": [
+    "generator",
+    "gettext",
+    "handlers",
+    "mailbox",
+    "smtplib",
+    "tarfile",
+    "weakref",
+    "xmlbuilder"
+   ],
+   "card_len": 2
+  },
+  "Lib/locale.py": {
+   "gold_rev": [
+    "_format_utils",
+    "_pydecimal",
+    "_pyio",
+    "_strptime",
+    "calendar",
+    "cli",
+    "filedialog",
+    "gettext",
+    "heatmap_collector",
+    "subprocess"
+   ],
+   "shown": [
+    "_format_utils",
+    "_pydecimal"
+   ],
+   "dropped": [
+    "_pyio",
+    "_strptime",
+    "calendar",
+    "cli",
+    "filedialog",
+    "gettext",
+    "heatmap_collector",
+    "subprocess"
+   ],
+   "card_len": 2
+  },
+  "Lib/platform.py": {
+   "gold_rev": [
+    "autocomplete_w",
+    "editor",
+    "gecko_collector",
+    "heatmap_collector",
+    "help",
+    "help_about",
+    "pydoc",
+    "pyshell",
+    "simple_server",
+    "uuid"
+   ],
+   "shown": [
+    "autocomplete_w",
+    "editor"
+   ],
+   "dropped": [
+    "gecko_collector",
+    "heatmap_collector",
+    "help",
+    "help_about",
+    "pydoc",
+    "pyshell",
+    "simple_server",
+    "uuid"
+   ],
+   "card_len": 2
+  },
+  "Lib/random.py": {
+   "gold_rev": [
+    "forest",
+    "generator",
+    "imaplib",
+    "nim",
+    "secrets",
+    "sorting_animate",
+    "statistics",
+    "tempfile",
+    "utils",
+    "uuid"
+   ],
+   "shown": [
+    "forest",
+    "generator"
+   ],
+   "dropped": [
+    "imaplib",
+    "nim",
+    "secrets",
+    "sorting_animate",
+    "statistics",
+    "tempfile",
+    "utils",
+    "uuid"
+   ],
+   "card_len": 2
+  },
+  "Lib/ssl.py": {
+   "gold_rev": [
+    "base_events",
+    "client",
+    "ftplib",
+    "handlers",
+    "imaplib",
+    "poplib",
+    "request",
+    "selector_events",
+    "smtplib",
+    "sslproto"
+   ],
+   "shown": [
+    "base_events",
+    "client"
+   ],
+   "dropped": [
+    "ftplib",
+    "handlers",
+    "imaplib",
+    "poplib",
+    "request",
+    "selector_events",
+    "smtplib",
+    "sslproto"
+   ],
+   "card_len": 2
+  },
+  "Lib/string/__init__.py": {
+   "gold_rev": [
+    "_encoded_words",
+    "_header_value_parser",
+    "autocomplete",
+    "autoexpand",
+    "config_key",
+    "editor",
+    "hyperparser",
+    "quoprimime",
+    "request",
+    "undo"
+   ],
+   "shown": [
+    "_encoded_words",
+    "_header_value_parser"
+   ],
+   "dropped": [
+    "autocomplete",
+    "autoexpand",
+    "config_key",
+    "editor",
+    "hyperparser",
+    "quoprimime",
+    "request",
+    "undo"
+   ],
+   "card_len": 2
+  },
+  "Lib/importlib/util.py": {
+   "gold_rev": [
+    "__init__",
+    "_sync_coordinator",
+    "cli",
+    "compileall",
+    "editor",
+    "mainmenu",
+    "py_compile",
+    "pyclbr",
+    "pydoc",
+    "query",
+    "runpy"
+   ],
+   "shown": [
+    "__init__",
+    "_sync_coordinator"
+   ],
+   "dropped": [
+    "cli",
+    "compileall",
+    "editor",
+    "mainmenu",
+    "py_compile",
+    "pyclbr",
+    "pydoc",
+    "query",
+    "runpy"
+   ],
+   "card_len": 2
+  },
+  "Lib/multiprocessing/context.py": {
+   "gold_rev": [
+    "connection",
+    "forkserver",
+    "heap",
+    "managers",
+    "popen_forkserver",
+    "popen_spawn_posix",
+    "popen_spawn_win32",
+    "process",
+    "resource_sharer",
+    "sharedctypes",
+    "spawn"
+   ],
+   "shown": [
+    "connection",
+    "forkserver"
+   ],
+   "dropped": [
+    "heap",
+    "managers",
+    "popen_forkserver",
+    "popen_spawn_posix",
+    "popen_spawn_win32",
+    "process",
+    "resource_sharer",
+    "sharedctypes",
+    "spawn"
+   ],
+   "card_len": 2
+  },
+  "Lib/pathlib/__init__.py": {
+   "gold_rev": [
+    "_common",
+    "_local",
+    "abc",
+    "compileall",
+    "heatmap_collector",
+    "module_utils",
+    "readers",
+    "sqlite3",
+    "terminfo",
+    "types",
+    "zipapp"
+   ],
+   "shown": [
+    "_common",
+    "_local"
+   ],
+   "dropped": [
+    "abc",
+    "compileall",
+    "heatmap_collector",
+    "module_utils",
+    "readers",
+    "sqlite3",
+    "terminfo",
+    "types",
+    "zipapp"
+   ],
+   "card_len": 2
+  }
+ },
+ "B_shortI_humble": {
+  "Lib/contextvars.py": {
+   "gold_rev": [
+    "__main__",
+    "_pydecimal",
+    "base_events",
+    "events",
+    "futures",
+    "runners",
+    "tasks",
+    "threads"
+   ],
+   "shown": [
+    "__main__",
+    "_pydecimal"
+   ],
+   "dropped": [
+    "base_events",
+    "events",
+    "futures",
+    "runners",
+    "tasks",
+    "threads"
+   ],
+   "card_len": 2
+  },
+  "Lib/ctypes/__init__.py": {
+   "gold_rev": [
+    "_aix",
+    "_endian",
+    "_ios_support",
+    "platform",
+    "sharedctypes",
+    "util",
+    "windows_console",
+    "wintypes"
+   ],
+   "shown": [
+    "_aix",
+    "_endian"
+   ],
+   "dropped": [
+    "_ios_support",
+    "platform",
+    "sharedctypes",
+    "util",
+    "windows_console",
+    "wintypes"
+   ],
+   "card_len": 2
+  },
+  "Lib/importlib/machinery.py": {
+   "gold_rev": [
+    "__init__",
+    "_module_completer",
+    "modulefinder",
+    "pathbrowser",
+    "profile",
+    "py_compile",
+    "pydoc",
+    "runpy"
+   ],
+   "shown": [
+    "__init__",
+    "_module_completer"
+   ],
+   "dropped": [
+    "modulefinder",
+    "pathbrowser",
+    "profile",
+    "py_compile",
+    "pydoc",
+    "runpy"
+   ],
+   "card_len": 2
+  },
+  "Lib/logging/__init__.py": {
+   "gold_rev": [
+    "_base",
+    "config",
+    "cookiejar",
+    "futures",
+    "handlers",
+    "hashlib",
+    "log",
+    "util"
+   ],
+   "shown": [
+    "_base",
+    "config"
+   ],
+   "dropped": [
+    "cookiejar",
+    "futures",
+    "handlers",
+    "hashlib",
+    "log",
+    "util"
+   ],
+   "card_len": 2
+  },
+  "Lib/pickle.py": {
+   "gold_rev": [
+    "__init__",
+    "_zoneinfo",
+    "handlers",
+    "reduction",
+    "rpc",
+    "shelve",
+    "trace",
+    "tracemalloc"
+   ],
+   "shown": [
+    "__init__",
+    "_zoneinfo"
+   ],
+   "dropped": [
+    "handlers",
+    "reduction",
+    "rpc",
+    "shelve",
+    "trace",
+    "tracemalloc"
+   ],
+   "card_len": 2
+  },
+  "Lib/selectors.py": {
+   "gold_rev": [
+    "cli",
+    "connection",
+    "forkserver",
+    "selector_events",
+    "socket",
+    "socketserver",
+    "subprocess",
+    "unix_events"
+   ],
+   "shown": [
+    "cli",
+    "connection"
+   ],
+   "dropped": [
+    "forkserver",
+    "selector_events",
+    "socket",
+    "socketserver",
+    "subprocess",
+    "unix_events"
+   ],
+   "card_len": 2
+  },
+  "Lib/asyncio/log.py": {
+   "gold_rev": [
+    "base_events",
+    "base_subprocess",
+    "proactor_events",
+    "selector_events",
+    "sslproto",
+    "streams",
+    "subprocess",
+    "unix_events",
+    "windows_events"
+   ],
+   "shown": [
+    "base_events",
+    "base_subprocess"
+   ],
+   "dropped": [
+    "proactor_events",
+    "selector_events",
+    "sslproto",
+    "streams",
+    "subprocess",
+    "unix_events",
+    "windows_events"
+   ],
+   "card_len": 2
+  },
+  "Lib/email/message.py": {
+   "gold_rev": [
+    "_adapters",
+    "client",
+    "contentmanager",
+    "feedparser",
+    "handlers",
+    "mailbox",
+    "policy",
+    "pydoc",
+    "smtplib"
+   ],
+   "shown": [
+    "_adapters",
+    "client"
+   ],
+   "dropped": [
+    "contentmanager",
+    "feedparser",
+    "handlers",
+    "mailbox",
+    "policy",
+    "pydoc",
+    "smtplib"
+   ],
+   "card_len": 2
+  },
+  "Lib/getopt.py": {
+   "gold_rev": [
+    "base64",
+    "filecmp",
+    "fileinput",
+    "imaplib",
+    "modulefinder",
+    "pydoc",
+    "pyshell",
+    "quopri",
+    "tabnanny"
+   ],
+   "shown": [
+    "base64",
+    "filecmp"
+   ],
+   "dropped": [
+    "fileinput",
+    "imaplib",
+    "modulefinder",
+    "pydoc",
+    "pyshell",
+    "quopri",
+    "tabnanny"
+   ],
+   "card_len": 2
+  },
+  "Lib/json/__init__.py": {
+   "gold_rev": [
+    "__main__",
+    "config",
+    "decoder",
+    "gecko_collector",
+    "heatmap_collector",
+    "jsonl_collector",
+    "resource_tracker",
+    "stack_collector",
+    "tool"
+   ],
+   "shown": [
+    "__main__",
+    "config"
+   ],
+   "dropped": [
+    "decoder",
+    "gecko_collector",
+    "heatmap_collector",
+    "jsonl_collector",
+    "resource_tracker",
+    "stack_collector",
+    "tool"
+   ],
+   "card_len": 2
+  },
+  "Lib/reprlib.py": {
+   "gold_rev": [
+    "base_futures",
+    "base_tasks",
+    "bdb",
+    "debugger",
+    "debugger_r",
+    "debugobj",
+    "format_helpers",
+    "functools",
+    "pydoc"
+   ],
+   "shown": [
+    "base_futures",
+    "base_tasks"
+   ],
+   "dropped": [
+    "bdb",
+    "debugger",
+    "debugger_r",
+    "debugobj",
+    "format_helpers",
+    "functools",
+    "pydoc"
+   ],
+   "card_len": 2
+  },
+  "Lib/copy.py": {
+   "gold_rev": [
+    "ElementInclude",
+    "cookiejar",
+    "generator",
+    "gettext",
+    "handlers",
+    "mailbox",
+    "smtplib",
+    "tarfile",
+    "weakref",
+    "xmlbuilder"
+   ],
+   "shown": [
+    "ElementInclude",
+    "cookiejar"
+   ],
+   "dropped": [
+    "generator",
+    "gettext",
+    "handlers",
+    "mailbox",
+    "smtplib",
+    "tarfile",
+    "weakref",
+    "xmlbuilder"
+   ],
+   "card_len": 2
+  },
+  "Lib/locale.py": {
+   "gold_rev": [
+    "_format_utils",
+    "_pydecimal",
+    "_pyio",
+    "_strptime",
+    "calendar",
+    "cli",
+    "filedialog",
+    "gettext",
+    "heatmap_collector",
+    "subprocess"
+   ],
+   "shown": [
+    "_format_utils",
+    "_pydecimal"
+   ],
+   "dropped": [
+    "_pyio",
+    "_strptime",
+    "calendar",
+    "cli",
+    "filedialog",
+    "gettext",
+    "heatmap_collector",
+    "subprocess"
+   ],
+   "card_len": 2
+  },
+  "Lib/platform.py": {
+   "gold_rev": [
+    "autocomplete_w",
+    "editor",
+    "gecko_collector",
+    "heatmap_collector",
+    "help",
+    "help_about",
+    "pydoc",
+    "pyshell",
+    "simple_server",
+    "uuid"
+   ],
+   "shown": [
+    "autocomplete_w",
+    "editor"
+   ],
+   "dropped": [
+    "gecko_collector",
+    "heatmap_collector",
+    "help",
+    "help_about",
+    "pydoc",
+    "pyshell",
+    "simple_server",
+    "uuid"
+   ],
+   "card_len": 2
+  },
+  "Lib/random.py": {
+   "gold_rev": [
+    "forest",
+    "generator",
+    "imaplib",
+    "nim",
+    "secrets",
+    "sorting_animate",
+    "statistics",
+    "tempfile",
+    "utils",
+    "uuid"
+   ],
+   "shown": [
+    "forest",
+    "generator"
+   ],
+   "dropped": [
+    "imaplib",
+    "nim",
+    "secrets",
+    "sorting_animate",
+    "statistics",
+    "tempfile",
+    "utils",
+    "uuid"
+   ],
+   "card_len": 2
+  },
+  "Lib/ssl.py": {
+   "gold_rev": [
+    "base_events",
+    "client",
+    "ftplib",
+    "handlers",
+    "imaplib",
+    "poplib",
+    "request",
+    "selector_events",
+    "smtplib",
+    "sslproto"
+   ],
+   "shown": [
+    "base_events",
+    "client"
+   ],
+   "dropped": [
+    "ftplib",
+    "handlers",
+    "imaplib",
+    "poplib",
+    "request",
+    "selector_events",
+    "smtplib",
+    "sslproto"
+   ],
+   "card_len": 2
+  },
+  "Lib/string/__init__.py": {
+   "gold_rev": [
+    "_encoded_words",
+    "_header_value_parser",
+    "autocomplete",
+    "autoexpand",
+    "config_key",
+    "editor",
+    "hyperparser",
+    "quoprimime",
+    "request",
+    "undo"
+   ],
+   "shown": [
+    "_encoded_words",
+    "_header_value_parser"
+   ],
+   "dropped": [
+    "autocomplete",
+    "autoexpand",
+    "config_key",
+    "editor",
+    "hyperparser",
+    "quoprimime",
+    "request",
+    "undo"
+   ],
+   "card_len": 2
+  },
+  "Lib/importlib/util.py": {
+   "gold_rev": [
+    "__init__",
+    "_sync_coordinator",
+    "cli",
+    "compileall",
+    "editor",
+    "mainmenu",
+    "py_compile",
+    "pyclbr",
+    "pydoc",
+    "query",
+    "runpy"
+   ],
+   "shown": [
+    "__init__",
+    "_sync_coordinator"
+   ],
+   "dropped": [
+    "cli",
+    "compileall",
+    "editor",
+    "mainmenu",
+    "py_compile",
+    "pyclbr",
+    "pydoc",
+    "query",
+    "runpy"
+   ],
+   "card_len": 2
+  },
+  "Lib/multiprocessing/context.py": {
+   "gold_rev": [
+    "connection",
+    "forkserver",
+    "heap",
+    "managers",
+    "popen_forkserver",
+    "popen_spawn_posix",
+    "popen_spawn_win32",
+    "process",
+    "resource_sharer",
+    "sharedctypes",
+    "spawn"
+   ],
+   "shown": [
+    "connection",
+    "forkserver"
+   ],
+   "dropped": [
+    "heap",
+    "managers",
+    "popen_forkserver",
+    "popen_spawn_posix",
+    "popen_spawn_win32",
+    "process",
+    "resource_sharer",
+    "sharedctypes",
+    "spawn"
+   ],
+   "card_len": 2
+  },
+  "Lib/pathlib/__init__.py": {
+   "gold_rev": [
+    "_common",
+    "_local",
+    "abc",
+    "compileall",
+    "heatmap_collector",
+    "module_utils",
+    "readers",
+    "sqlite3",
+    "terminfo",
+    "types",
+    "zipapp"
+   ],
+   "shown": [
+    "_common",
+    "_local"
+   ],
+   "dropped": [
+    "abc",
+    "compileall",
+    "heatmap_collector",
+    "module_utils",
+    "readers",
+    "sqlite3",
+    "terminfo",
+    "types",
+    "zipapp"
+   ],
+   "card_len": 2
+  }
+ },
+ "B_longC_strict": {
+  "Lib/_collections_abc.py": {
+   "gold_rev": [
+    "contextvars",
+    "io",
+    "locale",
+    "os",
+    "random",
+    "types",
+    "weakref"
+   ],
+   "shown": [
+    "contextvars",
+    "io",
+    "locale",
+    "os",
+    "random",
+    "types",
+    "weakref"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/_colorize.py": {
+   "gold_rev": [
+    "__main__",
+    "calendar",
+    "console",
+    "dump",
+    "fancycompleter",
+    "timeit",
+    "tool"
+   ],
+   "shown": [
+    "__main__",
+    "calendar",
+    "console",
+    "dump",
+    "fancycompleter",
+    "timeit",
+    "tool"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/_pyrepl/types.py": {
+   "gold_rev": [
+    "_module_completer",
+    "completing_reader",
+    "console",
+    "historical_reader",
+    "input",
+    "layout",
+    "readline"
+   ],
+   "shown": [
+    "_module_completer",
+    "completing_reader",
+    "console",
+    "historical_reader",
+    "input",
+    "layout",
+    "readline"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/calendar.py": {
+   "gold_rev": [
+    "_parseaddr",
+    "_strptime",
+    "_zoneinfo",
+    "cookiejar",
+    "imaplib",
+    "mailbox",
+    "ssl"
+   ],
+   "shown": [
+    "_parseaddr",
+    "_strptime",
+    "_zoneinfo",
+    "cookiejar",
+    "imaplib",
+    "mailbox",
+    "ssl"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/concurrent/futures/__init__.py": {
+   "gold_rev": [
+    "__main__",
+    "base_events",
+    "compileall",
+    "futures",
+    "process",
+    "tasks",
+    "thread"
+   ],
+   "shown": [
+    "__main__",
+    "base_events",
+    "compileall",
+    "futures",
+    "process",
+    "tasks",
+    "thread"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/fnmatch.py": {
+   "gold_rev": [
+    "bdb",
+    "filedialog",
+    "glob",
+    "grep",
+    "request",
+    "shutil",
+    "tracemalloc"
+   ],
+   "shown": [
+    "bdb",
+    "filedialog",
+    "glob",
+    "grep",
+    "request",
+    "shutil",
+    "tracemalloc"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/profiling/sampling/collector.py": {
+   "gold_rev": [
+    "__init__",
+    "binary_collector",
+    "dump",
+    "gecko_collector",
+    "heatmap_collector",
+    "jsonl_collector",
+    "stack_collector"
+   ],
+   "shown": [
+    "__init__",
+    "binary_collector",
+    "dump",
+    "gecko_collector",
+    "heatmap_collector",
+    "jsonl_collector",
+    "stack_collector"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/contextvars.py": {
+   "gold_rev": [
+    "__main__",
+    "_pydecimal",
+    "base_events",
+    "events",
+    "futures",
+    "runners",
+    "tasks",
+    "threads"
+   ],
+   "shown": [
+    "__main__",
+    "_pydecimal",
+    "base_events",
+    "events",
+    "futures",
+    "runners",
+    "tasks",
+    "threads"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/ctypes/__init__.py": {
+   "gold_rev": [
+    "_aix",
+    "_endian",
+    "_ios_support",
+    "platform",
+    "sharedctypes",
+    "util",
+    "windows_console",
+    "wintypes"
+   ],
+   "shown": [
+    "_aix",
+    "_endian",
+    "_ios_support",
+    "platform",
+    "sharedctypes",
+    "util",
+    "windows_console",
+    "wintypes"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/importlib/machinery.py": {
+   "gold_rev": [
+    "__init__",
+    "_module_completer",
+    "modulefinder",
+    "pathbrowser",
+    "profile",
+    "py_compile",
+    "pydoc",
+    "runpy"
+   ],
+   "shown": [
+    "__init__",
+    "_module_completer",
+    "modulefinder",
+    "pathbrowser",
+    "profile",
+    "py_compile",
+    "pydoc",
+    "runpy"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/logging/__init__.py": {
+   "gold_rev": [
+    "_base",
+    "config",
+    "cookiejar",
+    "futures",
+    "handlers",
+    "hashlib",
+    "log",
+    "util"
+   ],
+   "shown": [
+    "_base",
+    "config",
+    "cookiejar",
+    "futures",
+    "handlers",
+    "hashlib",
+    "log",
+    "util"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/pickle.py": {
+   "gold_rev": [
+    "__init__",
+    "_zoneinfo",
+    "handlers",
+    "reduction",
+    "rpc",
+    "shelve",
+    "trace",
+    "tracemalloc"
+   ],
+   "shown": [
+    "__init__",
+    "_zoneinfo",
+    "handlers",
+    "reduction",
+    "rpc",
+    "shelve",
+    "trace",
+    "tracemalloc"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/selectors.py": {
+   "gold_rev": [
+    "cli",
+    "connection",
+    "forkserver",
+    "selector_events",
+    "socket",
+    "socketserver",
+    "subprocess",
+    "unix_events"
+   ],
+   "shown": [
+    "cli",
+    "connection",
+    "forkserver",
+    "selector_events",
+    "socket",
+    "socketserver",
+    "subprocess",
+    "unix_events"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/textwrap.py": {
+   "gold_rev": [
+    "__init__",
+    "__main__",
+    "_adapters",
+    "calltip",
+    "optparse",
+    "pydoc",
+    "pyshell",
+    "run"
+   ],
+   "shown": [
+    "__init__",
+    "__main__",
+    "_adapters",
+    "calltip",
+    "optparse",
+    "pydoc",
+    "pyshell",
+    "run"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/asyncio/log.py": {
+   "gold_rev": [
+    "base_events",
+    "base_subprocess",
+    "proactor_events",
+    "selector_events",
+    "sslproto",
+    "streams",
+    "subprocess",
+    "unix_events",
+    "windows_events"
+   ],
+   "shown": [
+    "base_events",
+    "base_subprocess",
+    "proactor_events",
+    "selector_events",
+    "sslproto",
+    "streams",
+    "subprocess",
+    "unix_events",
+    "windows_events"
+   ],
+   "dropped": [],
+   "card_len": 9
+  },
+  "Lib/email/message.py": {
+   "gold_rev": [
+    "_adapters",
+    "client",
+    "contentmanager",
+    "feedparser",
+    "handlers",
+    "mailbox",
+    "policy",
+    "pydoc",
+    "smtplib"
+   ],
+   "shown": [
+    "_adapters",
+    "client",
+    "contentmanager",
+    "feedparser",
+    "handlers",
+    "mailbox",
+    "policy",
+    "pydoc",
+    "smtplib"
+   ],
+   "dropped": [],
+   "card_len": 9
+  },
+  "Lib/getopt.py": {
+   "gold_rev": [
+    "base64",
+    "filecmp",
+    "fileinput",
+    "imaplib",
+    "modulefinder",
+    "pydoc",
+    "pyshell",
+    "quopri",
+    "tabnanny"
+   ],
+   "shown": [
+    "base64",
+    "filecmp",
+    "fileinput",
+    "imaplib",
+    "modulefinder",
+    "pydoc",
+    "pyshell",
+    "quopri",
+    "tabnanny"
+   ],
+   "dropped": [],
+   "card_len": 9
+  },
+  "Lib/json/__init__.py": {
+   "gold_rev": [
+    "__main__",
+    "config",
+    "decoder",
+    "gecko_collector",
+    "heatmap_collector",
+    "jsonl_collector",
+    "resource_tracker",
+    "stack_collector",
+    "tool"
+   ],
+   "shown": [
+    "__main__",
+    "config",
+    "decoder",
+    "gecko_collector",
+    "heatmap_collector",
+    "jsonl_collector",
+    "resource_tracker",
+    "stack_collector",
+    "tool"
+   ],
+   "dropped": [],
+   "card_len": 9
+  },
+  "Lib/reprlib.py": {
+   "gold_rev": [
+    "base_futures",
+    "base_tasks",
+    "bdb",
+    "debugger",
+    "debugger_r",
+    "debugobj",
+    "format_helpers",
+    "functools",
+    "pydoc"
+   ],
+   "shown": [
+    "base_futures",
+    "base_tasks",
+    "bdb",
+    "debugger",
+    "debugger_r",
+    "debugobj",
+    "format_helpers",
+    "functools",
+    "pydoc"
+   ],
+   "dropped": [],
+   "card_len": 9
+  }
+ },
+ "B_longC_humble": {
+  "Lib/_collections_abc.py": {
+   "gold_rev": [
+    "contextvars",
+    "io",
+    "locale",
+    "os",
+    "random",
+    "types",
+    "weakref"
+   ],
+   "shown": [
+    "contextvars",
+    "io",
+    "locale",
+    "os",
+    "random",
+    "types",
+    "weakref"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/_colorize.py": {
+   "gold_rev": [
+    "__main__",
+    "calendar",
+    "console",
+    "dump",
+    "fancycompleter",
+    "timeit",
+    "tool"
+   ],
+   "shown": [
+    "__main__",
+    "calendar",
+    "console",
+    "dump",
+    "fancycompleter",
+    "timeit",
+    "tool"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/_pyrepl/types.py": {
+   "gold_rev": [
+    "_module_completer",
+    "completing_reader",
+    "console",
+    "historical_reader",
+    "input",
+    "layout",
+    "readline"
+   ],
+   "shown": [
+    "_module_completer",
+    "completing_reader",
+    "console",
+    "historical_reader",
+    "input",
+    "layout",
+    "readline"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/calendar.py": {
+   "gold_rev": [
+    "_parseaddr",
+    "_strptime",
+    "_zoneinfo",
+    "cookiejar",
+    "imaplib",
+    "mailbox",
+    "ssl"
+   ],
+   "shown": [
+    "_parseaddr",
+    "_strptime",
+    "_zoneinfo",
+    "cookiejar",
+    "imaplib",
+    "mailbox",
+    "ssl"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/concurrent/futures/__init__.py": {
+   "gold_rev": [
+    "__main__",
+    "base_events",
+    "compileall",
+    "futures",
+    "process",
+    "tasks",
+    "thread"
+   ],
+   "shown": [
+    "__main__",
+    "base_events",
+    "compileall",
+    "futures",
+    "process",
+    "tasks",
+    "thread"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/fnmatch.py": {
+   "gold_rev": [
+    "bdb",
+    "filedialog",
+    "glob",
+    "grep",
+    "request",
+    "shutil",
+    "tracemalloc"
+   ],
+   "shown": [
+    "bdb",
+    "filedialog",
+    "glob",
+    "grep",
+    "request",
+    "shutil",
+    "tracemalloc"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/profiling/sampling/collector.py": {
+   "gold_rev": [
+    "__init__",
+    "binary_collector",
+    "dump",
+    "gecko_collector",
+    "heatmap_collector",
+    "jsonl_collector",
+    "stack_collector"
+   ],
+   "shown": [
+    "__init__",
+    "binary_collector",
+    "dump",
+    "gecko_collector",
+    "heatmap_collector",
+    "jsonl_collector",
+    "stack_collector"
+   ],
+   "dropped": [],
+   "card_len": 7
+  },
+  "Lib/contextvars.py": {
+   "gold_rev": [
+    "__main__",
+    "_pydecimal",
+    "base_events",
+    "events",
+    "futures",
+    "runners",
+    "tasks",
+    "threads"
+   ],
+   "shown": [
+    "__main__",
+    "_pydecimal",
+    "base_events",
+    "events",
+    "futures",
+    "runners",
+    "tasks",
+    "threads"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/ctypes/__init__.py": {
+   "gold_rev": [
+    "_aix",
+    "_endian",
+    "_ios_support",
+    "platform",
+    "sharedctypes",
+    "util",
+    "windows_console",
+    "wintypes"
+   ],
+   "shown": [
+    "_aix",
+    "_endian",
+    "_ios_support",
+    "platform",
+    "sharedctypes",
+    "util",
+    "windows_console",
+    "wintypes"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/importlib/machinery.py": {
+   "gold_rev": [
+    "__init__",
+    "_module_completer",
+    "modulefinder",
+    "pathbrowser",
+    "profile",
+    "py_compile",
+    "pydoc",
+    "runpy"
+   ],
+   "shown": [
+    "__init__",
+    "_module_completer",
+    "modulefinder",
+    "pathbrowser",
+    "profile",
+    "py_compile",
+    "pydoc",
+    "runpy"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/logging/__init__.py": {
+   "gold_rev": [
+    "_base",
+    "config",
+    "cookiejar",
+    "futures",
+    "handlers",
+    "hashlib",
+    "log",
+    "util"
+   ],
+   "shown": [
+    "_base",
+    "config",
+    "cookiejar",
+    "futures",
+    "handlers",
+    "hashlib",
+    "log",
+    "util"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/pickle.py": {
+   "gold_rev": [
+    "__init__",
+    "_zoneinfo",
+    "handlers",
+    "reduction",
+    "rpc",
+    "shelve",
+    "trace",
+    "tracemalloc"
+   ],
+   "shown": [
+    "__init__",
+    "_zoneinfo",
+    "handlers",
+    "reduction",
+    "rpc",
+    "shelve",
+    "trace",
+    "tracemalloc"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/selectors.py": {
+   "gold_rev": [
+    "cli",
+    "connection",
+    "forkserver",
+    "selector_events",
+    "socket",
+    "socketserver",
+    "subprocess",
+    "unix_events"
+   ],
+   "shown": [
+    "cli",
+    "connection",
+    "forkserver",
+    "selector_events",
+    "socket",
+    "socketserver",
+    "subprocess",
+    "unix_events"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/textwrap.py": {
+   "gold_rev": [
+    "__init__",
+    "__main__",
+    "_adapters",
+    "calltip",
+    "optparse",
+    "pydoc",
+    "pyshell",
+    "run"
+   ],
+   "shown": [
+    "__init__",
+    "__main__",
+    "_adapters",
+    "calltip",
+    "optparse",
+    "pydoc",
+    "pyshell",
+    "run"
+   ],
+   "dropped": [],
+   "card_len": 8
+  },
+  "Lib/asyncio/log.py": {
+   "gold_rev": [
+    "base_events",
+    "base_subprocess",
+    "proactor_events",
+    "selector_events",
+    "sslproto",
+    "streams",
+    "subprocess",
+    "unix_events",
+    "windows_events"
+   ],
+   "shown": [
+    "base_events",
+    "base_subprocess",
+    "proactor_events",
+    "selector_events",
+    "sslproto",
+    "streams",
+    "subprocess",
+    "unix_events",
+    "windows_events"
+   ],
+   "dropped": [],
+   "card_len": 9
+  },
+  "Lib/email/message.py": {
+   "gold_rev": [
+    "_adapters",
+    "client",
+    "contentmanager",
+    "feedparser",
+    "handlers",
+    "mailbox",
+    "policy",
+    "pydoc",
+    "smtplib"
+   ],
+   "shown": [
+    "_adapters",
+    "client",
+    "contentmanager",
+    "feedparser",
+    "handlers",
+    "mailbox",
+    "policy",
+    "pydoc",
+    "smtplib"
+   ],
+   "dropped": [],
+   "card_len": 9
+  },
+  "Lib/getopt.py": {
+   "gold_rev": [
+    "base64",
+    "filecmp",
+    "fileinput",
+    "imaplib",
+    "modulefinder",
+    "pydoc",
+    "pyshell",
+    "quopri",
+    "tabnanny"
+   ],
+   "shown": [
+    "base64",
+    "filecmp",
+    "fileinput",
+    "imaplib",
+    "modulefinder",
+    "pydoc",
+    "pyshell",
+    "quopri",
+    "tabnanny"
+   ],
+   "dropped": [],
+   "card_len": 9
+  },
+  "Lib/json/__init__.py": {
+   "gold_rev": [
+    "__main__",
+    "config",
+    "decoder",
+    "gecko_collector",
+    "heatmap_collector",
+    "jsonl_collector",
+    "resource_tracker",
+    "stack_collector",
+    "tool"
+   ],
+   "shown": [
+    "__main__",
+    "config",
+    "decoder",
+    "gecko_collector",
+    "heatmap_collector",
+    "jsonl_collector",
+    "resource_tracker",
+    "stack_collector",
+    "tool"
+   ],
+   "dropped": [],
+   "card_len": 9
+  },
+  "Lib/reprlib.py": {
+   "gold_rev": [
+    "base_futures",
+    "base_tasks",
+    "bdb",
+    "debugger",
+    "debugger_r",
+    "debugobj",
+    "format_helpers",
+    "functools",
+    "pydoc"
+   ],
+   "shown": [
+    "base_futures",
+    "base_tasks",
+    "bdb",
+    "debugger",
+    "debugger_r",
+    "debugobj",
+    "format_helpers",
+    "functools",
+    "pydoc"
+   ],
+   "dropped": [],
+   "card_len": 9
+  }
+ },
+ "B_longI_strict": {
+  "Lib/dataclasses.py": {
+   "gold_rev": [
+    "_colorize",
+    "_module_completer",
+    "_threading_handler",
+    "completing_reader",
+    "console",
+    "content",
+    "graph",
+    "heatmap_collector",
+    "historical_reader",
+    "layout",
+    "pstats",
+    "readline",
+    "terminfo",
+    "windows_console"
+   ],
+   "shown": [
+    "_colorize",
+    "_module_completer",
+    "_threading_handler",
+    "completing_reader",
+    "console",
+    "content",
+    "graph",
+    "heatmap_collector"
+   ],
+   "dropped": [
+    "historical_reader",
+    "layout",
+    "pstats",
+    "readline",
+    "terminfo",
+    "windows_console"
+   ],
+   "card_len": 8
+  },
+  "Lib/signal.py": {
+   "gold_rev": [
+    "base_subprocess",
+    "commands",
+    "events",
+    "forkserver",
+    "managers",
+    "popen_fork",
+    "popen_spawn_win32",
+    "proactor_events",
+    "process",
+    "resource_sharer",
+    "resource_tracker",
+    "runners",
+    "subprocess",
+    "unix_events"
+   ],
+   "shown": [
+    "base_subprocess",
+    "commands",
+    "events",
+    "forkserver",
+    "managers",
+    "popen_fork",
+    "popen_spawn_win32",
+    "proactor_events"
+   ],
+   "dropped": [
+    "process",
+    "resource_sharer",
+    "resource_tracker",
+    "runners",
+    "subprocess",
+    "unix_events"
+   ],
+   "card_len": 8
+  },
+  "Lib/urllib/parse.py": {
+   "gold_rev": [
+    "ElementInclude",
+    "client",
+    "cookiejar",
+    "handlers",
+    "mimetypes",
+    "nturl2path",
+    "pydoc",
+    "request",
+    "robotparser",
+    "saxutils",
+    "simple_server",
+    "util",
+    "utils",
+    "xmlbuilder"
+   ],
+   "shown": [
+    "ElementInclude",
+    "client",
+    "cookiejar",
+    "handlers",
+    "mimetypes",
+    "nturl2path",
+    "pydoc",
+    "request"
+   ],
+   "dropped": [
+    "robotparser",
+    "saxutils",
+    "simple_server",
+    "util",
+    "utils",
+    "xmlbuilder"
+   ],
+   "card_len": 8
+  },
+  "Lib/tkinter/ttk.py": {
+   "gold_rev": [
+    "autocomplete_w",
+    "config_key",
+    "configdialog",
+    "debugger",
+    "editor",
+    "grep",
+    "help",
+    "query",
+    "replace",
+    "scrolledlist",
+    "search",
+    "searchbase",
+    "statusbar",
+    "textview",
+    "tree"
+   ],
+   "shown": [
+    "autocomplete_w",
+    "config_key",
+    "configdialog",
+    "debugger",
+    "editor",
+    "grep",
+    "help",
+    "query"
+   ],
+   "dropped": [
+    "replace",
+    "scrolledlist",
+    "search",
+    "searchbase",
+    "statusbar",
+    "textview",
+    "tree"
+   ],
+   "card_len": 8
+  },
+  "Lib/enum.py": {
+   "gold_rev": [
+    "__init__",
+    "_ast_unparse",
+    "calendar",
+    "constants",
+    "locks",
+    "plistlib",
+    "pstats",
+    "py_compile",
+    "runners",
+    "signal",
+    "socket",
+    "ssl",
+    "sslproto",
+    "symtable",
+    "timeouts",
+    "tools",
+    "uuid"
+   ],
+   "shown": [
+    "__init__",
+    "_ast_unparse",
+    "calendar",
+    "constants",
+    "locks",
+    "plistlib",
+    "pstats",
+    "py_compile"
+   ],
+   "dropped": [
+    "runners",
+    "signal",
+    "socket",
+    "ssl",
+    "sslproto",
+    "symtable",
+    "timeouts",
+    "tools",
+    "uuid"
+   ],
+   "card_len": 8
+  },
+  "Lib/inspect.py": {
+   "gold_rev": [
+    "__init__",
+    "__main__",
+    "_common",
+    "_py_warnings",
+    "base_events",
+    "bdb",
+    "calltip",
+    "cmd",
+    "enum",
+    "format_helpers",
+    "pydoc",
+    "rlcompleter",
+    "runners",
+    "server",
+    "tasks",
+    "trace",
+    "unix_events"
+   ],
+   "shown": [
+    "__init__",
+    "__main__",
+    "_common",
+    "_py_warnings",
+    "base_events",
+    "bdb",
+    "calltip",
+    "cmd"
+   ],
+   "dropped": [
+    "enum",
+    "format_helpers",
+    "pydoc",
+    "rlcompleter",
+    "runners",
+    "server",
+    "tasks",
+    "trace",
+    "unix_events"
+   ],
+   "card_len": 8
+  },
+  "Lib/abc.py": {
+   "gold_rev": [
+    "__init__",
+    "_abc",
+    "_collections_abc",
+    "_policybase",
+    "_pyio",
+    "collector",
+    "console",
+    "display",
+    "functools",
+    "input",
+    "io",
+    "numbers",
+    "os",
+    "reduction",
+    "selectors",
+    "simple",
+    "types",
+    "widgets"
+   ],
+   "shown": [
+    "__init__",
+    "_abc",
+    "_collections_abc",
+    "_policybase",
+    "_pyio",
+    "collector",
+    "console",
+    "display"
+   ],
+   "dropped": [
+    "functools",
+    "input",
+    "io",
+    "numbers",
+    "os",
+    "reduction",
+    "selectors",
+    "simple",
+    "types",
+    "widgets"
+   ],
+   "card_len": 8
+  },
+  "Lib/idlelib/config.py": {
+   "gold_rev": [
+    "autocomplete",
+    "browser",
+    "codecontext",
+    "colorizer",
+    "configdialog",
+    "editor",
+    "format",
+    "help",
+    "history",
+    "iomenu",
+    "mainmenu",
+    "parenmatch",
+    "pyshell",
+    "runscript",
+    "sidebar",
+    "squeezer",
+    "tree",
+    "zzdummy"
+   ],
+   "shown": [
+    "autocomplete",
+    "browser",
+    "codecontext",
+    "colorizer",
+    "configdialog",
+    "editor",
+    "format",
+    "help"
+   ],
+   "dropped": [
+    "history",
+    "iomenu",
+    "mainmenu",
+    "parenmatch",
+    "pyshell",
+    "runscript",
+    "sidebar",
+    "squeezer",
+    "tree",
+    "zzdummy"
+   ],
+   "card_len": 8
+  },
+  "Lib/argparse.py": {
+   "gold_rev": [
+    "__init__",
+    "__main__",
+    "_uninstall",
+    "calendar",
+    "cli",
+    "code",
+    "compileall",
+    "dis",
+    "gzip",
+    "mimetypes",
+    "pickle",
+    "platform",
+    "py_compile",
+    "random",
+    "tarfile",
+    "timeit",
+    "tool",
+    "trace",
+    "uuid",
+    "zipapp"
+   ],
+   "shown": [
+    "__init__",
+    "__main__",
+    "_uninstall",
+    "calendar",
+    "cli",
+    "code",
+    "compileall",
+    "dis"
+   ],
+   "dropped": [
+    "gzip",
+    "mimetypes",
+    "pickle",
+    "platform",
+    "py_compile",
+    "random",
+    "tarfile",
+    "timeit",
+    "tool",
+    "trace",
+    "uuid",
+    "zipapp"
+   ],
+   "card_len": 8
+  },
+  "Lib/struct.py": {
+   "gold_rev": [
+    "__init__",
+    "_common",
+    "compileall",
+    "config",
+    "connection",
+    "forkserver",
+    "gettext",
+    "gzip",
+    "handlers",
+    "pickle",
+    "platform",
+    "plistlib",
+    "rpc",
+    "shared_memory",
+    "synchronize",
+    "tarfile",
+    "terminfo",
+    "wave",
+    "windows_events",
+    "zipimport"
+   ],
+   "shown": [
+    "__init__",
+    "_common",
+    "compileall",
+    "config",
+    "connection",
+    "forkserver",
+    "gettext",
+    "gzip"
+   ],
+   "dropped": [
+    "handlers",
+    "pickle",
+    "platform",
+    "plistlib",
+    "rpc",
+    "shared_memory",
+    "synchronize",
+    "tarfile",
+    "terminfo",
+    "wave",
+    "windows_events",
+    "zipimport"
+   ],
+   "card_len": 8
+  },
+  "Lib/subprocess.py": {
+   "gold_rev": [
+    "__init__",
+    "__main__",
+    "_aix",
+    "_aix_support",
+    "_child_monitor",
+    "base_events",
+    "base_subprocess",
+    "cli",
+    "editor",
+    "events",
+    "imaplib",
+    "os",
+    "pager",
+    "platform",
+    "popen_spawn_win32",
+    "pyshell",
+    "unix_events",
+    "util",
+    "uuid",
+    "windows_utils"
+   ],
+   "shown": [
+    "__init__",
+    "__main__",
+    "_aix",
+    "_aix_support",
+    "_child_monitor",
+    "base_events",
+    "base_subprocess",
+    "cli"
+   ],
+   "dropped": [
+    "editor",
+    "events",
+    "imaplib",
+    "os",
+    "pager",
+    "platform",
+    "popen_spawn_win32",
+    "pyshell",
+    "unix_events",
+    "util",
+    "uuid",
+    "windows_utils"
+   ],
+   "card_len": 8
+  },
+  "Lib/__future__.py": {
+   "gold_rev": [
+    "__init__",
+    "_context",
+    "_meta",
+    "_module_completer",
+    "_parser",
+    "_re",
+    "_threading_handler",
+    "codeop",
+    "commands",
+    "completing_reader",
+    "console",
+    "content",
+    "fancycompleter",
+    "historical_reader",
+    "input",
+    "layout",
+    "pager",
+    "pydoc",
+    "readers",
+    "readline",
+    "simple_interact",
+    "trace",
+    "windows_console"
+   ],
+   "shown": [
+    "__init__",
+    "_context",
+    "_meta",
+    "_module_completer",
+    "_parser",
+    "_re",
+    "_threading_handler",
+    "codeop"
+   ],
+   "dropped": [
+    "commands",
+    "completing_reader",
+    "console",
+    "content",
+    "fancycompleter",
+    "historical_reader",
+    "input",
+    "layout",
+    "pager",
+    "pydoc",
+    "readers",
+    "readline",
+    "simple_interact",
+    "trace",
+    "windows_console"
+   ],
+   "card_len": 8
+  },
+  "Lib/weakref.py": {
+   "gold_rev": [
+    "ElementTree",
+    "__init__",
+    "_base",
+    "_queues",
+    "_threading_local",
+    "_zoneinfo",
+    "base_events",
+    "bdb",
+    "copy",
+    "expatreader",
+    "functools",
+    "gzip",
+    "process",
+    "queues",
+    "selector_events",
+    "sharedctypes",
+    "streams",
+    "symtable",
+    "tasks",
+    "tempfile",
+    "thread",
+    "util",
+    "windows_events"
+   ],
+   "shown": [
+    "ElementTree",
+    "__init__",
+    "_base",
+    "_queues",
+    "_threading_local",
+    "_zoneinfo",
+    "base_events",
+    "bdb"
+   ],
+   "dropped": [
+    "copy",
+    "expatreader",
+    "functools",
+    "gzip",
+    "process",
+    "queues",
+    "selector_events",
+    "sharedctypes",
+    "streams",
+    "symtable",
+    "tasks",
+    "tempfile",
+    "thread",
+    "util",
+    "windows_events"
+   ],
+   "card_len": 8
+  }
+ },
+ "B_longI_humble": {
+  "Lib/dataclasses.py": {
+   "gold_rev": [
+    "_colorize",
+    "_module_completer",
+    "_threading_handler",
+    "completing_reader",
+    "console",
+    "content",
+    "graph",
+    "heatmap_collector",
+    "historical_reader",
+    "layout",
+    "pstats",
+    "readline",
+    "terminfo",
+    "windows_console"
+   ],
+   "shown": [
+    "_colorize",
+    "_module_completer",
+    "_threading_handler",
+    "completing_reader",
+    "console",
+    "content",
+    "graph",
+    "heatmap_collector"
+   ],
+   "dropped": [
+    "historical_reader",
+    "layout",
+    "pstats",
+    "readline",
+    "terminfo",
+    "windows_console"
+   ],
+   "card_len": 8
+  },
+  "Lib/signal.py": {
+   "gold_rev": [
+    "base_subprocess",
+    "commands",
+    "events",
+    "forkserver",
+    "managers",
+    "popen_fork",
+    "popen_spawn_win32",
+    "proactor_events",
+    "process",
+    "resource_sharer",
+    "resource_tracker",
+    "runners",
+    "subprocess",
+    "unix_events"
+   ],
+   "shown": [
+    "base_subprocess",
+    "commands",
+    "events",
+    "forkserver",
+    "managers",
+    "popen_fork",
+    "popen_spawn_win32",
+    "proactor_events"
+   ],
+   "dropped": [
+    "process",
+    "resource_sharer",
+    "resource_tracker",
+    "runners",
+    "subprocess",
+    "unix_events"
+   ],
+   "card_len": 8
+  },
+  "Lib/urllib/parse.py": {
+   "gold_rev": [
+    "ElementInclude",
+    "client",
+    "cookiejar",
+    "handlers",
+    "mimetypes",
+    "nturl2path",
+    "pydoc",
+    "request",
+    "robotparser",
+    "saxutils",
+    "simple_server",
+    "util",
+    "utils",
+    "xmlbuilder"
+   ],
+   "shown": [
+    "ElementInclude",
+    "client",
+    "cookiejar",
+    "handlers",
+    "mimetypes",
+    "nturl2path",
+    "pydoc",
+    "request"
+   ],
+   "dropped": [
+    "robotparser",
+    "saxutils",
+    "simple_server",
+    "util",
+    "utils",
+    "xmlbuilder"
+   ],
+   "card_len": 8
+  },
+  "Lib/tkinter/ttk.py": {
+   "gold_rev": [
+    "autocomplete_w",
+    "config_key",
+    "configdialog",
+    "debugger",
+    "editor",
+    "grep",
+    "help",
+    "query",
+    "replace",
+    "scrolledlist",
+    "search",
+    "searchbase",
+    "statusbar",
+    "textview",
+    "tree"
+   ],
+   "shown": [
+    "autocomplete_w",
+    "config_key",
+    "configdialog",
+    "debugger",
+    "editor",
+    "grep",
+    "help",
+    "query"
+   ],
+   "dropped": [
+    "replace",
+    "scrolledlist",
+    "search",
+    "searchbase",
+    "statusbar",
+    "textview",
+    "tree"
+   ],
+   "card_len": 8
+  },
+  "Lib/enum.py": {
+   "gold_rev": [
+    "__init__",
+    "_ast_unparse",
+    "calendar",
+    "constants",
+    "locks",
+    "plistlib",
+    "pstats",
+    "py_compile",
+    "runners",
+    "signal",
+    "socket",
+    "ssl",
+    "sslproto",
+    "symtable",
+    "timeouts",
+    "tools",
+    "uuid"
+   ],
+   "shown": [
+    "__init__",
+    "_ast_unparse",
+    "calendar",
+    "constants",
+    "locks",
+    "plistlib",
+    "pstats",
+    "py_compile"
+   ],
+   "dropped": [
+    "runners",
+    "signal",
+    "socket",
+    "ssl",
+    "sslproto",
+    "symtable",
+    "timeouts",
+    "tools",
+    "uuid"
+   ],
+   "card_len": 8
+  },
+  "Lib/inspect.py": {
+   "gold_rev": [
+    "__init__",
+    "__main__",
+    "_common",
+    "_py_warnings",
+    "base_events",
+    "bdb",
+    "calltip",
+    "cmd",
+    "enum",
+    "format_helpers",
+    "pydoc",
+    "rlcompleter",
+    "runners",
+    "server",
+    "tasks",
+    "trace",
+    "unix_events"
+   ],
+   "shown": [
+    "__init__",
+    "__main__",
+    "_common",
+    "_py_warnings",
+    "base_events",
+    "bdb",
+    "calltip",
+    "cmd"
+   ],
+   "dropped": [
+    "enum",
+    "format_helpers",
+    "pydoc",
+    "rlcompleter",
+    "runners",
+    "server",
+    "tasks",
+    "trace",
+    "unix_events"
+   ],
+   "card_len": 8
+  },
+  "Lib/abc.py": {
+   "gold_rev": [
+    "__init__",
+    "_abc",
+    "_collections_abc",
+    "_policybase",
+    "_pyio",
+    "collector",
+    "console",
+    "display",
+    "functools",
+    "input",
+    "io",
+    "numbers",
+    "os",
+    "reduction",
+    "selectors",
+    "simple",
+    "types",
+    "widgets"
+   ],
+   "shown": [
+    "__init__",
+    "_abc",
+    "_collections_abc",
+    "_policybase",
+    "_pyio",
+    "collector",
+    "console",
+    "display"
+   ],
+   "dropped": [
+    "functools",
+    "input",
+    "io",
+    "numbers",
+    "os",
+    "reduction",
+    "selectors",
+    "simple",
+    "types",
+    "widgets"
+   ],
+   "card_len": 8
+  },
+  "Lib/idlelib/config.py": {
+   "gold_rev": [
+    "autocomplete",
+    "browser",
+    "codecontext",
+    "colorizer",
+    "configdialog",
+    "editor",
+    "format",
+    "help",
+    "history",
+    "iomenu",
+    "mainmenu",
+    "parenmatch",
+    "pyshell",
+    "runscript",
+    "sidebar",
+    "squeezer",
+    "tree",
+    "zzdummy"
+   ],
+   "shown": [
+    "autocomplete",
+    "browser",
+    "codecontext",
+    "colorizer",
+    "configdialog",
+    "editor",
+    "format",
+    "help"
+   ],
+   "dropped": [
+    "history",
+    "iomenu",
+    "mainmenu",
+    "parenmatch",
+    "pyshell",
+    "runscript",
+    "sidebar",
+    "squeezer",
+    "tree",
+    "zzdummy"
+   ],
+   "card_len": 8
+  },
+  "Lib/argparse.py": {
+   "gold_rev": [
+    "__init__",
+    "__main__",
+    "_uninstall",
+    "calendar",
+    "cli",
+    "code",
+    "compileall",
+    "dis",
+    "gzip",
+    "mimetypes",
+    "pickle",
+    "platform",
+    "py_compile",
+    "random",
+    "tarfile",
+    "timeit",
+    "tool",
+    "trace",
+    "uuid",
+    "zipapp"
+   ],
+   "shown": [
+    "__init__",
+    "__main__",
+    "_uninstall",
+    "calendar",
+    "cli",
+    "code",
+    "compileall",
+    "dis"
+   ],
+   "dropped": [
+    "gzip",
+    "mimetypes",
+    "pickle",
+    "platform",
+    "py_compile",
+    "random",
+    "tarfile",
+    "timeit",
+    "tool",
+    "trace",
+    "uuid",
+    "zipapp"
+   ],
+   "card_len": 8
+  },
+  "Lib/struct.py": {
+   "gold_rev": [
+    "__init__",
+    "_common",
+    "compileall",
+    "config",
+    "connection",
+    "forkserver",
+    "gettext",
+    "gzip",
+    "handlers",
+    "pickle",
+    "platform",
+    "plistlib",
+    "rpc",
+    "shared_memory",
+    "synchronize",
+    "tarfile",
+    "terminfo",
+    "wave",
+    "windows_events",
+    "zipimport"
+   ],
+   "shown": [
+    "__init__",
+    "_common",
+    "compileall",
+    "config",
+    "connection",
+    "forkserver",
+    "gettext",
+    "gzip"
+   ],
+   "dropped": [
+    "handlers",
+    "pickle",
+    "platform",
+    "plistlib",
+    "rpc",
+    "shared_memory",
+    "synchronize",
+    "tarfile",
+    "terminfo",
+    "wave",
+    "windows_events",
+    "zipimport"
+   ],
+   "card_len": 8
+  },
+  "Lib/subprocess.py": {
+   "gold_rev": [
+    "__init__",
+    "__main__",
+    "_aix",
+    "_aix_support",
+    "_child_monitor",
+    "base_events",
+    "base_subprocess",
+    "cli",
+    "editor",
+    "events",
+    "imaplib",
+    "os",
+    "pager",
+    "platform",
+    "popen_spawn_win32",
+    "pyshell",
+    "unix_events",
+    "util",
+    "uuid",
+    "windows_utils"
+   ],
+   "shown": [
+    "__init__",
+    "__main__",
+    "_aix",
+    "_aix_support",
+    "_child_monitor",
+    "base_events",
+    "base_subprocess",
+    "cli"
+   ],
+   "dropped": [
+    "editor",
+    "events",
+    "imaplib",
+    "os",
+    "pager",
+    "platform",
+    "popen_spawn_win32",
+    "pyshell",
+    "unix_events",
+    "util",
+    "uuid",
+    "windows_utils"
+   ],
+   "card_len": 8
+  },
+  "Lib/__future__.py": {
+   "gold_rev": [
+    "__init__",
+    "_context",
+    "_meta",
+    "_module_completer",
+    "_parser",
+    "_re",
+    "_threading_handler",
+    "codeop",
+    "commands",
+    "completing_reader",
+    "console",
+    "content",
+    "fancycompleter",
+    "historical_reader",
+    "input",
+    "layout",
+    "pager",
+    "pydoc",
+    "readers",
+    "readline",
+    "simple_interact",
+    "trace",
+    "windows_console"
+   ],
+   "shown": [
+    "__init__",
+    "_context",
+    "_meta",
+    "_module_completer",
+    "_parser",
+    "_re",
+    "_threading_handler",
+    "codeop"
+   ],
+   "dropped": [
+    "commands",
+    "completing_reader",
+    "console",
+    "content",
+    "fancycompleter",
+    "historical_reader",
+    "input",
+    "layout",
+    "pager",
+    "pydoc",
+    "readers",
+    "readline",
+    "simple_interact",
+    "trace",
+    "windows_console"
+   ],
+   "card_len": 8
+  },
+  "Lib/weakref.py": {
+   "gold_rev": [
+    "ElementTree",
+    "__init__",
+    "_base",
+    "_queues",
+    "_threading_local",
+    "_zoneinfo",
+    "base_events",
+    "bdb",
+    "copy",
+    "expatreader",
+    "functools",
+    "gzip",
+    "process",
+    "queues",
+    "selector_events",
+    "sharedctypes",
+    "streams",
+    "symtable",
+    "tasks",
+    "tempfile",
+    "thread",
+    "util",
+    "windows_events"
+   ],
+   "shown": [
+    "ElementTree",
+    "__init__",
+    "_base",
+    "_queues",
+    "_threading_local",
+    "_zoneinfo",
+    "base_events",
+    "bdb"
+   ],
+   "dropped": [
+    "copy",
+    "expatreader",
+    "functools",
+    "gzip",
+    "process",
+    "queues",
+    "selector_events",
+    "sharedctypes",
+    "streams",
+    "symtable",
+    "tasks",
+    "tempfile",
+    "thread",
+    "util",
+    "windows_events"
+   ],
+   "card_len": 8
+  }
+ }
+}

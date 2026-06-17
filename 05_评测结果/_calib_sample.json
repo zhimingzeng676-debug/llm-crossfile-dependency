@@ -1,0 +1,162 @@
+[
+ {
+  "cfg": "purellm",
+  "id": "LOC-01",
+  "q": "在 werkzeug 中,类 Authorization 定义在哪个文件里?",
+  "gold": "Authorization 定义于 datastructures/auth.py",
+  "kw_score": 0.0,
+  "ans": "在 Werkzeug 框架中，`Authorization` 类定义在 `werkzeug/wrappers/auth.py` 文件中。这个文件包含了与 HTTP 认证相关的类和方法。Werkzeug 是一个 WSGI 工具包，提供了许多用于 Web 开发的基础工具，包括请求对象、响应对象以及各种实用函数。如果你需要查看具体的实现细节或源码，可以直接访问该文件。"
+ },
+ {
+  "cfg": "purellm",
+  "id": "REV-07",
+  "q": "在 werkzeug 中,哪些文件 import(依赖)了 http.py?请尽可能完整列出。",
+  "gold": "反向依赖,共 18 个使用方:['datastructures/auth.py', 'datastructures/csp.py', 'datastructures/etag.py', 'debug/__init__.py', 'excep",
+  "kw_score": 0.2941,
+  "ans": "要准确回答这个问题，我们需要查看 Werkzeug 项目的源代码，特别是那些可能导入 `http.py` 文件的 Python 文件。Werkzeug 是一个由 Pallets 团队维护的 Web 开发工具包，它包含了许多与 HTTP 协议相关的功能和工具。\n\n由于我无法直接访问或搜索当前的代码库，我将基于一般的项目结构和常见的依赖模式来推测哪些文件可能会导入 `http.py` 或者是 `werkzeug.wrappers.response` 模块（如果 `http.py` 是该模块的一部分的话）。\n\n在 Wer"
+ },
+ {
+  "cfg": "purellm",
+  "id": "INH-07",
+  "q": "在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?",
+  "gold": "别名继承陷阱:base 写作 _SansIORequest,实为 `from ..sansio.request import Request as _SansIORequest`。名字不匹配,检索/解析易断裂——隐式依赖典型",
+  "kw_score": 0.0,
+  "ans": "在 Werkzeug 框架中，`Request` 类位于 `werkzeug/wrappers/request.py` 文件中，并且它继承自 `werkzeug/wrappers/base_request.py` 文件中的 `RequestMixin` 类以及 `werkzeug/datastructures` 文件中的 `EnvironHeaders` 类。具体来说，`Request` 类是通过多重继承实现的，它同时继承了 `RequestMixin` 和 `EnvironHeaders`。\n\n你可以查看 `we"
+ },
+ {
+  "cfg": "purellm",
+  "id": "FWD-03",
+  "q": "在 werkzeug 中,http.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "正向依赖,共 2 个:['_internal.py', 'sansio/__init__.py'](来源:http.py 顶部 import 段)",
+  "kw_score": 0.0,
+  "ans": "要准确回答这个问题，我需要查看 `werkzeug` 库中 `http.py` 文件的具体内容。不过，由于我当前无法直接访问文件系统或实时代码库，我可以指导你如何自己找到答案：\n\n1. **获取源码**：你可以从 Werkzeug 的 GitHub 仓库下载源码，或者使用 pip 安装 Werkzeug 并通过编辑器打开其安装目录。\n   \n2. **定位文件**：找到 `werkzeug/sanctioned_path/http.py` 文件（注意路径可能有所不同，具体取决于 Werkzeug 的版本和结构）。\n"
+ },
+ {
+  "cfg": "baseline",
+  "id": "INH-08",
+  "q": "在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在哪个文件?",
+  "gold": "同 INH-07:Response 继承自 sansio/response.py 的 Response(别名 _SansIOResponse)",
+  "kw_score": 0.0,
+  "ans": "根据提供的代码片段,我们看到 `Response` 类在初始化方法 (`__init__`) 中调用了 `super().__init__()` 方法,这表明 `Response` 类继承自另一个类。但是,具体的基类名称并没有直接显示出来,我们需要查看 `super().__init__()` 调用的具体实现来确定基类的位置。\n\n从给定的代码片段中,我们无法直接得知 `Response` 类的确切基类及其定义位置。不过,我们可以推测基类可能是 `wrappers/response.py` 文件中的某个类或来自其他导"
+ },
+ {
+  "cfg": "baseline",
+  "id": "DAT-02",
+  "q": "在 werkzeug 中,常量 HELP_HTML 在哪个文件中定义?",
+  "gold": "HELP_HTML @ debug/repr.py:23",
+  "kw_score": 0.0,
+  "ans": "检索结果中没有找到。"
+ },
+ {
+  "cfg": "graphcards",
+  "id": "INH-07",
+  "q": "在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?",
+  "gold": "别名继承陷阱:base 写作 _SansIORequest,实为 `from ..sansio.request import Request as _SansIORequest`。名字不匹配,检索/解析易断裂——隐式依赖典型",
+  "kw_score": 1.0,
+  "ans": "在 werkzeug 中,`wrappers/request.py` 里的 `Request` 类继承自 `sansio/request.py` 文件里的 `Request` 类。"
+ },
+ {
+  "cfg": "graphcards",
+  "id": "REV-02",
+  "q": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/__init__.py?请尽可能完整列出。",
+  "gold": "反向依赖,共 14 个使用方:['exceptions.py', 'formparser.py', 'middleware/http_proxy.py', 'middleware/lint.py', 'routing/map.py', 'r",
+  "kw_score": 0.0833,
+  "ans": "根据提供的代码片段信息，依赖并导入 `datastructures/__init__.py` 的文件有：\n\n1. `middleware/http_proxy.py`\n2. `datastructures/etag.py`\n\n这两个文件都列出了它们依赖（import）了 `datastructures/__init__.py`。"
+ },
+ {
+  "cfg": "graphcards",
+  "id": "FWD-10",
+  "q": "在 werkzeug 中,wrappers/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "正向依赖,共 8 个:['_internal.py', 'datastructures/__init__.py', 'exceptions.py', 'formparser.py', 'sansio/request.py', 'test.p",
+  "kw_score": 0.125,
+  "ans": "检索结果中没有找到 wrappers/request.py 直接依赖了哪些项目内模块的信息。提供的代码片段主要展示了其他文件如何导入 wrappers/request.py，而不是反过来。因此，无法从给定的信息中得出 wrappers/request.py 直接依赖了哪些项目内模块。"
+ },
+ {
+  "cfg": "graphcards",
+  "id": "IND-01",
+  "q": "在 werkzeug 中,wrappers/response.py 是否(间接)依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "gold": "间接依赖:wrappers/response.py -> datastructures/__init__.py -> ... -> datastructures/mixins.py(最短 2 跳)。考察隐式/多跳依赖,单次检索拿不到中间节点",
+  "kw_score": 1.0,
+  "ans": "根据提供的代码片段信息，`wrappers/response.py` 被 `datastructures/__init__.py` 导入，而 `datastructures/__init__.py` 又依赖于 `datastructures/mixins.py`。因此，可以推断出 `wrappers/response.py` 间接依赖于 `datastructures/mixins.py`，并且依赖路径恰好经过 `datastructures/__init__.py`。\n\n所以，依赖路径为：`wrappers/re"
+ },
+ {
+  "cfg": "graphcards",
+  "id": "LOC-04",
+  "q": "在 werkzeug 中,类 FileStorage 定义在哪个文件里?",
+  "gold": "FileStorage 定义于 datastructures/file_storage.py",
+  "kw_score": 1.0,
+  "ans": "根据提供的代码片段信息，类 `FileStorage` 定义在 `datastructures/file_storage.py` 文件的第 16-162 行。"
+ },
+ {
+  "cfg": "graphcards",
+  "id": "INH-10",
+  "q": "在 werkzeug 中,有哪些异常类直接继承自 HTTPException?请尽量列出。",
+  "gold": "子类枚举,共 31 个直接子类(均在 exceptions.py)",
+  "kw_score": 0.1613,
+  "ans": "在给出的代码片段中，werkzeug 的 `exceptions.py` 文件中有多个异常类直接继承自 `HTTPException`。这些类包括但不限于：\n\n1. `Unauthorized` 定义在第 264-333 行。\n2. `NotFound` 定义在第 351-361 行。\n3. `NotAcceptable` 定义在第 400-413 行。\n4. `Gone` 定义在第 446-457 行。\n5. `Forbidden` 定义在第 336-348 行。\n\n这些都是直接继承自 `HTTPExceptio"
+ },
+ {
+  "cfg": "full",
+  "id": "REV-07",
+  "q": "在 werkzeug 中,哪些文件 import(依赖)了 http.py?请尽可能完整列出。",
+  "gold": "反向依赖,共 18 个使用方:['datastructures/auth.py', 'datastructures/csp.py', 'datastructures/etag.py', 'debug/__init__.py', 'excep",
+  "kw_score": 0.2353,
+  "ans": "在 Werkzeug 中，import（依赖）了 `http.py` 的文件包括：\n\n1. `formparser.py`\n2. `sansio/http.py`\n3. `datastructures/etag.py`\n4. `sansio/utils.py`"
+ },
+ {
+  "cfg": "full",
+  "id": "INH-07",
+  "q": "在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?",
+  "gold": "别名继承陷阱:base 写作 _SansIORequest,实为 `from ..sansio.request import Request as _SansIORequest`。名字不匹配,检索/解析易断裂——隐式依赖典型",
+  "kw_score": 1.0,
+  "ans": "在 werkzeug 中,`wrappers/request.py` 里的 `Request` 类继承自 `sansio/request.py` 文件里的 `Request` 类。"
+ },
+ {
+  "cfg": "full",
+  "id": "FWD-10",
+  "q": "在 werkzeug 中,wrappers/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "正向依赖,共 8 个:['_internal.py', 'datastructures/__init__.py', 'exceptions.py', 'formparser.py', 'sansio/request.py', 'test.p",
+  "kw_score": 1.0,
+  "ans": "根据提供的信息，`wrappers/request.py` 文件直接依赖（import）了以下项目内的模块：\n\n- `_internal.py`\n- `datastructures/__init__.py`\n- `exceptions.py`\n- `formparser.py`\n- `sansio/request.py`\n- `test.py`\n- `utils.py`\n- `wsgi.py`"
+ },
+ {
+  "cfg": "full",
+  "id": "LOC-01",
+  "q": "在 werkzeug 中,类 Authorization 定义在哪个文件里?",
+  "gold": "Authorization 定义于 datastructures/auth.py",
+  "kw_score": 1.0,
+  "ans": "类 Authorization 定义在 `datastructures/auth.py` 文件里。"
+ },
+ {
+  "cfg": "full",
+  "id": "IND-05",
+  "q": "在 werkzeug 中,wrappers/response.py 是直接 import 了 datastructures/structures.py,还是通过 datastructures/__init__.py 间接依赖的?给出完整的中间文件路径。",
+  "gold": "response.py 直接依赖 datastructures/__init__.py(包),structures.py 是经由包再分发的间接依赖",
+  "kw_score": 1.0,
+  "ans": "根据提供的信息，`wrappers/response.py` 并没有直接 `import` `datastructures/structures.py`，而是通过 `datastructures/__init__.py` 间接依赖的。\n\n具体路径如下：\n- `_internal.py` 直接依赖 `datastructures/structures.py`\n- `wrappers/response.py` 直接依赖 `_internal.py`\n- `datastructures/__init__.py` 直接依赖"
+ },
+ {
+  "cfg": "full",
+  "id": "INH-12",
+  "q": "在 werkzeug 中,哪些类继承(混入)了 CallbackDict?",
+  "gold": "反向继承:CallbackDict 被 ['ContentSecurityPolicy', '_CacheControl'] 继承",
+  "kw_score": 0.5,
+  "ans": "在给出的代码片段中，只有 `ContentSecurityPolicy` 类继承自 `CallbackDict`。没有其他类被描述为直接继承或混入 `CallbackDict`。因此，答案是 `ContentSecurityPolicy`。"
+ },
+ {
+  "cfg": "full",
+  "id": "REV-11",
+  "q": "在 werkzeug 中,哪些文件 import(依赖)了 utils.py?请尽可能完整列出。",
+  "gold": "反向依赖,共 9 个使用方:['debug/__init__.py', 'debug/tbtools.py', 'middleware/shared_data.py', 'routing/exceptions.py', 'sansio/re",
+  "kw_score": 1.0,
+  "ans": "在 Werkzeug 中，import（依赖）了 `utils.py` 的文件包括：\n\n- debug/__init__.py\n- debug/tbtools.py\n- middleware/shared_data.py\n- routing/exceptions.py\n- sansio/request.py\n- sansio/response.py\n- test.py\n- wrappers/request.py\n- wrappers/response.py"
+ },
+ {
+  "cfg": "full",
+  "id": "DAT-02",
+  "q": "在 werkzeug 中,常量 HELP_HTML 在哪个文件中定义?",
+  "gold": "HELP_HTML @ debug/repr.py:23",
+  "kw_score": 1.0,
+  "ans": "在提供的代码片段中，常量 `HELP_HTML` 定义在文件 `debug/repr.py` 中。具体定义如下：\n\n```python\nHELP_HTML = \"\"\"\\\n<div class=box>\n  <h3>%(title)s</h3>\n  <pre class=help>%(text)s</pre>\n</div>\\\n\"\"\"\n```\n\n因此，`HELP_HTML` 常量是在 `debug/repr.py` 文件中定义的。"
+ }
+]

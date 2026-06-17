@@ -1,0 +1,282 @@
+[
+ {
+  "id": "_internal.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 _internal.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "_reloader, debug, exceptions, file_storage, formparser, headers, http, map, mixins, request, response, serving, structures, test, utils",
+  "dropped": "map",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): _reloader, debug, exceptions, file_storage, formparser, headers, http, map, mixins, request, response, serving, structures, test, utils\n\n问题:在 werkzeug 项目中,如果要修改文件 _internal.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "datastructures/__init__.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 datastructures/__init__.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "exceptions, formparser, http_proxy, lint, map, multipart, request, response, rules, test, urls, utils",
+  "dropped": "request",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): exceptions, formparser, http_proxy, lint, map, multipart, request, response, rules, test, urls, utils\n\n问题:在 werkzeug 项目中,如果要修改文件 datastructures/__init__.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "datastructures/cache_control.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 datastructures/cache_control.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "datastructures, response",
+  "dropped": "response",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): datastructures, response\n\n问题:在 werkzeug 项目中,如果要修改文件 datastructures/cache_control.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "datastructures/headers.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 datastructures/headers.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "datastructures, file_storage",
+  "dropped": "file_storage",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): datastructures, file_storage\n\n问题:在 werkzeug 项目中,如果要修改文件 datastructures/headers.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "datastructures/mixins.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 datastructures/mixins.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "cache_control, datastructures, headers, structures",
+  "dropped": "headers",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): cache_control, datastructures, headers, structures\n\n问题:在 werkzeug 项目中,如果要修改文件 datastructures/mixins.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "datastructures/structures.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 datastructures/structures.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "accept, auth, cache_control, csp, datastructures, file_storage, headers",
+  "dropped": "csp",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): accept, auth, cache_control, csp, datastructures, file_storage, headers\n\n问题:在 werkzeug 项目中,如果要修改文件 datastructures/structures.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "debug/console.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 debug/console.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "debug, tbtools",
+  "dropped": "tbtools",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): debug, tbtools\n\n问题:在 werkzeug 项目中,如果要修改文件 debug/console.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "debug/tbtools.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 debug/tbtools.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "console, debug, serving",
+  "dropped": "debug",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): console, debug, serving\n\n问题:在 werkzeug 项目中,如果要修改文件 debug/tbtools.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "exceptions.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 exceptions.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "debug, formparser, headers, http_proxy, map, multipart, request, response, serving, utils, wsgi",
+  "dropped": "multipart",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): debug, formparser, headers, http_proxy, map, multipart, request, response, serving, utils, wsgi\n\n问题:在 werkzeug 项目中,如果要修改文件 exceptions.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "http.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 http.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "auth, csp, debug, etag, exceptions, formparser, http_proxy, lint, multipart, proxy_fix, request, response, serving, shared_data, test, utils",
+  "dropped": "multipart",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): auth, csp, debug, etag, exceptions, formparser, http_proxy, lint, multipart, proxy_fix, request, response, serving, shared_data, test, utils\n\n问题:在 werkzeug 项目中,如果要修改文件 http.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "routing/converters.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 routing/converters.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "map, matcher, routing, rules",
+  "dropped": "routing",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): map, matcher, routing, rules\n\n问题:在 werkzeug 项目中,如果要修改文件 routing/converters.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "routing/exceptions.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 routing/exceptions.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "map, matcher, routing",
+  "dropped": "matcher",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): map, matcher, routing\n\n问题:在 werkzeug 项目中,如果要修改文件 routing/exceptions.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "routing/map.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 routing/map.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "converters, exceptions, routing, rules",
+  "dropped": "routing",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): converters, exceptions, routing, rules\n\n问题:在 werkzeug 项目中,如果要修改文件 routing/map.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "routing/matcher.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 routing/matcher.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "map, routing",
+  "dropped": "routing",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): map, routing\n\n问题:在 werkzeug 项目中,如果要修改文件 routing/matcher.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "routing/rules.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 routing/rules.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "exceptions, map, matcher, routing",
+  "dropped": "matcher",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): exceptions, map, matcher, routing\n\n问题:在 werkzeug 项目中,如果要修改文件 routing/rules.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "sansio/__init__.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 sansio/__init__.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "http, wsgi",
+  "dropped": "wsgi",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): http, wsgi\n\n问题:在 werkzeug 项目中,如果要修改文件 sansio/__init__.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "sansio/http.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 sansio/http.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "request, response",
+  "dropped": "response",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): request, response\n\n问题:在 werkzeug 项目中,如果要修改文件 sansio/http.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "sansio/multipart.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 sansio/multipart.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "formparser, test",
+  "dropped": "test",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): formparser, test\n\n问题:在 werkzeug 项目中,如果要修改文件 sansio/multipart.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "sansio/utils.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 sansio/utils.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "debug, request, wsgi",
+  "dropped": "request",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): debug, request, wsgi\n\n问题:在 werkzeug 项目中,如果要修改文件 sansio/utils.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "security.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 security.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "debug, shared_data, utils",
+  "dropped": "shared_data",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): debug, shared_data, utils\n\n问题:在 werkzeug 项目中,如果要修改文件 security.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "serving.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 serving.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "__init__, testapp",
+  "dropped": "testapp",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): __init__, testapp\n\n问题:在 werkzeug 项目中,如果要修改文件 serving.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "test.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 test.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "__init__, request, response",
+  "dropped": "request",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): __init__, request, response\n\n问题:在 werkzeug 项目中,如果要修改文件 test.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "urls.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 urls.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "map, response, rules, serving, test, utils",
+  "dropped": "serving",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): map, response, rules, serving, test, utils\n\n问题:在 werkzeug 项目中,如果要修改文件 urls.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "utils.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 utils.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "debug, exceptions, request, response, shared_data, tbtools, test",
+  "dropped": "response",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): debug, exceptions, request, response, shared_data, tbtools, test\n\n问题:在 werkzeug 项目中,如果要修改文件 utils.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "wrappers/__init__.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 wrappers/__init__.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "__init__, utils",
+  "dropped": "utils",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): __init__, utils\n\n问题:在 werkzeug 项目中,如果要修改文件 wrappers/__init__.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "wrappers/request.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 wrappers/request.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "_internal, debug, exceptions, map, response, test, testapp, utils, wrappers",
+  "dropped": "response",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): _internal, debug, exceptions, map, response, test, testapp, utils, wrappers\n\n问题:在 werkzeug 项目中,如果要修改文件 wrappers/request.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "wrappers/response.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 wrappers/response.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "debug, exceptions, test, testapp, utils, wrappers",
+  "dropped": "testapp",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): debug, exceptions, test, testapp, utils, wrappers\n\n问题:在 werkzeug 项目中,如果要修改文件 wrappers/response.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "wsgi.py",
+  "difficulty": "hard",
+  "category": "impact",
+  "question": "在 werkzeug 项目中,如果要修改文件 wsgi.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。",
+  "gold": "formparser, http_proxy, lint, local, map, request, response, shared_data, test, utils",
+  "dropped": "request",
+  "notes": "(downstream impact)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答(卡片列出了依赖该文件的项目内文件)。\n\n[依赖卡片] 项目内直接 import 该文件的文件(静态分析): formparser, http_proxy, lint, local, map, request, response, shared_data, test, utils\n\n问题:在 werkzeug 项目中,如果要修改文件 wsgi.py 的对外接口,项目内有哪些文件直接依赖它、改动时需要同步检查?请列出文件名(模块名),逗号分隔。\n请直接回答。"
+ }
+]

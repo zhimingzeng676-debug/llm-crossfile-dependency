@@ -1,0 +1,4629 @@
+{
+  "functions": [
+    {
+      "name": "check_compatibility",
+      "file": "__init__.py",
+      "start_line": 58,
+      "end_line": 90,
+      "calls": [
+        "split",
+        "len",
+        "append",
+        "int",
+        "warn"
+      ]
+    },
+    {
+      "name": "_check_cryptography",
+      "file": "__init__.py",
+      "start_line": 93,
+      "end_line": 104,
+      "calls": [
+        "list",
+        "map",
+        "split",
+        "format",
+        "warn"
+      ]
+    },
+    {
+      "name": "to_native_string",
+      "file": "_internal_utils.py",
+      "start_line": 25,
+      "end_line": 35,
+      "calls": [
+        "isinstance",
+        "decode"
+      ]
+    },
+    {
+      "name": "unicode_is_ascii",
+      "file": "_internal_utils.py",
+      "start_line": 38,
+      "end_line": 50,
+      "calls": [
+        "isinstance",
+        "encode"
+      ]
+    },
+    {
+      "name": "SOCKSProxyManager",
+      "file": "adapters.py",
+      "start_line": 63,
+      "end_line": 64,
+      "calls": [
+        "InvalidSchema"
+      ]
+    },
+    {
+      "name": "_urllib3_request_context",
+      "file": "adapters.py",
+      "start_line": 90,
+      "end_line": 134,
+      "calls": [
+        "urlparse",
+        "lower",
+        "getattr",
+        "get",
+        "isinstance",
+        "isdir",
+        "len"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "adapters.py",
+      "start_line": 140,
+      "end_line": 141,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "send",
+      "file": "adapters.py",
+      "start_line": 143,
+      "end_line": 160,
+      "calls": []
+    },
+    {
+      "name": "close",
+      "file": "adapters.py",
+      "start_line": 162,
+      "end_line": 164,
+      "calls": []
+    },
+    {
+      "name": "__init__",
+      "file": "adapters.py",
+      "start_line": 202,
+      "end_line": 222,
+      "calls": [
+        "Retry",
+        "from_int",
+        "__init__",
+        "super",
+        "init_poolmanager"
+      ]
+    },
+    {
+      "name": "__getstate__",
+      "file": "adapters.py",
+      "start_line": 224,
+      "end_line": 225,
+      "calls": [
+        "getattr"
+      ]
+    },
+    {
+      "name": "__setstate__",
+      "file": "adapters.py",
+      "start_line": 227,
+      "end_line": 238,
+      "calls": [
+        "items",
+        "setattr",
+        "init_poolmanager"
+      ]
+    },
+    {
+      "name": "init_poolmanager",
+      "file": "adapters.py",
+      "start_line": 240,
+      "end_line": 264,
+      "calls": [
+        "PoolManager"
+      ]
+    },
+    {
+      "name": "proxy_manager_for",
+      "file": "adapters.py",
+      "start_line": 266,
+      "end_line": 302,
+      "calls": [
+        "startswith",
+        "lower",
+        "get_auth_from_url",
+        "SOCKSProxyManager",
+        "proxy_headers",
+        "proxy_from_url"
+      ]
+    },
+    {
+      "name": "cert_verify",
+      "file": "adapters.py",
+      "start_line": 304,
+      "end_line": 357,
+      "calls": [
+        "startswith",
+        "lower",
+        "exists",
+        "OSError",
+        "isdir",
+        "isinstance"
+      ]
+    },
+    {
+      "name": "build_response",
+      "file": "adapters.py",
+      "start_line": 359,
+      "end_line": 394,
+      "calls": [
+        "Response",
+        "getattr",
+        "CaseInsensitiveDict",
+        "get_encoding_from_headers",
+        "isinstance",
+        "decode",
+        "extract_cookies_to_jar"
+      ]
+    },
+    {
+      "name": "build_connection_pool_key_attributes",
+      "file": "adapters.py",
+      "start_line": 396,
+      "end_line": 444,
+      "calls": [
+        "_urllib3_request_context"
+      ]
+    },
+    {
+      "name": "get_connection_with_tls_context",
+      "file": "adapters.py",
+      "start_line": 446,
+      "end_line": 493,
+      "calls": [
+        "select_proxy",
+        "build_connection_pool_key_attributes",
+        "InvalidURL",
+        "prepend_scheme_if_needed",
+        "parse_url",
+        "InvalidProxyURL",
+        "proxy_manager_for",
+        "connection_from_host"
+      ]
+    },
+    {
+      "name": "get_connection",
+      "file": "adapters.py",
+      "start_line": 495,
+      "end_line": 534,
+      "calls": [
+        "warn",
+        "select_proxy",
+        "prepend_scheme_if_needed",
+        "parse_url",
+        "InvalidProxyURL",
+        "proxy_manager_for",
+        "connection_from_url",
+        "urlparse",
+        "geturl"
+      ]
+    },
+    {
+      "name": "close",
+      "file": "adapters.py",
+      "start_line": 536,
+      "end_line": 544,
+      "calls": [
+        "clear",
+        "values"
+      ]
+    },
+    {
+      "name": "request_url",
+      "file": "adapters.py",
+      "start_line": 546,
+      "end_line": 576,
+      "calls": [
+        "select_proxy",
+        "urlparse",
+        "lower",
+        "startswith",
+        "lstrip",
+        "urldefragauth"
+      ]
+    },
+    {
+      "name": "add_headers",
+      "file": "adapters.py",
+      "start_line": 578,
+      "end_line": 590,
+      "calls": []
+    },
+    {
+      "name": "proxy_headers",
+      "file": "adapters.py",
+      "start_line": 592,
+      "end_line": 611,
+      "calls": [
+        "get_auth_from_url",
+        "_basic_auth_str"
+      ]
+    },
+    {
+      "name": "send",
+      "file": "adapters.py",
+      "start_line": 613,
+      "end_line": 719,
+      "calls": [
+        "get_connection_with_tls_context",
+        "InvalidURL",
+        "cert_verify",
+        "request_url",
+        "add_headers",
+        "isinstance",
+        "TimeoutSauce",
+        "ValueError",
+        "urlopen",
+        "ConnectionError",
+        "ConnectTimeout",
+        "RetryError",
+        "ProxyError",
+        "SSLError",
+        "ReadTimeout",
+        "InvalidHeader",
+        "build_response"
+      ]
+    },
+    {
+      "name": "request",
+      "file": "api.py",
+      "start_line": 14,
+      "end_line": 59,
+      "calls": [
+        "Session",
+        "request"
+      ]
+    },
+    {
+      "name": "get",
+      "file": "api.py",
+      "start_line": 62,
+      "end_line": 73,
+      "calls": [
+        "request"
+      ]
+    },
+    {
+      "name": "options",
+      "file": "api.py",
+      "start_line": 76,
+      "end_line": 85,
+      "calls": [
+        "request"
+      ]
+    },
+    {
+      "name": "head",
+      "file": "api.py",
+      "start_line": 88,
+      "end_line": 100,
+      "calls": [
+        "setdefault",
+        "request"
+      ]
+    },
+    {
+      "name": "post",
+      "file": "api.py",
+      "start_line": 103,
+      "end_line": 115,
+      "calls": [
+        "request"
+      ]
+    },
+    {
+      "name": "put",
+      "file": "api.py",
+      "start_line": 118,
+      "end_line": 130,
+      "calls": [
+        "request"
+      ]
+    },
+    {
+      "name": "patch",
+      "file": "api.py",
+      "start_line": 133,
+      "end_line": 145,
+      "calls": [
+        "request"
+      ]
+    },
+    {
+      "name": "delete",
+      "file": "api.py",
+      "start_line": 148,
+      "end_line": 157,
+      "calls": [
+        "request"
+      ]
+    },
+    {
+      "name": "_basic_auth_str",
+      "file": "auth.py",
+      "start_line": 25,
+      "end_line": 66,
+      "calls": [
+        "isinstance",
+        "warn",
+        "format",
+        "str",
+        "type",
+        "encode",
+        "to_native_string",
+        "strip",
+        "b64encode",
+        "join"
+      ]
+    },
+    {
+      "name": "__call__",
+      "file": "auth.py",
+      "start_line": 72,
+      "end_line": 73,
+      "calls": [
+        "NotImplementedError"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "auth.py",
+      "start_line": 79,
+      "end_line": 81,
+      "calls": []
+    },
+    {
+      "name": "__eq__",
+      "file": "auth.py",
+      "start_line": 83,
+      "end_line": 89,
+      "calls": [
+        "all",
+        "getattr"
+      ]
+    },
+    {
+      "name": "__ne__",
+      "file": "auth.py",
+      "start_line": 91,
+      "end_line": 92,
+      "calls": []
+    },
+    {
+      "name": "__call__",
+      "file": "auth.py",
+      "start_line": 94,
+      "end_line": 96,
+      "calls": [
+        "_basic_auth_str"
+      ]
+    },
+    {
+      "name": "__call__",
+      "file": "auth.py",
+      "start_line": 102,
+      "end_line": 104,
+      "calls": [
+        "_basic_auth_str"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "auth.py",
+      "start_line": 110,
+      "end_line": 114,
+      "calls": [
+        "local"
+      ]
+    },
+    {
+      "name": "init_per_thread_state",
+      "file": "auth.py",
+      "start_line": 116,
+      "end_line": 124,
+      "calls": [
+        "hasattr"
+      ]
+    },
+    {
+      "name": "build_digest_header",
+      "file": "auth.py",
+      "start_line": 126,
+      "end_line": 234,
+      "calls": [
+        "get",
+        "upper",
+        "isinstance",
+        "encode",
+        "hexdigest",
+        "md5",
+        "sha1",
+        "sha256",
+        "sha512",
+        "hash_utf8",
+        "urlparse",
+        "str",
+        "ctime",
+        "urandom",
+        "KD",
+        "split"
+      ]
+    },
+    {
+      "name": "md5_utf8",
+      "file": "auth.py",
+      "start_line": 145,
+      "end_line": 148,
+      "calls": [
+        "isinstance",
+        "encode",
+        "hexdigest",
+        "md5"
+      ]
+    },
+    {
+      "name": "sha_utf8",
+      "file": "auth.py",
+      "start_line": 153,
+      "end_line": 156,
+      "calls": [
+        "isinstance",
+        "encode",
+        "hexdigest",
+        "sha1"
+      ]
+    },
+    {
+      "name": "sha256_utf8",
+      "file": "auth.py",
+      "start_line": 161,
+      "end_line": 164,
+      "calls": [
+        "isinstance",
+        "encode",
+        "hexdigest",
+        "sha256"
+      ]
+    },
+    {
+      "name": "sha512_utf8",
+      "file": "auth.py",
+      "start_line": 169,
+      "end_line": 172,
+      "calls": [
+        "isinstance",
+        "encode",
+        "hexdigest",
+        "sha512"
+      ]
+    },
+    {
+      "name": "handle_redirect",
+      "file": "auth.py",
+      "start_line": 236,
+      "end_line": 239,
+      "calls": []
+    },
+    {
+      "name": "handle_401",
+      "file": "auth.py",
+      "start_line": 241,
+      "end_line": 283,
+      "calls": [
+        "seek",
+        "get",
+        "lower",
+        "compile",
+        "parse_dict_header",
+        "sub",
+        "close",
+        "copy",
+        "extract_cookies_to_jar",
+        "prepare_cookies",
+        "build_digest_header",
+        "send",
+        "append"
+      ]
+    },
+    {
+      "name": "__call__",
+      "file": "auth.py",
+      "start_line": 285,
+      "end_line": 303,
+      "calls": [
+        "init_per_thread_state",
+        "build_digest_header",
+        "tell",
+        "register_hook"
+      ]
+    },
+    {
+      "name": "__eq__",
+      "file": "auth.py",
+      "start_line": 305,
+      "end_line": 311,
+      "calls": [
+        "all",
+        "getattr"
+      ]
+    },
+    {
+      "name": "__ne__",
+      "file": "auth.py",
+      "start_line": 313,
+      "end_line": 314,
+      "calls": []
+    },
+    {
+      "name": "_resolve_char_detection",
+      "file": "compat.py",
+      "start_line": 18,
+      "end_line": 27,
+      "calls": [
+        "import_module"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "cookies.py",
+      "start_line": 35,
+      "end_line": 38,
+      "calls": [
+        "urlparse"
+      ]
+    },
+    {
+      "name": "get_type",
+      "file": "cookies.py",
+      "start_line": 40,
+      "end_line": 41,
+      "calls": []
+    },
+    {
+      "name": "get_host",
+      "file": "cookies.py",
+      "start_line": 43,
+      "end_line": 44,
+      "calls": [
+        "urlparse"
+      ]
+    },
+    {
+      "name": "get_origin_req_host",
+      "file": "cookies.py",
+      "start_line": 46,
+      "end_line": 47,
+      "calls": [
+        "get_host"
+      ]
+    },
+    {
+      "name": "get_full_url",
+      "file": "cookies.py",
+      "start_line": 49,
+      "end_line": 67,
+      "calls": [
+        "get",
+        "to_native_string",
+        "urlparse",
+        "urlunparse"
+      ]
+    },
+    {
+      "name": "is_unverifiable",
+      "file": "cookies.py",
+      "start_line": 69,
+      "end_line": 70,
+      "calls": []
+    },
+    {
+      "name": "has_header",
+      "file": "cookies.py",
+      "start_line": 72,
+      "end_line": 73,
+      "calls": []
+    },
+    {
+      "name": "get_header",
+      "file": "cookies.py",
+      "start_line": 75,
+      "end_line": 76,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "add_header",
+      "file": "cookies.py",
+      "start_line": 78,
+      "end_line": 82,
+      "calls": [
+        "NotImplementedError"
+      ]
+    },
+    {
+      "name": "add_unredirected_header",
+      "file": "cookies.py",
+      "start_line": 84,
+      "end_line": 85,
+      "calls": []
+    },
+    {
+      "name": "get_new_headers",
+      "file": "cookies.py",
+      "start_line": 87,
+      "end_line": 88,
+      "calls": []
+    },
+    {
+      "name": "unverifiable",
+      "file": "cookies.py",
+      "start_line": 91,
+      "end_line": 92,
+      "calls": [
+        "is_unverifiable"
+      ]
+    },
+    {
+      "name": "origin_req_host",
+      "file": "cookies.py",
+      "start_line": 95,
+      "end_line": 96,
+      "calls": [
+        "get_origin_req_host"
+      ]
+    },
+    {
+      "name": "host",
+      "file": "cookies.py",
+      "start_line": 99,
+      "end_line": 100,
+      "calls": [
+        "get_host"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "cookies.py",
+      "start_line": 110,
+      "end_line": 115,
+      "calls": []
+    },
+    {
+      "name": "info",
+      "file": "cookies.py",
+      "start_line": 117,
+      "end_line": 118,
+      "calls": []
+    },
+    {
+      "name": "getheaders",
+      "file": "cookies.py",
+      "start_line": 120,
+      "end_line": 121,
+      "calls": [
+        "getheaders"
+      ]
+    },
+    {
+      "name": "extract_cookies_to_jar",
+      "file": "cookies.py",
+      "start_line": 124,
+      "end_line": 137,
+      "calls": [
+        "hasattr",
+        "MockRequest",
+        "MockResponse",
+        "extract_cookies"
+      ]
+    },
+    {
+      "name": "get_cookie_header",
+      "file": "cookies.py",
+      "start_line": 140,
+      "end_line": 148,
+      "calls": [
+        "MockRequest",
+        "add_cookie_header",
+        "get",
+        "get_new_headers"
+      ]
+    },
+    {
+      "name": "remove_cookie_by_name",
+      "file": "cookies.py",
+      "start_line": 151,
+      "end_line": 167,
+      "calls": [
+        "append",
+        "clear"
+      ]
+    },
+    {
+      "name": "get",
+      "file": "cookies.py",
+      "start_line": 194,
+      "end_line": 204,
+      "calls": [
+        "_find_no_duplicates"
+      ]
+    },
+    {
+      "name": "set",
+      "file": "cookies.py",
+      "start_line": 206,
+      "end_line": 223,
+      "calls": [
+        "remove_cookie_by_name",
+        "get",
+        "isinstance",
+        "morsel_to_cookie",
+        "create_cookie",
+        "set_cookie"
+      ]
+    },
+    {
+      "name": "iterkeys",
+      "file": "cookies.py",
+      "start_line": 225,
+      "end_line": 232,
+      "calls": [
+        "iter"
+      ]
+    },
+    {
+      "name": "keys",
+      "file": "cookies.py",
+      "start_line": 234,
+      "end_line": 240,
+      "calls": [
+        "list",
+        "iterkeys"
+      ]
+    },
+    {
+      "name": "itervalues",
+      "file": "cookies.py",
+      "start_line": 242,
+      "end_line": 249,
+      "calls": [
+        "iter"
+      ]
+    },
+    {
+      "name": "values",
+      "file": "cookies.py",
+      "start_line": 251,
+      "end_line": 257,
+      "calls": [
+        "list",
+        "itervalues"
+      ]
+    },
+    {
+      "name": "iteritems",
+      "file": "cookies.py",
+      "start_line": 259,
+      "end_line": 266,
+      "calls": [
+        "iter"
+      ]
+    },
+    {
+      "name": "items",
+      "file": "cookies.py",
+      "start_line": 268,
+      "end_line": 275,
+      "calls": [
+        "list",
+        "iteritems"
+      ]
+    },
+    {
+      "name": "list_domains",
+      "file": "cookies.py",
+      "start_line": 277,
+      "end_line": 283,
+      "calls": [
+        "iter",
+        "append"
+      ]
+    },
+    {
+      "name": "list_paths",
+      "file": "cookies.py",
+      "start_line": 285,
+      "end_line": 291,
+      "calls": [
+        "iter",
+        "append"
+      ]
+    },
+    {
+      "name": "multiple_domains",
+      "file": "cookies.py",
+      "start_line": 293,
+      "end_line": 304,
+      "calls": [
+        "iter",
+        "append"
+      ]
+    },
+    {
+      "name": "get_dict",
+      "file": "cookies.py",
+      "start_line": 306,
+      "end_line": 319,
+      "calls": [
+        "iter"
+      ]
+    },
+    {
+      "name": "__contains__",
+      "file": "cookies.py",
+      "start_line": 321,
+      "end_line": 325,
+      "calls": [
+        "__contains__",
+        "super"
+      ]
+    },
+    {
+      "name": "__getitem__",
+      "file": "cookies.py",
+      "start_line": 327,
+      "end_line": 334,
+      "calls": [
+        "_find_no_duplicates"
+      ]
+    },
+    {
+      "name": "__setitem__",
+      "file": "cookies.py",
+      "start_line": 336,
+      "end_line": 341,
+      "calls": [
+        "set"
+      ]
+    },
+    {
+      "name": "__delitem__",
+      "file": "cookies.py",
+      "start_line": 343,
+      "end_line": 347,
+      "calls": [
+        "remove_cookie_by_name"
+      ]
+    },
+    {
+      "name": "set_cookie",
+      "file": "cookies.py",
+      "start_line": 349,
+      "end_line": 356,
+      "calls": [
+        "hasattr",
+        "startswith",
+        "endswith",
+        "replace",
+        "set_cookie",
+        "super"
+      ]
+    },
+    {
+      "name": "update",
+      "file": "cookies.py",
+      "start_line": 358,
+      "end_line": 364,
+      "calls": [
+        "isinstance",
+        "set_cookie",
+        "copy",
+        "update",
+        "super"
+      ]
+    },
+    {
+      "name": "_find",
+      "file": "cookies.py",
+      "start_line": 366,
+      "end_line": 384,
+      "calls": [
+        "iter",
+        "KeyError"
+      ]
+    },
+    {
+      "name": "_find_no_duplicates",
+      "file": "cookies.py",
+      "start_line": 386,
+      "end_line": 413,
+      "calls": [
+        "iter",
+        "CookieConflictError",
+        "KeyError"
+      ]
+    },
+    {
+      "name": "__getstate__",
+      "file": "cookies.py",
+      "start_line": 415,
+      "end_line": 420,
+      "calls": [
+        "copy",
+        "pop"
+      ]
+    },
+    {
+      "name": "__setstate__",
+      "file": "cookies.py",
+      "start_line": 422,
+      "end_line": 426,
+      "calls": [
+        "update",
+        "RLock"
+      ]
+    },
+    {
+      "name": "copy",
+      "file": "cookies.py",
+      "start_line": 428,
+      "end_line": 433,
+      "calls": [
+        "RequestsCookieJar",
+        "set_policy",
+        "get_policy",
+        "update"
+      ]
+    },
+    {
+      "name": "get_policy",
+      "file": "cookies.py",
+      "start_line": 435,
+      "end_line": 437,
+      "calls": []
+    },
+    {
+      "name": "_copy_cookie_jar",
+      "file": "cookies.py",
+      "start_line": 440,
+      "end_line": 452,
+      "calls": [
+        "hasattr",
+        "copy",
+        "clear",
+        "set_cookie"
+      ]
+    },
+    {
+      "name": "create_cookie",
+      "file": "cookies.py",
+      "start_line": 455,
+      "end_line": 489,
+      "calls": [
+        "set",
+        "TypeError",
+        "list",
+        "update",
+        "bool",
+        "startswith",
+        "Cookie"
+      ]
+    },
+    {
+      "name": "morsel_to_cookie",
+      "file": "cookies.py",
+      "start_line": 492,
+      "end_line": 518,
+      "calls": [
+        "int",
+        "time",
+        "TypeError",
+        "timegm",
+        "strptime",
+        "create_cookie",
+        "bool"
+      ]
+    },
+    {
+      "name": "cookiejar_from_dict",
+      "file": "cookies.py",
+      "start_line": 521,
+      "end_line": 539,
+      "calls": [
+        "RequestsCookieJar",
+        "set_cookie",
+        "create_cookie"
+      ]
+    },
+    {
+      "name": "merge_cookies",
+      "file": "cookies.py",
+      "start_line": 542,
+      "end_line": 561,
+      "calls": [
+        "isinstance",
+        "ValueError",
+        "cookiejar_from_dict",
+        "update",
+        "set_cookie"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "exceptions.py",
+      "start_line": 17,
+      "end_line": 24,
+      "calls": [
+        "pop",
+        "hasattr",
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "exceptions.py",
+      "start_line": 34,
+      "end_line": 42,
+      "calls": [
+        "__init__"
+      ]
+    },
+    {
+      "name": "__reduce__",
+      "file": "exceptions.py",
+      "start_line": 44,
+      "end_line": 52,
+      "calls": [
+        "__reduce__"
+      ]
+    },
+    {
+      "name": "_implementation",
+      "file": "help.py",
+      "start_line": 34,
+      "end_line": 66,
+      "calls": [
+        "python_implementation",
+        "python_version",
+        "format",
+        "join"
+      ]
+    },
+    {
+      "name": "info",
+      "file": "help.py",
+      "start_line": 69,
+      "end_line": 125,
+      "calls": [
+        "system",
+        "release",
+        "_implementation",
+        "getattr"
+      ]
+    },
+    {
+      "name": "main",
+      "file": "help.py",
+      "start_line": 128,
+      "end_line": 130,
+      "calls": [
+        "print",
+        "dumps",
+        "info"
+      ]
+    },
+    {
+      "name": "default_hooks",
+      "file": "hooks.py",
+      "start_line": 15,
+      "end_line": 16,
+      "calls": []
+    },
+    {
+      "name": "dispatch_hook",
+      "file": "hooks.py",
+      "start_line": 22,
+      "end_line": 33,
+      "calls": [
+        "get",
+        "hasattr",
+        "hook"
+      ]
+    },
+    {
+      "name": "path_url",
+      "file": "models.py",
+      "start_line": 86,
+      "end_line": 104,
+      "calls": [
+        "urlsplit",
+        "append",
+        "join"
+      ]
+    },
+    {
+      "name": "_encode_params",
+      "file": "models.py",
+      "start_line": 107,
+      "end_line": 134,
+      "calls": [
+        "isinstance",
+        "hasattr",
+        "to_key_val_list",
+        "append",
+        "encode",
+        "urlencode"
+      ]
+    },
+    {
+      "name": "_encode_files",
+      "file": "models.py",
+      "start_line": 137,
+      "end_line": 203,
+      "calls": [
+        "ValueError",
+        "isinstance",
+        "to_key_val_list",
+        "hasattr",
+        "str",
+        "append",
+        "decode",
+        "encode",
+        "len",
+        "guess_filename",
+        "read",
+        "RequestField",
+        "make_multipart",
+        "encode_multipart_formdata"
+      ]
+    },
+    {
+      "name": "register_hook",
+      "file": "models.py",
+      "start_line": 207,
+      "end_line": 216,
+      "calls": [
+        "ValueError",
+        "isinstance",
+        "append",
+        "hasattr",
+        "extend"
+      ]
+    },
+    {
+      "name": "deregister_hook",
+      "file": "models.py",
+      "start_line": 218,
+      "end_line": 227,
+      "calls": [
+        "remove"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "models.py",
+      "start_line": 258,
+      "end_line": 290,
+      "calls": [
+        "default_hooks",
+        "list",
+        "items",
+        "register_hook"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "models.py",
+      "start_line": 292,
+      "end_line": 293,
+      "calls": []
+    },
+    {
+      "name": "prepare",
+      "file": "models.py",
+      "start_line": 295,
+      "end_line": 310,
+      "calls": [
+        "PreparedRequest",
+        "prepare"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "models.py",
+      "start_line": 334,
+      "end_line": 349,
+      "calls": [
+        "default_hooks"
+      ]
+    },
+    {
+      "name": "prepare",
+      "file": "models.py",
+      "start_line": 351,
+      "end_line": 377,
+      "calls": [
+        "prepare_method",
+        "prepare_url",
+        "prepare_headers",
+        "prepare_cookies",
+        "prepare_body",
+        "prepare_auth",
+        "prepare_hooks"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "models.py",
+      "start_line": 379,
+      "end_line": 380,
+      "calls": []
+    },
+    {
+      "name": "copy",
+      "file": "models.py",
+      "start_line": 382,
+      "end_line": 391,
+      "calls": [
+        "PreparedRequest",
+        "copy",
+        "_copy_cookie_jar"
+      ]
+    },
+    {
+      "name": "prepare_method",
+      "file": "models.py",
+      "start_line": 393,
+      "end_line": 397,
+      "calls": [
+        "to_native_string",
+        "upper"
+      ]
+    },
+    {
+      "name": "_get_idna_encoded_host",
+      "file": "models.py",
+      "start_line": 400,
+      "end_line": 407,
+      "calls": [
+        "decode",
+        "encode"
+      ]
+    },
+    {
+      "name": "prepare_url",
+      "file": "models.py",
+      "start_line": 409,
+      "end_line": 481,
+      "calls": [
+        "isinstance",
+        "decode",
+        "str",
+        "lstrip",
+        "startswith",
+        "lower",
+        "parse_url",
+        "InvalidURL",
+        "MissingSchema",
+        "unicode_is_ascii",
+        "_get_idna_encoded_host",
+        "to_native_string",
+        "_encode_params",
+        "requote_uri",
+        "urlunparse"
+      ]
+    },
+    {
+      "name": "prepare_headers",
+      "file": "models.py",
+      "start_line": 483,
+      "end_line": 492,
+      "calls": [
+        "CaseInsensitiveDict",
+        "items",
+        "check_header_validity",
+        "to_native_string"
+      ]
+    },
+    {
+      "name": "prepare_body",
+      "file": "models.py",
+      "start_line": 494,
+      "end_line": 570,
+      "calls": [
+        "dumps",
+        "InvalidJSONError",
+        "isinstance",
+        "encode",
+        "all",
+        "hasattr",
+        "super_len",
+        "getattr",
+        "tell",
+        "object",
+        "NotImplementedError",
+        "builtin_str",
+        "_encode_files",
+        "_encode_params",
+        "prepare_content_length"
+      ]
+    },
+    {
+      "name": "prepare_content_length",
+      "file": "models.py",
+      "start_line": 572,
+      "end_line": 586,
+      "calls": [
+        "super_len",
+        "builtin_str",
+        "get"
+      ]
+    },
+    {
+      "name": "prepare_auth",
+      "file": "models.py",
+      "start_line": 588,
+      "end_line": 608,
+      "calls": [
+        "get_auth_from_url",
+        "any",
+        "isinstance",
+        "len",
+        "HTTPBasicAuth",
+        "auth",
+        "update",
+        "prepare_content_length"
+      ]
+    },
+    {
+      "name": "prepare_cookies",
+      "file": "models.py",
+      "start_line": 610,
+      "end_line": 628,
+      "calls": [
+        "isinstance",
+        "cookiejar_from_dict",
+        "get_cookie_header"
+      ]
+    },
+    {
+      "name": "prepare_hooks",
+      "file": "models.py",
+      "start_line": 630,
+      "end_line": 637,
+      "calls": [
+        "register_hook"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "models.py",
+      "start_line": 658,
+      "end_line": 703,
+      "calls": [
+        "CaseInsensitiveDict",
+        "cookiejar_from_dict",
+        "timedelta"
+      ]
+    },
+    {
+      "name": "__enter__",
+      "file": "models.py",
+      "start_line": 705,
+      "end_line": 706,
+      "calls": []
+    },
+    {
+      "name": "__exit__",
+      "file": "models.py",
+      "start_line": 708,
+      "end_line": 709,
+      "calls": [
+        "close"
+      ]
+    },
+    {
+      "name": "__getstate__",
+      "file": "models.py",
+      "start_line": 711,
+      "end_line": 717,
+      "calls": [
+        "getattr"
+      ]
+    },
+    {
+      "name": "__setstate__",
+      "file": "models.py",
+      "start_line": 719,
+      "end_line": 725,
+      "calls": [
+        "items",
+        "setattr"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "models.py",
+      "start_line": 727,
+      "end_line": 728,
+      "calls": []
+    },
+    {
+      "name": "__bool__",
+      "file": "models.py",
+      "start_line": 730,
+      "end_line": 738,
+      "calls": []
+    },
+    {
+      "name": "__nonzero__",
+      "file": "models.py",
+      "start_line": 740,
+      "end_line": 748,
+      "calls": []
+    },
+    {
+      "name": "__iter__",
+      "file": "models.py",
+      "start_line": 750,
+      "end_line": 752,
+      "calls": [
+        "iter_content"
+      ]
+    },
+    {
+      "name": "ok",
+      "file": "models.py",
+      "start_line": 755,
+      "end_line": 767,
+      "calls": [
+        "raise_for_status"
+      ]
+    },
+    {
+      "name": "is_redirect",
+      "file": "models.py",
+      "start_line": 770,
+      "end_line": 774,
+      "calls": []
+    },
+    {
+      "name": "is_permanent_redirect",
+      "file": "models.py",
+      "start_line": 777,
+      "end_line": 782,
+      "calls": []
+    },
+    {
+      "name": "next",
+      "file": "models.py",
+      "start_line": 785,
+      "end_line": 787,
+      "calls": []
+    },
+    {
+      "name": "apparent_encoding",
+      "file": "models.py",
+      "start_line": 790,
+      "end_line": 797,
+      "calls": [
+        "detect"
+      ]
+    },
+    {
+      "name": "iter_content",
+      "file": "models.py",
+      "start_line": 799,
+      "end_line": 855,
+      "calls": [
+        "hasattr",
+        "stream",
+        "ChunkedEncodingError",
+        "ContentDecodingError",
+        "ConnectionError",
+        "RequestsSSLError",
+        "read",
+        "isinstance",
+        "StreamConsumedError",
+        "TypeError",
+        "type",
+        "iter_slices",
+        "generate",
+        "stream_decode_response_unicode"
+      ]
+    },
+    {
+      "name": "generate",
+      "file": "models.py",
+      "start_line": 816,
+      "end_line": 837,
+      "calls": [
+        "hasattr",
+        "stream",
+        "ChunkedEncodingError",
+        "ContentDecodingError",
+        "ConnectionError",
+        "RequestsSSLError",
+        "read"
+      ]
+    },
+    {
+      "name": "iter_lines",
+      "file": "models.py",
+      "start_line": 857,
+      "end_line": 888,
+      "calls": [
+        "iter_content",
+        "split",
+        "splitlines",
+        "pop"
+      ]
+    },
+    {
+      "name": "content",
+      "file": "models.py",
+      "start_line": 891,
+      "end_line": 907,
+      "calls": [
+        "RuntimeError",
+        "join",
+        "iter_content"
+      ]
+    },
+    {
+      "name": "text",
+      "file": "models.py",
+      "start_line": 910,
+      "end_line": 945,
+      "calls": [
+        "str"
+      ]
+    },
+    {
+      "name": "json",
+      "file": "models.py",
+      "start_line": 947,
+      "end_line": 978,
+      "calls": [
+        "len",
+        "guess_json_utf",
+        "loads",
+        "decode",
+        "RequestsJSONDecodeError"
+      ]
+    },
+    {
+      "name": "links",
+      "file": "models.py",
+      "start_line": 981,
+      "end_line": 995,
+      "calls": [
+        "get",
+        "parse_header_links"
+      ]
+    },
+    {
+      "name": "raise_for_status",
+      "file": "models.py",
+      "start_line": 997,
+      "end_line": 1024,
+      "calls": [
+        "isinstance",
+        "decode",
+        "HTTPError"
+      ]
+    },
+    {
+      "name": "close",
+      "file": "models.py",
+      "start_line": 1026,
+      "end_line": 1037,
+      "calls": [
+        "close",
+        "getattr",
+        "release_conn"
+      ]
+    },
+    {
+      "name": "merge_setting",
+      "file": "sessions.py",
+      "start_line": 61,
+      "end_line": 88,
+      "calls": [
+        "isinstance",
+        "dict_class",
+        "to_key_val_list",
+        "update",
+        "items"
+      ]
+    },
+    {
+      "name": "merge_hooks",
+      "file": "sessions.py",
+      "start_line": 91,
+      "end_line": 103,
+      "calls": [
+        "get",
+        "merge_setting"
+      ]
+    },
+    {
+      "name": "get_redirect_target",
+      "file": "sessions.py",
+      "start_line": 107,
+      "end_line": 125,
+      "calls": [
+        "encode",
+        "to_native_string"
+      ]
+    },
+    {
+      "name": "should_strip_auth",
+      "file": "sessions.py",
+      "start_line": 127,
+      "end_line": 157,
+      "calls": [
+        "urlparse",
+        "get"
+      ]
+    },
+    {
+      "name": "resolve_redirects",
+      "file": "sessions.py",
+      "start_line": 159,
+      "end_line": 280,
+      "calls": [
+        "get_redirect_target",
+        "urlparse",
+        "copy",
+        "append",
+        "read",
+        "len",
+        "TooManyRedirects",
+        "close",
+        "startswith",
+        "join",
+        "to_native_string",
+        "_replace",
+        "geturl",
+        "urljoin",
+        "requote_uri",
+        "rebuild_method",
+        "pop",
+        "extract_cookies_to_jar",
+        "merge_cookies",
+        "prepare_cookies",
+        "rebuild_proxies",
+        "rebuild_auth",
+        "rewind_body",
+        "send"
+      ]
+    },
+    {
+      "name": "rebuild_auth",
+      "file": "sessions.py",
+      "start_line": 282,
+      "end_line": 300,
+      "calls": [
+        "should_strip_auth",
+        "get_netrc_auth",
+        "prepare_auth"
+      ]
+    },
+    {
+      "name": "rebuild_proxies",
+      "file": "sessions.py",
+      "start_line": 302,
+      "end_line": 331,
+      "calls": [
+        "urlparse",
+        "resolve_proxies",
+        "get_auth_from_url",
+        "startswith",
+        "_basic_auth_str"
+      ]
+    },
+    {
+      "name": "rebuild_method",
+      "file": "sessions.py",
+      "start_line": 333,
+      "end_line": 353,
+      "calls": []
+    },
+    {
+      "name": "__init__",
+      "file": "sessions.py",
+      "start_line": 390,
+      "end_line": 449,
+      "calls": [
+        "default_headers",
+        "default_hooks",
+        "cookiejar_from_dict",
+        "OrderedDict",
+        "mount",
+        "HTTPAdapter"
+      ]
+    },
+    {
+      "name": "__enter__",
+      "file": "sessions.py",
+      "start_line": 451,
+      "end_line": 452,
+      "calls": []
+    },
+    {
+      "name": "__exit__",
+      "file": "sessions.py",
+      "start_line": 454,
+      "end_line": 455,
+      "calls": [
+        "close"
+      ]
+    },
+    {
+      "name": "prepare_request",
+      "file": "sessions.py",
+      "start_line": 457,
+      "end_line": 498,
+      "calls": [
+        "isinstance",
+        "cookiejar_from_dict",
+        "merge_cookies",
+        "RequestsCookieJar",
+        "get_netrc_auth",
+        "PreparedRequest",
+        "prepare",
+        "upper",
+        "merge_setting",
+        "merge_hooks"
+      ]
+    },
+    {
+      "name": "request",
+      "file": "sessions.py",
+      "start_line": 500,
+      "end_line": 591,
+      "calls": [
+        "Request",
+        "upper",
+        "prepare_request",
+        "merge_environment_settings",
+        "update",
+        "send"
+      ]
+    },
+    {
+      "name": "get",
+      "file": "sessions.py",
+      "start_line": 593,
+      "end_line": 602,
+      "calls": [
+        "setdefault",
+        "request"
+      ]
+    },
+    {
+      "name": "options",
+      "file": "sessions.py",
+      "start_line": 604,
+      "end_line": 613,
+      "calls": [
+        "setdefault",
+        "request"
+      ]
+    },
+    {
+      "name": "head",
+      "file": "sessions.py",
+      "start_line": 615,
+      "end_line": 624,
+      "calls": [
+        "setdefault",
+        "request"
+      ]
+    },
+    {
+      "name": "post",
+      "file": "sessions.py",
+      "start_line": 626,
+      "end_line": 637,
+      "calls": [
+        "request"
+      ]
+    },
+    {
+      "name": "put",
+      "file": "sessions.py",
+      "start_line": 639,
+      "end_line": 649,
+      "calls": [
+        "request"
+      ]
+    },
+    {
+      "name": "patch",
+      "file": "sessions.py",
+      "start_line": 651,
+      "end_line": 661,
+      "calls": [
+        "request"
+      ]
+    },
+    {
+      "name": "delete",
+      "file": "sessions.py",
+      "start_line": 663,
+      "end_line": 671,
+      "calls": [
+        "request"
+      ]
+    },
+    {
+      "name": "send",
+      "file": "sessions.py",
+      "start_line": 673,
+      "end_line": 748,
+      "calls": [
+        "setdefault",
+        "resolve_proxies",
+        "isinstance",
+        "ValueError",
+        "pop",
+        "get",
+        "get_adapter",
+        "preferred_clock",
+        "send",
+        "timedelta",
+        "dispatch_hook",
+        "extract_cookies_to_jar",
+        "resolve_redirects",
+        "insert",
+        "next"
+      ]
+    },
+    {
+      "name": "merge_environment_settings",
+      "file": "sessions.py",
+      "start_line": 750,
+      "end_line": 779,
+      "calls": [
+        "get",
+        "get_environ_proxies",
+        "items",
+        "setdefault",
+        "merge_setting"
+      ]
+    },
+    {
+      "name": "get_adapter",
+      "file": "sessions.py",
+      "start_line": 781,
+      "end_line": 792,
+      "calls": [
+        "items",
+        "startswith",
+        "lower",
+        "InvalidSchema"
+      ]
+    },
+    {
+      "name": "close",
+      "file": "sessions.py",
+      "start_line": 794,
+      "end_line": 797,
+      "calls": [
+        "values",
+        "close"
+      ]
+    },
+    {
+      "name": "mount",
+      "file": "sessions.py",
+      "start_line": 799,
+      "end_line": 808,
+      "calls": [
+        "len",
+        "pop"
+      ]
+    },
+    {
+      "name": "__getstate__",
+      "file": "sessions.py",
+      "start_line": 810,
+      "end_line": 812,
+      "calls": [
+        "getattr"
+      ]
+    },
+    {
+      "name": "__setstate__",
+      "file": "sessions.py",
+      "start_line": 814,
+      "end_line": 816,
+      "calls": [
+        "items",
+        "setattr"
+      ]
+    },
+    {
+      "name": "session",
+      "file": "sessions.py",
+      "start_line": 819,
+      "end_line": 831,
+      "calls": [
+        "Session"
+      ]
+    },
+    {
+      "name": "_init",
+      "file": "status_codes.py",
+      "start_line": 109,
+      "end_line": 125,
+      "calls": [
+        "items",
+        "setattr",
+        "startswith",
+        "upper",
+        "join",
+        "doc",
+        "sorted"
+      ]
+    },
+    {
+      "name": "doc",
+      "file": "status_codes.py",
+      "start_line": 116,
+      "end_line": 118,
+      "calls": [
+        "join"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "structures.py",
+      "start_line": 40,
+      "end_line": 44,
+      "calls": [
+        "OrderedDict",
+        "update"
+      ]
+    },
+    {
+      "name": "__setitem__",
+      "file": "structures.py",
+      "start_line": 46,
+      "end_line": 49,
+      "calls": [
+        "lower"
+      ]
+    },
+    {
+      "name": "__getitem__",
+      "file": "structures.py",
+      "start_line": 51,
+      "end_line": 52,
+      "calls": [
+        "lower"
+      ]
+    },
+    {
+      "name": "__delitem__",
+      "file": "structures.py",
+      "start_line": 54,
+      "end_line": 55,
+      "calls": [
+        "lower"
+      ]
+    },
+    {
+      "name": "__iter__",
+      "file": "structures.py",
+      "start_line": 57,
+      "end_line": 58,
+      "calls": [
+        "values"
+      ]
+    },
+    {
+      "name": "__len__",
+      "file": "structures.py",
+      "start_line": 60,
+      "end_line": 61,
+      "calls": [
+        "len"
+      ]
+    },
+    {
+      "name": "lower_items",
+      "file": "structures.py",
+      "start_line": 63,
+      "end_line": 65,
+      "calls": [
+        "items"
+      ]
+    },
+    {
+      "name": "__eq__",
+      "file": "structures.py",
+      "start_line": 67,
+      "end_line": 73,
+      "calls": [
+        "isinstance",
+        "CaseInsensitiveDict",
+        "dict",
+        "lower_items"
+      ]
+    },
+    {
+      "name": "copy",
+      "file": "structures.py",
+      "start_line": 76,
+      "end_line": 77,
+      "calls": [
+        "CaseInsensitiveDict",
+        "values"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "structures.py",
+      "start_line": 79,
+      "end_line": 80,
+      "calls": [
+        "str",
+        "dict",
+        "items"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "structures.py",
+      "start_line": 86,
+      "end_line": 88,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "structures.py",
+      "start_line": 90,
+      "end_line": 91,
+      "calls": []
+    },
+    {
+      "name": "__getitem__",
+      "file": "structures.py",
+      "start_line": 93,
+      "end_line": 96,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "get",
+      "file": "structures.py",
+      "start_line": 98,
+      "end_line": 99,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "proxy_bypass_registry",
+      "file": "utils.py",
+      "start_line": 76,
+      "end_line": 112,
+      "calls": [
+        "OpenKey",
+        "int",
+        "QueryValueEx",
+        "split",
+        "filter",
+        "replace",
+        "match"
+      ]
+    },
+    {
+      "name": "proxy_bypass",
+      "file": "utils.py",
+      "start_line": 114,
+      "end_line": 123,
+      "calls": [
+        "getproxies_environment",
+        "proxy_bypass_environment",
+        "proxy_bypass_registry"
+      ]
+    },
+    {
+      "name": "dict_to_sequence",
+      "file": "utils.py",
+      "start_line": 126,
+      "end_line": 132,
+      "calls": [
+        "hasattr",
+        "items"
+      ]
+    },
+    {
+      "name": "super_len",
+      "file": "utils.py",
+      "start_line": 135,
+      "end_line": 201,
+      "calls": [
+        "isinstance",
+        "encode",
+        "hasattr",
+        "len",
+        "fileno",
+        "fstat",
+        "warn",
+        "tell",
+        "seek",
+        "max"
+      ]
+    },
+    {
+      "name": "get_netrc_auth",
+      "file": "utils.py",
+      "start_line": 204,
+      "end_line": 258,
+      "calls": [
+        "get",
+        "expanduser",
+        "exists",
+        "urlparse",
+        "isinstance",
+        "decode",
+        "split",
+        "authenticators",
+        "netrc"
+      ]
+    },
+    {
+      "name": "guess_filename",
+      "file": "utils.py",
+      "start_line": 261,
+      "end_line": 265,
+      "calls": [
+        "getattr",
+        "isinstance",
+        "basename"
+      ]
+    },
+    {
+      "name": "extract_zipped_paths",
+      "file": "utils.py",
+      "start_line": 268,
+      "end_line": 302,
+      "calls": [
+        "exists",
+        "split",
+        "join",
+        "is_zipfile",
+        "ZipFile",
+        "namelist",
+        "gettempdir",
+        "atomic_open",
+        "write",
+        "read"
+      ]
+    },
+    {
+      "name": "atomic_open",
+      "file": "utils.py",
+      "start_line": 306,
+      "end_line": 315,
+      "calls": [
+        "mkstemp",
+        "dirname",
+        "fdopen",
+        "replace",
+        "remove"
+      ]
+    },
+    {
+      "name": "from_key_val_list",
+      "file": "utils.py",
+      "start_line": 318,
+      "end_line": 342,
+      "calls": [
+        "isinstance",
+        "ValueError",
+        "OrderedDict"
+      ]
+    },
+    {
+      "name": "to_key_val_list",
+      "file": "utils.py",
+      "start_line": 345,
+      "end_line": 371,
+      "calls": [
+        "isinstance",
+        "ValueError",
+        "items",
+        "list"
+      ]
+    },
+    {
+      "name": "parse_list_header",
+      "file": "utils.py",
+      "start_line": 375,
+      "end_line": 403,
+      "calls": [
+        "_parse_list_header",
+        "unquote_header_value",
+        "append"
+      ]
+    },
+    {
+      "name": "parse_dict_header",
+      "file": "utils.py",
+      "start_line": 407,
+      "end_line": 438,
+      "calls": [
+        "_parse_list_header",
+        "split",
+        "unquote_header_value"
+      ]
+    },
+    {
+      "name": "unquote_header_value",
+      "file": "utils.py",
+      "start_line": 442,
+      "end_line": 464,
+      "calls": [
+        "replace"
+      ]
+    },
+    {
+      "name": "dict_from_cookiejar",
+      "file": "utils.py",
+      "start_line": 467,
+      "end_line": 475,
+      "calls": []
+    },
+    {
+      "name": "add_dict_to_cookiejar",
+      "file": "utils.py",
+      "start_line": 478,
+      "end_line": 486,
+      "calls": [
+        "cookiejar_from_dict"
+      ]
+    },
+    {
+      "name": "get_encodings_from_content",
+      "file": "utils.py",
+      "start_line": 489,
+      "end_line": 511,
+      "calls": [
+        "warn",
+        "compile",
+        "findall"
+      ]
+    },
+    {
+      "name": "_parse_content_type_header",
+      "file": "utils.py",
+      "start_line": 514,
+      "end_line": 536,
+      "calls": [
+        "split",
+        "strip",
+        "find",
+        "lower"
+      ]
+    },
+    {
+      "name": "get_encoding_from_headers",
+      "file": "utils.py",
+      "start_line": 539,
+      "end_line": 561,
+      "calls": [
+        "get",
+        "_parse_content_type_header",
+        "strip"
+      ]
+    },
+    {
+      "name": "stream_decode_response_unicode",
+      "file": "utils.py",
+      "start_line": 564,
+      "end_line": 578,
+      "calls": [
+        "getincrementaldecoder",
+        "decode"
+      ]
+    },
+    {
+      "name": "iter_slices",
+      "file": "utils.py",
+      "start_line": 581,
+      "end_line": 588,
+      "calls": [
+        "len"
+      ]
+    },
+    {
+      "name": "get_unicode_from_response",
+      "file": "utils.py",
+      "start_line": 591,
+      "end_line": 627,
+      "calls": [
+        "warn",
+        "get_encoding_from_headers",
+        "str",
+        "append"
+      ]
+    },
+    {
+      "name": "unquote_unreserved",
+      "file": "utils.py",
+      "start_line": 636,
+      "end_line": 657,
+      "calls": [
+        "split",
+        "range",
+        "len",
+        "isalnum",
+        "chr",
+        "int",
+        "InvalidURL",
+        "join"
+      ]
+    },
+    {
+      "name": "requote_uri",
+      "file": "utils.py",
+      "start_line": 660,
+      "end_line": 679,
+      "calls": [
+        "quote",
+        "unquote_unreserved"
+      ]
+    },
+    {
+      "name": "address_in_network",
+      "file": "utils.py",
+      "start_line": 682,
+      "end_line": 694,
+      "calls": [
+        "unpack",
+        "inet_aton",
+        "split",
+        "dotted_netmask",
+        "int"
+      ]
+    },
+    {
+      "name": "dotted_netmask",
+      "file": "utils.py",
+      "start_line": 697,
+      "end_line": 705,
+      "calls": [
+        "inet_ntoa",
+        "pack"
+      ]
+    },
+    {
+      "name": "is_ipv4_address",
+      "file": "utils.py",
+      "start_line": 708,
+      "end_line": 716,
+      "calls": [
+        "inet_aton"
+      ]
+    },
+    {
+      "name": "is_valid_cidr",
+      "file": "utils.py",
+      "start_line": 719,
+      "end_line": 740,
+      "calls": [
+        "count",
+        "int",
+        "split",
+        "inet_aton"
+      ]
+    },
+    {
+      "name": "set_environ",
+      "file": "utils.py",
+      "start_line": 744,
+      "end_line": 762,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "should_bypass_proxies",
+      "file": "utils.py",
+      "start_line": 765,
+      "end_line": 823,
+      "calls": [
+        "get",
+        "upper",
+        "get_proxy",
+        "urlparse",
+        "split",
+        "replace",
+        "is_ipv4_address",
+        "is_valid_cidr",
+        "address_in_network",
+        "endswith",
+        "set_environ",
+        "proxy_bypass"
+      ]
+    },
+    {
+      "name": "get_proxy",
+      "file": "utils.py",
+      "start_line": 774,
+      "end_line": 775,
+      "calls": [
+        "get",
+        "upper"
+      ]
+    },
+    {
+      "name": "get_environ_proxies",
+      "file": "utils.py",
+      "start_line": 826,
+      "end_line": 835,
+      "calls": [
+        "should_bypass_proxies",
+        "getproxies"
+      ]
+    },
+    {
+      "name": "select_proxy",
+      "file": "utils.py",
+      "start_line": 838,
+      "end_line": 861,
+      "calls": [
+        "urlparse",
+        "get"
+      ]
+    },
+    {
+      "name": "resolve_proxies",
+      "file": "utils.py",
+      "start_line": 864,
+      "end_line": 888,
+      "calls": [
+        "urlparse",
+        "get",
+        "copy",
+        "should_bypass_proxies",
+        "get_environ_proxies",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "default_user_agent",
+      "file": "utils.py",
+      "start_line": 891,
+      "end_line": 897,
+      "calls": []
+    },
+    {
+      "name": "default_headers",
+      "file": "utils.py",
+      "start_line": 900,
+      "end_line": 911,
+      "calls": [
+        "CaseInsensitiveDict",
+        "default_user_agent"
+      ]
+    },
+    {
+      "name": "parse_header_links",
+      "file": "utils.py",
+      "start_line": 914,
+      "end_line": 948,
+      "calls": [
+        "strip",
+        "split",
+        "append"
+      ]
+    },
+    {
+      "name": "guess_json_utf",
+      "file": "utils.py",
+      "start_line": 957,
+      "end_line": 986,
+      "calls": [
+        "count"
+      ]
+    },
+    {
+      "name": "prepend_scheme_if_needed",
+      "file": "utils.py",
+      "start_line": 989,
+      "end_line": 1015,
+      "calls": [
+        "parse_url",
+        "join",
+        "urlunparse"
+      ]
+    },
+    {
+      "name": "get_auth_from_url",
+      "file": "utils.py",
+      "start_line": 1018,
+      "end_line": 1031,
+      "calls": [
+        "urlparse",
+        "unquote"
+      ]
+    },
+    {
+      "name": "check_header_validity",
+      "file": "utils.py",
+      "start_line": 1034,
+      "end_line": 1042,
+      "calls": [
+        "_validate_header_part"
+      ]
+    },
+    {
+      "name": "_validate_header_part",
+      "file": "utils.py",
+      "start_line": 1045,
+      "end_line": 1061,
+      "calls": [
+        "isinstance",
+        "InvalidHeader",
+        "type",
+        "match"
+      ]
+    },
+    {
+      "name": "urldefragauth",
+      "file": "utils.py",
+      "start_line": 1064,
+      "end_line": 1078,
+      "calls": [
+        "urlparse",
+        "rsplit",
+        "urlunparse"
+      ]
+    },
+    {
+      "name": "rewind_body",
+      "file": "utils.py",
+      "start_line": 1081,
+      "end_line": 1096,
+      "calls": [
+        "getattr",
+        "isinstance",
+        "body_seek",
+        "UnrewindableBodyError"
+      ]
+    }
+  ],
+  "call_edges": [
+    {
+      "caller": "_urllib3_request_context",
+      "callee": "get"
+    },
+    {
+      "caller": "__init__",
+      "callee": "init_poolmanager"
+    },
+    {
+      "caller": "__setstate__",
+      "callee": "items"
+    },
+    {
+      "caller": "__setstate__",
+      "callee": "init_poolmanager"
+    },
+    {
+      "caller": "proxy_manager_for",
+      "callee": "get_auth_from_url"
+    },
+    {
+      "caller": "proxy_manager_for",
+      "callee": "SOCKSProxyManager"
+    },
+    {
+      "caller": "proxy_manager_for",
+      "callee": "proxy_headers"
+    },
+    {
+      "caller": "build_response",
+      "callee": "get_encoding_from_headers"
+    },
+    {
+      "caller": "build_response",
+      "callee": "extract_cookies_to_jar"
+    },
+    {
+      "caller": "build_connection_pool_key_attributes",
+      "callee": "_urllib3_request_context"
+    },
+    {
+      "caller": "get_connection_with_tls_context",
+      "callee": "select_proxy"
+    },
+    {
+      "caller": "get_connection_with_tls_context",
+      "callee": "build_connection_pool_key_attributes"
+    },
+    {
+      "caller": "get_connection_with_tls_context",
+      "callee": "prepend_scheme_if_needed"
+    },
+    {
+      "caller": "get_connection_with_tls_context",
+      "callee": "proxy_manager_for"
+    },
+    {
+      "caller": "get_connection",
+      "callee": "select_proxy"
+    },
+    {
+      "caller": "get_connection",
+      "callee": "prepend_scheme_if_needed"
+    },
+    {
+      "caller": "get_connection",
+      "callee": "proxy_manager_for"
+    },
+    {
+      "caller": "close",
+      "callee": "values"
+    },
+    {
+      "caller": "request_url",
+      "callee": "select_proxy"
+    },
+    {
+      "caller": "request_url",
+      "callee": "urldefragauth"
+    },
+    {
+      "caller": "proxy_headers",
+      "callee": "get_auth_from_url"
+    },
+    {
+      "caller": "proxy_headers",
+      "callee": "_basic_auth_str"
+    },
+    {
+      "caller": "send",
+      "callee": "get_connection_with_tls_context"
+    },
+    {
+      "caller": "send",
+      "callee": "cert_verify"
+    },
+    {
+      "caller": "send",
+      "callee": "request_url"
+    },
+    {
+      "caller": "send",
+      "callee": "add_headers"
+    },
+    {
+      "caller": "send",
+      "callee": "build_response"
+    },
+    {
+      "caller": "get",
+      "callee": "request"
+    },
+    {
+      "caller": "options",
+      "callee": "request"
+    },
+    {
+      "caller": "head",
+      "callee": "request"
+    },
+    {
+      "caller": "post",
+      "callee": "request"
+    },
+    {
+      "caller": "put",
+      "callee": "request"
+    },
+    {
+      "caller": "patch",
+      "callee": "request"
+    },
+    {
+      "caller": "delete",
+      "callee": "request"
+    },
+    {
+      "caller": "_basic_auth_str",
+      "callee": "to_native_string"
+    },
+    {
+      "caller": "__call__",
+      "callee": "_basic_auth_str"
+    },
+    {
+      "caller": "__call__",
+      "callee": "_basic_auth_str"
+    },
+    {
+      "caller": "build_digest_header",
+      "callee": "get"
+    },
+    {
+      "caller": "handle_401",
+      "callee": "get"
+    },
+    {
+      "caller": "handle_401",
+      "callee": "parse_dict_header"
+    },
+    {
+      "caller": "handle_401",
+      "callee": "close"
+    },
+    {
+      "caller": "handle_401",
+      "callee": "copy"
+    },
+    {
+      "caller": "handle_401",
+      "callee": "extract_cookies_to_jar"
+    },
+    {
+      "caller": "handle_401",
+      "callee": "prepare_cookies"
+    },
+    {
+      "caller": "handle_401",
+      "callee": "build_digest_header"
+    },
+    {
+      "caller": "handle_401",
+      "callee": "send"
+    },
+    {
+      "caller": "__call__",
+      "callee": "init_per_thread_state"
+    },
+    {
+      "caller": "__call__",
+      "callee": "build_digest_header"
+    },
+    {
+      "caller": "__call__",
+      "callee": "register_hook"
+    },
+    {
+      "caller": "get_origin_req_host",
+      "callee": "get_host"
+    },
+    {
+      "caller": "get_full_url",
+      "callee": "get"
+    },
+    {
+      "caller": "get_full_url",
+      "callee": "to_native_string"
+    },
+    {
+      "caller": "get_header",
+      "callee": "get"
+    },
+    {
+      "caller": "unverifiable",
+      "callee": "is_unverifiable"
+    },
+    {
+      "caller": "origin_req_host",
+      "callee": "get_origin_req_host"
+    },
+    {
+      "caller": "host",
+      "callee": "get_host"
+    },
+    {
+      "caller": "get_cookie_header",
+      "callee": "get"
+    },
+    {
+      "caller": "get_cookie_header",
+      "callee": "get_new_headers"
+    },
+    {
+      "caller": "get",
+      "callee": "_find_no_duplicates"
+    },
+    {
+      "caller": "set",
+      "callee": "remove_cookie_by_name"
+    },
+    {
+      "caller": "set",
+      "callee": "get"
+    },
+    {
+      "caller": "set",
+      "callee": "morsel_to_cookie"
+    },
+    {
+      "caller": "set",
+      "callee": "create_cookie"
+    },
+    {
+      "caller": "set",
+      "callee": "set_cookie"
+    },
+    {
+      "caller": "keys",
+      "callee": "iterkeys"
+    },
+    {
+      "caller": "values",
+      "callee": "itervalues"
+    },
+    {
+      "caller": "items",
+      "callee": "iteritems"
+    },
+    {
+      "caller": "__getitem__",
+      "callee": "_find_no_duplicates"
+    },
+    {
+      "caller": "__setitem__",
+      "callee": "set"
+    },
+    {
+      "caller": "__delitem__",
+      "callee": "remove_cookie_by_name"
+    },
+    {
+      "caller": "update",
+      "callee": "set_cookie"
+    },
+    {
+      "caller": "update",
+      "callee": "copy"
+    },
+    {
+      "caller": "__getstate__",
+      "callee": "copy"
+    },
+    {
+      "caller": "__setstate__",
+      "callee": "update"
+    },
+    {
+      "caller": "copy",
+      "callee": "get_policy"
+    },
+    {
+      "caller": "copy",
+      "callee": "update"
+    },
+    {
+      "caller": "_copy_cookie_jar",
+      "callee": "copy"
+    },
+    {
+      "caller": "_copy_cookie_jar",
+      "callee": "set_cookie"
+    },
+    {
+      "caller": "create_cookie",
+      "callee": "set"
+    },
+    {
+      "caller": "create_cookie",
+      "callee": "update"
+    },
+    {
+      "caller": "morsel_to_cookie",
+      "callee": "create_cookie"
+    },
+    {
+      "caller": "cookiejar_from_dict",
+      "callee": "set_cookie"
+    },
+    {
+      "caller": "cookiejar_from_dict",
+      "callee": "create_cookie"
+    },
+    {
+      "caller": "merge_cookies",
+      "callee": "cookiejar_from_dict"
+    },
+    {
+      "caller": "merge_cookies",
+      "callee": "update"
+    },
+    {
+      "caller": "merge_cookies",
+      "callee": "set_cookie"
+    },
+    {
+      "caller": "info",
+      "callee": "_implementation"
+    },
+    {
+      "caller": "main",
+      "callee": "info"
+    },
+    {
+      "caller": "dispatch_hook",
+      "callee": "get"
+    },
+    {
+      "caller": "_encode_params",
+      "callee": "to_key_val_list"
+    },
+    {
+      "caller": "_encode_files",
+      "callee": "to_key_val_list"
+    },
+    {
+      "caller": "_encode_files",
+      "callee": "guess_filename"
+    },
+    {
+      "caller": "__init__",
+      "callee": "default_hooks"
+    },
+    {
+      "caller": "__init__",
+      "callee": "items"
+    },
+    {
+      "caller": "__init__",
+      "callee": "register_hook"
+    },
+    {
+      "caller": "__init__",
+      "callee": "default_hooks"
+    },
+    {
+      "caller": "prepare",
+      "callee": "prepare_method"
+    },
+    {
+      "caller": "prepare",
+      "callee": "prepare_url"
+    },
+    {
+      "caller": "prepare",
+      "callee": "prepare_headers"
+    },
+    {
+      "caller": "prepare",
+      "callee": "prepare_cookies"
+    },
+    {
+      "caller": "prepare",
+      "callee": "prepare_body"
+    },
+    {
+      "caller": "prepare",
+      "callee": "prepare_auth"
+    },
+    {
+      "caller": "prepare",
+      "callee": "prepare_hooks"
+    },
+    {
+      "caller": "copy",
+      "callee": "_copy_cookie_jar"
+    },
+    {
+      "caller": "prepare_method",
+      "callee": "to_native_string"
+    },
+    {
+      "caller": "prepare_url",
+      "callee": "unicode_is_ascii"
+    },
+    {
+      "caller": "prepare_url",
+      "callee": "_get_idna_encoded_host"
+    },
+    {
+      "caller": "prepare_url",
+      "callee": "to_native_string"
+    },
+    {
+      "caller": "prepare_url",
+      "callee": "_encode_params"
+    },
+    {
+      "caller": "prepare_url",
+      "callee": "requote_uri"
+    },
+    {
+      "caller": "prepare_headers",
+      "callee": "items"
+    },
+    {
+      "caller": "prepare_headers",
+      "callee": "check_header_validity"
+    },
+    {
+      "caller": "prepare_headers",
+      "callee": "to_native_string"
+    },
+    {
+      "caller": "prepare_body",
+      "callee": "super_len"
+    },
+    {
+      "caller": "prepare_body",
+      "callee": "_encode_files"
+    },
+    {
+      "caller": "prepare_body",
+      "callee": "_encode_params"
+    },
+    {
+      "caller": "prepare_body",
+      "callee": "prepare_content_length"
+    },
+    {
+      "caller": "prepare_content_length",
+      "callee": "super_len"
+    },
+    {
+      "caller": "prepare_content_length",
+      "callee": "get"
+    },
+    {
+      "caller": "prepare_auth",
+      "callee": "get_auth_from_url"
+    },
+    {
+      "caller": "prepare_auth",
+      "callee": "update"
+    },
+    {
+      "caller": "prepare_auth",
+      "callee": "prepare_content_length"
+    },
+    {
+      "caller": "prepare_cookies",
+      "callee": "cookiejar_from_dict"
+    },
+    {
+      "caller": "prepare_cookies",
+      "callee": "get_cookie_header"
+    },
+    {
+      "caller": "prepare_hooks",
+      "callee": "register_hook"
+    },
+    {
+      "caller": "__init__",
+      "callee": "cookiejar_from_dict"
+    },
+    {
+      "caller": "__exit__",
+      "callee": "close"
+    },
+    {
+      "caller": "__setstate__",
+      "callee": "items"
+    },
+    {
+      "caller": "__iter__",
+      "callee": "iter_content"
+    },
+    {
+      "caller": "ok",
+      "callee": "raise_for_status"
+    },
+    {
+      "caller": "iter_content",
+      "callee": "iter_slices"
+    },
+    {
+      "caller": "iter_content",
+      "callee": "generate"
+    },
+    {
+      "caller": "iter_content",
+      "callee": "stream_decode_response_unicode"
+    },
+    {
+      "caller": "iter_lines",
+      "callee": "iter_content"
+    },
+    {
+      "caller": "content",
+      "callee": "iter_content"
+    },
+    {
+      "caller": "json",
+      "callee": "guess_json_utf"
+    },
+    {
+      "caller": "links",
+      "callee": "get"
+    },
+    {
+      "caller": "links",
+      "callee": "parse_header_links"
+    },
+    {
+      "caller": "merge_setting",
+      "callee": "to_key_val_list"
+    },
+    {
+      "caller": "merge_setting",
+      "callee": "update"
+    },
+    {
+      "caller": "merge_setting",
+      "callee": "items"
+    },
+    {
+      "caller": "merge_hooks",
+      "callee": "get"
+    },
+    {
+      "caller": "merge_hooks",
+      "callee": "merge_setting"
+    },
+    {
+      "caller": "get_redirect_target",
+      "callee": "to_native_string"
+    },
+    {
+      "caller": "should_strip_auth",
+      "callee": "get"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "get_redirect_target"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "copy"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "close"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "to_native_string"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "requote_uri"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "rebuild_method"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "extract_cookies_to_jar"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "merge_cookies"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "prepare_cookies"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "rebuild_proxies"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "rebuild_auth"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "rewind_body"
+    },
+    {
+      "caller": "resolve_redirects",
+      "callee": "send"
+    },
+    {
+      "caller": "rebuild_auth",
+      "callee": "should_strip_auth"
+    },
+    {
+      "caller": "rebuild_auth",
+      "callee": "get_netrc_auth"
+    },
+    {
+      "caller": "rebuild_auth",
+      "callee": "prepare_auth"
+    },
+    {
+      "caller": "rebuild_proxies",
+      "callee": "resolve_proxies"
+    },
+    {
+      "caller": "rebuild_proxies",
+      "callee": "get_auth_from_url"
+    },
+    {
+      "caller": "rebuild_proxies",
+      "callee": "_basic_auth_str"
+    },
+    {
+      "caller": "__init__",
+      "callee": "default_headers"
+    },
+    {
+      "caller": "__init__",
+      "callee": "default_hooks"
+    },
+    {
+      "caller": "__init__",
+      "callee": "cookiejar_from_dict"
+    },
+    {
+      "caller": "__init__",
+      "callee": "mount"
+    },
+    {
+      "caller": "__exit__",
+      "callee": "close"
+    },
+    {
+      "caller": "prepare_request",
+      "callee": "cookiejar_from_dict"
+    },
+    {
+      "caller": "prepare_request",
+      "callee": "merge_cookies"
+    },
+    {
+      "caller": "prepare_request",
+      "callee": "get_netrc_auth"
+    },
+    {
+      "caller": "prepare_request",
+      "callee": "prepare"
+    },
+    {
+      "caller": "prepare_request",
+      "callee": "merge_setting"
+    },
+    {
+      "caller": "prepare_request",
+      "callee": "merge_hooks"
+    },
+    {
+      "caller": "request",
+      "callee": "prepare_request"
+    },
+    {
+      "caller": "request",
+      "callee": "merge_environment_settings"
+    },
+    {
+      "caller": "request",
+      "callee": "update"
+    },
+    {
+      "caller": "request",
+      "callee": "send"
+    },
+    {
+      "caller": "get",
+      "callee": "request"
+    },
+    {
+      "caller": "options",
+      "callee": "request"
+    },
+    {
+      "caller": "head",
+      "callee": "request"
+    },
+    {
+      "caller": "post",
+      "callee": "request"
+    },
+    {
+      "caller": "put",
+      "callee": "request"
+    },
+    {
+      "caller": "patch",
+      "callee": "request"
+    },
+    {
+      "caller": "delete",
+      "callee": "request"
+    },
+    {
+      "caller": "send",
+      "callee": "resolve_proxies"
+    },
+    {
+      "caller": "send",
+      "callee": "get"
+    },
+    {
+      "caller": "send",
+      "callee": "get_adapter"
+    },
+    {
+      "caller": "send",
+      "callee": "dispatch_hook"
+    },
+    {
+      "caller": "send",
+      "callee": "extract_cookies_to_jar"
+    },
+    {
+      "caller": "send",
+      "callee": "resolve_redirects"
+    },
+    {
+      "caller": "send",
+      "callee": "next"
+    },
+    {
+      "caller": "merge_environment_settings",
+      "callee": "get"
+    },
+    {
+      "caller": "merge_environment_settings",
+      "callee": "get_environ_proxies"
+    },
+    {
+      "caller": "merge_environment_settings",
+      "callee": "items"
+    },
+    {
+      "caller": "merge_environment_settings",
+      "callee": "merge_setting"
+    },
+    {
+      "caller": "get_adapter",
+      "callee": "items"
+    },
+    {
+      "caller": "close",
+      "callee": "values"
+    },
+    {
+      "caller": "__setstate__",
+      "callee": "items"
+    },
+    {
+      "caller": "_init",
+      "callee": "items"
+    },
+    {
+      "caller": "_init",
+      "callee": "doc"
+    },
+    {
+      "caller": "__init__",
+      "callee": "update"
+    },
+    {
+      "caller": "__iter__",
+      "callee": "values"
+    },
+    {
+      "caller": "lower_items",
+      "callee": "items"
+    },
+    {
+      "caller": "__eq__",
+      "callee": "lower_items"
+    },
+    {
+      "caller": "copy",
+      "callee": "values"
+    },
+    {
+      "caller": "__repr__",
+      "callee": "items"
+    },
+    {
+      "caller": "__getitem__",
+      "callee": "get"
+    },
+    {
+      "caller": "proxy_bypass",
+      "callee": "proxy_bypass_registry"
+    },
+    {
+      "caller": "dict_to_sequence",
+      "callee": "items"
+    },
+    {
+      "caller": "get_netrc_auth",
+      "callee": "get"
+    },
+    {
+      "caller": "extract_zipped_paths",
+      "callee": "atomic_open"
+    },
+    {
+      "caller": "to_key_val_list",
+      "callee": "items"
+    },
+    {
+      "caller": "parse_list_header",
+      "callee": "unquote_header_value"
+    },
+    {
+      "caller": "parse_dict_header",
+      "callee": "unquote_header_value"
+    },
+    {
+      "caller": "add_dict_to_cookiejar",
+      "callee": "cookiejar_from_dict"
+    },
+    {
+      "caller": "get_encoding_from_headers",
+      "callee": "get"
+    },
+    {
+      "caller": "get_encoding_from_headers",
+      "callee": "_parse_content_type_header"
+    },
+    {
+      "caller": "get_unicode_from_response",
+      "callee": "get_encoding_from_headers"
+    },
+    {
+      "caller": "requote_uri",
+      "callee": "unquote_unreserved"
+    },
+    {
+      "caller": "address_in_network",
+      "callee": "dotted_netmask"
+    },
+    {
+      "caller": "set_environ",
+      "callee": "get"
+    },
+    {
+      "caller": "should_bypass_proxies",
+      "callee": "get"
+    },
+    {
+      "caller": "should_bypass_proxies",
+      "callee": "get_proxy"
+    },
+    {
+      "caller": "should_bypass_proxies",
+      "callee": "is_ipv4_address"
+    },
+    {
+      "caller": "should_bypass_proxies",
+      "callee": "is_valid_cidr"
+    },
+    {
+      "caller": "should_bypass_proxies",
+      "callee": "address_in_network"
+    },
+    {
+      "caller": "should_bypass_proxies",
+      "callee": "set_environ"
+    },
+    {
+      "caller": "should_bypass_proxies",
+      "callee": "proxy_bypass"
+    },
+    {
+      "caller": "get_proxy",
+      "callee": "get"
+    },
+    {
+      "caller": "get_environ_proxies",
+      "callee": "should_bypass_proxies"
+    },
+    {
+      "caller": "select_proxy",
+      "callee": "get"
+    },
+    {
+      "caller": "resolve_proxies",
+      "callee": "get"
+    },
+    {
+      "caller": "resolve_proxies",
+      "callee": "copy"
+    },
+    {
+      "caller": "resolve_proxies",
+      "callee": "should_bypass_proxies"
+    },
+    {
+      "caller": "resolve_proxies",
+      "callee": "get_environ_proxies"
+    },
+    {
+      "caller": "default_headers",
+      "callee": "default_user_agent"
+    },
+    {
+      "caller": "check_header_validity",
+      "callee": "_validate_header_part"
+    }
+  ],
+  "imports": {
+    "__init__.py": [
+      "warnings",
+      "urllib3",
+      ".exceptions",
+      "charset_normalizer",
+      "chardet",
+      "ssl",
+      "urllib3.contrib",
+      "cryptography",
+      "urllib3.exceptions",
+      "logging",
+      ".",
+      ".__version__",
+      ".api",
+      ".models",
+      ".sessions",
+      ".status_codes"
+    ],
+    "_internal_utils.py": [
+      "re",
+      ".compat"
+    ],
+    "adapters.py": [
+      "os.path",
+      "socket",
+      "typing",
+      "warnings",
+      "urllib3.exceptions",
+      "urllib3.poolmanager",
+      "urllib3.util",
+      "urllib3.util.retry",
+      "urllib3.util.ssl_",
+      ".auth",
+      ".compat",
+      ".cookies",
+      ".exceptions",
+      ".models",
+      ".structures",
+      ".utils",
+      "urllib3.contrib.socks",
+      "ssl"
+    ],
+    "api.py": [
+      "."
+    ],
+    "auth.py": [
+      "hashlib",
+      "os",
+      "re",
+      "threading",
+      "time",
+      "warnings",
+      "base64",
+      "._internal_utils",
+      ".compat",
+      ".cookies",
+      ".utils"
+    ],
+    "certs.py": [
+      "certifi"
+    ],
+    "compat.py": [
+      "importlib",
+      "sys",
+      "simplejson",
+      "json",
+      "collections",
+      "collections.abc",
+      "http",
+      "http.cookies",
+      "io",
+      "urllib.parse",
+      "urllib.request"
+    ],
+    "cookies.py": [
+      "calendar",
+      "copy",
+      "time",
+      "._internal_utils",
+      ".compat",
+      "threading",
+      "dummy_threading"
+    ],
+    "exceptions.py": [
+      "urllib3.exceptions",
+      ".compat"
+    ],
+    "help.py": [
+      "json",
+      "platform",
+      "ssl",
+      "sys",
+      "idna",
+      "urllib3",
+      ".",
+      "charset_normalizer",
+      "chardet",
+      "urllib3.contrib",
+      "cryptography",
+      "OpenSSL"
+    ],
+    "models.py": [
+      "datetime",
+      "encodings.idna",
+      "io",
+      "urllib3.exceptions",
+      "urllib3.fields",
+      "urllib3.filepost",
+      "urllib3.util",
+      "._internal_utils",
+      ".auth",
+      ".compat",
+      ".cookies",
+      ".exceptions",
+      ".hooks",
+      ".status_codes",
+      ".structures",
+      ".utils",
+      "idna"
+    ],
+    "packages.py": [
+      "sys",
+      ".compat"
+    ],
+    "sessions.py": [
+      "os",
+      "sys",
+      "time",
+      "collections",
+      "datetime",
+      "._internal_utils",
+      ".adapters",
+      ".auth",
+      ".compat",
+      ".cookies",
+      ".exceptions",
+      ".hooks",
+      ".models",
+      ".status_codes",
+      ".structures",
+      ".utils"
+    ],
+    "status_codes.py": [
+      ".structures"
+    ],
+    "structures.py": [
+      "collections",
+      ".compat"
+    ],
+    "utils.py": [
+      "codecs",
+      "contextlib",
+      "io",
+      "os",
+      "re",
+      "socket",
+      "struct",
+      "sys",
+      "tempfile",
+      "warnings",
+      "zipfile",
+      "collections",
+      "urllib3.util",
+      ".",
+      ".__version__",
+      "._internal_utils",
+      ".compat",
+      ".cookies",
+      ".exceptions",
+      ".structures",
+      "winreg",
+      "netrc"
+    ]
+  },
+  "import_edges": [
+    {
+      "importer": "__init__.py",
+      "imported": "exceptions.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "__version__.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "api.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "models.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "sessions.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "status_codes.py"
+    },
+    {
+      "importer": "_internal_utils.py",
+      "imported": "compat.py"
+    },
+    {
+      "importer": "adapters.py",
+      "imported": "auth.py"
+    },
+    {
+      "importer": "adapters.py",
+      "imported": "compat.py"
+    },
+    {
+      "importer": "adapters.py",
+      "imported": "cookies.py"
+    },
+    {
+      "importer": "adapters.py",
+      "imported": "exceptions.py"
+    },
+    {
+      "importer": "adapters.py",
+      "imported": "models.py"
+    },
+    {
+      "importer": "adapters.py",
+      "imported": "structures.py"
+    },
+    {
+      "importer": "adapters.py",
+      "imported": "utils.py"
+    },
+    {
+      "importer": "auth.py",
+      "imported": "_internal_utils.py"
+    },
+    {
+      "importer": "auth.py",
+      "imported": "compat.py"
+    },
+    {
+      "importer": "auth.py",
+      "imported": "cookies.py"
+    },
+    {
+      "importer": "auth.py",
+      "imported": "utils.py"
+    },
+    {
+      "importer": "cookies.py",
+      "imported": "_internal_utils.py"
+    },
+    {
+      "importer": "cookies.py",
+      "imported": "compat.py"
+    },
+    {
+      "importer": "exceptions.py",
+      "imported": "compat.py"
+    },
+    {
+      "importer": "models.py",
+      "imported": "_internal_utils.py"
+    },
+    {
+      "importer": "models.py",
+      "imported": "auth.py"
+    },
+    {
+      "importer": "models.py",
+      "imported": "compat.py"
+    },
+    {
+      "importer": "models.py",
+      "imported": "cookies.py"
+    },
+    {
+      "importer": "models.py",
+      "imported": "exceptions.py"
+    },
+    {
+      "importer": "models.py",
+      "imported": "hooks.py"
+    },
+    {
+      "importer": "models.py",
+      "imported": "status_codes.py"
+    },
+    {
+      "importer": "models.py",
+      "imported": "structures.py"
+    },
+    {
+      "importer": "models.py",
+      "imported": "utils.py"
+    },
+    {
+      "importer": "packages.py",
+      "imported": "compat.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "_internal_utils.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "adapters.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "auth.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "compat.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "cookies.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "exceptions.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "hooks.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "models.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "status_codes.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "structures.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "utils.py"
+    },
+    {
+      "importer": "status_codes.py",
+      "imported": "structures.py"
+    },
+    {
+      "importer": "structures.py",
+      "imported": "compat.py"
+    },
+    {
+      "importer": "utils.py",
+      "imported": "__version__.py"
+    },
+    {
+      "importer": "utils.py",
+      "imported": "_internal_utils.py"
+    },
+    {
+      "importer": "utils.py",
+      "imported": "compat.py"
+    },
+    {
+      "importer": "utils.py",
+      "imported": "cookies.py"
+    },
+    {
+      "importer": "utils.py",
+      "imported": "exceptions.py"
+    },
+    {
+      "importer": "utils.py",
+      "imported": "structures.py"
+    }
+  ],
+  "classes": [
+    {
+      "name": "BaseAdapter",
+      "file": "adapters.py",
+      "start_line": 137,
+      "end_line": 164,
+      "bases": []
+    },
+    {
+      "name": "HTTPAdapter",
+      "file": "adapters.py",
+      "start_line": 167,
+      "end_line": 719,
+      "bases": [
+        "BaseAdapter"
+      ]
+    },
+    {
+      "name": "AuthBase",
+      "file": "auth.py",
+      "start_line": 69,
+      "end_line": 73,
+      "bases": []
+    },
+    {
+      "name": "HTTPBasicAuth",
+      "file": "auth.py",
+      "start_line": 76,
+      "end_line": 96,
+      "bases": [
+        "AuthBase"
+      ]
+    },
+    {
+      "name": "HTTPProxyAuth",
+      "file": "auth.py",
+      "start_line": 99,
+      "end_line": 104,
+      "bases": [
+        "HTTPBasicAuth"
+      ]
+    },
+    {
+      "name": "HTTPDigestAuth",
+      "file": "auth.py",
+      "start_line": 107,
+      "end_line": 314,
+      "bases": [
+        "AuthBase"
+      ]
+    },
+    {
+      "name": "MockRequest",
+      "file": "cookies.py",
+      "start_line": 23,
+      "end_line": 100,
+      "bases": []
+    },
+    {
+      "name": "MockResponse",
+      "file": "cookies.py",
+      "start_line": 103,
+      "end_line": 121,
+      "bases": []
+    },
+    {
+      "name": "CookieConflictError",
+      "file": "cookies.py",
+      "start_line": 170,
+      "end_line": 173,
+      "bases": [
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "RequestsCookieJar",
+      "file": "cookies.py",
+      "start_line": 176,
+      "end_line": 437,
+      "bases": [
+        "CookieJar",
+        "MutableMapping"
+      ]
+    },
+    {
+      "name": "RequestException",
+      "file": "exceptions.py",
+      "start_line": 12,
+      "end_line": 24,
+      "bases": [
+        "IOError"
+      ]
+    },
+    {
+      "name": "InvalidJSONError",
+      "file": "exceptions.py",
+      "start_line": 27,
+      "end_line": 28,
+      "bases": [
+        "RequestException"
+      ]
+    },
+    {
+      "name": "JSONDecodeError",
+      "file": "exceptions.py",
+      "start_line": 31,
+      "end_line": 52,
+      "bases": [
+        "InvalidJSONError",
+        "CompatJSONDecodeError"
+      ]
+    },
+    {
+      "name": "HTTPError",
+      "file": "exceptions.py",
+      "start_line": 55,
+      "end_line": 56,
+      "bases": [
+        "RequestException"
+      ]
+    },
+    {
+      "name": "ConnectionError",
+      "file": "exceptions.py",
+      "start_line": 59,
+      "end_line": 60,
+      "bases": [
+        "RequestException"
+      ]
+    },
+    {
+      "name": "ProxyError",
+      "file": "exceptions.py",
+      "start_line": 63,
+      "end_line": 64,
+      "bases": [
+        "ConnectionError"
+      ]
+    },
+    {
+      "name": "SSLError",
+      "file": "exceptions.py",
+      "start_line": 67,
+      "end_line": 68,
+      "bases": [
+        "ConnectionError"
+      ]
+    },
+    {
+      "name": "Timeout",
+      "file": "exceptions.py",
+      "start_line": 71,
+      "end_line": 77,
+      "bases": [
+        "RequestException"
+      ]
+    },
+    {
+      "name": "ConnectTimeout",
+      "file": "exceptions.py",
+      "start_line": 80,
+      "end_line": 84,
+      "bases": [
+        "ConnectionError",
+        "Timeout"
+      ]
+    },
+    {
+      "name": "ReadTimeout",
+      "file": "exceptions.py",
+      "start_line": 87,
+      "end_line": 88,
+      "bases": [
+        "Timeout"
+      ]
+    },
+    {
+      "name": "URLRequired",
+      "file": "exceptions.py",
+      "start_line": 91,
+      "end_line": 92,
+      "bases": [
+        "RequestException"
+      ]
+    },
+    {
+      "name": "TooManyRedirects",
+      "file": "exceptions.py",
+      "start_line": 95,
+      "end_line": 96,
+      "bases": [
+        "RequestException"
+      ]
+    },
+    {
+      "name": "MissingSchema",
+      "file": "exceptions.py",
+      "start_line": 99,
+      "end_line": 100,
+      "bases": [
+        "RequestException",
+        "ValueError"
+      ]
+    },
+    {
+      "name": "InvalidSchema",
+      "file": "exceptions.py",
+      "start_line": 103,
+      "end_line": 104,
+      "bases": [
+        "RequestException",
+        "ValueError"
+      ]
+    },
+    {
+      "name": "InvalidURL",
+      "file": "exceptions.py",
+      "start_line": 107,
+      "end_line": 108,
+      "bases": [
+        "RequestException",
+        "ValueError"
+      ]
+    },
+    {
+      "name": "InvalidHeader",
+      "file": "exceptions.py",
+      "start_line": 111,
+      "end_line": 112,
+      "bases": [
+        "RequestException",
+        "ValueError"
+      ]
+    },
+    {
+      "name": "InvalidProxyURL",
+      "file": "exceptions.py",
+      "start_line": 115,
+      "end_line": 116,
+      "bases": [
+        "InvalidURL"
+      ]
+    },
+    {
+      "name": "ChunkedEncodingError",
+      "file": "exceptions.py",
+      "start_line": 119,
+      "end_line": 120,
+      "bases": [
+        "RequestException"
+      ]
+    },
+    {
+      "name": "ContentDecodingError",
+      "file": "exceptions.py",
+      "start_line": 123,
+      "end_line": 124,
+      "bases": [
+        "RequestException",
+        "BaseHTTPError"
+      ]
+    },
+    {
+      "name": "StreamConsumedError",
+      "file": "exceptions.py",
+      "start_line": 127,
+      "end_line": 128,
+      "bases": [
+        "RequestException",
+        "TypeError"
+      ]
+    },
+    {
+      "name": "RetryError",
+      "file": "exceptions.py",
+      "start_line": 131,
+      "end_line": 132,
+      "bases": [
+        "RequestException"
+      ]
+    },
+    {
+      "name": "UnrewindableBodyError",
+      "file": "exceptions.py",
+      "start_line": 135,
+      "end_line": 136,
+      "bases": [
+        "RequestException"
+      ]
+    },
+    {
+      "name": "RequestsWarning",
+      "file": "exceptions.py",
+      "start_line": 142,
+      "end_line": 143,
+      "bases": [
+        "Warning"
+      ]
+    },
+    {
+      "name": "FileModeWarning",
+      "file": "exceptions.py",
+      "start_line": 146,
+      "end_line": 147,
+      "bases": [
+        "RequestsWarning",
+        "DeprecationWarning"
+      ]
+    },
+    {
+      "name": "RequestsDependencyWarning",
+      "file": "exceptions.py",
+      "start_line": 150,
+      "end_line": 151,
+      "bases": [
+        "RequestsWarning"
+      ]
+    },
+    {
+      "name": "RequestEncodingMixin",
+      "file": "models.py",
+      "start_line": 84,
+      "end_line": 203,
+      "bases": []
+    },
+    {
+      "name": "RequestHooksMixin",
+      "file": "models.py",
+      "start_line": 206,
+      "end_line": 227,
+      "bases": []
+    },
+    {
+      "name": "Request",
+      "file": "models.py",
+      "start_line": 230,
+      "end_line": 310,
+      "bases": [
+        "RequestHooksMixin"
+      ]
+    },
+    {
+      "name": "PreparedRequest",
+      "file": "models.py",
+      "start_line": 313,
+      "end_line": 637,
+      "bases": [
+        "RequestEncodingMixin",
+        "RequestHooksMixin"
+      ]
+    },
+    {
+      "name": "Response",
+      "file": "models.py",
+      "start_line": 640,
+      "end_line": 1037,
+      "bases": []
+    },
+    {
+      "name": "SessionRedirectMixin",
+      "file": "sessions.py",
+      "start_line": 106,
+      "end_line": 353,
+      "bases": []
+    },
+    {
+      "name": "Session",
+      "file": "sessions.py",
+      "start_line": 356,
+      "end_line": 816,
+      "bases": [
+        "SessionRedirectMixin"
+      ]
+    },
+    {
+      "name": "CaseInsensitiveDict",
+      "file": "structures.py",
+      "start_line": 13,
+      "end_line": 80,
+      "bases": [
+        "MutableMapping"
+      ]
+    },
+    {
+      "name": "LookupDict",
+      "file": "structures.py",
+      "start_line": 83,
+      "end_line": 99,
+      "bases": [
+        "dict"
+      ]
+    }
+  ],
+  "class_edges": [
+    {
+      "sub": "HTTPAdapter",
+      "base": "BaseAdapter"
+    },
+    {
+      "sub": "HTTPBasicAuth",
+      "base": "AuthBase"
+    },
+    {
+      "sub": "HTTPProxyAuth",
+      "base": "HTTPBasicAuth"
+    },
+    {
+      "sub": "HTTPDigestAuth",
+      "base": "AuthBase"
+    },
+    {
+      "sub": "InvalidJSONError",
+      "base": "RequestException"
+    },
+    {
+      "sub": "JSONDecodeError",
+      "base": "InvalidJSONError"
+    },
+    {
+      "sub": "HTTPError",
+      "base": "RequestException"
+    },
+    {
+      "sub": "ConnectionError",
+      "base": "RequestException"
+    },
+    {
+      "sub": "ProxyError",
+      "base": "ConnectionError"
+    },
+    {
+      "sub": "SSLError",
+      "base": "ConnectionError"
+    },
+    {
+      "sub": "Timeout",
+      "base": "RequestException"
+    },
+    {
+      "sub": "ConnectTimeout",
+      "base": "ConnectionError"
+    },
+    {
+      "sub": "ConnectTimeout",
+      "base": "Timeout"
+    },
+    {
+      "sub": "ReadTimeout",
+      "base": "Timeout"
+    },
+    {
+      "sub": "URLRequired",
+      "base": "RequestException"
+    },
+    {
+      "sub": "TooManyRedirects",
+      "base": "RequestException"
+    },
+    {
+      "sub": "MissingSchema",
+      "base": "RequestException"
+    },
+    {
+      "sub": "InvalidSchema",
+      "base": "RequestException"
+    },
+    {
+      "sub": "InvalidURL",
+      "base": "RequestException"
+    },
+    {
+      "sub": "InvalidHeader",
+      "base": "RequestException"
+    },
+    {
+      "sub": "InvalidProxyURL",
+      "base": "InvalidURL"
+    },
+    {
+      "sub": "ChunkedEncodingError",
+      "base": "RequestException"
+    },
+    {
+      "sub": "ContentDecodingError",
+      "base": "RequestException"
+    },
+    {
+      "sub": "StreamConsumedError",
+      "base": "RequestException"
+    },
+    {
+      "sub": "RetryError",
+      "base": "RequestException"
+    },
+    {
+      "sub": "UnrewindableBodyError",
+      "base": "RequestException"
+    },
+    {
+      "sub": "FileModeWarning",
+      "base": "RequestsWarning"
+    },
+    {
+      "sub": "RequestsDependencyWarning",
+      "base": "RequestsWarning"
+    },
+    {
+      "sub": "Request",
+      "base": "RequestHooksMixin"
+    },
+    {
+      "sub": "PreparedRequest",
+      "base": "RequestEncodingMixin"
+    },
+    {
+      "sub": "PreparedRequest",
+      "base": "RequestHooksMixin"
+    },
+    {
+      "sub": "Session",
+      "base": "SessionRedirectMixin"
+    }
+  ],
+  "constants": [
+    {
+      "name": "_VALID_HEADER_NAME_RE_BYTE",
+      "file": "_internal_utils.py",
+      "line": 12,
+      "comment": ""
+    },
+    {
+      "name": "_VALID_HEADER_NAME_RE_STR",
+      "file": "_internal_utils.py",
+      "line": 13,
+      "comment": ""
+    },
+    {
+      "name": "_VALID_HEADER_VALUE_RE_BYTE",
+      "file": "_internal_utils.py",
+      "line": 14,
+      "comment": ""
+    },
+    {
+      "name": "_VALID_HEADER_VALUE_RE_STR",
+      "file": "_internal_utils.py",
+      "line": 15,
+      "comment": ""
+    },
+    {
+      "name": "_HEADER_VALIDATORS_STR",
+      "file": "_internal_utils.py",
+      "line": 17,
+      "comment": ""
+    },
+    {
+      "name": "_HEADER_VALIDATORS_BYTE",
+      "file": "_internal_utils.py",
+      "line": 18,
+      "comment": ""
+    },
+    {
+      "name": "HEADER_VALIDATORS",
+      "file": "_internal_utils.py",
+      "line": 19,
+      "comment": ""
+    },
+    {
+      "name": "DEFAULT_POOLBLOCK",
+      "file": "adapters.py",
+      "line": 71,
+      "comment": ""
+    },
+    {
+      "name": "DEFAULT_POOLSIZE",
+      "file": "adapters.py",
+      "line": 72,
+      "comment": ""
+    },
+    {
+      "name": "DEFAULT_RETRIES",
+      "file": "adapters.py",
+      "line": 73,
+      "comment": ""
+    },
+    {
+      "name": "DEFAULT_POOL_TIMEOUT",
+      "file": "adapters.py",
+      "line": 74,
+      "comment": ""
+    },
+    {
+      "name": "CONTENT_TYPE_FORM_URLENCODED",
+      "file": "auth.py",
+      "line": 21,
+      "comment": ""
+    },
+    {
+      "name": "CONTENT_TYPE_MULTI_PART",
+      "file": "auth.py",
+      "line": 22,
+      "comment": ""
+    },
+    {
+      "name": "HOOKS",
+      "file": "hooks.py",
+      "line": 12,
+      "comment": ""
+    },
+    {
+      "name": "REDIRECT_STATI",
+      "file": "models.py",
+      "line": 71,
+      "comment": "#: processable redirect."
+    },
+    {
+      "name": "DEFAULT_REDIRECT_LIMIT",
+      "file": "models.py",
+      "line": 79,
+      "comment": ""
+    },
+    {
+      "name": "CONTENT_CHUNK_SIZE",
+      "file": "models.py",
+      "line": 80,
+      "comment": ""
+    },
+    {
+      "name": "ITER_CHUNK_SIZE",
+      "file": "models.py",
+      "line": 81,
+      "comment": ""
+    },
+    {
+      "name": "NETRC_FILES",
+      "file": "utils.py",
+      "line": 61,
+      "comment": ""
+    },
+    {
+      "name": "DEFAULT_CA_BUNDLE_PATH",
+      "file": "utils.py",
+      "line": 63,
+      "comment": ""
+    },
+    {
+      "name": "DEFAULT_PORTS",
+      "file": "utils.py",
+      "line": 65,
+      "comment": ""
+    },
+    {
+      "name": "DEFAULT_ACCEPT_ENCODING",
+      "file": "utils.py",
+      "line": 68,
+      "comment": "# Ensure that ', ' is used to preserve previous delimiter behavior."
+    },
+    {
+      "name": "UNRESERVED_SET",
+      "file": "utils.py",
+      "line": 631,
+      "comment": "# The unreserved URI characters (RFC 3986)"
+    }
+  ]
+}

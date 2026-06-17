@@ -1,0 +1,106 @@
+[
+ {
+  "id": "R-REV-01",
+  "answer": "{\"hit\": 5, \"total\": 46, \"score\": 0.1087, \"reason\": \"遗漏大量正确文件名\"}"
+ },
+ {
+  "id": "R-REV-02",
+  "answer": "{\"hit\": 4, \"total\": 13, \"score\": 0.3076923076923077, \"reason\": \"遗漏多个标准答案中的文件\"}"
+ },
+ {
+  "id": "R-REV-03",
+  "answer": "{\"hit\": 5, \"total\": 12, \"score\": 0.4166666666666667, \"reason\": \"遗漏了大部分文件名\"}"
+ },
+ {
+  "id": "R-REV-04",
+  "answer": "{\"hit\": 3, \"total\": 14, \"score\": 0.21428571428571427, \"reason\": \"遗漏大量正确文件名\"}"
+ },
+ {
+  "id": "R-REV-05",
+  "answer": "{\"hit\": 5, \"total\": 11, \"score\": 0.45454545454545453, \"reason\": \"遗漏了部分文件\"}"
+ },
+ {
+  "id": "R-REV-06",
+  "answer": "{\"hit\": 1, \"total\": 14, \"score\": 0.07142857142857142, \"reason\": \"遗漏大量正确文件名\"}"
+ },
+ {
+  "id": "R-FWD-01",
+  "answer": "{\"hit\": 5, \"total\": 18, \"score\": 0.2777777777777778, \"reason\": \"遗漏大量依赖模块\"}"
+ },
+ {
+  "id": "R-FWD-02",
+  "answer": "{\"hit\": 4, \"total\": 20, \"score\": 0.2, \"reason\": \"遗漏大量依赖模块\"}"
+ },
+ {
+  "id": "R-FWD-03",
+  "answer": "{\"hit\": 0, \"total\": 14, \"score\": 0, \"reason\": \"未提供正确依赖信息\"}"
+ },
+ {
+  "id": "R-FWD-04",
+  "answer": "{\"hit\": 2, \"total\": 14, \"score\": 0.14285714285714285, \"reason\": \"遗漏大量要点，仅部分正确\"}"
+ },
+ {
+  "id": "R-FWD-05",
+  "answer": "{\"hit\": 12, \"total\": 13, \"score\": 0.923076923076923, \"reason\": \"plugin/_schema_validator而非_schema_validator\"}"
+ },
+ {
+  "id": "R-INH-01",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-02",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-03",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-04",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"遗漏了main.py中的BaseModel\"}"
+ },
+ {
+  "id": "R-INH-05",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点，无遗漏或错误\"}"
+ },
+ {
+  "id": "R-INH-06",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-LOC-01",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中types.py\"}"
+ },
+ {
+  "id": "R-LOC-02",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中了文件名但多列了一个版本\"}"
+ },
+ {
+  "id": "R-LOC-03",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未命中正确文件名v1/decorator.py\"}"
+ },
+ {
+  "id": "R-LOC-04",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名v1/networks.py\"}"
+ },
+ {
+  "id": "R-LOC-05",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名，无遗漏或错误\"}"
+ },
+ {
+  "id": "R-LOC-06",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名\"}"
+ },
+ {
+  "id": "R-IND-01",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中了中间文件\"}"
+ },
+ {
+  "id": "R-IND-02",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中了中间文件\"}"
+ },
+ {
+  "id": "R-IND-03",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中中间文件\"}"
+ }
+]

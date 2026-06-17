@@ -1,0 +1,265 @@
+[
+ {
+  "id": "c-FWD-1",
+  "category": "forward_dep",
+  "focal": "lapi.h",
+  "question": "在 lua 项目中,文件 lapi.h 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "llimits.h, lstate.h",
+  "gold_kw": [
+   "llimits.h",
+   "lstate.h"
+  ]
+ },
+ {
+  "id": "c-FWD-2",
+  "category": "forward_dep",
+  "focal": "lauxlib.c",
+  "question": "在 lua 项目中,文件 lauxlib.c 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "lauxlib.h, llimits.h, lprefix.h, lua.h",
+  "gold_kw": [
+   "lauxlib.h",
+   "llimits.h",
+   "lprefix.h",
+   "lua.h"
+  ]
+ },
+ {
+  "id": "c-FWD-3",
+  "category": "forward_dep",
+  "focal": "lauxlib.h",
+  "question": "在 lua 项目中,文件 lauxlib.h 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "lua.h, luaconf.h",
+  "gold_kw": [
+   "lua.h",
+   "luaconf.h"
+  ]
+ },
+ {
+  "id": "c-FWD-4",
+  "category": "forward_dep",
+  "focal": "lbaselib.c",
+  "question": "在 lua 项目中,文件 lbaselib.c 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "lauxlib.h, llimits.h, lprefix.h, lua.h, lualib.h",
+  "gold_kw": [
+   "lauxlib.h",
+   "llimits.h",
+   "lprefix.h",
+   "lua.h",
+   "lualib.h"
+  ]
+ },
+ {
+  "id": "c-FWD-6",
+  "category": "forward_dep",
+  "focal": "lcode.h",
+  "question": "在 lua 项目中,文件 lcode.h 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "llex.h, lobject.h, lopcodes.h, lparser.h",
+  "gold_kw": [
+   "llex.h",
+   "lobject.h",
+   "lopcodes.h",
+   "lparser.h"
+  ]
+ },
+ {
+  "id": "c-FWD-7",
+  "category": "forward_dep",
+  "focal": "lcorolib.c",
+  "question": "在 lua 项目中,文件 lcorolib.c 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "lauxlib.h, llimits.h, lprefix.h, lua.h, lualib.h",
+  "gold_kw": [
+   "lauxlib.h",
+   "llimits.h",
+   "lprefix.h",
+   "lua.h",
+   "lualib.h"
+  ]
+ },
+ {
+  "id": "c-FWD-8",
+  "category": "forward_dep",
+  "focal": "lctype.c",
+  "question": "在 lua 项目中,文件 lctype.c 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "lctype.h, lprefix.h",
+  "gold_kw": [
+   "lctype.h",
+   "lprefix.h"
+  ]
+ },
+ {
+  "id": "c-REV-58",
+  "category": "reverse_dep",
+  "focal": "lapi.h",
+  "question": "在 lua 项目中,哪些本仓库内的文件依赖(import/include/引用)了 lapi.h?列出文件。",
+  "gold": "lapi.c, ldebug.c, ldo.c, ldump.c, lstate.c, ltests.c, lvm.c, lzio.c",
+  "gold_kw": [
+   "lapi.c",
+   "ldebug.c",
+   "ldo.c",
+   "ldump.c",
+   "lstate.c",
+   "ltests.c",
+   "lvm.c",
+   "lzio.c"
+  ]
+ },
+ {
+  "id": "c-REV-60",
+  "category": "reverse_dep",
+  "focal": "lcode.h",
+  "question": "在 lua 项目中,哪些本仓库内的文件依赖(import/include/引用)了 lcode.h?列出文件。",
+  "gold": "lcode.c, ldebug.c, lparser.c, ltests.c",
+  "gold_kw": [
+   "lcode.c",
+   "ldebug.c",
+   "lparser.c",
+   "ltests.c"
+  ]
+ },
+ {
+  "id": "c-REV-61",
+  "category": "reverse_dep",
+  "focal": "lctype.h",
+  "question": "在 lua 项目中,哪些本仓库内的文件依赖(import/include/引用)了 lctype.h?列出文件。",
+  "gold": "lctype.c, llex.c, lobject.c, ltests.c",
+  "gold_kw": [
+   "lctype.c",
+   "llex.c",
+   "lobject.c",
+   "ltests.c"
+  ]
+ },
+ {
+  "id": "c-REV-66",
+  "category": "reverse_dep",
+  "focal": "ljumptab.h",
+  "question": "在 lua 项目中,哪些本仓库内的文件依赖(import/include/引用)了 ljumptab.h?列出文件。",
+  "gold": "lvm.c",
+  "gold_kw": [
+   "lvm.c"
+  ]
+ },
+ {
+  "id": "c-REV-67",
+  "category": "reverse_dep",
+  "focal": "llex.h",
+  "question": "在 lua 项目中,哪些本仓库内的文件依赖(import/include/引用)了 llex.h?列出文件。",
+  "gold": "lcode.c, lcode.h, llex.c, lparser.c, lstate.c",
+  "gold_kw": [
+   "lcode.c",
+   "lcode.h",
+   "llex.c",
+   "lparser.c",
+   "lstate.c"
+  ]
+ },
+ {
+  "id": "c-REV-71",
+  "category": "reverse_dep",
+  "focal": "lopcodes.h",
+  "question": "在 lua 项目中,哪些本仓库内的文件依赖(import/include/引用)了 lopcodes.h?列出文件。",
+  "gold": "lcode.c, lcode.h, ldebug.c, ldo.c, lopcodes.c, lparser.c, ltests.c, lvm.c",
+  "gold_kw": [
+   "lcode.c",
+   "lcode.h",
+   "ldebug.c",
+   "ldo.c",
+   "lopcodes.c",
+   "lparser.c",
+   "ltests.c",
+   "lvm.c"
+  ]
+ },
+ {
+  "id": "c-REV-72",
+  "category": "reverse_dep",
+  "focal": "lopnames.h",
+  "question": "在 lua 项目中,哪些本仓库内的文件依赖(import/include/引用)了 lopnames.h?列出文件。",
+  "gold": "lcode.c, ltests.c, lvm.c",
+  "gold_kw": [
+   "lcode.c",
+   "ltests.c",
+   "lvm.c"
+  ]
+ },
+ {
+  "id": "c-LOC-85",
+  "category": "symbol_location",
+  "focal": "lapi.c",
+  "question": "在 lua 项目中,符号 index2value(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "lapi.c",
+  "gold_kw": [
+   "lapi.c"
+  ]
+ },
+ {
+  "id": "c-LOC-86",
+  "category": "symbol_location",
+  "focal": "lapi.c",
+  "question": "在 lua 项目中,符号 index2stack(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "lapi.c",
+  "gold_kw": [
+   "lapi.c"
+  ]
+ },
+ {
+  "id": "c-LOC-87",
+  "category": "symbol_location",
+  "focal": "lapi.c",
+  "question": "在 lua 项目中,符号 lua_checkstack(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "lapi.c",
+  "gold_kw": [
+   "lapi.c"
+  ]
+ },
+ {
+  "id": "c-LOC-88",
+  "category": "symbol_location",
+  "focal": "lapi.c",
+  "question": "在 lua 项目中,符号 lua_xmove(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "lapi.c",
+  "gold_kw": [
+   "lapi.c"
+  ]
+ },
+ {
+  "id": "c-LOC-89",
+  "category": "symbol_location",
+  "focal": "lapi.c",
+  "question": "在 lua 项目中,符号 lua_atpanic(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "lapi.c",
+  "gold_kw": [
+   "lapi.c"
+  ]
+ },
+ {
+  "id": "c-LOC-90",
+  "category": "symbol_location",
+  "focal": "lapi.c",
+  "question": "在 lua 项目中,符号 lua_version(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "lapi.c",
+  "gold_kw": [
+   "lapi.c"
+  ]
+ },
+ {
+  "id": "c-LOC-91",
+  "category": "symbol_location",
+  "focal": "lapi.c",
+  "question": "在 lua 项目中,符号 lua_absindex(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "lapi.c",
+  "gold_kw": [
+   "lapi.c"
+  ]
+ },
+ {
+  "id": "c-LOC-92",
+  "category": "symbol_location",
+  "focal": "lapi.c",
+  "question": "在 lua 项目中,符号 lua_gettop(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "lapi.c",
+  "gold_kw": [
+   "lapi.c"
+  ]
+ }
+]

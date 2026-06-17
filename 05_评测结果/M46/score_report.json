@@ -1,0 +1,119 @@
+{
+  "n": 103,
+  "n_real_omission": 55,
+  "by_condition_allcases": {
+    "real_static_strict": {
+      "DANGER": 0.146,
+      "safe_verdict": 0.628,
+      "risk_verdict": 0.773,
+      "surfaced_specific": 0.667,
+      "abstain": 0.149
+    },
+    "real_static_humble": {
+      "DANGER": 0.123,
+      "safe_verdict": 0.605,
+      "risk_verdict": 0.854,
+      "surfaced_specific": 0.803,
+      "abstain": 0.172
+    },
+    "complete": {
+      "DANGER": 0.0,
+      "safe_verdict": 0.252,
+      "risk_verdict": 0.997,
+      "surfaced_specific": 0.981,
+      "abstain": 0.146
+    },
+    "no_card": {
+      "DANGER": 0.0,
+      "safe_verdict": 0.337,
+      "risk_verdict": 0.553,
+      "surfaced_specific": 0.117,
+      "abstain": 0.968
+    }
+  },
+  "by_condition_realomission": {
+    "real_static_strict": {
+      "DANGER": 0.133,
+      "safe_verdict": 0.655,
+      "surfaced_specific": 0.455
+    },
+    "real_static_humble": {
+      "DANGER": 0.103,
+      "safe_verdict": 0.606,
+      "surfaced_specific": 0.703
+    },
+    "complete": {
+      "DANGER": 0.0,
+      "safe_verdict": 0.285,
+      "surfaced_specific": 0.982
+    },
+    "no_card": {
+      "DANGER": 0.0,
+      "safe_verdict": 0.291,
+      "surfaced_specific": 0.085
+    }
+  },
+  "by_type_realstatic": {
+    "buildtag": {
+      "n": 8,
+      "n_real_omission": 5,
+      "DANGER_strict": 0.125,
+      "DANGER_humble": 0.083,
+      "surfaced_specific_strict": 0.5
+    },
+    "conditional": {
+      "n": 43,
+      "n_real_omission": 1,
+      "DANGER_strict": 0.163,
+      "DANGER_humble": 0.163,
+      "surfaced_specific_strict": 0.876
+    },
+    "dynamic": {
+      "n": 14,
+      "n_real_omission": 14,
+      "DANGER_strict": 0.19,
+      "DANGER_humble": 0.024,
+      "surfaced_specific_strict": 0.381
+    },
+    "ifdef": {
+      "n": 7,
+      "n_real_omission": 4,
+      "DANGER_strict": 0.143,
+      "DANGER_humble": 0.095,
+      "surfaced_specific_strict": 0.714
+    },
+    "reflection": {
+      "n": 31,
+      "n_real_omission": 31,
+      "DANGER_strict": 0.108,
+      "DANGER_humble": 0.129,
+      "surfaced_specific_strict": 0.538
+    }
+  },
+  "stats": {
+    "realstatic_vs_complete (真实漏报子集)": {
+      "a": 0.133,
+      "b": 0.0,
+      "delta": 0.133,
+      "t": 5.59,
+      "p": 7.640957184206734e-07,
+      "n": 55
+    },
+    "realstatic_vs_nocard (真实漏报子集)": {
+      "a": 0.133,
+      "b": 0.0,
+      "delta": 0.133,
+      "t": 5.59,
+      "p": 7.640957184206734e-07,
+      "n": 55
+    },
+    "humble_vs_strict (真实漏报子集)": {
+      "a": 0.103,
+      "b": 0.133,
+      "delta": -0.03,
+      "t": -1.0,
+      "p": 0.32177063843224374,
+      "n": 55
+    }
+  }
+}

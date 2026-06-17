@@ -1,0 +1,271 @@
+[
+ {
+  "id": "tx-for-0",
+  "category": "forward_dep",
+  "focal": "rapidjson/allocators.h",
+  "question": "在 Tencent/rapidjson 中,头文件 rapidjson/rapidjson/allocators.h 直接 #include 了哪些本仓库内的头文件?",
+  "gold": "rapidjson/internal/meta.h, rapidjson/rapidjson.h",
+  "gold_kw": [
+   "meta.h",
+   "rapidjson.h"
+  ]
+ },
+ {
+  "id": "tx-for-1",
+  "category": "forward_dep",
+  "focal": "rapidjson/document.h",
+  "question": "在 Tencent/rapidjson 中,头文件 rapidjson/rapidjson/document.h 直接 #include 了哪些本仓库内的头文件?",
+  "gold": "rapidjson/encodedstream.h, rapidjson/internal/meta.h, rapidjson/internal/strfunc.h, rapidjson/memorystream.h, rapidjson/reader.h",
+  "gold_kw": [
+   "encodedstream.h",
+   "meta.h",
+   "strfunc.h",
+   "memorystream.h",
+   "reader.h"
+  ]
+ },
+ {
+  "id": "tx-for-2",
+  "category": "forward_dep",
+  "focal": "rapidjson/encodedstream.h",
+  "question": "在 Tencent/rapidjson 中,头文件 rapidjson/rapidjson/encodedstream.h 直接 #include 了哪些本仓库内的头文件?",
+  "gold": "rapidjson/memorystream.h, rapidjson/stream.h",
+  "gold_kw": [
+   "memorystream.h",
+   "stream.h"
+  ]
+ },
+ {
+  "id": "tx-for-3",
+  "category": "forward_dep",
+  "focal": "rapidjson/internal/dtoa.h",
+  "question": "在 Tencent/rapidjson 中,头文件 rapidjson/rapidjson/internal/dtoa.h 直接 #include 了哪些本仓库内的头文件?",
+  "gold": "rapidjson/internal/diyfp.h, rapidjson/internal/ieee754.h, rapidjson/internal/itoa.h",
+  "gold_kw": [
+   "diyfp.h",
+   "ieee754.h",
+   "itoa.h"
+  ]
+ },
+ {
+  "id": "tx-for-4",
+  "category": "forward_dep",
+  "focal": "rapidjson/internal/strtod.h",
+  "question": "在 Tencent/rapidjson 中,头文件 rapidjson/rapidjson/internal/strtod.h 直接 #include 了哪些本仓库内的头文件?",
+  "gold": "rapidjson/internal/biginteger.h, rapidjson/internal/diyfp.h, rapidjson/internal/ieee754.h, rapidjson/internal/pow10.h",
+  "gold_kw": [
+   "biginteger.h",
+   "diyfp.h",
+   "ieee754.h",
+   "pow10.h"
+  ]
+ },
+ {
+  "id": "tx-for-5",
+  "category": "forward_dep",
+  "focal": "rapidjson/memorybuffer.h",
+  "question": "在 Tencent/rapidjson 中,头文件 rapidjson/rapidjson/memorybuffer.h 直接 #include 了哪些本仓库内的头文件?",
+  "gold": "rapidjson/internal/stack.h, rapidjson/stream.h",
+  "gold_kw": [
+   "stack.h",
+   "stream.h"
+  ]
+ },
+ {
+  "id": "tx-for-6",
+  "category": "forward_dep",
+  "focal": "rapidjson/pointer.h",
+  "question": "在 Tencent/rapidjson 中,头文件 rapidjson/rapidjson/pointer.h 直接 #include 了哪些本仓库内的头文件?",
+  "gold": "rapidjson/document.h, rapidjson/error/error.h, rapidjson/internal/itoa.h, rapidjson/uri.h",
+  "gold_kw": [
+   "document.h",
+   "error.h",
+   "itoa.h",
+   "uri.h"
+  ]
+ },
+ {
+  "id": "tx-for-7",
+  "category": "forward_dep",
+  "focal": "rapidjson/rapidjson.h",
+  "question": "在 Tencent/rapidjson 中,头文件 rapidjson/rapidjson/rapidjson.h 直接 #include 了哪些本仓库内的头文件?",
+  "gold": "rapidjson/msinttypes/inttypes.h, rapidjson/msinttypes/stdint.h",
+  "gold_kw": [
+   "inttypes.h",
+   "stdint.h"
+  ]
+ },
+ {
+  "id": "tx-rev-11",
+  "category": "reverse_dep",
+  "focal": "rapidjson/document.h",
+  "question": "在 Tencent/rapidjson 中,哪些本仓库头文件 #include 了 rapidjson/rapidjson/document.h?列出几个。",
+  "gold": "rapidjson/pointer.h, rapidjson/schema.h",
+  "gold_kw": [
+   "pointer.h",
+   "schema.h"
+  ]
+ },
+ {
+  "id": "tx-rev-12",
+  "category": "reverse_dep",
+  "focal": "rapidjson/encodedstream.h",
+  "question": "在 Tencent/rapidjson 中,哪些本仓库头文件 #include 了 rapidjson/rapidjson/encodedstream.h?列出几个。",
+  "gold": "rapidjson/document.h, rapidjson/reader.h",
+  "gold_kw": [
+   "document.h",
+   "reader.h"
+  ]
+ },
+ {
+  "id": "tx-rev-13",
+  "category": "reverse_dep",
+  "focal": "rapidjson/error/error.h",
+  "question": "在 Tencent/rapidjson 中,哪些本仓库头文件 #include 了 rapidjson/rapidjson/error/error.h?列出几个。",
+  "gold": "rapidjson/error/en.h, rapidjson/pointer.h, rapidjson/reader.h",
+  "gold_kw": [
+   "en.h",
+   "pointer.h",
+   "reader.h"
+  ]
+ },
+ {
+  "id": "tx-rev-14",
+  "category": "reverse_dep",
+  "focal": "rapidjson/internal/clzll.h",
+  "question": "在 Tencent/rapidjson 中,哪些本仓库头文件 #include 了 rapidjson/rapidjson/internal/clzll.h?列出几个。",
+  "gold": "rapidjson/internal/diyfp.h, rapidjson/reader.h, rapidjson/writer.h",
+  "gold_kw": [
+   "diyfp.h",
+   "reader.h",
+   "writer.h"
+  ]
+ },
+ {
+  "id": "tx-rev-15",
+  "category": "reverse_dep",
+  "focal": "rapidjson/internal/diyfp.h",
+  "question": "在 Tencent/rapidjson 中,哪些本仓库头文件 #include 了 rapidjson/rapidjson/internal/diyfp.h?列出几个。",
+  "gold": "rapidjson/internal/dtoa.h, rapidjson/internal/strtod.h",
+  "gold_kw": [
+   "dtoa.h",
+   "strtod.h"
+  ]
+ },
+ {
+  "id": "tx-rev-16",
+  "category": "reverse_dep",
+  "focal": "rapidjson/internal/ieee754.h",
+  "question": "在 Tencent/rapidjson 中,哪些本仓库头文件 #include 了 rapidjson/rapidjson/internal/ieee754.h?列出几个。",
+  "gold": "rapidjson/internal/dtoa.h, rapidjson/internal/strtod.h",
+  "gold_kw": [
+   "dtoa.h",
+   "strtod.h"
+  ]
+ },
+ {
+  "id": "tx-rev-17",
+  "category": "reverse_dep",
+  "focal": "rapidjson/internal/itoa.h",
+  "question": "在 Tencent/rapidjson 中,哪些本仓库头文件 #include 了 rapidjson/rapidjson/internal/itoa.h?列出几个。",
+  "gold": "rapidjson/internal/dtoa.h, rapidjson/pointer.h, rapidjson/writer.h",
+  "gold_kw": [
+   "dtoa.h",
+   "pointer.h",
+   "writer.h"
+  ]
+ },
+ {
+  "id": "tx-rev-18",
+  "category": "reverse_dep",
+  "focal": "rapidjson/internal/meta.h",
+  "question": "在 Tencent/rapidjson 中,哪些本仓库头文件 #include 了 rapidjson/rapidjson/internal/meta.h?列出几个。",
+  "gold": "rapidjson/allocators.h, rapidjson/document.h, rapidjson/reader.h, rapidjson/writer.h",
+  "gold_kw": [
+   "allocators.h",
+   "document.h",
+   "reader.h",
+   "writer.h"
+  ]
+ },
+ {
+  "id": "tx-sym-26",
+  "category": "symbol_location",
+  "focal": "rapidjson/allocators.h",
+  "question": "在 Tencent/rapidjson 中,类/结构体 CrtAllocator 定义在哪个头文件里?",
+  "gold": "rapidjson/allocators.h",
+  "gold_kw": [
+   "allocators.h"
+  ]
+ },
+ {
+  "id": "tx-sym-27",
+  "category": "symbol_location",
+  "focal": "rapidjson/allocators.h",
+  "question": "在 Tencent/rapidjson 中,类/结构体 MemoryPoolAllocator 定义在哪个头文件里?",
+  "gold": "rapidjson/allocators.h",
+  "gold_kw": [
+   "allocators.h"
+  ]
+ },
+ {
+  "id": "tx-sym-28",
+  "category": "symbol_location",
+  "focal": "rapidjson/allocators.h",
+  "question": "在 Tencent/rapidjson 中,类/结构体 ChunkHeader 定义在哪个头文件里?",
+  "gold": "rapidjson/allocators.h",
+  "gold_kw": [
+   "allocators.h"
+  ]
+ },
+ {
+  "id": "tx-sym-29",
+  "category": "symbol_location",
+  "focal": "rapidjson/allocators.h",
+  "question": "在 Tencent/rapidjson 中,类/结构体 SharedData 定义在哪个头文件里?",
+  "gold": "rapidjson/allocators.h",
+  "gold_kw": [
+   "allocators.h"
+  ]
+ },
+ {
+  "id": "tx-sym-30",
+  "category": "symbol_location",
+  "focal": "rapidjson/allocators.h",
+  "question": "在 Tencent/rapidjson 中,类/结构体 IsRefCounted 定义在哪个头文件里?",
+  "gold": "rapidjson/allocators.h",
+  "gold_kw": [
+   "allocators.h"
+  ]
+ },
+ {
+  "id": "tx-sym-31",
+  "category": "symbol_location",
+  "focal": "rapidjson/allocators.h",
+  "question": "在 Tencent/rapidjson 中,类/结构体 StdAllocator 定义在哪个头文件里?",
+  "gold": "rapidjson/allocators.h",
+  "gold_kw": [
+   "allocators.h"
+  ]
+ },
+ {
+  "id": "tx-sym-32",
+  "category": "symbol_location",
+  "focal": "rapidjson/cursorstreamwrapper.h",
+  "question": "在 Tencent/rapidjson 中,类/结构体 CursorStreamWrapper 定义在哪个头文件里?",
+  "gold": "rapidjson/cursorstreamwrapper.h",
+  "gold_kw": [
+   "cursorstreamwrapper.h"
+  ]
+ },
+ {
+  "id": "tx-sym-33",
+  "category": "symbol_location",
+  "focal": "rapidjson/document.h",
+  "question": "在 Tencent/rapidjson 中,类/结构体 GenericValue 定义在哪个头文件里?",
+  "gold": "rapidjson/document.h",
+  "gold_kw": [
+   "document.h"
+  ]
+ }
+]

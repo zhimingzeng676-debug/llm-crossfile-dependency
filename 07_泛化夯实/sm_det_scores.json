@@ -1,0 +1,17 @@
+{
+ "deepseek": {
+  "baseline": 0.2129,
+  "full": 0.9821,
+  "pecot": 0.9652
+ },
+ "qwen3": {
+  "baseline": 0.2046,
+  "full": 0.9821,
+  "pecot": 1.0
+ },
+ "Qwen2.5-14B(Ö÷Ïß14B)": {
+  "baseline": 0.287,
+  "full": 0.885,
+  "pecot": 0.94
+ }
+}

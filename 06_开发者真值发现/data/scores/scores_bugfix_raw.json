@@ -1,0 +1,2537 @@
+{
+ "model": "coder",
+ "n_instances": 75,
+ "results": [
+  {
+   "project": "PySnooper",
+   "seed": "pysnooper/pycompat.py",
+   "preds": {
+    "no_card": [],
+    "static_card": [],
+    "static_card_humble": []
+   }
+  },
+  {
+   "project": "PySnooper",
+   "seed": "pysnooper/tracer.py",
+   "preds": {
+    "no_card": [],
+    "static_card": [],
+    "static_card_humble": [
+     "pysnooper/variables.py",
+     "tests/test_ended_by_exception.py"
+    ]
+   }
+  },
+  {
+   "project": "cookiecutter",
+   "seed": "cookiecutter/exceptions.py",
+   "preds": {
+    "no_card": [
+     "tests/test_exceptions.py"
+    ],
+    "static_card": [
+     "cookiecutter/cli.py",
+     "cookiecutter/config.py",
+     "cookiecutter/environment.py",
+     "cookiecutter/find.py",
+     "cookiecutter/generate.py",
+     "cookiecutter/hooks.py",
+     "cookiecutter/main.py",
+     "cookiecutter/prompt.py",
+     "cookiecutter/repository.py",
+     "cookiecutter/vcs.py",
+     "tests/test_cli.py",
+     "tests/test_environment.py",
+     "tests/test_exceptions.py",
+     "tests/test_find.py",
+     "tests/test_generate_context.py"
+    ],
+    "static_card_humble": [
+     "cookiecutter/cli.py",
+     "cookiecutter/config.py",
+     "cookiecutter/environment.py",
+     "cookiecutter/find.py",
+     "cookiecutter/generate.py",
+     "cookiecutter/hooks.py",
+     "cookiecutter/main.py",
+     "cookiecutter/prompt.py",
+     "cookiecutter/repository.py",
+     "cookiecutter/vcs.py",
+     "cookiecutter/zipfile.py",
+     "tests/test_cli.py",
+     "tests/test_cookiecutter_invocation.py",
+     "tests/test_cookiecutter_local_with_input.py",
+     "tests/test_environment.py",
+     "tests/test_exceptions.py",
+     "tests/test_find.py",
+     "tests/test_generate_context.py",
+     "tests/test_main.py",
+     "tests/test_read_user_choice.py",
+     "tests/test_read_user_dict.py"
+    ]
+   }
+  },
+  {
+   "project": "cookiecutter",
+   "seed": "cookiecutter/generate.py",
+   "preds": {
+    "no_card": [
+     "tests/test_generate_copy_without_render.py",
+     "tests/test_generate_copy_without_render_override.py"
+    ],
+    "static_card": [
+     "cookiecutter/find.py",
+     "cookiecutter/hooks.py",
+     "cookiecutter/main.py",
+     "cookiecutter/prompt.py",
+     "cookiecutter/utils.py",
+     "tests/test_find.py",
+     "tests/test_generate_context.py",
+     "tests/test_generate_copy_without_render.py",
+     "tests/test_generate_copy_without_render_override.py",
+     "tests/test_generate_files.py"
+    ],
+    "static_card_humble": [
+     "cookiecutter/exceptions.py",
+     "cookiecutter/find.py",
+     "cookiecutter/hooks.py",
+     "cookiecutter/main.py",
+     "tests/test_generate_context.py",
+     "tests/test_generate_copy_without_render.py",
+     "tests/test_generate_copy_without_render_override.py",
+     "tests/test_generate_files.py"
+    ]
+   }
+  },
+  {
+   "project": "cookiecutter",
+   "seed": "cookiecutter/hooks.py",
+   "preds": {
+    "no_card": [
+     "cookiecutter/__init__.py",
+     "cookiecutter/config.py",
+     "cookiecutter/exceptions.py",
+     "cookiecutter/extensions.py",
+     "cookiecutter/generate.py",
+     "cookiecutter/main.py",
+     "cookiecutter/prompt.py",
+     "cookiecutter/replay.py",
+     "cookiecutter/utils.py",
+     "cookiecutter/zipfile.py",
+     "tests/__init__.py",
+     "tests/conftest.py",
+     "tests/replay/conftest.py",
+     "tests/replay/test_dump.py",
+     "tests/repository/test_abbreviation_expansion.py",
+     "tests/test-extensions/custom-extension-pre/hooks/pre_gen_project.py",
+     "tests/test-extensions/hello_extension/hello_extension.py",
+     "tests/test-extensions/local_extension/local_extensions/__init__.py",
+     "tests/test-output-folder/{{cookiecutter.test_name}}/{{cookiecutter.folder_name}}/{{cookiecutter.filename}}.py",
+     "tests/test-pyhooks/hooks/pre_prompt.py",
+     "tests/test-pyshellhooks/hooks/pre_gen_project.py",
+     "tests/test_abort_generate_on_hook_error.py",
+     "tests/test_cli.py",
+     "tests/test_cookiecutter_invocation.py",
+     "tests/test_cookiecutter_local_with_input.py",
+     "tests/test_custom_extensions_in_hooks.py",
+     "tests/test_default_extensions.py",
+     "tests/test_environment.py",
+     "tests/test_find.py",
+     "tests/test_generate_context.py",
+     "tests/test_generate_hooks.py",
+     "tests/test_hooks.py",
+     "tests/test_main.py",
+     "tests/test_output_folder.py",
+     "tests/test_pre_prompt_hooks.py",
+     "tests/test_preferred_encoding.py",
+     "tests/test_prompt.py",
+     "tests/test_read_user_choice.py",
+     "tests/test_read_user_dict.py",
+     "tests/zipfile/test_unzip.py"
+    ],
+    "static_card": [
+     "tests/test-pyshellhooks/hooks/pre_gen_project.py",
+     "tests/test_custom_extensions_in_hooks.py",
+     "tests/test_generate_hooks.py",
+     "tests/test_hooks.py",
+     "tests/test_pre_prompt_hooks.py"
+    ],
+    "static_card_humble": [
+     "cookiecutter/__init__.py",
+     "cookiecutter/config.py",
+     "cookiecutter/exceptions.py",
+     "cookiecutter/extensions.py",
+     "cookiecutter/generate.py",
+     "cookiecutter/main.py",
+     "cookiecutter/prompt.py",
+     "cookiecutter/replay.py",
+     "cookiecutter/utils.py",
+     "cookiecutter/zipfile.py",
+     "tests/__init__.py",
+     "tests/conftest.py",
+     "tests/replay/conftest.py",
+     "tests/replay/test_dump.py",
+     "tests/repository/test_abbreviation_expansion.py",
+     "tests/test-extensions/custom-extension-pre/hooks/pre_gen_project.py",
+     "tests/test-extensions/hello_extension/hello_extension.py",
+     "tests/test-extensions/local_extension/local_extensions/__init__.py",
+     "tests/test-pyhooks/hooks/pre_prompt.py",
+     "tests/test-pyshellhooks/hooks/pre_gen_project.py",
+     "tests/test_abort_generate_on_hook_error.py",
+     "tests/test_cli.py",
+     "tests/test_cookiecutter_invocation.py",
+     "tests/test_cookiecutter_local_with_input.py",
+     "tests/test_custom_extensions_in_hooks.py",
+     "tests/test_default_extensions.py",
+     "tests/test_environment.py",
+     "tests/test_find.py",
+     "tests/test_generate_context.py",
+     "tests/test_generate_hooks.py",
+     "tests/test_hooks.py",
+     "tests/test_main.py",
+     "tests/test_output_folder.py",
+     "tests/test_pre_prompt_hooks.py",
+     "tests/test_preferred_encoding.py",
+     "tests/test_prompt.py",
+     "tests/test_read_user_choice.py",
+     "tests/test_read_user_dict.py",
+     "tests/zipfile/test_unzip.py"
+    ]
+   }
+  },
+  {
+   "project": "fastapi",
+   "seed": "fastapi/applications.py",
+   "preds": {
+    "no_card": [
+     "fastapi/background.py",
+     "fastapi/datastructures.py",
+     "fastapi/exception_handlers.py",
+     "fastapi/exceptions.py",
+     "fastapi/openapi/docs.py",
+     "fastapi/openapi/utils.py",
+     "fastapi/params.py",
+     "fastapi/types.py",
+     "fastapi/utils.py"
+    ],
+    "static_card": [
+     "fastapi/openapi/docs.py",
+     "fastapi/openapi/utils.py"
+    ],
+    "static_card_humble": [
+     "fastapi/__init__.py",
+     "fastapi/datastructures.py",
+     "fastapi/exception_handlers.py",
+     "fastapi/exceptions.py",
+     "fastapi/middleware/asyncexitstack.py",
+     "fastapi/openapi/docs.py",
+     "fastapi/openapi/utils.py",
+     "fastapi/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "fastapi",
+   "seed": "fastapi/encoders.py",
+   "preds": {
+    "no_card": [
+     "docs_src/encoder/tutorial001_py310.py",
+     "tests/test_jsonable_encoder.py"
+    ],
+    "static_card": [
+     "docs_src/body_updates/tutorial001_py310.py",
+     "docs_src/body_updates/tutorial002_py310.py",
+     "docs_src/encoder/tutorial001_py310.py",
+     "fastapi/_compat/shared.py",
+     "fastapi/exception_handlers.py",
+     "fastapi/exceptions.py",
+     "fastapi/openapi/docs.py",
+     "fastapi/openapi/utils.py",
+     "fastapi/routing.py",
+     "tests/test_jsonable_encoder.py"
+    ],
+    "static_card_humble": [
+     "docs_src/body_updates/tutorial001_py310.py",
+     "docs_src/body_updates/tutorial002_py310.py",
+     "docs_src/encoder/tutorial001_py310.py",
+     "fastapi/_compat/shared.py",
+     "fastapi/exception_handlers.py",
+     "fastapi/exceptions.py",
+     "fastapi/openapi/docs.py",
+     "fastapi/openapi/utils.py",
+     "fastapi/routing.py",
+     "tests/test_jsonable_encoder.py"
+    ]
+   }
+  },
+  {
+   "project": "fastapi",
+   "seed": "fastapi/openapi/utils.py",
+   "preds": {
+    "no_card": [
+     "fastapi/__init__.py",
+     "fastapi/_compat/shared.py",
+     "fastapi/applications.py",
+     "fastapi/datastructures.py",
+     "fastapi/dependencies/models.py",
+     "fastapi/encoders.py",
+     "fastapi/exceptions.py",
+     "fastapi/openapi/constants.py",
+     "fastapi/openapi/models.py",
+     "fastapi/params.py",
+     "fastapi/responses.py",
+     "fastapi/security/utils.py",
+     "fastapi/utils.py"
+    ],
+    "static_card": [
+     "fastapi/__init__.py",
+     "fastapi/_compat/shared.py",
+     "fastapi/applications.py",
+     "fastapi/datastructures.py",
+     "fastapi/dependencies/models.py",
+     "fastapi/encoders.py",
+     "fastapi/exceptions.py",
+     "fastapi/openapi/constants.py",
+     "fastapi/openapi/models.py",
+     "fastapi/params.py",
+     "fastapi/responses.py",
+     "fastapi/security/utils.py",
+     "fastapi/utils.py"
+    ],
+    "static_card_humble": [
+     "fastapi/__init__.py",
+     "fastapi/_compat/shared.py",
+     "fastapi/applications.py",
+     "fastapi/datastructures.py",
+     "fastapi/dependencies/models.py",
+     "fastapi/encoders.py",
+     "fastapi/exceptions.py",
+     "fastapi/openapi/constants.py",
+     "fastapi/openapi/models.py",
+     "fastapi/params.py",
+     "fastapi/responses.py",
+     "fastapi/security/utils.py",
+     "fastapi/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "fastapi",
+   "seed": "fastapi/routing.py",
+   "preds": {
+    "no_card": [
+     "fastapi/__init__.py",
+     "fastapi/_compat/shared.py",
+     "fastapi/applications.py",
+     "fastapi/background.py",
+     "fastapi/datastructures.py",
+     "fastapi/dependencies/models.py",
+     "fastapi/dependencies/utils.py",
+     "fastapi/encoders.py",
+     "fastapi/exceptions.py",
+     "fastapi/openapi/utils.py"
+    ],
+    "static_card": [
+     "fastapi/dependencies/utils.py",
+     "fastapi/encoders.py",
+     "fastapi/exceptions.py"
+    ],
+    "static_card_humble": [
+     "docs_src/custom_request_and_route/tutorial001_an_py310.py",
+     "docs_src/custom_request_and_route/tutorial001_py310.py",
+     "docs_src/custom_request_and_route/tutorial002_an_py310.py",
+     "docs_src/custom_request_and_route/tutorial002_py310.py",
+     "docs_src/custom_request_and_route/tutorial003_py310.py",
+     "docs_src/custom_response/tutorial009c_py310.py",
+     "docs_src/generate_clients/tutorial003_py310.py",
+     "docs_src/path_operation_advanced_configuration/tutorial002_py310.py",
+     "docs_src/path_operation_configuration/tutorial006_py310.py",
+     "fastapi/__init__.py",
+     "fastapi/_compat/__init__.py",
+     "fastapi/_compat/shared.py",
+     "fastapi/applications.py",
+     "fastapi/background.py",
+     "fastapi/datastructures.py",
+     "fastapi/dependencies/models.py",
+     "fastapi/dependencies/utils.py",
+     "fastapi/encoders.py",
+     "fastapi/exceptions.py",
+     "fastapi/openapi/utils.py",
+     "tests/test_additional_responses_response_class.py",
+     "tests/test_tutorial/test_body_multiple_params/test_tutorial004.py",
+     "tests/test_tutorial/test_dependencies/test_tutorial008c.py",
+     "tests/test_tutorial/test_dependencies/test_tutorial012.py",
+     "tests/test_tutorial/test_response_model/test_tutorial001_tutorial001_01.py",
+     "tests/test_ws_router.py"
+    ]
+   }
+  },
+  {
+   "project": "httpie",
+   "seed": "httpie/client.py",
+   "preds": {
+    "no_card": [
+     "httpie/adapters.py",
+     "httpie/cli/dicts.py",
+     "httpie/models.py",
+     "httpie/plugins/registry.py",
+     "httpie/sessions.py",
+     "httpie/ssl_.py",
+     "httpie/utils.py"
+    ],
+    "static_card": [
+     "httpie/adapters.py",
+     "httpie/cli/dicts.py",
+     "httpie/cli/nested_json/interpret.py",
+     "httpie/sessions.py",
+     "httpie/ssl_.py",
+     "httpie/uploads.py",
+     "httpie/utils.py"
+    ],
+    "static_card_humble": [
+     "httpie/adapters.py",
+     "httpie/cli/dicts.py",
+     "httpie/cli/nested_json/interpret.py",
+     "httpie/sessions.py",
+     "httpie/ssl_.py",
+     "httpie/uploads.py",
+     "httpie/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "httpie",
+   "seed": "httpie/core.py",
+   "preds": {
+    "no_card": [
+     "httpie/adapters.py",
+     "httpie/cli/constants.py",
+     "httpie/cli/nested_json/errors.py",
+     "httpie/client.py",
+     "httpie/config.py",
+     "httpie/downloads.py",
+     "httpie/output/formatters/__init__.py",
+     "httpie/output/formatters/xml.py",
+     "httpie/output/models.py",
+     "httpie/output/ui/rich_palette.py",
+     "httpie/output/writer.py",
+     "tests/test_cli.py"
+    ],
+    "static_card": [
+     "httpie/client.py",
+     "httpie/downloads.py",
+     "httpie/internal/daemon_runner.py",
+     "httpie/internal/update_warnings.py",
+     "httpie/output/writer.py"
+    ],
+    "static_card_humble": [
+     "httpie/client.py",
+     "httpie/downloads.py",
+     "httpie/internal/daemon_runner.py",
+     "httpie/internal/update_warnings.py",
+     "httpie/output/writer.py"
+    ]
+   }
+  },
+  {
+   "project": "luigi",
+   "seed": "luigi/interface.py",
+   "preds": {
+    "no_card": [
+     "test/interface_test.py"
+    ],
+    "static_card": [
+     "luigi/cmdline_parser.py",
+     "luigi/execution_summary.py",
+     "luigi/setup_logging.py",
+     "test/date_parameter_test.py",
+     "test/dict_parameter_test.py",
+     "test/dynamic_import_test.py",
+     "test/fib_test.py",
+     "test/helpers_test.py",
+     "test/interface_test.py",
+     "test/parameter_test.py",
+     "test/recursion_test.py"
+    ],
+    "static_card_humble": [
+     "luigi/cmdline_parser.py",
+     "luigi/execution_summary.py",
+     "luigi/setup_logging.py",
+     "test/date_parameter_test.py",
+     "test/dict_parameter_test.py",
+     "test/dynamic_import_test.py",
+     "test/fib_test.py",
+     "test/helpers_test.py",
+     "test/interface_test.py",
+     "test/parameter_test.py",
+     "test/recursion_test.py"
+    ]
+   }
+  },
+  {
+   "project": "luigi",
+   "seed": "luigi/scheduler.py",
+   "preds": {
+    "no_card": [
+     "test/scheduler_api_test.py",
+     "test/scheduler_message_test.py",
+     "test/scheduler_parameter_visibilities_test.py",
+     "test/scheduler_test.py",
+     "test/scheduler_visualisation_test.py",
+     "test/worker_scheduler_com_test.py"
+    ],
+    "static_card": [
+     "luigi/batch_notifier.py",
+     "test/batch_notifier_test.py",
+     "test/scheduler_api_test.py",
+     "test/scheduler_message_test.py",
+     "test/scheduler_parameter_visibilities_test.py",
+     "test/scheduler_test.py",
+     "test/scheduler_visualisation_test.py",
+     "test/worker_scheduler_com_test.py"
+    ],
+    "static_card_humble": [
+     "luigi/rpc.py",
+     "luigi/server.py",
+     "luigi/worker.py",
+     "test/contrib/datadog_metric_test.py",
+     "test/contrib/prometheus_metric_test.py",
+     "test/custom_metrics_test.py",
+     "test/customized_run_test.py",
+     "test/db_task_history_test.py",
+     "test/notifications_test.py",
+     "test/scheduler_api_test.py",
+     "test/scheduler_message_test.py",
+     "test/scheduler_parameter_visibilities_test.py",
+     "test/scheduler_test.py"
+    ]
+   }
+  },
+  {
+   "project": "matplotlib",
+   "seed": "lib/matplotlib/backend_bases.py",
+   "preds": {
+    "no_card": [
+     "lib/matplotlib/backends/_backend_pdf_ps.py",
+     "lib/matplotlib/backends/_backend_tk.py",
+     "lib/matplotlib/backends/backend_agg.py",
+     "lib/matplotlib/backends/backend_gtk4agg.py",
+     "lib/matplotlib/backends/backend_qt5cairo.py",
+     "lib/matplotlib/backends/backend_qtagg.py",
+     "lib/matplotlib/backends/backend_tkagg.py",
+     "lib/matplotlib/backends/backend_wx.py",
+     "lib/matplotlib/backends/registry.py"
+    ],
+    "static_card": [
+     "lib/matplotlib/artist.py",
+     "lib/matplotlib/backends/_backend_pdf_ps.py",
+     "lib/matplotlib/backends/registry.py",
+     "lib/matplotlib/typing.py"
+    ],
+    "static_card_humble": [
+     "lib/matplotlib/artist.py",
+     "lib/matplotlib/backends/_backend_pdf_ps.py",
+     "lib/matplotlib/typing.py"
+    ]
+   }
+  },
+  {
+   "project": "matplotlib",
+   "seed": "lib/matplotlib/figure.py",
+   "preds": {
+    "no_card": [
+     "lib/matplotlib/layout_engine.py",
+     "lib/matplotlib/tests/test_figure.py"
+    ],
+    "static_card": [
+     "galleries/examples/subplots_axes_and_figures/figure_size_units.py",
+     "galleries/examples/subplots_axes_and_figures/figure_title.py",
+     "lib/matplotlib/layout_engine.py",
+     "lib/matplotlib/tests/test_figure.py"
+    ],
+    "static_card_humble": [
+     "galleries/examples/subplots_axes_and_figures/figure_size_units.py",
+     "galleries/examples/subplots_axes_and_figures/figure_title.py",
+     "lib/matplotlib/layout_engine.py",
+     "lib/matplotlib/tests/test_figure.py"
+    ]
+   }
+  },
+  {
+   "project": "matplotlib",
+   "seed": "lib/matplotlib/axes/_axes.py",
+   "preds": {
+    "no_card": [
+     "lib/matplotlib/axes/__init__.py",
+     "lib/matplotlib/backends/qt_compat.py",
+     "lib/matplotlib/layout_engine.py",
+     "lib/matplotlib/pyplot.py",
+     "lib/matplotlib/tri/_triangulation.py",
+     "lib/matplotlib/units.py"
+    ],
+    "static_card": [
+     "lib/matplotlib/axes/__init__.py",
+     "lib/matplotlib/backends/__init__.py",
+     "lib/matplotlib/pyplot.py",
+     "lib/matplotlib/tri/_triangulation.py",
+     "lib/matplotlib/units.py"
+    ],
+    "static_card_humble": [
+     "lib/matplotlib/axes/__init__.py",
+     "lib/matplotlib/backends/__init__.py",
+     "lib/matplotlib/pyplot.py",
+     "lib/matplotlib/tri/_triangulation.py",
+     "lib/matplotlib/units.py"
+    ]
+   }
+  },
+  {
+   "project": "matplotlib",
+   "seed": "lib/matplotlib/pyplot.py",
+   "preds": {
+    "no_card": [
+     "lib/matplotlib/tests/test_pyplot.py"
+    ],
+    "static_card": [
+     "lib/matplotlib/ticker.py"
+    ],
+    "static_card_humble": [
+     "lib/matplotlib/ticker.py"
+    ]
+   }
+  },
+  {
+   "project": "matplotlib",
+   "seed": "lib/matplotlib/_constrained_layout.py",
+   "preds": {
+    "no_card": [
+     "galleries/examples/subplots_axes_and_figures/demo_constrained_layout.py",
+     "lib/matplotlib/_tight_layout.py"
+    ],
+    "static_card": [
+     "galleries/examples/subplots_axes_and_figures/demo_constrained_layout.py",
+     "lib/matplotlib/_tight_layout.py"
+    ],
+    "static_card_humble": [
+     "galleries/examples/subplots_axes_and_figures/demo_constrained_layout.py",
+     "lib/matplotlib/_tight_layout.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/arrays/categorical.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/accessor.py",
+     "pandas/core/algorithms.py",
+     "pandas/core/array_algos/take.py",
+     "pandas/core/arrays/_mixins.py",
+     "pandas/core/indexes/category.py",
+     "pandas/tests/arithmetic/test_categorical.py",
+     "pandas/tests/extension/base/getitem.py",
+     "pandas/tests/extension/test_categorical.py",
+     "pandas/tests/groupby/test_categorical.py",
+     "pandas/tests/indexing/test_categorical.py",
+     "pandas/tests/reshape/concat/test_categorical.py",
+     "pandas/tests/util/test_assert_categorical_equal.py"
+    ],
+    "static_card": [
+     "pandas/core/accessor.py",
+     "pandas/core/array_algos/take.py",
+     "pandas/core/arrays/__init__.py",
+     "pandas/core/arrays/_mixins.py",
+     "pandas/core/groupby/categorical.py",
+     "pandas/core/indexes/category.py",
+     "pandas/tests/arithmetic/test_categorical.py",
+     "pandas/tests/extension/base/getitem.py",
+     "pandas/tests/groupby/test_categorical.py",
+     "pandas/tests/indexing/test_categorical.py",
+     "pandas/tests/io/parser/dtypes/test_categorical.py",
+     "pandas/tests/reshape/concat/test_categorical.py",
+     "pandas/tests/util/test_assert_categorical_equal.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/accessor.py",
+     "pandas/core/array_algos/take.py",
+     "pandas/core/arrays/__init__.py",
+     "pandas/core/arrays/_mixins.py",
+     "pandas/core/groupby/categorical.py",
+     "pandas/core/indexes/category.py",
+     "pandas/tests/extension/base/getitem.py",
+     "pandas/tests/extension/test_categorical.py",
+     "pandas/tests/frame/test_unary.py",
+     "pandas/tests/groupby/aggregate/test_numba.py",
+     "pandas/tests/groupby/methods/test_nth.py",
+     "pandas/tests/groupby/test_categorical.py",
+     "pandas/tests/indexing/test_categorical.py",
+     "pandas/tests/io/parser/dtypes/test_categorical.py",
+     "pandas/tests/io/pytables/test_categorical.py",
+     "pandas/tests/reshape/concat/test_categorical.py",
+     "pandas/tests/series/methods/test_between.py",
+     "pandas/tests/util/test_assert_categorical_equal.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/indexes/category.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/arrays/categorical.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/extension.py",
+     "pandas/tests/indexes/categorical/test_category.py"
+    ],
+    "static_card": [
+     "pandas/core/construction.py",
+     "pandas/core/indexes/api.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/extension.py",
+     "pandas/core/indexes/multi.py",
+     "pandas/tests/indexes/categorical/test_category.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/construction.py",
+     "pandas/core/indexes/api.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/extension.py",
+     "pandas/core/indexes/multi.py",
+     "pandas/tests/indexes/categorical/test_category.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/window/common.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/frame.py",
+     "pandas/core/generic.py",
+     "pandas/core/indexes/api.py",
+     "pandas/core/indexes/multi.py",
+     "pandas/core/window/rolling.py"
+    ],
+    "static_card": [
+     "pandas/core/frame.py",
+     "pandas/core/indexes/api.py",
+     "pandas/core/indexes/multi.py",
+     "pandas/core/reshape/concat.py",
+     "pandas/core/window/ewm.py",
+     "pandas/core/window/rolling.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/frame.py",
+     "pandas/core/indexes/api.py",
+     "pandas/core/indexes/multi.py",
+     "pandas/core/reshape/concat.py",
+     "pandas/core/window/ewm.py",
+     "pandas/core/window/rolling.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/window/rolling.py",
+   "preds": {
+    "no_card": [
+     "pandas/tests/window/moments/test_moments_consistency_rolling.py",
+     "pandas/tests/window/test_rolling.py",
+     "pandas/tests/window/test_rolling_functions.py",
+     "pandas/tests/window/test_rolling_quantile.py",
+     "pandas/tests/window/test_rolling_skew_kurt.py"
+    ],
+    "static_card": [
+     "pandas/tests/window/moments/test_moments_consistency_rolling.py",
+     "pandas/tests/window/test_rolling.py",
+     "pandas/tests/window/test_rolling_functions.py",
+     "pandas/tests/window/test_rolling_quantile.py",
+     "pandas/tests/window/test_rolling_skew_kurt.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/algorithms.py",
+     "pandas/core/apply.py",
+     "pandas/core/arrays/datetimelike.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/window/common.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/indexes/base.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/dtypes/missing.py",
+     "pandas/core/groupby/base.py",
+     "pandas/core/indexes/category.py",
+     "pandas/core/indexes/datetimelike.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/core/indexes/period.py",
+     "pandas/core/indexes/range.py",
+     "pandas/core/indexes/timedeltas.py",
+     "pandas/core/indexing.py",
+     "pandas/core/series.py"
+    ],
+    "static_card": [
+     "pandas/core/dtypes/missing.py",
+     "pandas/core/indexes/category.py",
+     "pandas/core/indexes/datetimelike.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/core/indexes/period.py",
+     "pandas/core/indexes/range.py",
+     "pandas/core/indexes/timedeltas.py",
+     "pandas/core/indexing.py",
+     "pandas/core/series.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/dtypes/missing.py",
+     "pandas/core/indexes/category.py",
+     "pandas/core/indexes/datetimelike.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/core/indexes/period.py",
+     "pandas/core/indexes/range.py",
+     "pandas/core/indexes/timedeltas.py",
+     "pandas/core/indexing.py",
+     "pandas/core/series.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/indexes/datetimelike.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/arrays/datetimelike.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/tests/arrays/test_datetimelike.py",
+     "pandas/tests/indexes/test_datetimelike.py"
+    ],
+    "static_card": [
+     "pandas/_config/__init__.py",
+     "pandas/core/arrays/datetimelike.py",
+     "pandas/core/common.py",
+     "pandas/core/construction.py",
+     "pandas/core/dtypes/concat.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/indexers/__init__.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/core/indexes/period.py",
+     "pandas/core/indexes/timedeltas.py",
+     "pandas/tests/indexes/test_datetimelike.py"
+    ],
+    "static_card_humble": [
+     "pandas/_config/__init__.py",
+     "pandas/core/arrays/datetimelike.py",
+     "pandas/core/common.py",
+     "pandas/core/construction.py",
+     "pandas/core/dtypes/concat.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/indexers/__init__.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/core/indexes/period.py",
+     "pandas/core/indexes/timedeltas.py",
+     "pandas/tests/indexes/test_datetimelike.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/indexes/datetimes.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/arrays/datetimes.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/datetimelike.py",
+     "pandas/core/indexes/period.py",
+     "pandas/core/indexes/timedeltas.py",
+     "pandas/core/indexing.py",
+     "pandas/core/series.py",
+     "pandas/core/tools/datetimes.py",
+     "pandas/tests/arrays/test_datetimes.py",
+     "pandas/tests/indexing/test_datetime.py",
+     "pandas/tests/reshape/concat/test_datetimes.py"
+    ],
+    "static_card": [
+     "pandas/core/arrays/datetimes.py",
+     "pandas/core/indexes/datetimelike.py",
+     "pandas/core/indexes/period.py",
+     "pandas/core/indexes/timedeltas.py",
+     "pandas/core/tools/datetimes.py",
+     "pandas/tests/arrays/test_datetimes.py",
+     "pandas/tests/indexing/test_datetime.py",
+     "pandas/tests/reshape/concat/test_datetimes.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/arrays/datetimes.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/datetimelike.py",
+     "pandas/core/indexing.py",
+     "pandas/core/tools/datetimes.py",
+     "pandas/tests/arrays/test_datetimes.py",
+     "pandas/tests/indexing/test_datetime.py",
+     "pandas/tests/reshape/concat/test_datetimes.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/indexes/period.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/arrays/period.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/datetimelike.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/tests/arithmetic/test_period.py",
+     "pandas/tests/arrays/test_period.py",
+     "pandas/tests/indexes/period/test_period.py",
+     "pandas/tests/indexes/period/test_period_range.py",
+     "pandas/tests/tslibs/test_period.py"
+    ],
+    "static_card": [
+     "pandas/core/arrays/period.py",
+     "pandas/core/common.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/datetimelike.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/tests/arithmetic/test_period.py",
+     "pandas/tests/arrays/test_period.py",
+     "pandas/tests/indexes/period/methods/test_is_full.py",
+     "pandas/tests/indexes/period/test_period.py",
+     "pandas/tests/indexes/period/test_period_range.py",
+     "pandas/tests/scalar/period/test_period.py",
+     "pandas/tests/tslibs/test_period.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/arrays/period.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/datetimelike.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/tests/arithmetic/test_period.py",
+     "pandas/tests/arrays/test_period.py",
+     "pandas/tests/indexes/period/methods/test_is_full.py",
+     "pandas/tests/indexes/period/test_period.py",
+     "pandas/tests/indexes/period/test_period_range.py",
+     "pandas/tests/scalar/period/test_period.py",
+     "pandas/tests/tslibs/test_period.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/indexes/timedeltas.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/arrays/timedeltas.py",
+     "pandas/tests/arrays/test_timedeltas.py",
+     "pandas/tests/tslibs/test_timedeltas.py"
+    ],
+    "static_card": [
+     "pandas/core/arrays/timedeltas.py",
+     "pandas/core/common.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/datetimelike.py",
+     "pandas/tests/arrays/test_timedeltas.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/arrays/timedeltas.py",
+     "pandas/core/common.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/datetimelike.py",
+     "pandas/tests/arrays/test_timedeltas.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/indexes/multi.py",
+   "preds": {
+    "no_card": [
+     "pandas/tests/indexing/multiindex/test_iloc.py"
+    ],
+    "static_card": [
+     "pandas/core/series.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/array_algos/putmask.py",
+     "pandas/core/arrays/categorical.py",
+     "pandas/core/common.py",
+     "pandas/core/series.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/frame.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/indexing.py",
+     "pandas/tests/apply/test_frame_apply.py",
+     "pandas/tests/apply/test_frame_apply_relabeling.py",
+     "pandas/tests/frame/test_unary.py",
+     "pandas/tests/indexes/datetimes/methods/test_to_frame.py",
+     "pandas/tests/series/methods/test_to_frame.py",
+     "pandas/tests/util/test_assert_frame_equal.py"
+    ],
+    "static_card": [
+     "pandas/core/generic.py",
+     "pandas/core/indexing.py",
+     "pandas/tests/apply/test_frame_apply.py",
+     "pandas/tests/frame/test_unary.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/generic.py",
+     "pandas/core/indexing.py",
+     "pandas/tests/apply/test_frame_apply.py",
+     "pandas/tests/frame/test_unary.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/indexing.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/construction.py",
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/concat.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/frame.py",
+     "pandas/core/generic.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/core/indexes/period.py"
+    ],
+    "static_card": [
+     "pandas/compat/__init__.py",
+     "pandas/core/common.py",
+     "pandas/core/construction.py",
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/concat.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/frame.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/core/indexes/period.py",
+     "pandas/tests/indexes/datetimes/test_indexing.py",
+     "pandas/tests/indexes/period/test_indexing.py",
+     "pandas/tests/indexes/ranges/test_indexing.py",
+     "pandas/tests/indexing/multiindex/test_indexing_slow.py",
+     "pandas/tests/indexing/test_datetime.py",
+     "pandas/tests/series/indexing/test_indexing.py"
+    ],
+    "static_card_humble": [
+     "pandas/compat/__init__.py",
+     "pandas/core/arrays/masked.py",
+     "pandas/core/common.py",
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/dtypes/concat.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/frame.py",
+     "pandas/core/groupby/indexing.py",
+     "pandas/core/indexes/base.py",
+     "pandas/tests/groupby/test_indexing.py",
+     "pandas/tests/indexes/categorical/test_indexing.py",
+     "pandas/tests/indexes/datetimes/test_indexing.py",
+     "pandas/tests/indexes/multi/test_partial_indexing.py",
+     "pandas/tests/indexes/period/test_indexing.py",
+     "pandas/tests/indexes/ranges/test_indexing.py",
+     "pandas/tests/indexes/test_indexing.py",
+     "pandas/tests/indexing/multiindex/test_indexing_slow.py",
+     "pandas/tests/indexing/test_datetime.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/series.py",
+   "preds": {
+    "no_card": [
+     "pandas/tests/apply/test_series_apply.py",
+     "pandas/tests/apply/test_series_apply_relabeling.py",
+     "pandas/tests/apply/test_series_transform.py",
+     "pandas/tests/generic/test_series.py",
+     "pandas/tests/reshape/concat/test_series.py",
+     "pandas/tests/series/indexing/test_get.py",
+     "pandas/tests/series/methods/test_between.py"
+    ],
+    "static_card": [
+     "pandas/core/groupby/grouper.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/core/indexes/multi.py",
+     "pandas/core/nanops.py",
+     "pandas/tests/apply/test_series_apply.py",
+     "pandas/tests/apply/test_series_apply_relabeling.py",
+     "pandas/tests/apply/test_series_transform.py",
+     "pandas/tests/generic/test_series.py",
+     "pandas/tests/indexes/ranges/test_range.py",
+     "pandas/tests/indexing/test_datetime.py",
+     "pandas/tests/reshape/concat/test_series.py",
+     "pandas/tests/series/indexing/test_get.py",
+     "pandas/tests/series/methods/test_between.py"
+    ],
+    "static_card_humble": [
+     "pandas/tests/apply/test_series_apply.py",
+     "pandas/tests/apply/test_series_apply_relabeling.py",
+     "pandas/tests/apply/test_series_transform.py",
+     "pandas/tests/generic/test_series.py",
+     "pandas/tests/reshape/concat/test_series.py",
+     "pandas/tests/series/indexing/test_get.py",
+     "pandas/tests/series/methods/test_between.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/generic.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/dtypes/generic.py",
+     "pandas/core/frame.py",
+     "pandas/core/indexing.py",
+     "pandas/tests/frame/test_unary.py",
+     "pandas/tests/generic/test_generic.py"
+    ],
+    "static_card": [
+     "pandas/__init__.py",
+     "pandas/_config/config.py",
+     "pandas/_libs/__init__.py",
+     "pandas/_libs/tslibs/__init__.py",
+     "pandas/_typing.py",
+     "pandas/compat/__init__.py",
+     "pandas/compat/_constants.py",
+     "pandas/compat/_optional.py",
+     "pandas/compat/numpy/__init__.py",
+     "pandas/core/accessor.py",
+     "pandas/core/array_algos/replace.py",
+     "pandas/core/arraylike.py",
+     "pandas/core/arrays/__init__.py",
+     "pandas/core/arrays/masked.py",
+     "pandas/core/base.py",
+     "pandas/core/dtypes/generic.py",
+     "pandas/core/frame.py",
+     "pandas/core/groupby/generic.py",
+     "pandas/core/indexes/period.py",
+     "pandas/core/indexing.py",
+     "pandas/core/internals/managers.py",
+     "pandas/core/resample.py",
+     "pandas/tests/dtypes/test_generic.py",
+     "pandas/tests/generic/test_generic.py"
+    ],
+    "static_card_humble": [
+     "pandas/__init__.py",
+     "pandas/_config/config.py",
+     "pandas/_libs/__init__.py",
+     "pandas/_libs/tslibs/__init__.py",
+     "pandas/_typing.py",
+     "pandas/compat/__init__.py",
+     "pandas/compat/_constants.py",
+     "pandas/compat/_optional.py",
+     "pandas/compat/numpy/__init__.py",
+     "pandas/core/accessor.py",
+     "pandas/core/array_algos/replace.py",
+     "pandas/core/arraylike.py",
+     "pandas/core/arrays/__init__.py",
+     "pandas/core/arrays/masked.py",
+     "pandas/core/base.py",
+     "pandas/core/dtypes/generic.py",
+     "pandas/core/frame.py",
+     "pandas/core/groupby/generic.py",
+     "pandas/core/indexes/period.py",
+     "pandas/core/indexing.py",
+     "pandas/core/internals/managers.py",
+     "pandas/core/resample.py",
+     "pandas/tests/dtypes/test_generic.py",
+     "pandas/tests/generic/test_generic.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/internals/blocks.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/algorithms.py",
+     "pandas/core/array_algos/putmask.py",
+     "pandas/core/array_algos/replace.py",
+     "pandas/core/array_algos/transforms.py",
+     "pandas/core/arrays/__init__.py",
+     "pandas/core/arrays/categorical.py",
+     "pandas/core/arrays/numpy_.py",
+     "pandas/core/arrays/string_.py",
+     "pandas/core/internals/managers.py"
+    ],
+    "static_card": [
+     "pandas/_libs/__init__.py",
+     "pandas/_typing.py",
+     "pandas/core/__init__.py",
+     "pandas/core/algorithms.py",
+     "pandas/core/api.py",
+     "pandas/core/array_algos/putmask.py",
+     "pandas/core/array_algos/quantile.py",
+     "pandas/core/array_algos/replace.py",
+     "pandas/core/array_algos/transforms.py",
+     "pandas/core/arrays/__init__.py",
+     "pandas/core/arrays/_mixins.py",
+     "pandas/core/arrays/categorical.py",
+     "pandas/core/arrays/numpy_.py",
+     "pandas/core/arrays/string_.py",
+     "pandas/core/base.py",
+     "pandas/core/common.py",
+     "pandas/core/computation/__init__.py",
+     "pandas/core/internals/managers.py",
+     "pandas/io/spss.py",
+     "pandas/io/stata.py",
+     "pandas/tests/arrays/interval/test_interval_pyarrow.py",
+     "pandas/tests/extension/base/getitem.py",
+     "pandas/tests/extension/base/index.py",
+     "pandas/tests/frame/methods/test_to_dict_of_blocks.py",
+     "pandas/tests/groupby/aggregate/test_numba.py",
+     "pandas/tests/groupby/methods/test_nth.py",
+     "pandas/tests/indexing/multiindex/test_iloc.py",
+     "pandas/tests/indexing/test_check_indexer.py",
+     "pandas/tests/resample/test_resample_api.py",
+     "pandas/tests/series/methods/test_diff.py"
+    ],
+    "static_card_humble": [
+     "pandas/_libs/__init__.py",
+     "pandas/_typing.py",
+     "pandas/core/__init__.py",
+     "pandas/core/algorithms.py",
+     "pandas/core/api.py",
+     "pandas/core/array_algos/putmask.py",
+     "pandas/core/array_algos/quantile.py",
+     "pandas/core/array_algos/replace.py",
+     "pandas/core/array_algos/transforms.py",
+     "pandas/core/arrays/__init__.py",
+     "pandas/core/arrays/_mixins.py",
+     "pandas/core/arrays/categorical.py",
+     "pandas/core/arrays/numpy_.py",
+     "pandas/core/arrays/string_.py",
+     "pandas/core/base.py",
+     "pandas/core/common.py",
+     "pandas/core/computation/__init__.py",
+     "pandas/core/internals/managers.py",
+     "pandas/io/spss.py",
+     "pandas/io/stata.py",
+     "pandas/tests/arrays/interval/test_interval_pyarrow.py",
+     "pandas/tests/extension/base/getitem.py",
+     "pandas/tests/extension/base/index.py",
+     "pandas/tests/frame/methods/test_to_dict_of_blocks.py",
+     "pandas/tests/groupby/aggregate/test_numba.py",
+     "pandas/tests/groupby/methods/test_nth.py",
+     "pandas/tests/indexing/multiindex/test_iloc.py",
+     "pandas/tests/indexing/test_check_indexer.py",
+     "pandas/tests/resample/test_resample_api.py",
+     "pandas/tests/series/methods/test_diff.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/io/stata.py",
+   "preds": {
+    "no_card": [
+     "pandas/tests/io/test_stata.py"
+    ],
+    "static_card": [
+     "pandas/tests/io/test_stata.py"
+    ],
+    "static_card_humble": [
+     "pandas/tests/io/test_stata.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/internals/managers.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/generic.py",
+     "pandas/core/internals/blocks.py"
+    ],
+    "static_card": [
+     "pandas/core/arrays/_mixins.py",
+     "pandas/core/construction.py",
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/internals/blocks.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/arrays/_mixins.py",
+     "pandas/core/construction.py",
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/internals/blocks.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/groupby/groupby.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/groupby/generic.py",
+     "pandas/core/groupby/ops.py",
+     "pandas/tests/extension/base/groupby.py",
+     "pandas/tests/groupby/aggregate/test_numba.py",
+     "pandas/tests/groupby/methods/test_groupby_shift_diff.py",
+     "pandas/tests/groupby/test_bin_groupby.py",
+     "pandas/tests/groupby/test_groupby.py",
+     "pandas/tests/groupby/test_groupby_dropna.py",
+     "pandas/tests/groupby/test_groupby_subclass.py"
+    ],
+    "static_card": [
+     "pandas/core/arrays/integer.py",
+     "pandas/core/common.py",
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/groupby/generic.py",
+     "pandas/core/groupby/ops.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/arrays/integer.py",
+     "pandas/core/common.py",
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/groupby/generic.py",
+     "pandas/core/groupby/ops.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/groupby/ops.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/missing.py",
+     "pandas/core/frame.py",
+     "pandas/core/groupby/groupby.py",
+     "pandas/core/indexes/api.py"
+    ],
+    "static_card": [
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/missing.py",
+     "pandas/core/frame.py",
+     "pandas/core/groupby/groupby.py",
+     "pandas/core/indexes/api.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/missing.py",
+     "pandas/core/frame.py",
+     "pandas/core/groupby/groupby.py",
+     "pandas/core/indexes/api.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/ops/missing.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/missing.py",
+     "pandas/tests/dtypes/test_missing.py",
+     "pandas/tests/extension/base/missing.py",
+     "pandas/tests/series/test_missing.py"
+    ],
+    "static_card": [
+     "pandas/core/dtypes/missing.py",
+     "pandas/core/frame.py",
+     "pandas/core/missing.py",
+     "pandas/tests/arrays/categorical/test_missing.py",
+     "pandas/tests/dtypes/test_missing.py",
+     "pandas/tests/extension/base/missing.py",
+     "pandas/tests/indexes/multi/test_missing.py",
+     "pandas/tests/io/pytables/test_pytables_missing.py",
+     "pandas/tests/series/test_missing.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/dtypes/missing.py",
+     "pandas/core/frame.py",
+     "pandas/core/missing.py",
+     "pandas/tests/arrays/categorical/test_missing.py",
+     "pandas/tests/dtypes/test_missing.py",
+     "pandas/tests/extension/base/missing.py",
+     "pandas/tests/indexes/multi/test_missing.py",
+     "pandas/tests/io/pytables/test_pytables_missing.py",
+     "pandas/tests/series/test_missing.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/groupby/grouper.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/frame.py",
+     "pandas/core/groupby/categorical.py",
+     "pandas/core/groupby/groupby.py",
+     "pandas/core/indexes/multi.py",
+     "pandas/core/series.py",
+     "pandas/tests/groupby/aggregate/test_numba.py",
+     "pandas/tests/groupby/methods/test_nth.py",
+     "pandas/tests/indexes/period/methods/test_is_full.py",
+     "pandas/tests/indexing/multiindex/test_iloc.py",
+     "pandas/tests/indexing/test_check_indexer.py",
+     "pandas/tests/indexing/test_datetime.py"
+    ],
+    "static_card": [
+     "pandas/core/dtypes/common.py",
+     "pandas/core/frame.py",
+     "pandas/core/groupby/categorical.py",
+     "pandas/core/groupby/groupby.py",
+     "pandas/core/series.py"
+    ],
+    "static_card_humble": [
+     "pandas/_libs/tslibs/__init__.py",
+     "pandas/_typing.py",
+     "pandas/core/__init__.py",
+     "pandas/core/arrays/__init__.py",
+     "pandas/core/arrays/categorical.py",
+     "pandas/core/common.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/dtypes/inference.py",
+     "pandas/core/frame.py",
+     "pandas/core/groupby/__init__.py",
+     "pandas/core/groupby/categorical.py",
+     "pandas/core/groupby/groupby.py",
+     "pandas/core/indexes/datetimes.py",
+     "pandas/core/indexes/multi.py",
+     "pandas/core/series.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/arrays/masked.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/array_algos/masked_accumulations.py",
+     "pandas/core/array_algos/masked_reductions.py",
+     "pandas/tests/extension/test_masked.py"
+    ],
+    "static_card": [
+     "pandas/core/algorithms.py",
+     "pandas/core/array_algos/masked_accumulations.py",
+     "pandas/core/array_algos/masked_reductions.py",
+     "pandas/core/array_algos/quantile.py",
+     "pandas/core/array_algos/transforms.py",
+     "pandas/core/arraylike.py",
+     "pandas/tests/extension/test_masked.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/algorithms.py",
+     "pandas/core/array_algos/masked_accumulations.py",
+     "pandas/core/array_algos/masked_reductions.py",
+     "pandas/core/array_algos/quantile.py",
+     "pandas/core/array_algos/transforms.py",
+     "pandas/core/arraylike.py",
+     "pandas/tests/extension/test_masked.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/indexes/api.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/algorithms.py",
+     "pandas/tests/indexes/ranges/test_range.py",
+     "pandas/tests/indexing/test_check_indexer.py",
+     "pandas/tests/indexing/test_datetime.py"
+    ],
+    "static_card": [
+     "pandas/core/algorithms.py",
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/frame.py",
+     "pandas/core/generic.py",
+     "pandas/core/groupby/generic.py",
+     "pandas/core/groupby/groupby.py",
+     "pandas/core/groupby/grouper.py",
+     "pandas/tests/api/test_api.py",
+     "pandas/tests/arrays/categorical/test_api.py",
+     "pandas/tests/extension/base/getitem.py",
+     "pandas/tests/frame/test_unary.py",
+     "pandas/tests/groupby/aggregate/test_numba.py",
+     "pandas/tests/indexes/period/methods/test_is_full.py",
+     "pandas/tests/indexes/ranges/test_range.py",
+     "pandas/tests/indexing/test_datetime.py",
+     "pandas/tests/internals/test_api.py",
+     "pandas/tests/resample/test_resample_api.py",
+     "pandas/tests/series/methods/test_between.py",
+     "pandas/tests/series/methods/test_diff.py"
+    ],
+    "static_card_humble": [
+     "pandas/_testing/asserters.py",
+     "pandas/core/algorithms.py",
+     "pandas/core/dtypes/cast.py",
+     "pandas/core/frame.py",
+     "pandas/core/generic.py",
+     "pandas/core/groupby/groupby.py",
+     "pandas/core/groupby/grouper.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/reshape/concat.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/dtypes/concat.py",
+     "pandas/core/internals/concat.py",
+     "pandas/tests/dtypes/test_concat.py",
+     "pandas/tests/reshape/concat/test_concat.py"
+    ],
+    "static_card": [
+     "pandas/core/arrays/categorical.py",
+     "pandas/core/common.py",
+     "pandas/core/dtypes/concat.py",
+     "pandas/core/indexes/api.py",
+     "pandas/core/internals/concat.py",
+     "pandas/tests/arrays/integer/test_concat.py",
+     "pandas/tests/dtypes/test_concat.py",
+     "pandas/tests/reshape/concat/test_concat.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/arrays/categorical.py",
+     "pandas/core/common.py",
+     "pandas/core/dtypes/concat.py",
+     "pandas/core/indexes/api.py",
+     "pandas/core/internals/concat.py",
+     "pandas/tests/arrays/integer/test_concat.py",
+     "pandas/tests/dtypes/test_concat.py",
+     "pandas/tests/reshape/concat/test_concat.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/resample.py",
+   "preds": {
+    "no_card": [
+     "pandas/tests/resample/test_resample_api.py"
+    ],
+    "static_card": [
+     "pandas/api/typing/__init__.py",
+     "pandas/core/algorithms.py",
+     "pandas/core/apply.py",
+     "pandas/core/dtypes/dtypes.py",
+     "pandas/core/dtypes/generic.py",
+     "pandas/core/frame.py",
+     "pandas/core/generic.py",
+     "pandas/core/groupby/groupby.py",
+     "pandas/core/groupby/grouper.py",
+     "pandas/tests/resample/test_resample_api.py"
+    ],
+    "static_card_humble": [
+     "pandas/tests/resample/test_resample_api.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/groupby/generic.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/groupby/groupby.py",
+     "pandas/tests/groupby/aggregate/test_numba.py",
+     "pandas/tests/groupby/methods/test_nth.py"
+    ],
+    "static_card": [
+     "pandas/core/apply.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/inference.py",
+     "pandas/core/dtypes/missing.py",
+     "pandas/core/frame.py",
+     "pandas/core/groupby/groupby.py",
+     "pandas/core/indexes/api.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/apply.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/dtypes/inference.py",
+     "pandas/core/dtypes/missing.py",
+     "pandas/core/frame.py",
+     "pandas/core/groupby/groupby.py",
+     "pandas/core/indexes/api.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/indexes/range.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/indexers/__init__.py",
+     "pandas/core/indexes/base.py",
+     "pandas/tests/indexes/ranges/test_range.py"
+    ],
+    "static_card": [
+     "pandas/core/construction.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/indexers/__init__.py",
+     "pandas/core/indexes/base.py",
+     "pandas/tests/indexes/ranges/test_range.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/construction.py",
+     "pandas/core/dtypes/common.py",
+     "pandas/core/indexes/base.py",
+     "pandas/tests/indexes/ranges/test_range.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/nanops.py",
+   "preds": {
+    "no_card": [
+     "pandas/tests/test_nanops.py"
+    ],
+    "static_card": [
+     "pandas/core/array_algos/masked_reductions.py",
+     "pandas/core/arrays/arrow/array.py",
+     "pandas/core/arrays/sparse/array.py",
+     "pandas/tests/test_nanops.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/array_algos/masked_reductions.py",
+     "pandas/core/arrays/arrow/array.py",
+     "pandas/core/arrays/sparse/array.py",
+     "pandas/tests/test_nanops.py"
+    ]
+   }
+  },
+  {
+   "project": "pandas",
+   "seed": "pandas/core/dtypes/missing.py",
+   "preds": {
+    "no_card": [
+     "pandas/core/missing.py",
+     "pandas/tests/dtypes/test_missing.py",
+     "pandas/tests/extension/base/missing.py",
+     "pandas/tests/series/test_missing.py"
+    ],
+    "static_card": [
+     "pandas/core/array_algos/quantile.py",
+     "pandas/core/array_algos/replace.py",
+     "pandas/core/array_algos/take.py",
+     "pandas/core/arrays/_mixins.py",
+     "pandas/core/arrays/arrow/array.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/missing.py",
+     "pandas/core/ops/missing.py",
+     "pandas/tests/arrays/categorical/test_missing.py",
+     "pandas/tests/dtypes/test_missing.py",
+     "pandas/tests/extension/base/missing.py",
+     "pandas/tests/indexes/multi/test_missing.py",
+     "pandas/tests/io/pytables/test_pytables_missing.py",
+     "pandas/tests/series/test_missing.py"
+    ],
+    "static_card_humble": [
+     "pandas/core/array_algos/quantile.py",
+     "pandas/core/array_algos/replace.py",
+     "pandas/core/array_algos/take.py",
+     "pandas/core/arrays/_mixins.py",
+     "pandas/core/arrays/arrow/array.py",
+     "pandas/core/indexes/base.py",
+     "pandas/core/missing.py",
+     "pandas/core/ops/missing.py",
+     "pandas/tests/arrays/categorical/test_missing.py",
+     "pandas/tests/dtypes/test_missing.py",
+     "pandas/tests/extension/base/missing.py",
+     "pandas/tests/indexes/multi/test_missing.py",
+     "pandas/tests/io/pytables/test_pytables_missing.py",
+     "pandas/tests/series/test_missing.py"
+    ]
+   }
+  },
+  {
+   "project": "scrapy",
+   "seed": "scrapy/core/engine.py",
+   "preds": {
+    "no_card": [
+     "scrapy/core/downloader/__init__.py",
+     "scrapy/core/scheduler.py",
+     "scrapy/core/scraper.py",
+     "scrapy/utils/asyncio.py",
+     "scrapy/utils/defer.py",
+     "tests/test_engine.py",
+     "tests/test_scheduler.py"
+    ],
+    "static_card": [
+     "scrapy/core/scheduler.py",
+     "scrapy/core/scraper.py",
+     "scrapy/exceptions.py",
+     "scrapy/utils/asyncio.py",
+     "scrapy/utils/defer.py",
+     "tests/test_engine.py"
+    ],
+    "static_card_humble": [
+     "scrapy/core/scheduler.py",
+     "scrapy/core/scraper.py",
+     "scrapy/crawler.py",
+     "scrapy/http/__init__.py",
+     "scrapy/signalmanager.py",
+     "scrapy/spiders/__init__.py",
+     "scrapy/utils/asyncio.py",
+     "scrapy/utils/defer.py",
+     "scrapy/utils/deprecate.py",
+     "tests/test_engine.py"
+    ]
+   }
+  },
+  {
+   "project": "scrapy",
+   "seed": "scrapy/core/scraper.py",
+   "preds": {
+    "no_card": [
+     "scrapy/core/engine.py",
+     "scrapy/core/spidermw.py",
+     "scrapy/utils/asyncio.py",
+     "scrapy/utils/defer.py"
+    ],
+    "static_card": [
+     "scrapy/core/engine.py",
+     "scrapy/core/spidermw.py",
+     "scrapy/crawler.py",
+     "scrapy/utils/defer.py",
+     "scrapy/utils/deprecate.py",
+     "scrapy/utils/log.py",
+     "scrapy/utils/misc.py",
+     "scrapy/utils/python.py"
+    ],
+    "static_card_humble": [
+     "scrapy/core/engine.py",
+     "scrapy/core/spidermw.py",
+     "scrapy/crawler.py",
+     "scrapy/utils/defer.py",
+     "scrapy/utils/deprecate.py",
+     "scrapy/utils/log.py",
+     "scrapy/utils/misc.py",
+     "scrapy/utils/python.py"
+    ]
+   }
+  },
+  {
+   "project": "scrapy",
+   "seed": "scrapy/downloadermiddlewares/robotstxt.py",
+   "preds": {
+    "no_card": [
+     "tests/test_downloadermiddleware_robotstxt.py"
+    ],
+    "static_card": [
+     "tests/test_downloadermiddleware_robotstxt.py"
+    ],
+    "static_card_humble": [
+     "scrapy/utils/defer.py",
+     "scrapy/utils/httpobj.py",
+     "scrapy/utils/misc.py",
+     "tests/test_downloadermiddleware_robotstxt.py"
+    ]
+   }
+  },
+  {
+   "project": "scrapy",
+   "seed": "scrapy/extensions/feedexport.py",
+   "preds": {
+    "no_card": [
+     "tests/test_feedexport.py",
+     "tests/test_feedexport_batch.py",
+     "tests/test_feedexport_postprocess.py",
+     "tests/test_feedexport_storages.py",
+     "tests/test_feedexport_uri_params.py"
+    ],
+    "static_card": [
+     "scrapy/extensions/postprocessing.py",
+     "tests/test_feedexport.py",
+     "tests/test_feedexport_batch.py",
+     "tests/test_feedexport_storages.py",
+     "tests/test_feedexport_uri_params.py"
+    ],
+    "static_card_humble": [
+     "scrapy/extensions/postprocessing.py",
+     "tests/test_feedexport.py",
+     "tests/test_feedexport_batch.py",
+     "tests/test_feedexport_storages.py",
+     "tests/test_feedexport_uri_params.py"
+    ]
+   }
+  },
+  {
+   "project": "scrapy",
+   "seed": "scrapy/pipelines/files.py",
+   "preds": {
+    "no_card": [
+     "scrapy/pipelines/media.py",
+     "tests/test_pipeline_files.py"
+    ],
+    "static_card": [
+     "scrapy/pipelines/media.py",
+     "tests/test_pipeline_files.py"
+    ],
+    "static_card_humble": [
+     "scrapy/pipelines/media.py",
+     "tests/test_pipeline_files.py"
+    ]
+   }
+  },
+  {
+   "project": "scrapy",
+   "seed": "scrapy/pipelines/media.py",
+   "preds": {
+    "no_card": [
+     "scrapy/pipelines/files.py",
+     "tests/test_pipeline_media.py"
+    ],
+    "static_card": [
+     "scrapy/pipelines/files.py",
+     "scrapy/pipelines/images.py",
+     "scrapy/utils/asyncio.py",
+     "scrapy/utils/datatypes.py",
+     "scrapy/utils/defer.py",
+     "scrapy/utils/log.py",
+     "scrapy/utils/misc.py",
+     "tests/test_pipeline_media.py"
+    ],
+    "static_card_humble": [
+     "scrapy/pipelines/files.py",
+     "scrapy/pipelines/images.py",
+     "scrapy/utils/asyncio.py",
+     "scrapy/utils/datatypes.py",
+     "scrapy/utils/defer.py",
+     "scrapy/utils/log.py",
+     "scrapy/utils/misc.py",
+     "tests/test_pipeline_media.py"
+    ]
+   }
+  },
+  {
+   "project": "scrapy",
+   "seed": "scrapy/utils/signal.py",
+   "preds": {
+    "no_card": [
+     "scrapy/utils/defer.py",
+     "scrapy/utils/log.py",
+     "tests/test_utils_signal.py"
+    ],
+    "static_card": [
+     "scrapy/utils/defer.py",
+     "scrapy/utils/log.py",
+     "scrapy/utils/python.py",
+     "tests/test_engine.py",
+     "tests/test_utils_signal.py"
+    ],
+    "static_card_humble": [
+     "scrapy/utils/defer.py",
+     "scrapy/utils/log.py",
+     "scrapy/utils/python.py",
+     "tests/test_engine.py",
+     "tests/test_utils_signal.py"
+    ]
+   }
+  },
+  {
+   "project": "thefuck",
+   "seed": "thefuck/shells/bash.py",
+   "preds": {
+    "no_card": [
+     "thefuck/conf.py",
+     "thefuck/const.py",
+     "thefuck/shells/generic.py",
+     "thefuck/utils.py"
+    ],
+    "static_card": [
+     "thefuck/conf.py",
+     "thefuck/const.py",
+     "thefuck/shells/generic.py",
+     "thefuck/utils.py"
+    ],
+    "static_card_humble": [
+     "thefuck/conf.py",
+     "thefuck/const.py",
+     "thefuck/shells/generic.py",
+     "thefuck/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "thefuck",
+   "seed": "thefuck/shells/fish.py",
+   "preds": {
+    "no_card": [
+     "tests/shells/test_fish.py"
+    ],
+    "static_card": [
+     "tests/shells/test_fish.py",
+     "thefuck/shells/generic.py"
+    ],
+    "static_card_humble": [
+     "tests/shells/test_fish.py",
+     "thefuck/shells/generic.py"
+    ]
+   }
+  },
+  {
+   "project": "thefuck",
+   "seed": "thefuck/shells/zsh.py",
+   "preds": {
+    "no_card": [
+     "tests/shells/test_zsh.py",
+     "thefuck/conf.py",
+     "thefuck/const.py",
+     "thefuck/shells/generic.py",
+     "thefuck/utils.py"
+    ],
+    "static_card": [
+     "tests/shells/test_zsh.py",
+     "thefuck/shells/__init__.py",
+     "thefuck/shells/generic.py"
+    ],
+    "static_card_humble": [
+     "tests/shells/test_zsh.py",
+     "thefuck/shells/__init__.py",
+     "thefuck/shells/generic.py"
+    ]
+   }
+  },
+  {
+   "project": "thefuck",
+   "seed": "thefuck/types.py",
+   "preds": {
+    "no_card": [
+     "tests/functional/plots.py",
+     "tests/rules/test_adb_unknown_command.py",
+     "tests/rules/test_ag_literal.py",
+     "tests/rules/test_apt_get.py",
+     "tests/rules/test_apt_get_search.py",
+     "tests/rules/test_apt_invalid_operation.py",
+     "tests/rules/test_apt_list_upgradable.py",
+     "tests/rules/test_apt_upgrade.py",
+     "tests/rules/test_aws_cli.py",
+     "tests/rules/test_az_cli.py",
+     "tests/rules/test_brew_cask_dependency.py",
+     "tests/rules/test_brew_install.py",
+     "tests/rules/test_brew_link.py",
+     "tests/rules/test_brew_reinstall.py",
+     "tests/rules/test_brew_uninstall.py",
+     "tests/rules/test_brew_unknown_command.py",
+     "tests/rules/test_brew_update_formula.py",
+     "tests/rules/test_cat_dir.py",
+     "tests/rules/test_git_rebase_no_changes.py",
+     "tests/rules/test_php_s.py",
+     "tests/shells/test_zsh.py",
+     "tests/specific/test_npm.py",
+     "tests/test_types.py",
+     "thefuck/rules/git_clone_git_clone.py",
+     "thefuck/rules/git_two_dashes.py",
+     "thefuck/rules/go_run.py",
+     "thefuck/rules/gulp_not_task.py",
+     "thefuck/rules/heroku_multiple_apps.py",
+     "thefuck/rules/history.py",
+     "thefuck/rules/ifconfig_device_not_found.py",
+     "thefuck/rules/mkdir_p.py",
+     "thefuck/rules/npm_wrong_command.py",
+     "thefuck/rules/remove_trailing_cedilla.py",
+     "thefuck/rules/terraform_init.py",
+     "thefuck/shells/bash.py",
+     "thefuck/shells/fish.py",
+     "thefuck/shells/powershell.py",
+     "thefuck/shells/zsh.py",
+     "thefuck/specific/archlinux.py",
+     "thefuck/specific/yum.py"
+    ],
+    "static_card": [
+     "tests/functional/plots.py",
+     "tests/rules/test_adb_unknown_command.py",
+     "tests/rules/test_ag_literal.py",
+     "tests/rules/test_apt_get.py",
+     "tests/rules/test_apt_get_search.py",
+     "tests/rules/test_apt_invalid_operation.py",
+     "tests/rules/test_apt_list_upgradable.py",
+     "tests/rules/test_apt_upgrade.py",
+     "tests/rules/test_aws_cli.py",
+     "tests/rules/test_az_cli.py",
+     "tests/rules/test_brew_cask_dependency.py",
+     "tests/rules/test_brew_install.py",
+     "tests/rules/test_brew_link.py",
+     "tests/rules/test_brew_reinstall.py",
+     "tests/rules/test_brew_uninstall.py",
+     "tests/rules/test_brew_unknown_command.py",
+     "tests/rules/test_brew_update_formula.py",
+     "tests/rules/test_cat_dir.py",
+     "tests/rules/test_git_rebase_no_changes.py",
+     "tests/rules/test_php_s.py",
+     "tests/shells/test_zsh.py",
+     "tests/specific/test_npm.py",
+     "tests/test_types.py",
+     "thefuck/rules/git_clone_git_clone.py",
+     "thefuck/rules/git_two_dashes.py",
+     "thefuck/rules/go_run.py",
+     "thefuck/rules/gulp_not_task.py",
+     "thefuck/rules/heroku_multiple_apps.py",
+     "thefuck/rules/history.py",
+     "thefuck/rules/ifconfig_device_not_found.py",
+     "thefuck/rules/mkdir_p.py",
+     "thefuck/rules/npm_wrong_command.py",
+     "thefuck/rules/remove_trailing_cedilla.py",
+     "thefuck/rules/terraform_init.py",
+     "thefuck/shells/bash.py",
+     "thefuck/shells/fish.py",
+     "thefuck/shells/powershell.py",
+     "thefuck/shells/zsh.py",
+     "thefuck/specific/archlinux.py",
+     "thefuck/specific/yum.py"
+    ],
+    "static_card_humble": [
+     "tests/functional/plots.py",
+     "tests/rules/test_adb_unknown_command.py",
+     "tests/rules/test_ag_literal.py",
+     "tests/rules/test_apt_get.py",
+     "tests/rules/test_apt_get_search.py",
+     "tests/rules/test_apt_invalid_operation.py",
+     "tests/rules/test_apt_list_upgradable.py",
+     "tests/rules/test_apt_upgrade.py",
+     "tests/rules/test_aws_cli.py",
+     "tests/rules/test_az_cli.py",
+     "tests/rules/test_brew_cask_dependency.py",
+     "tests/rules/test_brew_install.py",
+     "tests/rules/test_brew_link.py",
+     "tests/rules/test_brew_reinstall.py",
+     "tests/rules/test_brew_uninstall.py",
+     "tests/rules/test_brew_unknown_command.py",
+     "tests/rules/test_brew_update_formula.py",
+     "tests/rules/test_cat_dir.py",
+     "tests/rules/test_git_rebase_no_changes.py",
+     "tests/rules/test_php_s.py",
+     "tests/shells/test_zsh.py",
+     "tests/specific/test_npm.py",
+     "tests/test_types.py",
+     "thefuck/rules/git_clone_git_clone.py",
+     "thefuck/rules/git_two_dashes.py",
+     "thefuck/rules/go_run.py",
+     "thefuck/rules/gulp_not_task.py",
+     "thefuck/rules/heroku_multiple_apps.py",
+     "thefuck/rules/history.py",
+     "thefuck/rules/ifconfig_device_not_found.py",
+     "thefuck/rules/mkdir_p.py",
+     "thefuck/rules/npm_wrong_command.py",
+     "thefuck/rules/remove_trailing_cedilla.py",
+     "thefuck/rules/terraform_init.py",
+     "thefuck/shells/bash.py",
+     "thefuck/shells/fish.py",
+     "thefuck/shells/powershell.py",
+     "thefuck/shells/zsh.py",
+     "thefuck/specific/archlinux.py",
+     "thefuck/specific/yum.py"
+    ]
+   }
+  },
+  {
+   "project": "tornado",
+   "seed": "tornado/ioloop.py",
+   "preds": {
+    "no_card": [
+     "tornado/platform/asyncio.py",
+     "tornado/test/ioloop_test.py"
+    ],
+    "static_card": [
+     "tornado/test/auth_test.py",
+     "tornado/test/httpclient_test.py",
+     "tornado/test/httpserver_test.py",
+     "tornado/test/import_test.py",
+     "tornado/test/ioloop_test.py",
+     "tornado/test/netutil_test.py",
+     "tornado/test/process_test.py",
+     "tornado/test/queues_test.py",
+     "tornado/test/routing_test.py",
+     "tornado/test/tcpclient_test.py",
+     "tornado/test/tcpserver_test.py"
+    ],
+    "static_card_humble": [
+     "tornado/test/auth_test.py",
+     "tornado/test/httpclient_test.py",
+     "tornado/test/httpserver_test.py",
+     "tornado/test/import_test.py",
+     "tornado/test/ioloop_test.py",
+     "tornado/test/netutil_test.py",
+     "tornado/test/process_test.py",
+     "tornado/test/queues_test.py",
+     "tornado/test/routing_test.py",
+     "tornado/test/tcpclient_test.py",
+     "tornado/test/tcpserver_test.py"
+    ]
+   }
+  },
+  {
+   "project": "tornado",
+   "seed": "tornado/platform/asyncio.py",
+   "preds": {
+    "no_card": [
+     "tornado/ioloop.py",
+     "tornado/test/asyncio_test.py",
+     "tornado/test/ioloop_test.py"
+    ],
+    "static_card": [
+     "tornado/ioloop.py",
+     "tornado/test/asyncio_test.py",
+     "tornado/test/iostream_test.py",
+     "tornado/testing.py"
+    ],
+    "static_card_humble": [
+     "tornado/gen.py",
+     "tornado/ioloop.py",
+     "tornado/test/asyncio_test.py",
+     "tornado/test/iostream_test.py",
+     "tornado/testing.py"
+    ]
+   }
+  },
+  {
+   "project": "tornado",
+   "seed": "tornado/web.py",
+   "preds": {
+    "no_card": [
+     "tornado/test/web_test.py"
+    ],
+    "static_card": [
+     "tornado/test/asyncio_test.py",
+     "tornado/test/httpclient_test.py",
+     "tornado/test/httpserver_test.py",
+     "tornado/test/routing_test.py",
+     "tornado/test/tcpclient_test.py",
+     "tornado/test/tcpserver_test.py",
+     "tornado/test/web_test.py"
+    ],
+    "static_card_humble": [
+     "tornado/test/httpclient_test.py",
+     "tornado/test/httpserver_test.py",
+     "tornado/test/web_test.py"
+    ]
+   }
+  },
+  {
+   "project": "tornado",
+   "seed": "tornado/websocket.py",
+   "preds": {
+    "no_card": [
+     "tornado/test/websocket_test.py",
+     "tornado/web.py"
+    ],
+    "static_card": [
+     "maint/test/websocket/client.py",
+     "maint/test/websocket/server.py",
+     "tornado/test/websocket_test.py",
+     "tornado/web.py"
+    ],
+    "static_card_humble": [
+     "maint/test/websocket/client.py",
+     "maint/test/websocket/server.py",
+     "tornado/test/websocket_test.py",
+     "tornado/web.py"
+    ]
+   }
+  },
+  {
+   "project": "tornado",
+   "seed": "setup.py",
+   "preds": {
+    "no_card": [
+     "tornado/__init__.py"
+    ],
+    "static_card": [
+     "tornado/__init__.py",
+     "tornado/iostream.py",
+     "tornado/locks.py",
+     "tornado/platform/caresresolver.py",
+     "tornado/routing.py",
+     "tornado/simple_httpclient.py",
+     "tornado/template.py",
+     "tornado/test/auth_test.py",
+     "tornado/test/circlerefs_test.py",
+     "tornado/test/concurrent_test.py",
+     "tornado/test/httpclient_test.py",
+     "tornado/test/httpserver_test.py",
+     "tornado/test/ioloop_test.py",
+     "tornado/test/locks_test.py",
+     "tornado/test/netutil_test.py",
+     "tornado/test/process_test.py",
+     "tornado/test/queues_test.py",
+     "tornado/test/routing_test.py",
+     "tornado/test/tcpclient_test.py",
+     "tornado/test/tcpserver_test.py",
+     "tornado/web.py"
+    ],
+    "static_card_humble": [
+     "tornado/locks.py",
+     "tornado/test/auth_test.py",
+     "tornado/test/concurrent_test.py",
+     "tornado/test/httpclient_test.py",
+     "tornado/test/httpserver_test.py",
+     "tornado/test/ioloop_test.py",
+     "tornado/test/locks_test.py",
+     "tornado/test/netutil_test.py",
+     "tornado/test/process_test.py",
+     "tornado/test/queues_test.py",
+     "tornado/test/routing_test.py",
+     "tornado/test/tcpclient_test.py",
+     "tornado/test/tcpserver_test.py",
+     "tornado/web.py"
+    ]
+   }
+  },
+  {
+   "project": "tqdm",
+   "seed": "tqdm/std.py",
+   "preds": {
+    "no_card": [
+     "tests/tests_tqdm.py",
+     "tests/tests_utils.py",
+     "tqdm/_monitor.py",
+     "tqdm/utils.py"
+    ],
+    "static_card": [
+     "tests/tests_tqdm.py",
+     "tqdm/__init__.py",
+     "tqdm/_main.py",
+     "tqdm/_monitor.py",
+     "tqdm/_tqdm.py",
+     "tqdm/_tqdm_gui.py",
+     "tqdm/_tqdm_notebook.py",
+     "tqdm/_utils.py",
+     "tqdm/auto.py",
+     "tqdm/cli.py",
+     "tqdm/contrib/concurrent.py",
+     "tqdm/contrib/discord.py",
+     "tqdm/contrib/logging.py",
+     "tqdm/utils.py"
+    ],
+    "static_card_humble": [
+     "tests/tests_tqdm.py",
+     "tqdm/__init__.py",
+     "tqdm/_main.py",
+     "tqdm/_monitor.py",
+     "tqdm/_tqdm.py",
+     "tqdm/_tqdm_gui.py",
+     "tqdm/_tqdm_notebook.py",
+     "tqdm/_utils.py",
+     "tqdm/auto.py",
+     "tqdm/cli.py",
+     "tqdm/contrib/concurrent.py",
+     "tqdm/contrib/discord.py",
+     "tqdm/contrib/logging.py",
+     "tqdm/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "tqdm",
+   "seed": "tqdm/utils.py",
+   "preds": {
+    "no_card": [
+     "tests/tests_utils.py",
+     "tqdm/_utils.py",
+     "tqdm/std.py"
+    ],
+    "static_card": [
+     "tests/tests_main.py",
+     "tests/tests_utils.py",
+     "tqdm/_utils.py",
+     "tqdm/contrib/__init__.py",
+     "tqdm/contrib/discord.py",
+     "tqdm/contrib/slack.py",
+     "tqdm/contrib/telegram.py",
+     "tqdm/std.py"
+    ],
+    "static_card_humble": [
+     "tests/tests_main.py",
+     "tests/tests_utils.py",
+     "tqdm/_utils.py",
+     "tqdm/contrib/__init__.py",
+     "tqdm/contrib/discord.py",
+     "tqdm/contrib/slack.py",
+     "tqdm/contrib/telegram.py",
+     "tqdm/std.py"
+    ]
+   }
+  },
+  {
+   "project": "youtube-dl",
+   "seed": "youtube_dl/postprocessor/ffmpeg.py",
+   "preds": {
+    "no_card": [
+     "youtube_dl/postprocessor/common.py",
+     "youtube_dl/utils.py"
+    ],
+    "static_card": [
+     "youtube_dl/downloader/external.py",
+     "youtube_dl/postprocessor/common.py",
+     "youtube_dl/postprocessor/embedthumbnail.py",
+     "youtube_dl/utils.py"
+    ],
+    "static_card_humble": [
+     "youtube_dl/downloader/external.py",
+     "youtube_dl/postprocessor/common.py",
+     "youtube_dl/postprocessor/embedthumbnail.py",
+     "youtube_dl/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "youtube-dl",
+   "seed": "youtube_dl/utils.py",
+   "preds": {
+    "no_card": [],
+    "static_card": [
+     "test/test_utils.py"
+    ],
+    "static_card_humble": [
+     "test/test_utils.py"
+    ]
+   }
+  },
+  {
+   "project": "youtube-dl",
+   "seed": "youtube_dl/extractor/npo.py",
+   "preds": {
+    "no_card": [],
+    "static_card": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/utils.py"
+    ],
+    "static_card_humble": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/extractor/extractors.py",
+     "youtube_dl/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "youtube-dl",
+   "seed": "youtube_dl/extractor/drtv.py",
+   "preds": {
+    "no_card": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/utils.py"
+    ],
+    "static_card": [
+     "youtube_dl/aes.py",
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/utils.py"
+    ],
+    "static_card_humble": [
+     "youtube_dl/aes.py",
+     "youtube_dl/compat.py",
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/extractor/extractors.py",
+     "youtube_dl/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "youtube-dl",
+   "seed": "youtube_dl/extractor/arte.py",
+   "preds": {
+    "no_card": [],
+    "static_card": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/utils.py"
+    ],
+    "static_card_humble": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/extractor/extractors.py",
+     "youtube_dl/extractor/generic.py",
+     "youtube_dl/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "youtube-dl",
+   "seed": "youtube_dl/extractor/facebook.py",
+   "preds": {
+    "no_card": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/extractor/extractors.py"
+    ],
+    "static_card": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/extractor/extractors.py",
+     "youtube_dl/extractor/generic.py",
+     "youtube_dl/utils.py"
+    ],
+    "static_card_humble": [
+     "youtube_dl/compat.py",
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/extractor/extractors.py",
+     "youtube_dl/extractor/generic.py",
+     "youtube_dl/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "youtube-dl",
+   "seed": "youtube_dl/downloader/f4m.py",
+   "preds": {
+    "no_card": [
+     "youtube_dl/downloader/fragment.py"
+    ],
+    "static_card": [
+     "youtube_dl/downloader/fragment.py",
+     "youtube_dl/utils.py"
+    ],
+    "static_card_humble": [
+     "youtube_dl/compat.py",
+     "youtube_dl/downloader/fragment.py",
+     "youtube_dl/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "youtube-dl",
+   "seed": "youtube_dl/extractor/clipsyndicate.py",
+   "preds": {
+    "no_card": [
+     "youtube_dl/extractor/common.py"
+    ],
+    "static_card": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/utils.py"
+    ],
+    "static_card_humble": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "youtube-dl",
+   "seed": "youtube_dl/extractor/metacritic.py",
+   "preds": {
+    "no_card": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/utils.py"
+    ],
+    "static_card": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/utils.py"
+    ],
+    "static_card_humble": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/utils.py"
+    ]
+   }
+  },
+  {
+   "project": "youtube-dl",
+   "seed": "youtube_dl/extractor/mtv.py",
+   "preds": {
+    "no_card": [
+     "youtube_dl/extractor/common.py",
+     "youtube_dl/extractor/extractors.py"
+    ],
+    "static_card": [
+     "youtube_dl/extractor/bet.py",
+     "youtube_dl/extractor/cmt.py",
+     "youtube_dl/extractor/comedycentral.py",
+     "youtube_dl/extractor/extractors.py",
+     "youtube_dl/extractor/generic.py",
+     "youtube_dl/extractor/nick.py",
+     "youtube_dl/extractor/southpark.py",
+     "youtube_dl/extractor/spike.py",
+     "youtube_dl/extractor/vh1.py"
+    ],
+    "static_card_humble": [
+     "youtube_dl/extractor/bet.py",
+     "youtube_dl/extractor/cmt.py",
+     "youtube_dl/extractor/comedycentral.py",
+     "youtube_dl/extractor/extractors.py",
+     "youtube_dl/extractor/generic.py",
+     "youtube_dl/extractor/nick.py",
+     "youtube_dl/extractor/southpark.py",
+     "youtube_dl/extractor/spike.py",
+     "youtube_dl/extractor/vh1.py"
+    ]
+   }
+  }
+ ],
+ "summary": {
+  "no_card": {
+   "invisible_namematch": {
+    "recalled": 17,
+    "total": 90,
+    "recall": 0.1889
+   },
+   "visible": {
+    "recalled": 48,
+    "total": 88,
+    "recall": 0.5455
+   },
+   "invisible_dynamic": {
+    "recalled": 2,
+    "total": 22,
+    "recall": 0.0909
+   }
+  },
+  "static_card": {
+   "invisible_namematch": {
+    "recalled": 17,
+    "total": 90,
+    "recall": 0.1889
+   },
+   "visible": {
+    "recalled": 67,
+    "total": 88,
+    "recall": 0.7614
+   },
+   "invisible_dynamic": {
+    "recalled": 3,
+    "total": 22,
+    "recall": 0.1364
+   }
+  },
+  "static_card_humble": {
+   "invisible_namematch": {
+    "recalled": 18,
+    "total": 90,
+    "recall": 0.2
+   },
+   "visible": {
+    "recalled": 67,
+    "total": 88,
+    "recall": 0.7614
+   },
+   "invisible_dynamic": {
+    "recalled": 3,
+    "total": 22,
+    "recall": 0.1364
+   }
+  }
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "wz_T1_drop1": {
+  "proj": "wz",
+  "task": "T1",
+  "error": "drop1",
+  "n": 28,
+  "conds": [
+   "correct",
+   "wrong",
+   "humble",
+   "nocard"
+  ]
+ },
+ "cpy_T1_drop1": {
+  "proj": "cpy",
+  "task": "T1",
+  "error": "drop1",
+  "n": 22,
+  "conds": [
+   "correct",
+   "wrong",
+   "humble",
+   "nocard"
+  ]
+ },
+ "flask_T1_drop1": {
+  "proj": "flask",
+  "task": "T1",
+  "error": "drop1",
+  "n": 16,
+  "conds": [
+   "correct",
+   "wrong",
+   "humble",
+   "nocard"
+  ]
+ },
+ "gson_T1_drop1": {
+  "proj": "gson",
+  "task": "T1",
+  "error": "drop1",
+  "n": 22,
+  "conds": [
+   "correct",
+   "wrong",
+   "humble",
+   "nocard"
+  ]
+ },
+ "wz_T2_drop1": {
+  "proj": "wz",
+  "task": "T2",
+  "error": "drop1",
+  "n": 28,
+  "conds": [
+   "correct",
+   "wrong",
+   "humble",
+   "nocard"
+  ]
+ },
+ "wz_T3_drop1": {
+  "proj": "wz",
+  "task": "T3",
+  "error": "drop1",
+  "n": 28,
+  "conds": [
+   "correct",
+   "wrong",
+   "humble",
+   "nocard"
+  ]
+ },
+ "wz_T1_dropN": {
+  "proj": "wz",
+  "task": "T1",
+  "error": "dropN",
+  "n": 28,
+  "conds": [
+   "wrong",
+   "humble"
+  ]
+ },
+ "wz_T1_overreport": {
+  "proj": "wz",
+  "task": "T1",
+  "error": "overreport",
+  "n": 28,
+  "conds": [
+   "wrong",
+   "humble"
+  ]
+ }
+}

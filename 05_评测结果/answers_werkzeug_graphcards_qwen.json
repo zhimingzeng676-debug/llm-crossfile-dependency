@@ -1,0 +1,226 @@
+[
+ {
+  "id": "FWD-01",
+  "answer": "根据代码片段 1 的信息，`datastructures/headers.py` 文件直接依赖（import）了以下项目内的模块：\n\n1. `_internal.py`\n2. `datastructures/mixins.py`\n3. `datastructures/structures.py`\n4. `exceptions.py`"
+ },
+ {
+  "id": "FWD-02",
+  "answer": "根据代码片段 2 的信息，`formparser.py` 直接依赖（import）了以下项目内的模块：\n\n1. `_internal.py`\n2. `datastructures/__init__.py`\n3. `exceptions.py`\n4. `http.py`\n5. `sansio/multipart.py`\n6. `wsgi.py`"
+ },
+ {
+  "id": "FWD-03",
+  "answer": "根据提供的代码片段，`http.py` 文件直接依赖（import）了以下项目内的模块：\n\n1. `_internal.py`\n2. `http.py`\n\n这些依赖关系可以在代码片段 1 的“它依赖(import)的仓库内文件”部分找到。"
+ },
+ {
+  "id": "FWD-04",
+  "answer": "根据代码片段 5 的信息，`routing/map.py` 直接依赖（import）了以下项目内的模块：\n\n1. `_internal.py`\n2. `datastructures/__init__.py`\n3. `exceptions.py`\n4. `routing/converters.py`\n5. `routing/exceptions.py`\n6. `routing/matcher.py`\n7. `routing/rules.py`\n8. `urls.py`\n9. `wrappers/request.py`\n10. `wsgi.py`"
+ },
+ {
+  "id": "FWD-05",
+  "answer": "根据代码片段 1 的信息，`routing/matcher.py` 直接依赖（import）了以下项目内的模块：\n\n- `routing/converters.py`\n- `routing/exceptions.py`\n- `routing/rules.py`"
+ },
+ {
+  "id": "FWD-06",
+  "answer": "根据提供的代码片段，`sansio/request.py` 直接依赖（import）了以下项目内的模块：\n\n1. `sansio/http.py`\n2. `sansio/utils.py`\n3. `user_agent.py`\n\n这些信息可以从代码片段 1、2 和 3 的依赖图卡片中看出。"
+ },
+ {
+  "id": "FWD-07",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "FWD-08",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "FWD-09",
+  "answer": "根据提供的代码片段，`test.py` 被 `__init__.py` 和 `urls.py` 依赖。因此，`test.py` 直接依赖的项目内模块包括：\n\n1. `__init__.py`\n2. `urls.py`"
+ },
+ {
+  "id": "FWD-10",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "FWD-11",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "REV-01",
+  "answer": "根据提供的代码片段，`_internal.py` 被以下文件导入（依赖）：\n\n1. `formparser.py`\n2. `sansio/http.py`\n\n因此，在 werkzeug 中，`_internal.py` 被 `formparser.py` 和 `sansio/http.py` 这两个文件导入。"
+ },
+ {
+  "id": "REV-02",
+  "answer": "根据提供的代码片段，`datastructures/__init__.py` 被以下文件依赖或使用（import 它的使用方）：\n\n1. `wrappers/__init__.py`\n2. `datastructures/etag.py`\n\n因此，`datastructures/__init__.py` 被这两个文件 import 依赖。"
+ },
+ {
+  "id": "REV-03",
+  "answer": "根据提供的代码片段，`datastructures/mixins.py` 被以下文件依赖（import）：\n\n1. `datastructures/__init__.py`\n2. `datastructures/cache_control.py`\n3. `datastructures/headers.py`\n4. `datastructures/structures.py`\n\n这些文件在代码片段中明确列出了对 `datastructures/mixins.py` 的依赖关系。"
+ },
+ {
+  "id": "REV-04",
+  "answer": "根据提供的代码片段，`datastructures/structures.py` 被以下文件 import（依赖）：\n\n1. `datastructures/csp.py`\n2. `datastructures/file_storage.py`\n3. `datastructures/headers.py`\n4. `datastructures/auth.py`\n\n这些文件都直接或间接地依赖于 `datastructures/structures.py`。"
+ },
+ {
+  "id": "REV-05",
+  "answer": "根据提供的代码片段，`routing/exceptions.py` 被以下文件依赖或使用（import 它的使用方）：\n\n1. `routing/__init__.py`\n2. `routing/map.py`\n3. `routing/matcher.py`\n\n因此，在 werkzeug 中，`exceptions.py` 被 `routing/__init__.py`、`routing/map.py` 和 `routing/matcher.py` 这些文件 import 依赖。"
+ },
+ {
+  "id": "REV-06",
+  "answer": "根据提供的代码片段，`formparser.py` 被 `wrappers/request.py` 依赖/使用（import 它的使用方）。"
+ },
+ {
+  "id": "REV-07",
+  "answer": "根据提供的代码片段，`http.py` 被以下文件依赖（import）：\n\n1. `sansio/request.py`\n2. `middleware/proxy_fix.py`\n3. `middleware/http_proxy.py`\n\n这些文件在各自的代码片段中明确显示了对 `http.py` 的依赖关系。"
+ },
+ {
+  "id": "REV-08",
+  "answer": "根据提供的代码片段，`routing/rules.py` 被以下文件依赖/使用（import 它的使用方）：\n\n1. `routing/__init__.py`\n2. `routing/exceptions.py`\n3. `routing/map.py`\n4. `routing/matcher.py`\n\n因此，`routing/rules.py` 被这四个文件 import 依赖。"
+ },
+ {
+  "id": "REV-09",
+  "answer": "根据提供的代码片段，`sansio/request.py` 被以下文件依赖或使用（import 它）：\n\n1. `sansio/http.py`\n2. `user_agent.py`\n\n因此，`sansio/request.py` 被 `sansio/http.py` 和 `user_agent.py` 这两个文件所依赖。"
+ },
+ {
+  "id": "REV-10",
+  "answer": "根据提供的代码片段，`urls.py` 被以下文件依赖（import）：\n\n1. `routing/map.py`\n2. `routing/rules.py`\n3. `sansio/utils.py`\n4. `serving.py`\n5. `test.py`\n6. `wrappers/response.py`\n\n这些文件都直接或间接地从 `urls.py` 导入了某些功能或类。"
+ },
+ {
+  "id": "REV-11",
+  "answer": "根据提供的代码片段，`utils.py` 被以下文件依赖或使用（import 它）：\n\n1. `wrappers/__init__.py`\n2. `testapp.py`\n3. `security.py`\n4. `routing/exceptions.py`\n\n这些文件在各自的代码片段中明确表示它们依赖于 `utils.py`。"
+ },
+ {
+  "id": "REV-12",
+  "answer": "根据提供的代码片段，`wrappers/request.py` 被以下文件依赖（import）：\n\n1. `testapp.py`\n2. `routing/exceptions.py`\n3. `utils.py`\n4. `wrappers/__init__.py`\n5. `wrappers/response.py`\n\n这些文件都直接或间接地导入了 `wrappers/request.py`。"
+ },
+ {
+  "id": "REV-13",
+  "answer": "根据提供的代码片段，`wsgi.py` 被以下文件依赖或导入：\n\n1. `sansio/__init__.py`\n2. `middleware/http_proxy.py`\n\n因此，`wsgi.py` 被 `sansio/__init__.py` 和 `middleware/http_proxy.py` 这两个文件所依赖。"
+ },
+ {
+  "id": "INH-01",
+  "answer": "根据代码片段 4 的信息:\n\n- 类 Accept 继承自 ImmutableList。\n- 基类 ImmutableList 定义在 datastructures/structures.py 文件中。"
+ },
+ {
+  "id": "INH-02",
+  "answer": "类 FileMultiDict 继承自 MultiDict。MultiDict 的定义位置在 datastructures/structures.py 文件中。"
+ },
+ {
+  "id": "INH-03",
+  "answer": "类 EnvironHeaders 继承自 ImmutableHeadersMixin 和 Headers。ImmutableHeadersMixin 定义在 datastructures/mixins.py 文件中，而 Headers 定义在 datastructures/headers.py 文件中。"
+ },
+ {
+  "id": "INH-04",
+  "answer": "根据代码片段中的信息，类 `RequestCacheControl` 继承自两个类：`ImmutableDictMixin` 和 `_CacheControl`。\n\n1. `ImmutableDictMixin` 定义在 `datastructures/mixins.py` 文件中。\n2. `_CacheControl` 定义在 `datastructures/cache_control.py` 文件中。"
+ },
+ {
+  "id": "INH-05",
+  "answer": "类 ContentSecurityPolicy 继承自 CallbackDict。CallbackDict 定义在 datastructures/structures.py 文件中。"
+ },
+ {
+  "id": "INH-06",
+  "answer": "类 CombinedMultiDict 继承自 ImmutableMultiDictMixin 和 MultiDict。ImmutableMultiDictMixin 定义在 datastructures/mixins.py 文件中，而 MultiDict 定义在 datastructures/structures.py 文件中。"
+ },
+ {
+  "id": "INH-07",
+  "answer": "在 werkzeug 中,wrappers/request.py 里的 Request 类继承自 sansio/request.py 文件里的 Request 类。"
+ },
+ {
+  "id": "INH-08",
+  "answer": "在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在 sansio/response.py 文件中。"
+ },
+ {
+  "id": "INH-09",
+  "answer": "在 werkzeug 中,异常类 BadRequestKeyError 同时继承了 BadRequest 和 KeyError 这两个类。"
+ },
+ {
+  "id": "INH-10",
+  "answer": "根据提供的代码片段，werkzeug 中直接继承自 HTTPException 的异常类包括：\n\n1. Unauthorized\n2. NotFound\n3. NotAcceptable\n4. Gone\n5. Forbidden\n\n这些类都在 exceptions.py 文件中定义，并且它们都没有进一步的子类。"
+ },
+ {
+  "id": "INH-11",
+  "answer": "在 werkzeug 中，继承(混入)了 ImmutableDictMixin 的类有：\n\n1. RequestCacheControl\n2. ImmutableMultiDictMixin\n3. ImmutableTypeConversionDict\n4. ImmutableDict"
+ },
+ {
+  "id": "INH-12",
+  "answer": "在 werkzeug 中，继承了 CallbackDict 的类有：\n\n1. _CacheControl\n2. ContentSecurityPolicy"
+ },
+ {
+  "id": "LOC-01",
+  "answer": "类 Authorization 定义在 datastructures/auth.py 文件里。"
+ },
+ {
+  "id": "LOC-02",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-03",
+  "answer": "类 CombinedMultiDict 定义在 datastructures/structures.py 文件里。"
+ },
+ {
+  "id": "LOC-04",
+  "answer": "类 FileStorage 定义在 datastructures/file_storage.py 文件里。"
+ },
+ {
+  "id": "LOC-05",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-06",
+  "answer": "类 Headers 定义在 datastructures/headers.py 文件里。"
+ },
+ {
+  "id": "LOC-07",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-08",
+  "answer": "类 MapAdapter 定义在文件 routing/map.py 里。"
+ },
+ {
+  "id": "LOC-09",
+  "answer": "类 MultiDict 定义在 datastructures/structures.py 文件里。"
+ },
+ {
+  "id": "LOC-10",
+  "answer": "类 Rule 定义在 routing/rules.py 文件中。"
+ },
+ {
+  "id": "LOC-11",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-12",
+  "answer": "类 WSGIWarning 定义在文件 middleware/lint.py 中。"
+ },
+ {
+  "id": "DAT-01",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "DAT-02",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "DAT-03",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "IND-01",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "IND-02",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "IND-03",
+  "answer": "是的,wrappers/request.py 间接依赖 datastructures/structures.py。依赖路径如下:\n\nwrappers/request.py -> datastructures/__init__.py -> datastructures/structures.py\n\n完整路径为:\nwrappers/request.py -> datastructures/__init__.py -> datastructures/structures.py"
+ },
+ {
+  "id": "IND-04",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "IND-05",
+  "answer": "检索结果中没有找到。"
+ }
+]

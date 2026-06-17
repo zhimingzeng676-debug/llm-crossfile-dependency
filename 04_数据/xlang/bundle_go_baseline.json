@@ -1,0 +1,200 @@
+[
+ {
+  "id": "go-FWD-0",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,文件 auth.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "context.go, gin.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,文件 auth.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-FWD-1",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,文件 context.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "errors.go, fs.go, gin.go, response_writer.go, routergroup.go, tree.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,文件 context.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-FWD-2",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,文件 context_appengine.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "gin.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,文件 context_appengine.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-FWD-3",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,文件 debug.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "context.go, errors.go, gin.go, logger.go, mode.go, recovery.go, response_writer.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,文件 debug.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-FWD-4",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,文件 deprecated.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "context.go, gin.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,文件 deprecated.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-FWD-5",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,文件 doc.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "context.go, gin.go, routergroup.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,文件 doc.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-FWD-6",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,文件 errors.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "context.go, gin.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,文件 errors.go 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-REV-20",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 debug.go?列出文件。",
+  "gold": "gin.go, recovery.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 debug.go?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-REV-21",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 errors.go?列出文件。",
+  "gold": "context.go, debug.go, gin.go, logger.go, response_writer.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 errors.go?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-REV-22",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 fs.go?列出文件。",
+  "gold": "context.go, recovery.go, routergroup.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 fs.go?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-REV-24",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 logger.go?列出文件。",
+  "gold": "debug.go, gin.go, mode.go, recovery.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 logger.go?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-REV-25",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 mode.go?列出文件。",
+  "gold": "debug.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 mode.go?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-REV-26",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 recovery.go?列出文件。",
+  "gold": "debug.go, gin.go, mode.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 recovery.go?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-REV-27",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 response_writer.go?列出文件。",
+  "gold": "context.go, debug.go, gin.go, logger.go, path.go, routergroup.go, test_helpers.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,哪些本仓库内的文件依赖(import/include/引用)了 response_writer.go?列出文件。\n请直接回答。"
+ },
+ {
+  "id": "go-LOC-30",
+  "category": "symbol_location",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,符号 Accounts(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "auth.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,符号 Accounts(类/类型/函数/结构体)定义在哪个文件里?\n请直接回答。"
+ },
+ {
+  "id": "go-LOC-31",
+  "category": "symbol_location",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,符号 BasicAuthForRealm(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "auth.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,符号 BasicAuthForRealm(类/类型/函数/结构体)定义在哪个文件里?\n请直接回答。"
+ },
+ {
+  "id": "go-LOC-32",
+  "category": "symbol_location",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,符号 BasicAuth(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "auth.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,符号 BasicAuth(类/类型/函数/结构体)定义在哪个文件里?\n请直接回答。"
+ },
+ {
+  "id": "go-LOC-33",
+  "category": "symbol_location",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,符号 BasicAuthForProxy(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "auth.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,符号 BasicAuthForProxy(类/类型/函数/结构体)定义在哪个文件里?\n请直接回答。"
+ },
+ {
+  "id": "go-LOC-34",
+  "category": "symbol_location",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,符号 ContextKeyType(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "context.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,符号 ContextKeyType(类/类型/函数/结构体)定义在哪个文件里?\n请直接回答。"
+ },
+ {
+  "id": "go-LOC-35",
+  "category": "symbol_location",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,符号 Context(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "context.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,符号 Context(类/类型/函数/结构体)定义在哪个文件里?\n请直接回答。"
+ },
+ {
+  "id": "go-LOC-36",
+  "category": "symbol_location",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,符号 Negotiate(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "context.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,符号 Negotiate(类/类型/函数/结构体)定义在哪个文件里?\n请直接回答。"
+ },
+ {
+  "id": "go-LOC-37",
+  "category": "symbol_location",
+  "difficulty": "medium",
+  "question": "在 gorilla-gin 项目中,符号 Copy(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "context.go",
+  "notes": "(跨语言用例,正则抽取gold)",
+  "gen_prompt": "你是一个代码仓库依赖分析助手。请根据你对该开源项目的了解回答下面的跨文件依赖问题。如果不确定,请明确说\"不确定\",不要臆造。\n\n问题:在 gorilla-gin 项目中,符号 Copy(类/类型/函数/结构体)定义在哪个文件里?\n请直接回答。"
+ }
+]

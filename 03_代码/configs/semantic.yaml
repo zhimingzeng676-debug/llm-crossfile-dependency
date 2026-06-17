@@ -1,0 +1,19 @@
+# 消融实验(第二阶段):baseline + 真语义 Embedding(bge-small-zh-v1.5,本地权重),其余不变。
+# 假设(第一阶段 NEXT_STEPS 的预判):semantic 方向提升最明显,HI-03(两条相似 commit
+# 分不清)应被修好 —— 本配置就是来验证这个预判的。
+name: semantic
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl
+chunking:
+  strategy: fixed
+  chunk_lines: 40
+  overlap: 10
+embedder:
+  type: sentence_transformer
+  model_name: models/bge-small-en-v1.5  # M65 审计:英文/代码任务用 en(R@5 0.93≫zh 0.32),零成本;勿改回 zh(冒烟测试会拦)
+backend:
+  type: local_rag
+  top_k: 3
+llm:
+  type: mock
+prompt_file: configs/prompts/plain.yaml

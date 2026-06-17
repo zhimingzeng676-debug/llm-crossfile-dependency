@@ -1,0 +1,1817 @@
+{
+ "summary": {
+  "n_judge_decisions": 224,
+  "configs": [
+   "baseline",
+   "purellm",
+   "RAG_full",
+   "PE_cot"
+  ],
+  "prev_calib_n": 20,
+  "coder_mean": 0.516,
+  "det_recall_mean": 0.512,
+  "det_allkw_mean": 0.442,
+  "spearman_rho": 0.894,
+  "spearman_p": 2.5091061897014578e-79,
+  "binary_kappa": 0.795,
+  "binary_agree_pct": 0.897,
+  "agree_n": 201,
+  "lenient_n": 20,
+  "strict_n": 3,
+  "mean_gap_coder_minus_det": 0.004
+ },
+ "rows": [
+  {
+   "cfg": "baseline",
+   "id": "FWD-01",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "FWD-02",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "FWD-03",
+   "cat": "forward_dep",
+   "coder": 0.5,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "FWD-04",
+   "cat": "forward_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "FWD-05",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "FWD-06",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "FWD-07",
+   "cat": "forward_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "FWD-08",
+   "cat": "forward_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "FWD-09",
+   "cat": "forward_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "FWD-10",
+   "cat": "forward_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "FWD-11",
+   "cat": "forward_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-01",
+   "cat": "reverse_dep",
+   "coder": 0.06,
+   "det_recall": 0.067,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-02",
+   "cat": "reverse_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-03",
+   "cat": "reverse_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-04",
+   "cat": "reverse_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-05",
+   "cat": "reverse_dep",
+   "coder": 0.077,
+   "det_recall": 0.167,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-06",
+   "cat": "reverse_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-07",
+   "cat": "reverse_dep",
+   "coder": 0.167,
+   "det_recall": 0.176,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-08",
+   "cat": "reverse_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-09",
+   "cat": "reverse_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-10",
+   "cat": "reverse_dep",
+   "coder": 0.33,
+   "det_recall": 0.333,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-11",
+   "cat": "reverse_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-12",
+   "cat": "reverse_dep",
+   "coder": 0.2,
+   "det_recall": 0.111,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "REV-13",
+   "cat": "reverse_dep",
+   "coder": 0.3,
+   "det_recall": 0.3,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "INH-01",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "INH-02",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "INH-03",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "INH-04",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "INH-05",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "INH-06",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "INH-07",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "INH-08",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "INH-09",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "INH-10",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "INH-11",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 0.75,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "INH-12",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "LOC-01",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "LOC-02",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "LOC-03",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "LOC-04",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "LOC-05",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "LOC-06",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "LOC-07",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "LOC-08",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "LOC-09",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "LOC-10",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "LOC-11",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "LOC-12",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "DAT-01",
+   "cat": "dataflow",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "DAT-02",
+   "cat": "dataflow",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "DAT-03",
+   "cat": "dataflow",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "IND-01",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "IND-02",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "IND-03",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "IND-04",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "baseline",
+   "id": "IND-05",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "FWD-01",
+   "cat": "forward_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "FWD-02",
+   "cat": "forward_dep",
+   "coder": 0.33,
+   "det_recall": 0.333,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "FWD-03",
+   "cat": "forward_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "FWD-04",
+   "cat": "forward_dep",
+   "coder": 0.4,
+   "det_recall": 0.333,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "FWD-05",
+   "cat": "forward_dep",
+   "coder": 0.67,
+   "det_recall": 0.667,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "FWD-06",
+   "cat": "forward_dep",
+   "coder": 0.5,
+   "det_recall": 0.25,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "FWD-07",
+   "cat": "forward_dep",
+   "coder": 0.5,
+   "det_recall": 0.5,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "FWD-08",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 0.75,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "FWD-09",
+   "cat": "forward_dep",
+   "coder": 0.0,
+   "det_recall": 0.111,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "FWD-10",
+   "cat": "forward_dep",
+   "coder": 0.375,
+   "det_recall": 0.375,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "FWD-11",
+   "cat": "forward_dep",
+   "coder": 0.3,
+   "det_recall": 0.4,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-01",
+   "cat": "reverse_dep",
+   "coder": 0.82,
+   "det_recall": 0.333,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-02",
+   "cat": "reverse_dep",
+   "coder": 0.857,
+   "det_recall": 0.25,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-03",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-04",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 0.571,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-05",
+   "cat": "reverse_dep",
+   "coder": 0.769,
+   "det_recall": 0.417,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-06",
+   "cat": "reverse_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-07",
+   "cat": "reverse_dep",
+   "coder": 0.56,
+   "det_recall": 0.353,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-08",
+   "cat": "reverse_dep",
+   "coder": 0.75,
+   "det_recall": 0.75,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-09",
+   "cat": "reverse_dep",
+   "coder": 0.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-10",
+   "cat": "reverse_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-11",
+   "cat": "reverse_dep",
+   "coder": 0.78,
+   "det_recall": 0.571,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-12",
+   "cat": "reverse_dep",
+   "coder": 0.0,
+   "det_recall": 0.222,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "REV-13",
+   "cat": "reverse_dep",
+   "coder": 0.0,
+   "det_recall": 0.3,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "INH-01",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "INH-02",
+   "cat": "inheritance",
+   "coder": 0.5,
+   "det_recall": 0.5,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "INH-03",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "INH-04",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "INH-05",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "INH-06",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "INH-07",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "INH-08",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "INH-09",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "INH-10",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 0.839,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "INH-11",
+   "cat": "inheritance",
+   "coder": 0.25,
+   "det_recall": 0.25,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "INH-12",
+   "cat": "inheritance",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "LOC-01",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "LOC-02",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "LOC-03",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "LOC-04",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "LOC-05",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "LOC-06",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "LOC-07",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "LOC-08",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "LOC-09",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "LOC-10",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "LOC-11",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "LOC-12",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "DAT-01",
+   "cat": "dataflow",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "DAT-02",
+   "cat": "dataflow",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "DAT-03",
+   "cat": "dataflow",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "IND-01",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "IND-02",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "IND-03",
+   "cat": "indirect_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "IND-04",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "purellm",
+   "id": "IND-05",
+   "cat": "indirect_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "FWD-01",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "FWD-02",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "FWD-03",
+   "cat": "forward_dep",
+   "coder": 0.5,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "FWD-04",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "FWD-05",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "FWD-06",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "FWD-07",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "FWD-08",
+   "cat": "forward_dep",
+   "coder": 0.0,
+   "det_recall": 0.125,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "FWD-09",
+   "cat": "forward_dep",
+   "coder": 0.22,
+   "det_recall": 0.222,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "FWD-10",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "FWD-11",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-01",
+   "cat": "reverse_dep",
+   "coder": 0.235,
+   "det_recall": 0.2,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-02",
+   "cat": "reverse_dep",
+   "coder": 0.286,
+   "det_recall": 0.25,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-03",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-04",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-05",
+   "cat": "reverse_dep",
+   "coder": 0.38,
+   "det_recall": 0.417,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-06",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-07",
+   "cat": "reverse_dep",
+   "coder": 0.167,
+   "det_recall": 0.176,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-08",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-09",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-10",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-11",
+   "cat": "reverse_dep",
+   "coder": 0.78,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-12",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "REV-13",
+   "cat": "reverse_dep",
+   "coder": 0.3,
+   "det_recall": 0.3,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "INH-01",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "INH-02",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "INH-03",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "INH-04",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "INH-05",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "INH-06",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "INH-07",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "INH-08",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "INH-09",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "INH-10",
+   "cat": "inheritance",
+   "coder": 0.161,
+   "det_recall": 0.161,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "INH-11",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "INH-12",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "LOC-01",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "LOC-02",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "LOC-03",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "LOC-04",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "LOC-05",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "LOC-06",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "LOC-07",
+   "cat": "symbol_location",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "LOC-08",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "LOC-09",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "LOC-10",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "LOC-11",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "LOC-12",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "DAT-01",
+   "cat": "dataflow",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "DAT-02",
+   "cat": "dataflow",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "DAT-03",
+   "cat": "dataflow",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "IND-01",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "IND-02",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "IND-03",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "IND-04",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "RAG_full",
+   "id": "IND-05",
+   "cat": "indirect_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "FWD-01",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "FWD-02",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "FWD-03",
+   "cat": "forward_dep",
+   "coder": 0.5,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "FWD-04",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "FWD-05",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "FWD-06",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "FWD-07",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "FWD-08",
+   "cat": "forward_dep",
+   "coder": 0.0,
+   "det_recall": 0.125,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "FWD-09",
+   "cat": "forward_dep",
+   "coder": 0.0,
+   "det_recall": 0.222,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "FWD-10",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "FWD-11",
+   "cat": "forward_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-01",
+   "cat": "reverse_dep",
+   "coder": 0.29,
+   "det_recall": 0.2,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-02",
+   "cat": "reverse_dep",
+   "coder": 0.083,
+   "det_recall": 0.083,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-03",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-04",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-05",
+   "cat": "reverse_dep",
+   "coder": 0.308,
+   "det_recall": 0.333,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-06",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-07",
+   "cat": "reverse_dep",
+   "coder": 0.22,
+   "det_recall": 0.235,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-08",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-09",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-10",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-11",
+   "cat": "reverse_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-12",
+   "cat": "reverse_dep",
+   "coder": 0.9,
+   "det_recall": 0.889,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "REV-13",
+   "cat": "reverse_dep",
+   "coder": 0.1,
+   "det_recall": 0.2,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "INH-01",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "INH-02",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "INH-03",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "INH-04",
+   "cat": "inheritance",
+   "coder": 0.5,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "INH-05",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "INH-06",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "INH-07",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "INH-08",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "INH-09",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "INH-10",
+   "cat": "inheritance",
+   "coder": 0.161,
+   "det_recall": 0.161,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "INH-11",
+   "cat": "inheritance",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "INH-12",
+   "cat": "inheritance",
+   "coder": 0.5,
+   "det_recall": 0.5,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "LOC-01",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "LOC-02",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "LOC-03",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "LOC-04",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "LOC-05",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "LOC-06",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "LOC-07",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "LOC-08",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "LOC-09",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "LOC-10",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "LOC-11",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "LOC-12",
+   "cat": "symbol_location",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "DAT-01",
+   "cat": "dataflow",
+   "coder": 0.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "DAT-02",
+   "cat": "dataflow",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "DAT-03",
+   "cat": "dataflow",
+   "coder": 0.0,
+   "det_recall": 0.0,
+   "det_allkw": 0.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "IND-01",
+   "cat": "indirect_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "IND-02",
+   "cat": "indirect_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "IND-03",
+   "cat": "indirect_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "IND-04",
+   "cat": "indirect_dep",
+   "coder": 0.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  },
+  {
+   "cfg": "PE_cot",
+   "id": "IND-05",
+   "cat": "indirect_dep",
+   "coder": 1.0,
+   "det_recall": 1.0,
+   "det_allkw": 1.0
+  }
+ ]
+}

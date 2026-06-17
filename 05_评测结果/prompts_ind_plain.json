@@ -1,0 +1,488 @@
+[
+ {
+  "id": "XIND-01",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,__init__.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: debug/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 debug/__init__.py\n它依赖(import)的仓库内文件: _internal.py, debug/console.py, debug/tbtools.py, exceptions.py, http.py, sansio/utils.py, security.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): serving.py\n文件内定义的类: _ConsoleFrame, DebuggedApplication\n文件内定义的函数: hash_pin, get_machine_id, _generate, __init__, eval, get_pin_and_cookie_name, __init__, pin, pin, pin_cookie_name, debug_application, execute_command, display_console, get_resource, check_pin_trust, check_host_trust, _fail_pin_auth, pin_auth, log_pin_request, __call__\n\n[代码片段 2] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 文件 utils.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, security.py, wrappers/__init__.py, wrappers/request.py, wrappers/response.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, debug/tbtools.py, middleware/shared_data.py, routing/exceptions.py, sansio/request.py, sansio/response.py, test.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: cached_property, environ_property, header_property, ImportStringError\n文件内定义的函数: __init__, __set__, __get__, __delete__, lookup, lookup, get_content_type, secure_filename, redirect, append_slash_redirect, send_file, send_from_directory, import_string, find_modules, __init__, __repr__\n\n[代码片段 3] 来源: security.py (第 0-0 行)\n[依赖图卡片] 文件 security.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, middleware/shared_data.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: gen_salt, _hash_internal, generate_password_hash, check_password_hash, safe_join\n\n[代码片段 4] 来源: sansio/utils.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/utils.py\n它依赖(import)的仓库内文件: _internal.py, exceptions.py, http.py, urls.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, sansio/request.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: host_is_trusted, get_host, get_current_url, get_content_length\n\n[代码片段 5] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 文件 formparser.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: TStreamFactory, FormDataParser, MultiPartParser\n文件内定义的函数: __call__, default_stream_factory, parse_form_data, __init__, parse_from_environ, parse, _parse_multipart, _parse_urlencoded, __init__, fail, get_part_charset, start_file_streaming, parse, _chunk_iter\n\n[问题] 在 werkzeug 中,__init__.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "debug/__init__.py",
+   "utils.py",
+   "security.py",
+   "sansio/utils.py",
+   "formparser.py"
+  ],
+  "expected_sources": [
+   "__init__.py",
+   "serving.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "serving.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-02",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,__init__.py 是否间接依赖 datastructures/__init__.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/file_storage.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: FileStorage, FileMultiDict\n文件内定义的函数: __init__, _parse_content_type, content_type, content_length, mimetype, mimetype_params, save, close, __bool__, __getattr__, __iter__, __repr__, add_file\n\n[代码片段 2] 来源: datastructures/range.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/range.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: IfRange, Range, _CallbackProperty, ContentRange\n文件内定义的函数: __init__, to_header, __str__, __repr__, __init__, range_for_length, make_content_range, to_header, to_content_range_header, __str__, __repr__, __set_name__, __get__, __get__, __get__, __set__, __init__, set, unset, to_header, __bool__, __str__, __repr__\n\n[代码片段 3] 来源: datastructures/cache_control.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/cache_control.py\n它依赖(import)的仓库内文件: datastructures/mixins.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, sansio/response.py\n文件内定义的类: _CacheControl, RequestCacheControl, ResponseCacheControl\n文件内定义的函数: cache_control_property, __init__, _get_cache_value, _set_cache_value, _del_cache_value, to_header, __str__, __repr__\n\n[代码片段 4] 来源: sansio/multipart.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/multipart.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, exceptions.py, http.py\n它被这些文件依赖/使用(import 它的使用方): formparser.py, test.py\n文件内定义的类: Event, Preamble, Field, File, Data, Epilogue, NeedData, State, MultipartDecoder, MultipartEncoder\n文件内定义的函数: __init__, receive_data, next_event, _parse_headers, _parse_data, _last_partial_boundary_index, __init__, send_event\n\n[代码片段 5] 来源: datastructures/auth.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/auth.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: Authorization, WWWAuthenticate\n文件内定义的函数: __init__, __getattr__, __getitem__, get, __contains__, __eq__, from_header, to_header, __str__, __repr__, __init__, _trigger_on_update, type, type, parameters, parameters, token, token, __getitem__, __setitem__, __delitem__, __getattr__, __setattr__, __delattr__, __contains__, __eq__, get, from_header, to_header, __str__\n\n[问题] 在 werkzeug 中,__init__.py 是否间接依赖 datastructures/__init__.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "datastructures/file_storage.py",
+   "datastructures/range.py",
+   "datastructures/cache_control.py",
+   "sansio/multipart.py",
+   "datastructures/auth.py"
+  ],
+  "expected_sources": [
+   "__init__.py",
+   "test.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "test.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-03",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,__init__.py 是否间接依赖 wrappers/request.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: debug/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 debug/__init__.py\n它依赖(import)的仓库内文件: _internal.py, debug/console.py, debug/tbtools.py, exceptions.py, http.py, sansio/utils.py, security.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): serving.py\n文件内定义的类: _ConsoleFrame, DebuggedApplication\n文件内定义的函数: hash_pin, get_machine_id, _generate, __init__, eval, get_pin_and_cookie_name, __init__, pin, pin, pin_cookie_name, debug_application, execute_command, display_console, get_resource, check_pin_trust, check_host_trust, _fail_pin_auth, pin_auth, log_pin_request, __call__\n\n[代码片段 2] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 文件 formparser.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: TStreamFactory, FormDataParser, MultiPartParser\n文件内定义的函数: __call__, default_stream_factory, parse_form_data, __init__, parse_from_environ, parse, _parse_multipart, _parse_urlencoded, __init__, fail, get_part_charset, start_file_streaming, parse, _chunk_iter\n\n[代码片段 3] 来源: wrappers/request.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/request.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, formparser.py, sansio/request.py, test.py, utils.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): _internal.py, debug/__init__.py, exceptions.py, routing/exceptions.py, routing/map.py, test.py, testapp.py, utils.py, wrappers/__init__.py, wrappers/response.py\n文件内定义的类: Request\n文件内定义的函数: __init__, from_values, application, application, _get_file_stream, want_form_data_parsed, make_form_data_parser, _load_form_data, _get_stream_for_parsing, close, __enter__, __exit__, stream, data, get_data, get_data, get_data, form, values, files, script_root, url_root, json, get_json, get_json, get_json, on_json_loading_failed\n\n[代码片段 4] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 文件 utils.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, security.py, wrappers/__init__.py, wrappers/request.py, wrappers/response.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, debug/tbtools.py, middleware/shared_data.py, routing/exceptions.py, sansio/request.py, sansio/response.py, test.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: cached_property, environ_property, header_property, ImportStringError\n文件内定义的函数: __init__, __set__, __get__, __delete__, lookup, lookup, get_content_type, secure_filename, redirect, append_slash_redirect, send_file, send_from_directory, import_string, find_modules, __init__, __repr__\n\n[代码片段 5] 来源: _internal.py (第 0-0 行)\n[依赖图卡片] 文件 _internal.py\n它依赖(import)的仓库内文件: wrappers/request.py\n它被这些文件依赖/使用(import 它的使用方): _reloader.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/structures.py, debug/__init__.py, exceptions.py, formparser.py, http.py, routing/map.py, sansio/http.py, sansio/utils.py, serving.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: _Missing, _ColorStreamHandler, _DictAccessorProperty\n文件内定义的函数: __repr__, __reduce__, _wsgi_decoding_dance, _wsgi_encoding_dance, _get_environ, _has_level_handler, __init__, _log, _dt_as_utc, _dt_as_utc, _dt_as_utc, __init__, lookup, __get__, __get__, __get__, __set__, __delete__, __repr__, _plain_int\n\n[问题] 在 werkzeug 中,__init__.py 是否间接依赖 wrappers/request.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "debug/__init__.py",
+   "formparser.py",
+   "wrappers/request.py",
+   "utils.py",
+   "_internal.py"
+  ],
+  "expected_sources": [
+   "__init__.py",
+   "wrappers/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "wrappers/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-04",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,_internal.py 是否间接依赖 datastructures/__init__.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/file_storage.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: FileStorage, FileMultiDict\n文件内定义的函数: __init__, _parse_content_type, content_type, content_length, mimetype, mimetype_params, save, close, __bool__, __getattr__, __iter__, __repr__, add_file\n\n[代码片段 2] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[代码片段 3] 来源: datastructures/mixins.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/mixins.py\n它依赖(import)的仓库内文件: _internal.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/cache_control.py, datastructures/headers.py, datastructures/structures.py\n文件内定义的类: ImmutableListMixin, ImmutableDictMixin, ImmutableMultiDictMixin, ImmutableHeadersMixin, UpdateDictMixin\n文件内定义的函数: _immutable_error, __hash__, __reduce_ex__, __delitem__, __iadd__, __imul__, __setitem__, append, remove, extend, insert, pop, reverse, sort, fromkeys, fromkeys, fromkeys, __reduce_ex__, _iter_hashitems, __hash__, setdefault, update, __ior__, pop, popitem, __setitem__, __delitem__, clear, __reduce_ex__, _iter_hashitems\n\n[代码片段 4] 来源: _internal.py (第 0-0 行)\n[依赖图卡片] 文件 _internal.py\n它依赖(import)的仓库内文件: wrappers/request.py\n它被这些文件依赖/使用(import 它的使用方): _reloader.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/structures.py, debug/__init__.py, exceptions.py, formparser.py, http.py, routing/map.py, sansio/http.py, sansio/utils.py, serving.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: _Missing, _ColorStreamHandler, _DictAccessorProperty\n文件内定义的函数: __repr__, __reduce__, _wsgi_decoding_dance, _wsgi_encoding_dance, _get_environ, _has_level_handler, __init__, _log, _dt_as_utc, _dt_as_utc, _dt_as_utc, __init__, lookup, __get__, __get__, __get__, __set__, __delete__, __repr__, _plain_int\n\n[代码片段 5] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 文件 formparser.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: TStreamFactory, FormDataParser, MultiPartParser\n文件内定义的函数: __call__, default_stream_factory, parse_form_data, __init__, parse_from_environ, parse, _parse_multipart, _parse_urlencoded, __init__, fail, get_part_charset, start_file_streaming, parse, _chunk_iter\n\n[问题] 在 werkzeug 中,_internal.py 是否间接依赖 datastructures/__init__.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "datastructures/file_storage.py",
+   "datastructures/headers.py",
+   "datastructures/mixins.py",
+   "_internal.py",
+   "formparser.py"
+  ],
+  "expected_sources": [
+   "_internal.py",
+   "wrappers/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "wrappers/request.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-05",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,_reloader.py 是否间接依赖 wrappers/request.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal.py (第 0-0 行)\n[依赖图卡片] 文件 _internal.py\n它依赖(import)的仓库内文件: wrappers/request.py\n它被这些文件依赖/使用(import 它的使用方): _reloader.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/structures.py, debug/__init__.py, exceptions.py, formparser.py, http.py, routing/map.py, sansio/http.py, sansio/utils.py, serving.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: _Missing, _ColorStreamHandler, _DictAccessorProperty\n文件内定义的函数: __repr__, __reduce__, _wsgi_decoding_dance, _wsgi_encoding_dance, _get_environ, _has_level_handler, __init__, _log, _dt_as_utc, _dt_as_utc, _dt_as_utc, __init__, lookup, __get__, __get__, __get__, __set__, __delete__, __repr__, _plain_int\n\n[代码片段 2] 来源: wrappers/request.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/request.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, formparser.py, sansio/request.py, test.py, utils.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): _internal.py, debug/__init__.py, exceptions.py, routing/exceptions.py, routing/map.py, test.py, testapp.py, utils.py, wrappers/__init__.py, wrappers/response.py\n文件内定义的类: Request\n文件内定义的函数: __init__, from_values, application, application, _get_file_stream, want_form_data_parsed, make_form_data_parser, _load_form_data, _get_stream_for_parsing, close, __enter__, __exit__, stream, data, get_data, get_data, get_data, form, values, files, script_root, url_root, json, get_json, get_json, get_json, on_json_loading_failed\n\n[代码片段 3] 来源: _reloader.py (第 0-0 行)\n[依赖图卡片] 文件 _reloader.py\n它依赖(import)的仓库内文件: _internal.py\n它被这些文件依赖/使用(import 它的使用方): serving.py\n文件内定义的类: ReloaderLoop, StatReloaderLoop, WatchdogReloaderLoop, EventHandler\n文件内定义的函数: _iter_module_paths, _remove_by_pattern, _find_stat_paths, _find_watchdog_paths, _find_common_roots, _walk, _get_args_for_reloading, __init__, __enter__, __exit__, run, run_step, restart_with_reloader, trigger_reload, log_reload, __enter__, run_step, __init__, on_any_event, trigger_reload, __enter__, __exit__, run, run_step, ensure_echo_on, run_with_reloader\n\n[代码片段 4] 来源: debug/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 debug/__init__.py\n它依赖(import)的仓库内文件: _internal.py, debug/console.py, debug/tbtools.py, exceptions.py, http.py, sansio/utils.py, security.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): serving.py\n文件内定义的类: _ConsoleFrame, DebuggedApplication\n文件内定义的函数: hash_pin, get_machine_id, _generate, __init__, eval, get_pin_and_cookie_name, __init__, pin, pin, pin_cookie_name, debug_application, execute_command, display_console, get_resource, check_pin_trust, check_host_trust, _fail_pin_auth, pin_auth, log_pin_request, __call__\n\n[代码片段 5] 来源: test.py (第 0-0 行)\n[依赖图卡片] 文件 test.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, http.py, sansio/multipart.py, urls.py, utils.py, wrappers/request.py, wrappers/response.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: EnvironBuilder, ClientRedirectError, Client, TestResponse, Cookie\n文件内定义的函数: stream_encode_multipart, write_binary, encode_multipart, _iter_data, __init__, from_environ, _add_file_from_data, _make_base_url, base_url, base_url, content_type, content_type, mimetype, mimetype, mimetype_params, on_update, content_length, content_length, _get_form, _set_form, form, form, files, files, input_stream, input_stream, query_string, query_string, args, args\n\n[问题] 在 werkzeug 中,_reloader.py 是否间接依赖 wrappers/request.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "_internal.py",
+   "wrappers/request.py",
+   "_reloader.py",
+   "debug/__init__.py",
+   "test.py"
+  ],
+  "expected_sources": [
+   "_reloader.py",
+   "_internal.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-06",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/__init__.py 是否间接依赖 http.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/file_storage.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: FileStorage, FileMultiDict\n文件内定义的函数: __init__, _parse_content_type, content_type, content_length, mimetype, mimetype_params, save, close, __bool__, __getattr__, __iter__, __repr__, add_file\n\n[代码片段 2] 来源: middleware/http_proxy.py (第 0-0 行)\n[依赖图卡片] 文件 middleware/http_proxy.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, exceptions.py, http.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: ProxyMiddleware\n文件内定义的函数: __init__, _set_defaults, proxy_to, application, read, __call__\n\n[代码片段 3] 来源: datastructures/auth.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/auth.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: Authorization, WWWAuthenticate\n文件内定义的函数: __init__, __getattr__, __getitem__, get, __contains__, __eq__, from_header, to_header, __str__, __repr__, __init__, _trigger_on_update, type, type, parameters, parameters, token, token, __getitem__, __setitem__, __delitem__, __getattr__, __setattr__, __delattr__, __contains__, __eq__, get, from_header, to_header, __str__\n\n[代码片段 4] 来源: datastructures/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/__init__.py\n它依赖(import)的仓库内文件: datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/etag.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/range.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): exceptions.py, formparser.py, middleware/http_proxy.py, middleware/lint.py, routing/map.py, routing/rules.py, sansio/multipart.py, sansio/request.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: __getattr__\n\n[代码片段 5] 来源: datastructures/csp.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/csp.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ContentSecurityPolicy\n文件内定义的函数: csp_property, __init__, _get_value, _set_value, _del_value, to_header, __str__, __repr__\n\n[问题] 在 werkzeug 中,datastructures/__init__.py 是否间接依赖 http.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "datastructures/file_storage.py",
+   "middleware/http_proxy.py",
+   "datastructures/auth.py",
+   "datastructures/__init__.py",
+   "datastructures/csp.py"
+  ],
+  "expected_sources": [
+   "datastructures/__init__.py",
+   "datastructures/auth.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/auth.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-07",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/__init__.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/file_storage.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: FileStorage, FileMultiDict\n文件内定义的函数: __init__, _parse_content_type, content_type, content_length, mimetype, mimetype_params, save, close, __bool__, __getattr__, __iter__, __repr__, add_file\n\n[代码片段 2] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[代码片段 3] 来源: datastructures/mixins.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/mixins.py\n它依赖(import)的仓库内文件: _internal.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/cache_control.py, datastructures/headers.py, datastructures/structures.py\n文件内定义的类: ImmutableListMixin, ImmutableDictMixin, ImmutableMultiDictMixin, ImmutableHeadersMixin, UpdateDictMixin\n文件内定义的函数: _immutable_error, __hash__, __reduce_ex__, __delitem__, __iadd__, __imul__, __setitem__, append, remove, extend, insert, pop, reverse, sort, fromkeys, fromkeys, fromkeys, __reduce_ex__, _iter_hashitems, __hash__, setdefault, update, __ior__, pop, popitem, __setitem__, __delitem__, clear, __reduce_ex__, _iter_hashitems\n\n[代码片段 4] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 文件 formparser.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: TStreamFactory, FormDataParser, MultiPartParser\n文件内定义的函数: __call__, default_stream_factory, parse_form_data, __init__, parse_from_environ, parse, _parse_multipart, _parse_urlencoded, __init__, fail, get_part_charset, start_file_streaming, parse, _chunk_iter\n\n[代码片段 5] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 文件 utils.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, security.py, wrappers/__init__.py, wrappers/request.py, wrappers/response.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, debug/tbtools.py, middleware/shared_data.py, routing/exceptions.py, sansio/request.py, sansio/response.py, test.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: cached_property, environ_property, header_property, ImportStringError\n文件内定义的函数: __init__, __set__, __get__, __delete__, lookup, lookup, get_content_type, secure_filename, redirect, append_slash_redirect, send_file, send_from_directory, import_string, find_modules, __init__, __repr__\n\n[问题] 在 werkzeug 中,datastructures/__init__.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "datastructures/file_storage.py",
+   "datastructures/headers.py",
+   "datastructures/mixins.py",
+   "formparser.py",
+   "utils.py"
+  ],
+  "expected_sources": [
+   "datastructures/__init__.py",
+   "datastructures/file_storage.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/file_storage.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-08",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/__init__.py 是否间接依赖 exceptions.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[代码片段 2] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 文件 formparser.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: TStreamFactory, FormDataParser, MultiPartParser\n文件内定义的函数: __call__, default_stream_factory, parse_form_data, __init__, parse_from_environ, parse, _parse_multipart, _parse_urlencoded, __init__, fail, get_part_charset, start_file_streaming, parse, _chunk_iter\n\n[代码片段 3] 来源: sansio/multipart.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/multipart.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, exceptions.py, http.py\n它被这些文件依赖/使用(import 它的使用方): formparser.py, test.py\n文件内定义的类: Event, Preamble, Field, File, Data, Epilogue, NeedData, State, MultipartDecoder, MultipartEncoder\n文件内定义的函数: __init__, receive_data, next_event, _parse_headers, _parse_data, _last_partial_boundary_index, __init__, send_event\n\n[代码片段 4] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 文件 utils.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, security.py, wrappers/__init__.py, wrappers/request.py, wrappers/response.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, debug/tbtools.py, middleware/shared_data.py, routing/exceptions.py, sansio/request.py, sansio/response.py, test.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: cached_property, environ_property, header_property, ImportStringError\n文件内定义的函数: __init__, __set__, __get__, __delete__, lookup, lookup, get_content_type, secure_filename, redirect, append_slash_redirect, send_file, send_from_directory, import_string, find_modules, __init__, __repr__\n\n[代码片段 5] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/file_storage.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: FileStorage, FileMultiDict\n文件内定义的函数: __init__, _parse_content_type, content_type, content_length, mimetype, mimetype_params, save, close, __bool__, __getattr__, __iter__, __repr__, add_file\n\n[问题] 在 werkzeug 中,datastructures/__init__.py 是否间接依赖 exceptions.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "datastructures/headers.py",
+   "formparser.py",
+   "sansio/multipart.py",
+   "utils.py",
+   "datastructures/file_storage.py"
+  ],
+  "expected_sources": [
+   "datastructures/__init__.py",
+   "datastructures/headers.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/headers.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-09",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/accept.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/accept.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/accept.py\n它依赖(import)的仓库内文件: datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: Accept, MIMEAccept, LanguageAccept, CharsetAccept\n文件内定义的函数: __init__, _specificity, _value_matches, __getitem__, __getitem__, __getitem__, __getitem__, quality, __contains__, __repr__, index, find, values, to_header, __str__, _best_single_match, best_match, best_match, best_match, best, _normalize_mime, _specificity, _value_matches, accept_html, accept_xhtml, accept_json, _normalize_lang, _value_matches, best_match, best_match\n\n[代码片段 2] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/file_storage.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: FileStorage, FileMultiDict\n文件内定义的函数: __init__, _parse_content_type, content_type, content_length, mimetype, mimetype_params, save, close, __bool__, __getattr__, __iter__, __repr__, add_file\n\n[代码片段 3] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[代码片段 4] 来源: datastructures/mixins.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/mixins.py\n它依赖(import)的仓库内文件: _internal.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/cache_control.py, datastructures/headers.py, datastructures/structures.py\n文件内定义的类: ImmutableListMixin, ImmutableDictMixin, ImmutableMultiDictMixin, ImmutableHeadersMixin, UpdateDictMixin\n文件内定义的函数: _immutable_error, __hash__, __reduce_ex__, __delitem__, __iadd__, __imul__, __setitem__, append, remove, extend, insert, pop, reverse, sort, fromkeys, fromkeys, fromkeys, __reduce_ex__, _iter_hashitems, __hash__, setdefault, update, __ior__, pop, popitem, __setitem__, __delitem__, clear, __reduce_ex__, _iter_hashitems\n\n[代码片段 5] 来源: datastructures/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/__init__.py\n它依赖(import)的仓库内文件: datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/etag.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/range.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): exceptions.py, formparser.py, middleware/http_proxy.py, middleware/lint.py, routing/map.py, routing/rules.py, sansio/multipart.py, sansio/request.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: __getattr__\n\n[问题] 在 werkzeug 中,datastructures/accept.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "datastructures/accept.py",
+   "datastructures/file_storage.py",
+   "datastructures/headers.py",
+   "datastructures/mixins.py",
+   "datastructures/__init__.py"
+  ],
+  "expected_sources": [
+   "datastructures/accept.py",
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-10",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/auth.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/file_storage.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: FileStorage, FileMultiDict\n文件内定义的函数: __init__, _parse_content_type, content_type, content_length, mimetype, mimetype_params, save, close, __bool__, __getattr__, __iter__, __repr__, add_file\n\n[代码片段 2] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[代码片段 3] 来源: datastructures/mixins.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/mixins.py\n它依赖(import)的仓库内文件: _internal.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/cache_control.py, datastructures/headers.py, datastructures/structures.py\n文件内定义的类: ImmutableListMixin, ImmutableDictMixin, ImmutableMultiDictMixin, ImmutableHeadersMixin, UpdateDictMixin\n文件内定义的函数: _immutable_error, __hash__, __reduce_ex__, __delitem__, __iadd__, __imul__, __setitem__, append, remove, extend, insert, pop, reverse, sort, fromkeys, fromkeys, fromkeys, __reduce_ex__, _iter_hashitems, __hash__, setdefault, update, __ior__, pop, popitem, __setitem__, __delitem__, clear, __reduce_ex__, _iter_hashitems\n\n[代码片段 4] 来源: datastructures/structures.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/structures.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/file_storage.py, datastructures/headers.py\n文件内定义的类: ImmutableList, TypeConversionDict, ImmutableTypeConversionDict, MultiDict, _omd_bucket, _OrderedMultiDict, CombinedMultiDict, ImmutableDict, ImmutableMultiDict, _ImmutableOrderedMultiDict, CallbackDict, HeaderSet\n文件内定义的函数: iter_multi_items, __repr__, get, get, get, get, get, get, copy, __copy__, __init__, __getstate__, __setstate__, __iter__, __getitem__, __setitem__, add, getlist, getlist, getlist, setlist, setdefault, setdefault, setdefault, setlistdefault, items, lists, values, listvalues, copy\n\n[代码片段 5] 来源: datastructures/auth.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/auth.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: Authorization, WWWAuthenticate\n文件内定义的函数: __init__, __getattr__, __getitem__, get, __contains__, __eq__, from_header, to_header, __str__, __repr__, __init__, _trigger_on_update, type, type, parameters, parameters, token, token, __getitem__, __setitem__, __delitem__, __getattr__, __setattr__, __delattr__, __contains__, __eq__, get, from_header, to_header, __str__\n\n[问题] 在 werkzeug 中,datastructures/auth.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "datastructures/file_storage.py",
+   "datastructures/headers.py",
+   "datastructures/mixins.py",
+   "datastructures/structures.py",
+   "datastructures/auth.py"
+  ],
+  "expected_sources": [
+   "datastructures/auth.py",
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-11",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/auth.py 是否间接依赖 sansio/__init__.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 文件 formparser.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: TStreamFactory, FormDataParser, MultiPartParser\n文件内定义的函数: __call__, default_stream_factory, parse_form_data, __init__, parse_from_environ, parse, _parse_multipart, _parse_urlencoded, __init__, fail, get_part_charset, start_file_streaming, parse, _chunk_iter\n\n[代码片段 2] 来源: datastructures/cache_control.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/cache_control.py\n它依赖(import)的仓库内文件: datastructures/mixins.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, sansio/response.py\n文件内定义的类: _CacheControl, RequestCacheControl, ResponseCacheControl\n文件内定义的函数: cache_control_property, __init__, _get_cache_value, _set_cache_value, _del_cache_value, to_header, __str__, __repr__\n\n[代码片段 3] 来源: urls.py (第 0-0 行)\n[依赖图卡片] 文件 urls.py\n它依赖(import)的仓库内文件: datastructures/__init__.py\n它被这些文件依赖/使用(import 它的使用方): routing/map.py, routing/rules.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: _codec_error_url_quote, _make_unquote_part, _unquote_partial, uri_to_iri, iri_to_uri, _decode_idna, _urlencode\n\n[代码片段 4] 来源: _internal.py (第 0-0 行)\n[依赖图卡片] 文件 _internal.py\n它依赖(import)的仓库内文件: wrappers/request.py\n它被这些文件依赖/使用(import 它的使用方): _reloader.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/structures.py, debug/__init__.py, exceptions.py, formparser.py, http.py, routing/map.py, sansio/http.py, sansio/utils.py, serving.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: _Missing, _ColorStreamHandler, _DictAccessorProperty\n文件内定义的函数: __repr__, __reduce__, _wsgi_decoding_dance, _wsgi_encoding_dance, _get_environ, _has_level_handler, __init__, _log, _dt_as_utc, _dt_as_utc, _dt_as_utc, __init__, lookup, __get__, __get__, __get__, __set__, __delete__, __repr__, _plain_int\n\n[代码片段 5] 来源: datastructures/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/__init__.py\n它依赖(import)的仓库内文件: datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/etag.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/range.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): exceptions.py, formparser.py, middleware/http_proxy.py, middleware/lint.py, routing/map.py, routing/rules.py, sansio/multipart.py, sansio/request.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: __getattr__\n\n[问题] 在 werkzeug 中,datastructures/auth.py 是否间接依赖 sansio/__init__.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "formparser.py",
+   "datastructures/cache_control.py",
+   "urls.py",
+   "_internal.py",
+   "datastructures/__init__.py"
+  ],
+  "expected_sources": [
+   "datastructures/auth.py",
+   "http.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "http.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-12",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/cache_control.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/cache_control.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/cache_control.py\n它依赖(import)的仓库内文件: datastructures/mixins.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, sansio/response.py\n文件内定义的类: _CacheControl, RequestCacheControl, ResponseCacheControl\n文件内定义的函数: cache_control_property, __init__, _get_cache_value, _set_cache_value, _del_cache_value, to_header, __str__, __repr__\n\n[代码片段 2] 来源: datastructures/mixins.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/mixins.py\n它依赖(import)的仓库内文件: _internal.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/cache_control.py, datastructures/headers.py, datastructures/structures.py\n文件内定义的类: ImmutableListMixin, ImmutableDictMixin, ImmutableMultiDictMixin, ImmutableHeadersMixin, UpdateDictMixin\n文件内定义的函数: _immutable_error, __hash__, __reduce_ex__, __delitem__, __iadd__, __imul__, __setitem__, append, remove, extend, insert, pop, reverse, sort, fromkeys, fromkeys, fromkeys, __reduce_ex__, _iter_hashitems, __hash__, setdefault, update, __ior__, pop, popitem, __setitem__, __delitem__, clear, __reduce_ex__, _iter_hashitems\n\n[代码片段 3] 来源: datastructures/structures.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/structures.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/file_storage.py, datastructures/headers.py\n文件内定义的类: ImmutableList, TypeConversionDict, ImmutableTypeConversionDict, MultiDict, _omd_bucket, _OrderedMultiDict, CombinedMultiDict, ImmutableDict, ImmutableMultiDict, _ImmutableOrderedMultiDict, CallbackDict, HeaderSet\n文件内定义的函数: iter_multi_items, __repr__, get, get, get, get, get, get, copy, __copy__, __init__, __getstate__, __setstate__, __iter__, __getitem__, __setitem__, add, getlist, getlist, getlist, setlist, setdefault, setdefault, setdefault, setlistdefault, items, lists, values, listvalues, copy\n\n[代码片段 4] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/file_storage.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: FileStorage, FileMultiDict\n文件内定义的函数: __init__, _parse_content_type, content_type, content_length, mimetype, mimetype_params, save, close, __bool__, __getattr__, __iter__, __repr__, add_file\n\n[代码片段 5] 来源: sansio/response.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/response.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, datastructures/cache_control.py, http.py, utils.py\n它被这些文件依赖/使用(import 它的使用方): exceptions.py, wrappers/response.py\n文件内定义的类: Response\n文件内定义的函数: _set_property, fget, on_update, fset, __init__, __repr__, status_code, status_code, status, status, _clean_status, set_cookie, delete_cookie, is_json, mimetype, mimetype, mimetype_params, on_update, retry_after, retry_after, cache_control, on_update, set_etag, get_etag, content_range, on_update, content_range, www_authenticate, on_update, www_authenticate\n\n[问题] 在 werkzeug 中,datastructures/cache_control.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "datastructures/cache_control.py",
+   "datastructures/mixins.py",
+   "datastructures/structures.py",
+   "datastructures/file_storage.py",
+   "sansio/response.py"
+  ],
+  "expected_sources": [
+   "datastructures/cache_control.py",
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/mixins.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-13",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/csp.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/csp.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/csp.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ContentSecurityPolicy\n文件内定义的函数: csp_property, __init__, _get_value, _set_value, _del_value, to_header, __str__, __repr__\n\n[代码片段 2] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/file_storage.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: FileStorage, FileMultiDict\n文件内定义的函数: __init__, _parse_content_type, content_type, content_length, mimetype, mimetype_params, save, close, __bool__, __getattr__, __iter__, __repr__, add_file\n\n[代码片段 3] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[代码片段 4] 来源: datastructures/mixins.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/mixins.py\n它依赖(import)的仓库内文件: _internal.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/cache_control.py, datastructures/headers.py, datastructures/structures.py\n文件内定义的类: ImmutableListMixin, ImmutableDictMixin, ImmutableMultiDictMixin, ImmutableHeadersMixin, UpdateDictMixin\n文件内定义的函数: _immutable_error, __hash__, __reduce_ex__, __delitem__, __iadd__, __imul__, __setitem__, append, remove, extend, insert, pop, reverse, sort, fromkeys, fromkeys, fromkeys, __reduce_ex__, _iter_hashitems, __hash__, setdefault, update, __ior__, pop, popitem, __setitem__, __delitem__, clear, __reduce_ex__, _iter_hashitems\n\n[代码片段 5] 来源: datastructures/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/__init__.py\n它依赖(import)的仓库内文件: datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/etag.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/range.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): exceptions.py, formparser.py, middleware/http_proxy.py, middleware/lint.py, routing/map.py, routing/rules.py, sansio/multipart.py, sansio/request.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: __getattr__\n\n[问题] 在 werkzeug 中,datastructures/csp.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "datastructures/csp.py",
+   "datastructures/file_storage.py",
+   "datastructures/headers.py",
+   "datastructures/mixins.py",
+   "datastructures/__init__.py"
+  ],
+  "expected_sources": [
+   "datastructures/csp.py",
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-14",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/csp.py 是否间接依赖 sansio/__init__.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 文件 formparser.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: TStreamFactory, FormDataParser, MultiPartParser\n文件内定义的函数: __call__, default_stream_factory, parse_form_data, __init__, parse_from_environ, parse, _parse_multipart, _parse_urlencoded, __init__, fail, get_part_charset, start_file_streaming, parse, _chunk_iter\n\n[代码片段 2] 来源: datastructures/cache_control.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/cache_control.py\n它依赖(import)的仓库内文件: datastructures/mixins.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, sansio/response.py\n文件内定义的类: _CacheControl, RequestCacheControl, ResponseCacheControl\n文件内定义的函数: cache_control_property, __init__, _get_cache_value, _set_cache_value, _del_cache_value, to_header, __str__, __repr__\n\n[代码片段 3] 来源: datastructures/csp.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/csp.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ContentSecurityPolicy\n文件内定义的函数: csp_property, __init__, _get_value, _set_value, _del_value, to_header, __str__, __repr__\n\n[代码片段 4] 来源: datastructures/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/__init__.py\n它依赖(import)的仓库内文件: datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/etag.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/range.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): exceptions.py, formparser.py, middleware/http_proxy.py, middleware/lint.py, routing/map.py, routing/rules.py, sansio/multipart.py, sansio/request.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: __getattr__\n\n[代码片段 5] 来源: sansio/multipart.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/multipart.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, exceptions.py, http.py\n它被这些文件依赖/使用(import 它的使用方): formparser.py, test.py\n文件内定义的类: Event, Preamble, Field, File, Data, Epilogue, NeedData, State, MultipartDecoder, MultipartEncoder\n文件内定义的函数: __init__, receive_data, next_event, _parse_headers, _parse_data, _last_partial_boundary_index, __init__, send_event\n\n[问题] 在 werkzeug 中,datastructures/csp.py 是否间接依赖 sansio/__init__.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "formparser.py",
+   "datastructures/cache_control.py",
+   "datastructures/csp.py",
+   "datastructures/__init__.py",
+   "sansio/multipart.py"
+  ],
+  "expected_sources": [
+   "datastructures/csp.py",
+   "http.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "http.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-15",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/etag.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[代码片段 2] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/file_storage.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: FileStorage, FileMultiDict\n文件内定义的函数: __init__, _parse_content_type, content_type, content_length, mimetype, mimetype_params, save, close, __bool__, __getattr__, __iter__, __repr__, add_file\n\n[代码片段 3] 来源: datastructures/etag.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/etag.py\n它依赖(import)的仓库内文件: http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ETags\n文件内定义的函数: __init__, as_set, is_weak, is_strong, contains_weak, contains, contains_raw, to_header, __call__, __bool__, __str__, __len__, __iter__, __contains__, __repr__\n\n[代码片段 4] 来源: datastructures/mixins.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/mixins.py\n它依赖(import)的仓库内文件: _internal.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/cache_control.py, datastructures/headers.py, datastructures/structures.py\n文件内定义的类: ImmutableListMixin, ImmutableDictMixin, ImmutableMultiDictMixin, ImmutableHeadersMixin, UpdateDictMixin\n文件内定义的函数: _immutable_error, __hash__, __reduce_ex__, __delitem__, __iadd__, __imul__, __setitem__, append, remove, extend, insert, pop, reverse, sort, fromkeys, fromkeys, fromkeys, __reduce_ex__, _iter_hashitems, __hash__, setdefault, update, __ior__, pop, popitem, __setitem__, __delitem__, clear, __reduce_ex__, _iter_hashitems\n\n[代码片段 5] 来源: _internal.py (第 0-0 行)\n[依赖图卡片] 文件 _internal.py\n它依赖(import)的仓库内文件: wrappers/request.py\n它被这些文件依赖/使用(import 它的使用方): _reloader.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/structures.py, debug/__init__.py, exceptions.py, formparser.py, http.py, routing/map.py, sansio/http.py, sansio/utils.py, serving.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: _Missing, _ColorStreamHandler, _DictAccessorProperty\n文件内定义的函数: __repr__, __reduce__, _wsgi_decoding_dance, _wsgi_encoding_dance, _get_environ, _has_level_handler, __init__, _log, _dt_as_utc, _dt_as_utc, _dt_as_utc, __init__, lookup, __get__, __get__, __get__, __set__, __delete__, __repr__, _plain_int\n\n[问题] 在 werkzeug 中,datastructures/etag.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "datastructures/headers.py",
+   "datastructures/file_storage.py",
+   "datastructures/etag.py",
+   "datastructures/mixins.py",
+   "_internal.py"
+  ],
+  "expected_sources": [
+   "datastructures/etag.py",
+   "http.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "http.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-16",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/file_storage.py 是否间接依赖 wrappers/request.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal.py (第 0-0 行)\n[依赖图卡片] 文件 _internal.py\n它依赖(import)的仓库内文件: wrappers/request.py\n它被这些文件依赖/使用(import 它的使用方): _reloader.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/structures.py, debug/__init__.py, exceptions.py, formparser.py, http.py, routing/map.py, sansio/http.py, sansio/utils.py, serving.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: _Missing, _ColorStreamHandler, _DictAccessorProperty\n文件内定义的函数: __repr__, __reduce__, _wsgi_decoding_dance, _wsgi_encoding_dance, _get_environ, _has_level_handler, __init__, _log, _dt_as_utc, _dt_as_utc, _dt_as_utc, __init__, lookup, __get__, __get__, __get__, __set__, __delete__, __repr__, _plain_int\n\n[代码片段 2] 来源: wrappers/request.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/request.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, formparser.py, sansio/request.py, test.py, utils.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): _internal.py, debug/__init__.py, exceptions.py, routing/exceptions.py, routing/map.py, test.py, testapp.py, utils.py, wrappers/__init__.py, wrappers/response.py\n文件内定义的类: Request\n文件内定义的函数: __init__, from_values, application, application, _get_file_stream, want_form_data_parsed, make_form_data_parser, _load_form_data, _get_stream_for_parsing, close, __enter__, __exit__, stream, data, get_data, get_data, get_data, form, values, files, script_root, url_root, json, get_json, get_json, get_json, on_json_loading_failed\n\n[代码片段 3] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 文件 utils.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, security.py, wrappers/__init__.py, wrappers/request.py, wrappers/response.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, debug/tbtools.py, middleware/shared_data.py, routing/exceptions.py, sansio/request.py, sansio/response.py, test.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: cached_property, environ_property, header_property, ImportStringError\n文件内定义的函数: __init__, __set__, __get__, __delete__, lookup, lookup, get_content_type, secure_filename, redirect, append_slash_redirect, send_file, send_from_directory, import_string, find_modules, __init__, __repr__\n\n[代码片段 4] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/file_storage.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: FileStorage, FileMultiDict\n文件内定义的函数: __init__, _parse_content_type, content_type, content_length, mimetype, mimetype_params, save, close, __bool__, __getattr__, __iter__, __repr__, add_file\n\n[代码片段 5] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[问题] 在 werkzeug 中,datastructures/file_storage.py 是否间接依赖 wrappers/request.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "_internal.py",
+   "wrappers/request.py",
+   "utils.py",
+   "datastructures/file_storage.py",
+   "testapp.py"
+  ],
+  "expected_sources": [
+   "datastructures/file_storage.py",
+   "_internal.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-17",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/file_storage.py 是否间接依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/file_storage.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: FileStorage, FileMultiDict\n文件内定义的函数: __init__, _parse_content_type, content_type, content_length, mimetype, mimetype_params, save, close, __bool__, __getattr__, __iter__, __repr__, add_file\n\n[代码片段 2] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[代码片段 3] 来源: datastructures/cache_control.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/cache_control.py\n它依赖(import)的仓库内文件: datastructures/mixins.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, sansio/response.py\n文件内定义的类: _CacheControl, RequestCacheControl, ResponseCacheControl\n文件内定义的函数: cache_control_property, __init__, _get_cache_value, _set_cache_value, _del_cache_value, to_header, __str__, __repr__\n\n[代码片段 4] 来源: _internal.py (第 0-0 行)\n[依赖图卡片] 文件 _internal.py\n它依赖(import)的仓库内文件: wrappers/request.py\n它被这些文件依赖/使用(import 它的使用方): _reloader.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/structures.py, debug/__init__.py, exceptions.py, formparser.py, http.py, routing/map.py, sansio/http.py, sansio/utils.py, serving.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: _Missing, _ColorStreamHandler, _DictAccessorProperty\n文件内定义的函数: __repr__, __reduce__, _wsgi_decoding_dance, _wsgi_encoding_dance, _get_environ, _has_level_handler, __init__, _log, _dt_as_utc, _dt_as_utc, _dt_as_utc, __init__, lookup, __get__, __get__, __get__, __set__, __delete__, __repr__, _plain_int\n\n[代码片段 5] 来源: datastructures/structures.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/structures.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/file_storage.py, datastructures/headers.py\n文件内定义的类: ImmutableList, TypeConversionDict, ImmutableTypeConversionDict, MultiDict, _omd_bucket, _OrderedMultiDict, CombinedMultiDict, ImmutableDict, ImmutableMultiDict, _ImmutableOrderedMultiDict, CallbackDict, HeaderSet\n文件内定义的函数: iter_multi_items, __repr__, get, get, get, get, get, get, copy, __copy__, __init__, __getstate__, __setstate__, __iter__, __getitem__, __setitem__, add, getlist, getlist, getlist, setlist, setdefault, setdefault, setdefault, setlistdefault, items, lists, values, listvalues, copy\n\n[问题] 在 werkzeug 中,datastructures/file_storage.py 是否间接依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "datastructures/file_storage.py",
+   "datastructures/headers.py",
+   "datastructures/cache_control.py",
+   "_internal.py",
+   "datastructures/structures.py"
+  ],
+  "expected_sources": [
+   "datastructures/file_storage.py",
+   "datastructures/headers.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/headers.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "XIND-18",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/headers.py 是否间接依赖 wrappers/request.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal.py (第 0-0 行)\n[依赖图卡片] 文件 _internal.py\n它依赖(import)的仓库内文件: wrappers/request.py\n它被这些文件依赖/使用(import 它的使用方): _reloader.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/structures.py, debug/__init__.py, exceptions.py, formparser.py, http.py, routing/map.py, sansio/http.py, sansio/utils.py, serving.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: _Missing, _ColorStreamHandler, _DictAccessorProperty\n文件内定义的函数: __repr__, __reduce__, _wsgi_decoding_dance, _wsgi_encoding_dance, _get_environ, _has_level_handler, __init__, _log, _dt_as_utc, _dt_as_utc, _dt_as_utc, __init__, lookup, __get__, __get__, __get__, __set__, __delete__, __repr__, _plain_int\n\n[代码片段 2] 来源: wrappers/request.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/request.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, formparser.py, sansio/request.py, test.py, utils.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): _internal.py, debug/__init__.py, exceptions.py, routing/exceptions.py, routing/map.py, test.py, testapp.py, utils.py, wrappers/__init__.py, wrappers/response.py\n文件内定义的类: Request\n文件内定义的函数: __init__, from_values, application, application, _get_file_stream, want_form_data_parsed, make_form_data_parser, _load_form_data, _get_stream_for_parsing, close, __enter__, __exit__, stream, data, get_data, get_data, get_data, form, values, files, script_root, url_root, json, get_json, get_json, get_json, on_json_loading_failed\n\n[代码片段 3] 来源: wrappers/response.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/response.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, exceptions.py, routing/exceptions.py, test.py, testapp.py, utils.py, wrappers/__init__.py\n文件内定义的类: Response, ResponseStream\n文件内定义的函数: _iter_encoded, __init__, call_on_close, __repr__, force_type, from_app, get_data, get_data, get_data, set_data, calculate_content_length, _ensure_sequence, make_sequence, iter_encoded, is_streamed, is_sequence, close, __enter__, __exit__, freeze, get_wsgi_headers, get_app_iter, get_wsgi_response, __call__, json, get_json, get_json, get_json, stream, _wrap_range_response\n\n[代码片段 4] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 文件 utils.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, security.py, wrappers/__init__.py, wrappers/request.py, wrappers/response.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, debug/tbtools.py, middleware/shared_data.py, routing/exceptions.py, sansio/request.py, sansio/response.py, test.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: cached_property, environ_property, header_property, ImportStringError\n文件内定义的函数: __init__, __set__, __get__, __delete__, lookup, lookup, get_content_type, secure_filename, redirect, append_slash_redirect, send_file, send_from_directory, import_string, find_modules, __init__, __repr__\n\n[代码片段 5] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[问题] 在 werkzeug 中,datastructures/headers.py 是否间接依赖 wrappers/request.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "_internal.py",
+   "wrappers/request.py",
+   "wrappers/response.py",
+   "utils.py",
+   "datastructures/headers.py"
+  ],
+  "expected_sources": [
+   "datastructures/headers.py",
+   "_internal.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ }
+]

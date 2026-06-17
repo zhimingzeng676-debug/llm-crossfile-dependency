@@ -1,0 +1,226 @@
+[
+ {
+  "id": "FWD-01",
+  "answer": "werkzeug/datastructures/headers.py 直接依赖以下项目内模块:\n1. werkzeug.datastructures\n2. werkzeug.http\n3. werkzeug.utils"
+ },
+ {
+  "id": "FWD-02",
+  "answer": "formparser.py 直接依赖以下项目内的模块:\n1. werkzeug.datastructures\n2. werkzeug.http\n3. werkzeug.utils"
+ },
+ {
+  "id": "FWD-03",
+  "answer": "werkzeug/http.py 直接依赖以下项目内模块:\n1. werkzeug/_compat.py\n2. werkzeug/utils.py\n3. werkzeug/wsgi.py"
+ },
+ {
+  "id": "FWD-04",
+  "answer": "werkzeug/routing/map.py 直接依赖以下项目内模块:\n1. werkzeug.routing\n2. werkzeug.exceptions\n3. werkzeug.utils\n4. werkzeug.urls\n5. werkzeug.wrappers\n6. werkzeug.datastructures\n7. werkzeug._internal"
+ },
+ {
+  "id": "FWD-05",
+  "answer": "routing/matcher.py 直接依赖以下项目内模块:\n1. werkzeug.routing\n2. werkzeug.exceptions\n3. werkzeug.urls\n4. werkzeug.wrappers\n5. werkzeug.utils\n6. werkzeug.datastructures"
+ },
+ {
+  "id": "FWD-06",
+  "answer": "sansio/request.py 直接依赖以下项目内的模块:\n1. werkzeug/datastructures.py\n2. werkzeug/utils.py\n3. werkzeug/wsgi.py\n4. werkzeug/_compat.py"
+ },
+ {
+  "id": "FWD-07",
+  "answer": "sansio/response.py 直接依赖以下项目内模块:\n1. werkzeug/datastructures.py\n2. werkzeug/utils.py\n3. werkzeug/wsgi.py"
+ },
+ {
+  "id": "FWD-08",
+  "answer": "serving.py 直接依赖以下项目内的模块:\n1. werkzeug.serving\n2. werkzeug.wrappers\n3. werkzeug.exceptions\n4. werkzeug.utils\n5. werkzeug.middleware.shared_data\n6. werkzeug.debug\n7. werkzeug.routing\n8. werkzeug.datastructures\n9. werkzeug.local\n10. werkzeug._internal"
+ },
+ {
+  "id": "FWD-09",
+  "answer": "test.py 直接依赖以下项目内的模块:\n1. werkzeug\n2. flask"
+ },
+ {
+  "id": "FWD-10",
+  "answer": "werkzeug/wrappers/request.py 直接依赖以下项目内模块:\n1. werkzeug.wrappers\n2. werkzeug.datastructures\n3. werkzeug.http\n4. werkzeug.urls\n5. werkzeug.useragents\n6. werkzeug.utils\n7. werkzeug.exceptions\n8. werkzeug.sansio.response\n9. werkzeug.sansio.request\n10. werkzeug.sansio.multipart\n11. werkzeug.sansio.formparser\n12. werkzeug.sansio.utils\n13. werkzeug.sansio.headers\n14. werkzeug.sansio.multipart\n15. werkzeug.sansio.formparser\n16. werkzeug.sansio.utils\n17. werkzeug.sansio.headers"
+ },
+ {
+  "id": "FWD-11",
+  "answer": "werkzeug/wrappers/response.py 直接依赖以下项目内模块:\n1. werkzeug.wrappers\n2. werkzeug.datastructures\n3. werkzeug.http\n4. werkzeug.utils\n5. werkzeug.exceptions"
+ },
+ {
+  "id": "REV-01",
+  "answer": "以下文件依赖(进口)werkzeug/_internal.py:\n1. werkzeug/__init__.py\n2. werkzeug/datastructures.py\n3. werkzeug/debug.py\n4. werkzeug/exceptions.py\n5. werkzeug/filesystem.py\n6. werkzeug/http.py\n7. werkzeug/local.py\n8. werkzeug/middleware.py\n9. werkzeug/routing.py\n10. werkzeug/test.py\n11. werkzeug/utils.py\n12. werkzeug/wsgi.py"
+ },
+ {
+  "id": "REV-02",
+  "answer": "以下文件依赖(进口)了 werkzeug/datastructures/__init__.py:\n1. werkzeug/datastructures.py\n2. werkzeug/wrappers.py\n3. werkzeug/test.py\n4. werkzeug/utils.py\n5. werkzeug/middleware/shared_data.py\n6. werkzeug/middleware/proxy_fix.py\n7. werkzeug/middleware/secure_headers.py\n8. werkzeug/middleware/http_proxy.py\n9. werkzeug/middleware/redirects.py\n10. werkzeug/middleware/exceptions.py\n11. werkzeug/middleware/etag.py\n12. werkzeug/middleware/conditional.py\n13. werkzeug/middleware/common.py\n14. werkzeug/middleware/catch_errors.py\n15. werkzeug/middleware/combined.py\n16. werkzeug/middleware/combined_static.py\n17. werkzeug/middleware/combined_filesystem.py\n18. werkzeug/middleware/combined_directory.py\n19. werkzeug/middleware/combined_file.py\n20. werkzeug/middleware/combined_cache.py\n21. werkzeug/middleware/combined_cache_filesystem.py\n22. werkzeug/middleware/combined_cache_directory.py\n23. werkzeug/middleware/combined_cache_file.py\n24. werkzeug/middleware/combined_cache_cache.py\n25. werkzeug/middleware/combined_cache_combined.py\n26. werkzeug/middleware/combined_cache_combined_static.py\n27. werkzeug/middleware/combined_cache_combined_filesystem.py\n28. werkzeug/middleware/combined_cache_combined_directory.py\n29. werkzeug/middleware/combined_cache_combined_file.py\n30. werkzeug/middleware/combined_cache_combined_cache.py\n31. werkzeug/middleware/combined_cache_combined_cache_combined.py\n32. werkzeug/middleware/combined_cache_combined_cache_combined_static.py\n33. werkzeug/middleware/combined_cache_combined_cache_combined_filesystem.py\n34. werkzeug/middleware/combined_cache_combined_cache_combined_directory.py\n35. werkzeug/middleware/combined_cache_combined_cache_combined_file.py\n36. werkzeug/middleware/combined_cache_combined_cache_combined_cache.py\n37. werkzeug/middleware/combined_cache_combined_cache_combined_cache_combined.py\n38. werkzeug/middleware/combined_cache_combined_cache_combined_cache_combined_static.py\n39. werkzeug/middleware/combined_cache_combined_cache_combined_cache_combined_filesystem.py\n40. werkzeug/middleware/combined_cache_combined_cache_combined_cache_combined_directory.py\n41. werkzeug/middleware/combined_cache_combined_cache_combined_cache_combined_file.py\n42. werkzeug/middleware/combined_cache_combined_cache_combined_cache_combined_cache.py\n43. werkzeug/middleware/combined_cache_combined_cache_combined_cache_combined_cache_combined.py"
+ },
+ {
+  "id": "REV-03",
+  "answer": "以下文件依赖(进口)了 werkzeug/datastructures/mixins.py:\n1. werkzeug/datastructures/__init__.py\n2. werkzeug/wrappers/__init__.py\n3. werkzeug/wrappers/auth.py\n4. werkzeug/wrappers/base_response.py\n5. werkzeug/wrappers/common_descriptors.py\n6. werkzeug/wrappers/etag.py\n7. werkzeug/wrappers/file_wrapper.py\n8. werkzeug/wrappers/json_response.py\n9. werkzeug/wrappers/response.py\n10. werkzeug/wrappers/request.py\n11. werkzeug/wrappers/static.py\n12. werkzeug/wrappers/template_response.py\n13. werkzeug/wrappers/upload.py"
+ },
+ {
+  "id": "REV-04",
+  "answer": "以下文件依赖(进口)了 werkzeug/datastructures/structures.py:\n1. werkzeug/datastructures/__init__.py\n2. werkzeug/wrappers/response.py\n3. werkzeug/wrappers/request.py\n4. werkzeug/wsgi.py\n5. werkzeug/test.py\n6. werkzeug/utils.py\n7. werkzeug/middleware/proxy_fix.py\n8. werkzeug/middleware/shared_data.py\n9. werkzeug/middleware/http_proxy.py\n10. werkzeug/middleware/secure_headers.py\n11. werkzeug/middleware/redirects.py\n12. werkzeug/middleware/exceptions.py\n13. werkzeug/middleware/etag.py\n14. werkzeug/middleware/common.py\n15. werkzeug/middleware/catch_http_exceptions.py\n16. werkzeug/middleware/conditional.py\n17. werkzeug/middleware/combined.py\n18. werkzeug/middleware/cookie_profile.py\n19. werkzeug/middleware/debug.py\n20. werkzeug/middleware/deflater.py\n21. werkzeug/middleware/etag.py\n22. werkzeug/middleware/fix_response.py\n23. werkzeug/middleware/headers.py\n24. werkzeug/middleware/https_redirect.py\n25. werkzeug/middleware/iplogger.py\n26. werkzeug/middleware/profiler.py\n27. werkzeug/middleware/reproxy.py\n28. werkzeug/middleware/rewrite.py\n29. werkzeug/middleware/static.py\n30. werkzeug/middleware/uri_for.py\n31. werkzeug/middleware/wsgi_filesystem.py\n32. werkzeug/middleware/wsgi_lint.py\n33. werkzeug/middleware/wsgi_server.py\n34. werkzeug/middleware/wsgi_trace.py\n35. werkzeug/middleware/wsgiutils.py\n36. werkzeug/middleware/xsendfile.py\n37. werkzeug/middleware/xsendfile_base.py\n38. werkzeug/middleware/xsendfile_xsend.py\n39. werkzeug/middleware/xsendfile_xsendfile.py\n40. werkzeug/middleware/xsendfile_xsendfile2.py\n41. werkzeug/middleware/xsendfile_xsendfile3.py\n42. werkzeug/middleware/xsendfile_xsendfile4.py\n43. werkzeug/middleware/xsendfile_xsendfile5.py\n44. werkzeug/middleware/xsendfile_xsendfile6.py\n45. werkzeug/middleware/xsendfile_xsendfile7.py\n46. werkzeug/middleware/xsendfile_xsendfile8.py\n47. werkzeug/middleware/xsendfile_xsendfile9.py\n48. werkzeug/middleware/xsendfile_xsendfile10.py\n49. werkzeug/middleware/xsendfile_xsendfile11.py\n50. werkzeug/middleware/xsendfile_xsendfile12.py\n51. werkzeug/middleware/xsendfile_xsendfile13.py\n52. werkzeug/middleware/xsendfile_xsendfile14.py\n53. werkzeug/middleware/xsendfile_xsendfile15.py\n54. werkzeug/middleware/xsendfile_xsendfile16.py\n55. werkzeug/middleware/xsendfile_xsendfile17.py\n56. werkzeug/middleware/xsendfile_xsendfile18.py\n57. werkzeug/middleware/xsendfile_xsendfile19.py\n58. werkzeug/middleware/xsendfile_xsendfile20.py\n59. werkzeug/middleware/xsendfile_xsendfile21.py\n60. werkzeug/middleware/xsendfile_xsendfile22.py\n61. werkzeug/middleware/xsendfile_xsendfile23.py\n62. werkzeug/middleware/xsendfile_xsendfile24.py\n63. werkzeug/middleware/xsendfile_xsendfile25.py\n64. werkzeug/middleware/xsendfile_xsendfile26.py\n65. werkzeug/middleware/xsendfile_xsendfile27.py\n66. werkzeug/middleware/xsendfile_xsendfile28.py\n67. werkzeug/middleware/xsendfile_xsendfile29.py\n68. werkzeug/middleware/xsendfile_xsendfile30.py\n69. werkzeug/middleware/xsendfile_xsendfile31.py\n70. werkzeug/middleware/xsendfile_xsendfile32.py\n71. werkzeug/middleware/xsendfile_xsendfile33.py\n72. werkzeug/middleware/xsendfile_xsendfile34.py\n73. werkzeug/middleware/xsendfile_xsendfile35.py\n74"
+ },
+ {
+  "id": "REV-05",
+  "answer": "以下文件依赖(进口)werkzeug.exceptions.py:\n1. werkzeug/__init__.py\n2. werkzeug/wrappers.py\n3. werkzeug/test.py\n4. werkzeug/utils.py\n5. werkzeug/middleware/shared_data.py\n6. werkzeug/middleware/proxy_fix.py\n7. werkzeug/middleware/secure_headers.py\n8. werkzeug/middleware/http_proxy.py\n9. werkzeug/middleware/redirects.py\n10. werkzeug/middleware/exceptions.py\n11. werkzeug/middleware/etag.py\n12. werkzeug/middleware/common.py\n13. werkzeug/middleware/conditional.py\n14. werkzeug/middleware/combined.py\n15. werkzeug/middleware/catch_errors.py\n16. werkzeug/middleware/autocorrect_location_header.py\n17. werkzeug/middleware/accept_languages.py\n18. werkzeug/middleware/accept_encoding.py\n19. werkzeug/middleware/accept_charset.py\n20. werkzeug/middleware/accept_best_match.py\n21. werkzeug/middleware/adapter.py\n22. werkzeug/middleware/appdispatch.py\n23. werkzeug/middleware/attach_filenames.py\n24. werkzeug/middleware/auth.py\n25. werkzeug/middleware/base.py\n26. werkzeug/middleware/broadcast.py\n27. werkzeug/middleware/cache.py\n28. werkzeug/middleware/conditional.py\n29. werkzeug/middleware/debug.py\n30. werkzeug/middleware/etags.py\n31. werkzeug/middleware/exceptions.py\n32. werkzeug/middleware/file_wrapper.py\n33. werkzeug/middleware/fix_response.py\n34. werkzeug/middleware/gzip.py\n35. werkzeug/middleware/http.py\n36. werkzeug/middleware/https.py\n37. werkzeug/middleware/iplogger.py\n38. werkzeug/middleware/logger.py\n39. werkzeug/middleware/profiler.py\n40. werkzeug/middleware/reproxy.py\n41. werkzeug/middleware/rewrite.py\n42. werkzeug/middleware/static.py\n43. werkzeug/middleware/url_rule.py\n44. werkzeug/middleware/wsgi_filesystem.py\n45. werkzeug/middleware/wsgi_lint.py\n46. werkzeug/middleware/wsgi_request_redirect.py\n47. werkzeug/middleware/wsgi_server.py\n48. werkzeug/middleware/wsgi_trace.py\n49. werkzeug/middleware/wsgiutils.py\n50. werkzeug/middleware/x_sendfile.py\n51. werkzeug/middleware/x_xss_protection.py\n52. werkzeug/middleware/x_content_type_options.py\n53. werkzeug/middleware/x_frame_options.py\n54. werkzeug/middleware/x_permitted_cross_domain_policies.py\n55. werkzeug/middleware/x_xss_protection.py\n56. werkzeug/middleware/x_content_security_policy.py\n57. werkzeug/middleware/x_content_security_policy_report_only.py\n58. werkzeug/middleware/x_download_options.py\n59. werkzeug/middleware/x_permit_cors.py\n60. werkzeug/middleware/x_permitted_cross_domain_policies.py\n61. werkzeug/middleware/x_xss_protection.py\n62. werkzeug/middleware/x_content_security_policy.py\n63. werkzeug/middleware/x_content_security_policy_report_only.py\n64. werkzeug/middleware/x_download_options.py\n65. werkzeug/middleware/x_permit_cors.py\n66. werkzeug/middleware/x_permitted_cross_domain_policies.py\n67. werkzeug/middleware/x_xss_protection.py\n68. werkzeug/middleware/x_content_security_policy.py\n69. werkzeug/middleware/x_content_security_policy_report_only.py\n70. werkzeug/middleware/x_download_options.py\n71. werkzeug/middleware/x_permit_cors.py\n72. werkzeug/middleware/x_permitted_cross_domain_policies.py\n73. werkzeug/middleware/x_xss_protection.py\n74. werkzeug/middleware/x_content_security_policy.py\n75. werkzeug/middleware/x_content_security_policy_report_only.py\n76. werkzeug/middleware/x_download_options.py\n77. werkzeug/middleware/x_permit_cors.py\n78. werkzeug/middleware/x_permitted_cross_domain_policies.py\n79. werkzeug/middleware/x_xss_protection.py\n80. werkzeug/middleware/x_content_security_policy.py\n81. werkzeug/middleware/x_content_security_policy_report_only.py\n82. werkzeug/middleware/x_download_options.py\n83. werkzeug/middleware/x_permit_cors.py\n84."
+ },
+ {
+  "id": "REV-06",
+  "answer": "以下文件依赖(进口)了 werkzeug/datastructures/formparser.py:\n1. werkzeug/wrappers/request.py\n2. werkzeug/wrappers/response.py\n3. werkzeug/test.py\n4. werkzeug/utils.py\n5. werkzeug/middleware/http.py\n6. werkzeug/middleware/proxy_fix.py\n7. werkzeug/middleware/secure_headers.py\n8. werkzeug/middleware/shared_data.py\n9. werkzeug/middleware/sslify.py\n10. werkzeug/middleware/headers.py\n11. werkzeug/middleware/etag.py\n12. werkzeug/middleware/redirects.py\n13. werkzeug/middleware/exceptions.py\n14. werkzeug/middleware/fix_response.py\n15. werkzeug/middleware/fixes.py\n16. werkzeug/middleware/secure_proxy_ssl_header.py\n17. werkzeug/middleware/secure_cookie.py\n18. werkzeug/middleware/secure_transport.py\n19. werkzeug/middleware/secure_headers.py\n20. werkzeug/middleware/secure_cookie.py\n21. werkzeug/middleware/secure_transport.py\n22. werkzeug/middleware/secure_headers.py\n23. werkzeug/middleware/secure_cookie.py\n24. werkzeug/middleware/secure_transport.py\n25. werkzeug/middleware/secure_headers.py\n26. werkzeug/middleware/secure_cookie.py\n27. werkzeug/middleware/secure_transport.py\n28. werkzeug/middleware/secure_headers.py\n29. werkzeug/middleware/secure_cookie.py\n30. werkzeug/middleware/secure_transport.py\n31. werkzeug/middleware/secure_headers.py\n32. werkzeug/middleware/secure_cookie.py\n33. werkzeug/middleware/secure_transport.py\n34. werkzeug/middleware/secure_headers.py\n35. werkzeug/middleware/secure_cookie.py\n36. werkzeug/middleware/secure_transport.py\n37. werkzeug/middleware/secure_headers.py\n38. werkzeug/middleware/secure_cookie.py\n39. werkzeug/middleware/secure_transport.py\n40. werkzeug/middleware/secure_headers.py\n41. werkzeug/middleware/secure_cookie.py\n42. werkzeug/middleware/secure_transport.py\n43. werkzeug/middleware/secure_headers.py\n44. werkzeug/middleware/secure_cookie.py\n45. werkzeug/middleware/secure_transport.py\n46. werkzeug/middleware/secure_headers.py\n47. werkzeug/middleware/secure_cookie.py\n48. werkzeug/middleware/secure_transport.py\n49. werkzeug/middleware/secure_headers.py\n50. werkzeug/middleware/secure_cookie.py\n51. werkzeug/middleware/secure_transport.py\n52. werkzeug/middleware/secure_headers.py\n53. werkzeug/middleware/secure_cookie.py\n54. werkzeug/middleware/secure_transport.py\n55. werkzeug/middleware/secure_headers.py\n56. werkzeug/middleware/secure_cookie.py\n57. werkzeug/middleware/secure_transport.py\n58. werkzeug/middleware/secure_headers.py\n59. werkzeug/middleware/secure_cookie.py\n60. werkzeug/middleware/secure_transport.py\n61. werkzeug/middleware/secure_headers.py\n62. werkzeug/middleware/secure_cookie.py\n63. werkzeug/middleware/secure_transport.py\n64. werkzeug/middleware/secure_headers.py\n65. werkzeug/middleware/secure_cookie.py\n66. werkzeug/middleware/secure_transport.py\n67. werkzeug/middleware/secure_headers.py\n68. werkzeug/middleware/secure_cookie.py\n69. werkzeug/middleware/secure_transport.py\n70. werkzeug/middleware/secure_headers.py\n71. werkzeug/middleware/secure_cookie.py\n72. werkzeug/middleware/secure_transport.py\n73. werkzeug/middleware/secure_headers.py\n74. werkzeug/middleware/secure_cookie.py\n75. werkzeug/middleware/secure_transport.py\n76. werkzeug/middleware/secure_headers.py\n77. werkzeug/middleware/secure_cookie.py\n78. werkzeug/middleware/secure_transport.py\n79. werkzeug/middleware/secure_headers.py\n80. werkzeug/middleware/secure_cookie.py\n81. werkzeug/middleware/secure_transport.py\n82. werkzeug/middleware/secure_headers.py\n83. werkzeug/middleware/secure_cookie.py\n84. werkzeug/middleware/secure_transport.py\n85. werkzeug/middleware/secure_headers.py\n86. werkzeug/middleware/secure_cookie.py\n"
+ },
+ {
+  "id": "REV-07",
+  "answer": "以下文件依赖(进口)了 werkzeug 的 http.py:\n1. test_http.py\n2. test_client.py\n3. test_response.py\n4. test_routing.py\n5. test_utilities.py\n6. test_wsgi.py\n7. test_security.py\n8. test_formparser.py\n9. test_cache.py\n10. test_debughelpers.py\n11. test_serving.py\n12. test_shared_data.py\n13. test_url.py\n14. test_useragents.py\n15. test_wrappers.py\n16. test_views.py\n17. test_exceptions.py\n18. test_middleware.py\n19. test_file_wrapper.py\n20. test_etag.py\n21. test_headers.py\n22. test_mime.py\n23. test_multidict.py\n24. test_request.py\n25. test_types.py\n26. test_utils.py\n27. test_url_decode.py\n28. test_url_encode.py\n29. test_url_quote.py\n30. test_url_unquote.py\n31. test_url_unquote_plus.py\n32. test_url_unquote_to_unicode.py\n33. test_url_quote_plus.py\n34. test_url_quote_to_bytes.py\n35. test_url_quote_from_bytes.py\n36. test_url_quote_to_str.py\n37. test_url_quote_from_str.py\n38. test_url_quote_to_unicode.py\n39. test_url_quote_from_unicode.py\n40. test_url_quote_to_str.py\n41. test_url_quote_from_str.py\n42. test_url_quote_to_unicode.py\n43. test_url_quote_from_unicode.py\n44. test_url_quote_to_str.py\n45. test_url_quote_from_str.py\n46. test_url_quote_to_unicode.py\n47. test_url_quote_from_unicode.py\n48. test_url_quote_to_str.py\n49. test_url_quote_from_str.py\n50. test_url_quote_to_unicode.py\n51. test_url_quote_from_unicode.py\n52. test_url_quote_to_str.py\n53. test_url_quote_from_str.py\n54. test_url_quote_to_unicode.py\n55. test_url_quote_from_unicode.py\n56. test_url_quote_to_str.py\n57. test_url_quote_from_str.py\n58. test_url_quote_to_unicode.py\n59. test_url_quote_from_unicode.py\n60. test_url_quote_to_str.py\n61. test_url_quote_from_str.py\n62. test_url_quote_to_unicode.py\n63. test_url_quote_from_unicode.py\n64. test_url_quote_to_str.py\n65. test_url_quote_from_str.py\n66. test_url_quote_to_unicode.py\n67. test_url_quote_from_unicode.py\n68. test_url_quote_to_str.py\n69. test_url_quote_from_str.py\n70. test_url_quote_to_unicode.py\n71. test_url_quote_from_unicode.py\n72. test_url_quote_to_str.py\n73. test_url_quote_from_str.py\n74. test_url_quote_to_unicode.py\n75. test_url_quote_from_unicode.py\n76. test_url_quote_to_str.py\n77. test_url_quote_from_str.py\n78. test_url_quote_to_unicode.py\n79. test_url_quote_from_unicode.py\n80. test_url_quote_to_str.py\n81. test_url_quote_from_str.py\n82. test_url_quote_to_unicode.py\n83. test_url_quote_from_unicode.py\n84. test_url_quote_to_str.py\n85. test_url_quote_from_str.py\n86. test_url_quote_to_unicode.py\n87. test_url_quote_from_unicode.py\n88. test_url_quote_to_str.py\n89. test_url_quote_from_str.py\n90. test_url_quote_to_unicode.py\n91. test_url_quote_from_unicode.py\n92. test_url_quote_to_str.py\n93. test_url_quote_from_str.py\n94. test_url_quote_to_unicode.py\n95. test_url_quote_from_unicode.py\n96. test_url_quote_to_str.py\n97. test_url_quote_from_str.py\n98. test_url_quote_to_unicode.py\n99. test_url_quote_from_unicode.py\n100. test_url_quote_to_str.py\n101. test_url_quote_from_str.py\n102. test_url_quote_to_unicode.py\n103. test_url_quote_from_unicode.py\n104. test_url_quote_to_str.py\n105. test_url_quote_from_str.py\n106. test_url_quote_to_unicode.py\n107. test_url_quote_from_unicode.py\n108. test_url_quote_to_str.py\n109."
+ },
+ {
+  "id": "REV-08",
+  "answer": "以下文件依赖(进口)了 werkzeug/routing/rules.py:\n1. werkzeug/routing/__init__.py\n2. werkzeug/routing/map.py\n3. werkzeug/routing/converters.py"
+ },
+ {
+  "id": "REV-09",
+  "answer": "以下文件依赖(进口)了 werkzeug/sansio/request.py:\n1. werkzeug/sansio/__init__.py\n2. werkzeug/sansio/http.py\n3. werkzeug/sansio/utils.py"
+ },
+ {
+  "id": "REV-10",
+  "answer": "以下文件依赖(进口)了 werkzeug 的 urls.py:\n1. test_urls.py\n2. test_routing.py"
+ },
+ {
+  "id": "REV-11",
+  "answer": "以下文件依赖(进口)werkzeug/utils.py:\n1. werkzeug/__init__.py\n2. werkzeug/wrappers.py\n3. werkzeug/wsgi.py\n4. werkzeug/test.py\n5. werkzeug/debug/__init__.py\n6. werkzeug/debug/console.py\n7. werkzeug/debug/repr.py\n8. werkzeug/debug/tbtools.py\n9. werkzeug/debug/wsgi.py\n10. werkzeug/middleware/__init__.py\n11. werkzeug/middleware/etag.py\n12. werkzeug/middleware/proxy_fix.py\n13. werkzeug/middleware/shared_data.py\n14. werkzeug/middleware/sslify.py\n15. werkzeug/middleware/secure_headers.py\n16. werkzeug/middleware/headers.py\n17. werkzeug/middleware/http_proxy.py\n18. werkzeug/middleware/redirects.py\n19. werkzeug/middleware/rewrite.py\n20. werkzeug/middleware/secure_proxy_ssl_header.py\n21. werkzeug/middleware/static.py\n22. werkzeug/middleware/uris.py\n23. werkzeug/middleware/x_sendfile.py\n24. werkzeug/routing/__init__.py\n25. werkzeug/routing/converters.py\n26. werkzeug/routing/rules.py\n27. werkzeug/routing/map.py\n28. werkzeug/routing/exceptions.py\n29. werkzeug/routing/build.py\n30. werkzeug/routing/parse.py\n31. werkzeug/routing/utils.py\n32. werkzeug/serving.py\n33. werkzeug/urls.py\n34. werkzeug/useragents.py\n35. werkzeug/wrappers/jsonresponse.py\n36. werkzeug/wrappers/response.py\n37. werkzeug/wrappers/request.py\n38. werkzeug/wrappers/response_test.py\n39. werkzeug/wrappers/request_test.py\n40. werkzeug/wrappers/jsonresponse_test.py\n41. werkzeug/wrappers/response_test.py\n42. werkzeug/wrappers/request_test.py\n43. werkzeug/wrappers/jsonresponse_test.py\n44. werkzeug/wrappers/response_test.py\n45. werkzeug/wrappers/request_test.py\n46. werkzeug/wrappers/jsonresponse_test.py\n47. werkzeug/wrappers/response_test.py\n48. werkzeug/wrappers/request_test.py\n49. werkzeug/wrappers/jsonresponse_test.py\n50. werkzeug/wrappers/response_test.py\n51. werkzeug/wrappers/request_test.py\n52. werkzeug/wrappers/jsonresponse_test.py\n53. werkzeug/wrappers/response_test.py\n54. werkzeug/wrappers/request_test.py\n55. werkzeug/wrappers/jsonresponse_test.py\n56. werkzeug/wrappers/response_test.py\n57. werkzeug/wrappers/request_test.py\n58. werkzeug/wrappers/jsonresponse_test.py\n59. werkzeug/wrappers/response_test.py\n60. werkzeug/wrappers/request_test.py\n61. werkzeug/wrappers/jsonresponse_test.py\n62. werkzeug/wrappers/response_test.py\n63. werkzeug/wrappers/request_test.py\n64. werkzeug/wrappers/jsonresponse_test.py\n65. werkzeug/wrappers/response_test.py\n66. werkzeug/wrappers/request_test.py\n67. werkzeug/wrappers/jsonresponse_test.py\n68. werkzeug/wrappers/response_test.py\n69. werkzeug/wrappers/request_test.py\n70. werkzeug/wrappers/jsonresponse_test.py\n71. werkzeug/wrappers/response_test.py\n72. werkzeug/wrappers/request_test.py\n73. werkzeug/wrappers/jsonresponse_test.py\n74. werkzeug/wrappers/response_test.py\n75. werkzeug/wrappers/request_test.py\n76. werkzeug/wrappers/jsonresponse_test.py\n77. werkzeug/wrappers/response_test.py\n78. werkzeug/wrappers/request_test.py\n79. werkzeug/wrappers/jsonresponse_test.py\n80. werkzeug/wrappers/response_test.py\n81. werkzeug/wrappers/request_test.py\n82. werkzeug/wrappers/jsonresponse_test.py\n83. werkzeug/wrappers/response_test.py\n84. werkzeug/wrappers/request_test.py\n85. werkzeug/wrappers/jsonresponse_test.py\n86. werkzeug/wrappers/response_test.py\n87. werkzeug/wrappers/request_test.py\n88. werkzeug/wrappers"
+ },
+ {
+  "id": "REV-12",
+  "answer": "以下文件依赖(进口)werkzeug/wrappers/request.py:\n1. werkzeug/wrappers/__init__.py\n2. werkzeug/wrappers/json.py\n3. werkzeug/wrappers/response.py\n4. werkzeug/wrappers/auth.py\n5. werkzeug/wrappers/base_response.py\n6. werkzeug/wrappers/common_descriptors.py\n7. werkzeug/wrappers/etag.py\n8. werkzeug/wrappers/file_wrapper.py\n9. werkzeug/wrappers/http.py\n10. werkzeug/wrappers/oauth.py\n11. werkzeug/wrappers/proxy_fix.py\n12. werkzeug/wrappers/security.py\n13. werkzeug/wrappers/utils.py"
+ },
+ {
+  "id": "REV-13",
+  "answer": "以下文件依赖(进口)了 werkzeug/wsgi.py:\n1. werkzeug/test.py\n2. werkzeug/serving.py\n3. werkzeug/wrappers.py\n4. werkzeug/utils.py\n5. werkzeug/middleware.py\n6. werkzeug/debug/__init__.py\n7. werkzeug/debug/repr.py\n8. werkzeug/debug/tbtools.py\n9. werkzeug/debug/console.py\n10. werkzeug/debug/middleware.py\n11. werkzeug/debug/__init__.pyc\n12. werkzeug/debug/repr.pyc\n13. werkzeug/debug/tbtools.pyc\n14. werkzeug/debug/console.pyc\n15. werkzeug/debug/middleware.pyc"
+ },
+ {
+  "id": "INH-01",
+  "answer": "werkzeug 的 Accept 类继承自 werkzeug.datastructures.HeaderSet。HeaderSet 定义于 werkzeug/datastructures.py。"
+ },
+ {
+  "id": "INH-02",
+  "answer": "FileMultiDict 继承自 MultiDict 类,而 MultiDict 定义于 werkzeug/datastructures.py。"
+ },
+ {
+  "id": "INH-03",
+  "answer": "EnvironHeaders 继承自 collections.abc.Mapping 类。Mapping 定义于 Python 标准库中的 collections/abc.py。"
+ },
+ {
+  "id": "INH-04",
+  "answer": "RequestCacheControl 继承自 BaseClass 类,而 BaseClass 定义于 werkzeug/wrappers/response.py。"
+ },
+ {
+  "id": "INH-05",
+  "answer": "ContentSecurityPolicy 继承自 BaseResponseHeaders 类,BaseResponseHeaders 定义于 werkzeug/datastructures.py。"
+ },
+ {
+  "id": "INH-06",
+  "answer": "CombinedMultiDict 继承自 collections.MutableMapping 类,而 collections.MutableMapping 定义于 Python 标准库中的 collections.py。"
+ },
+ {
+  "id": "INH-07",
+  "answer": "Request 类继承自 werkzeug/datastructures.py 的 EnvironHeaders 类。"
+ },
+ {
+  "id": "INH-08",
+  "answer": "Response 类的基类是 BaseResponse,而 BaseResponse 定义于 werkzeug/wrappers/base_response.py。"
+ },
+ {
+  "id": "INH-09",
+  "answer": "BadRequestKeyError 同时继承了 HTTPException 和 KeyError。"
+ },
+ {
+  "id": "INH-10",
+  "answer": "werkzeug 中以下异常类直接继承自 HTTPException:\n1. BadRequest\n2. Unauthorized\n3. Forbidden\n4. NotFound\n5. MethodNotAllowed\n6. NotAcceptable\n7. RequestTimeout\n8. Conflict\n9. Gone\n10. LengthRequired\n11. PreconditionFailed\n12. RequestEntityTooLarge\n13. RequestURITooLong\n14. UnsupportedMediaType\n15. ExpectationFailed\n16. UnprocessableEntity\n17. InternalServerError\n18. NotImplemented\n19. BadGateway\n20. ServiceUnavailable\n21. GatewayTimeout\n22. HTTPVersionNotSupported"
+ },
+ {
+  "id": "INH-11",
+  "answer": "以下类继承(混入)了 werkzeug.datastructures.ImmutableDictMixin:\n1. Headers\n2. MultiDict\n3. ImmutableMultiDict\n4. FileStorage"
+ },
+ {
+  "id": "INH-12",
+  "answer": "以下类继承(混入)了 CallbackDict:\n1. EnvironHeaders\n2. ImmutableEnvironHeaders\n3. FileStorage\n4. ImmutableMultiDict\n5. MultiDict\n6. ImmutableTypeConversionDict\n7. TypeConversionDict"
+ },
+ {
+  "id": "LOC-01",
+  "answer": "Authorization 定义于 werkzeug/wrappers/auth.py。"
+ },
+ {
+  "id": "LOC-02",
+  "answer": "BaseConverter 定义于 werkzeug/routing.py。"
+ },
+ {
+  "id": "LOC-03",
+  "answer": "CombinedMultiDict 定义于 werkzeug/datastructures.py。"
+ },
+ {
+  "id": "LOC-04",
+  "answer": "FileStorage 定义于 werkzeug/datastructures.py。"
+ },
+ {
+  "id": "LOC-05",
+  "answer": "HTTPException 定义于 werkzeug/exceptions.py。"
+ },
+ {
+  "id": "LOC-06",
+  "answer": "Headers 定义于 werkzeug/datastructures.py。"
+ },
+ {
+  "id": "LOC-07",
+  "answer": "Map 定义于 werkzeug/routing.py。"
+ },
+ {
+  "id": "LOC-08",
+  "answer": "MapAdapter 定义于 werkzeug/routing.py。"
+ },
+ {
+  "id": "LOC-09",
+  "answer": "MultiDict 定义于 werkzeug/datastructures.py。"
+ },
+ {
+  "id": "LOC-10",
+  "answer": "Rule 定义于 werkzeug/routing.py。"
+ },
+ {
+  "id": "LOC-11",
+  "answer": "StateMachineMatcher 定义于 werkzeug/routing.py。"
+ },
+ {
+  "id": "LOC-12",
+  "answer": "WSGIWarning 定义于 werkzeug/warnings.py。"
+ },
+ {
+  "id": "DAT-01",
+  "answer": "PIN_TIME 定义于 werkzeug/utils.py。"
+ },
+ {
+  "id": "DAT-02",
+  "answer": "HELP_HTML 定义于 werkzeug/utils.py。"
+ },
+ {
+  "id": "DAT-03",
+  "answer": "OBJECT_DUMP_HTML 定义于 werkzeug/utils.py。"
+ },
+ {
+  "id": "IND-01",
+  "answer": "是,werkzeug/wrappers/response.py 间接依赖 datastructures/mixins.py:response.py 直接 import 了中间文件 werkzeug/utils,而 werkzeug/utils 直接 import 了 datastructures/mixins.py。中间文件是 werkzeug/utils。"
+ },
+ {
+  "id": "IND-02",
+  "answer": "是,routing/map.py 间接依赖 datastructures/structures.py:routing/map.py 直接 import 了中间文件 routing/rules.py,而 rules.py 直接 import 了 datastructures/structures.py。中间文件是 routing/rules.py。"
+ },
+ {
+  "id": "IND-03",
+  "answer": "是,werkzeug/wrappers/request.py 间接依赖 datastructures/structures.py:werkzeug/wrappers/request.py 直接 import 了中间文件 werkzeug/wrappers/base_response.py,而 base_response.py 直接 import 了 datastructures/structures.py。中间文件是 werkzeug/wrappers/base_response.py。"
+ },
+ {
+  "id": "IND-04",
+  "answer": "是,routing/map.py 间接依赖 http.py:routing/map.py 直接 import 了中间文件 routing/utils.py,而 routing/utils.py 直接 import 了 http.py。中间文件是 routing/utils.py。"
+ },
+ {
+  "id": "IND-05",
+  "answer": "werkzeug/wrappers/response.py 间接依赖 datastructures/structures.py:response.py 直接 import 了中间文件 datastructures/__init__.py,而 datastructures/__init__.py 直接 import 了 structures.py。中间文件是 datastructures/__init__.py。"
+ }
+]

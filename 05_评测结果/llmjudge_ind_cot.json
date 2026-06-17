@@ -1,0 +1,124 @@
+{
+ "config_name": "ind_cot",
+ "n": 18,
+ "parse_fail": 0,
+ "overall": 0.6111,
+ "by_difficulty": {
+  "easy": 0.0,
+  "medium": 0.0,
+  "hard": 0.6111
+ },
+ "by_category": {
+  "indirect_dep": 0.6111
+ },
+ "cases": [
+  {
+   "id": "XIND-01",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 0.0
+  },
+  {
+   "id": "XIND-02",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 0.0
+  },
+  {
+   "id": "XIND-03",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 0.0
+  },
+  {
+   "id": "XIND-04",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 0.0
+  },
+  {
+   "id": "XIND-05",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 1.0
+  },
+  {
+   "id": "XIND-06",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 1.0
+  },
+  {
+   "id": "XIND-07",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 1.0
+  },
+  {
+   "id": "XIND-08",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 1.0
+  },
+  {
+   "id": "XIND-09",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 1.0
+  },
+  {
+   "id": "XIND-10",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 1.0
+  },
+  {
+   "id": "XIND-11",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 0.0
+  },
+  {
+   "id": "XIND-12",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 1.0
+  },
+  {
+   "id": "XIND-13",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 1.0
+  },
+  {
+   "id": "XIND-14",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 0.0
+  },
+  {
+   "id": "XIND-15",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 0.5
+  },
+  {
+   "id": "XIND-16",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 1.0
+  },
+  {
+   "id": "XIND-17",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 0.5
+  },
+  {
+   "id": "XIND-18",
+   "category": "indirect_dep",
+   "difficulty": "hard",
+   "llm_score": 1.0
+  }
+ ]
+}

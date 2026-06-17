@@ -1,0 +1,226 @@
+[
+ {
+  "id": "FWD-01",
+  "answer": "根据代码片段 5 的内容，`datastructures/headers.py` 文件直接依赖了以下项目内的模块：\n\n1. `_internal`\n2. `exceptions`\n3. `mixins`\n4. `structures`\n\n这些依赖在文件的顶部通过 `import` 语句引入。"
+ },
+ {
+  "id": "FWD-02",
+  "answer": "根据代码片段 3 的内容，formparser.py 文件直接依赖了以下项目内的模块：\n\n1. `_internal`\n2. `datastructures`\n3. `exceptions`\n4. `http`\n5. `sansio.multipart`\n6. `wsgi`\n\n这些模块是通过 `from .module_name import ...` 这样的相对导入语句引入的。"
+ },
+ {
+  "id": "FWD-03",
+  "answer": "根据代码片段 1 的内容，`sansio/http.py` 文件直接依赖了以下项目内的模块：\n\n1. `.._internal`\n2. `..http`\n3. `..datastructures`"
+ },
+ {
+  "id": "FWD-04",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "FWD-05",
+  "answer": "根据代码片段 3 的内容，`routing/matcher.py` 文件直接依赖了以下项目内的模块：\n\n1. `converters`\n2. `exceptions`\n3. `rules`\n\n这些依赖在文件的开头通过 `import` 语句导入。"
+ },
+ {
+  "id": "FWD-06",
+  "answer": "在 `sansio/request.py` 文件中，直接依赖（import）了以下项目内的模块：\n\n1. `..datastructures`\n2. `..http`\n3. `..user_agent`\n4. `..utils`\n5. `.http`\n6. `.utils`\n\n这些模块通过相对导入的方式被引入。"
+ },
+ {
+  "id": "FWD-07",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "FWD-08",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "FWD-09",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "FWD-10",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "FWD-11",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "REV-01",
+  "answer": "根据提供的代码片段，可以确定以下文件导入了 `_internal.py`：\n\n1. `sansio/http.py` 文件中通过 `from .._internal import _dt_as_utc` 导入了 `_internal.py` 中的 `_dt_as_utc` 函数。\n\n检索结果中没有找到其他文件明确导入 `_internal.py` 的信息。"
+ },
+ {
+  "id": "REV-02",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "REV-03",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "REV-04",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "REV-05",
+  "answer": "根据提供的代码片段，以下是依赖于 `exceptions.py` 的文件：\n\n1. `formparser.py` - 通过 `from .exceptions import RequestEntityTooLarge` 导入。\n2. `testapp.py` - 通过 `from .exceptions import NoMatch, RequestAliasRedirect, RequestPath` 导入（虽然代码片段中没有显示这些导入，但根据上下文可以推测）。\n\n检索结果中没有找到其他明确依赖 `exceptions.py` 的文件。"
+ },
+ {
+  "id": "REV-06",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "REV-07",
+  "answer": "根据提供的代码片段，以下是依赖于 `http.py` 的文件：\n\n1. `wrappers/response.py`\n2. `middleware/http_proxy.py`\n3. `sansio/response.py`\n\n这些文件在各自的代码片段中导入了 `http.py` 中的函数和类。"
+ },
+ {
+  "id": "REV-08",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "REV-09",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "REV-10",
+  "answer": "根据提供的代码片段，可以确定以下文件 import(依赖)了 urls.py:\n\n1. **sansio/utils.py** - 通过 `from ..urls import uri_to_iri` 导入了 `uri_to_iri` 函数。\n2. **routing/map.py** - 通过 `from ..urls import _urlencode` 导入了 `_urlencode` 函数。\n\n检索结果中没有找到其他文件明确 import(依赖) urls.py 的信息。"
+ },
+ {
+  "id": "REV-11",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "REV-12",
+  "answer": "根据提供的代码片段，`wrappers/request.py` 被以下文件导入（依赖）：\n\n1. `wrappers/__init__.py`\n2. `__init__.py`\n\n这两个文件都从 `wrappers.request` 模块导入了 `Request` 类。"
+ },
+ {
+  "id": "REV-13",
+  "answer": "根据提供的代码片段，以下是 import 了 wsgi.py 的文件：\n\n1. formparser.py\n2. wrappers/response.py\n3. middleware/lint.py"
+ },
+ {
+  "id": "INH-01",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "INH-02",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "INH-03",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "INH-04",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "INH-05",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "INH-06",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "INH-07",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "INH-08",
+  "answer": "在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在 wrappers/__init__.py 文件中。"
+ },
+ {
+  "id": "INH-09",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "INH-10",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "INH-11",
+  "answer": "在 werkzeug 中，继承（混入）了 `ImmutableDictMixin` 的类包括：\n\n1. `ImmutableDict`\n2. `ImmutableMultiDict`\n3. `ImmutableTypeConversionDict`\n4. `ImmutableMultiDictMixin`"
+ },
+ {
+  "id": "INH-12",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-01",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-02",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-03",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-04",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-05",
+  "answer": "类 HTTPException 定义在 exceptions.py 文件中。"
+ },
+ {
+  "id": "LOC-06",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-07",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-08",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-09",
+  "answer": "根据提供的代码片段，类 `MultiDict` 定义在文件 `datastructures/structures.py` 中。"
+ },
+ {
+  "id": "LOC-10",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-11",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "LOC-12",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "DAT-01",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "DAT-02",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "DAT-03",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "IND-01",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "IND-02",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "IND-03",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "IND-04",
+  "answer": "检索结果中没有找到。"
+ },
+ {
+  "id": "IND-05",
+  "answer": "检索结果中没有找到。"
+ }
+]

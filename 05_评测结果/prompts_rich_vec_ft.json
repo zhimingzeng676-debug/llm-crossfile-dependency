@@ -1,0 +1,943 @@
+[
+ {
+  "id": "R-REV-01",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 console.py?请尽量列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: console.py (第 0-0 行)\n[依赖图卡片] 文件 console.py\n它依赖(import)的仓库内文件: _emoji_replace.py, _export_format.py, _fileno.py, _log_render.py, _null_file.py, _win32_console.py, _windows.py, _windows_renderer.py, abc.py, align.py, cells.py, color.py, control.py, emoji.py, highlighter.py, json.py, jupyter.py, live.py, markup.py, measure.py, pager.py, pretty.py, protocol.py, region.py, rule.py, scope.py, screen.py, segment.py, status.py, style.py, styled.py, terminal_theme.py, text.py, theme.py, traceback.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, __main__.py, _inspect.py, _log_render.py, _win32_console.py, _wrap.py, align.py, ansi.py, bar.py, box.py, color.py, columns.py, constrain.py, containers.py, control.py, default_styles.py, diagnose.py, emoji.py, file_proxy.py, highlighter.py, json.py, jupyter.py, layout.py, live.py, live_render.py, logging.py, markdown.py, measure.py, padding.py, pager.py, palette.py, panel.py, pretty.py, progress.py, progress_bar.py, prompt.py, protocol.py, repr.py, rule.py, scope.py, screen.py, segment.py, spinner.py, status.py, styled.py, syntax.py, table.py, text.py, traceback.py, tree.py\n文件内定义的类: NoChange, ConsoleDimensions, ConsoleOptions, RichCast, ConsoleRenderable, CaptureError, NewLine, ScreenUpdate, Capture, ThemeContext, PagerContext, ScreenContext, Group, ConsoleThreadLocals, RenderHook, Console\n文件内定义的函数: ascii_only, copy, update, update_width, update_height, reset_height, update_dimensions, __rich__, __rich_console__, __init__, __rich_console__, __init__, __rich_console__, __init__, __enter__, __exit__, get, __init__, __enter__, __exit__, __init__, __enter__, __exit__, __init__, update, __enter__, __exit__, __init__, renderables, __rich_measure__\n\n[代码片段 2] 来源: console.py (第 2200-2273 行)\n文件: console.py\n函数: export_html\ndef export_html(\n        self,\n        *,\n        theme: Optional[TerminalTheme] = None,\n        clear: bool = True,\n        code_format: Optional[str] = None,\n        inline_styles: bool = False,\n    ) -> str:\n        \"\"\"Generate HTML from console contents (requires record=True argument in constructor).\n\n        Args:\n            theme (TerminalTheme, optional): TerminalTheme object containing console colors.\n            clear (bool, optional): Clear record buffer after exporting. Defaults to ``True``.\n            code_format (str, optional): Format string to render HTML. In addition to '{foreground}',\n                '{background}', and '{code}', should contain '{stylesheet}' if inline_styles is ``False``.\n            inline_styles (bool, optional): If ``True`` styles will be inlined in to spans, which makes files\n                larger but easier to cut and paste markup. If ``False``, styles will be embedded in a style tag.\n                Defaults to False.\n\n        Returns:\n            str: String containing console contents as HTML.\n        \"\"\"\n        assert (\n            self.record\n        ), \"To export console contents set record=True in the constructor or instance\"\n        fragments: List[str] = []\n        append = fragments.append\n        _theme = theme or DEFAULT_TERMINAL_THEME\n        stylesheet = \"\"\n\n        render_code_format = CONSOLE_HTML_FORMAT if code_format is None else code_format\n\n        with self._record_buffer_lock:\n            if inline_styles:\n                for text, style, _ in Segment.filter_control(\n                    Segment.simplify(self._record_buffer)\n                ):\n                    text = escape(text)\n                    if style:\n                        rule = style.get_html_style(_theme)\n                        if style.link:\n                            text = f'<a href=\"{style.link}\">{text}</a>'\n                        text = f'<span style=\"{rule}\">{text}</span>' if rule else text\n                    append(text)\n            else:\n                styles: Dict[str, int] = {}\n                for text, style, _ in Segment.filter_control(\n                    Segment.simplify(self._record_buffer)\n                ):\n                    text = escape(text)\n                    if style:\n                        rule = style.get_html_style(_theme)\n                        style_number = styles.setdefault(rule, len(styles) + 1)\n                        if style.link:\n                            text = f'<a class=\"r{style_number}\" href=\"{style.link}\">{text}</a>'\n                        else:\n                            text = f'<span class=\"r{style_number}\">{text}</span>'\n                    append(text)\n                stylesheet_rules: List[str] = []\n                stylesheet_append = stylesheet_rules.append\n                for style_rule, style_number in styles.items():\n                    if style_rule:\n                        stylesheet_append(f\".r{style_number} {{{style_rule}}}\")\n                stylesheet = \"\\n\".join(stylesheet_rules)\n\n            rendered_code = render_code_format.format(\n                code=\"\".join(fragments),\n                stylesheet=stylesheet,\n                foreground=_theme.foreground_color.hex,\n                background=_theme.background_color.hex,\n            )\n            if clear:\n                del self._record_buffer[:]\n        return rendered_code\n\n[代码片段 3] 来源: console.py (第 631-753 行)\n文件: console.py\n函数: __init__\ndef __init__(\n        self,\n        *,\n        color_system: Optional[\n            Literal[\"auto\", \"standard\", \"256\", \"truecolor\", \"windows\"]\n        ] = \"auto\",\n        force_terminal: Optional[bool] = None,\n        force_jupyter: Optional[bool] = None,\n        force_interactive: Optional[bool] = None,\n        soft_wrap: bool = False,\n        theme: Optional[Theme] = None,\n        stderr: bool = False,\n        file: Optional[IO[str]] = None,\n        quiet: bool = False,\n        width: Optional[int] = None,\n        height: Optional[int] = None,\n        style: Optional[StyleType] = None,\n        no_color: Optional[bool] = None,\n        tab_size: int = 8,\n        record: bool = False,\n        markup: bool = True,\n        emoji: bool = True,\n        emoji_variant: Optional[EmojiVariant] = None,\n        highlight: bool = True,\n        log_time: bool = True,\n        log_path: bool = True,\n        log_time_format: Union[str, FormatTimeCallable] = \"[%X]\",\n        highlighter: Optional[\"HighlighterType\"] = ReprHighlighter(),\n        legacy_windows: Optional[bool] = None,\n        safe_box: bool = True,\n        get_datetime: Optional[Callable[[], datetime]] = None,\n        get_time: Optional[Callable[[], float]] = None,\n        _environ: Optional[Mapping[str, str]] = None,\n    ):\n        # Copy of os.environ allows us to replace it for testing\n        if _environ is not None:\n            self._environ = _environ\n\n        self.is_jupyter = _is_jupyter() if force_jupyter is None else force_jupyter\n        if self.is_jupyter:\n            if width is None:\n                jupyter_columns = self._environ.get(\"JUPYTER_COLUMNS\")\n                if jupyter_columns is not None and jupyter_columns.isdigit():\n                    width = int(jupyter_columns)\n                else:\n                    width = JUPYTER_DEFAULT_COLUMNS\n            if height is None:\n                jupyter_lines = self._environ.get(\"JUPYTER_LINES\")\n                if jupyter_lines is not None and jupyter_lines.isdigit():\n                    height = int(jupyter_lines)\n                else:\n                    height = JUPYTER_DEFAULT_LINES\n\n        self.tab_size = tab_size\n        self.record = record\n        self._markup = markup\n        self._emoji = emoji\n        self._emoji_variant: Optional[EmojiVariant] = emoji_variant\n        self._highlight = highlight\n        self.legacy_windows: bool = (\n            (detect_legacy_windows() and not self.is_jupyter)\n            if legacy_windows is None\n            else legacy_windows\n        )\n\n        if width is None:\n            columns = self._environ.get(\"COLUMNS\")\n            if columns is not None and columns.isdigit():\n                width = int(columns) - self.legacy_windows\n        if height is None:\n            lines = self._environ.get(\"LINES\")\n            if lines is not None and lines.isdigit():\n                height = int(lines)\n\n        self.soft_wrap = soft_wrap\n        self._width = width\n        self._height = height\n\n        self._color_system: Optional[ColorSystem]\n\n        self._force_terminal = None\n        if force_terminal is not None:\n            self._force_terminal = force_terminal\n\n        self._file = file\n        self.quiet = quiet\n        self.stderr = stderr\n\n        if color_system is None:\n            self._color_system = None\n        elif color_system == \"auto\":\n            self._color_system = self._detect_color_system()\n        else:\n            self._color_system = COLOR_SYSTEMS[color_system]\n\n        self._lock = threading.RLock()\n        self._log_render = LogRender(\n            show_time=log_time,\n            show_path=log_path,\n            time_format=log_time_format,\n        )\n        self.highlighter: HighlighterType = highlighter or _null_highlighter\n        self.safe_box = safe_box\n        self.get_datetime = get_datetime or datetime.now\n        self.get_time = get_time or monotonic\n        self.style = style\n        self.no_color = (\n            no_color if no_color is not None else \"NO_COLOR\" in self._environ\n        )\n        self.is_interactive = (\n            (self.is_terminal and not self.is_dumb_terminal)\n            if force_interactive is None\n            else force_interactive\n        )\n\n        self._record_buffer_lock = threading.RLock()\n        self._thread_locals = ConsoleThreadLocals(\n            theme_stack=ThemeStack(themes.DEFAULT if theme is None else theme)\n        )\n        self._record_buffer: List[Segment] = []\n        self._render_hooks: List[RenderHook] = []\n        self._live: Optional[\"Live\"] = None\n        self._is_alt_screen = False\n\n[代码片段 4] 来源: console.py (第 338-344 行)\n文件: console.py\n函数: __exit__\ndef __exit__(\n        self,\n        exc_type: Optional[Type[BaseException]],\n        exc_val: Optional[BaseException],\n        exc_tb: Optional[TracebackType],\n    ) -> None:\n        self._result = self._console.end_capture()\n\n[代码片段 5] 来源: console.py (第 755-756 行)\n文件: console.py\n函数: __repr__\ndef __repr__(self) -> str:\n        return f\"<console width={self.width} {self._color_system!s}>\"\n\n[问题] 在该项目中,哪些文件 import(依赖)了 console.py?请尽量列全。",
+  "retrieved_sources": [
+   "console.py",
+   "console.py",
+   "console.py",
+   "console.py",
+   "console.py"
+  ],
+  "expected_sources": [
+   "console.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__init__",
+    "__main__",
+    "_inspect",
+    "_log_render",
+    "_win32_console",
+    "_wrap",
+    "align",
+    "ansi",
+    "bar",
+    "box",
+    "color",
+    "columns",
+    "constrain",
+    "containers",
+    "control",
+    "default_styles",
+    "diagnose",
+    "emoji",
+    "file_proxy",
+    "highlighter",
+    "json",
+    "jupyter",
+    "layout",
+    "live",
+    "live_render",
+    "logging",
+    "markdown",
+    "measure",
+    "padding",
+    "pager",
+    "palette",
+    "panel",
+    "pretty",
+    "progress",
+    "progress_bar",
+    "prompt",
+    "protocol",
+    "repr",
+    "rule",
+    "scope",
+    "screen",
+    "segment",
+    "spinner",
+    "status",
+    "styled",
+    "syntax",
+    "table",
+    "text",
+    "traceback",
+    "tree"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-02",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 text.py?请尽量列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: text.py (第 0-0 行)\n[依赖图卡片] 文件 text.py\n它依赖(import)的仓库内文件: _loop.py, _pick.py, _wrap.py, align.py, ansi.py, cells.py, console.py, containers.py, control.py, emoji.py, jupyter.py, markup.py, measure.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): __main__.py, _inspect.py, _log_render.py, abc.py, ansi.py, box.py, color.py, columns.py, console.py, containers.py, default_styles.py, file_proxy.py, highlighter.py, json.py, live.py, live_render.py, logging.py, markdown.py, markup.py, palette.py, panel.py, pretty.py, progress.py, prompt.py, rule.py, scope.py, segment.py, spinner.py, syntax.py, table.py, traceback.py\n文件内定义的类: Span, Text\n文件内定义的函数: __repr__, __bool__, split, move, right_crop, extend, __init__, __len__, __bool__, __str__, __repr__, __add__, __eq__, __contains__, __getitem__, get_text_at, cell_len, markup, from_markup, from_ansi, styled, assemble, plain, plain, spans, spans, blank_copy, copy, stylize, stylize_before\n\n[代码片段 2] 来源: text.py (第 708-718 行)\n文件: text.py\n函数: __rich_measure__\ndef __rich_measure__(\n        self, console: \"Console\", options: \"ConsoleOptions\"\n    ) -> Measurement:\n        text = self.plain\n        lines = text.splitlines()\n        max_text_width = max(cell_len(line) for line in lines) if lines else 0\n        words = text.split()\n        min_text_width = (\n            max(cell_len(word) for word in words) if words else max_text_width\n        )\n        return Measurement(min_text_width, max_text_width)\n\n[代码片段 3] 来源: text.py (第 176-177 行)\n文件: text.py\n函数: __repr__\ndef __repr__(self) -> str:\n        return f\"<text {self.plain!r} {self._spans!r} {self.style!r}>\"\n\n[代码片段 4] 来源: text.py (第 57-58 行)\n文件: text.py\n函数: __repr__\ndef __repr__(self) -> str:\n        return f\"Span({self.start}, {self.end}, {self.style!r})\"\n\n[代码片段 5] 来源: text.py (第 426-428 行)\n文件: text.py\n函数: spans\ndef spans(self, spans: List[Span]) -> None:\n        \"\"\"Set spans.\"\"\"\n        self._spans = spans[:]\n\n[问题] 在该项目中,哪些文件 import(依赖)了 text.py?请尽量列全。",
+  "retrieved_sources": [
+   "text.py",
+   "text.py",
+   "text.py",
+   "text.py",
+   "text.py"
+  ],
+  "expected_sources": [
+   "text.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__main__",
+    "_inspect",
+    "_log_render",
+    "abc",
+    "ansi",
+    "box",
+    "color",
+    "columns",
+    "console",
+    "containers",
+    "default_styles",
+    "file_proxy",
+    "highlighter",
+    "json",
+    "live",
+    "live_render",
+    "logging",
+    "markdown",
+    "markup",
+    "palette",
+    "panel",
+    "pretty",
+    "progress",
+    "prompt",
+    "rule",
+    "scope",
+    "segment",
+    "spinner",
+    "syntax",
+    "table",
+    "traceback"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-03",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 style.py?请尽量列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: style.py (第 0-0 行)\n[依赖图卡片] 文件 style.py\n它依赖(import)的仓库内文件: color.py, repr.py, terminal_theme.py\n它被这些文件依赖/使用(import 它的使用方): __main__.py, _win32_console.py, align.py, ansi.py, bar.py, color.py, console.py, default_styles.py, emoji.py, layout.py, live_render.py, markdown.py, markup.py, padding.py, palette.py, panel.py, progress.py, progress_bar.py, rule.py, screen.py, segment.py, spinner.py, status.py, styled.py, syntax.py, table.py, text.py, theme.py, traceback.py, tree.py\n文件内定义的类: _Bit, Style, StyleStack\n文件内定义的函数: __init__, __get__, __init__, _make_color, null, from_color, from_meta, on, link_id, __str__, __bool__, _make_ansi_codes, normalize, pick_first, __rich_repr__, __eq__, __ne__, __hash__, color, bgcolor, link, transparent_background, background_style, meta, without_color, parse, get_html_style, combine, chain, copy\n\n[代码片段 2] 来源: styled.py (第 0-0 行)\n[依赖图卡片] 文件 styled.py\n它依赖(import)的仓库内文件: console.py, measure.py, panel.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): console.py, layout.py, tree.py\n文件内定义的类: Styled\n文件内定义的函数: __init__, __rich_console__, __rich_measure__\n\n[代码片段 3] 来源: style.py (第 122-196 行)\n文件: style.py\n函数: __init__\ndef __init__(\n        self,\n        *,\n        color: Optional[Union[Color, str]] = None,\n        bgcolor: Optional[Union[Color, str]] = None,\n        bold: Optional[bool] = None,\n        dim: Optional[bool] = None,\n        italic: Optional[bool] = None,\n        underline: Optional[bool] = None,\n        blink: Optional[bool] = None,\n        blink2: Optional[bool] = None,\n        reverse: Optional[bool] = None,\n        conceal: Optional[bool] = None,\n        strike: Optional[bool] = None,\n        underline2: Optional[bool] = None,\n        frame: Optional[bool] = None,\n        encircle: Optional[bool] = None,\n        overline: Optional[bool] = None,\n        link: Optional[str] = None,\n        meta: Optional[Dict[str, Any]] = None,\n    ):\n        self._ansi: Optional[str] = None\n        self._style_definition: Optional[str] = None\n\n        def _make_color(color: Union[Color, str]) -> Color:\n            return color if isinstance(color, Color) else Color.parse(color)\n\n        self._color = None if color is None else _make_color(color)\n        self._bgcolor = None if bgcolor is None else _make_color(bgcolor)\n        self._set_attributes = sum(\n            (\n                bold is not None,\n                dim is not None and 2,\n                italic is not None and 4,\n                underline is not None and 8,\n                blink is not None and 16,\n                blink2 is not None and 32,\n                reverse is not None and 64,\n                conceal is not None and 128,\n                strike is not None and 256,\n                underline2 is not None and 512,\n                frame is not None and 1024,\n                encircle is not None and 2048,\n                overline is not None and 4096,\n            )\n        )\n        self._attributes = (\n            sum(\n                (\n                    bold and 1 or 0,\n                    dim and 2 or 0,\n                    italic and 4 or 0,\n                    underline and 8 or 0,\n                    blink and 16 or 0,\n                    blink2 and 32 or 0,\n                    reverse and 64 or 0,\n                    conceal and 128 or 0,\n                    strike and 256 or 0,\n                    underline2 and 512 or 0,\n                    frame and 1024 or 0,\n                    encircle and 2048 or 0,\n                    overline and 4096 or 0,\n                )\n            )\n            if self._set_attributes\n            else 0\n        )\n\n        self._link = link\n        self._meta = None if meta is None else dumps(meta)\n        self._link_id = (\n            f\"{randint(0, 999999)}{hash(self._meta)}\" if (link or meta) else \"\"\n        )\n        self._hash: Optional[int] = None\n        self._null = not (self._set_attributes or color or bgcolor or link or meta)\n\n[代码片段 4] 来源: styled.py (第 1-42 行)\n文件: styled.py\n(模块级代码:import、常量、配置)\nfrom typing import TYPE_CHECKING\n\nfrom .measure import Measurement\nfrom .segment import Segment\nfrom .style import StyleType\n\nif TYPE_CHECKING:\n    from .console import Console, ConsoleOptions, RenderResult, RenderableType\n\n\nclass Styled:\n    \"\"\"Apply a style to a renderable.\n\n    Args:\n        renderable (RenderableType): Any renderable.\n        style (StyleType): A style to apply across the entire renderable.\n    \"\"\"\n\n\n\n\n\nif __name__ == \"__main__\":  # pragma: no cover\n    from rich import print\n    from rich.panel import Panel\n\n    panel = Styled(Panel(\"hello\"), \"on blue\")\n    print(panel)\n\n[代码片段 5] 来源: style.py (第 757-759 行)\n文件: style.py\n函数: __add__\ndef __add__(self, style: Optional[\"Style\"]) -> \"Style\":\n        combined_style = self._add(style)\n        return combined_style.copy() if combined_style.link else combined_style\n\n[问题] 在该项目中,哪些文件 import(依赖)了 style.py?请尽量列全。",
+  "retrieved_sources": [
+   "style.py",
+   "styled.py",
+   "style.py",
+   "styled.py",
+   "style.py"
+  ],
+  "expected_sources": [
+   "style.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__main__",
+    "_win32_console",
+    "align",
+    "ansi",
+    "bar",
+    "color",
+    "console",
+    "default_styles",
+    "emoji",
+    "layout",
+    "live_render",
+    "markdown",
+    "markup",
+    "padding",
+    "palette",
+    "panel",
+    "progress",
+    "progress_bar",
+    "rule",
+    "screen",
+    "segment",
+    "spinner",
+    "status",
+    "styled",
+    "syntax",
+    "table",
+    "text",
+    "theme",
+    "traceback",
+    "tree"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-04",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 segment.py?请尽量列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: segment.py (第 0-0 行)\n[依赖图卡片] 文件 segment.py\n它依赖(import)的仓库内文件: cells.py, console.py, logging.py, repr.py, style.py, syntax.py, text.py\n它被这些文件依赖/使用(import 它的使用方): __main__.py, _windows_renderer.py, align.py, bar.py, console.py, control.py, emoji.py, jupyter.py, layout.py, live_render.py, markdown.py, padding.py, palette.py, panel.py, progress_bar.py, screen.py, styled.py, syntax.py, table.py, text.py, tree.py\n文件内定义的类: ControlType, Segment, Segments, SegmentLines\n文件内定义的函数: cell_length, __rich_repr__, __bool__, is_control, _split_cells, split_cells, line, apply_style, filter_control, split_lines, split_and_crop_lines, adjust_line_length, get_line_length, get_shape, set_shape, align_top, align_bottom, align_middle, simplify, strip_links, strip_styles, remove_color, divide, __init__, __rich_console__, __init__, __rich_console__\n\n[代码片段 2] 来源: segment.py (第 523-547 行)\n文件: segment.py\n函数: simplify\ndef simplify(cls, segments: Iterable[\"Segment\"]) -> Iterable[\"Segment\"]:\n        \"\"\"Simplify an iterable of segments by combining contiguous segments with the same style.\n\n        Args:\n            segments (Iterable[Segment]): An iterable of segments.\n\n        Returns:\n            Iterable[Segment]: A possibly smaller iterable of segments that will render the same way.\n        \"\"\"\n        iter_segments = iter(segments)\n        try:\n            last_segment = next(iter_segments)\n        except StopIteration:\n            return\n\n        _Segment = Segment\n        for segment in iter_segments:\n            if last_segment.style == segment.style and not segment.control:\n                last_segment = _Segment(\n                    last_segment.text + segment.text, last_segment.style\n                )\n            else:\n                yield last_segment\n                last_segment = segment\n        yield last_segment\n\n[代码片段 3] 来源: segment.py (第 111-156 行)\n文件: segment.py\n函数: _split_cells\ndef _split_cells(cls, segment: \"Segment\", cut: int) -> Tuple[\"Segment\", \"Segment\"]:\n        \"\"\"Split a segment in to two at a given cell position.\n\n        Note that splitting a double-width character, may result in that character turning\n        into two spaces.\n\n        Args:\n            segment (Segment): A segment to split.\n            cut (int): A cell position to cut on.\n\n        Returns:\n            A tuple of two segments.\n        \"\"\"\n        text, style, control = segment\n        _Segment = Segment\n        cell_length = segment.cell_length\n        if cut >= cell_length:\n            return segment, _Segment(\"\", style, control)\n\n        cell_size = get_character_cell_size\n\n        pos = int((cut / cell_length) * len(text))\n\n        while True:\n            before = text[:pos]\n            cell_pos = cell_len(before)\n            out_by = cell_pos - cut\n            if not out_by:\n                return (\n                    _Segment(before, style, control),\n                    _Segment(text[pos:], style, control),\n                )\n            if out_by == -1 and cell_size(text[pos]) == 2:\n                return (\n                    _Segment(text[:pos] + \" \", style, control),\n                    _Segment(\" \" + text[pos + 1 :], style, control),\n                )\n            if out_by == +1 and cell_size(text[pos - 1]) == 2:\n                return (\n                    _Segment(text[: pos - 1] + \" \", style, control),\n                    _Segment(\" \" + text[pos:], style, control),\n                )\n            if cell_pos < cut:\n                pos += 1\n            else:\n                pos -= 1\n\n[代码片段 4] 来源: segment.py (第 1-752 行)\n文件: segment.py\n(模块级代码:import、常量、配置)\nfrom enum import IntEnum\nfrom functools import lru_cache\nfrom itertools import filterfalse\nfrom logging import getLogger\nfrom operator import attrgetter\nfrom typing import (\n    TYPE_CHECKING,\n    Dict,\n    Iterable,\n    List,\n    NamedTuple,\n    Optional,\n    Sequence,\n    Tuple,\n    Type,\n    Union,\n)\n\nfrom .cells import (\n    _is_single_cell_widths,\n    cached_cell_len,\n    cell_len,\n    get_character_cell_size,\n    set_cell_size,\n)\nfrom .repr import Result, rich_repr\nfrom .style import Style\n\nif TYPE_CHECKING:\n    from .console import Console, ConsoleOptions, RenderResult\n\nlog = getLogger(\"rich\")\n\n\nclass ControlType(IntEnum):\n    \"\"\"Non-printable control codes which typically translate to ANSI codes.\"\"\"\n\n    BELL = 1\n    CARRIAGE_RETURN = 2\n    HOME = 3\n    CLEAR = 4\n    SHOW_CURSOR = 5\n    HIDE_CURSOR = 6\n    ENABLE_ALT_SCREEN = 7\n    DISABLE_ALT_SCREEN = 8\n    CURSOR_UP = 9\n    CURSOR_DOWN = 10\n    CURSOR_FORWARD = 11\n    CURSOR_BACKWARD = 12\n    CURSOR_MOVE_TO_COLUMN = 13\n    CURSOR_MOVE_TO = 14\n    ERASE_IN_LINE = 15\n    SET_WINDOW_TITLE = 16\n\n\nControlCode = Union[\n    Tuple[ControlType],\n    Tuple[ControlType, Union[int, str]],\n    Tuple[ControlType, int, int],\n]\n\n\n@rich_repr()\nclass Segment(NamedTuple):\n    \"\"\"A piece of text with associated style. Segments are produced by the Console render process and\n    are ultimately converted in to strings to be written to the terminal.\n\n    Args:\n        text (str): A piece of text.\n        style (:class:`~rich.style.Style`, optional): An optional style to apply to the text.\n        control (Tuple[ControlCode], optional): Optional sequence of control codes.\n\n    Attributes:\n        cell_length (int): The cell length of this Segment.\n    \"\"\"\n\n    text: str\n    style: Optional[Style] = None\n    control: Optional[Sequence[ControlCode]] = None\n\n    @property\n\n\n\n    @property\n\n    @classmethod\n    @lru_cache(1024 * 16)\n\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n    @classmethod\n\n\nclass Segments:\n    \"\"\"A simple renderable to render an iterable of segments. This class may be useful if\n    you want to print segments outside of a __rich_console__ method.\n\n    Args:\n        segments (Iterable[Segment]): An iterable of segments.\n        new_lines (bool, optional): Add new lines between segments. Defaults to False.\n    \"\"\"\n\n\n\n\nclass SegmentLines:\n\n\n\nif __name__ == \"__main__\":  # pragma: no cover\n    from rich.console import Console\n    from rich.syntax import Syntax\n    from rich.text import Text\n\n    code = \"\"\"from rich.console import Console\nconsole = Console()\ntext = Text.from_markup(\"Hello, [bold magenta]World[/]!\")\nconsole.print(text)\"\"\"\n\n    text = Text.from_markup(\"Hello, [bold magenta]World[/]!\")\n\n    console = Console()\n\n    console.rule(\"rich.Segment\")\n    console.print(\n        \"A Segment is the last step in the Rich render process before generating text with ANSI codes.\"\n    )\n    console.print(\"\\nConsider the following code:\\n\")\n    console.print(Syntax(code, \"python\", line_numbers=True))\n    console.print()\n    console.print(\n        \"When you call [b]print()[/b], Rich [i]renders[/i] the object in to the following:\\n\"\n    )\n    fragments = list(console.render(text))\n    console.print(fragments)\n    console.print()\n    console.print(\"The Segments are then processed to produce the following output:\\n\")\n    console.print(text)\n    console.print(\n        \"\\nYou will only need to know this if you are implementing your own Rich renderables.\"\n    )\n\n[代码片段 5] 来源: segment.py (第 684-693 行)\n文件: segment.py\n函数: __rich_console__\ndef __rich_console__(\n        self, console: \"Console\", options: \"ConsoleOptions\"\n    ) -> \"RenderResult\":\n        if self.new_lines:\n            line = Segment.line()\n            for segment in self.segments:\n                yield segment\n                yield line\n        else:\n            yield from self.segments\n\n[问题] 在该项目中,哪些文件 import(依赖)了 segment.py?请尽量列全。",
+  "retrieved_sources": [
+   "segment.py",
+   "segment.py",
+   "segment.py",
+   "segment.py",
+   "segment.py"
+  ],
+  "expected_sources": [
+   "segment.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__main__",
+    "_windows_renderer",
+    "align",
+    "bar",
+    "console",
+    "control",
+    "emoji",
+    "jupyter",
+    "layout",
+    "live_render",
+    "markdown",
+    "padding",
+    "palette",
+    "panel",
+    "progress_bar",
+    "screen",
+    "styled",
+    "syntax",
+    "table",
+    "text",
+    "tree"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-05",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 jupyter.py?请尽量列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: jupyter.py (第 0-0 行)\n[依赖图卡片] 文件 jupyter.py\n它依赖(import)的仓库内文件: console.py, segment.py, terminal_theme.py\n它被这些文件依赖/使用(import 它的使用方): _inspect.py, align.py, bar.py, columns.py, console.py, constrain.py, emoji.py, live.py, markdown.py, padding.py, panel.py, pretty.py, progress.py, progress_bar.py, rule.py, status.py, syntax.py, table.py, text.py, tree.py\n文件内定义的类: JupyterRenderable, JupyterMixin\n文件内定义的函数: __init__, _repr_mimebundle_, _repr_mimebundle_, _render_segments, escape, display, print\n\n[代码片段 2] 来源: jupyter.py (第 1-101 行)\n文件: jupyter.py\n(模块级代码:import、常量、配置)\nfrom typing import TYPE_CHECKING, Any, Dict, Iterable, List, Sequence\n\nif TYPE_CHECKING:\n    from rich.console import ConsoleRenderable\n\nfrom . import get_console\nfrom .segment import Segment\nfrom .terminal_theme import DEFAULT_TERMINAL_THEME\n\nif TYPE_CHECKING:\n    from rich.console import ConsoleRenderable\n\nJUPYTER_HTML_FORMAT = \"\"\"\\\n<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\">{code}</pre>\n\"\"\"\n\n\nclass JupyterRenderable:\n    \"\"\"A shim to write html to Jupyter notebook.\"\"\"\n\n\n\n\nclass JupyterMixin:\n    \"\"\"Add to an Rich renderable to make it render in Jupyter notebook.\"\"\"\n\n    __slots__ = ()\n\n[代码片段 3] 来源: jupyter.py (第 21-23 行)\n文件: jupyter.py\n函数: __init__\ndef __init__(self, html: str, text: str) -> None:\n        self.html = html\n        self.text = text\n\n[代码片段 4] 来源: jupyter.py (第 84-95 行)\n文件: jupyter.py\n函数: display\ndef display(segments: Iterable[Segment], text: str) -> None:\n    \"\"\"Render segments to Jupyter.\"\"\"\n    html = _render_segments(segments)\n    jupyter_renderable = JupyterRenderable(html, text)\n    try:\n        from IPython.display import display as ipython_display\n\n        ipython_display(jupyter_renderable)\n    except ModuleNotFoundError:\n        # Handle the case where the Console has force_jupyter=True,\n        # but IPython is not installed.\n        pass\n\n[代码片段 5] 来源: jupyter.py (第 59-81 行)\n文件: jupyter.py\n函数: _render_segments\ndef _render_segments(segments: Iterable[Segment]) -> str:\n    def escape(text: str) -> str:\n        \"\"\"Escape html.\"\"\"\n        return text.replace(\"&\", \"&amp;\").replace(\"<\", \"&lt;\").replace(\">\", \"&gt;\")\n\n    fragments: List[str] = []\n    append_fragment = fragments.append\n    theme = DEFAULT_TERMINAL_THEME\n    for text, style, control in Segment.simplify(segments):\n        if control:\n            continue\n        text = escape(text)\n        if style:\n            rule = style.get_html_style(theme)\n            text = f'<span style=\"{rule}\">{text}</span>' if rule else text\n            if style.link:\n                text = f'<a href=\"{style.link}\" target=\"_blank\">{text}</a>'\n        append_fragment(text)\n\n    code = \"\".join(fragments)\n    html = JUPYTER_HTML_FORMAT.format(code=code)\n\n    return html\n\n[问题] 在该项目中,哪些文件 import(依赖)了 jupyter.py?请尽量列全。",
+  "retrieved_sources": [
+   "jupyter.py",
+   "jupyter.py",
+   "jupyter.py",
+   "jupyter.py",
+   "jupyter.py"
+  ],
+  "expected_sources": [
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_inspect",
+    "align",
+    "bar",
+    "columns",
+    "console",
+    "constrain",
+    "emoji",
+    "live",
+    "markdown",
+    "padding",
+    "panel",
+    "pretty",
+    "progress",
+    "progress_bar",
+    "rule",
+    "status",
+    "syntax",
+    "table",
+    "text",
+    "tree"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-06",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 measure.py?请尽量列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: measure.py (第 0-0 行)\n[依赖图卡片] 文件 measure.py\n它依赖(import)的仓库内文件: console.py, protocol.py\n它被这些文件依赖/使用(import 它的使用方): __main__.py, align.py, bar.py, columns.py, console.py, constrain.py, containers.py, padding.py, panel.py, pretty.py, progress_bar.py, rule.py, spinner.py, styled.py, syntax.py, table.py, text.py, tree.py\n文件内定义的类: Measurement\n文件内定义的函数: span, normalize, with_maximum, with_minimum, clamp, get, measure_renderables\n\n[代码片段 2] 来源: measure.py (第 125-151 行)\n文件: measure.py\n函数: measure_renderables\ndef measure_renderables(\n    console: \"Console\",\n    options: \"ConsoleOptions\",\n    renderables: Sequence[\"RenderableType\"],\n) -> \"Measurement\":\n    \"\"\"Get a measurement that would fit a number of renderables.\n\n    Args:\n        console (~rich.console.Console): Console instance.\n        options (~rich.console.ConsoleOptions): Console options.\n        renderables (Iterable[RenderableType]): One or more renderable objects.\n\n    Returns:\n        Measurement: Measurement object containing range of character widths required to\n            contain all given renderables.\n    \"\"\"\n    if not renderables:\n        return Measurement(0, 0)\n    get_measurement = Measurement.get\n    measurements = [\n        get_measurement(console, options, renderable) for renderable in renderables\n    ]\n    measured_width = Measurement(\n        max(measurements, key=itemgetter(0)).minimum,\n        max(measurements, key=itemgetter(1)).maximum,\n    )\n    return measured_width\n\n[代码片段 3] 来源: measure.py (第 1-151 行)\n文件: measure.py\n(模块级代码:import、常量、配置)\nfrom operator import itemgetter\nfrom typing import TYPE_CHECKING, Callable, NamedTuple, Optional, Sequence\n\nfrom . import errors\nfrom .protocol import is_renderable, rich_cast\n\nif TYPE_CHECKING:\n    from .console import Console, ConsoleOptions, RenderableType\n\n\nclass Measurement(NamedTuple):\n    \"\"\"Stores the minimum and maximum widths (in characters) required to render an object.\"\"\"\n\n    minimum: int\n    \"\"\"Minimum number of cells required to render.\"\"\"\n    maximum: int\n    \"\"\"Maximum number of cells required to render.\"\"\"\n\n    @property\n\n\n\n\n\n    @classmethod\n\n[代码片段 4] 来源: console.py (第 1264-1279 行)\n[调用图卡片] 函数 measure\n定义位置: console.py 第 1264-1279 行\n它调用的仓库内函数: get\n它被这些函数调用: __rich_console__ [__main__.py], __rich_console__ [__main__.py], __rich_measure__ [__main__.py]\n\n[代码片段 5] 来源: measure.py (第 20-22 行)\n文件: measure.py\n函数: span\ndef span(self) -> int:\n        \"\"\"Get difference between maximum and minimum.\"\"\"\n        return self.maximum - self.minimum\n\n[问题] 在该项目中,哪些文件 import(依赖)了 measure.py?请尽量列全。",
+  "retrieved_sources": [
+   "measure.py",
+   "measure.py",
+   "measure.py",
+   "console.py",
+   "measure.py"
+  ],
+  "expected_sources": [
+   "measure.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__main__",
+    "align",
+    "bar",
+    "columns",
+    "console",
+    "constrain",
+    "containers",
+    "padding",
+    "panel",
+    "pretty",
+    "progress_bar",
+    "rule",
+    "spinner",
+    "styled",
+    "syntax",
+    "table",
+    "text",
+    "tree"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-01",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,console.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: console.py (第 0-0 行)\n[依赖图卡片] 文件 console.py\n它依赖(import)的仓库内文件: _emoji_replace.py, _export_format.py, _fileno.py, _log_render.py, _null_file.py, _win32_console.py, _windows.py, _windows_renderer.py, abc.py, align.py, cells.py, color.py, control.py, emoji.py, highlighter.py, json.py, jupyter.py, live.py, markup.py, measure.py, pager.py, pretty.py, protocol.py, region.py, rule.py, scope.py, screen.py, segment.py, status.py, style.py, styled.py, terminal_theme.py, text.py, theme.py, traceback.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, __main__.py, _inspect.py, _log_render.py, _win32_console.py, _wrap.py, align.py, ansi.py, bar.py, box.py, color.py, columns.py, constrain.py, containers.py, control.py, default_styles.py, diagnose.py, emoji.py, file_proxy.py, highlighter.py, json.py, jupyter.py, layout.py, live.py, live_render.py, logging.py, markdown.py, measure.py, padding.py, pager.py, palette.py, panel.py, pretty.py, progress.py, progress_bar.py, prompt.py, protocol.py, repr.py, rule.py, scope.py, screen.py, segment.py, spinner.py, status.py, styled.py, syntax.py, table.py, text.py, traceback.py, tree.py\n文件内定义的类: NoChange, ConsoleDimensions, ConsoleOptions, RichCast, ConsoleRenderable, CaptureError, NewLine, ScreenUpdate, Capture, ThemeContext, PagerContext, ScreenContext, Group, ConsoleThreadLocals, RenderHook, Console\n文件内定义的函数: ascii_only, copy, update, update_width, update_height, reset_height, update_dimensions, __rich__, __rich_console__, __init__, __rich_console__, __init__, __rich_console__, __init__, __enter__, __exit__, get, __init__, __enter__, __exit__, __init__, __enter__, __exit__, __init__, update, __enter__, __exit__, __init__, renderables, __rich_measure__\n\n[代码片段 2] 来源: console.py (第 631-753 行)\n文件: console.py\n函数: __init__\ndef __init__(\n        self,\n        *,\n        color_system: Optional[\n            Literal[\"auto\", \"standard\", \"256\", \"truecolor\", \"windows\"]\n        ] = \"auto\",\n        force_terminal: Optional[bool] = None,\n        force_jupyter: Optional[bool] = None,\n        force_interactive: Optional[bool] = None,\n        soft_wrap: bool = False,\n        theme: Optional[Theme] = None,\n        stderr: bool = False,\n        file: Optional[IO[str]] = None,\n        quiet: bool = False,\n        width: Optional[int] = None,\n        height: Optional[int] = None,\n        style: Optional[StyleType] = None,\n        no_color: Optional[bool] = None,\n        tab_size: int = 8,\n        record: bool = False,\n        markup: bool = True,\n        emoji: bool = True,\n        emoji_variant: Optional[EmojiVariant] = None,\n        highlight: bool = True,\n        log_time: bool = True,\n        log_path: bool = True,\n        log_time_format: Union[str, FormatTimeCallable] = \"[%X]\",\n        highlighter: Optional[\"HighlighterType\"] = ReprHighlighter(),\n        legacy_windows: Optional[bool] = None,\n        safe_box: bool = True,\n        get_datetime: Optional[Callable[[], datetime]] = None,\n        get_time: Optional[Callable[[], float]] = None,\n        _environ: Optional[Mapping[str, str]] = None,\n    ):\n        # Copy of os.environ allows us to replace it for testing\n        if _environ is not None:\n            self._environ = _environ\n\n        self.is_jupyter = _is_jupyter() if force_jupyter is None else force_jupyter\n        if self.is_jupyter:\n            if width is None:\n                jupyter_columns = self._environ.get(\"JUPYTER_COLUMNS\")\n                if jupyter_columns is not None and jupyter_columns.isdigit():\n                    width = int(jupyter_columns)\n                else:\n                    width = JUPYTER_DEFAULT_COLUMNS\n            if height is None:\n                jupyter_lines = self._environ.get(\"JUPYTER_LINES\")\n                if jupyter_lines is not None and jupyter_lines.isdigit():\n                    height = int(jupyter_lines)\n                else:\n                    height = JUPYTER_DEFAULT_LINES\n\n        self.tab_size = tab_size\n        self.record = record\n        self._markup = markup\n        self._emoji = emoji\n        self._emoji_variant: Optional[EmojiVariant] = emoji_variant\n        self._highlight = highlight\n        self.legacy_windows: bool = (\n            (detect_legacy_windows() and not self.is_jupyter)\n            if legacy_windows is None\n            else legacy_windows\n        )\n\n        if width is None:\n            columns = self._environ.get(\"COLUMNS\")\n            if columns is not None and columns.isdigit():\n                width = int(columns) - self.legacy_windows\n        if height is None:\n            lines = self._environ.get(\"LINES\")\n            if lines is not None and lines.isdigit():\n                height = int(lines)\n\n        self.soft_wrap = soft_wrap\n        self._width = width\n        self._height = height\n\n        self._color_system: Optional[ColorSystem]\n\n        self._force_terminal = None\n        if force_terminal is not None:\n            self._force_terminal = force_terminal\n\n        self._file = file\n        self.quiet = quiet\n        self.stderr = stderr\n\n        if color_system is None:\n            self._color_system = None\n        elif color_system == \"auto\":\n            self._color_system = self._detect_color_system()\n        else:\n            self._color_system = COLOR_SYSTEMS[color_system]\n\n        self._lock = threading.RLock()\n        self._log_render = LogRender(\n            show_time=log_time,\n            show_path=log_path,\n            time_format=log_time_format,\n        )\n        self.highlighter: HighlighterType = highlighter or _null_highlighter\n        self.safe_box = safe_box\n        self.get_datetime = get_datetime or datetime.now\n        self.get_time = get_time or monotonic\n        self.style = style\n        self.no_color = (\n            no_color if no_color is not None else \"NO_COLOR\" in self._environ\n        )\n        self.is_interactive = (\n            (self.is_terminal and not self.is_dumb_terminal)\n            if force_interactive is None\n            else force_interactive\n        )\n\n        self._record_buffer_lock = threading.RLock()\n        self._thread_locals = ConsoleThreadLocals(\n            theme_stack=ThemeStack(themes.DEFAULT if theme is None else theme)\n        )\n        self._record_buffer: List[Segment] = []\n        self._render_hooks: List[RenderHook] = []\n        self._live: Optional[\"Live\"] = None\n        self._is_alt_screen = False\n\n[代码片段 3] 来源: console.py (第 1-2661 行)\n文件: console.py\n(模块级代码:import、常量、配置)\nimport inspect\nimport os\nimport sys\nimport threading\nimport zlib\nfrom abc import ABC, abstractmethod\nfrom dataclasses import dataclass, field\nfrom datetime import datetime\nfrom functools import wraps\nfrom getpass import getpass\nfrom html import escape\nfrom inspect import isclass\nfrom itertools import islice\nfrom math import ceil\nfrom time import monotonic\nfrom types import FrameType, ModuleType, TracebackType\nfrom typing import (\n    IO,\n    TYPE_CHECKING,\n    Any,\n    Callable,\n    Dict,\n    Iterable,\n    List,\n    Mapping,\n    NamedTuple,\n    Optional,\n    TextIO,\n    Tuple,\n    Type,\n    Union,\n    cast,\n)\n\nfrom rich._null_file import NULL_FILE\n\nif sys.version_info >= (3, 8):\n    from typing import Literal, Protocol, runtime_checkable\nelse:\n    from typing_extensions import (\n        Literal,\n        Protocol,\n        runtime_checkable,\n    )  # pragma: no cover\n\nfrom . import errors, themes\nfrom ._emoji_replace import _emoji_replace\nfrom ._export_format import CONSOLE_HTML_FORMAT, CONSOLE_SVG_FORMAT\nfrom ._fileno import get_fileno\nfrom ._log_render import FormatTimeCallable, LogRender\nfrom .align import Align, AlignMethod\nfrom .color import ColorSystem, blend_rgb\nfrom .control import Control\nfrom .emoji import EmojiVariant\nfrom .highlighter import NullHighlighter, ReprHighlighter\nfrom .markup import render as render_markup\nfrom .measure import Measurement, measure_renderables\nfrom .pager import Pager, SystemPager\nfrom .pretty import Pretty, is_expandable\nfrom .protocol import rich_cast\nfrom .region import Region\nfrom .scope import render_scope\nfrom .screen import Screen\nfrom .segment import Segment\nfrom .style import Style, StyleType\nfrom .styled import Styled\nfrom .terminal_theme import DEFAULT_TERMINAL_THEME, SVG_EXPORT_THEME, TerminalTheme\nfrom .text import Text, TextType\nfrom .theme import Theme, ThemeStack\n\nif TYPE_CHECKING:\n    from ._windows import WindowsConsoleFeatures\n    from .live import Live\n    from .status import Status\n\nJUPYTER_DEFAULT_COLUMNS = 115\nJUPYTER_DEFAULT_LINES = 100\nWINDOWS = sys.platform == \"win32\"\n\nHighlighterType = Callable[[Union[str, \"Text\"]], \"Text\"]\nJustifyMethod = Literal[\"default\", \"left\", \"center\", \"right\", \"full\"]\nOverflowMethod = Literal[\"fold\", \"crop\", \"ellipsis\", \"ignore\"]\n\n\nclass NoChange:\n    pass\n\n\nNO_CHANGE = NoChange()\n\ntry:\n    _STDIN_FILENO = sys.__stdin__.fileno()  # type: ignore[union-attr]\nexcept Exception:\n    _STDIN_FILENO = 0\ntry:\n    _STDOUT_FILENO = sys.__stdout__.fileno()  # type: ignore[union-attr]\nexcept Exception:\n    _STDOUT_FILENO = 1\ntry:\n    _STDERR_FILENO = sys.__stderr__.fileno()  # type: ignore[union-attr]\nexcept Exception:\n    _STDERR_FILENO = 2\n\n_STD_STREAMS = (_STDIN_FILENO, _STDOUT_FILENO, _STDERR_FILENO)\n_STD_STREAMS_OUTPUT = (_STDOUT_FILENO, _STDERR_FILENO)\n\n\n_TERM_COLORS = {\n    \"kitty\": ColorSystem.EIGHT_BIT,\n    \"256color\": ColorSystem.EIGHT_BIT,\n    \"16color\": ColorSystem.STANDARD,\n}\n\n\nclass ConsoleDimensions(NamedTuple):\n    \"\"\"Size of the terminal.\"\"\"\n\n    width: int\n    \"\"\"The width of the console in 'cells'.\"\"\"\n    height: int\n    \"\"\"The height of the console in lines.\"\"\"\n\n\n@dataclass\nclass ConsoleOptions:\n    \"\"\"Options for __rich_console__ method.\"\"\"\n\n    size: ConsoleDimensions\n    \"\"\"Size of console.\"\"\"\n    legacy_windows: bool\n    \"\"\"legacy_windows: flag for legacy windows.\"\"\"\n    min_width: int\n    \"\"\"Minimum width of renderable.\"\"\"\n    max_width: int\n    \"\"\"Maximum width of renderable.\"\"\"\n    is_terminal: bool\n    \"\"\"True if the target is a terminal, otherwise False.\"\"\"\n    encoding: str\n    \"\"\"Encoding of terminal.\"\"\"\n    max_height: int\n    \"\"\"Height of container (starts as terminal)\"\"\"\n    justify: Optional[JustifyMethod] = None\n    \"\"\"Justify value override for renderable.\"\"\"\n    overflow: Optional[OverflowMethod] = None\n    \"\"\"Overflow value override for renderable.\"\"\"\n    no_wrap: Optional[bool] = False\n    \"\"\"Disable wrapping for text.\"\"\"\n    highlight: Optional[bool] = None\n    \"\"\"Highlight override for render_str.\"\"\"\n    markup: Optional[bool] = None\n    \"\"\"Enable markup when rendering strings.\"\"\"\n    height: Optional[int] = None\n\n    @property\n\n\n\n\n\n\n\n\n@runtime_checkable\nclass RichCast(Protocol):\n    \"\"\"An object that may be 'cast' to a console renderable.\"\"\"\n\n\n\n@runtime_checkable\nclass ConsoleRenderable(Protocol):\n    \"\"\"An object that supports the console protocol.\"\"\"\n\n\n\n# A type that may be rendered by Console.\nRenderableType = Union[ConsoleRenderable, RichCast, str]\n\"\"\"A string or any object that may be rendered by Rich.\"\"\"\n\n# The result of calling a __rich_console__ method.\nRenderResult = Iterable[Union[RenderableType, Segment]]\n\n_null_highlighter = NullHighlighter()\n\n\nclass CaptureError(Exception):\n    \"\"\"An error in the Capture context manager.\"\"\"\n\n\nclass NewLine:\n    \"\"\"A renderable to generate new line(s)\"\"\"\n\n\n\n\nclass ScreenUpdate:\n    \"\"\"Render a list of lines at a given offset.\"\"\"\n\n\n\n\nclass Capture:\n    \"\"\"Context manager to capture the result of printing to the console.\n    See :meth:`~rich.console.Console.capture` for how to use.\n\n    Args:\n        console (Console): A console instance to capture output.\n    \"\"\"\n\n\n\n\n\n\nclass ThemeContext:\n    \"\"\"A context manager to use a temporary theme. See :meth:`~rich.console.Console.use_theme` for usage.\"\"\"\n\n\n\n\n\nclass PagerContext:\n    \"\"\"A context manager that 'pages' content. See :meth:`~rich.console.Console.pager` for usage.\"\"\"\n\n\n\n\n\nclass ScreenContext:\n    \"\"\"A context manager that enables an alternative screen. See :meth:`~rich.console.Console.screen` for usage.\"\"\"\n\n\n\n\n\n\nclass Group:\n    \"\"\"Takes a group of renderables and returns a renderable object that renders the group.\n\n    Args:\n        renderables (Iterable[RenderableType]): An iterable of renderable objects.\n        fit (bool, optional): Fit dimension of group to contents, or fill available space. Defaults to True.\n    \"\"\"\n\n\n    @property\n\n\n\n\n\n\n\n\nCOLOR_SYSTEMS = {\n    \"standard\": ColorSystem.STANDARD,\n    \"256\": ColorSystem.EIGHT_BIT,\n    \"truecolor\": ColorSystem.TRUECOLOR,\n    \"windows\": ColorSystem.WINDOWS,\n}\n\n_COLOR_SYSTEMS_NAMES = {system: name for name, system in COLOR_SYSTEMS.items()}\n\n\n@dataclass\nclass ConsoleThreadLocals(threading.local):\n    \"\"\"Thread local values for Console context.\"\"\"\n\n    theme_stack: ThemeStack\n    buffer: List[Segment] = field(default_factory=list)\n    buffer_index: int = 0\n\n\nclass RenderHook(ABC):\n    \"\"\"Provides hooks in to the render process.\"\"\"\n\n    @abstractmethod\n\n\n_windows_console_features: Optional[\"WindowsConsoleFeatures\"] = None\n\n\n\n\n\n\nclass Console:\n    \"\"\"A high level console interface.\n\n    Args:\n        color_system (str, optional): The color system supported by your terminal,\n            either ``\"standard\"``, ``\"256\"`` or ``\"truecolor\"``. Leave as ``\"auto\"`` to autodetect.\n        force_terminal (Optional[bool], optional): Enable/disable terminal control codes, or None to auto-detect terminal. Defaults to None.\n        force_jupyter (Optional[bool], optional): Enable/disable Jupyter rendering, or None to auto-detect Jupyter. Defaults to None.\n        force_interactive (Optional[bool], optional): Enable/disable interactive mode, or None to auto detect. Defaults to None.\n        soft_wrap (Optional[bool], optional): Set soft wrap default on print method. Defaults to False.\n        theme (Theme, optional): An optional style theme object, or ``None`` for default theme.\n        stderr (bool, optional): Use stderr rather than stdout if ``file`` is not specified. Defaults to False.\n        file (IO, optional): A file object where the console should write to. Defaults to stdout.\n        quiet (bool, Optional): Boolean to suppress all output. Defaults to False.\n        width (int, optional): The width of the terminal. Leave as default to auto-detect width.\n        height (int, optional): The height of the terminal. Leave as default to auto-detect height.\n        style (StyleType, optional): Style to apply to all output, or None for no style. Defaults to None.\n        no_color (Optional[bool], optional): Enabled no color mode, or None to auto detect. Defaults to None.\n        tab_size (int, optional): Number of spaces used to replace a tab character. Defaults to 8.\n        record (bool, optional): Boolean to enable recording of terminal output,\n            required to call :meth:`export_html`, :meth:`export_svg`, and :meth:`export_text`. Defaults to False.\n        markup (bool, optional): Boolean to enable :ref:`console_markup`. Defaults to True.\n        emoji (bool, optional): Enable emoji code. Defaults to True.\n        emoji_variant (str, optional): Optional emoji variant, either \"text\" or \"emoji\". Defaults to None.\n        highlight (bool, optional): Enable automatic highlighting. Defaults to True.\n        log_time (bool, optional): Boolean to enable logging of time by :meth:`log` methods. Defaults to True.\n        log_path (bool, optional): Boolean to enable the logging of the caller by :meth:`log`. Defaults to True.\n        log_time_format (Union[str, TimeFormatterCallable], optional): If ``log_time`` is enabled, either string for strftime or callable that formats the time. Defaults to \"[%X] \".\n        highlighter (HighlighterType, optional): Default highlighter.\n        legacy_windows (bool, optional): Enable legacy Windows mode, or ``None`` to auto detect. Defaults to ``None``.\n        safe_box (bool, optional): Restrict box options that don't render on legacy Windows.\n        get_datetime (Callable[[], datetime], optional): Callable that gets the current time as a datetime.datetime object (used by Console.log),\n            or None for datetime.now.\n        get_time (Callable[[], time], optional): Callable that gets the current time in seconds, default uses time.monotonic.\n    \"\"\"\n\n    _environ: Mapping[str, str] = os.environ\n\n\n\n    @property\n\n    @file.setter\n\n    @property\n\n    @property\n\n    @_buffer_index.setter\n\n    @property\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    @property\n\n    @property\n\n    @property\n\n    @property\n\n    @property\n\n    @property\n\n    @size.setter\n\n    @property\n\n    @width.setter\n\n    @property\n\n    @height.setter\n\n\n\n\n\n\n\n\n\n    @property\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    @staticmethod\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nif __name__ == \"__main__\":  # pragma: no cover\n    console = Console(record=True)\n\n    console.log(\n        \"JSONRPC [i]request[/i]\",\n        5,\n        1.3,\n        True,\n        False,\n        None,\n        {\n            \"jsonrpc\": \"2.0\",\n            \"method\": \"subtract\",\n            \"params\": {\"minuend\": 42, \"subtrahend\": 23},\n            \"id\": 3,\n        },\n    )\n\n    console.log(\"Hello, World!\", \"{'a': 1}\", repr(console))\n\n    console.print(\n        {\n            \"name\": None,\n            \"empty\": [],\n            \"quiz\": {\n                \"sport\": {\n                    \"answered\": True,\n                    \"q1\": {\n                        \"question\": \"Which one is correct team name in NBA?\",\n                        \"options\": [\n                            \"New York Bulls\",\n                            \"Los Angeles Kings\",\n                            \"Golden State Warriors\",\n                            \"Huston Rocket\",\n                        ],\n                        \"answer\": \"Huston Rocket\",\n                    },\n                },\n                \"maths\": {\n                    \"answered\": False,\n                    \"q1\": {\n                        \"question\": \"5 + 7 = ?\",\n                        \"options\": [10, 11, 12, 13],\n                        \"answer\": 12,\n                    },\n                    \"q2\": {\n                        \"question\": \"12 - 8 = ?\",\n                        \"options\": [1, 2, 3, 4],\n                        \"answer\": 4,\n                    },\n                },\n            },\n        }\n    )\n\n[代码片段 4] 来源: console.py (第 2200-2273 行)\n文件: console.py\n函数: export_html\ndef export_html(\n        self,\n        *,\n        theme: Optional[TerminalTheme] = None,\n        clear: bool = True,\n        code_format: Optional[str] = None,\n        inline_styles: bool = False,\n    ) -> str:\n        \"\"\"Generate HTML from console contents (requires record=True argument in constructor).\n\n        Args:\n            theme (TerminalTheme, optional): TerminalTheme object containing console colors.\n            clear (bool, optional): Clear record buffer after exporting. Defaults to ``True``.\n            code_format (str, optional): Format string to render HTML. In addition to '{foreground}',\n                '{background}', and '{code}', should contain '{stylesheet}' if inline_styles is ``False``.\n            inline_styles (bool, optional): If ``True`` styles will be inlined in to spans, which makes files\n                larger but easier to cut and paste markup. If ``False``, styles will be embedded in a style tag.\n                Defaults to False.\n\n        Returns:\n            str: String containing console contents as HTML.\n        \"\"\"\n        assert (\n            self.record\n        ), \"To export console contents set record=True in the constructor or instance\"\n        fragments: List[str] = []\n        append = fragments.append\n        _theme = theme or DEFAULT_TERMINAL_THEME\n        stylesheet = \"\"\n\n        render_code_format = CONSOLE_HTML_FORMAT if code_format is None else code_format\n\n        with self._record_buffer_lock:\n            if inline_styles:\n                for text, style, _ in Segment.filter_control(\n                    Segment.simplify(self._record_buffer)\n                ):\n                    text = escape(text)\n                    if style:\n                        rule = style.get_html_style(_theme)\n                        if style.link:\n                            text = f'<a href=\"{style.link}\">{text}</a>'\n                        text = f'<span style=\"{rule}\">{text}</span>' if rule else text\n                    append(text)\n            else:\n                styles: Dict[str, int] = {}\n                for text, style, _ in Segment.filter_control(\n                    Segment.simplify(self._record_buffer)\n                ):\n                    text = escape(text)\n                    if style:\n                        rule = style.get_html_style(_theme)\n                        style_number = styles.setdefault(rule, len(styles) + 1)\n                        if style.link:\n                            text = f'<a class=\"r{style_number}\" href=\"{style.link}\">{text}</a>'\n                        else:\n                            text = f'<span class=\"r{style_number}\">{text}</span>'\n                    append(text)\n                stylesheet_rules: List[str] = []\n                stylesheet_append = stylesheet_rules.append\n                for style_rule, style_number in styles.items():\n                    if style_rule:\n                        stylesheet_append(f\".r{style_number} {{{style_rule}}}\")\n                stylesheet = \"\\n\".join(stylesheet_rules)\n\n            rendered_code = render_code_format.format(\n                code=\"\".join(fragments),\n                stylesheet=stylesheet,\n                foreground=_theme.foreground_color.hex,\n                background=_theme.background_color.hex,\n            )\n            if clear:\n                del self._record_buffer[:]\n        return rendered_code\n\n[代码片段 5] 来源: progress.py (第 1147-1148 行)\n[调用图卡片] 函数 console\n定义位置: progress.py 第 1147-1148 行\n它调用的仓库内函数: (无)\n它被这些函数调用: (没有仓库内调用方)\n\n[问题] 在该项目中,console.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "retrieved_sources": [
+   "console.py",
+   "console.py",
+   "console.py",
+   "console.py",
+   "progress.py"
+  ],
+  "expected_sources": [
+   "console.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_emoji_replace",
+    "_export_format",
+    "_fileno",
+    "_log_render",
+    "_null_file",
+    "_win32_console",
+    "_windows",
+    "_windows_renderer",
+    "abc",
+    "align",
+    "cells",
+    "color",
+    "control",
+    "emoji",
+    "highlighter",
+    "json",
+    "jupyter",
+    "live",
+    "markup",
+    "measure",
+    "pager",
+    "pretty",
+    "protocol",
+    "region",
+    "rule",
+    "scope",
+    "screen",
+    "segment",
+    "status",
+    "style",
+    "styled",
+    "terminal_theme",
+    "text",
+    "theme",
+    "traceback"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-02",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,text.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: text.py (第 0-0 行)\n[依赖图卡片] 文件 text.py\n它依赖(import)的仓库内文件: _loop.py, _pick.py, _wrap.py, align.py, ansi.py, cells.py, console.py, containers.py, control.py, emoji.py, jupyter.py, markup.py, measure.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): __main__.py, _inspect.py, _log_render.py, abc.py, ansi.py, box.py, color.py, columns.py, console.py, containers.py, default_styles.py, file_proxy.py, highlighter.py, json.py, live.py, live_render.py, logging.py, markdown.py, markup.py, palette.py, panel.py, pretty.py, progress.py, prompt.py, rule.py, scope.py, segment.py, spinner.py, syntax.py, table.py, traceback.py\n文件内定义的类: Span, Text\n文件内定义的函数: __repr__, __bool__, split, move, right_crop, extend, __init__, __len__, __bool__, __str__, __repr__, __add__, __eq__, __contains__, __getitem__, get_text_at, cell_len, markup, from_markup, from_ansi, styled, assemble, plain, plain, spans, spans, blank_copy, copy, stylize, stylize_before\n\n[代码片段 2] 来源: text.py (第 708-718 行)\n文件: text.py\n函数: __rich_measure__\ndef __rich_measure__(\n        self, console: \"Console\", options: \"ConsoleOptions\"\n    ) -> Measurement:\n        text = self.plain\n        lines = text.splitlines()\n        max_text_width = max(cell_len(line) for line in lines) if lines else 0\n        words = text.split()\n        min_text_width = (\n            max(cell_len(word) for word in words) if words else max_text_width\n        )\n        return Measurement(min_text_width, max_text_width)\n\n[代码片段 3] 来源: text.py (第 176-177 行)\n文件: text.py\n函数: __repr__\ndef __repr__(self) -> str:\n        return f\"<text {self.plain!r} {self._spans!r} {self.style!r}>\"\n\n[代码片段 4] 来源: text.py (第 57-58 行)\n文件: text.py\n函数: __repr__\ndef __repr__(self) -> str:\n        return f\"Span({self.start}, {self.end}, {self.style!r})\"\n\n[代码片段 5] 来源: text.py (第 199-210 行)\n文件: text.py\n函数: get_text_at\ndef get_text_at(offset: int) -> \"Text\":\n            _Span = Span\n            text = Text(\n                self.plain[offset],\n                spans=[\n                    _Span(0, 1, style)\n                    for start, end, style in self._spans\n                    if end > offset >= start\n                ],\n                end=\"\",\n            )\n            return text\n\n[问题] 在该项目中,text.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "retrieved_sources": [
+   "text.py",
+   "text.py",
+   "text.py",
+   "text.py",
+   "text.py"
+  ],
+  "expected_sources": [
+   "text.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_loop",
+    "_pick",
+    "_wrap",
+    "align",
+    "ansi",
+    "cells",
+    "console",
+    "containers",
+    "control",
+    "emoji",
+    "jupyter",
+    "markup",
+    "measure",
+    "segment",
+    "style"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-03",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,layout.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: layout.py (第 0-0 行)\n[依赖图卡片] 文件 layout.py\n它依赖(import)的仓库内文件: _ratio.py, abc.py, align.py, console.py, highlighter.py, panel.py, pretty.py, region.py, repr.py, segment.py, style.py, styled.py, table.py, tree.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: LayoutRender, LayoutError, NoSplitter, _Placeholder, Splitter, RowSplitter, ColumnSplitter, Layout\n文件内定义的函数: __init__, __rich_console__, get_tree_icon, divide, get_tree_icon, divide, get_tree_icon, divide, __init__, __rich_repr__, renderable, children, map, get, __getitem__, tree, summary, recurse, split, add_split, split_row, split_column, unsplit, update, refresh_screen, _make_region_map, render, __rich_console__\n\n[代码片段 2] 来源: layout.py (第 216-220 行)\n文件: layout.py\n函数: __getitem__\ndef __getitem__(self, name: str) -> \"Layout\":\n        layout = self.get(name)\n        if layout is None:\n            raise KeyError(f\"No layout with name {name!r}\")\n        return layout\n\n[代码片段 3] 来源: layout.py (第 56-58 行)\n文件: layout.py\n函数: __init__\ndef __init__(self, layout: \"Layout\", style: StyleType = \"\") -> None:\n        self.layout = layout\n        self.style = style\n\n[代码片段 4] 来源: layout.py (第 156-175 行)\n文件: layout.py\n函数: __init__\ndef __init__(\n        self,\n        renderable: Optional[RenderableType] = None,\n        *,\n        name: Optional[str] = None,\n        size: Optional[int] = None,\n        minimum_size: int = 1,\n        ratio: int = 1,\n        visible: bool = True,\n    ) -> None:\n        self._renderable = renderable or _Placeholder(self)\n        self.size = size\n        self.minimum_size = minimum_size\n        self.ratio = ratio\n        self.name = name\n        self.visible = visible\n        self.splitter: Splitter = self.splitters[\"column\"]()\n        self._children: List[Layout] = []\n        self._render_map: RenderMap = {}\n        self._lock = RLock()\n\n[代码片段 5] 来源: layout.py (第 395-415 行)\n文件: layout.py\n函数: __rich_console__\ndef __rich_console__(\n        self, console: Console, options: ConsoleOptions\n    ) -> RenderResult:\n        with self._lock:\n            width = options.max_width or console.width\n            height = options.height or console.height\n            render_map = self.render(console, options.update_dimensions(width, height))\n            self._render_map = render_map\n            layout_lines: List[List[Segment]] = [[] for _ in range(height)]\n            _islice = islice\n            for region, lines in render_map.values():\n                _x, y, _layout_width, layout_height = region\n                for row, line in zip(\n                    _islice(layout_lines, y, y + layout_height), lines\n                ):\n                    row.extend(line)\n\n            new_line = Segment.line()\n            for layout_row in layout_lines:\n                yield from layout_row\n                yield new_line\n\n[问题] 在该项目中,layout.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "retrieved_sources": [
+   "layout.py",
+   "layout.py",
+   "layout.py",
+   "layout.py",
+   "layout.py"
+  ],
+  "expected_sources": [
+   "layout.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_ratio",
+    "abc",
+    "align",
+    "console",
+    "highlighter",
+    "panel",
+    "pretty",
+    "region",
+    "repr",
+    "segment",
+    "style",
+    "styled",
+    "table",
+    "tree"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-04",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,table.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: table.py (第 0-0 行)\n[依赖图卡片] 文件 table.py\n它依赖(import)的仓库内文件: _loop.py, _pick.py, _ratio.py, _timer.py, align.py, console.py, highlighter.py, jupyter.py, measure.py, padding.py, protocol.py, segment.py, style.py, text.py\n它被这些文件依赖/使用(import 它的使用方): __main__.py, _inspect.py, _log_render.py, box.py, color.py, columns.py, default_styles.py, layout.py, live.py, markdown.py, markup.py, palette.py, progress.py, scope.py, spinner.py, tree.py\n文件内定义的类: Column, Row, _Cell, Table\n文件内定义的函数: copy, cells, flexible, __init__, grid, expand, expand, _extra_width, row_count, get_row_style, __rich_measure__, padding, padding, add_column, add_row, add_cell, add_section, __rich_console__, render_annotation, _calculate_column_widths, _collapse_widths, _get_cells, get_padding, _get_padding_width, _measure_column, _render, align_cell, header\n\n[代码片段 2] 来源: table.py (第 1-1007 行)\n文件: table.py\n(模块级代码:import、常量、配置)\nfrom dataclasses import dataclass, field, replace\nfrom typing import (\n    TYPE_CHECKING,\n    Dict,\n    Iterable,\n    List,\n    NamedTuple,\n    Optional,\n    Sequence,\n    Tuple,\n    Union,\n)\n\nfrom . import box, errors\nfrom ._loop import loop_first_last, loop_last\nfrom ._pick import pick_bool\nfrom ._ratio import ratio_distribute, ratio_reduce\nfrom .align import VerticalAlignMethod\nfrom .jupyter import JupyterMixin\nfrom .measure import Measurement\nfrom .padding import Padding, PaddingDimensions\nfrom .protocol import is_renderable\nfrom .segment import Segment\nfrom .style import Style, StyleType\nfrom .text import Text, TextType\n\nif TYPE_CHECKING:\n    from .console import (\n        Console,\n        ConsoleOptions,\n        JustifyMethod,\n        OverflowMethod,\n        RenderableType,\n        RenderResult,\n    )\n\n\n@dataclass\nclass Column:\n    \"\"\"Defines a column within a ~Table.\n\n    Args:\n        title (Union[str, Text], optional): The title of the table rendered at the top. Defaults to None.\n        caption (Union[str, Text], optional): The table caption rendered below. Defaults to None.\n        width (int, optional): The width in characters of the table, or ``None`` to automatically fit. Defaults to None.\n        min_width (Optional[int], optional): The minimum width of the table, or ``None`` for no minimum. Defaults to None.\n        box (box.Box, optional): One of the constants in box.py used to draw the edges (see :ref:`appendix_box`), or ``None`` for no box lines. Defaults to box.HEAVY_HEAD.\n        safe_box (Optional[bool], optional): Disable box characters that don't display on windows legacy terminal with *raster* fonts. Defaults to True.\n        padding (PaddingDimensions, optional): Padding for cells (top, right, bottom, left). Defaults to (0, 1).\n        collapse_padding (bool, optional): Enable collapsing of padding around cells. Defaults to False.\n        pad_edge (bool, optional): Enable padding of edge cells. Defaults to True.\n        expand (bool, optional): Expand the table to fit the available space if ``True``, otherwise the table width will be auto-calculated. Defaults to False.\n        show_header (bool, optional): Show a header row. Defaults to True.\n        show_footer (bool, optional): Show a footer row. Defaults to False.\n        show_edge (bool, optional): Draw a box around the outside of the table. Defaults to True.\n        show_lines (bool, optional): Draw lines between every row. Defaults to False.\n        leading (int, optional): Number of blank lines between rows (precludes ``show_lines``). Defaults to 0.\n        style (Union[str, Style], optional): Default style for the table. Defaults to \"none\".\n        row_styles (List[Union, str], optional): Optional list of row styles, if more than one style is given then the styles will alternate. Defaults to None.\n        header_style (Union[str, Style], optional): Style of the header. Defaults to \"table.header\".\n        footer_style (Union[str, Style], optional): Style of the footer. Defaults to \"table.footer\".\n        border_style (Union[str, Style], optional): Style of the border. Defaults to None.\n        title_style (Union[str, Style], optional): Style of the title. Defaults to None.\n        caption_style (Union[str, Style], optional): Style of the caption. Defaults to None.\n        title_justify (str, optional): Justify method for title. Defaults to \"center\".\n        caption_justify (str, optional): Justify method for caption. Defaults to \"center\".\n        highlight (bool, optional): Highlight cell contents (if str). Defaults to False.\n    \"\"\"\n\n    header: \"RenderableType\" = \"\"\n    \"\"\"RenderableType: Renderable for the header (typically a string)\"\"\"\n\n    footer: \"RenderableType\" = \"\"\n    \"\"\"RenderableType: Renderable for the footer (typically a string)\"\"\"\n\n    header_style: StyleType = \"\"\n    \"\"\"StyleType: The style of the header.\"\"\"\n\n    footer_style: StyleType = \"\"\n    \"\"\"StyleType: The style of the footer.\"\"\"\n\n    style: StyleType = \"\"\n    \"\"\"StyleType: The style of the column.\"\"\"\n\n    justify: \"JustifyMethod\" = \"left\"\n    \"\"\"str: How to justify text within the column (\"left\", \"center\", \"right\", or \"full\")\"\"\"\n\n    vertical: \"VerticalAlignMethod\" = \"top\"\n    \"\"\"str: How to vertically align content (\"top\", \"middle\", or \"bottom\")\"\"\"\n\n    overflow: \"OverflowMethod\" = \"ellipsis\"\n    \"\"\"str: Overflow method.\"\"\"\n\n    width: Optional[int] = None\n    \"\"\"Optional[int]: Width of the column, or ``None`` (default) to auto calculate width.\"\"\"\n\n    min_width: Optional[int] = None\n    \"\"\"Optional[int]: Minimum width of column, or ``None`` for no minimum. Defaults to None.\"\"\"\n\n    max_width: Optional[int] = None\n    \"\"\"Optional[int]: Maximum width of column, or ``None`` for no maximum. Defaults to None.\"\"\"\n\n    ratio: Optional[int] = None\n    \"\"\"Optional[int]: Ratio to use when calculating column width, or ``None`` (default) to adapt to column contents.\"\"\"\n\n    no_wrap: bool = False\n    \"\"\"bool: Prevent wrapping of text within the column. Defaults to ``False``.\"\"\"\n\n    highlight: bool = False\n    \"\"\"bool: Apply highlighter to column. Defaults to ``False``.\"\"\"\n\n    _index: int = 0\n    \"\"\"Index of column.\"\"\"\n\n    _cells: List[\"RenderableType\"] = field(default_factory=list)\n\n\n    @property\n\n    @property\n\n\n@dataclass\nclass Row:\n    \"\"\"Information regarding a row.\"\"\"\n\n    style: Optional[StyleType] = None\n    \"\"\"Style to apply to row.\"\"\"\n\n    end_section: bool = False\n    \"\"\"Indicated end of section, which will force a line beneath the row.\"\"\"\n\n\nclass _Cell(NamedTuple):\n    \"\"\"A single cell in a table.\"\"\"\n\n    style: StyleType\n    \"\"\"Style to apply to cell.\"\"\"\n    renderable: \"RenderableType\"\n    \"\"\"Cell renderable.\"\"\"\n    vertical: VerticalAlignMethod\n    \"\"\"Cell vertical alignment.\"\"\"\n\n\nclass Table(JupyterMixin):\n    \"\"\"A console renderable to draw a table.\n\n    Args:\n        *headers (Union[Column, str]): Column headers, either as a string, or :class:`~rich.table.Column` instance.\n        title (Union[str, Text], optional): The title of the table rendered at the top. Defaults to None.\n        caption (Union[str, Text], optional): The table caption rendered below. Defaults to None.\n        width (int, optional): The width in characters of the table, or ``None`` to automatically fit. Defaults to None.\n        min_width (Optional[int], optional): The minimum width of the table, or ``None`` for no minimum. Defaults to None.\n        box (box.Box, optional): One of the constants in box.py used to draw the edges (see :ref:`appendix_box`), or ``None`` for no box lines. Defaults to box.HEAVY_HEAD.\n        safe_box (Optional[bool], optional): Disable box characters that don't display on windows legacy terminal with *raster* fonts. Defaults to True.\n        padding (PaddingDimensions, optional): Padding for cells (top, right, bottom, left). Defaults to (0, 1).\n        collapse_padding (bool, optional): Enable collapsing of padding around cells. Defaults to False.\n        pad_edge (bool, optional): Enable padding of edge cells. Defaults to True.\n        expand (bool, optional): Expand the table to fit the available space if ``True``, otherwise the table width will be auto-calculated. Defaults to False.\n        show_header (bool, optional): Show a header row. Defaults to True.\n        show_footer (bool, optional): Show a footer row. Defaults to False.\n        show_edge (bool, optional): Draw a box around the outside of the table. Defaults to True.\n        show_lines (bool, optional): Draw lines between every row. Defaults to False.\n        leading (int, optional): Number of blank lines between rows (precludes ``show_lines``). Defaults to 0.\n        style (Union[str, Style], optional): Default style for the table. Defaults to \"none\".\n        row_styles (List[Union, str], optional): Optional list of row styles, if more than one style is given then the styles will alternate. Defaults to None.\n        header_style (Union[str, Style], optional): Style of the header. Defaults to \"table.header\".\n        footer_style (Union[str, Style], optional): Style of the footer. Defaults to \"table.footer\".\n        border_style (Union[str, Style], optional): Style of the border. Defaults to None.\n        title_style (Union[str, Style], optional): Style of the title. Defaults to None.\n        caption_style (Union[str, Style], optional): Style of the caption. Defaults to None.\n        title_justify (str, optional): Justify method for title. Defaults to \"center\".\n        caption_justify (str, optional): Justify method for caption. Defaults to \"center\".\n        highlight (bool, optional): Highlight cell contents (if str). Defaults to False.\n    \"\"\"\n\n    columns: List[Column]\n    rows: List[Row]\n\n\n    @classmethod\n\n    @property\n\n    @expand.setter\n\n    @property\n\n    @property\n\n\n\n    @property\n\n    @padding.setter\n\n\n\n\n\n\n    @classmethod\n\n\n\n\n\n\nif __name__ == \"__main__\":  # pragma: no cover\n    from rich.console import Console\n    from rich.highlighter import ReprHighlighter\n    from rich.table import Table as Table\n\n    from ._timer import timer\n\n    with timer(\"Table render\"):\n        table = Table(\n            title=\"Star Wars Movies\",\n            caption=\"Rich example table\",\n            caption_justify=\"right\",\n        )\n\n        table.add_column(\n            \"Released\", header_style=\"bright_cyan\", style=\"cyan\", no_wrap=True\n        )\n        table.add_column(\"Title\", style=\"magenta\")\n        table.add_column(\"Box Office\", justify=\"right\", style=\"green\")\n\n        table.add_row(\n            \"Dec 20, 2019\",\n            \"Star Wars: The Rise of Skywalker\",\n            \"$952,110,690\",\n        )\n        table.add_row(\"May 25, 2018\", \"Solo: A Star Wars Story\", \"$393,151,347\")\n        table.add_row(\n            \"Dec 15, 2017\",\n            \"Star Wars Ep. V111: The Last Jedi\",\n            \"$1,332,539,889\",\n            style=\"on black\",\n            end_section=True,\n        )\n        table.add_row(\n            \"Dec 16, 2016\",\n            \"Rogue One: A Star Wars Story\",\n            \"$1,332,439,889\",\n        )\n\n\n        console = Console()\n        highlight = ReprHighlighter()\n        header(\"Example Table\")\n        console.print(table, justify=\"center\")\n\n        table.expand = True\n        header(\"expand=True\")\n        console.print(table)\n\n        table.width = 50\n        header(\"width=50\")\n\n        console.print(table, justify=\"center\")\n\n        table.width = None\n        table.expand = False\n        table.row_styles = [\"dim\", \"none\"]\n        header(\"row_styles=['dim', 'none']\")\n\n        console.print(table, justify=\"center\")\n\n        table.width = None\n        table.expand = False\n        table.row_styles = [\"dim\", \"none\"]\n        table.leading = 1\n        header(\"leading=1, row_styles=['dim', 'none']\")\n        console.print(table, justify=\"center\")\n\n        table.width = None\n        table.expand = False\n        table.row_styles = [\"dim\", \"none\"]\n        table.show_lines = True\n        table.leading = 0\n        header(\"show_lines=True, row_styles=['dim', 'none']\")\n        console.print(table, justify=\"center\")\n\n[代码片段 3] 来源: table.py (第 189-251 行)\n文件: table.py\n函数: __init__\ndef __init__(\n        self,\n        *headers: Union[Column, str],\n        title: Optional[TextType] = None,\n        caption: Optional[TextType] = None,\n        width: Optional[int] = None,\n        min_width: Optional[int] = None,\n        box: Optional[box.Box] = box.HEAVY_HEAD,\n        safe_box: Optional[bool] = None,\n        padding: PaddingDimensions = (0, 1),\n        collapse_padding: bool = False,\n        pad_edge: bool = True,\n        expand: bool = False,\n        show_header: bool = True,\n        show_footer: bool = False,\n        show_edge: bool = True,\n        show_lines: bool = False,\n        leading: int = 0,\n        style: StyleType = \"none\",\n        row_styles: Optional[Iterable[StyleType]] = None,\n        header_style: Optional[StyleType] = \"table.header\",\n        footer_style: Optional[StyleType] = \"table.footer\",\n        border_style: Optional[StyleType] = None,\n        title_style: Optional[StyleType] = None,\n        caption_style: Optional[StyleType] = None,\n        title_justify: \"JustifyMethod\" = \"center\",\n        caption_justify: \"JustifyMethod\" = \"center\",\n        highlight: bool = False,\n    ) -> None:\n        self.columns: List[Column] = []\n        self.rows: List[Row] = []\n        self.title = title\n        self.caption = caption\n        self.width = width\n        self.min_width = min_width\n        self.box = box\n        self.safe_box = safe_box\n        self._padding = Padding.unpack(padding)\n        self.pad_edge = pad_edge\n        self._expand = expand\n        self.show_header = show_header\n        self.show_footer = show_footer\n        self.show_edge = show_edge\n        self.show_lines = show_lines\n        self.leading = leading\n        self.collapse_padding = collapse_padding\n        self.style = style\n        self.header_style = header_style or \"\"\n        self.footer_style = footer_style or \"\"\n        self.border_style = border_style\n        self.title_style = title_style\n        self.caption_style = caption_style\n        self.title_justify: \"JustifyMethod\" = title_justify\n        self.caption_justify: \"JustifyMethod\" = caption_justify\n        self.highlight = highlight\n        self.row_styles: Sequence[StyleType] = list(row_styles or [])\n        append_column = self.columns.append\n        for header in headers:\n            if isinstance(header, str):\n                self.add_column(header=header)\n            else:\n                header._index = len(self.columns)\n                append_column(header)\n\n[代码片段 4] 来源: table.py (第 626-697 行)\n文件: table.py\n函数: _get_cells\ndef _get_cells(\n        self, console: \"Console\", column_index: int, column: Column\n    ) -> Iterable[_Cell]:\n        \"\"\"Get all the cells with padding and optional header.\"\"\"\n\n        collapse_padding = self.collapse_padding\n        pad_edge = self.pad_edge\n        padding = self.padding\n        any_padding = any(padding)\n\n        first_column = column_index == 0\n        last_column = column_index == len(self.columns) - 1\n\n        _padding_cache: Dict[Tuple[bool, bool], Tuple[int, int, int, int]] = {}\n\n        def get_padding(first_row: bool, last_row: bool) -> Tuple[int, int, int, int]:\n            cached = _padding_cache.get((first_row, last_row))\n            if cached:\n                return cached\n            top, right, bottom, left = padding\n\n            if collapse_padding:\n                if not first_column:\n                    left = max(0, left - right)\n                if not last_row:\n                    bottom = max(0, top - bottom)\n\n            if not pad_edge:\n                if first_column:\n                    left = 0\n                if last_column:\n                    right = 0\n                if first_row:\n                    top = 0\n                if last_row:\n                    bottom = 0\n            _padding = (top, right, bottom, left)\n            _padding_cache[(first_row, last_row)] = _padding\n            return _padding\n\n        raw_cells: List[Tuple[StyleType, \"RenderableType\"]] = []\n        _append = raw_cells.append\n        get_style = console.get_style\n        if self.show_header:\n            header_style = get_style(self.header_style or \"\") + get_style(\n                column.header_style\n            )\n            _append((header_style, column.header))\n        cell_style = get_style(column.style or \"\")\n        for cell in column.cells:\n            _append((cell_style, cell))\n        if self.show_footer:\n            footer_style = get_style(self.footer_style or \"\") + get_style(\n                column.footer_style\n            )\n            _append((footer_style, column.footer))\n\n        if any_padding:\n            _Padding = Padding\n            for first, last, (style, renderable) in loop_first_last(raw_cells):\n                yield _Cell(\n                    style,\n                    _Padding(renderable, get_padding(first, last)),\n                    getattr(renderable, \"vertical\", None) or column.vertical,\n                )\n        else:\n            for style, renderable in raw_cells:\n                yield _Cell(\n                    style,\n                    renderable,\n                    getattr(renderable, \"vertical\", None) or column.vertical,\n                )\n\n[代码片段 5] 来源: table.py (第 839-854 行)\n文件: table.py\n函数: align_cell\ndef align_cell(\n                cell: List[List[Segment]],\n                vertical: \"VerticalAlignMethod\",\n                width: int,\n                style: Style,\n            ) -> List[List[Segment]]:\n                if header_row:\n                    vertical = \"bottom\"\n                elif footer_row:\n                    vertical = \"top\"\n\n                if vertical == \"top\":\n                    return _Segment.align_top(cell, width, row_height, style)\n                elif vertical == \"middle\":\n                    return _Segment.align_middle(cell, width, row_height, style)\n                return _Segment.align_bottom(cell, width, row_height, style)\n\n[问题] 在该项目中,table.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "retrieved_sources": [
+   "table.py",
+   "table.py",
+   "table.py",
+   "table.py",
+   "table.py"
+  ],
+  "expected_sources": [
+   "table.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_loop",
+    "_pick",
+    "_ratio",
+    "_timer",
+    "align",
+    "console",
+    "highlighter",
+    "jupyter",
+    "measure",
+    "padding",
+    "protocol",
+    "segment",
+    "style",
+    "text"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-05",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,progress.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: progress.py (第 0-0 行)\n[依赖图卡片] 文件 progress.py\n它依赖(import)的仓库内文件: abc.py, console.py, highlighter.py, jupyter.py, live.py, panel.py, progress_bar.py, rule.py, spinner.py, style.py, syntax.py, table.py, text.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: _TrackThread, _Reader, _ReadContext, ProgressColumn, RenderableColumn, SpinnerColumn, TextColumn, BarColumn, TimeElapsedColumn, TaskProgressColumn, TimeRemainingColumn, FileSizeColumn, TotalFileSizeColumn, MofNCompleteColumn, DownloadColumn, TransferSpeedColumn, ProgressSample, Task, Progress\n文件内定义的函数: __init__, run, __enter__, __exit__, track, __init__, __enter__, __exit__, __iter__, __next__, closed, fileno, isatty, mode, name, readable, seekable, writable, read, readinto, readline, readlines, close, seek, tell, write, writelines, __init__, __enter__, __exit__\n\n[代码片段 2] 来源: progress.py (第 1185-1191 行)\n文件: progress.py\n函数: __exit__\ndef __exit__(\n        self,\n        exc_type: Optional[Type[BaseException]],\n        exc_val: Optional[BaseException],\n        exc_tb: Optional[TracebackType],\n    ) -> None:\n        self.stop()\n\n[代码片段 3] 来源: progress.py (第 874-878 行)\n文件: progress.py\n函数: __init__\ndef __init__(\n        self, binary_units: bool = False, table_column: Optional[Column] = None\n    ) -> None:\n        self.binary_units = binary_units\n        super().__init__(table_column=table_column)\n\n[代码片段 4] 来源: progress.py (第 204-210 行)\n文件: progress.py\n函数: __exit__\ndef __exit__(\n        self,\n        exc_type: Optional[Type[BaseException]],\n        exc_val: Optional[BaseException],\n        exc_tb: Optional[TracebackType],\n    ) -> None:\n        self.close()\n\n[代码片段 5] 来源: progress.py (第 298-305 行)\n文件: progress.py\n函数: __exit__\ndef __exit__(\n        self,\n        exc_type: Optional[Type[BaseException]],\n        exc_val: Optional[BaseException],\n        exc_tb: Optional[TracebackType],\n    ) -> None:\n        self.progress.stop()\n        self.reader.__exit__(exc_type, exc_val, exc_tb)\n\n[问题] 在该项目中,progress.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "retrieved_sources": [
+   "progress.py",
+   "progress.py",
+   "progress.py",
+   "progress.py",
+   "progress.py"
+  ],
+  "expected_sources": [
+   "progress.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "abc",
+    "console",
+    "highlighter",
+    "jupyter",
+    "live",
+    "panel",
+    "progress_bar",
+    "rule",
+    "spinner",
+    "style",
+    "syntax",
+    "table",
+    "text"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-01",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 Inspect 继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _null_file.py (第 0-0 行)\n[依赖图卡片] 类 NullFile\n定义位置: _null_file.py 第 5-66 行\n它继承自: IO\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 类 ColorBox\n定义位置: __main__.py 第 18-36 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: region.py (第 0-0 行)\n[依赖图卡片] 类 Region\n定义位置: region.py 第 4-10 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: file_proxy.py (第 0-0 行)\n[依赖图卡片] 类 FileProxy\n定义位置: file_proxy.py 第 11-57 行\n它继承自: TextIOBase\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Inspect 继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "_null_file.py",
+   "__main__.py",
+   "region.py",
+   "file_proxy.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "_inspect.py",
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "JupyterMixin",
+    "jupyter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-02",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 Align 继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _null_file.py (第 0-0 行)\n[依赖图卡片] 类 NullFile\n定义位置: _null_file.py 第 5-66 行\n它继承自: IO\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 类 ColorBox\n定义位置: __main__.py 第 18-36 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: region.py (第 0-0 行)\n[依赖图卡片] 类 Region\n定义位置: region.py 第 4-10 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: file_proxy.py (第 0-0 行)\n[依赖图卡片] 类 FileProxy\n定义位置: file_proxy.py 第 11-57 行\n它继承自: TextIOBase\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Align 继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "_null_file.py",
+   "__main__.py",
+   "region.py",
+   "file_proxy.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "align.py",
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "JupyterMixin",
+    "jupyter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-03",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 VerticalCenter 继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _null_file.py (第 0-0 行)\n[依赖图卡片] 类 NullFile\n定义位置: _null_file.py 第 5-66 行\n它继承自: IO\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 类 ColorBox\n定义位置: __main__.py 第 18-36 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: region.py (第 0-0 行)\n[依赖图卡片] 类 Region\n定义位置: region.py 第 4-10 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: file_proxy.py (第 0-0 行)\n[依赖图卡片] 类 FileProxy\n定义位置: file_proxy.py 第 11-57 行\n它继承自: TextIOBase\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 VerticalCenter 继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "_null_file.py",
+   "__main__.py",
+   "region.py",
+   "file_proxy.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "align.py",
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "JupyterMixin",
+    "jupyter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-04",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 Bar 继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _null_file.py (第 0-0 行)\n[依赖图卡片] 类 NullFile\n定义位置: _null_file.py 第 5-66 行\n它继承自: IO\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 类 ColorBox\n定义位置: __main__.py 第 18-36 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: region.py (第 0-0 行)\n[依赖图卡片] 类 Region\n定义位置: region.py 第 4-10 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: file_proxy.py (第 0-0 行)\n[依赖图卡片] 类 FileProxy\n定义位置: file_proxy.py 第 11-57 行\n它继承自: TextIOBase\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Bar 继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "_null_file.py",
+   "__main__.py",
+   "region.py",
+   "file_proxy.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "bar.py",
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "JupyterMixin",
+    "jupyter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-05",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 Columns 继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _null_file.py (第 0-0 行)\n[依赖图卡片] 类 NullFile\n定义位置: _null_file.py 第 5-66 行\n它继承自: IO\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 类 ColorBox\n定义位置: __main__.py 第 18-36 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: region.py (第 0-0 行)\n[依赖图卡片] 类 Region\n定义位置: region.py 第 4-10 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: file_proxy.py (第 0-0 行)\n[依赖图卡片] 类 FileProxy\n定义位置: file_proxy.py 第 11-57 行\n它继承自: TextIOBase\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Columns 继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "_null_file.py",
+   "__main__.py",
+   "region.py",
+   "file_proxy.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "columns.py",
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "JupyterMixin",
+    "jupyter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-06",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 Constrain 继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _null_file.py (第 0-0 行)\n[依赖图卡片] 类 NullFile\n定义位置: _null_file.py 第 5-66 行\n它继承自: IO\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 类 ColorBox\n定义位置: __main__.py 第 18-36 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: region.py (第 0-0 行)\n[依赖图卡片] 类 Region\n定义位置: region.py 第 4-10 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: file_proxy.py (第 0-0 行)\n[依赖图卡片] 类 FileProxy\n定义位置: file_proxy.py 第 11-57 行\n它继承自: TextIOBase\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Constrain 继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "_null_file.py",
+   "__main__.py",
+   "region.py",
+   "file_proxy.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "constrain.py",
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "JupyterMixin",
+    "jupyter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-01",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 TextElement 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _null_file.py (第 0-0 行)\n[依赖图卡片] 类 NullFile\n定义位置: _null_file.py 第 5-66 行\n它继承自: IO\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 类 ColorBox\n定义位置: __main__.py 第 18-36 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: prompt.py (第 0-0 行)\n[依赖图卡片] 类 Confirm\n定义位置: prompt.py 第 340-363 行\n它继承自: PromptBase [prompt.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: segment.py (第 0-0 行)\n[依赖图卡片] 类 ControlType\n定义位置: segment.py 第 35-53 行\n它继承自: IntEnum\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 TextElement 定义在哪个文件里?",
+  "retrieved_sources": [
+   "_null_file.py",
+   "__main__.py",
+   "prompt.py",
+   "segment.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "markdown.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "markdown.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-02",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 ScreenContext 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _null_file.py (第 0-0 行)\n[依赖图卡片] 类 NullFile\n定义位置: _null_file.py 第 5-66 行\n它继承自: IO\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 类 ColorBox\n定义位置: __main__.py 第 18-36 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: prompt.py (第 0-0 行)\n[依赖图卡片] 类 Confirm\n定义位置: prompt.py 第 340-363 行\n它继承自: PromptBase [prompt.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: segment.py (第 0-0 行)\n[依赖图卡片] 类 ControlType\n定义位置: segment.py 第 35-53 行\n它继承自: IntEnum\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 ScreenContext 定义在哪个文件里?",
+  "retrieved_sources": [
+   "_null_file.py",
+   "__main__.py",
+   "prompt.py",
+   "segment.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "console.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "console.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-03",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 Padding 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _null_file.py (第 0-0 行)\n[依赖图卡片] 类 NullFile\n定义位置: _null_file.py 第 5-66 行\n它继承自: IO\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 类 ColorBox\n定义位置: __main__.py 第 18-36 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: prompt.py (第 0-0 行)\n[依赖图卡片] 类 Confirm\n定义位置: prompt.py 第 340-363 行\n它继承自: PromptBase [prompt.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: segment.py (第 0-0 行)\n[依赖图卡片] 类 ControlType\n定义位置: segment.py 第 35-53 行\n它继承自: IntEnum\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Padding 定义在哪个文件里?",
+  "retrieved_sources": [
+   "_null_file.py",
+   "__main__.py",
+   "prompt.py",
+   "segment.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "padding.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "padding.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-04",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 Span 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _null_file.py (第 0-0 行)\n[依赖图卡片] 类 NullFile\n定义位置: _null_file.py 第 5-66 行\n它继承自: IO\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 类 ColorBox\n定义位置: __main__.py 第 18-36 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: prompt.py (第 0-0 行)\n[依赖图卡片] 类 Confirm\n定义位置: prompt.py 第 340-363 行\n它继承自: PromptBase [prompt.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: segment.py (第 0-0 行)\n[依赖图卡片] 类 ControlType\n定义位置: segment.py 第 35-53 行\n它继承自: IntEnum\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Span 定义在哪个文件里?",
+  "retrieved_sources": [
+   "_null_file.py",
+   "__main__.py",
+   "prompt.py",
+   "segment.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "text.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "text.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-05",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 WindowsConsoleFeatures 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _null_file.py (第 0-0 行)\n[依赖图卡片] 类 NullFile\n定义位置: _null_file.py 第 5-66 行\n它继承自: IO\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 类 ColorBox\n定义位置: __main__.py 第 18-36 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: prompt.py (第 0-0 行)\n[依赖图卡片] 类 Confirm\n定义位置: prompt.py 第 340-363 行\n它继承自: PromptBase [prompt.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: segment.py (第 0-0 行)\n[依赖图卡片] 类 ControlType\n定义位置: segment.py 第 35-53 行\n它继承自: IntEnum\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 WindowsConsoleFeatures 定义在哪个文件里?",
+  "retrieved_sources": [
+   "_null_file.py",
+   "__main__.py",
+   "prompt.py",
+   "segment.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "_windows.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_windows.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-06",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 AnsiDecoder 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _null_file.py (第 0-0 行)\n[依赖图卡片] 类 NullFile\n定义位置: _null_file.py 第 5-66 行\n它继承自: IO\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 类 ColorBox\n定义位置: __main__.py 第 18-36 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: prompt.py (第 0-0 行)\n[依赖图卡片] 类 Confirm\n定义位置: prompt.py 第 340-363 行\n它继承自: PromptBase [prompt.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: segment.py (第 0-0 行)\n[依赖图卡片] 类 ControlType\n定义位置: segment.py 第 35-53 行\n它继承自: IntEnum\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 AnsiDecoder 定义在哪个文件里?",
+  "retrieved_sources": [
+   "_null_file.py",
+   "__main__.py",
+   "prompt.py",
+   "segment.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "ansi.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ansi.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-IND-01",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,__init__.py 是否间接依赖 traceback.py?经过哪个中间文件(完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: traceback.py (第 245-296 行)\n[调用图卡片] 函数 __init__\n定义位置: traceback.py 第 245-296 行\n它调用的仓库内函数: extract, get_theme, append\n它被这些函数调用: (没有仓库内调用方)\n\n[代码片段 2] 来源: traceback.py (第 0-0 行)\n[依赖图卡片] 文件 traceback.py\n它依赖(import)的仓库内文件: _loop.py, columns.py, console.py, constrain.py, highlighter.py, panel.py, scope.py, style.py, syntax.py, text.py, theme.py\n它被这些文件依赖/使用(import 它的使用方): _extension.py, console.py, logging.py\n文件内定义的类: Frame, _SyntaxError, Stack, Trace, PathHighlighter, Traceback\n文件内定义的函数: install, excepthook, ipy_excepthook_closure, ipy_show_traceback, ipy_display_traceback, __init__, from_exception, extract, safe_str, get_locals, __rich_console__, _render_syntax_error, _guess_lexer, _render_stack, read_code, render_locals, bar, foo, error\n\n[代码片段 3] 来源: traceback.py (第 432-444 行)\n文件: traceback.py\n函数: get_locals\ndef get_locals(\n                iter_locals: Iterable[Tuple[str, object]]\n            ) -> Iterable[Tuple[str, object]]:\n                \"\"\"Extract locals from an iterator of key pairs.\"\"\"\n                if not (locals_hide_dunder or locals_hide_sunder):\n                    yield from iter_locals\n                    return\n                for key, value in iter_locals:\n                    if locals_hide_dunder and key.startswith(\"__\"):\n                        continue\n                    if locals_hide_sunder and key.startswith(\"_\"):\n                        continue\n                    yield key, value\n\n[代码片段 4] 来源: traceback.py (第 134-154 行)\n文件: traceback.py\n函数: ipy_display_traceback\ndef ipy_display_traceback(\n            *args: Any, is_syntax: bool = False, **kwargs: Any\n        ) -> None:\n            \"\"\"Internally called traceback from ip._showtraceback\"\"\"\n            nonlocal tb_data\n            exc_tuple = ip._get_exc_info()\n\n            # do not display trace on syntax error\n            tb: Optional[TracebackType] = None if is_syntax else exc_tuple[2]\n\n            # determine correct tb_offset\n            compiled = tb_data.get(\"running_compiled_code\", False)\n            tb_offset = tb_data.get(\"tb_offset\", 1 if compiled else 0)\n            # remove ipython internal frames from trace with tb_offset\n            for _ in range(tb_offset):\n                if tb is None:\n                    break\n                tb = tb.tb_next\n\n            excepthook(exc_tuple[0], exc_tuple[1], tb)\n            tb_data = {}  # clear data upon usage\n\n[代码片段 5] 来源: traceback.py (第 651-660 行)\n文件: traceback.py\n函数: read_code\ndef read_code(filename: str) -> str:\n            \"\"\"Read files, and cache results on filename.\n\n            Args:\n                filename (str): Filename to read\n\n            Returns:\n                str: Contents of file\n            \"\"\"\n            return \"\".join(linecache.getlines(filename))\n\n[问题] 在该项目中,__init__.py 是否间接依赖 traceback.py?经过哪个中间文件(完整路径)?",
+  "retrieved_sources": [
+   "traceback.py",
+   "traceback.py",
+   "traceback.py",
+   "traceback.py",
+   "traceback.py"
+  ],
+  "expected_sources": [
+   "__init__.py",
+   "_extension.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_extension.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-IND-02",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,__main__.py 是否间接依赖 color_triplet.py?经过哪个中间文件(完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: color_triplet.py (第 0-0 行)\n[依赖图卡片] 文件 color_triplet.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): color.py, palette.py, progress_bar.py, terminal_theme.py\n文件内定义的类: ColorTriplet\n文件内定义的函数: hex, rgb, normalized\n\n[代码片段 2] 来源: color_triplet.py (第 1-38 行)\n文件: color_triplet.py\n(模块级代码:import、常量、配置)\nfrom typing import NamedTuple, Tuple\n\n\nclass ColorTriplet(NamedTuple):\n    \"\"\"The red, green, and blue components of a color.\"\"\"\n\n    red: int\n    \"\"\"Red component in 0 to 255 range.\"\"\"\n    green: int\n    \"\"\"Green component in 0 to 255 range.\"\"\"\n    blue: int\n    \"\"\"Blue component in 0 to 255 range.\"\"\"\n\n    @property\n\n    @property\n\n    @property\n\n[代码片段 3] 来源: color_triplet.py (第 21-28 行)\n文件: color_triplet.py\n函数: rgb\ndef rgb(self) -> str:\n        \"\"\"The color in RGB format.\n\n        Returns:\n            str: An rgb color, e.g. ``\"rgb(100,23,255)\"``.\n        \"\"\"\n        red, green, blue = self\n        return f\"rgb({red},{green},{blue})\"\n\n[代码片段 4] 来源: __main__.py (第 0-0 行)\n[依赖图卡片] 文件 __main__.py\n它依赖(import)的仓库内文件: color.py, console.py, markdown.py, measure.py, panel.py, pretty.py, segment.py, style.py, syntax.py, table.py, text.py\n它被这些文件依赖/使用(import 它的使用方): pager.py\n文件内定义的类: ColorBox\n文件内定义的函数: __rich_console__, __rich_measure__, make_test_card, comparison\n\n[代码片段 5] 来源: color.py (第 397-406 行)\n文件: color.py\n函数: from_triplet\ndef from_triplet(cls, triplet: \"ColorTriplet\") -> \"Color\":\n        \"\"\"Create a truecolor RGB color from a triplet of values.\n\n        Args:\n            triplet (ColorTriplet): A color triplet containing red, green and blue components.\n\n        Returns:\n            Color: A new color object.\n        \"\"\"\n        return cls(name=triplet.hex, type=ColorType.TRUECOLOR, triplet=triplet)\n\n[问题] 在该项目中,__main__.py 是否间接依赖 color_triplet.py?经过哪个中间文件(完整路径)?",
+  "retrieved_sources": [
+   "color_triplet.py",
+   "color_triplet.py",
+   "color_triplet.py",
+   "__main__.py",
+   "color.py"
+  ],
+  "expected_sources": [
+   "__main__.py",
+   "color.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "color.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-IND-03",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,_extension.py 是否间接依赖 repr.py?经过哪个中间文件(完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _extension.py (第 0-0 行)\n[依赖图卡片] 文件 _extension.py\n它依赖(import)的仓库内文件: pretty.py, traceback.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: (无)\n文件内定义的函数: load_ipython_extension\n\n[代码片段 2] 来源: _extension.py (第 1-10 行)\n文件: _extension.py\n(模块级代码:import、常量、配置)\nfrom typing import Any\n\n[代码片段 3] 来源: repr.py (第 0-0 行)\n[依赖图卡片] 文件 repr.py\n它依赖(import)的仓库内文件: console.py\n它被这些文件依赖/使用(import 它的使用方): color.py, layout.py, pretty.py, segment.py, style.py\n文件内定义的类: ReprError, Foo\n文件内定义的函数: auto, auto, auto, do_replace, auto_repr, auto_rich_repr, rich_repr, rich_repr, rich_repr, __rich_repr__\n\n[代码片段 4] 来源: text.py (第 102-115 行)\n[调用图卡片] 函数 extend\n定义位置: text.py 第 102-115 行\n它调用的仓库内函数: (无)\n它被这些函数调用: render_lines [console.py], control [console.py], print [__init__.py], update_screen_lines [console.py], log [console.py], _write_buffer [console.py], add_split [layout.py], __rich_console__ [__main__.py], track [progress.py], wrap_file [progress.py], open [progress.py], set_shape [segment.py], _make_ansi_codes [style.py], extend_style [text.py], append [containers.py], append_text [text.py], copy_styles [text.py], wrap [text.py], with_indent_guides [text.py]\n\n[代码片段 5] 来源: containers.py (第 105-106 行)\n[调用图卡片] 函数 extend\n定义位置: containers.py 第 105-106 行\n它调用的仓库内函数: (无)\n它被这些函数调用: render_lines [console.py], control [console.py], print [__init__.py], update_screen_lines [console.py], log [console.py], _write_buffer [console.py], add_split [layout.py], __rich_console__ [__main__.py], track [progress.py], wrap_file [progress.py], open [progress.py], set_shape [segment.py], _make_ansi_codes [style.py], extend_style [text.py], append [containers.py], append_text [text.py], copy_styles [text.py], wrap [text.py], with_indent_guides [text.py]\n\n[问题] 在该项目中,_extension.py 是否间接依赖 repr.py?经过哪个中间文件(完整路径)?",
+  "retrieved_sources": [
+   "_extension.py",
+   "_extension.py",
+   "repr.py",
+   "text.py",
+   "containers.py"
+  ],
+  "expected_sources": [
+   "_extension.py",
+   "pretty.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "pretty.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ }
+]

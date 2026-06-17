@@ -1,0 +1,173 @@
+[
+ {
+  "id": "D3-dyn-0",
+  "category": "dynamic",
+  "difficulty": "hard",
+  "question": "完整说明 Lib/pickle.py 在反序列化过程中会加载哪些模块。",
+  "gold": "除静态 import 外,反序列化时会按被反序列化对象的模块名通过 __import__ 加载模块——该模块名是运行时数据,具体目标随数据而变。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] CPython/pickle.py\n它import的模块(静态分析): _compat_pickle, _pickle, argparse, codecs, copyreg, functools, io, itertools, pprint, struct, sys, types\n(注:本卡片由静态 import 分析生成)\n\n问题:完整说明 Lib/pickle.py 在反序列化过程中会加载哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "D3-dyn-1",
+  "category": "dynamic",
+  "difficulty": "hard",
+  "question": "完整说明 Lib/pydoc.py 在为对象生成文档时会加载哪些模块。",
+  "gold": "除静态 import 外,会用 importlib.import_module 在运行时按用户查询的对象名加载对应模块,目标随运行时输入而变。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] CPython/pydoc.py\n它import的模块(静态分析): __future__, _pyrepl, annotationlib, ast, builtins, collections, email, getopt, http, importlib, inspect, io, os, pkgutil, platform, pydoc_data, re, reprlib, select, sys, sysconfig, textwrap, threading, time, tokenize, traceback, urllib, warnings, webbrowser\n(注:本卡片由静态 import 分析生成)\n\n问题:完整说明 Lib/pydoc.py 在为对象生成文档时会加载哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "D3-dyn-2",
+  "category": "dynamic",
+  "difficulty": "hard",
+  "question": "完整说明 flask/cli.py 运行时会加载哪些模块。",
+  "gold": "除静态 import 外,会用 importlib 在运行时按用户指定的应用名/路径动态加载应用模块,目标随运行时输入而变。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] flask/cli.py\n它import的模块(静态分析): __future__, _typeshed, app, ast, click, code, collections, cryptography, dotenv, functools, globals, helpers, importlib, importlib_metadata, inspect, operator, os, platform, re, readline, rlcompleter, ssl, sys, traceback, types, typing, werkzeug\n(注:本卡片由静态 import 分析生成)\n\n问题:完整说明 flask/cli.py 运行时会加载哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "D3-dyn-3",
+  "category": "dynamic",
+  "difficulty": "hard",
+  "question": "完整说明 flask/helpers.py 实际会用到哪些模块。",
+  "gold": "除静态 import 外含运行时按名加载的导入,目标运行时定。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] flask/helpers.py\n它import的模块(静态分析): __future__, datetime, functools, globals, importlib, os, signals, sys, typing, werkzeug, wrappers\n(注:本卡片由静态 import 分析生成)\n\n问题:完整说明 flask/helpers.py 实际会用到哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-4",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 CPython/_pyio.py 对 locale 模块依赖的性质。",
+  "gold": "locale 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] CPython/_pyio.py\n它import的模块(静态分析): _thread, abc, codecs, errno, io, locale, msvcrt, os, stat, sys, warnings\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 CPython/_pyio.py 对 locale 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-5",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 CPython/_pylong.py 对 _decimal 模块依赖的性质。",
+  "gold": "_decimal 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] CPython/_pylong.py\n它import的模块(静态分析): _decimal, collections, decimal, itertools, re\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 CPython/_pylong.py 对 _decimal 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-6",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 CPython/_pyrepl/unix_console.py 对 posix 模块依赖的性质。",
+  "gold": "posix 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] CPython/_pyrepl/unix_console.py\n它import的模块(静态分析): (无)\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 CPython/_pyrepl/unix_console.py 对 posix 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-7",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 CPython/_pyrepl/windows_console.py 对 nt 模块依赖的性质。",
+  "gold": "nt 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] CPython/_pyrepl/windows_console.py\n它import的模块(静态分析): __future__, console, ctypes, dataclasses, io, nt, os, render, sys, trace, types, typing, windows_eventqueue\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 CPython/_pyrepl/windows_console.py 对 nt 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-8",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 CPython/asyncio/base_events.py 对 ssl 模块依赖的性质。",
+  "gold": "ssl 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] CPython/asyncio/base_events.py\n它import的模块(静态分析): collections, concurrent, contextvars, errno, heapq, inspect, itertools, log, math, os, socket, ssl, stat, streams, subprocess, sys, threading, time, traceback, warnings, weakref\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 CPython/asyncio/base_events.py 对 ssl 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-9",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 CPython/asyncio/futures.py 对 _asyncio 模块依赖的性质。",
+  "gold": "_asyncio 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] CPython/asyncio/futures.py\n它import的模块(静态分析): _asyncio, concurrent, contextvars, logging, sys, types\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 CPython/asyncio/futures.py 对 _asyncio 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-10",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 CPython/asyncio/selector_events.py 对 ssl 模块依赖的性质。",
+  "gold": "ssl 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] CPython/asyncio/selector_events.py\n它import的模块(静态分析): collections, errno, functools, itertools, log, os, selectors, socket, ssl, warnings, weakref\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 CPython/asyncio/selector_events.py 对 ssl 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-11",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 CPython/asyncio/sslproto.py 对 ssl 模块依赖的性质。",
+  "gold": "ssl 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] CPython/asyncio/sslproto.py\n它import的模块(静态分析): collections, enum, log, ssl, warnings\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 CPython/asyncio/sslproto.py 对 ssl 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-12",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 CPython/asyncio/tasks.py 对 _asyncio 模块依赖的性质。",
+  "gold": "_asyncio 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] CPython/asyncio/tasks.py\n它import的模块(静态分析): _asyncio, concurrent, contextvars, functools, inspect, itertools, math, types, weakref\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 CPython/asyncio/tasks.py 对 _asyncio 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-13",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 CPython/collections/__init__.py 对 deque 模块依赖的性质。",
+  "gold": "deque 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] CPython/collections/__init__.py\n它import的模块(静态分析): (无)\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 CPython/collections/__init__.py 对 deque 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-14",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 requests/__init__.py 对 ssl 模块依赖的性质。",
+  "gold": "ssl 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] requests/__init__.py\n它import的模块(静态分析): __version__, api, chardet, charset_normalizer, cryptography, exceptions, logging, models, sessions, ssl, status_codes, urllib3, warnings\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 requests/__init__.py 对 ssl 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-15",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 requests/adapters.py 对 SOCKSProxyManager 模块依赖的性质。",
+  "gold": "SOCKSProxyManager 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] requests/adapters.py\n它import的模块(静态分析): auth, compat, cookies, exceptions, models, os, socket, ssl, structures, typing, urllib3, utils, warnings\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 requests/adapters.py 对 SOCKSProxyManager 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-16",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 requests/cookies.py 对 threading 模块依赖的性质。",
+  "gold": "threading 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] requests/cookies.py\n它import的模块(静态分析): _internal_utils, calendar, compat, copy, dummy_threading, threading, time\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 requests/cookies.py 对 threading 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-17",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 requests/help.py 对 charset_normalizer 模块依赖的性质。",
+  "gold": "charset_normalizer 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] requests/help.py\n它import的模块(静态分析): OpenSSL, chardet, charset_normalizer, cryptography, idna, json, platform, ssl, sys, urllib3\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 requests/help.py 对 charset_normalizer 模块依赖的性质。\n请直接回答。"
+ },
+ {
+  "id": "D3-con-18",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "准确描述 flask/cli.py 对 dotenv 模块依赖的性质。",
+  "gold": "dotenv 是条件/可选依赖:在 try/except ImportError 中导入,缺失时降级(置 None 或走备选),并非在所有环境都存在的硬依赖。",
+  "notes": "(中性-strict)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] flask/cli.py\n它import的模块(静态分析): __future__, _typeshed, app, ast, click, code, collections, cryptography, dotenv, functools, globals, helpers, importlib, importlib_metadata, inspect, operator, os, platform, re, readline, rlcompleter, ssl, sys, traceback, types, typing, werkzeug\n(注:本卡片由静态 import 分析生成)\n\n问题:准确描述 flask/cli.py 对 dotenv 模块依赖的性质。\n请直接回答。"
+ }
+]

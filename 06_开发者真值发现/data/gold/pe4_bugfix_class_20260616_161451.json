@@ -1,0 +1,1415 @@
+[
+ {
+  "project": "PySnooper",
+  "bug_id": "1",
+  "fixed_commit": "56f22f8ffe1c6b2be4d2cf3ad1987fdb66113da2",
+  "a": "pysnooper/pycompat.py",
+  "b": "pysnooper/tracer.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "ansible",
+  "bug_id": "13",
+  "fixed_commit": "694ef5660d45fcb97c9beea5b2750f6eadcf5e93",
+  "a": "lib/ansible/cli/galaxy.py",
+  "b": "lib/ansible/galaxy/collection.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "black",
+  "bug_id": "6",
+  "fixed_commit": "f8617f975d56e81cfb4070ce65584f7b29a77e7a",
+  "a": "black.py",
+  "b": "blib2to3/pgen2/driver.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "black",
+  "bug_id": "6",
+  "fixed_commit": "f8617f975d56e81cfb4070ce65584f7b29a77e7a",
+  "a": "black.py",
+  "b": "blib2to3/pgen2/tokenize.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "black",
+  "bug_id": "6",
+  "fixed_commit": "f8617f975d56e81cfb4070ce65584f7b29a77e7a",
+  "a": "blib2to3/pgen2/driver.py",
+  "b": "blib2to3/pgen2/tokenize.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "black",
+  "bug_id": "23",
+  "fixed_commit": "6316e293ac30a2837ec20eba289fd28a2a18cf89",
+  "a": "black.py",
+  "b": "blib2to3/pygram.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "cookiecutter",
+  "bug_id": "4",
+  "fixed_commit": "457a1a4e862aab4102b644ff1d2b2e2b5a766b3c",
+  "a": "cookiecutter/exceptions.py",
+  "b": "cookiecutter/generate.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "cookiecutter",
+  "bug_id": "4",
+  "fixed_commit": "457a1a4e862aab4102b644ff1d2b2e2b5a766b3c",
+  "a": "cookiecutter/exceptions.py",
+  "b": "cookiecutter/hooks.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "cookiecutter",
+  "bug_id": "4",
+  "fixed_commit": "457a1a4e862aab4102b644ff1d2b2e2b5a766b3c",
+  "a": "cookiecutter/generate.py",
+  "b": "cookiecutter/hooks.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "fastapi",
+  "bug_id": "1",
+  "fixed_commit": "3397d4d69a9c2d64c1219fcbf291ea5697a4abb8",
+  "a": "fastapi/applications.py",
+  "b": "fastapi/encoders.py",
+  "present": true,
+  "bucket": "3_no_static_signal_plain"
+ },
+ {
+  "project": "fastapi",
+  "bug_id": "1",
+  "fixed_commit": "3397d4d69a9c2d64c1219fcbf291ea5697a4abb8",
+  "a": "fastapi/applications.py",
+  "b": "fastapi/openapi/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "fastapi",
+  "bug_id": "1",
+  "fixed_commit": "3397d4d69a9c2d64c1219fcbf291ea5697a4abb8",
+  "a": "fastapi/applications.py",
+  "b": "fastapi/routing.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "fastapi",
+  "bug_id": "1",
+  "fixed_commit": "3397d4d69a9c2d64c1219fcbf291ea5697a4abb8",
+  "a": "fastapi/encoders.py",
+  "b": "fastapi/openapi/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "fastapi",
+  "bug_id": "1",
+  "fixed_commit": "3397d4d69a9c2d64c1219fcbf291ea5697a4abb8",
+  "a": "fastapi/encoders.py",
+  "b": "fastapi/routing.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "fastapi",
+  "bug_id": "1",
+  "fixed_commit": "3397d4d69a9c2d64c1219fcbf291ea5697a4abb8",
+  "a": "fastapi/openapi/utils.py",
+  "b": "fastapi/routing.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "httpie",
+  "bug_id": "2",
+  "fixed_commit": "e18b609ef7d867d6efa0efe42c832be5e0d09338",
+  "a": "httpie/client.py",
+  "b": "httpie/core.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "keras",
+  "bug_id": "1",
+  "fixed_commit": "8e23a3ec47a2ccbf6cdd222a80886c6b9f17264f",
+  "a": "keras/backend/tensorflow_backend.py",
+  "b": "keras/backend/theano_backend.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "1",
+  "fixed_commit": "8e23a3ec47a2ccbf6cdd222a80886c6b9f17264f",
+  "a": "keras/backend/tensorflow_backend.py",
+  "b": "keras/initializers.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "1",
+  "fixed_commit": "8e23a3ec47a2ccbf6cdd222a80886c6b9f17264f",
+  "a": "keras/backend/theano_backend.py",
+  "b": "keras/initializers.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "11",
+  "fixed_commit": "d6b5c5ebb410e3366c9d7aca41977a60134bfe10",
+  "a": "keras/engine/training_generator.py",
+  "b": "keras/engine/training_utils.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "11",
+  "fixed_commit": "d6b5c5ebb410e3366c9d7aca41977a60134bfe10",
+  "a": "keras/engine/training_generator.py",
+  "b": "keras/utils/data_utils.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "11",
+  "fixed_commit": "d6b5c5ebb410e3366c9d7aca41977a60134bfe10",
+  "a": "keras/engine/training_utils.py",
+  "b": "keras/utils/data_utils.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "19",
+  "fixed_commit": "66f8cc7ac4942f7f9fe0164a2a854a6264b87735",
+  "a": "keras/backend/cntk_backend.py",
+  "b": "keras/layers/recurrent.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "20",
+  "fixed_commit": "6dd087ab73b09e449144ff17450cc14f981b9ac2",
+  "a": "keras/backend/cntk_backend.py",
+  "b": "keras/backend/tensorflow_backend.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "20",
+  "fixed_commit": "6dd087ab73b09e449144ff17450cc14f981b9ac2",
+  "a": "keras/backend/cntk_backend.py",
+  "b": "keras/backend/theano_backend.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "20",
+  "fixed_commit": "6dd087ab73b09e449144ff17450cc14f981b9ac2",
+  "a": "keras/backend/cntk_backend.py",
+  "b": "keras/layers/convolutional.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "20",
+  "fixed_commit": "6dd087ab73b09e449144ff17450cc14f981b9ac2",
+  "a": "keras/backend/cntk_backend.py",
+  "b": "keras/utils/conv_utils.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "20",
+  "fixed_commit": "6dd087ab73b09e449144ff17450cc14f981b9ac2",
+  "a": "keras/backend/tensorflow_backend.py",
+  "b": "keras/backend/theano_backend.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "20",
+  "fixed_commit": "6dd087ab73b09e449144ff17450cc14f981b9ac2",
+  "a": "keras/backend/tensorflow_backend.py",
+  "b": "keras/layers/convolutional.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "20",
+  "fixed_commit": "6dd087ab73b09e449144ff17450cc14f981b9ac2",
+  "a": "keras/backend/tensorflow_backend.py",
+  "b": "keras/utils/conv_utils.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "20",
+  "fixed_commit": "6dd087ab73b09e449144ff17450cc14f981b9ac2",
+  "a": "keras/backend/theano_backend.py",
+  "b": "keras/layers/convolutional.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "20",
+  "fixed_commit": "6dd087ab73b09e449144ff17450cc14f981b9ac2",
+  "a": "keras/backend/theano_backend.py",
+  "b": "keras/utils/conv_utils.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "20",
+  "fixed_commit": "6dd087ab73b09e449144ff17450cc14f981b9ac2",
+  "a": "keras/layers/convolutional.py",
+  "b": "keras/utils/conv_utils.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "34",
+  "fixed_commit": "4b74fc5418944c9f449eb88ed4b40ada280fa5ca",
+  "a": "keras/engine/training.py",
+  "b": "keras/utils/data_utils.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "37",
+  "fixed_commit": "1d2ad790dd43a2d702176c1170b2f3fd592a385a",
+  "a": "keras/layers/recurrent.py",
+  "b": "keras/layers/wrappers.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "keras",
+  "bug_id": "42",
+  "fixed_commit": "2f3edf96078d78450b985bdf3bfffe7e0c627169",
+  "a": "keras/engine/training.py",
+  "b": "keras/models.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "luigi",
+  "bug_id": "23",
+  "fixed_commit": "dc41727f4de88f86f4e77aa45be51eff4ee6b3be",
+  "a": "luigi/interface.py",
+  "b": "luigi/scheduler.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "matplotlib",
+  "bug_id": "1",
+  "fixed_commit": "5324adaec6a7fd3d78dea7b28451d5f6e95392a6",
+  "a": "lib/matplotlib/backend_bases.py",
+  "b": "lib/matplotlib/figure.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "matplotlib",
+  "bug_id": "1",
+  "fixed_commit": "5324adaec6a7fd3d78dea7b28451d5f6e95392a6",
+  "a": "lib/matplotlib/backend_bases.py",
+  "b": "lib/matplotlib/tight_layout.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "matplotlib",
+  "bug_id": "1",
+  "fixed_commit": "5324adaec6a7fd3d78dea7b28451d5f6e95392a6",
+  "a": "lib/matplotlib/figure.py",
+  "b": "lib/matplotlib/tight_layout.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "matplotlib",
+  "bug_id": "4",
+  "fixed_commit": "fafa132484872141431a5be3727eab1d8b3c7b82",
+  "a": "lib/matplotlib/axes/_axes.py",
+  "b": "lib/matplotlib/pyplot.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "matplotlib",
+  "bug_id": "15",
+  "fixed_commit": "c7df5d2770030fe4588a0fc1ab4449a689554dfc",
+  "a": "examples/userdemo/colormap_normalizations.py",
+  "b": "examples/userdemo/colormap_normalizations_symlognorm.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "matplotlib",
+  "bug_id": "15",
+  "fixed_commit": "c7df5d2770030fe4588a0fc1ab4449a689554dfc",
+  "a": "examples/userdemo/colormap_normalizations.py",
+  "b": "lib/matplotlib/colors.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "matplotlib",
+  "bug_id": "15",
+  "fixed_commit": "c7df5d2770030fe4588a0fc1ab4449a689554dfc",
+  "a": "examples/userdemo/colormap_normalizations.py",
+  "b": "tutorials/colors/colormapnorms.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "matplotlib",
+  "bug_id": "15",
+  "fixed_commit": "c7df5d2770030fe4588a0fc1ab4449a689554dfc",
+  "a": "examples/userdemo/colormap_normalizations_symlognorm.py",
+  "b": "lib/matplotlib/colors.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "matplotlib",
+  "bug_id": "15",
+  "fixed_commit": "c7df5d2770030fe4588a0fc1ab4449a689554dfc",
+  "a": "examples/userdemo/colormap_normalizations_symlognorm.py",
+  "b": "tutorials/colors/colormapnorms.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "matplotlib",
+  "bug_id": "15",
+  "fixed_commit": "c7df5d2770030fe4588a0fc1ab4449a689554dfc",
+  "a": "lib/matplotlib/colors.py",
+  "b": "tutorials/colors/colormapnorms.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "matplotlib",
+  "bug_id": "20",
+  "fixed_commit": "5375487ab28c877c8008c5a178e0b81a6e267957",
+  "a": "lib/matplotlib/_constrained_layout.py",
+  "b": "lib/matplotlib/backend_bases.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "9",
+  "fixed_commit": "ebb727e5cd8865a7f5d6cfb4b22d3278b6bf5e6b",
+  "a": "pandas/core/arrays/categorical.py",
+  "b": "pandas/core/indexes/category.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "18",
+  "fixed_commit": "cb71376385c33270fa1922aec9eb6c49de4336f4",
+  "a": "pandas/core/window/common.py",
+  "b": "pandas/core/window/rolling.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "22",
+  "fixed_commit": "299e27da8a75d02d84870c1ca5971f4dd0f046e6",
+  "a": "pandas/core/window/common.py",
+  "b": "pandas/core/window/rolling.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "44",
+  "fixed_commit": "50817487ce5b1a2c4896495509e2b53e22fa3212",
+  "a": "pandas/core/indexes/base.py",
+  "b": "pandas/core/indexes/datetimelike.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "44",
+  "fixed_commit": "50817487ce5b1a2c4896495509e2b53e22fa3212",
+  "a": "pandas/core/indexes/base.py",
+  "b": "pandas/core/indexes/datetimes.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "44",
+  "fixed_commit": "50817487ce5b1a2c4896495509e2b53e22fa3212",
+  "a": "pandas/core/indexes/base.py",
+  "b": "pandas/core/indexes/period.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "44",
+  "fixed_commit": "50817487ce5b1a2c4896495509e2b53e22fa3212",
+  "a": "pandas/core/indexes/base.py",
+  "b": "pandas/core/indexes/timedeltas.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "44",
+  "fixed_commit": "50817487ce5b1a2c4896495509e2b53e22fa3212",
+  "a": "pandas/core/indexes/datetimelike.py",
+  "b": "pandas/core/indexes/datetimes.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "44",
+  "fixed_commit": "50817487ce5b1a2c4896495509e2b53e22fa3212",
+  "a": "pandas/core/indexes/datetimelike.py",
+  "b": "pandas/core/indexes/period.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "44",
+  "fixed_commit": "50817487ce5b1a2c4896495509e2b53e22fa3212",
+  "a": "pandas/core/indexes/datetimelike.py",
+  "b": "pandas/core/indexes/timedeltas.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "44",
+  "fixed_commit": "50817487ce5b1a2c4896495509e2b53e22fa3212",
+  "a": "pandas/core/indexes/datetimes.py",
+  "b": "pandas/core/indexes/period.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "44",
+  "fixed_commit": "50817487ce5b1a2c4896495509e2b53e22fa3212",
+  "a": "pandas/core/indexes/datetimes.py",
+  "b": "pandas/core/indexes/timedeltas.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "44",
+  "fixed_commit": "50817487ce5b1a2c4896495509e2b53e22fa3212",
+  "a": "pandas/core/indexes/period.py",
+  "b": "pandas/core/indexes/timedeltas.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "46",
+  "fixed_commit": "0ed6d538c38010bcbd540cd6413ae8e4b749d9e6",
+  "a": "pandas/core/indexes/multi.py",
+  "b": "pandas/core/reshape/util.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "47",
+  "fixed_commit": "810a4e5b19616efb503767b4518083c9a59c11e6",
+  "a": "pandas/core/frame.py",
+  "b": "pandas/core/indexing.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "53",
+  "fixed_commit": "020dcce17e3bd0983fca5b02556bd431140ab371",
+  "a": "pandas/core/indexes/base.py",
+  "b": "pandas/core/series.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "55",
+  "fixed_commit": "628dfba239865adc09c94108b288bcb60c619950",
+  "a": "pandas/core/generic.py",
+  "b": "pandas/core/indexing.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "57",
+  "fixed_commit": "84444538a88721c5ee74de8836b716d3c1adc4b8",
+  "a": "pandas/_testing.py",
+  "b": "pandas/core/arrays/categorical.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "62",
+  "fixed_commit": "74dad82827e9b13552df2d6d3fbbeb901821b53f",
+  "a": "pandas/core/internals/blocks.py",
+  "b": "pandas/io/stata.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "65",
+  "fixed_commit": "2f9a44635bd8d468cf008f2855ce2dcfb9e90586",
+  "a": "pandas/io/common.py",
+  "b": "pandas/io/parsers.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "66",
+  "fixed_commit": "M84f9eb32aea33a8f790e8e365cf226eddd5c7a7",
+  "a": "pandas/core/generic.py",
+  "b": "pandas/core/internals/managers.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "70",
+  "fixed_commit": "06ef193a5c1957c0a76e3e88bc7b834b38972c39",
+  "a": "pandas/core/groupby/groupby.py",
+  "b": "pandas/core/groupby/ops.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "73",
+  "fixed_commit": "6f93898d32c0f1fdb382d1e9dee434c158998374",
+  "a": "pandas/core/frame.py",
+  "b": "pandas/core/ops/missing.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "79",
+  "fixed_commit": "0b0cd08524e4472eb15835c2b91621dc0a6eeeb0",
+  "a": "pandas/core/groupby/grouper.py",
+  "b": "pandas/core/indexes/datetimes.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "79",
+  "fixed_commit": "0b0cd08524e4472eb15835c2b91621dc0a6eeeb0",
+  "a": "pandas/core/groupby/grouper.py",
+  "b": "pandas/core/indexes/multi.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "79",
+  "fixed_commit": "0b0cd08524e4472eb15835c2b91621dc0a6eeeb0",
+  "a": "pandas/core/groupby/grouper.py",
+  "b": "pandas/core/series.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "79",
+  "fixed_commit": "0b0cd08524e4472eb15835c2b91621dc0a6eeeb0",
+  "a": "pandas/core/indexes/datetimes.py",
+  "b": "pandas/core/indexes/multi.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "79",
+  "fixed_commit": "0b0cd08524e4472eb15835c2b91621dc0a6eeeb0",
+  "a": "pandas/core/indexes/datetimes.py",
+  "b": "pandas/core/series.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "79",
+  "fixed_commit": "0b0cd08524e4472eb15835c2b91621dc0a6eeeb0",
+  "a": "pandas/core/indexes/multi.py",
+  "b": "pandas/core/series.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "80",
+  "fixed_commit": "351760c0655b6c383e449cf857b9a718e3545229",
+  "a": "pandas/core/arrays/masked.py",
+  "b": "pandas/core/generic.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "80",
+  "fixed_commit": "351760c0655b6c383e449cf857b9a718e3545229",
+  "a": "pandas/core/arrays/masked.py",
+  "b": "pandas/core/indexing.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "80",
+  "fixed_commit": "351760c0655b6c383e449cf857b9a718e3545229",
+  "a": "pandas/core/generic.py",
+  "b": "pandas/core/indexing.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "83",
+  "fixed_commit": "7ffcf9d6753e7de2c5318e8e0ecdc63586d502f3",
+  "a": "pandas/core/indexes/api.py",
+  "b": "pandas/core/reshape/concat.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "90",
+  "fixed_commit": "1c3d64bae7c07b5ae1be337e0ebd751385b7ce27",
+  "a": "pandas/_testing.py",
+  "b": "pandas/io/pickle.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "92",
+  "fixed_commit": "511a2847f4330c54d079d04b3cac4febe0fe9915",
+  "a": "pandas/core/generic.py",
+  "b": "pandas/core/indexes/period.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "92",
+  "fixed_commit": "511a2847f4330c54d079d04b3cac4febe0fe9915",
+  "a": "pandas/core/generic.py",
+  "b": "pandas/core/resample.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "92",
+  "fixed_commit": "511a2847f4330c54d079d04b3cac4febe0fe9915",
+  "a": "pandas/core/indexes/period.py",
+  "b": "pandas/core/resample.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "103",
+  "fixed_commit": "19578e364fb47ce10dd14174cffc3ecfea1a58cd",
+  "a": "pandas/core/groupby/generic.py",
+  "b": "pandas/core/groupby/groupby.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "105",
+  "fixed_commit": "cb5f9d1ff407f5ccef7c717e0c23bbd6ed96cf5f",
+  "a": "pandas/core/frame.py",
+  "b": "pandas/core/generic.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "110",
+  "fixed_commit": "96bb151fe1a5b812ecab400adcd297d14fd0e0e4",
+  "a": "pandas/core/indexes/base.py",
+  "b": "pandas/core/indexes/category.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "111",
+  "fixed_commit": "27836e93dc3c9d55c60282ccb15c88c42a340d87",
+  "a": "pandas/core/indexes/base.py",
+  "b": "pandas/core/indexes/category.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "120",
+  "fixed_commit": "c5a1f9e2c373ced9ef2f02ab64d11eaa7b4248f2",
+  "a": "pandas/core/groupby/generic.py",
+  "b": "pandas/core/groupby/groupby.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "121",
+  "fixed_commit": "958756af5cb40658e975a70d29089b68aea93040",
+  "a": "pandas/core/internals/blocks.py",
+  "b": "pandas/core/internals/managers.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "123",
+  "fixed_commit": "17fe9a467581ca39f44c89876ebd0d38b9ca77ea",
+  "a": "pandas/core/indexes/base.py",
+  "b": "pandas/core/indexes/numeric.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "123",
+  "fixed_commit": "17fe9a467581ca39f44c89876ebd0d38b9ca77ea",
+  "a": "pandas/core/indexes/base.py",
+  "b": "pandas/core/indexes/range.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "123",
+  "fixed_commit": "17fe9a467581ca39f44c89876ebd0d38b9ca77ea",
+  "a": "pandas/core/indexes/numeric.py",
+  "b": "pandas/core/indexes/range.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "125",
+  "fixed_commit": "fb08ceeeeba2ba62f92b47d424b3ae83c20ed9db",
+  "a": "pandas/core/arrays/categorical.py",
+  "b": "pandas/core/internals/blocks.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "132",
+  "fixed_commit": "bd8f07fb29d2ac819f4c8e8e1b8e6d40f8b0f40c",
+  "a": "pandas/core/nanops.py",
+  "b": "pandas/core/series.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "146",
+  "fixed_commit": "74cba561ece511e24abb5145225bf98a929ca6c9",
+  "a": "pandas/core/dtypes/missing.py",
+  "b": "pandas/core/indexes/base.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "167",
+  "fixed_commit": "226398224d260d908a1f3d0f23c16fa9ffc8f9b0",
+  "a": "pandas/core/indexes/base.py",
+  "b": "pandas/core/indexes/datetimes.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "167",
+  "fixed_commit": "226398224d260d908a1f3d0f23c16fa9ffc8f9b0",
+  "a": "pandas/core/indexes/base.py",
+  "b": "pandas/core/indexes/period.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "167",
+  "fixed_commit": "226398224d260d908a1f3d0f23c16fa9ffc8f9b0",
+  "a": "pandas/core/indexes/base.py",
+  "b": "pandas/core/indexing.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "167",
+  "fixed_commit": "226398224d260d908a1f3d0f23c16fa9ffc8f9b0",
+  "a": "pandas/core/indexes/datetimes.py",
+  "b": "pandas/core/indexes/period.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "167",
+  "fixed_commit": "226398224d260d908a1f3d0f23c16fa9ffc8f9b0",
+  "a": "pandas/core/indexes/datetimes.py",
+  "b": "pandas/core/indexing.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "pandas",
+  "bug_id": "167",
+  "fixed_commit": "226398224d260d908a1f3d0f23c16fa9ffc8f9b0",
+  "a": "pandas/core/indexes/period.py",
+  "b": "pandas/core/indexing.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/engine.py",
+  "b": "scrapy/core/scraper.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/engine.py",
+  "b": "scrapy/downloadermiddlewares/robotstxt.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/engine.py",
+  "b": "scrapy/extensions/feedexport.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/engine.py",
+  "b": "scrapy/log.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/engine.py",
+  "b": "scrapy/pipelines/files.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/engine.py",
+  "b": "scrapy/pipelines/media.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/engine.py",
+  "b": "scrapy/utils/signal.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/scraper.py",
+  "b": "scrapy/downloadermiddlewares/robotstxt.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/scraper.py",
+  "b": "scrapy/extensions/feedexport.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/scraper.py",
+  "b": "scrapy/log.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/scraper.py",
+  "b": "scrapy/pipelines/files.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/scraper.py",
+  "b": "scrapy/pipelines/media.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/core/scraper.py",
+  "b": "scrapy/utils/signal.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/downloadermiddlewares/robotstxt.py",
+  "b": "scrapy/extensions/feedexport.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/downloadermiddlewares/robotstxt.py",
+  "b": "scrapy/log.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/downloadermiddlewares/robotstxt.py",
+  "b": "scrapy/pipelines/files.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/downloadermiddlewares/robotstxt.py",
+  "b": "scrapy/pipelines/media.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/downloadermiddlewares/robotstxt.py",
+  "b": "scrapy/utils/signal.py",
+  "present": true,
+  "bucket": "3_no_static_signal_plain"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/extensions/feedexport.py",
+  "b": "scrapy/log.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/extensions/feedexport.py",
+  "b": "scrapy/pipelines/files.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/extensions/feedexport.py",
+  "b": "scrapy/pipelines/media.py",
+  "present": true,
+  "bucket": "3_no_static_signal_dynamic"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/extensions/feedexport.py",
+  "b": "scrapy/utils/signal.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/log.py",
+  "b": "scrapy/pipelines/files.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/log.py",
+  "b": "scrapy/pipelines/media.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/log.py",
+  "b": "scrapy/utils/signal.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/pipelines/files.py",
+  "b": "scrapy/pipelines/media.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/pipelines/files.py",
+  "b": "scrapy/utils/signal.py",
+  "present": true,
+  "bucket": "3_no_static_signal_plain"
+ },
+ {
+  "project": "scrapy",
+  "bug_id": "33",
+  "fixed_commit": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+  "a": "scrapy/pipelines/media.py",
+  "b": "scrapy/utils/signal.py",
+  "present": true,
+  "bucket": "3_no_static_signal_dynamic"
+ },
+ {
+  "project": "spacy",
+  "bug_id": "7",
+  "fixed_commit": "6f54e59fe7ccb3bacce896ed33d36b39f11cbfaf",
+  "a": "examples/information_extraction/entity_relations.py",
+  "b": "spacy/util.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "thefuck",
+  "bug_id": "16",
+  "fixed_commit": "bb5f6bb705a3b217eb682f3357ec6bbb709555c1",
+  "a": "thefuck/shells/bash.py",
+  "b": "thefuck/shells/fish.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "thefuck",
+  "bug_id": "16",
+  "fixed_commit": "bb5f6bb705a3b217eb682f3357ec6bbb709555c1",
+  "a": "thefuck/shells/bash.py",
+  "b": "thefuck/shells/zsh.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "thefuck",
+  "bug_id": "16",
+  "fixed_commit": "bb5f6bb705a3b217eb682f3357ec6bbb709555c1",
+  "a": "thefuck/shells/bash.py",
+  "b": "thefuck/types.py",
+  "present": true,
+  "bucket": "3_no_static_signal_dynamic"
+ },
+ {
+  "project": "thefuck",
+  "bug_id": "16",
+  "fixed_commit": "bb5f6bb705a3b217eb682f3357ec6bbb709555c1",
+  "a": "thefuck/shells/fish.py",
+  "b": "thefuck/shells/zsh.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "thefuck",
+  "bug_id": "16",
+  "fixed_commit": "bb5f6bb705a3b217eb682f3357ec6bbb709555c1",
+  "a": "thefuck/shells/fish.py",
+  "b": "thefuck/types.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "thefuck",
+  "bug_id": "16",
+  "fixed_commit": "bb5f6bb705a3b217eb682f3357ec6bbb709555c1",
+  "a": "thefuck/shells/zsh.py",
+  "b": "thefuck/types.py",
+  "present": true,
+  "bucket": "3_no_static_signal_dynamic"
+ },
+ {
+  "project": "thefuck",
+  "bug_id": "17",
+  "fixed_commit": "7ce4307c87c1e2e4106db2c961e48e249be987be",
+  "a": "thefuck/shells/bash.py",
+  "b": "thefuck/shells/zsh.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "tornado",
+  "bug_id": "6",
+  "fixed_commit": "2905ee4fb3c283d40b10f609359e189c83a0dc06",
+  "a": "tornado/ioloop.py",
+  "b": "tornado/platform/asyncio.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "tornado",
+  "bug_id": "10",
+  "fixed_commit": "5931d913b4ea250891a0b582f1f8b2901b868c79",
+  "a": "tornado/web.py",
+  "b": "tornado/websocket.py",
+  "present": true,
+  "bucket": "2_namematch_gap"
+ },
+ {
+  "project": "tornado",
+  "bug_id": "15",
+  "fixed_commit": "ecb3ea7543cc942659faf3d2144853018afa6139",
+  "a": "setup.py",
+  "b": "tornado/web.py",
+  "present": true,
+  "bucket": "3_no_static_signal_dynamic"
+ },
+ {
+  "project": "tqdm",
+  "bug_id": "2",
+  "fixed_commit": "127af5caf19e7d29c346f5ca8a9c7ef3004b664b",
+  "a": "tqdm/std.py",
+  "b": "tqdm/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "16",
+  "fixed_commit": "",
+  "a": "youtube_dl/postprocessor/ffmpeg.py",
+  "b": "youtube_dl/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "31",
+  "fixed_commit": "",
+  "a": "youtube_dl/extractor/minhateca.py",
+  "b": "youtube_dl/utils.py",
+  "present": false,
+  "reason": "absent_at_head"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "32",
+  "fixed_commit": "609a61e3e6fffce3d45e845f33ae2c5fa2d432ac",
+  "a": "youtube_dl/extractor/npo.py",
+  "b": "youtube_dl/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "33",
+  "fixed_commit": "",
+  "a": "youtube_dl/extractor/drtv.py",
+  "b": "youtube_dl/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "35",
+  "fixed_commit": "",
+  "a": "youtube_dl/extractor/arte.py",
+  "b": "youtube_dl/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "38",
+  "fixed_commit": "",
+  "a": "youtube_dl/extractor/facebook.py",
+  "b": "youtube_dl/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "39",
+  "fixed_commit": "",
+  "a": "youtube_dl/extractor/facebook.py",
+  "b": "youtube_dl/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "40",
+  "fixed_commit": "",
+  "a": "youtube_dl/downloader/f4m.py",
+  "b": "youtube_dl/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "42",
+  "fixed_commit": "",
+  "a": "youtube_dl/extractor/clipsyndicate.py",
+  "b": "youtube_dl/extractor/metacritic.py",
+  "present": true,
+  "bucket": "3_no_static_signal_plain"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "42",
+  "fixed_commit": "",
+  "a": "youtube_dl/extractor/clipsyndicate.py",
+  "b": "youtube_dl/extractor/mtv.py",
+  "present": true,
+  "bucket": "3_no_static_signal_plain"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "42",
+  "fixed_commit": "",
+  "a": "youtube_dl/extractor/clipsyndicate.py",
+  "b": "youtube_dl/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "42",
+  "fixed_commit": "",
+  "a": "youtube_dl/extractor/metacritic.py",
+  "b": "youtube_dl/extractor/mtv.py",
+  "present": true,
+  "bucket": "3_no_static_signal_plain"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "42",
+  "fixed_commit": "",
+  "a": "youtube_dl/extractor/metacritic.py",
+  "b": "youtube_dl/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ },
+ {
+  "project": "youtube-dl",
+  "bug_id": "42",
+  "fixed_commit": "",
+  "a": "youtube_dl/extractor/mtv.py",
+  "b": "youtube_dl/utils.py",
+  "present": true,
+  "bucket": "1_visible_precise"
+ }
+]

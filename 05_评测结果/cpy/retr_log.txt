@@ -1,0 +1,18 @@
+D:\anaconda3\envs\y\lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.3.2) doesn't match a supported version!
+  warnings.warn(
+å¡ç‰‡æ±  1456, ç”¨ä¾‹ 40
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 71/71 [00:00<00:00, 2363.10it/s]
+[57s] å¡ç‰‡å‘é‡åŒ–å®Œæˆ (1456, 512)
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 201/201 [00:00<00:00, 2692.19it/s]
+
+=== æ£€ç´¢å¯è¡Œæ€§:Recall@k(goldå¡ç‰‡åœ¨æ··åˆæ£€ç´¢top-k)æŒ‰ç±»å‹ ===
+ç±»å‹            n     @8    @20    @50    @80   @200   @500
+py_forward    8   0.50   0.88   0.88   0.88   0.88   1.00
+py_reverse    7   0.86   1.00   1.00   1.00   1.00   1.00
+c_forward     7   1.00   1.00   1.00   1.00   1.00   1.00
+c_reverse     6   0.83   1.00   1.00   1.00   1.00   1.00
+xlang        12   0.83   0.92   1.00   1.00   1.00   1.00
+å…¨ä½“           40   0.80   0.95   0.97   0.97   0.97   1.00
+
+rerankå gold è¿›å…¥ top-8(å–‚ç»™æ¨¡å‹)çš„æ¯”ä¾‹:38/40 = 95.0%
+bundle_cpy_full/baseline.json å·²å­˜

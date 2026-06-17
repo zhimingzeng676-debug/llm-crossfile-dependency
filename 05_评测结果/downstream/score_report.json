@@ -1,0 +1,70 @@
+{
+  "n": 28,
+  "by_condition": {
+    "correct_card": {
+      "recall_full": 0.978,
+      "recovered_dropped": 1.0,
+      "hedge": 0.0,
+      "abstain": 0.0,
+      "dangerous_confident_miss": 0.0
+    },
+    "wrong_card": {
+      "recall_full": 0.688,
+      "recovered_dropped": 0.071,
+      "hedge": 0.024,
+      "abstain": 0.0,
+      "dangerous_confident_miss": 0.893
+    },
+    "wrong_card_humble": {
+      "recall_full": 0.684,
+      "recovered_dropped": 0.036,
+      "hedge": 0.036,
+      "abstain": 0.0,
+      "dangerous_confident_miss": 0.94
+    },
+    "no_card": {
+      "recall_full": 0.002,
+      "recovered_dropped": 0.0,
+      "hedge": 0.0,
+      "abstain": 1.0,
+      "dangerous_confident_miss": 0.0
+    }
+  },
+  "stats": {
+    "recall  wrong_vs_nocard": {
+      "a": 0.688,
+      "b": 0.002,
+      "delta": 0.686,
+      "t": 19.55,
+      "p": 1.823794448192947e-17
+    },
+    "danger  wrong_vs_nocard": {
+      "a": 0.893,
+      "b": 0.0,
+      "delta": 0.893,
+      "t": 17.31,
+      "p": 3.842517746868126e-16
+    },
+    "danger  humble_vs_wrong": {
+      "a": 0.94,
+      "b": 0.893,
+      "delta": 0.048,
+      "t": 1.16,
+      "p": 0.2554464947983944
+    },
+    "hedge   humble_vs_wrong": {
+      "a": 0.036,
+      "b": 0.024,
+      "delta": 0.012,
+      "t": 0.44,
+      "p": 0.662915870468564
+    },
+    "recover humble_vs_wrong": {
+      "a": 0.036,
+      "b": 0.071,
+      "delta": -0.036,
+      "t": -1.0,
+      "p": 0.32618890067972717
+    }
+  }
+}

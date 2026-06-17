@@ -1,0 +1,226 @@
+[
+ {
+  "id": "FWD-01",
+  "answer": "```json\n{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"所有要点均命中\"}\n```"
+ },
+ {
+  "id": "FWD-02",
+  "answer": "{\"hit\": 6, \"total\": 6, \"score\": 1.0, \"reason\": \"所有要点均命中\"}"
+ },
+ {
+  "id": "FWD-03",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"遗漏了 'sansio/__init__.py' 依赖\"}"
+ },
+ {
+  "id": "FWD-04",
+  "answer": "```json\n{\"hit\": 10, \"total\": 10, \"score\": 1.0, \"reason\": \"所有要点均命中\"}\n```"
+ },
+ {
+  "id": "FWD-05",
+  "answer": "{\"hit\": 3, \"total\": 3, \"score\": 1.0, \"reason\": \"所有要点均命中\"}"
+ },
+ {
+  "id": "FWD-06",
+  "answer": "{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"所有要点均正确\"}"
+ },
+ {
+  "id": "FWD-07",
+  "answer": "{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"所有要点均命中\"}"
+ },
+ {
+  "id": "FWD-08",
+  "answer": "```json\n{\"hit\": 0, \"total\": 8, \"score\": 0.0, \"reason\": \"未列出任何依赖模块\"}\n```"
+ },
+ {
+  "id": "FWD-09",
+  "answer": "{\"hit\": 0, \"total\": 9, \"score\": 0.0, \"reason\": \"回答与问题方向相反\"}"
+ },
+ {
+  "id": "FWD-10",
+  "answer": "{\"hit\": 8, \"total\": 8, \"score\": 1.0, \"reason\": \"所有要点均命中\"}"
+ },
+ {
+  "id": "FWD-11",
+  "answer": "{\"hit\": 10, \"total\": 10, \"score\": 1.0, \"reason\": \"所有要点均命中\"}"
+ },
+ {
+  "id": "REV-01",
+  "answer": "{\"hit\": 4, \"total\": 17, \"score\": 0.24, \"reason\": \"部分正确，遗漏了大部分文件\"}"
+ },
+ {
+  "id": "REV-02",
+  "answer": "{\"hit\": 4, \"total\": 14, \"score\": 0.2857, \"reason\": \"部分正确，遗漏了多个要点\"}"
+ },
+ {
+  "id": "REV-03",
+  "answer": "```json\n{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"所有要点均命中\"}\n```"
+ },
+ {
+  "id": "REV-04",
+  "answer": "{\"hit\": 7, \"total\": 7, \"score\": 1.0, \"reason\": \"所有要点均命中\"}"
+ },
+ {
+  "id": "REV-05",
+  "answer": "{\"hit\": 5, \"total\": 13, \"score\": 0.38, \"reason\": \"部分文件命中，但未完全列出所有依赖文件\"}"
+ },
+ {
+  "id": "REV-06",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"完全正确\"}"
+ },
+ {
+  "id": "REV-07",
+  "answer": "```json\n{\"hit\": 4, \"total\": 18, \"score\": 0.22, \"reason\": \"部分正确，遗漏了多数要点\"}\n```"
+ },
+ {
+  "id": "REV-08",
+  "answer": "```json\n{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"所有要点均命中\"}\n```"
+ },
+ {
+  "id": "REV-09",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"完全命中标准答案\"}\n```"
+ },
+ {
+  "id": "REV-10",
+  "answer": "{\"hit\": 5, \"total\": 6, \"score\": 0.83, \"reason\": \"遗漏了 'routing/rules.py'\"}"
+ },
+ {
+  "id": "REV-11",
+  "answer": "```json\n{\"hit\": 9, \"total\": 9, \"score\": 1.0, \"reason\": \"所有要点均命中\"}\n```"
+ },
+ {
+  "id": "REV-12",
+  "answer": "{\"hit\": 10, \"total\": 10, \"score\": 1.0, \"reason\": \"所有要点均命中\"}"
+ },
+ {
+  "id": "REV-13",
+  "answer": "{\"hit\": 3, \"total\": 10, \"score\": 0.3, \"reason\": \"遗漏了7个要点\"}"
+ },
+ {
+  "id": "INH-01",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全正确\"}"
+ },
+ {
+  "id": "INH-02",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全正确\"}"
+ },
+ {
+  "id": "INH-03",
+  "answer": "```json\n{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"遗漏了Headers的继承关系\"}\n```"
+ },
+ {
+  "id": "INH-04",
+  "answer": "```json\n{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全正确\"}\n```"
+ },
+ {
+  "id": "INH-05",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全正确\"}"
+ },
+ {
+  "id": "INH-06",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全正确\"}"
+ },
+ {
+  "id": "INH-07",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确回答了继承关系\"}\n```"
+ },
+ {
+  "id": "INH-08",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确回答了基类文件名\"}"
+ },
+ {
+  "id": "INH-09",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全正确\"}"
+ },
+ {
+  "id": "INH-10",
+  "answer": "{\"hit\": 5, \"total\": 31, \"score\": 0.161, \"reason\": \"仅命中5个要点，遗漏26个要点\"}"
+ },
+ {
+  "id": "INH-11",
+  "answer": "```json\n{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"所有要点都命中\"}\n```"
+ },
+ {
+  "id": "INH-12",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"只命中一个要点\"}"
+ },
+ {
+  "id": "LOC-01",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确回答了文件名\"}\n```"
+ },
+ {
+  "id": "LOC-02",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}"
+ },
+ {
+  "id": "LOC-03",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}"
+ },
+ {
+  "id": "LOC-04",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确回答了文件名\"}\n```"
+ },
+ {
+  "id": "LOC-05",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出 HTTPException 定义在 exceptions.py\"}"
+ },
+ {
+  "id": "LOC-06",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}"
+ },
+ {
+  "id": "LOC-07",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}"
+ },
+ {
+  "id": "LOC-08",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}"
+ },
+ {
+  "id": "LOC-09",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}\n```"
+ },
+ {
+  "id": "LOC-10",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}"
+ },
+ {
+  "id": "LOC-11",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件名\"}\n```"
+ },
+ {
+  "id": "LOC-12",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确回答了文件名\"}\n```"
+ },
+ {
+  "id": "DAT-01",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "DAT-02",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确找到文件名\"}"
+ },
+ {
+  "id": "DAT-03",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "IND-01",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出中间文件\"}\n```"
+ },
+ {
+  "id": "IND-02",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出中间文件\"}\n```"
+ },
+ {
+  "id": "IND-03",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确识别中间文件\"}"
+ },
+ {
+  "id": "IND-04",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"命中 datastructures/__init__.py\"}\n```"
+ },
+ {
+  "id": "IND-05",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出通过 datastructures/__init__.py 间接依赖\"}"
+ }
+]

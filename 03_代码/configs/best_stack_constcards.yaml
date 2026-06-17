@@ -1,0 +1,20 @@
+# E12:与冠军 best_stack_norerank 只差 include_constant_cards 开关。
+# 假设:常量卡精准修复 SE-04/CF-05(ERROR_ANALYSIS B 类:文件命中但块不含答案),
+# 且不伤其他用例(卡片只是新增候选)。
+name: best_stack_constcards
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl
+chunking:
+  strategy: function
+  include_graph_cards: true
+  include_constant_cards: true
+embedder:
+  type: sentence_transformer
+  model_name: models/bge-small-en-v1.5  # M65 审计:英文/代码任务用 en(R@5 0.93≫zh 0.32),零成本;勿改回 zh(冒烟测试会拦)
+backend:
+  type: hybrid
+  top_k: 3
+  rerank: false
+llm:
+  type: mock
+prompt_file: configs/prompts/plain.yaml

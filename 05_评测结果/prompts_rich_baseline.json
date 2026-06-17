@@ -1,0 +1,943 @@
+[
+ {
+  "id": "R-REV-01",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 console.py?请尽量列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: constrain.py (第 0-0 行)\n[依赖图卡片] 文件 constrain.py\n它依赖(import)的仓库内文件: console.py, jupyter.py, measure.py\n它被这些文件依赖/使用(import 它的使用方): align.py, columns.py, traceback.py\n文件内定义的类: Constrain\n文件内定义的函数: __init__, __rich_console__, __rich_measure__\n\n[代码片段 2] 来源: json.py (第 0-0 行)\n[依赖图卡片] 文件 json.py\n它依赖(import)的仓库内文件: console.py, highlighter.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, highlighter.py\n文件内定义的类: JSON\n文件内定义的函数: __init__, from_data, __rich__\n\n[代码片段 3] 来源: _log_render.py (第 0-0 行)\n[依赖图卡片] 文件 _log_render.py\n它依赖(import)的仓库内文件: console.py, containers.py, table.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, logging.py\n文件内定义的类: LogRender\n文件内定义的函数: __init__, __call__\n\n[代码片段 4] 来源: status.py (第 0-0 行)\n[依赖图卡片] 文件 status.py\n它依赖(import)的仓库内文件: console.py, jupyter.py, live.py, spinner.py, style.py\n它被这些文件依赖/使用(import 它的使用方): console.py\n文件内定义的类: Status\n文件内定义的函数: __init__, renderable, console, update, start, stop, __rich__, __enter__, __exit__\n\n[代码片段 5] 来源: styled.py (第 0-0 行)\n[依赖图卡片] 文件 styled.py\n它依赖(import)的仓库内文件: console.py, measure.py, panel.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): console.py, layout.py, tree.py\n文件内定义的类: Styled\n文件内定义的函数: __init__, __rich_console__, __rich_measure__\n\n[问题] 在该项目中,哪些文件 import(依赖)了 console.py?请尽量列全。",
+  "retrieved_sources": [
+   "constrain.py",
+   "json.py",
+   "_log_render.py",
+   "status.py",
+   "styled.py"
+  ],
+  "expected_sources": [
+   "console.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__init__",
+    "__main__",
+    "_inspect",
+    "_log_render",
+    "_win32_console",
+    "_wrap",
+    "align",
+    "ansi",
+    "bar",
+    "box",
+    "color",
+    "columns",
+    "constrain",
+    "containers",
+    "control",
+    "default_styles",
+    "diagnose",
+    "emoji",
+    "file_proxy",
+    "highlighter",
+    "json",
+    "jupyter",
+    "layout",
+    "live",
+    "live_render",
+    "logging",
+    "markdown",
+    "measure",
+    "padding",
+    "pager",
+    "palette",
+    "panel",
+    "pretty",
+    "progress",
+    "progress_bar",
+    "prompt",
+    "protocol",
+    "repr",
+    "rule",
+    "scope",
+    "screen",
+    "segment",
+    "spinner",
+    "status",
+    "styled",
+    "syntax",
+    "table",
+    "text",
+    "traceback",
+    "tree"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-02",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 text.py?请尽量列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: abc.py (第 0-0 行)\n[依赖图卡片] 文件 abc.py\n它依赖(import)的仓库内文件: text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, highlighter.py, layout.py, pager.py, pretty.py, progress.py, syntax.py\n文件内定义的类: RichRenderable, Foo\n文件内定义的函数: __subclasshook__\n\n[代码片段 2] 来源: rule.py (第 0-0 行)\n[依赖图卡片] 文件 rule.py\n它依赖(import)的仓库内文件: align.py, cells.py, console.py, jupyter.py, measure.py, style.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, live.py, markdown.py, progress.py\n文件内定义的类: Rule\n文件内定义的函数: __init__, __repr__, __rich_console__, _rule_line, __rich_measure__\n\n[代码片段 3] 来源: json.py (第 0-0 行)\n[依赖图卡片] 文件 json.py\n它依赖(import)的仓库内文件: console.py, highlighter.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, highlighter.py\n文件内定义的类: JSON\n文件内定义的函数: __init__, from_data, __rich__\n\n[代码片段 4] 来源: markup.py (第 0-0 行)\n[依赖图卡片] 文件 markup.py\n它依赖(import)的仓库内文件: _emoji_replace.py, emoji.py, errors.py, style.py, table.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, text.py\n文件内定义的类: Tag\n文件内定义的函数: __str__, markup, escape, escape_backslashes, _parse, render, pop_style\n\n[代码片段 5] 来源: ansi.py (第 0-0 行)\n[依赖图卡片] 文件 ansi.py\n它依赖(import)的仓库内文件: color.py, console.py, style.py, text.py\n它被这些文件依赖/使用(import 它的使用方): file_proxy.py, text.py\n文件内定义的类: _AnsiToken, AnsiDecoder\n文件内定义的函数: _ansi_tokenize, __init__, decode, decode_line, read\n\n[问题] 在该项目中,哪些文件 import(依赖)了 text.py?请尽量列全。",
+  "retrieved_sources": [
+   "abc.py",
+   "rule.py",
+   "json.py",
+   "markup.py",
+   "ansi.py"
+  ],
+  "expected_sources": [
+   "text.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__main__",
+    "_inspect",
+    "_log_render",
+    "abc",
+    "ansi",
+    "box",
+    "color",
+    "columns",
+    "console",
+    "containers",
+    "default_styles",
+    "file_proxy",
+    "highlighter",
+    "json",
+    "live",
+    "live_render",
+    "logging",
+    "markdown",
+    "markup",
+    "palette",
+    "panel",
+    "pretty",
+    "progress",
+    "prompt",
+    "rule",
+    "scope",
+    "segment",
+    "spinner",
+    "syntax",
+    "table",
+    "traceback"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-03",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 style.py?请尽量列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: theme.py (第 0-0 行)\n[依赖图卡片] 文件 theme.py\n它依赖(import)的仓库内文件: default_styles.py, style.py\n它被这些文件依赖/使用(import 它的使用方): console.py, themes.py, traceback.py\n文件内定义的类: Theme, ThemeStackError, ThemeStack\n文件内定义的函数: __init__, config, from_file, read, __init__, push_theme, pop_theme\n\n[代码片段 2] 来源: default_styles.py (第 0-0 行)\n[依赖图卡片] 文件 default_styles.py\n它依赖(import)的仓库内文件: console.py, style.py, table.py, text.py\n它被这些文件依赖/使用(import 它的使用方): theme.py, themes.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 3] 来源: styled.py (第 0-0 行)\n[依赖图卡片] 文件 styled.py\n它依赖(import)的仓库内文件: console.py, measure.py, panel.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): console.py, layout.py, tree.py\n文件内定义的类: Styled\n文件内定义的函数: __init__, __rich_console__, __rich_measure__\n\n[代码片段 4] 来源: rule.py (第 0-0 行)\n[依赖图卡片] 文件 rule.py\n它依赖(import)的仓库内文件: align.py, cells.py, console.py, jupyter.py, measure.py, style.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, live.py, markdown.py, progress.py\n文件内定义的类: Rule\n文件内定义的函数: __init__, __repr__, __rich_console__, _rule_line, __rich_measure__\n\n[代码片段 5] 来源: repr.py (第 0-0 行)\n[依赖图卡片] 文件 repr.py\n它依赖(import)的仓库内文件: console.py\n它被这些文件依赖/使用(import 它的使用方): color.py, layout.py, pretty.py, segment.py, style.py\n文件内定义的类: ReprError, Foo\n文件内定义的函数: auto, auto, auto, do_replace, auto_repr, auto_rich_repr, rich_repr, rich_repr, rich_repr, __rich_repr__\n\n[问题] 在该项目中,哪些文件 import(依赖)了 style.py?请尽量列全。",
+  "retrieved_sources": [
+   "theme.py",
+   "default_styles.py",
+   "styled.py",
+   "rule.py",
+   "repr.py"
+  ],
+  "expected_sources": [
+   "style.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__main__",
+    "_win32_console",
+    "align",
+    "ansi",
+    "bar",
+    "color",
+    "console",
+    "default_styles",
+    "emoji",
+    "layout",
+    "live_render",
+    "markdown",
+    "markup",
+    "padding",
+    "palette",
+    "panel",
+    "progress",
+    "progress_bar",
+    "rule",
+    "screen",
+    "segment",
+    "spinner",
+    "status",
+    "styled",
+    "syntax",
+    "table",
+    "text",
+    "theme",
+    "traceback",
+    "tree"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-04",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 segment.py?请尽量列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: logging.py (第 0-0 行)\n[依赖图卡片] 文件 logging.py\n它依赖(import)的仓库内文件: _log_render.py, _null_file.py, console.py, highlighter.py, text.py, traceback.py\n它被这些文件依赖/使用(import 它的使用方): segment.py\n文件内定义的类: RichHandler\n文件内定义的函数: __init__, get_level_text, emit, render_message, render, divide\n\n[代码片段 2] 来源: align.py (第 0-0 行)\n[依赖图卡片] 文件 align.py\n它依赖(import)的仓库内文件: console.py, constrain.py, highlighter.py, jupyter.py, measure.py, panel.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): columns.py, console.py, layout.py, live.py, panel.py, rule.py, table.py, text.py\n文件内定义的类: Align, VerticalCenter\n文件内定义的函数: __init__, __repr__, left, center, right, __rich_console__, generate_segments, blank_lines, __rich_measure__, __init__, __repr__, __rich_console__, blank_lines, __rich_measure__\n\n[代码片段 3] 来源: padding.py (第 0-0 行)\n[依赖图卡片] 文件 padding.py\n它依赖(import)的仓库内文件: console.py, jupyter.py, measure.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): columns.py, panel.py, syntax.py, table.py\n文件内定义的类: Padding\n文件内定义的函数: __init__, indent, unpack, __repr__, __rich_console__, __rich_measure__\n\n[代码片段 4] 来源: repr.py (第 0-0 行)\n[依赖图卡片] 文件 repr.py\n它依赖(import)的仓库内文件: console.py\n它被这些文件依赖/使用(import 它的使用方): color.py, layout.py, pretty.py, segment.py, style.py\n文件内定义的类: ReprError, Foo\n文件内定义的函数: auto, auto, auto, do_replace, auto_repr, auto_rich_repr, rich_repr, rich_repr, rich_repr, __rich_repr__\n\n[代码片段 5] 来源: cells.py (第 0-0 行)\n[依赖图卡片] 文件 cells.py\n它依赖(import)的仓库内文件: _cell_widths.py\n它被这些文件依赖/使用(import 它的使用方): _wrap.py, console.py, containers.py, panel.py, pretty.py, rule.py, segment.py, syntax.py, text.py\n文件内定义的类: (无)\n文件内定义的函数: cached_cell_len, cell_len, get_character_cell_size, _get_codepoint_cell_size, set_cell_size, chop_cells\n\n[问题] 在该项目中,哪些文件 import(依赖)了 segment.py?请尽量列全。",
+  "retrieved_sources": [
+   "logging.py",
+   "align.py",
+   "padding.py",
+   "repr.py",
+   "cells.py"
+  ],
+  "expected_sources": [
+   "segment.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__main__",
+    "_windows_renderer",
+    "align",
+    "bar",
+    "console",
+    "control",
+    "emoji",
+    "jupyter",
+    "layout",
+    "live_render",
+    "markdown",
+    "padding",
+    "palette",
+    "panel",
+    "progress_bar",
+    "screen",
+    "styled",
+    "syntax",
+    "table",
+    "text",
+    "tree"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-05",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 jupyter.py?请尽量列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: jupyter.py (第 0-0 行)\n[依赖图卡片] 文件 jupyter.py\n它依赖(import)的仓库内文件: console.py, segment.py, terminal_theme.py\n它被这些文件依赖/使用(import 它的使用方): _inspect.py, align.py, bar.py, columns.py, console.py, constrain.py, emoji.py, live.py, markdown.py, padding.py, panel.py, pretty.py, progress.py, progress_bar.py, rule.py, status.py, syntax.py, table.py, text.py, tree.py\n文件内定义的类: JupyterRenderable, JupyterMixin\n文件内定义的函数: __init__, _repr_mimebundle_, _repr_mimebundle_, _render_segments, escape, display, print\n\n[代码片段 2] 来源: rule.py (第 0-0 行)\n[依赖图卡片] 文件 rule.py\n它依赖(import)的仓库内文件: align.py, cells.py, console.py, jupyter.py, measure.py, style.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, live.py, markdown.py, progress.py\n文件内定义的类: Rule\n文件内定义的函数: __init__, __repr__, __rich_console__, _rule_line, __rich_measure__\n\n[代码片段 3] 来源: align.py (第 0-0 行)\n[依赖图卡片] 文件 align.py\n它依赖(import)的仓库内文件: console.py, constrain.py, highlighter.py, jupyter.py, measure.py, panel.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): columns.py, console.py, layout.py, live.py, panel.py, rule.py, table.py, text.py\n文件内定义的类: Align, VerticalCenter\n文件内定义的函数: __init__, __repr__, left, center, right, __rich_console__, generate_segments, blank_lines, __rich_measure__, __init__, __repr__, __rich_console__, blank_lines, __rich_measure__\n\n[代码片段 4] 来源: constrain.py (第 0-0 行)\n[依赖图卡片] 文件 constrain.py\n它依赖(import)的仓库内文件: console.py, jupyter.py, measure.py\n它被这些文件依赖/使用(import 它的使用方): align.py, columns.py, traceback.py\n文件内定义的类: Constrain\n文件内定义的函数: __init__, __rich_console__, __rich_measure__\n\n[代码片段 5] 来源: columns.py (第 0-0 行)\n[依赖图卡片] 文件 columns.py\n它依赖(import)的仓库内文件: align.py, console.py, constrain.py, jupyter.py, measure.py, padding.py, table.py, text.py\n它被这些文件依赖/使用(import 它的使用方): box.py, emoji.py, spinner.py, traceback.py\n文件内定义的类: Columns\n文件内定义的函数: __init__, add_renderable, __rich_console__, iter_renderables\n\n[问题] 在该项目中,哪些文件 import(依赖)了 jupyter.py?请尽量列全。",
+  "retrieved_sources": [
+   "jupyter.py",
+   "rule.py",
+   "align.py",
+   "constrain.py",
+   "columns.py"
+  ],
+  "expected_sources": [
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_inspect",
+    "align",
+    "bar",
+    "columns",
+    "console",
+    "constrain",
+    "emoji",
+    "live",
+    "markdown",
+    "padding",
+    "panel",
+    "pretty",
+    "progress",
+    "progress_bar",
+    "rule",
+    "status",
+    "syntax",
+    "table",
+    "text",
+    "tree"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-06",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 measure.py?请尽量列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: measure.py (第 0-0 行)\n[依赖图卡片] 文件 measure.py\n它依赖(import)的仓库内文件: console.py, protocol.py\n它被这些文件依赖/使用(import 它的使用方): __main__.py, align.py, bar.py, columns.py, console.py, constrain.py, containers.py, padding.py, panel.py, pretty.py, progress_bar.py, rule.py, spinner.py, styled.py, syntax.py, table.py, text.py, tree.py\n文件内定义的类: Measurement\n文件内定义的函数: span, normalize, with_maximum, with_minimum, clamp, get, measure_renderables\n\n[代码片段 2] 来源: constrain.py (第 0-0 行)\n[依赖图卡片] 文件 constrain.py\n它依赖(import)的仓库内文件: console.py, jupyter.py, measure.py\n它被这些文件依赖/使用(import 它的使用方): align.py, columns.py, traceback.py\n文件内定义的类: Constrain\n文件内定义的函数: __init__, __rich_console__, __rich_measure__\n\n[代码片段 3] 来源: rule.py (第 0-0 行)\n[依赖图卡片] 文件 rule.py\n它依赖(import)的仓库内文件: align.py, cells.py, console.py, jupyter.py, measure.py, style.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, live.py, markdown.py, progress.py\n文件内定义的类: Rule\n文件内定义的函数: __init__, __repr__, __rich_console__, _rule_line, __rich_measure__\n\n[代码片段 4] 来源: containers.py (第 0-0 行)\n[依赖图卡片] 文件 containers.py\n它依赖(import)的仓库内文件: cells.py, console.py, measure.py, text.py\n它被这些文件依赖/使用(import 它的使用方): _log_render.py, markdown.py, syntax.py, text.py\n文件内定义的类: Renderables, Lines\n文件内定义的函数: __init__, __rich_console__, __rich_measure__, append, __iter__, __init__, __repr__, __iter__, __getitem__, __getitem__, __getitem__, __setitem__, __len__, __rich_console__, append, extend, pop, justify\n\n[代码片段 5] 来源: align.py (第 0-0 行)\n[依赖图卡片] 文件 align.py\n它依赖(import)的仓库内文件: console.py, constrain.py, highlighter.py, jupyter.py, measure.py, panel.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): columns.py, console.py, layout.py, live.py, panel.py, rule.py, table.py, text.py\n文件内定义的类: Align, VerticalCenter\n文件内定义的函数: __init__, __repr__, left, center, right, __rich_console__, generate_segments, blank_lines, __rich_measure__, __init__, __repr__, __rich_console__, blank_lines, __rich_measure__\n\n[问题] 在该项目中,哪些文件 import(依赖)了 measure.py?请尽量列全。",
+  "retrieved_sources": [
+   "measure.py",
+   "constrain.py",
+   "rule.py",
+   "containers.py",
+   "align.py"
+  ],
+  "expected_sources": [
+   "measure.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__main__",
+    "align",
+    "bar",
+    "columns",
+    "console",
+    "constrain",
+    "containers",
+    "padding",
+    "panel",
+    "pretty",
+    "progress_bar",
+    "rule",
+    "spinner",
+    "styled",
+    "syntax",
+    "table",
+    "text",
+    "tree"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-01",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,console.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: protocol.py (第 0-0 行)\n[依赖图卡片] 文件 protocol.py\n它依赖(import)的仓库内文件: console.py\n它被这些文件依赖/使用(import 它的使用方): console.py, measure.py, table.py\n文件内定义的类: (无)\n文件内定义的函数: is_renderable, rich_cast\n\n[代码片段 2] 来源: json.py (第 0-0 行)\n[依赖图卡片] 文件 json.py\n它依赖(import)的仓库内文件: console.py, highlighter.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, highlighter.py\n文件内定义的类: JSON\n文件内定义的函数: __init__, from_data, __rich__\n\n[代码片段 3] 来源: constrain.py (第 0-0 行)\n[依赖图卡片] 文件 constrain.py\n它依赖(import)的仓库内文件: console.py, jupyter.py, measure.py\n它被这些文件依赖/使用(import 它的使用方): align.py, columns.py, traceback.py\n文件内定义的类: Constrain\n文件内定义的函数: __init__, __rich_console__, __rich_measure__\n\n[代码片段 4] 来源: styled.py (第 0-0 行)\n[依赖图卡片] 文件 styled.py\n它依赖(import)的仓库内文件: console.py, measure.py, panel.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): console.py, layout.py, tree.py\n文件内定义的类: Styled\n文件内定义的函数: __init__, __rich_console__, __rich_measure__\n\n[代码片段 5] 来源: region.py (第 0-0 行)\n[依赖图卡片] 文件 region.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): console.py, layout.py\n文件内定义的类: Region\n文件内定义的函数: (无)\n\n[问题] 在该项目中,console.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "retrieved_sources": [
+   "protocol.py",
+   "json.py",
+   "constrain.py",
+   "styled.py",
+   "region.py"
+  ],
+  "expected_sources": [
+   "console.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_emoji_replace",
+    "_export_format",
+    "_fileno",
+    "_log_render",
+    "_null_file",
+    "_win32_console",
+    "_windows",
+    "_windows_renderer",
+    "abc",
+    "align",
+    "cells",
+    "color",
+    "control",
+    "emoji",
+    "highlighter",
+    "json",
+    "jupyter",
+    "live",
+    "markup",
+    "measure",
+    "pager",
+    "pretty",
+    "protocol",
+    "region",
+    "rule",
+    "scope",
+    "screen",
+    "segment",
+    "status",
+    "style",
+    "styled",
+    "terminal_theme",
+    "text",
+    "theme",
+    "traceback"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-02",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,text.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: containers.py (第 0-0 行)\n[依赖图卡片] 文件 containers.py\n它依赖(import)的仓库内文件: cells.py, console.py, measure.py, text.py\n它被这些文件依赖/使用(import 它的使用方): _log_render.py, markdown.py, syntax.py, text.py\n文件内定义的类: Renderables, Lines\n文件内定义的函数: __init__, __rich_console__, __rich_measure__, append, __iter__, __init__, __repr__, __iter__, __getitem__, __getitem__, __getitem__, __setitem__, __len__, __rich_console__, append, extend, pop, justify\n\n[代码片段 2] 来源: abc.py (第 0-0 行)\n[依赖图卡片] 文件 abc.py\n它依赖(import)的仓库内文件: text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, highlighter.py, layout.py, pager.py, pretty.py, progress.py, syntax.py\n文件内定义的类: RichRenderable, Foo\n文件内定义的函数: __subclasshook__\n\n[代码片段 3] 来源: json.py (第 0-0 行)\n[依赖图卡片] 文件 json.py\n它依赖(import)的仓库内文件: console.py, highlighter.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, highlighter.py\n文件内定义的类: JSON\n文件内定义的函数: __init__, from_data, __rich__\n\n[代码片段 4] 来源: logging.py (第 0-0 行)\n[依赖图卡片] 文件 logging.py\n它依赖(import)的仓库内文件: _log_render.py, _null_file.py, console.py, highlighter.py, text.py, traceback.py\n它被这些文件依赖/使用(import 它的使用方): segment.py\n文件内定义的类: RichHandler\n文件内定义的函数: __init__, get_level_text, emit, render_message, render, divide\n\n[代码片段 5] 来源: ansi.py (第 0-0 行)\n[依赖图卡片] 文件 ansi.py\n它依赖(import)的仓库内文件: color.py, console.py, style.py, text.py\n它被这些文件依赖/使用(import 它的使用方): file_proxy.py, text.py\n文件内定义的类: _AnsiToken, AnsiDecoder\n文件内定义的函数: _ansi_tokenize, __init__, decode, decode_line, read\n\n[问题] 在该项目中,text.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "retrieved_sources": [
+   "containers.py",
+   "abc.py",
+   "json.py",
+   "logging.py",
+   "ansi.py"
+  ],
+  "expected_sources": [
+   "text.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_loop",
+    "_pick",
+    "_wrap",
+    "align",
+    "ansi",
+    "cells",
+    "console",
+    "containers",
+    "control",
+    "emoji",
+    "jupyter",
+    "markup",
+    "measure",
+    "segment",
+    "style"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-03",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,layout.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: layout.py (第 0-0 行)\n[依赖图卡片] 文件 layout.py\n它依赖(import)的仓库内文件: _ratio.py, abc.py, align.py, console.py, highlighter.py, panel.py, pretty.py, region.py, repr.py, segment.py, style.py, styled.py, table.py, tree.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: LayoutRender, LayoutError, NoSplitter, _Placeholder, Splitter, RowSplitter, ColumnSplitter, Layout\n文件内定义的函数: __init__, __rich_console__, get_tree_icon, divide, get_tree_icon, divide, get_tree_icon, divide, __init__, __rich_repr__, renderable, children, map, get, __getitem__, tree, summary, recurse, split, add_split, split_row, split_column, unsplit, update, refresh_screen, _make_region_map, render, __rich_console__\n\n[代码片段 2] 来源: tree.py (第 0-0 行)\n[依赖图卡片] 文件 tree.py\n它依赖(import)的仓库内文件: _loop.py, console.py, jupyter.py, markdown.py, measure.py, panel.py, segment.py, style.py, styled.py, syntax.py, table.py\n它被这些文件依赖/使用(import 它的使用方): layout.py\n文件内定义的类: Tree\n文件内定义的函数: __init__, add, __rich_console__, make_guide, __rich_measure__\n\n[代码片段 3] 来源: abc.py (第 0-0 行)\n[依赖图卡片] 文件 abc.py\n它依赖(import)的仓库内文件: text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, highlighter.py, layout.py, pager.py, pretty.py, progress.py, syntax.py\n文件内定义的类: RichRenderable, Foo\n文件内定义的函数: __subclasshook__\n\n[代码片段 4] 来源: region.py (第 0-0 行)\n[依赖图卡片] 文件 region.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): console.py, layout.py\n文件内定义的类: Region\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: align.py (第 0-0 行)\n[依赖图卡片] 文件 align.py\n它依赖(import)的仓库内文件: console.py, constrain.py, highlighter.py, jupyter.py, measure.py, panel.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): columns.py, console.py, layout.py, live.py, panel.py, rule.py, table.py, text.py\n文件内定义的类: Align, VerticalCenter\n文件内定义的函数: __init__, __repr__, left, center, right, __rich_console__, generate_segments, blank_lines, __rich_measure__, __init__, __repr__, __rich_console__, blank_lines, __rich_measure__\n\n[问题] 在该项目中,layout.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "retrieved_sources": [
+   "layout.py",
+   "tree.py",
+   "abc.py",
+   "region.py",
+   "align.py"
+  ],
+  "expected_sources": [
+   "layout.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_ratio",
+    "abc",
+    "align",
+    "console",
+    "highlighter",
+    "panel",
+    "pretty",
+    "region",
+    "repr",
+    "segment",
+    "style",
+    "styled",
+    "table",
+    "tree"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-04",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,table.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: protocol.py (第 0-0 行)\n[依赖图卡片] 文件 protocol.py\n它依赖(import)的仓库内文件: console.py\n它被这些文件依赖/使用(import 它的使用方): console.py, measure.py, table.py\n文件内定义的类: (无)\n文件内定义的函数: is_renderable, rich_cast\n\n[代码片段 2] 来源: padding.py (第 0-0 行)\n[依赖图卡片] 文件 padding.py\n它依赖(import)的仓库内文件: console.py, jupyter.py, measure.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): columns.py, panel.py, syntax.py, table.py\n文件内定义的类: Padding\n文件内定义的函数: __init__, indent, unpack, __repr__, __rich_console__, __rich_measure__\n\n[代码片段 3] 来源: _log_render.py (第 0-0 行)\n[依赖图卡片] 文件 _log_render.py\n它依赖(import)的仓库内文件: console.py, containers.py, table.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, logging.py\n文件内定义的类: LogRender\n文件内定义的函数: __init__, __call__\n\n[代码片段 4] 来源: default_styles.py (第 0-0 行)\n[依赖图卡片] 文件 default_styles.py\n它依赖(import)的仓库内文件: console.py, style.py, table.py, text.py\n它被这些文件依赖/使用(import 它的使用方): theme.py, themes.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: scope.py (第 0-0 行)\n[依赖图卡片] 文件 scope.py\n它依赖(import)的仓库内文件: console.py, highlighter.py, panel.py, pretty.py, table.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, traceback.py\n文件内定义的类: (无)\n文件内定义的函数: render_scope, sort_items, test\n\n[问题] 在该项目中,table.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "retrieved_sources": [
+   "protocol.py",
+   "padding.py",
+   "_log_render.py",
+   "default_styles.py",
+   "scope.py"
+  ],
+  "expected_sources": [
+   "table.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_loop",
+    "_pick",
+    "_ratio",
+    "_timer",
+    "align",
+    "console",
+    "highlighter",
+    "jupyter",
+    "measure",
+    "padding",
+    "protocol",
+    "segment",
+    "style",
+    "text"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-05",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,progress.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: progress_bar.py (第 0-0 行)\n[依赖图卡片] 文件 progress_bar.py\n它依赖(import)的仓库内文件: color.py, color_triplet.py, console.py, jupyter.py, measure.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): progress.py\n文件内定义的类: ProgressBar\n文件内定义的函数: __init__, __repr__, percentage_completed, _get_pulse_segments, update, _render_pulse, __rich_console__, __rich_measure__\n\n[代码片段 2] 来源: progress.py (第 0-0 行)\n[依赖图卡片] 文件 progress.py\n它依赖(import)的仓库内文件: abc.py, console.py, highlighter.py, jupyter.py, live.py, panel.py, progress_bar.py, rule.py, spinner.py, style.py, syntax.py, table.py, text.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: _TrackThread, _Reader, _ReadContext, ProgressColumn, RenderableColumn, SpinnerColumn, TextColumn, BarColumn, TimeElapsedColumn, TaskProgressColumn, TimeRemainingColumn, FileSizeColumn, TotalFileSizeColumn, MofNCompleteColumn, DownloadColumn, TransferSpeedColumn, ProgressSample, Task, Progress\n文件内定义的函数: __init__, run, __enter__, __exit__, track, __init__, __enter__, __exit__, __iter__, __next__, closed, fileno, isatty, mode, name, readable, seekable, writable, read, readinto, readline, readlines, close, seek, tell, write, writelines, __init__, __enter__, __exit__\n\n[代码片段 3] 来源: rule.py (第 0-0 行)\n[依赖图卡片] 文件 rule.py\n它依赖(import)的仓库内文件: align.py, cells.py, console.py, jupyter.py, measure.py, style.py, text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, live.py, markdown.py, progress.py\n文件内定义的类: Rule\n文件内定义的函数: __init__, __repr__, __rich_console__, _rule_line, __rich_measure__\n\n[代码片段 4] 来源: spinner.py (第 0-0 行)\n[依赖图卡片] 文件 spinner.py\n它依赖(import)的仓库内文件: _spinners.py, columns.py, console.py, live.py, measure.py, panel.py, style.py, table.py, text.py\n它被这些文件依赖/使用(import 它的使用方): progress.py, status.py\n文件内定义的类: Spinner\n文件内定义的函数: __init__, __rich_console__, __rich_measure__, render, update\n\n[代码片段 5] 来源: abc.py (第 0-0 行)\n[依赖图卡片] 文件 abc.py\n它依赖(import)的仓库内文件: text.py\n它被这些文件依赖/使用(import 它的使用方): console.py, highlighter.py, layout.py, pager.py, pretty.py, progress.py, syntax.py\n文件内定义的类: RichRenderable, Foo\n文件内定义的函数: __subclasshook__\n\n[问题] 在该项目中,progress.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "retrieved_sources": [
+   "progress_bar.py",
+   "progress.py",
+   "rule.py",
+   "spinner.py",
+   "abc.py"
+  ],
+  "expected_sources": [
+   "progress.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "abc",
+    "console",
+    "highlighter",
+    "jupyter",
+    "live",
+    "panel",
+    "progress_bar",
+    "rule",
+    "spinner",
+    "style",
+    "syntax",
+    "table",
+    "text"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-01",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 Inspect 继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _inspect.py (第 0-0 行)\n[依赖图卡片] 类 Inspect\n定义位置: _inspect.py 第 21-233 行\n它继承自: JupyterMixin [jupyter.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: jupyter.py (第 0-0 行)\n[依赖图卡片] 类 JupyterMixin\n定义位置: jupyter.py 第 36-56 行\n它继承自: (无基类)\n继承它的子类: Inspect [_inspect.py], Align [align.py], VerticalCenter [align.py], Bar [bar.py], Columns [columns.py], Constrain [constrain.py], Emoji [emoji.py], Live [live.py], Markdown [markdown.py], Padding [padding.py], Panel [panel.py], Pretty [pretty.py], Progress [progress.py], ProgressBar [progress_bar.py], Rule [rule.py], Status [status.py], Syntax [syntax.py], Table [table.py], Text [text.py], Tree [tree.py]\n\n[代码片段 3] 来源: repr.py (第 0-0 行)\n[依赖图卡片] 类 ReprError\n定义位置: repr.py 第 23-24 行\n它继承自: Exception\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: prompt.py (第 0-0 行)\n[依赖图卡片] 类 PromptError\n定义位置: prompt.py 第 11-12 行\n它继承自: Exception\n继承它的子类: InvalidResponse [prompt.py]\n\n[代码片段 5] 来源: prompt.py (第 0-0 行)\n[依赖图卡片] 类 InvalidResponse\n定义位置: prompt.py 第 15-27 行\n它继承自: PromptError [prompt.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Inspect 继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "_inspect.py",
+   "jupyter.py",
+   "repr.py",
+   "prompt.py",
+   "prompt.py"
+  ],
+  "expected_sources": [
+   "_inspect.py",
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "JupyterMixin",
+    "jupyter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-02",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 Align 继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: align.py (第 0-0 行)\n[依赖图卡片] 类 Align\n定义位置: align.py 第 23-231 行\n它继承自: JupyterMixin [jupyter.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: jupyter.py (第 0-0 行)\n[依赖图卡片] 类 JupyterMixin\n定义位置: jupyter.py 第 36-56 行\n它继承自: (无基类)\n继承它的子类: Inspect [_inspect.py], Align [align.py], VerticalCenter [align.py], Bar [bar.py], Columns [columns.py], Constrain [constrain.py], Emoji [emoji.py], Live [live.py], Markdown [markdown.py], Padding [padding.py], Panel [panel.py], Pretty [pretty.py], Progress [progress.py], ProgressBar [progress_bar.py], Rule [rule.py], Status [status.py], Syntax [syntax.py], Table [table.py], Text [text.py], Tree [tree.py]\n\n[代码片段 3] 来源: align.py (第 0-0 行)\n[依赖图卡片] 类 VerticalCenter\n定义位置: align.py 第 234-288 行\n它继承自: JupyterMixin [jupyter.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: ansi.py (第 0-0 行)\n[依赖图卡片] 类 _AnsiToken\n定义位置: ansi.py 第 20-25 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: segment.py (第 0-0 行)\n[依赖图卡片] 类 ControlType\n定义位置: segment.py 第 35-53 行\n它继承自: IntEnum\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Align 继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "align.py",
+   "jupyter.py",
+   "align.py",
+   "ansi.py",
+   "segment.py"
+  ],
+  "expected_sources": [
+   "align.py",
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "JupyterMixin",
+    "jupyter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-03",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 VerticalCenter 继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: align.py (第 0-0 行)\n[依赖图卡片] 类 VerticalCenter\n定义位置: align.py 第 234-288 行\n它继承自: JupyterMixin [jupyter.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: jupyter.py (第 0-0 行)\n[依赖图卡片] 类 JupyterMixin\n定义位置: jupyter.py 第 36-56 行\n它继承自: (无基类)\n继承它的子类: Inspect [_inspect.py], Align [align.py], VerticalCenter [align.py], Bar [bar.py], Columns [columns.py], Constrain [constrain.py], Emoji [emoji.py], Live [live.py], Markdown [markdown.py], Padding [padding.py], Panel [panel.py], Pretty [pretty.py], Progress [progress.py], ProgressBar [progress_bar.py], Rule [rule.py], Status [status.py], Syntax [syntax.py], Table [table.py], Text [text.py], Tree [tree.py]\n\n[代码片段 3] 来源: console.py (第 0-0 行)\n[依赖图卡片] 类 ConsoleRenderable\n定义位置: console.py 第 269-275 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: segment.py (第 0-0 行)\n[依赖图卡片] 类 ControlType\n定义位置: segment.py 第 35-53 行\n它继承自: IntEnum\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _ratio.py (第 0-0 行)\n[依赖图卡片] 类 Edge\n定义位置: _ratio.py 第 12-17 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 VerticalCenter 继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "align.py",
+   "jupyter.py",
+   "console.py",
+   "segment.py",
+   "_ratio.py"
+  ],
+  "expected_sources": [
+   "align.py",
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "JupyterMixin",
+    "jupyter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-04",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 Bar 继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: bar.py (第 0-0 行)\n[依赖图卡片] 类 Bar\n定义位置: bar.py 第 17-93 行\n它继承自: JupyterMixin [jupyter.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: progress.py (第 0-0 行)\n[依赖图卡片] 类 BarColumn\n定义位置: progress.py 第 648-687 行\n它继承自: ProgressColumn [progress.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: progress_bar.py (第 0-0 行)\n[依赖图卡片] 类 ProgressBar\n定义位置: progress_bar.py 第 18-207 行\n它继承自: JupyterMixin [jupyter.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: jupyter.py (第 0-0 行)\n[依赖图卡片] 类 JupyterMixin\n定义位置: jupyter.py 第 36-56 行\n它继承自: (无基类)\n继承它的子类: Inspect [_inspect.py], Align [align.py], VerticalCenter [align.py], Bar [bar.py], Columns [columns.py], Constrain [constrain.py], Emoji [emoji.py], Live [live.py], Markdown [markdown.py], Padding [padding.py], Panel [panel.py], Pretty [pretty.py], Progress [progress.py], ProgressBar [progress_bar.py], Rule [rule.py], Status [status.py], Syntax [syntax.py], Table [table.py], Text [text.py], Tree [tree.py]\n\n[代码片段 5] 来源: segment.py (第 0-0 行)\n[依赖图卡片] 类 ControlType\n定义位置: segment.py 第 35-53 行\n它继承自: IntEnum\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Bar 继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "bar.py",
+   "progress.py",
+   "progress_bar.py",
+   "jupyter.py",
+   "segment.py"
+  ],
+  "expected_sources": [
+   "bar.py",
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "JupyterMixin",
+    "jupyter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-05",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 Columns 继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: columns.py (第 0-0 行)\n[依赖图卡片] 类 Columns\n定义位置: columns.py 第 16-171 行\n它继承自: JupyterMixin [jupyter.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: table.py (第 0-0 行)\n[依赖图卡片] 类 Column\n定义位置: table.py 第 39-129 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: progress.py (第 0-0 行)\n[依赖图卡片] 类 TotalFileSizeColumn\n定义位置: progress.py 第 831-837 行\n它继承自: ProgressColumn [progress.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: layout.py (第 0-0 行)\n[依赖图卡片] 类 ColumnSplitter\n定义位置: layout.py 第 121-138 行\n它继承自: Splitter [layout.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: progress.py (第 0-0 行)\n[依赖图卡片] 类 TextColumn\n定义位置: progress.py 第 618-645 行\n它继承自: ProgressColumn [progress.py]\n继承它的子类: TaskProgressColumn [progress.py]\n\n[问题] 在该项目中,类 Columns 继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "columns.py",
+   "table.py",
+   "progress.py",
+   "layout.py",
+   "progress.py"
+  ],
+  "expected_sources": [
+   "columns.py",
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "JupyterMixin",
+    "jupyter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-06",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 Constrain 继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: constrain.py (第 0-0 行)\n[依赖图卡片] 类 Constrain\n定义位置: constrain.py 第 10-37 行\n它继承自: JupyterMixin [jupyter.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: jupyter.py (第 0-0 行)\n[依赖图卡片] 类 JupyterMixin\n定义位置: jupyter.py 第 36-56 行\n它继承自: (无基类)\n继承它的子类: Inspect [_inspect.py], Align [align.py], VerticalCenter [align.py], Bar [bar.py], Columns [columns.py], Constrain [constrain.py], Emoji [emoji.py], Live [live.py], Markdown [markdown.py], Padding [padding.py], Panel [panel.py], Pretty [pretty.py], Progress [progress.py], ProgressBar [progress_bar.py], Rule [rule.py], Status [status.py], Syntax [syntax.py], Table [table.py], Text [text.py], Tree [tree.py]\n\n[代码片段 3] 来源: console.py (第 0-0 行)\n[依赖图卡片] 类 ConsoleRenderable\n定义位置: console.py 第 269-275 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: console.py (第 0-0 行)\n[依赖图卡片] 类 ConsoleOptions\n定义位置: console.py 第 125-255 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: console.py (第 0-0 行)\n[依赖图卡片] 类 Console\n定义位置: console.py 第 593-2593 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Constrain 继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "constrain.py",
+   "jupyter.py",
+   "console.py",
+   "console.py",
+   "console.py"
+  ],
+  "expected_sources": [
+   "constrain.py",
+   "jupyter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "JupyterMixin",
+    "jupyter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-01",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 TextElement 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: markdown.py (第 0-0 行)\n[依赖图卡片] 类 TextElement\n定义位置: markdown.py 第 96-109 行\n它继承自: MarkdownElement [markdown.py]\n继承它的子类: Paragraph [markdown.py], Heading [markdown.py], CodeBlock [markdown.py], BlockQuote [markdown.py], ListItem [markdown.py], Link [markdown.py], ImageItem [markdown.py]\n\n[代码片段 2] 来源: markdown.py (第 0-0 行)\n[依赖图卡片] 类 Heading\n定义位置: markdown.py 第 132-164 行\n它继承自: TextElement [markdown.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: markdown.py (第 0-0 行)\n[依赖图卡片] 类 CodeBlock\n定义位置: markdown.py 第 167-189 行\n它继承自: TextElement [markdown.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: markdown.py (第 0-0 行)\n[依赖图卡片] 类 BlockQuote\n定义位置: markdown.py 第 192-215 行\n它继承自: TextElement [markdown.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: markdown.py (第 0-0 行)\n[依赖图卡片] 类 Paragraph\n定义位置: markdown.py 第 112-129 行\n它继承自: TextElement [markdown.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 TextElement 定义在哪个文件里?",
+  "retrieved_sources": [
+   "markdown.py",
+   "markdown.py",
+   "markdown.py",
+   "markdown.py",
+   "markdown.py"
+  ],
+  "expected_sources": [
+   "markdown.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "markdown.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-02",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 ScreenContext 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: console.py (第 0-0 行)\n[依赖图卡片] 类 ScreenContext\n定义位置: console.py 第 415-459 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: console.py (第 1250-1262 行)\n文件: console.py\n函数: screen\ndef screen(\n        self, hide_cursor: bool = True, style: Optional[StyleType] = None\n    ) -> \"ScreenContext\":\n        \"\"\"Context manager to enable and disable 'alternative screen' mode.\n\n        Args:\n            hide_cursor (bool, optional): Also hide the cursor. Defaults to False.\n            style (Style, optional): Optional style for screen. Defaults to None.\n\n        Returns:\n            ~ScreenContext: Context which enables alternate screen on enter, and disables it on exit.\n        \"\"\"\n        return ScreenContext(self, hide_cursor=hide_cursor, style=style or \"\")\n\n[代码片段 3] 来源: console.py (第 444-448 行)\n文件: console.py\n函数: __enter__\ndef __enter__(self) -> \"ScreenContext\":\n        self._changed = self.console.set_alt_screen(True)\n        if self._changed and self.hide_cursor:\n            self.console.show_cursor(False)\n        return self\n\n[代码片段 4] 来源: screen.py (第 0-0 行)\n[依赖图卡片] 类 Screen\n定义位置: screen.py 第 18-54 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: screen.py (第 0-0 行)\n[依赖图卡片] 文件 screen.py\n它依赖(import)的仓库内文件: _loop.py, console.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): console.py, live.py\n文件内定义的类: Screen\n文件内定义的函数: __init__, __rich_console__\n\n[问题] 在该项目中,类 ScreenContext 定义在哪个文件里?",
+  "retrieved_sources": [
+   "console.py",
+   "console.py",
+   "console.py",
+   "screen.py",
+   "screen.py"
+  ],
+  "expected_sources": [
+   "console.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "console.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-03",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 Padding 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: padding.py (第 0-0 行)\n[依赖图卡片] 类 Padding\n定义位置: padding.py 第 19-135 行\n它继承自: JupyterMixin [jupyter.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: padding.py (第 0-0 行)\n[依赖图卡片] 文件 padding.py\n它依赖(import)的仓库内文件: console.py, jupyter.py, measure.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): columns.py, panel.py, syntax.py, table.py\n文件内定义的类: Padding\n文件内定义的函数: __init__, indent, unpack, __repr__, __rich_console__, __rich_measure__\n\n[代码片段 3] 来源: table.py (第 355-357 行)\n文件: table.py\n函数: padding\ndef padding(self) -> Tuple[int, int, int, int]:\n        \"\"\"Get cell padding.\"\"\"\n        return self._padding\n\n[代码片段 4] 来源: padding.py (第 1-141 行)\n文件: padding.py\n(模块级代码:import、常量、配置)\nfrom typing import TYPE_CHECKING, List, Optional, Tuple, Union\n\nif TYPE_CHECKING:\n    from .console import (\n        Console,\n        ConsoleOptions,\n        RenderableType,\n        RenderResult,\n    )\n\nfrom .jupyter import JupyterMixin\nfrom .measure import Measurement\nfrom .segment import Segment\nfrom .style import Style\n\nPaddingDimensions = Union[int, Tuple[int], Tuple[int, int], Tuple[int, int, int, int]]\n\n\nclass Padding(JupyterMixin):\n    \"\"\"Draw space around content.\n\n    Example:\n        >>> print(Padding(\"Hello\", (2, 4), style=\"on blue\"))\n\n    Args:\n        renderable (RenderableType): String or other renderable.\n        pad (Union[int, Tuple[int]]): Padding for top, right, bottom, and left borders.\n            May be specified with 1, 2, or 4 integers (CSS style).\n        style (Union[str, Style], optional): Style for padding characters. Defaults to \"none\".\n        expand (bool, optional): Expand padding to fit available width. Defaults to True.\n    \"\"\"\n\n\n    @classmethod\n\n    @staticmethod\n\n\n\n\n\nif __name__ == \"__main__\":  #  pragma: no cover\n    from rich import print\n\n    print(Padding(\"Hello, World\", (2, 4), style=\"on blue\"))\n\n[代码片段 5] 来源: padding.py (第 76-77 行)\n文件: padding.py\n函数: __repr__\ndef __repr__(self) -> str:\n        return f\"Padding({self.renderable!r}, ({self.top},{self.right},{self.bottom},{self.left}))\"\n\n[问题] 在该项目中,类 Padding 定义在哪个文件里?",
+  "retrieved_sources": [
+   "padding.py",
+   "padding.py",
+   "table.py",
+   "padding.py",
+   "padding.py"
+  ],
+  "expected_sources": [
+   "padding.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "padding.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-04",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 Span 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: text.py (第 0-0 行)\n[依赖图卡片] 类 Span\n定义位置: text.py 第 47-115 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: text.py (第 421-423 行)\n文件: text.py\n函数: spans\ndef spans(self) -> List[Span]:\n        \"\"\"Get a reference to the internal list of spans.\"\"\"\n        return self._spans\n\n[代码片段 3] 来源: text.py (第 88-100 行)\n文件: text.py\n函数: right_crop\ndef right_crop(self, offset: int) -> \"Span\":\n        \"\"\"Crop the span at the given offset.\n\n        Args:\n            offset (int): A value between start and end.\n\n        Returns:\n            Span: A new (possibly smaller) span.\n        \"\"\"\n        start, end, style = self\n        if offset >= end:\n            return self\n        return Span(start, min(offset, end), style)\n\n[代码片段 4] 来源: text.py (第 421-423 行)\n[调用图卡片] 函数 spans\n定义位置: text.py 第 421-423 行\n它调用的仓库内函数: (无)\n它被这些函数调用: (没有仓库内调用方)\n\n[代码片段 5] 来源: text.py (第 102-115 行)\n文件: text.py\n函数: extend\ndef extend(self, cells: int) -> \"Span\":\n        \"\"\"Extend the span by the given number of cells.\n\n        Args:\n            cells (int): Additional space to add to end of span.\n\n        Returns:\n            Span: A span.\n        \"\"\"\n        if cells:\n            start, end, style = self\n            return Span(start, end + cells, style)\n        else:\n            return self\n\n[问题] 在该项目中,类 Span 定义在哪个文件里?",
+  "retrieved_sources": [
+   "text.py",
+   "text.py",
+   "text.py",
+   "text.py",
+   "text.py"
+  ],
+  "expected_sources": [
+   "text.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "text.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-05",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 WindowsConsoleFeatures 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 类 WindowsConsoleFeatures\n定义位置: _windows.py 第 6-12 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: _windows.py (第 0-0 行)\n[依赖图卡片] 文件 _windows.py\n它依赖(import)的仓库内文件: _win32_console.py\n它被这些文件依赖/使用(import 它的使用方): console.py\n文件内定义的类: WindowsConsoleFeatures\n文件内定义的函数: get_windows_console_features, get_windows_console_features\n\n[代码片段 3] 来源: console.py (第 578-585 行)\n文件: console.py\n函数: get_windows_console_features\ndef get_windows_console_features() -> \"WindowsConsoleFeatures\":  # pragma: no cover\n    global _windows_console_features\n    if _windows_console_features is not None:\n        return _windows_console_features\n    from ._windows import get_windows_console_features\n\n    _windows_console_features = get_windows_console_features()\n    return _windows_console_features\n\n[代码片段 4] 来源: _windows.py (第 40-61 行)\n文件: _windows.py\n函数: get_windows_console_features\ndef get_windows_console_features() -> WindowsConsoleFeatures:\n        \"\"\"Get windows console features.\n\n        Returns:\n            WindowsConsoleFeatures: An instance of WindowsConsoleFeatures.\n        \"\"\"\n        handle = GetStdHandle()\n        try:\n            console_mode = GetConsoleMode(handle)\n            success = True\n        except LegacyWindowsError:\n            console_mode = 0\n            success = False\n        vt = bool(success and console_mode & ENABLE_VIRTUAL_TERMINAL_PROCESSING)\n        truecolor = False\n        if vt:\n            win_version = sys.getwindowsversion()\n            truecolor = win_version.major > 10 or (\n                win_version.major == 10 and win_version.build >= 15063\n            )\n        features = WindowsConsoleFeatures(vt=vt, truecolor=truecolor)\n        return features\n\n[代码片段 5] 来源: _windows.py (第 1-71 行)\n文件: _windows.py\n(模块级代码:import、常量、配置)\nimport sys\nfrom dataclasses import dataclass\n\n\n@dataclass\nclass WindowsConsoleFeatures:\n    \"\"\"Windows features available.\"\"\"\n\n    vt: bool = False\n    \"\"\"The console supports VT codes.\"\"\"\n    truecolor: bool = False\n    \"\"\"The console supports truecolor.\"\"\"\n\n\ntry:\n    import ctypes\n    from ctypes import LibraryLoader\n\n    if sys.platform == \"win32\":\n        windll = LibraryLoader(ctypes.WinDLL)\n    else:\n        windll = None\n        raise ImportError(\"Not windows\")\n\n    from rich._win32_console import (\n        ENABLE_VIRTUAL_TERMINAL_PROCESSING,\n        GetConsoleMode,\n        GetStdHandle,\n        LegacyWindowsError,\n    )\n\nexcept (AttributeError, ImportError, ValueError):\n    # Fallback if we can't load the Windows DLL\n\nelse:\n\n\n\nif __name__ == \"__main__\":\n    import platform\n\n    features = get_windows_console_features()\n    from rich import print\n\n    print(f'platform=\"{platform.system()}\"')\n    print(repr(features))\n\n[问题] 在该项目中,类 WindowsConsoleFeatures 定义在哪个文件里?",
+  "retrieved_sources": [
+   "_windows.py",
+   "_windows.py",
+   "console.py",
+   "_windows.py",
+   "_windows.py"
+  ],
+  "expected_sources": [
+   "_windows.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_windows.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-06",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 AnsiDecoder 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: ansi.py (第 0-0 行)\n[依赖图卡片] 类 AnsiDecoder\n定义位置: ansi.py 第 120-211 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: ansi.py (第 0-0 行)\n[依赖图卡片] 文件 ansi.py\n它依赖(import)的仓库内文件: color.py, console.py, style.py, text.py\n它被这些文件依赖/使用(import 它的使用方): file_proxy.py, text.py\n文件内定义的类: _AnsiToken, AnsiDecoder\n文件内定义的函数: _ansi_tokenize, __init__, decode, decode_line, read\n\n[代码片段 3] 来源: file_proxy.py (第 14-18 行)\n文件: file_proxy.py\n函数: __init__\ndef __init__(self, console: \"Console\", file: IO[str]) -> None:\n        self.__console = console\n        self.__file = file\n        self.__buffer: List[str] = []\n        self.__ansi_decoder = AnsiDecoder()\n\n[代码片段 4] 来源: text.py (第 294-329 行)\n文件: text.py\n函数: from_ansi\ndef from_ansi(\n        cls,\n        text: str,\n        *,\n        style: Union[str, Style] = \"\",\n        justify: Optional[\"JustifyMethod\"] = None,\n        overflow: Optional[\"OverflowMethod\"] = None,\n        no_wrap: Optional[bool] = None,\n        end: str = \"\\n\",\n        tab_size: Optional[int] = 8,\n    ) -> \"Text\":\n        \"\"\"Create a Text object from a string containing ANSI escape codes.\n\n        Args:\n            text (str): A string containing escape codes.\n            style (Union[str, Style], optional): Base style for text. Defaults to \"\".\n            justify (str, optional): Justify method: \"left\", \"center\", \"full\", \"right\". Defaults to None.\n            overflow (str, optional): Overflow method: \"crop\", \"fold\", \"ellipsis\". Defaults to None.\n            no_wrap (bool, optional): Disable text wrapping, or None for default. Defaults to None.\n            end (str, optional): Character to end text with. Defaults to \"\\\\\\\\n\".\n            tab_size (int): Number of spaces per tab, or ``None`` to use ``console.tab_size``. Defaults to None.\n        \"\"\"\n        from .ansi import AnsiDecoder\n\n        joiner = Text(\n            \"\\n\",\n            justify=justify,\n            overflow=overflow,\n            no_wrap=no_wrap,\n            end=end,\n            tab_size=tab_size,\n            style=style,\n        )\n        decoder = AnsiDecoder()\n        result = joiner.join(line for line in decoder.decode(text))\n        return result\n\n[代码片段 5] 来源: file_proxy.py (第 1-57 行)\n文件: file_proxy.py\n(模块级代码:import、常量、配置)\nimport io\nfrom typing import IO, TYPE_CHECKING, Any, List\n\nfrom .ansi import AnsiDecoder\nfrom .text import Text\n\nif TYPE_CHECKING:\n    from .console import Console\n\n\nclass FileProxy(io.TextIOBase):\n    \"\"\"Wraps a file (e.g. sys.stdout) and redirects writes to a console.\"\"\"\n\n\n    @property\n\n[问题] 在该项目中,类 AnsiDecoder 定义在哪个文件里?",
+  "retrieved_sources": [
+   "ansi.py",
+   "ansi.py",
+   "file_proxy.py",
+   "text.py",
+   "file_proxy.py"
+  ],
+  "expected_sources": [
+   "ansi.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ansi.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-IND-01",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,__init__.py 是否间接依赖 traceback.py?经过哪个中间文件(完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: constrain.py (第 0-0 行)\n[依赖图卡片] 文件 constrain.py\n它依赖(import)的仓库内文件: console.py, jupyter.py, measure.py\n它被这些文件依赖/使用(import 它的使用方): align.py, columns.py, traceback.py\n文件内定义的类: Constrain\n文件内定义的函数: __init__, __rich_console__, __rich_measure__\n\n[代码片段 2] 来源: _extension.py (第 0-0 行)\n[依赖图卡片] 文件 _extension.py\n它依赖(import)的仓库内文件: pretty.py, traceback.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: (无)\n文件内定义的函数: load_ipython_extension\n\n[代码片段 3] 来源: traceback.py (第 0-0 行)\n[依赖图卡片] 文件 traceback.py\n它依赖(import)的仓库内文件: _loop.py, columns.py, console.py, constrain.py, highlighter.py, panel.py, scope.py, style.py, syntax.py, text.py, theme.py\n它被这些文件依赖/使用(import 它的使用方): _extension.py, console.py, logging.py\n文件内定义的类: Frame, _SyntaxError, Stack, Trace, PathHighlighter, Traceback\n文件内定义的函数: install, excepthook, ipy_excepthook_closure, ipy_show_traceback, ipy_display_traceback, __init__, from_exception, extract, safe_str, get_locals, __rich_console__, _render_syntax_error, _guess_lexer, _render_stack, read_code, render_locals, bar, foo, error\n\n[代码片段 4] 来源: logging.py (第 0-0 行)\n[依赖图卡片] 文件 logging.py\n它依赖(import)的仓库内文件: _log_render.py, _null_file.py, console.py, highlighter.py, text.py, traceback.py\n它被这些文件依赖/使用(import 它的使用方): segment.py\n文件内定义的类: RichHandler\n文件内定义的函数: __init__, get_level_text, emit, render_message, render, divide\n\n[代码片段 5] 来源: theme.py (第 0-0 行)\n[依赖图卡片] 文件 theme.py\n它依赖(import)的仓库内文件: default_styles.py, style.py\n它被这些文件依赖/使用(import 它的使用方): console.py, themes.py, traceback.py\n文件内定义的类: Theme, ThemeStackError, ThemeStack\n文件内定义的函数: __init__, config, from_file, read, __init__, push_theme, pop_theme\n\n[问题] 在该项目中,__init__.py 是否间接依赖 traceback.py?经过哪个中间文件(完整路径)?",
+  "retrieved_sources": [
+   "constrain.py",
+   "_extension.py",
+   "traceback.py",
+   "logging.py",
+   "theme.py"
+  ],
+  "expected_sources": [
+   "__init__.py",
+   "_extension.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_extension.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-IND-02",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,__main__.py 是否间接依赖 color_triplet.py?经过哪个中间文件(完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: color.py (第 0-0 行)\n[依赖图卡片] 文件 color.py\n它依赖(import)的仓库内文件: _palettes.py, color_triplet.py, console.py, repr.py, style.py, table.py, terminal_theme.py, text.py\n它被这些文件依赖/使用(import 它的使用方): __main__.py, _win32_console.py, ansi.py, bar.py, console.py, palette.py, progress_bar.py, style.py, syntax.py\n文件内定义的类: ColorSystem, ColorType, ColorParseError, Color\n文件内定义的函数: __repr__, __str__, __repr__, __rich__, __rich_repr__, system, is_system_defined, is_default, get_truecolor, from_ansi, from_triplet, from_rgb, default, parse, get_ansi_codes, downgrade, parse_rgb_hex, blend_rgb\n\n[代码片段 2] 来源: terminal_theme.py (第 0-0 行)\n[依赖图卡片] 文件 terminal_theme.py\n它依赖(import)的仓库内文件: color_triplet.py, palette.py\n它被这些文件依赖/使用(import 它的使用方): color.py, console.py, jupyter.py, style.py\n文件内定义的类: TerminalTheme\n文件内定义的函数: __init__\n\n[代码片段 3] 来源: color_triplet.py (第 0-0 行)\n[依赖图卡片] 文件 color_triplet.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): color.py, palette.py, progress_bar.py, terminal_theme.py\n文件内定义的类: ColorTriplet\n文件内定义的函数: hex, rgb, normalized\n\n[代码片段 4] 来源: palette.py (第 0-0 行)\n[依赖图卡片] 文件 palette.py\n它依赖(import)的仓库内文件: color.py, color_triplet.py, console.py, segment.py, style.py, table.py, text.py\n它被这些文件依赖/使用(import 它的使用方): _palettes.py, terminal_theme.py\n文件内定义的类: Palette, ColorBox\n文件内定义的函数: __init__, __getitem__, __rich__, match, get_color_distance, __rich_console__\n\n[代码片段 5] 来源: progress_bar.py (第 0-0 行)\n[依赖图卡片] 文件 progress_bar.py\n它依赖(import)的仓库内文件: color.py, color_triplet.py, console.py, jupyter.py, measure.py, segment.py, style.py\n它被这些文件依赖/使用(import 它的使用方): progress.py\n文件内定义的类: ProgressBar\n文件内定义的函数: __init__, __repr__, percentage_completed, _get_pulse_segments, update, _render_pulse, __rich_console__, __rich_measure__\n\n[问题] 在该项目中,__main__.py 是否间接依赖 color_triplet.py?经过哪个中间文件(完整路径)?",
+  "retrieved_sources": [
+   "color.py",
+   "terminal_theme.py",
+   "color_triplet.py",
+   "palette.py",
+   "progress_bar.py"
+  ],
+  "expected_sources": [
+   "__main__.py",
+   "color.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "color.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-IND-03",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,_extension.py 是否间接依赖 repr.py?经过哪个中间文件(完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: repr.py (第 0-0 行)\n[依赖图卡片] 文件 repr.py\n它依赖(import)的仓库内文件: console.py\n它被这些文件依赖/使用(import 它的使用方): color.py, layout.py, pretty.py, segment.py, style.py\n文件内定义的类: ReprError, Foo\n文件内定义的函数: auto, auto, auto, do_replace, auto_repr, auto_rich_repr, rich_repr, rich_repr, rich_repr, __rich_repr__\n\n[代码片段 2] 来源: _extension.py (第 0-0 行)\n[依赖图卡片] 文件 _extension.py\n它依赖(import)的仓库内文件: pretty.py, traceback.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: (无)\n文件内定义的函数: load_ipython_extension\n\n[代码片段 3] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: _extension.py, _inspect.py, console.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: get_console, reconfigure, print, print_json, inspect\n\n[代码片段 4] 来源: traceback.py (第 0-0 行)\n[依赖图卡片] 文件 traceback.py\n它依赖(import)的仓库内文件: _loop.py, columns.py, console.py, constrain.py, highlighter.py, panel.py, scope.py, style.py, syntax.py, text.py, theme.py\n它被这些文件依赖/使用(import 它的使用方): _extension.py, console.py, logging.py\n文件内定义的类: Frame, _SyntaxError, Stack, Trace, PathHighlighter, Traceback\n文件内定义的函数: install, excepthook, ipy_excepthook_closure, ipy_show_traceback, ipy_display_traceback, __init__, from_exception, extract, safe_str, get_locals, __rich_console__, _render_syntax_error, _guess_lexer, _render_stack, read_code, render_locals, bar, foo, error\n\n[代码片段 5] 来源: control.py (第 0-0 行)\n[依赖图卡片] 文件 control.py\n它依赖(import)的仓库内文件: console.py, segment.py\n它被这些文件依赖/使用(import 它的使用方): _inspect.py, console.py, live.py, live_render.py, text.py\n文件内定义的类: Control\n文件内定义的函数: __init__, bell, home, move, get_codes, move_to_column, move_to, clear, show_cursor, alt_screen, title, __str__, __rich_console__, strip_control_codes, escape_control_codes\n\n[问题] 在该项目中,_extension.py 是否间接依赖 repr.py?经过哪个中间文件(完整路径)?",
+  "retrieved_sources": [
+   "repr.py",
+   "_extension.py",
+   "__init__.py",
+   "traceback.py",
+   "control.py"
+  ],
+  "expected_sources": [
+   "_extension.py",
+   "pretty.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "pretty.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ }
+]

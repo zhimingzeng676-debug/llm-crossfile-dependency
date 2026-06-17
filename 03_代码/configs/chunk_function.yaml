@@ -1,0 +1,16 @@
+# 消融实验:切块策略 fixed -> function(tree-sitter 按函数切),其余与 baseline 相同。
+# 假设:函数是语义完整单元,"这个函数干嘛/调用了谁"类问题应该更准。
+name: chunk_function
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl
+chunking:
+  strategy: function
+embedder:
+  type: hashing
+  dim: 512
+backend:
+  type: local_rag
+  top_k: 3
+llm:
+  type: mock
+prompt_file: configs/prompts/plain.yaml

@@ -1,0 +1,12 @@
+{"id": "P00", "prompt": "def is_palindrome(s: str) -> bool:\n    \"\"\"返回 s 是否为回文(忽略大小写,只看字母数字)。\"\"\"\n", "test": "assert is_palindrome('A man a plan a canal Panama')\nassert not is_palindrome('hello')\nassert is_palindrome('')"}
+{"id": "P01", "prompt": "def fib(n: int) -> int:\n    \"\"\"返回第 n 个斐波那契数,fib(0)=0, fib(1)=1。\"\"\"\n", "test": "assert fib(0)==0 and fib(1)==1\nassert fib(10)==55"}
+{"id": "P02", "prompt": "def two_sum(nums, target):\n    \"\"\"返回两个相加等于 target 的元素下标列表 [i,j],i<j。保证有解。\"\"\"\n", "test": "assert sorted(two_sum([2,7,11,15],9))==[0,1]\nassert sorted(two_sum([3,2,4],6))==[1,2]"}
+{"id": "P03", "prompt": "def gcd(a: int, b: int) -> int:\n    \"\"\"返回 a 和 b 的最大公约数。\"\"\"\n", "test": "assert gcd(12,8)==4\nassert gcd(17,5)==1\nassert gcd(0,5)==5"}
+{"id": "P04", "prompt": "def flatten(lst):\n    \"\"\"把任意嵌套的列表展平成一维列表。\"\"\"\n", "test": "assert flatten([1,[2,[3,4]],5])==[1,2,3,4,5]\nassert flatten([])==[]"}
+{"id": "P05", "prompt": "def count_words(s: str) -> dict:\n    \"\"\"返回字符串中每个单词(按空白切分)出现次数的字典。\"\"\"\n", "test": "assert count_words('a b a c a')=={'a':3,'b':1,'c':1}"}
+{"id": "P06", "prompt": "def is_prime(n: int) -> bool:\n    \"\"\"返回 n 是否为素数。\"\"\"\n", "test": "assert is_prime(2) and is_prime(13)\nassert not is_prime(1) and not is_prime(15)"}
+{"id": "P07", "prompt": "def reverse_words(s: str) -> str:\n    \"\"\"翻转句子中单词的顺序,单词内部不变,单词间单空格。\"\"\"\n", "test": "assert reverse_words('the sky is blue')=='blue is sky the'"}
+{"id": "P08", "prompt": "def merge_sorted(a, b):\n    \"\"\"合并两个升序列表为一个升序列表。\"\"\"\n", "test": "assert merge_sorted([1,3,5],[2,4,6])==[1,2,3,4,5,6]\nassert merge_sorted([],[1])==[1]"}
+{"id": "P09", "prompt": "def char_freq_sorted(s: str):\n    \"\"\"返回字符按出现频次降序排列的列表(频次相同按字符升序)。\"\"\"\n", "test": "assert char_freq_sorted('aabbbc')==['b','a','c']"}
+{"id": "P10", "prompt": "def roman_to_int(s: str) -> int:\n    \"\"\"罗马数字转整数(I,V,X,L,C,D,M)。\"\"\"\n", "test": "assert roman_to_int('III')==3\nassert roman_to_int('MCMXCIV')==1994"}
+{"id": "P11", "prompt": "def max_subarray(nums):\n    \"\"\"返回连续子数组的最大和(Kadane)。\"\"\"\n", "test": "assert max_subarray([-2,1,-3,4,-1,2,1,-5,4])==6\nassert max_subarray([-1])==-1"}

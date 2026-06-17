@@ -1,0 +1,18 @@
+# M3-B E18:纯 LLM 无 RAG 对照(Qwen2.5-Coder-14B)。backend=none → prompt 里
+# 没有任何代码上下文,只考模型参数化知识。base_url 指向 SSH 隧道转发的远端 vLLM。
+name: werkzeug_purellm_qwen
+repo_root: repos/werkzeug
+commits_path: null
+chunking:
+  strategy: function
+embedder:
+  type: hashing        # 无检索,embedder 不参与,用最轻的
+backend:
+  type: none
+  top_k: 5
+llm:
+  type: api
+  model: Qwen/Qwen2.5-Coder-14B-Instruct
+  base_url: http://localhost:8001/v1
+  temperature: 0.0
+prompt_file: configs/prompts/plain.yaml

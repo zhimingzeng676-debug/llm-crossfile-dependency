@@ -1,0 +1,226 @@
+[
+ {
+  "id": "FWD-01",
+  "answer": "{\"hit\": 0, \"total\": 4, \"score\": 0, \"reason\": \"未命中任何要点，且给出错误依赖\"}"
+ },
+ {
+  "id": "FWD-02",
+  "answer": "{\"hit\": 2, \"total\": 6, \"score\": 0.3333333333333333, \"reason\": \"遗漏多个标准答案中的模块，包含错误模块\"}"
+ },
+ {
+  "id": "FWD-03",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未命中任何要点，且给出了错误信息\"}"
+ },
+ {
+  "id": "FWD-04",
+  "answer": "{\"hit\": 6, \"total\": 8, \"score\": 0.75, \"reason\": \"缺少matcher, rules, converters\"}"
+ },
+ {
+  "id": "FWD-05",
+  "answer": "{\"hit\": 1, \"total\": 3, \"score\": 0.33, \"reason\": \"漏掉converters和rules，多列了其他非相关模块\"}"
+ },
+ {
+  "id": "FWD-06",
+  "answer": "{\"hit\": 2, \"total\": 4, \"score\": 0.5, \"reason\": \"缺少datastructures和user_agent,多出wsgi和_compat\"}"
+ },
+ {
+  "id": "FWD-07",
+  "answer": "{\"hit\": 2, \"total\": 4, \"score\": 0.5, \"reason\": \"漏掉datastructures和cache_control,多出wsgi\"}"
+ },
+ {
+  "id": "FWD-08",
+  "answer": "{\"hit\": 5, \"total\": 8, \"score\": 0.625, \"reason\": \"遗漏了_reloader.py和tbtools.py,多列了其他模块\"}"
+ },
+ {
+  "id": "FWD-09",
+  "answer": "{\"hit\": 0, \"total\": 9, \"score\": 0, \"reason\": \"未命中任何要点，给出错误依赖\"}"
+ },
+ {
+  "id": "FWD-10",
+  "answer": "{\"hit\": 4, \"total\": 8, \"score\": 0.5, \"reason\": \"多列了无关模块，遗漏部分要点\"}"
+ },
+ {
+  "id": "FWD-11",
+  "answer": "{\"hit\": 4, \"total\": 10, \"score\": 0.4, \"reason\": \"遗漏了部分依赖模块\"}"
+ },
+ {
+  "id": "REV-01",
+  "answer": "{\"hit\": 7, \"total\": 17, \"score\": 0.41, \"reason\": \"遗漏多个标准文件，部分错误\"}"
+ },
+ {
+  "id": "REV-02",
+  "answer": "{\"hit\": 10, \"total\": 14, \"score\": 0.71, \"reason\": \"遗漏部分关键文件，多余中间件相关文件\"}"
+ },
+ {
+  "id": "REV-03",
+  "answer": "{\"hit\": 0, \"total\": 4, \"score\": 0, \"reason\": \"未命中任何标准答案要点，且有多处错误\"}"
+ },
+ {
+  "id": "REV-04",
+  "answer": "{\"hit\": 1, \"total\": 7, \"score\": 0.14, \"reason\": \"遗漏了大部分标准答案中的文件\"}"
+ },
+ {
+  "id": "REV-05",
+  "answer": "{\"hit\": 0, \"total\": 13, \"score\": 0.0, \"reason\": \"未命中任何标准答案要点\"}"
+ },
+ {
+  "id": "REV-06",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确列出request.py,其他为误\"}"
+ },
+ {
+  "id": "REV-07",
+  "answer": "{\"hit\": 0, \"total\": 12, \"score\": 0.0, \"reason\": \"未命中任何标准答案要点，给出大量无关测试文件\"}"
+ },
+ {
+  "id": "REV-08",
+  "answer": "{\"hit\": 2, \"total\": 4, \"score\": 0.5, \"reason\": \"漏掉了exceptions和matcher文件\"}"
+ },
+ {
+  "id": "REV-09",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未命中正确文件名\"}"
+ },
+ {
+  "id": "REV-10",
+  "answer": "{\"hit\": 0, \"total\": 6, \"score\": 0.0, \"reason\": \"未命中任何要点，且给出错误信息\"}"
+ },
+ {
+  "id": "REV-11",
+  "answer": "{\"hit\": 7, \"total\": 6, \"score\": 1.1666666666666667, \"reason\": \"多列了非要点文件\"}"
+ },
+ {
+  "id": "REV-12",
+  "answer": "{\"hit\": 2, \"total\": 8, \"score\": 0.25, \"reason\": \"遗漏多个要点，多余未提及的文件\"}"
+ },
+ {
+  "id": "REV-13",
+  "answer": "{\"hit\": 2, \"total\": 10, \"score\": 0.2, \"reason\": \"多列了无关文件，遗漏大部分正确文件\"}"
+ },
+ {
+  "id": "INH-01",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0, \"reason\": \"继承关系和文件名均错误\"}"
+ },
+ {
+  "id": "INH-02",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"漏掉了MultiDict所在正确文件\"}"
+ },
+ {
+  "id": "INH-03",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"给出了错误的继承关系和文件名\"}"
+ },
+ {
+  "id": "INH-04",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"给出了错误的继承关系和文件名\"}"
+ },
+ {
+  "id": "INH-05",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"继承关系和文件名均错误\"}"
+ },
+ {
+  "id": "INH-06",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"给出了错误的继承关系和文件名\"}"
+ },
+ {
+  "id": "INH-07",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"继承的类错误，应为sansio/request.py中的Request\"}"
+ },
+ {
+  "id": "INH-08",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"给出了错误的基类文件名\"}"
+ },
+ {
+  "id": "INH-09",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"遗漏了BadRequest, 错误地提到了HTTPException\"}"
+ },
+ {
+  "id": "INH-10",
+  "answer": "{\"hit\": 20, \"total\": 31, \"score\": 0.645, \"reason\": \"漏掉了部分异常类，如ImATeapot和_RetryAfter等\"}"
+ },
+ {
+  "id": "INH-11",
+  "answer": "{\"hit\": 1, \"total\": 4, \"score\": 0.25, \"reason\": \"遗漏了所有正确类，仅正确提到一个混入类\"}"
+ },
+ {
+  "id": "INH-12",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未命中任何要点，且给出错误信息\"}"
+ },
+ {
+  "id": "LOC-01",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误，未命中正确文件名\"}"
+ },
+ {
+  "id": "LOC-02",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"给出了错误的文件名routing.py\"}"
+ },
+ {
+  "id": "LOC-03",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误，应为datastructures/structures.py\"}"
+ },
+ {
+  "id": "LOC-04",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误，应为datastructures/file_storage.py\"}"
+ },
+ {
+  "id": "LOC-05",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名，未遗漏要点\"}"
+ },
+ {
+  "id": "LOC-06",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误，应为datastructures/headers.py\"}"
+ },
+ {
+  "id": "LOC-07",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误，应为routing/map.py\"}"
+ },
+ {
+  "id": "LOC-08",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误，应为routing/map.py\"}"
+ },
+ {
+  "id": "LOC-09",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误，werkzeug/datastructures.py而非datastructures/structures.py\"}"
+ },
+ {
+  "id": "LOC-10",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误，给出的是routing.py而不是rules.py\"}"
+ },
+ {
+  "id": "LOC-11",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误，给出routing.py而非matcher.py\"}"
+ },
+ {
+  "id": "LOC-12",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"给出了错误的文件名\"}"
+ },
+ {
+  "id": "DAT-01",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"给出了错误的文件名\"}"
+ },
+ {
+  "id": "DAT-02",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误，应为debug/repr.py\"}"
+ },
+ {
+  "id": "DAT-03",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"给出了错误的文件名\"}"
+ },
+ {
+  "id": "IND-01",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"漏掉datastructures/__init__.py,错指utils\"}"
+ },
+ {
+  "id": "IND-02",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"漏掉datastructures/__init__.py,错指rules.py\"}"
+ },
+ {
+  "id": "IND-03",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"漏掉datastructures/__init__.py,错指base_response.py\"}"
+ },
+ {
+  "id": "IND-04",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未命中正确依赖路径，给出错误中间文件\"}"
+ },
+ {
+  "id": "IND-05",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"正确命中所有要点，无遗漏和错误\"}"
+ }
+]

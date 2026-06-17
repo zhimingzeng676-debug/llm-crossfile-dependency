@@ -1,0 +1,226 @@
+[
+ {
+  "id": "FWD-01",
+  "answer": "{\"hit\": 0, \"total\": 4, \"score\": 0.0, \"reason\": \"未列出标准答案中的模块\"}"
+ },
+ {
+  "id": "FWD-02",
+  "answer": "{\"hit\": 2, \"total\": 6, \"score\": 0.33, \"reason\": \"只列出了2个正确模块\"}"
+ },
+ {
+  "id": "FWD-03",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未列出 _internal 和 sansio\"}"
+ },
+ {
+  "id": "FWD-04",
+  "answer": "{\"hit\": 4, \"total\": 10, \"score\": 0.4, \"reason\": \"部分正确，遗漏了多个模块\"}"
+ },
+ {
+  "id": "FWD-05",
+  "answer": "{\"hit\": 2, \"total\": 3, \"score\": 0.67, \"reason\": \"缺少 converters 依赖\"}"
+ },
+ {
+  "id": "FWD-06",
+  "answer": "{\"hit\": 2, \"total\": 4, \"score\": 0.5, \"reason\": \"只列出了2个正确模块\"}"
+ },
+ {
+  "id": "FWD-07",
+  "answer": "{\"hit\": 2, \"total\": 4, \"score\": 0.5, \"reason\": \"缺少 datastructures 和 cache_control 依赖\"}"
+ },
+ {
+  "id": "FWD-08",
+  "answer": "{\"hit\": 8, \"total\": 8, \"score\": 1.0, \"reason\": \"所有要点均命中\"}"
+ },
+ {
+  "id": "FWD-09",
+  "answer": "{\"hit\": 0, \"total\": 9, \"score\": 0.0, \"reason\": \"未列出标准答案要点\"}"
+ },
+ {
+  "id": "FWD-10",
+  "answer": "{\"hit\": 3, \"total\": 8, \"score\": 0.375, \"reason\": \"缺少5个依赖模块\"}"
+ },
+ {
+  "id": "FWD-11",
+  "answer": "{\"hit\": 3, \"total\": 10, \"score\": 0.3, \"reason\": \"只列出了3个要点，遗漏了7个要点\"}"
+ },
+ {
+  "id": "REV-01",
+  "answer": "{\"hit\": 14, \"total\": 17, \"score\": 0.82, \"reason\": \"部分文件未列出\"}"
+ },
+ {
+  "id": "REV-02",
+  "answer": "{\"hit\": 12, \"total\": 14, \"score\": 0.857, \"reason\": \"部分文件未列出\"}"
+ },
+ {
+  "id": "REV-03",
+  "answer": "{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"所有要点均正确\"}"
+ },
+ {
+  "id": "REV-04",
+  "answer": "{\"hit\": 7, \"total\": 7, \"score\": 1.0, \"reason\": \"所有要点均命中\"}"
+ },
+ {
+  "id": "REV-05",
+  "answer": "{\"hit\": 10, \"total\": 13, \"score\": 0.769, \"reason\": \"部分文件匹配，遗漏了3个要点\"}"
+ },
+ {
+  "id": "REV-06",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到 'request' 文件\"}"
+ },
+ {
+  "id": "REV-07",
+  "answer": "{\"hit\": 10, \"total\": 18, \"score\": 0.56, \"reason\": \"部分文件命中，部分遗漏\"}"
+ },
+ {
+  "id": "REV-08",
+  "answer": "{\"hit\": 3, \"total\": 4, \"score\": 0.75, \"reason\": \"缺少 'matcher.py' 依赖\"}"
+ },
+ {
+  "id": "REV-09",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到 'wrappers/request.py' 依赖\"}"
+ },
+ {
+  "id": "REV-10",
+  "answer": "{\"hit\": 0, \"total\": 6, \"score\": 0.0, \"reason\": \"未找到依赖 urls.py 的文件\"}"
+ },
+ {
+  "id": "REV-11",
+  "answer": "{\"hit\": 7, \"total\": 9, \"score\": 0.78, \"reason\": \"部分文件名正确，但有遗漏\"}"
+ },
+ {
+  "id": "REV-12",
+  "answer": "{\"hit\": 0, \"total\": 10, \"score\": 0.0, \"reason\": \"未命中任何标准答案要点\"}"
+ },
+ {
+  "id": "REV-13",
+  "answer": "{\"hit\": 0, \"total\": 10, \"score\": 0.0, \"reason\": \"未列出标准答案中的任何文件\"}"
+ },
+ {
+  "id": "INH-01",
+  "answer": "```json\n{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"错误的继承关系和文件名\"}\n```"
+ },
+ {
+  "id": "INH-02",
+  "answer": "```json\n{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"文件名错误\"}\n```"
+ },
+ {
+  "id": "INH-03",
+  "answer": "```json\n{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"继承关系和文件名错误\"}\n```"
+ },
+ {
+  "id": "INH-04",
+  "answer": "```json\n{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"继承关系和文件名错误\"}\n```"
+ },
+ {
+  "id": "INH-05",
+  "answer": "```json\n{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"继承关系和文件名错误\"}\n```"
+ },
+ {
+  "id": "INH-06",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"继承关系和文件名错误\"}"
+ },
+ {
+  "id": "INH-07",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"继承关系错误\"}\n```"
+ },
+ {
+  "id": "INH-08",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误\"}\n```"
+ },
+ {
+  "id": "INH-09",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全正确\"}"
+ },
+ {
+  "id": "INH-10",
+  "answer": "{\"hit\": 31, \"total\": 31, \"score\": 1.0, \"reason\": \"所有要点均命中\"}"
+ },
+ {
+  "id": "INH-11",
+  "answer": "{\"hit\": 1, \"total\": 4, \"score\": 0.25, \"reason\": \"只命中了一个要点\"}"
+ },
+ {
+  "id": "INH-12",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未列出 ContentSecurityPolicy 和 _CacheControl\"}"
+ },
+ {
+  "id": "LOC-01",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误\"}\n```"
+ },
+ {
+  "id": "LOC-02",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}"
+ },
+ {
+  "id": "LOC-03",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}"
+ },
+ {
+  "id": "LOC-04",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误\"}\n```"
+ },
+ {
+  "id": "LOC-05",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件名\"}\n```"
+ },
+ {
+  "id": "LOC-06",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误\"}\n```"
+ },
+ {
+  "id": "LOC-07",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误\"}\n```"
+ },
+ {
+  "id": "LOC-08",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误\"}\n```"
+ },
+ {
+  "id": "LOC-09",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}"
+ },
+ {
+  "id": "LOC-10",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}"
+ },
+ {
+  "id": "LOC-11",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}"
+ },
+ {
+  "id": "LOC-12",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误\"}\n```"
+ },
+ {
+  "id": "DAT-01",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误\"}"
+ },
+ {
+  "id": "DAT-02",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误\"}"
+ },
+ {
+  "id": "DAT-03",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"文件名错误\"}\n```"
+ },
+ {
+  "id": "IND-01",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未命中标准答案要点\"}\n```"
+ },
+ {
+  "id": "IND-02",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"依赖路径错误\"}\n```"
+ },
+ {
+  "id": "IND-03",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确回答了依赖路径中的中间文件\"}"
+ },
+ {
+  "id": "IND-04",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未命中 datastructures/__init__.py\"}\n```"
+ },
+ {
+  "id": "IND-05",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出依赖关系\"}\n```"
+ }
+]

@@ -1,0 +1,2098 @@
+{
+ "config_name": "werkzeug_baseline_general",
+ "n_cases": 56,
+ "summary": {
+  "overall": {
+   "n": 56,
+   "avg_answer_score": 0.2676,
+   "retrieval_hit_rate": 0.6607,
+   "recall_at_k": 0.5804,
+   "mrr": 0.4411
+  },
+  "by_category": {
+   "dataflow": {
+    "n": 3,
+    "avg_answer_score": 0.0,
+    "retrieval_hit_rate": 0.6667,
+    "recall_at_k": 0.6667,
+    "mrr": 0.6667
+   },
+   "forward_dep": {
+    "n": 11,
+    "avg_answer_score": 0.4952,
+    "retrieval_hit_rate": 0.6364,
+    "recall_at_k": 0.6364,
+    "mrr": 0.2576
+   },
+   "indirect_dep": {
+    "n": 5,
+    "avg_answer_score": 0.2,
+    "retrieval_hit_rate": 0.8,
+    "recall_at_k": 0.4,
+    "mrr": 0.5167
+   },
+   "inheritance": {
+    "n": 12,
+    "avg_answer_score": 0.1875,
+    "retrieval_hit_rate": 0.5833,
+    "recall_at_k": 0.375,
+    "mrr": 0.3958
+   },
+   "reverse_dep": {
+    "n": 13,
+    "avg_answer_score": 0.253,
+    "retrieval_hit_rate": 0.7692,
+    "recall_at_k": 0.7692,
+    "mrr": 0.6538
+   },
+   "symbol_location": {
+    "n": 12,
+    "avg_answer_score": 0.25,
+    "retrieval_hit_rate": 0.5833,
+    "recall_at_k": 0.5833,
+    "mrr": 0.3361
+   }
+  },
+  "by_difficulty": {
+   "easy": {
+    "n": 18,
+    "avg_answer_score": 0.2778,
+    "retrieval_hit_rate": 0.6111,
+    "recall_at_k": 0.6111,
+    "mrr": 0.4463
+   },
+   "medium": {
+    "n": 14,
+    "avg_answer_score": 0.3095,
+    "retrieval_hit_rate": 0.6429,
+    "recall_at_k": 0.5357,
+    "mrr": 0.4881
+   },
+   "hard": {
+    "n": 24,
+    "avg_answer_score": 0.2356,
+    "retrieval_hit_rate": 0.7083,
+    "recall_at_k": 0.5833,
+    "mrr": 0.4097
+   }
+  }
+ },
+ "cases": [
+  {
+   "id": "FWD-01",
+   "category": "forward_dep",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+   "answer": "根据提供的代码片段，`datastructures/headers.py` 文件直接导入了以下项目内的模块：\n\n1. `.._internal._missing`\n2. `..exceptions.BadRequestKeyError`\n3. `werkzeug.datastructures.mixins.ImmutableHeadersMixin`\n4. `werkzeug.datastructures.structures.iter_multi_items`\n5. `werkzeug.datastructures.structures.MultiDict`\n\n注意，这里的导入路径是相对导入，表示这些模块位于 `werkzeug` 包的不同子目录下。",
+   "answer_score": 1.0,
+   "answer_judge_detail": "命中 ['_internal', 'mixins', 'structures', 'exceptions'],缺失 []",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 datastructures/headers.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "datastructures/headers.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/headers.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/etag.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/headers.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "FWD-02",
+   "category": "forward_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,formparser.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+   "answer": "在 `werkzeug` 中,`formparser.py` 这个文件直接依赖(import)了以下项目内的模块:\n\n- `_internal`\n- `datastructures`\n- `exceptions`\n- `http`\n- `sansio.multipart`\n- `wsgi`\n\n这些依赖关系可以从 `formparser.py` 文件中的 `import` 语句中看出。",
+   "answer_score": 1.0,
+   "answer_judge_detail": "命中 ['_internal', 'datastructures', 'exceptions', 'http', 'multipart', 'wsgi'],缺失 []",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 formparser.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.3333,
+   "retrieved": [
+    {
+     "chunk_id": "__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "formparser.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/etag.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/http.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "FWD-03",
+   "category": "forward_dep",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,http.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+   "answer": "根据提供的代码片段 1, `sansio/http.py` 文件直接依赖了以下项目内的模块:\n\n1. `..http`: 导入了 `generate_etag`, `parse_date`, `parse_etags`, `parse_if_range_header`, `unquote_etag`。\n2. `.._internal`: 导入了 `_dt_as_utc`。\n3. `..datastructures`: 通过一个动态导入语句 `from .. import datastructures as ds` 引入，注意这个导入使用了 `# noqa: E402` 注释来忽略可能的检查错误，这通常用于解决循环依赖的问题。\n\n因此，`sansio/http.py` 文件直接依赖了 `..http`, `.._internal`, 和 `..datastructures` 模块。",
+   "answer_score": 1.0,
+   "answer_judge_detail": "命中 ['_internal', 'sansio'],缺失 []",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['http.py'],实际 ['sansio/http.py', 'wrappers/__init__.py', '__init__.py', 'sansio/utils.py', 'middleware/http_proxy.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "sansio/http.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/utils.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "middleware/http_proxy.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "FWD-04",
+   "category": "forward_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,routing/map.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+   "answer": "检索结果中没有直接显示出 `routing/map.py` 文件对其它项目内模块的导入依赖。为了准确回答这个问题，我们需要查看 `routing/map.py` 文件顶部的导入语句。当前提供的代码片段中并没有包含这些信息。因此，无法从给定的信息中得出答案。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['_internal', 'datastructures', 'exceptions', 'converters', 'matcher', 'rules', 'urls', 'request', 'wsgi']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 routing/map.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.25,
+   "retrieved": [
+    {
+     "chunk_id": "routing/converters.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/matcher.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/map.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/etag.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "FWD-05",
+   "category": "forward_dep",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+   "answer": "在 `routing/matcher.py` 文件中，通过分析提供的代码片段，我们可以看到它直接依赖了以下项目内的模块：\n\n- `.converters`\n- `.exceptions`\n- `.rules`\n\n这些依赖关系是从导入语句中得出的：\n```python\nfrom .converters import ValidationError\nfrom .exceptions import NoMatch, RequestAliasRedirect, RequestPath\nfrom .rules import Rule, RulePart\n```\n\n因此，`routing/matcher.py` 文件直接依赖了 `converters`, `exceptions`, 和 `rules` 模块。",
+   "answer_score": 1.0,
+   "answer_judge_detail": "命中 ['converters', 'exceptions', 'rules'],缺失 []",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 routing/matcher.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.3333,
+   "retrieved": [
+    {
+     "chunk_id": "routing/exceptions.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/map.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/matcher.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/matcher.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "__init__.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "FWD-06",
+   "category": "forward_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+   "answer": "在 `sansio/request.py` 文件中，直接依赖(import)了以下项目内的模块：\n\n- `..datastructures`\n- `..http`\n- `..user_agent`\n- `..utils`\n- `.http`\n- `.utils`\n\n这些导入语句位于文件的顶部，用于引入必要的类和函数以支持 `Request` 类的功能。",
+   "answer_score": 1.0,
+   "answer_judge_detail": "命中 ['datastructures', 'http', 'utils', 'user_agent'],缺失 []",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 sansio/request.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.25,
+   "retrieved": [
+    {
+     "chunk_id": "sansio/utils.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/http.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "FWD-07",
+   "category": "forward_dep",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+   "answer": "检索结果中没有找到关于 `sansio/response.py` 文件直接依赖的项目内模块的信息。提供的代码片段中没有这个文件的相关信息。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['datastructures', 'cache_control', 'http', 'utils']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['sansio/response.py'],实际 ['sansio/utils.py', 'wrappers/__init__.py', 'sansio/http.py', 'formparser.py', '__init__.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "sansio/utils.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/http.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "formparser.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "__init__.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "FWD-08",
+   "category": "forward_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,serving.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+   "answer": "根据提供的代码片段，我们只能看到其他文件对 `serving.py` 的引用，而不是 `serving.py` 文件内部的导入语句。具体来说，在 `__init__.py` 文件中有如下一行：\n\n```python\nfrom .serving import run_simple as run_simple\n```\n\n这表明 `__init__.py` 文件从 `serving.py` 导入了 `run_simple` 函数或方法，但并没有显示 `serving.py` 文件内部直接依赖了哪些项目内的模块。\n\n因此，对于问题“在 werkzeug 中, serving.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。”的回答是：**检索结果中没有找到**。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['_internal', '_reloader', 'debug', 'tbtools', 'exceptions', 'http', 'shared_data', 'urls']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['serving.py'],实际 ['__init__.py', 'datastructures/etag.py', 'wrappers/__init__.py', 'sansio/http.py', 'sansio/utils.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/etag.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/http.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/utils.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "FWD-09",
+   "category": "forward_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,test.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+   "answer": "检索结果中没有名为 `test.py` 的文件直接依赖列表。但是，根据提供的代码片段，`testapp.py` 文件内部导入了以下项目内的模块：\n\n- `werkzeug.wrappers.request.Request`\n- `werkzeug.wrappers.response.Response`\n\n因此，如果问题是询问 `testapp.py` 文件（可能您指的是这个文件而不是 `test.py`），那么它直接依赖于上述两个模块。如果有其他具体的文件名或上下文，请提供更多信息以便更准确地回答。",
+   "answer_score": 0.2222,
+   "answer_judge_detail": "命中 ['request', 'response'],缺失 ['_internal', 'datastructures', 'http', 'multipart', 'urls', 'utils', 'wsgi']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['test.py'],实际 ['__init__.py', 'testapp.py', 'wrappers/__init__.py', 'testapp.py', 'datastructures/etag.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/etag.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "FWD-10",
+   "category": "forward_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,wrappers/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+   "answer": "检索结果中没有直接显示出 `wrappers/request.py` 文件内部对其它项目内模块的导入语句。但是，我们可以从其他代码片段中推断出一些间接信息。例如，`wrappers/request.py` 文件中的 `get_data` 和 `get_json` 方法都使用了类型注解 `t`，这可能意味着它从 `typing` 或者是某个别名为 `t` 的模块导入了内容。然而，具体的导入语句并没有在提供的代码片段中直接展示出来。\n\n为了更准确地回答这个问题，我们需要查看 `wrappers/request.py` 文件顶部的导入语句。根据现有信息，我们只能确定该文件内部定义了自己的方法，并且使用了类型注解，但具体依赖哪些项目内的模块需要进一步确认。因此，基于当前提供的代码片段，无法确切列出 `wrappers/request.py` 文件直接依赖的项目内模块。",
+   "answer_score": 0.125,
+   "answer_judge_detail": "命中 ['request'],缺失 ['_internal', 'datastructures', 'exceptions', 'formparser', 'test', 'utils', 'wsgi']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 wrappers/request.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.3333,
+   "retrieved": [
+    {
+     "chunk_id": "wrappers/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "_internal.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "FWD-11",
+   "category": "forward_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,wrappers/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+   "answer": "检索结果中没有找到 wrappers/response.py 文件直接依赖(import)了哪些项目内模块的信息。提供的代码片段没有展示该文件中的导入语句。",
+   "answer_score": 0.1,
+   "answer_judge_detail": "命中 ['response'],缺失 ['_internal', 'datastructures', 'exceptions', 'http', 'test', 'urls', 'utils', 'request', 'wsgi']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 wrappers/response.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.3333,
+   "retrieved": [
+    {
+     "chunk_id": "wrappers/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "_internal.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-01",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 _internal.py?请尽可能完整列出。",
+   "answer": "根据提供的代码片段，可以确定`sansio/http.py`文件导入了`_internal.py`中的内容，具体来说是通过下面这行代码：\n\n```python\nfrom .._internal import _dt_as_utc, parse_date, parse_etags, parse_if_range_header, unquote_etag\n```\n\n但是，仅凭这些代码片段无法得知所有导入了`_internal.py`的文件。为了提供一个完整的列表，我们需要查看更多的代码片段或直接访问整个代码仓库。目前提供的信息只能确认`sansio/http.py`文件依赖于`_internal.py`。",
+   "answer_score": 0.0667,
+   "answer_judge_detail": "命中 ['http'],缺失 ['_reloader', 'file_storage', 'headers', 'mixins', 'structures', 'debug', 'exceptions', 'formparser', 'map', 'utils', 'serving', 'test', 'request', 'response']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 _internal.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "_internal.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/http.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "_internal.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "_internal.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-02",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/__init__.py?请尽可能完整列出。",
+   "answer": "检索结果中没有找到关于哪些文件导入了 `datastructures/__init__.py` 的直接信息。提供的代码片段没有提及任何导入 `datastructures/__init__.py` 的记录。因此，无法从这些片段中得出结论。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['exceptions', 'formparser', 'http_proxy', 'lint', 'map', 'rules', 'multipart', 'request', 'response', 'test', 'urls', 'utils']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['datastructures/__init__.py'],实际 ['datastructures/structures.py', 'datastructures/accept.py', 'datastructures/mixins.py', 'exceptions.py', 'datastructures/headers.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/accept.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/mixins.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "exceptions.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/headers.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-03",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/mixins.py?请尽可能完整列出。",
+   "answer": "检索结果中没有找到关于哪些文件导入了 `datastructures/mixins.py` 的信息。",
+   "answer_score": 0.5,
+   "answer_judge_detail": "命中 ['datastructures', 'structures'],缺失 ['cache_control', 'headers']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 datastructures/mixins.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "datastructures/mixins.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/mixins.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/mixins.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/mixins.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/mixins.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-04",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/structures.py?请尽可能完整列出。",
+   "answer": "检索结果中没有找到哪些文件导入了 `datastructures/structures.py` 的直接信息。提供的代码片段仅展示了该模块内部的一些定义，并未提及从其他文件中导入此模块的情况。因此，无法根据这些片段确定具体是哪些文件导入了 `datastructures/structures.py`。",
+   "answer_score": 0.1429,
+   "answer_judge_detail": "命中 ['datastructures'],缺失 ['accept', 'auth', 'cache_control', 'csp', 'file_storage', 'headers']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 datastructures/structures.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.5,
+   "retrieved": [
+    {
+     "chunk_id": "datastructures/headers.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/accept.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/mixins.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/__init__.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-05",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 exceptions.py?请尽可能完整列出。",
+   "answer": "根据提供的代码片段,我们可以看到以下文件直接或间接地导入了 `exceptions.py`:\n\n1. `formparser.py` 导入了 `from .exceptions import RequestEntityTooLarge`\n2. `routing/matcher.py` 导入了 `from .exceptions import NoMatch, RequestAliasRedirect, RequestPath`\n\n因此,可以确定的是 `formparser.py` 和 `routing/matcher.py` 文件直接依赖于 `exceptions.py`。\n\n但是,由于提供的代码片段可能不全面,可能存在其他文件也导入了 `exceptions.py`,但这些文件未在当前提供的代码片段中展示。所以,基于现有信息,我们只能确认上述两个文件。",
+   "answer_score": 0.25,
+   "answer_judge_detail": "命中 ['formparser', 'exceptions', 'request'],缺失 ['headers', 'debug', 'http_proxy', 'map', 'multipart', 'utils', 'serving', 'response', 'wsgi']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 exceptions.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "exceptions.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "exceptions.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "formparser.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/matcher.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-06",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 formparser.py?请尽可能完整列出。",
+   "answer": "检索结果中没有直接显示哪些文件导入了 `formparser.py`。提供的代码片段仅展示了 `formparser.py` 文件内部的内容及其导入的其他模块和类，但没有关于其他文件如何引用或导入 `formparser.py` 的信息。因此，无法从给定的信息中确定哪些文件导入了 `formparser.py`。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['request']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 formparser.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "formparser.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "formparser.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "formparser.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-07",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 http.py?请尽可能完整列出。",
+   "answer": "根据提供的代码片段,在 werkzeug 中,以下文件导入了 `http.py`:\n\n1. `wrappers/response.py`\n   - 导入了 `generate_etag`, `http_date`, `is_resource_modified`, `parse_etags`, 和 `parse_range_header` 函数。\n\n2. `sansio/response.py`\n   - 导入了 `COEP`, `COOP`, `dump_age`, `dump_cookie`, `dump_header`, `dump_options_header`, `http_date`, `HTTP_STATUS_CODES`, `parse_age`, `parse_cache_control_header`, `parse_content_range_header`, `parse_csp_header`, `parse_date`, `parse_options_header`, `parse_set_header`, `quote_etag`, 和 `unquote_etag` 函数。\n\n这些导入表明 `http.py` 文件中的函数和常量被上述两个文件所使用。",
+   "answer_score": 0.2353,
+   "answer_judge_detail": "命中 ['csp', 'etag', 'http', 'response'],缺失 ['auth', 'debug', 'exceptions', 'formparser', 'http_proxy', 'lint', 'proxy_fix', 'shared_data', 'multipart', 'request', 'utils', 'serving', 'test']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['http.py'],实际 ['sansio/http.py', 'wrappers/response.py', 'middleware/http_proxy.py', 'sansio/response.py', 'sansio/utils.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "sansio/http.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "middleware/http_proxy.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/utils.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-08",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 routing/rules.py?请尽可能完整列出。",
+   "answer": "检索结果中没有直接显示哪些文件导入了 `routing/rules.py`。提供的代码片段仅展示了 `routing/rules.py` 文件内部的定义，并未展示其他文件如何引用或导入该文件。因此，无法从给定的信息中确定哪些文件导入了 `routing/rules.py`。",
+   "answer_score": 0.25,
+   "answer_judge_detail": "命中 ['routing'],缺失 ['exceptions', 'map', 'matcher']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 routing/rules.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "routing/rules.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/rules.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/matcher.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/map.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/rules.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-09",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 sansio/request.py?请尽可能完整列出。",
+   "answer": "检索结果中没有直接列出哪些文件导入了 `sansio/request.py`。提供的代码片段主要是 `sansio/request.py` 文件的内容，并未包含其他文件对它的引用或导入信息。因此，无法从给定的信息中确定哪些文件导入了 `sansio/request.py`。",
+   "answer_score": 1.0,
+   "answer_judge_detail": "命中 ['request'],缺失 []",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 sansio/request.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-10",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 urls.py?请尽可能完整列出。",
+   "answer": "根据提供的代码片段，直接列出导入了 `urls.py` 的文件并不明显。这些信息通常在其他文件中通过 `import` 语句来显示，而提供的片段并没有包含这样的信息。因此，我无法从给定的信息中确定哪些文件导入了 `urls.py`。\n\n但是，我可以告诉你，`urls.py` 文件中的功能和类可能被其他 Werkzeug 模块或应用程序所使用，特别是那些涉及 URL 处理、路由解析或请求处理的部分。例如，`routing/map.py` 和 `wrappers/response.py` 文件中都使用了来自 `urllib.parse` 的函数（如 `quote` 和 `urljoin`），这表明它们可能间接地依赖于 `urls.py` 中定义的功能，但具体是否直接导入了 `urls.py` 则需要查看这些文件中的实际导入语句。\n\n综上所述，检索结果中没有找到直接导入 `urls.py` 的文件列表。",
+   "answer_score": 0.3333,
+   "answer_judge_detail": "命中 ['map', 'response'],缺失 ['rules', 'utils', 'serving', 'test']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 urls.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "urls.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/utils.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/map.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "urls.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/response.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-11",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 utils.py?请尽可能完整列出。",
+   "answer": "检索结果中没有直接显示出哪些文件导入了 `utils.py`，提供的代码片段仅展示了 `utils.py` 文件内部的内容及其定义的功能，并未提及外部哪些文件或模块导入了它。因此，无法从给定的信息中得出确切的答案。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['debug', 'tbtools', 'shared_data', 'exceptions', 'request', 'response', 'test']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 utils.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.5,
+   "retrieved": [
+    {
+     "chunk_id": "sansio/utils.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "utils.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "utils.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "utils.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "utils.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-12",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 wrappers/request.py?请尽可能完整列出。",
+   "answer": "根据提供的代码片段,可以确定 `wrappers/__init__.py` 文件导入了 `wrappers/request.py` 中的 `Request` 类。但是,关于其他可能导入 `wrappers/request.py` 的文件,从给定的片段中无法直接得出结论。因此,仅能确认以下信息:\n\n- `wrappers/__init__.py` 导入了 `wrappers/request.py` 中的 `Request` 类。\n\n对于其他文件是否导入了 `wrappers/request.py`,检索结果中没有找到相关信息。",
+   "answer_score": 0.1111,
+   "answer_judge_detail": "命中 ['wrappers'],缺失 ['_internal', 'debug', 'exceptions', 'map', 'test', 'testapp', 'utils', 'response']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 wrappers/request.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.5,
+   "retrieved": [
+    {
+     "chunk_id": "wrappers/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "REV-13",
+   "category": "reverse_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,哪些文件 import(依赖)了 wsgi.py?请尽可能完整列出。",
+   "answer": "根据提供的代码片段，直接导入 `wsgi.py` 的情况并没有明确显示出来。但是，从其他导入和使用可以推测一些文件可能间接依赖于 `wsgi.py`。例如：\n\n- `testapp.py` 使用了 `Request` 类型注解，这通常与 WSGI 请求处理相关。\n- `wrappers/response.py` 中使用了 `get_current_url` 函数，该函数可能位于 `wsgi.py` 中或与其紧密关联。\n- `middleware/lint.py` 中定义了一些与 WSGI 协议相关的警告类，并且检查了 WSGI 应用的行为，这表明它依赖于 WSGI 相关的功能。\n\n然而，这些推断并不直接说明哪些文件显式地导入了 `wsgi.py`。为了更准确地回答这个问题，我们需要查看每个文件中的导入语句。基于当前提供的信息，我们不能确定哪些文件直接导入了 `wsgi.py`。\n\n因此，最终答案是：**检索结果中没有找到** 明确导入 `wsgi.py` 的文件列表。",
+   "answer_score": 0.4,
+   "answer_judge_detail": "命中 ['lint', 'test', 'request', 'response'],缺失 ['formparser', 'local', 'http_proxy', 'shared_data', 'map', 'utils']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['wsgi.py'],实际 ['testapp.py', 'formparser.py', 'wrappers/response.py', 'testapp.py', 'middleware/lint.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "formparser.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "middleware/lint.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "INH-01",
+   "category": "inheritance",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,类 Accept 继承自哪个类?那个基类定义在哪个文件?",
+   "answer": "检索结果中没有找到关于类 `Accept` 继承自哪个类，以及其基类定义在哪个文件的具体信息。提供的代码片段中没有直接提及 `Accept` 类的继承关系或其基类的位置。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['ImmutableList', 'datastructures/structures.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 datastructures/accept.py",
+   "recall_at_k": 0.5,
+   "mrr": 0.5,
+   "retrieved": [
+    {
+     "chunk_id": "http.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/accept.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/accept.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "INH-02",
+   "category": "inheritance",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,类 FileMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+   "answer": "检索结果中没有找到类 `FileMultiDict` 继承自哪个类，也没有找到该基类定义在哪个文件的信息。提供的代码片段中没有直接提及 `FileMultiDict` 的继承关系或其基类的具体定义位置。",
+   "answer_score": 0.5,
+   "answer_judge_detail": "命中 ['MultiDict'],缺失 ['datastructures/structures.py']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['datastructures/file_storage.py', 'datastructures/structures.py'],实际 ['test.py', 'testapp.py', 'PROVENANCE.md', 'wrappers/request.py', '_reloader.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "test.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "_reloader.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "INH-03",
+   "category": "inheritance",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,类 EnvironHeaders 继承自哪个类?那个基类定义在哪个文件?",
+   "answer": "检索结果中没有直接提到类 `EnvironHeaders` 继承自哪个具体的基类，也没有明确指出该基类定义在哪一个文件中。不过，根据提供的代码片段 [代码片段 2] 和 [代码片段 5]，我们可以推断出 `EnvironHeaders` 类的构造函数 (`__init__`) 接受一个名为 `environ` 的参数，并且它调用了父类的构造函数 (`super().__init__()`), 这表明 `EnvironHeaders` 类确实继承自另一个类。但是，具体是哪一个类以及该类定义在哪一个文件中，这些信息并未直接提供。因此，对于这个问题的具体答案，我们只能确定 `EnvironHeaders` 继承自某个未命名的基类，而无法进一步详细说明。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['ImmutableHeadersMixin', 'datastructures/mixins.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 datastructures/headers.py",
+   "recall_at_k": 0.5,
+   "mrr": 0.5,
+   "retrieved": [
+    {
+     "chunk_id": "exceptions.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/headers.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/headers.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "INH-04",
+   "category": "inheritance",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,类 RequestCacheControl 继承自哪个类?那个基类定义在哪个文件?",
+   "answer": "检索结果中没有找到关于 `RequestCacheControl` 类的具体继承信息及其基类定义的文件。提供的代码片段没有直接提及 `RequestCacheControl` 类的继承关系或其基类的位置。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['ImmutableDictMixin', 'datastructures/mixins.py']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['datastructures/cache_control.py', 'datastructures/mixins.py'],实际 ['http.py', 'sansio/request.py', 'testapp.py', 'PROVENANCE.md', 'wrappers/request.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "http.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "INH-05",
+   "category": "inheritance",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,类 ContentSecurityPolicy 继承自哪个类?那个基类定义在哪个文件?",
+   "answer": "检索结果中没有找到关于 `ContentSecurityPolicy` 类继承自哪个类，以及其基类定义在哪个文件的信息。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['CallbackDict', 'datastructures/structures.py']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['datastructures/csp.py', 'datastructures/structures.py'],实际 ['http.py', 'sansio/response.py', 'testapp.py', 'sansio/response.py', 'sansio/response.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "http.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/response.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "INH-06",
+   "category": "inheritance",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,类 CombinedMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+   "answer": "检索结果中没有找到关于 `CombinedMultiDict` 类继承自哪个类的信息，也没有找到该类定义所在的文件。提供的代码片段中未提及 `CombinedMultiDict` 相关内容。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['ImmutableMultiDictMixin', 'datastructures/mixins.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 datastructures/structures.py",
+   "recall_at_k": 0.5,
+   "mrr": 0.5,
+   "retrieved": [
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "INH-07",
+   "category": "inheritance",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?",
+   "answer": "检索结果中没有找到 Request 类的具体继承信息。提供的代码片段中没有提及 Request 类继承自哪个类。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['sansio/request.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 wrappers/request.py",
+   "recall_at_k": 0.5,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/__init__.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "INH-08",
+   "category": "inheritance",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在哪个文件?",
+   "answer": "根据提供的代码片段,我们看到 `Response` 类在初始化方法 (`__init__`) 中调用了 `super().__init__()` 方法,这表明 `Response` 类继承自另一个类。但是,具体的基类名称并没有直接显示出来,我们需要查看 `super().__init__()` 调用的具体实现来确定基类的位置。\n\n从给定的代码片段中,我们无法直接得知 `Response` 类的确切基类及其定义位置。不过,我们可以推测基类可能是 `wrappers/response.py` 文件中的某个类或来自其他导入的模块。为了准确回答这个问题,我们需要查看 `wrappers/response.py` 文件中 `Response` 类的完整定义,或者查看 `super().__init__()` 调用所指向的类定义。\n\n因此,基于提供的信息,\"检索结果中没有找到\" `Response` 类的基类定义所在的文件。需要进一步查阅相关文档或源码以获取确切信息。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['sansio/response.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 wrappers/response.py",
+   "recall_at_k": 0.5,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "wrappers/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/response.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "INH-09",
+   "category": "inheritance",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,异常类 BadRequestKeyError 同时继承了哪两个类?",
+   "answer": "检索结果中没有找到关于 `BadRequestKeyError` 继承自哪两个类的具体信息。提供的代码片段中提到了 `BadRequestKeyError`，但没有说明它继承自哪些类。",
+   "answer_score": 1.0,
+   "answer_judge_detail": "命中 ['BadRequest', 'KeyError'],缺失 []",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['exceptions.py'],实际 ['datastructures/structures.py', 'datastructures/structures.py', 'datastructures/structures.py', 'testapp.py', 'datastructures/headers.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/headers.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "INH-10",
+   "category": "inheritance",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,有哪些异常类直接继承自 HTTPException?请尽量列出。",
+   "answer": "检索结果中没有找到具体的异常类列表,只知道它们可能是 `HTTPException` 的子类。根据提供的代码片段,可以确定的是 `exceptions.py` 文件中定义了一个 `__init__` 方法,用于初始化一个映射,该映射可能包含了一些继承自 `HTTPException` 的异常类。但是具体的异常类名称并没有在给定的代码片段中列出。因此,无法直接从这些代码片段中获取哪些异常类直接继承自 `HTTPException`。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['BadGateway', 'BadRequest', 'Conflict', 'ExpectationFailed', 'FailedDependency', 'Forbidden', 'GatewayTimeout', 'Gone', 'HTTPVersionNotSupported', 'ImATeapot', 'InternalServerError', 'LengthRequired', 'Locked', 'MethodNotAllowed', 'MisdirectedRequest', 'NotAcceptable', 'NotFound', 'NotImplemented', 'PreconditionFailed', 'PreconditionRequired', 'RequestEntityTooLarge', 'RequestHeaderFieldsTooLarge', 'RequestRedirect', 'RequestTimeout', 'RequestURITooLarge', 'RequestedRangeNotSatisfiable', 'Unauthorized', 'UnavailableForLegalReasons', 'UnprocessableEntity', 'UnsupportedMediaType', '_RetryAfter']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 exceptions.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.25,
+   "retrieved": [
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "exceptions.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/map.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "INH-11",
+   "category": "inheritance",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,哪些类继承(混入)了 ImmutableDictMixin?",
+   "answer": "在给出的代码片段中，以下类继承或混入了 `ImmutableDictMixin`：\n\n1. `ImmutableDict`：\n   ```python\n   class ImmutableDict(ImmutableDictMixin[K, V], dict[K, V]):  # type: ignore[misc]\n   ```\n\n2. `ImmutableMultiDict`：\n   ```python\n   class ImmutableMultiDict(ImmutableMultiDictMixin[K, V], MultiDict[K, V]):  # type: ignore[misc]\n   ```\n\n3. `ImmutableTypeConversionDict`：\n   ```python\n   class ImmutableTypeConversionDict(ImmutableDictMixin[K, V], TypeConversionDict[K, V]):  # type: ignore[misc]\n   ```\n\n4. `ImmutableMultiDictMixin` 是一个直接继承自 `ImmutableDictMixin` 的类：\n   ```python\n   class ImmutableMultiDictMixin(ImmutableDictMixin[K, V]):\n   ```\n\n5. `ImmutableHeadersMixin` 虽然没有直接继承 `ImmutableDictMixin`，但它是用来使某些数据结构不可变的，类似于 `ImmutableDictMixin` 的作用：\n   ```python\n   class ImmutableHeadersMixin:\n   ```\n\n6. `ImmutableListMixin` 类似地，它用于使列表不可变，虽然不是直接继承自 `ImmutableDictMixin`，但它具有相似的功能：\n   ```python\n   class ImmutableListMixin:\n   ```\n\n请注意，`ImmutableHeadersMixin` 和 `ImmutableListMixin` 并不直接继承 `ImmutableDictMixin`，但它们都提供了类似的功能，即使特定的数据结构（如字典和列表）不可变。",
+   "answer_score": 0.75,
+   "answer_judge_detail": "命中 ['ImmutableDict', 'ImmutableMultiDictMixin', 'ImmutableTypeConversionDict'],缺失 ['RequestCacheControl']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 datastructures/mixins.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "datastructures/mixins.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/mixins.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "INH-12",
+   "category": "inheritance",
+   "priority": "P1",
+   "difficulty": "medium",
+   "question": "在 werkzeug 中,哪些类继承(混入)了 CallbackDict?",
+   "answer": "检索结果中没有找到关于哪些类继承或混入了 `CallbackDict` 的直接信息。提供的代码片段中提到了 `CallbackDict`，但没有说明哪些类继承或混入了它。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['ContentSecurityPolicy', '_CacheControl']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['datastructures/structures.py'],实际 ['testapp.py', 'PROVENANCE.md', 'serving.py', 'http.py', 'sansio/response.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "serving.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "http.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/response.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "LOC-01",
+   "category": "symbol_location",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,类 Authorization 定义在哪个文件里?",
+   "answer": "检索结果中没有找到类 Authorization 的定义文件。提供的代码片段中只展示了使用了这个类，但没有展示其定义位置。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['datastructures/auth.py']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['datastructures/auth.py'],实际 ['sansio/request.py', 'testapp.py', 'PROVENANCE.md', 'wrappers/request.py', 'middleware/lint.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "middleware/lint.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "LOC-02",
+   "category": "symbol_location",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,类 BaseConverter 定义在哪个文件里?",
+   "answer": "检索结果中没有找到。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['routing/converters.py']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['routing/converters.py'],实际 ['middleware/lint.py', 'testapp.py', 'PROVENANCE.md', 'wrappers/request.py', 'wrappers/request.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "middleware/lint.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "LOC-03",
+   "category": "symbol_location",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,类 CombinedMultiDict 定义在哪个文件里?",
+   "answer": "检索结果中没有关于 `CombinedMultiDict` 类定义的具体文件信息。提供的代码片段中提到了 `CombinedMultiDict` 的使用，但没有显示该类本身的定义位置。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['datastructures/structures.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 datastructures/structures.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.25,
+   "retrieved": [
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "LOC-04",
+   "category": "symbol_location",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,类 FileStorage 定义在哪个文件里?",
+   "answer": "检索结果中没有找到类 FileStorage 定义的具体文件。提供的代码片段中提到了 FileStorage，但没有直接指出该类定义在哪一个文件内。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['datastructures/file_storage.py']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['datastructures/file_storage.py'],实际 ['wrappers/request.py', 'testapp.py', 'test.py', '_reloader.py', 'PROVENANCE.md']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "test.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "_reloader.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "LOC-05",
+   "category": "symbol_location",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,类 HTTPException 定义在哪个文件里?",
+   "answer": "类 `HTTPException` 定义在文件 `exceptions.py` 中。根据提供的代码片段 3,可以看到 `HTTPException` 类及其子类的定义都在这个文件里。",
+   "answer_score": 1.0,
+   "answer_judge_detail": "命中 ['exceptions.py'],缺失 []",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 exceptions.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.3333,
+   "retrieved": [
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "exceptions.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "LOC-06",
+   "category": "symbol_location",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,类 Headers 定义在哪个文件里?",
+   "answer": "检索结果中没有找到关于类 Headers 定义的具体文件信息。提供的代码片段中未提及类 Headers 的定义位置。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['datastructures/headers.py']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['datastructures/headers.py'],实际 ['exceptions.py', 'sansio/request.py', 'sansio/request.py', 'sansio/request.py', 'sansio/request.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "exceptions.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "LOC-07",
+   "category": "symbol_location",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,类 Map 定义在哪个文件里?",
+   "answer": "检索结果中没有直接提到类 `Map` 定义的具体文件名。但是，从提供的代码片段中可以推断出 `Map` 类被多个文件引用，例如 `routing/converters.py` 和 `routing/map.py`。因此，类 `Map` 很可能定义在 `routing/map.py` 文件中。不过，确切的定义位置需要查看这些引用文件中的导入语句或其他相关上下文信息来确认。根据现有信息，最有可能的答案是 `routing/map.py`。",
+   "answer_score": 1.0,
+   "answer_judge_detail": "命中 ['routing/map.py'],缺失 []",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 routing/map.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.2,
+   "retrieved": [
+    {
+     "chunk_id": "routing/converters.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/rules.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/map.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "LOC-08",
+   "category": "symbol_location",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,类 MapAdapter 定义在哪个文件里?",
+   "answer": "检索结果中没有找到类 MapAdapter 定义的具体文件位置。提供的代码片段中没有包含该信息。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['routing/map.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 routing/map.py",
+   "recall_at_k": 1.0,
+   "mrr": 0.25,
+   "retrieved": [
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/map.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/exceptions.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "LOC-09",
+   "category": "symbol_location",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,类 MultiDict 定义在哪个文件里?",
+   "answer": "根据提供的代码片段，类 `MultiDict` 的定义没有直接出现在任何一个代码片段中，但是可以推断出它是在 `datastructures/structures.py` 文件中被引用和实现的。具体来说，`MultiDict` 类在 `__init__` 方法和其他方法中被提及，例如 `copy` 方法返回一个 `MultiDict` 实例。因此，`MultiDict` 类应该定义在 `datastructures/structures.py` 文件中。",
+   "answer_score": 1.0,
+   "answer_judge_detail": "命中 ['datastructures/structures.py'],缺失 []",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 datastructures/structures.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "test.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "LOC-10",
+   "category": "symbol_location",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,类 Rule 定义在哪个文件里?",
+   "answer": "检索结果中没有找到类 Rule 的定义文件。提供的代码片段中没有提及类 Rule 的定义位置。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['routing/rules.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 routing/rules.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "routing/rules.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/rules.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/rules.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/map.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/matcher.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "LOC-11",
+   "category": "symbol_location",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,类 StateMachineMatcher 定义在哪个文件里?",
+   "answer": "检索结果中没有找到。提供的代码片段中没有提及类 StateMachineMatcher 的定义。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['routing/matcher.py']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['routing/matcher.py'],实际 ['testapp.py', 'wrappers/request.py', 'sansio/request.py', 'wsgi.py', 'middleware/dispatcher.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wsgi.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "middleware/dispatcher.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "LOC-12",
+   "category": "symbol_location",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,类 WSGIWarning 定义在哪个文件里?",
+   "answer": "检索结果中没有找到 WSGIWarning 类定义的具体文件位置。提供的代码片段中提到了 WSGIWarning，但没有给出其定义所在的文件。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['middleware/lint.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 middleware/lint.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "middleware/lint.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wsgi.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "PROVENANCE.md",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "middleware/lint.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "DAT-01",
+   "category": "dataflow",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,常量 PIN_TIME 在哪个文件中定义?",
+   "answer": "检索结果中没有找到 PIN_TIME 常量在哪个文件中定义的信息。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['debug/__init__.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 debug/__init__.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "debug/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "debug/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "debug/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "debug/__init__.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "debug/__init__.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "DAT-02",
+   "category": "dataflow",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,常量 HELP_HTML 在哪个文件中定义?",
+   "answer": "检索结果中没有找到。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['debug/repr.py']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['debug/repr.py'],实际 ['wrappers/request.py', 'wrappers/request.py', 'http.py', 'testapp.py', 'sansio/request.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "http.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "testapp.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "sansio/request.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "DAT-03",
+   "category": "dataflow",
+   "priority": "P1",
+   "difficulty": "easy",
+   "question": "在 werkzeug 中,常量 OBJECT_DUMP_HTML 在哪个文件中定义?",
+   "answer": "检索结果中没有找到。提供的代码片段中没有提及常量 `OBJECT_DUMP_HTML`。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['debug/repr.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 debug/repr.py",
+   "recall_at_k": 1.0,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "debug/repr.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "debug/repr.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/accept.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "IND-01",
+   "category": "indirect_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,wrappers/response.py 是否(间接)依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+   "answer": "从提供的代码片段来看，直接的依赖关系并没有明确显示出来。但是，我们可以分析一下类和方法之间的调用关系来推测是否存在间接依赖。\n\n在 `wrappers/response.py` 文件中的 `__init__` 方法中，并没有直接引用 `datastructures/mixins.py` 文件中的任何内容。然而，`datastructures/mixins.py` 文件中的 `__ior__` 和 `__delitem__` 方法都抛出了 `_immutable_error(self)`，这暗示了这些方法可能被某些不可变对象使用，而这些对象可能是通过继承或组合的方式存在于 `wrappers/response.py` 或其他相关文件中。\n\n为了确定是否存在间接依赖，我们需要考虑 `wrappers/response.py` 中定义的类是否继承自或使用了来自 `datastructures/mixins.py` 的类或方法。由于 `wrappers/response.py` 中的代码片段没有提供足够的信息来直接判断这一点，我们不能仅凭给定的信息断定存在这样的依赖关系。\n\n但是，基于常见的设计模式和类库结构，`wrappers/response.py` 可能会依赖于一些基础的数据结构类，这些类可能位于 `datastructures/` 目录下。因此，一个合理的推测是，`wrappers/response.py` 可能间接依赖于 `datastructures/mixins.py`，并且这种依赖关系可能通过 `wrappers/base_response.py` 这样的中间文件传递，因为 `base_response.py` 很有可能包含了响应对象的基础实现，而这些实现可能会使用到 `mixins.py` 中定义的行为（如不可变性）。\n\n综上所述，虽然直接证据不足，但根据类库的设计习惯，可以推测 `wrappers/response.py` 间接依赖于 `datastructures/mixins.py`，且依赖路径可能经过 `wrappers/base_response.py`。不过，这个结论是基于假设的，确切的依赖关系需要查看更完整的代码库结构和类继承关系才能确认。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['datastructures/__init__.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 wrappers/response.py",
+   "recall_at_k": 0.5,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "wrappers/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/mixins.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/mixins.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "IND-02",
+   "category": "indirect_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,routing/map.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+   "answer": "根据提供的代码片段，我们无法直接确定 `routing/map.py` 是否间接依赖于 `datastructures/structures.py`，因为这些片段并没有显示模块之间的导入关系或依赖路径。为了回答这个问题，我们需要查看这些文件之间的导入语句或其他形式的依赖声明。从给定的信息来看，没有足够的信息来推断出确切的依赖路径。\n\n因此，基于提供的代码片段，我的回答是：**检索结果中没有找到**。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['datastructures/__init__.py']",
+   "retrieval_hit": 0.0,
+   "retrieval_detail": "预期 ['routing/map.py', 'datastructures/__init__.py'],实际 ['routing/converters.py', 'routing/rules.py', 'datastructures/headers.py', 'datastructures/structures.py', 'datastructures/structures.py']",
+   "recall_at_k": 0.0,
+   "mrr": 0.0,
+   "retrieved": [
+    {
+     "chunk_id": "routing/converters.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/rules.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/headers.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "IND-03",
+   "category": "indirect_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,wrappers/request.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+   "answer": "从提供的代码片段来看，直接的依赖关系并没有明确显示出来。但是，我们可以推断依赖关系的存在与否。在 `wrappers/request.py` 文件中的 `values` 函数使用了 `CombinedMultiDict` 类型，这表明 `wrappers/request.py` 文件间接依赖于定义 `CombinedMultiDict` 的文件。`CombinedMultiDict` 类通常位于 `datastructures/combinedmulti.dict` 或类似的路径下，而 `datastructures/structures.py` 可能包含或导入了这些数据结构类。\n\n然而，具体到您的问题，即依赖路径是否恰好经过 `datastructures/structures.py`，我们无法仅凭给定的代码片段得出确切结论。给定的代码片段中没有直接提到 `datastructures/structures.py` 文件，也没有提供足够的信息来确定 `CombinedMultiDict` 类的确切位置和导入路径。\n\n因此，基于提供的信息，我只能说：\n- 检索结果中没有找到直接的答案。\n- 但是可以推测 `wrappers/request.py` 间接依赖于 `datastructures` 目录下的某个文件，该文件定义了 `CombinedMultiDict` 类，但具体是哪一个文件（例如 `datastructures/structures.py`）则无法确定。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['datastructures/__init__.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 wrappers/request.py",
+   "recall_at_k": 0.5,
+   "mrr": 1.0,
+   "retrieved": [
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/request.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/headers.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "IND-04",
+   "category": "indirect_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,routing/map.py 是否(间接)依赖 http.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+   "answer": "检索结果中没有直接显示 routing/map.py 文件依赖于 http.py 文件，也没有提供确切的依赖路径信息。从提供的代码片段来看，werkzeug 的 routing/map.py 和 http.py 文件之间没有直接的导入或调用关系。因此，无法仅凭这些代码片段确定 routing/map.py 是否间接依赖于 http.py，或者如果存在依赖，具体是通过哪些中间文件实现的。",
+   "answer_score": 0.0,
+   "answer_judge_detail": "命中 [],缺失 ['datastructures/__init__.py']",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 routing/map.py",
+   "recall_at_k": 0.5,
+   "mrr": 0.3333,
+   "retrieved": [
+    {
+     "chunk_id": "routing/converters.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/rules.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/map.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "routing/map.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "http.py",
+     "score": 0.0
+    }
+   ]
+  },
+  {
+   "id": "IND-05",
+   "category": "indirect_dep",
+   "priority": "P1",
+   "difficulty": "hard",
+   "question": "在 werkzeug 中,wrappers/response.py 是直接 import 了 datastructures/structures.py,还是通过 datastructures/__init__.py 间接依赖的?给出完整的中间文件路径。",
+   "answer": "检索结果中没有关于 `wrappers/response.py` 是否直接导入了 `datastructures/structures.py` 或者是通过 `datastructures/__init__.py` 间接依赖的具体信息。提供的代码片段仅展示了各个文件的部分内容，并未包含导入语句，因此无法从这些片段中得出结论。",
+   "answer_score": 1.0,
+   "answer_judge_detail": "命中 ['datastructures/__init__.py'],缺失 []",
+   "retrieval_hit": 1.0,
+   "retrieval_detail": "检索命中 wrappers/response.py",
+   "recall_at_k": 0.5,
+   "mrr": 0.25,
+   "retrieved": [
+    {
+     "chunk_id": "datastructures/structures.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/headers.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "datastructures/headers.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "wrappers/response.py",
+     "score": 0.0
+    },
+    {
+     "chunk_id": "exceptions.py",
+     "score": 0.0
+    }
+   ]
+  }
+ ]
+}

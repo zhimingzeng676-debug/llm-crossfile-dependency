@@ -1,0 +1,9 @@
+# M10 八格补全:baseline 格(三者都不加)——无 RAG、无 PE、无 FT。
+# 通用 14B 基座 + plain prompt + 无检索。八格消融的左下角。
+name: cell_baseline
+repo_root: repos/werkzeug
+commits_path: null
+embedder: {type: hashing, dim: 512}
+backend: {type: none, top_k: 5}
+llm: {type: api, model: Qwen/Qwen2.5-14B-Instruct, base_url: "http://localhost:8001/v1", temperature: 0.0}
+prompt_file: configs/prompts/plain.yaml

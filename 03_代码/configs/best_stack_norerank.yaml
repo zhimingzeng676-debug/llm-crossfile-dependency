@@ -1,0 +1,19 @@
+# 归因实验:best_stack 把 rerank 关掉,其余完全一致。
+# 动机:best_stack 检索命中率最高但答案分不是最高,怀疑词重合式 rerank
+# 在和语义检索"打架"(把语义检回来的好块按词面重排到后面)。本配置专门归因。
+name: best_stack_norerank
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl
+chunking:
+  strategy: function
+  include_graph_cards: true
+embedder:
+  type: sentence_transformer
+  model_name: models/bge-small-en-v1.5  # M65 审计:英文/代码任务用 en(R@5 0.93≫zh 0.32),零成本;勿改回 zh(冒烟测试会拦)
+backend:
+  type: hybrid
+  top_k: 3
+  rerank: false
+llm:
+  type: mock
+prompt_file: configs/prompts/plain.yaml

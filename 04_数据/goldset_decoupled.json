@@ -1,0 +1,242 @@
+[
+ {
+  "id": "FWD-01",
+  "question": "在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, exceptions, mixins, structures",
+  "notes": "(独立 ast 抽取,归一化包名)datastructures/headers.py"
+ },
+ {
+  "id": "FWD-02",
+  "question": "在 werkzeug 中,formparser.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, datastructures, exceptions, http, multipart, wsgi",
+  "notes": "(独立 ast 抽取,归一化包名)formparser.py"
+ },
+ {
+  "id": "FWD-03",
+  "question": "在 werkzeug 中,http.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, sansio",
+  "notes": "(独立 ast 抽取,归一化包名)http.py"
+ },
+ {
+  "id": "FWD-04",
+  "question": "在 werkzeug 中,routing/map.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, converters, datastructures, exceptions, matcher, request, rules, urls, wsgi",
+  "notes": "(独立 ast 抽取,归一化包名)routing/map.py"
+ },
+ {
+  "id": "FWD-05",
+  "question": "在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "converters, exceptions, rules",
+  "notes": "(独立 ast 抽取,归一化包名)routing/matcher.py"
+ },
+ {
+  "id": "FWD-06",
+  "question": "在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "datastructures, http, user_agent, utils",
+  "notes": "(独立 ast 抽取,归一化包名)sansio/request.py"
+ },
+ {
+  "id": "FWD-07",
+  "question": "在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "cache_control, datastructures, http, utils",
+  "notes": "(独立 ast 抽取,归一化包名)sansio/response.py"
+ },
+ {
+  "id": "FWD-08",
+  "question": "在 werkzeug 中,serving.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, _reloader, debug, exceptions, http, shared_data, tbtools, urls",
+  "notes": "(独立 ast 抽取,归一化包名)serving.py"
+ },
+ {
+  "id": "FWD-09",
+  "question": "在 werkzeug 中,test.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, datastructures, http, multipart, request, response, urls, utils, wsgi",
+  "notes": "(独立 ast 抽取,归一化包名)test.py"
+ },
+ {
+  "id": "FWD-10",
+  "question": "在 werkzeug 中,wrappers/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, datastructures, exceptions, formparser, request, test, utils, wsgi",
+  "notes": "(独立 ast 抽取,归一化包名)wrappers/request.py"
+ },
+ {
+  "id": "FWD-11",
+  "question": "在 werkzeug 中,wrappers/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, datastructures, exceptions, http, request, response, test, urls, utils, wsgi",
+  "notes": "(独立 ast 抽取,归一化包名)wrappers/response.py"
+ },
+ {
+  "id": "REV-01",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 _internal.py?请尽可能完整列出。",
+  "gold": "_reloader, debug, exceptions, file_storage, formparser, headers, http, map, mixins, request, response, serving, structures, test, utils",
+  "notes": "(独立 ast 抽取,归一化包名)_internal.py"
+ },
+ {
+  "id": "REV-02",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/__init__.py?请尽可能完整列出。",
+  "gold": "exceptions, formparser, http_proxy, lint, map, multipart, request, response, rules, test, urls, utils",
+  "notes": "(独立 ast 抽取,归一化包名)datastructures/__init__.py"
+ },
+ {
+  "id": "REV-03",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/mixins.py?请尽可能完整列出。",
+  "gold": "cache_control, datastructures, headers, structures",
+  "notes": "(独立 ast 抽取,归一化包名)datastructures/mixins.py"
+ },
+ {
+  "id": "REV-04",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/structures.py?请尽可能完整列出。",
+  "gold": "accept, auth, cache_control, csp, datastructures, file_storage, headers",
+  "notes": "(独立 ast 抽取,归一化包名)datastructures/structures.py"
+ },
+ {
+  "id": "REV-05",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 exceptions.py?请尽可能完整列出。",
+  "gold": "debug, exceptions, formparser, headers, http_proxy, map, multipart, request, response, serving, utils, wsgi",
+  "notes": "(独立 ast 抽取,归一化包名)exceptions.py"
+ },
+ {
+  "id": "REV-06",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 formparser.py?请尽可能完整列出。",
+  "gold": "request",
+  "notes": "(独立 ast 抽取,归一化包名)formparser.py"
+ },
+ {
+  "id": "REV-07",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 http.py?请尽可能完整列出。",
+  "gold": "auth, csp, debug, etag, exceptions, formparser, http, http_proxy, lint, multipart, proxy_fix, request, response, serving, shared_data, test, utils",
+  "notes": "(独立 ast 抽取,归一化包名)http.py"
+ },
+ {
+  "id": "REV-08",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 routing/rules.py?请尽可能完整列出。",
+  "gold": "exceptions, map, matcher, routing",
+  "notes": "(独立 ast 抽取,归一化包名)routing/rules.py"
+ },
+ {
+  "id": "REV-09",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 sansio/request.py?请尽可能完整列出。",
+  "gold": "request",
+  "notes": "(独立 ast 抽取,归一化包名)sansio/request.py"
+ },
+ {
+  "id": "REV-10",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 urls.py?请尽可能完整列出。",
+  "gold": "map, response, rules, serving, test, utils",
+  "notes": "(独立 ast 抽取,归一化包名)urls.py"
+ },
+ {
+  "id": "REV-11",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 utils.py?请尽可能完整列出。",
+  "gold": "debug, exceptions, request, response, shared_data, tbtools, test",
+  "notes": "(独立 ast 抽取,归一化包名)utils.py"
+ },
+ {
+  "id": "REV-12",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 wrappers/request.py?请尽可能完整列出。",
+  "gold": "_internal, debug, exceptions, map, response, test, testapp, utils, wrappers",
+  "notes": "(独立 ast 抽取,归一化包名)wrappers/request.py"
+ },
+ {
+  "id": "REV-13",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 wsgi.py?请尽可能完整列出。",
+  "gold": "formparser, http_proxy, lint, local, map, request, response, shared_data, test, utils",
+  "notes": "(独立 ast 抽取,归一化包名)wsgi.py"
+ },
+ {
+  "id": "LOC-01",
+  "question": "在 werkzeug 中,类 Authorization 定义在哪个文件里?",
+  "gold": "datastructures/auth.py",
+  "notes": "(独立 ast 抽取,归一化包名)datastructures/auth.py"
+ },
+ {
+  "id": "LOC-02",
+  "question": "在 werkzeug 中,类 BaseConverter 定义在哪个文件里?",
+  "gold": "routing/converters.py",
+  "notes": "(独立 ast 抽取,归一化包名)routing/converters.py"
+ },
+ {
+  "id": "LOC-03",
+  "question": "在 werkzeug 中,类 CombinedMultiDict 定义在哪个文件里?",
+  "gold": "datastructures/structures.py",
+  "notes": "(独立 ast 抽取,归一化包名)datastructures/structures.py"
+ },
+ {
+  "id": "LOC-04",
+  "question": "在 werkzeug 中,类 FileStorage 定义在哪个文件里?",
+  "gold": "datastructures/file_storage.py",
+  "notes": "(独立 ast 抽取,归一化包名)datastructures/file_storage.py"
+ },
+ {
+  "id": "LOC-05",
+  "question": "在 werkzeug 中,类 HTTPException 定义在哪个文件里?",
+  "gold": "exceptions.py",
+  "notes": "(独立 ast 抽取,归一化包名)exceptions.py"
+ },
+ {
+  "id": "LOC-06",
+  "question": "在 werkzeug 中,类 Headers 定义在哪个文件里?",
+  "gold": "datastructures/headers.py",
+  "notes": "(独立 ast 抽取,归一化包名)datastructures/headers.py"
+ },
+ {
+  "id": "LOC-07",
+  "question": "在 werkzeug 中,类 Map 定义在哪个文件里?",
+  "gold": "routing/map.py",
+  "notes": "(独立 ast 抽取,归一化包名)routing/map.py"
+ },
+ {
+  "id": "LOC-08",
+  "question": "在 werkzeug 中,类 MapAdapter 定义在哪个文件里?",
+  "gold": "routing/map.py",
+  "notes": "(独立 ast 抽取,归一化包名)routing/map.py"
+ },
+ {
+  "id": "LOC-09",
+  "question": "在 werkzeug 中,类 MultiDict 定义在哪个文件里?",
+  "gold": "datastructures/structures.py",
+  "notes": "(独立 ast 抽取,归一化包名)datastructures/structures.py"
+ },
+ {
+  "id": "LOC-10",
+  "question": "在 werkzeug 中,类 Rule 定义在哪个文件里?",
+  "gold": "routing/rules.py",
+  "notes": "(独立 ast 抽取,归一化包名)routing/rules.py"
+ },
+ {
+  "id": "LOC-11",
+  "question": "在 werkzeug 中,类 StateMachineMatcher 定义在哪个文件里?",
+  "gold": "routing/matcher.py",
+  "notes": "(独立 ast 抽取,归一化包名)routing/matcher.py"
+ },
+ {
+  "id": "LOC-12",
+  "question": "在 werkzeug 中,类 WSGIWarning 定义在哪个文件里?",
+  "gold": "middleware/lint.py",
+  "notes": "(独立 ast 抽取,归一化包名)middleware/lint.py"
+ },
+ {
+  "id": "INH-07",
+  "question": "在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?",
+  "gold": "sansio/request.py",
+  "notes": "人工核验 repos/werkzeug/wrappers/request.py:20 `from ..sansio.request import Request as _SansIORequest` + :31 `class Request(_SansIORequest)` → 基类在 sansio/request.py(别名解析)"
+ },
+ {
+  "id": "INH-08",
+  "question": "在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在哪个文件?",
+  "gold": "sansio/response.py",
+  "notes": "人工核验 wrappers/response.py:16 `import Response as _SansIOResponse` + :39 `class Response(_SansIOResponse)` → sansio/response.py"
+ },
+ {
+  "id": "IND-01",
+  "question": "在 werkzeug 中,wrappers/response.py 是否(间接)依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "gold": "datastructures/__init__.py",
+  "notes": "人工核验 wrappers/response.py:9 `from ..datastructures import Headers`(=datastructures/__init__.py)+ datastructures/__init__.py:19-31 re-export .mixins/.structures → 传递中介=datastructures/__init__.py"
+ },
+ {
+  "id": "IND-05",
+  "question": "在 werkzeug 中,wrappers/response.py 是直接 import 了 datastructures/structures.py,还是通过 datastructures/__init__.py 间接依赖的?给出完整的中间文件路径。",
+  "gold": "datastructures/__init__.py",
+  "notes": "同 IND-01:response.py 直接 import datastructures/__init__.py(包),structures 由包二次分发"
+ }
+]

@@ -1,0 +1,9 @@
+name: rich_vec_base
+repo_root: repos/rich
+commits_path: null
+index_dir: indexes/rich_best
+chunking: {strategy: function, include_graph_cards: true}
+embedder: {type: sentence_transformer, model_name: models/bge-small-en-v1.5  # M65 审计:英文/代码任务用 en(R@5 0.93≫zh 0.32),零成本;勿改回 zh(冒烟测试会拦)}
+backend: {type: local_rag, top_k: 5}
+llm: {type: api, model: Qwen/Qwen2.5-14B-Instruct, base_url: "http://localhost:8001/v1", temperature: 0.0}
+prompt_file: configs/prompts/plain.yaml

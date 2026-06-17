@@ -1,0 +1,266 @@
+{
+  "A": {
+    "A_cpy_T1_over_strict": {
+      "fp": 0.967,
+      "ob": 0.0,
+      "safe": 0.0
+    },
+    "A_cpy_T1_over_humble": {
+      "fp": 1.0,
+      "ob": 0.0,
+      "safe": 0.0
+    },
+    "A_cpy_T1_correct": {
+      "fp": 0.0,
+      "ob": 0.0,
+      "safe": 0.0
+    },
+    "A_cpy_T2_over_strict": {
+      "fp": 0.944,
+      "ob": 1.0,
+      "safe": 0.0
+    },
+    "A_cpy_T2_over_humble": {
+      "fp": 1.0,
+      "ob": 1.0,
+      "safe": 0.0
+    },
+    "A_cpy_T2_correct": {
+      "fp": 0.0,
+      "ob": 0.0,
+      "safe": 1.0
+    },
+    "A_wz_T1_over_strict": {
+      "fp": 0.69,
+      "ob": 0.0,
+      "safe": 0.0
+    },
+    "A_wz_T1_over_humble": {
+      "fp": 1.0,
+      "ob": 0.0,
+      "safe": 0.0
+    },
+    "A_wz_T1_correct": {
+      "fp": 0.0,
+      "ob": 0.0,
+      "safe": 0.0
+    },
+    "A_wz_T2_over_strict": {
+      "fp": 0.81,
+      "ob": 1.0,
+      "safe": 0.0
+    },
+    "A_wz_T2_over_humble": {
+      "fp": 1.0,
+      "ob": 1.0,
+      "safe": 0.0
+    },
+    "A_wz_T2_correct": {
+      "fp": 0.0,
+      "ob": 0.143,
+      "safe": 0.857
+    }
+  },
+  "B": {
+    "B_shortC_strict": {
+      "hed": 0.0,
+      "dang": 0.0,
+      "rec": 0.967,
+      "_per": {
+        "Lib/_pyrepl/base_eventqueue.py": 0.0,
+        "Lib/_pyrepl/fancycompleter.py": 0.0,
+        "Lib/_pyrepl/simple_interact.py": 0.0,
+        "Lib/_pyrepl/unix_console.py": 0.0,
+        "Lib/_pyrepl/windows_console.py": 0.0,
+        "Lib/_sitebuiltins.py": 0.0,
+        "Lib/asyncio/streams.py": 0.0,
+        "Lib/asyncio/tasks.py": 0.0,
+        "Lib/asyncio/unix_events.py": 0.0,
+        "Lib/asyncio/windows_events.py": 0.0,
+        "Lib/compression/__init__.py": 0.0,
+        "Lib/concurrent/futures/process.py": 0.0,
+        "Lib/email/charset.py": 0.0,
+        "Lib/email/mime/base.py": 0.0,
+        "Lib/email/parser.py": 0.0,
+        "Lib/email/quoprimime.py": 0.0,
+        "Lib/encodings/__init__.py": 0.0,
+        "Lib/ensurepip/__init__.py": 0.0,
+        "Lib/genericpath.py": 0.0,
+        "Lib/gettext.py": 0.0
+      }
+    },
+    "B_shortC_humble": {
+      "hed": 0.317,
+      "dang": 0.0,
+      "rec": 1.0,
+      "_per": {
+        "Lib/_pyrepl/base_eventqueue.py": 0.0,
+        "Lib/_pyrepl/fancycompleter.py": 0.3333333333333333,
+        "Lib/_pyrepl/simple_interact.py": 1.0,
+        "Lib/_pyrepl/unix_console.py": 0.0,
+        "Lib/_pyrepl/windows_console.py": 0.0,
+        "Lib/_sitebuiltins.py": 1.0,
+        "Lib/asyncio/streams.py": 0.3333333333333333,
+        "Lib/asyncio/tasks.py": 0.6666666666666666,
+        "Lib/asyncio/unix_events.py": 0.0,
+        "Lib/asyncio/windows_events.py": 0.0,
+        "Lib/compression/__init__.py": 0.3333333333333333,
+        "Lib/concurrent/futures/process.py": 0.6666666666666666,
+        "Lib/email/charset.py": 0.3333333333333333,
+        "Lib/email/mime/base.py": 0.0,
+        "Lib/email/parser.py": 0.0,
+        "Lib/email/quoprimime.py": 0.6666666666666666,
+        "Lib/encodings/__init__.py": 0.0,
+        "Lib/ensurepip/__init__.py": 0.0,
+        "Lib/genericpath.py": 0.0,
+        "Lib/gettext.py": 1.0
+      }
+    },
+    "B_shortI_strict": {
+      "hed": 0.0,
+      "dang": 0.0,
+      "rec": 0.167,
+      "_per": {
+        "Lib/contextvars.py": 0.0,
+        "Lib/ctypes/__init__.py": 0.0,
+        "Lib/importlib/machinery.py": 0.0,
+        "Lib/logging/__init__.py": 0.0,
+        "Lib/pickle.py": 0.0,
+        "Lib/selectors.py": 0.0,
+        "Lib/asyncio/log.py": 0.0,
+        "Lib/email/message.py": 0.0,
+        "Lib/getopt.py": 0.0,
+        "Lib/json/__init__.py": 0.0,
+        "Lib/reprlib.py": 0.0,
+        "Lib/copy.py": 0.0,
+        "Lib/locale.py": 0.0,
+        "Lib/platform.py": 0.0,
+        "Lib/random.py": 0.0,
+        "Lib/ssl.py": 0.0,
+        "Lib/string/__init__.py": 0.0,
+        "Lib/importlib/util.py": 0.0,
+        "Lib/multiprocessing/context.py": 0.0,
+        "Lib/pathlib/__init__.py": 0.0
+      }
+    },
+    "B_shortI_humble": {
+      "hed": 0.35,
+      "dang": 0.0,
+      "rec": 0.218,
+      "_per": {
+        "Lib/contextvars.py": 1.0,
+        "Lib/ctypes/__init__.py": 0.0,
+        "Lib/importlib/machinery.py": 0.6666666666666666,
+        "Lib/logging/__init__.py": 0.3333333333333333,
+        "Lib/pickle.py": 1.0,
+        "Lib/selectors.py": 0.0,
+        "Lib/asyncio/log.py": 0.3333333333333333,
+        "Lib/email/message.py": 0.0,
+        "Lib/getopt.py": 1.0,
+        "Lib/json/__init__.py": 0.3333333333333333,
+        "Lib/reprlib.py": 0.6666666666666666,
+        "Lib/copy.py": 0.0,
+        "Lib/locale.py": 0.6666666666666666,
+        "Lib/platform.py": 0.0,
+        "Lib/random.py": 0.0,
+        "Lib/ssl.py": 0.0,
+        "Lib/string/__init__.py": 0.3333333333333333,
+        "Lib/importlib/util.py": 0.0,
+        "Lib/multiprocessing/context.py": 0.0,
+        "Lib/pathlib/__init__.py": 0.6666666666666666
+      }
+    },
+    "B_longC_strict": {
+      "hed": 0.018,
+      "dang": 0.0,
+      "rec": 0.425,
+      "_per": {
+        "Lib/_collections_abc.py": 0.0,
+        "Lib/_colorize.py": 0.0,
+        "Lib/_pyrepl/types.py": 0.0,
+        "Lib/calendar.py": 0.0,
+        "Lib/concurrent/futures/__init__.py": 0.0,
+        "Lib/fnmatch.py": 0.0,
+        "Lib/profiling/sampling/collector.py": 0.0,
+        "Lib/contextvars.py": 0.0,
+        "Lib/ctypes/__init__.py": 0.0,
+        "Lib/importlib/machinery.py": 0.0,
+        "Lib/logging/__init__.py": 0.0,
+        "Lib/pickle.py": 0.0,
+        "Lib/selectors.py": 0.0,
+        "Lib/textwrap.py": 0.0,
+        "Lib/asyncio/log.py": 0.3333333333333333,
+        "Lib/email/message.py": 0.0,
+        "Lib/getopt.py": 0.0,
+        "Lib/json/__init__.py": 0.0,
+        "Lib/reprlib.py": 0.0
+      }
+    },
+    "B_longC_humble": {
+      "hed": 0.544,
+      "dang": 0.0,
+      "rec": 0.701,
+      "_per": {
+        "Lib/_collections_abc.py": 1.0,
+        "Lib/_colorize.py": 1.0,
+        "Lib/_pyrepl/types.py": 0.0,
+        "Lib/calendar.py": 0.6666666666666666,
+        "Lib/concurrent/futures/__init__.py": 0.6666666666666666,
+        "Lib/fnmatch.py": 1.0,
+        "Lib/profiling/sampling/collector.py": 0.0,
+        "Lib/contextvars.py": 1.0,
+        "Lib/ctypes/__init__.py": 0.0,
+        "Lib/importlib/machinery.py": 0.6666666666666666,
+        "Lib/logging/__init__.py": 0.0,
+        "Lib/pickle.py": 0.0,
+        "Lib/selectors.py": 0.3333333333333333,
+        "Lib/textwrap.py": 0.0,
+        "Lib/asyncio/log.py": 1.0,
+        "Lib/email/message.py": 1.0,
+        "Lib/getopt.py": 1.0,
+        "Lib/json/__init__.py": 0.6666666666666666,
+        "Lib/reprlib.py": 0.3333333333333333
+      }
+    },
+    "B_longI_strict": {
+      "hed": 0.0,
+      "dang": 0.41,
+      "rec": 0.191,
+      "_per": {
+        "Lib/dataclasses.py": 0.0,
+        "Lib/signal.py": 0.0,
+        "Lib/urllib/parse.py": 0.0,
+        "Lib/tkinter/ttk.py": 0.0,
+        "Lib/enum.py": 0.0,
+        "Lib/inspect.py": 0.0,
+        "Lib/abc.py": 0.0,
+        "Lib/idlelib/config.py": 0.0,
+        "Lib/argparse.py": 0.0,
+        "Lib/struct.py": 0.0,
+        "Lib/subprocess.py": 0.0,
+        "Lib/__future__.py": 0.0,
+        "Lib/weakref.py": 0.0
+      }
+    },
+    "B_longI_humble": {
+      "hed": 0.513,
+      "dang": 0.436,
+      "rec": 0.353,
+      "_per": {
+        "Lib/dataclasses.py": 0.3333333333333333,
+        "Lib/signal.py": 0.6666666666666666,
+        "Lib/urllib/parse.py": 0.0,
+        "Lib/tkinter/ttk.py": 0.0,
+        "Lib/enum.py": 1.0,
+        "Lib/inspect.py": 0.6666666666666666,
+        "Lib/abc.py": 0.3333333333333333,
+        "Lib/idlelib/config.py": 0.0,
+        "Lib/argparse.py": 1.0,
+        "Lib/struct.py": 0.6666666666666666,
+        "Lib/subprocess.py": 0.0,
+        "Lib/__future__.py": 1.0,
+        "Lib/weakref.py": 1.0
+      }
+    }
+  }
+}

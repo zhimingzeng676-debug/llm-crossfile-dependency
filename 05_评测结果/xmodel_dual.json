@@ -1,0 +1,44 @@
+{
+ "qwen14b": {
+  "baseline": {
+   "det": 0.2873,
+   "judge": 0.1772
+  },
+  "full": {
+   "det": 0.885,
+   "judge": 0.962
+  },
+  "pecot": {
+   "det": 0.94,
+   "judge": 0.9629
+  }
+ },
+ "intern7b": {
+  "baseline": {
+   "det": 0.3123,
+   "judge": 0.276
+  },
+  "full": {
+   "det": 0.8851,
+   "judge": 0.9035
+  },
+  "pecot": {
+   "det": 0.8483,
+   "judge": 0.8795
+  }
+ },
+ "coder14b": {
+  "baseline": {
+   "det": 0.1657,
+   "judge": 0.2121
+  },
+  "full": {
+   "det": 0.9268,
+   "judge": 0.9584
+  },
+  "pecot": {
+   "det": 0.9643,
+   "judge": 0.9852
+  }
+ }
+}

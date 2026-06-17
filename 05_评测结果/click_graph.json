@@ -1,0 +1,9690 @@
+{
+  "functions": [
+    {
+      "name": "__getattr__",
+      "file": "__init__.py",
+      "start_line": 77,
+      "end_line": 126,
+      "calls": [
+        "warn",
+        "version",
+        "AttributeError"
+      ]
+    },
+    {
+      "name": "_make_text_stream",
+      "file": "_compat.py",
+      "start_line": 20,
+      "end_line": 38,
+      "calls": [
+        "get_best_encoding",
+        "_NonClosingTextIOWrapper"
+      ]
+    },
+    {
+      "name": "is_ascii_encoding",
+      "file": "_compat.py",
+      "start_line": 41,
+      "end_line": 46,
+      "calls": [
+        "lookup"
+      ]
+    },
+    {
+      "name": "get_best_encoding",
+      "file": "_compat.py",
+      "start_line": 49,
+      "end_line": 54,
+      "calls": [
+        "getattr",
+        "getdefaultencoding",
+        "is_ascii_encoding"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "_compat.py",
+      "start_line": 58,
+      "end_line": 70,
+      "calls": [
+        "cast",
+        "_FixupStream",
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "__del__",
+      "file": "_compat.py",
+      "start_line": 72,
+      "end_line": 76,
+      "calls": [
+        "detach"
+      ]
+    },
+    {
+      "name": "isatty",
+      "file": "_compat.py",
+      "start_line": 78,
+      "end_line": 80,
+      "calls": [
+        "isatty"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "_compat.py",
+      "start_line": 93,
+      "end_line": 101,
+      "calls": []
+    },
+    {
+      "name": "__getattr__",
+      "file": "_compat.py",
+      "start_line": 103,
+      "end_line": 104,
+      "calls": [
+        "getattr"
+      ]
+    },
+    {
+      "name": "read1",
+      "file": "_compat.py",
+      "start_line": 106,
+      "end_line": 112,
+      "calls": [
+        "getattr",
+        "cast",
+        "f",
+        "read"
+      ]
+    },
+    {
+      "name": "readable",
+      "file": "_compat.py",
+      "start_line": 114,
+      "end_line": 124,
+      "calls": [
+        "getattr",
+        "cast",
+        "x",
+        "read"
+      ]
+    },
+    {
+      "name": "writable",
+      "file": "_compat.py",
+      "start_line": 126,
+      "end_line": 139,
+      "calls": [
+        "getattr",
+        "cast",
+        "x",
+        "write"
+      ]
+    },
+    {
+      "name": "seekable",
+      "file": "_compat.py",
+      "start_line": 141,
+      "end_line": 149,
+      "calls": [
+        "getattr",
+        "cast",
+        "x",
+        "seek",
+        "tell"
+      ]
+    },
+    {
+      "name": "_is_binary_reader",
+      "file": "_compat.py",
+      "start_line": 152,
+      "end_line": 158,
+      "calls": [
+        "isinstance",
+        "read"
+      ]
+    },
+    {
+      "name": "_is_binary_writer",
+      "file": "_compat.py",
+      "start_line": 161,
+      "end_line": 171,
+      "calls": [
+        "write"
+      ]
+    },
+    {
+      "name": "_find_binary_reader",
+      "file": "_compat.py",
+      "start_line": 174,
+      "end_line": 189,
+      "calls": [
+        "_is_binary_reader",
+        "cast",
+        "getattr"
+      ]
+    },
+    {
+      "name": "_find_binary_writer",
+      "file": "_compat.py",
+      "start_line": 192,
+      "end_line": 207,
+      "calls": [
+        "_is_binary_writer",
+        "cast",
+        "getattr"
+      ]
+    },
+    {
+      "name": "_stream_is_misconfigured",
+      "file": "_compat.py",
+      "start_line": 210,
+      "end_line": 216,
+      "calls": [
+        "is_ascii_encoding",
+        "getattr"
+      ]
+    },
+    {
+      "name": "_is_compat_stream_attr",
+      "file": "_compat.py",
+      "start_line": 219,
+      "end_line": 225,
+      "calls": [
+        "getattr"
+      ]
+    },
+    {
+      "name": "_is_compatible_text_stream",
+      "file": "_compat.py",
+      "start_line": 228,
+      "end_line": 236,
+      "calls": [
+        "_is_compat_stream_attr"
+      ]
+    },
+    {
+      "name": "_force_correct_text_stream",
+      "file": "_compat.py",
+      "start_line": 239,
+      "end_line": 282,
+      "calls": [
+        "is_binary",
+        "cast",
+        "_is_compatible_text_stream",
+        "_stream_is_misconfigured",
+        "find_binary",
+        "_make_text_stream"
+      ]
+    },
+    {
+      "name": "_force_correct_text_reader",
+      "file": "_compat.py",
+      "start_line": 285,
+      "end_line": 298,
+      "calls": [
+        "_force_correct_text_stream"
+      ]
+    },
+    {
+      "name": "_force_correct_text_writer",
+      "file": "_compat.py",
+      "start_line": 301,
+      "end_line": 314,
+      "calls": [
+        "_force_correct_text_stream"
+      ]
+    },
+    {
+      "name": "get_binary_stdin",
+      "file": "_compat.py",
+      "start_line": 317,
+      "end_line": 321,
+      "calls": [
+        "_find_binary_reader",
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "get_binary_stdout",
+      "file": "_compat.py",
+      "start_line": 324,
+      "end_line": 328,
+      "calls": [
+        "_find_binary_writer",
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "get_binary_stderr",
+      "file": "_compat.py",
+      "start_line": 331,
+      "end_line": 335,
+      "calls": [
+        "_find_binary_writer",
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "get_text_stdin",
+      "file": "_compat.py",
+      "start_line": 338,
+      "end_line": 342,
+      "calls": [
+        "_get_windows_console_stream",
+        "_force_correct_text_reader"
+      ]
+    },
+    {
+      "name": "get_text_stdout",
+      "file": "_compat.py",
+      "start_line": 345,
+      "end_line": 349,
+      "calls": [
+        "_get_windows_console_stream",
+        "_force_correct_text_writer"
+      ]
+    },
+    {
+      "name": "get_text_stderr",
+      "file": "_compat.py",
+      "start_line": 352,
+      "end_line": 356,
+      "calls": [
+        "_get_windows_console_stream",
+        "_force_correct_text_writer"
+      ]
+    },
+    {
+      "name": "_wrap_io_open",
+      "file": "_compat.py",
+      "start_line": 359,
+      "end_line": 369,
+      "calls": [
+        "open"
+      ]
+    },
+    {
+      "name": "open_stream",
+      "file": "_compat.py",
+      "start_line": 372,
+      "end_line": 450,
+      "calls": [
+        "fspath",
+        "fsdecode",
+        "any",
+        "get_binary_stdout",
+        "get_text_stdout",
+        "get_binary_stdin",
+        "get_text_stdin",
+        "_wrap_io_open",
+        "ValueError",
+        "stat",
+        "getattr",
+        "join",
+        "dirname",
+        "randrange",
+        "open",
+        "isdir",
+        "access",
+        "chmod",
+        "_AtomicFile",
+        "realpath",
+        "cast"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "_compat.py",
+      "start_line": 454,
+      "end_line": 458,
+      "calls": []
+    },
+    {
+      "name": "name",
+      "file": "_compat.py",
+      "start_line": 461,
+      "end_line": 462,
+      "calls": []
+    },
+    {
+      "name": "close",
+      "file": "_compat.py",
+      "start_line": 464,
+      "end_line": 469,
+      "calls": [
+        "close",
+        "replace"
+      ]
+    },
+    {
+      "name": "__getattr__",
+      "file": "_compat.py",
+      "start_line": 471,
+      "end_line": 472,
+      "calls": [
+        "getattr"
+      ]
+    },
+    {
+      "name": "__enter__",
+      "file": "_compat.py",
+      "start_line": 474,
+      "end_line": 475,
+      "calls": []
+    },
+    {
+      "name": "__exit__",
+      "file": "_compat.py",
+      "start_line": 477,
+      "end_line": 483,
+      "calls": [
+        "close"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "_compat.py",
+      "start_line": 485,
+      "end_line": 486,
+      "calls": [
+        "repr"
+      ]
+    },
+    {
+      "name": "strip_ansi",
+      "file": "_compat.py",
+      "start_line": 489,
+      "end_line": 490,
+      "calls": [
+        "sub"
+      ]
+    },
+    {
+      "name": "_is_jupyter_kernel_output",
+      "file": "_compat.py",
+      "start_line": 493,
+      "end_line": 497,
+      "calls": [
+        "isinstance",
+        "startswith"
+      ]
+    },
+    {
+      "name": "should_strip_ansi",
+      "file": "_compat.py",
+      "start_line": 500,
+      "end_line": 511,
+      "calls": [
+        "hasattr",
+        "isatty",
+        "_is_jupyter_kernel_output"
+      ]
+    },
+    {
+      "name": "_get_argv_encoding",
+      "file": "_compat.py",
+      "start_line": 520,
+      "end_line": 523,
+      "calls": [
+        "getpreferredencoding"
+      ]
+    },
+    {
+      "name": "auto_wrap_for_ansi",
+      "file": "_compat.py",
+      "start_line": 527,
+      "end_line": 560,
+      "calls": [
+        "get",
+        "should_strip_ansi",
+        "AnsiToWin32",
+        "cast",
+        "_write",
+        "reset_all"
+      ]
+    },
+    {
+      "name": "_safe_write",
+      "file": "_compat.py",
+      "start_line": 546,
+      "end_line": 551,
+      "calls": [
+        "_write",
+        "reset_all"
+      ]
+    },
+    {
+      "name": "_get_argv_encoding",
+      "file": "_compat.py",
+      "start_line": 564,
+      "end_line": 565,
+      "calls": [
+        "getattr",
+        "getfilesystemencoding"
+      ]
+    },
+    {
+      "name": "_get_windows_console_stream",
+      "file": "_compat.py",
+      "start_line": 567,
+      "end_line": 570,
+      "calls": []
+    },
+    {
+      "name": "term_len",
+      "file": "_compat.py",
+      "start_line": 573,
+      "end_line": 574,
+      "calls": [
+        "len",
+        "strip_ansi"
+      ]
+    },
+    {
+      "name": "isatty",
+      "file": "_compat.py",
+      "start_line": 577,
+      "end_line": 581,
+      "calls": [
+        "isatty"
+      ]
+    },
+    {
+      "name": "_make_cached_stream_func",
+      "file": "_compat.py",
+      "start_line": 584,
+      "end_line": 609,
+      "calls": [
+        "WeakKeyDictionary",
+        "src_func",
+        "get",
+        "wrapper_func"
+      ]
+    },
+    {
+      "name": "func",
+      "file": "_compat.py",
+      "start_line": 590,
+      "end_line": 607,
+      "calls": [
+        "src_func",
+        "get",
+        "wrapper_func"
+      ]
+    },
+    {
+      "name": "_has_binary_buffer",
+      "file": "_termui_impl.py",
+      "start_line": 40,
+      "end_line": 45,
+      "calls": [
+        "getattr"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "_termui_impl.py",
+      "start_line": 57,
+      "end_line": 126,
+      "calls": [
+        "_default_text_stdout",
+        "StringIO",
+        "length_hint",
+        "TypeError",
+        "cast",
+        "range",
+        "iter",
+        "time",
+        "isatty"
+      ]
+    },
+    {
+      "name": "__enter__",
+      "file": "_termui_impl.py",
+      "start_line": 128,
+      "end_line": 131,
+      "calls": [
+        "render_progress"
+      ]
+    },
+    {
+      "name": "__exit__",
+      "file": "_termui_impl.py",
+      "start_line": 133,
+      "end_line": 139,
+      "calls": [
+        "render_finish"
+      ]
+    },
+    {
+      "name": "__iter__",
+      "file": "_termui_impl.py",
+      "start_line": 141,
+      "end_line": 145,
+      "calls": [
+        "RuntimeError",
+        "render_progress",
+        "generator"
+      ]
+    },
+    {
+      "name": "__next__",
+      "file": "_termui_impl.py",
+      "start_line": 147,
+      "end_line": 153,
+      "calls": [
+        "next",
+        "iter"
+      ]
+    },
+    {
+      "name": "render_finish",
+      "file": "_termui_impl.py",
+      "start_line": 155,
+      "end_line": 159,
+      "calls": [
+        "write",
+        "flush"
+      ]
+    },
+    {
+      "name": "pct",
+      "file": "_termui_impl.py",
+      "start_line": 162,
+      "end_line": 165,
+      "calls": [
+        "min",
+        "float"
+      ]
+    },
+    {
+      "name": "time_per_iteration",
+      "file": "_termui_impl.py",
+      "start_line": 168,
+      "end_line": 171,
+      "calls": [
+        "sum",
+        "float",
+        "len"
+      ]
+    },
+    {
+      "name": "eta",
+      "file": "_termui_impl.py",
+      "start_line": 174,
+      "end_line": 177,
+      "calls": []
+    },
+    {
+      "name": "format_eta",
+      "file": "_termui_impl.py",
+      "start_line": 179,
+      "end_line": 198,
+      "calls": [
+        "int",
+        "format",
+        "_"
+      ]
+    },
+    {
+      "name": "format_pos",
+      "file": "_termui_impl.py",
+      "start_line": 200,
+      "end_line": 204,
+      "calls": [
+        "str"
+      ]
+    },
+    {
+      "name": "format_pct",
+      "file": "_termui_impl.py",
+      "start_line": 206,
+      "end_line": 207,
+      "calls": [
+        "int"
+      ]
+    },
+    {
+      "name": "format_bar",
+      "file": "_termui_impl.py",
+      "start_line": 209,
+      "end_line": 226,
+      "calls": [
+        "int",
+        "list",
+        "cos",
+        "join"
+      ]
+    },
+    {
+      "name": "format_progress_line",
+      "file": "_termui_impl.py",
+      "start_line": 228,
+      "end_line": 253,
+      "calls": [
+        "append",
+        "format_pos",
+        "format_pct",
+        "format_eta",
+        "item_show_func",
+        "rstrip",
+        "format_bar",
+        "join"
+      ]
+    },
+    {
+      "name": "render_progress",
+      "file": "_termui_impl.py",
+      "start_line": 255,
+      "end_line": 299,
+      "calls": [
+        "echo",
+        "term_len",
+        "format_progress_line",
+        "max",
+        "get_terminal_size",
+        "append",
+        "join",
+        "flush"
+      ]
+    },
+    {
+      "name": "make_step",
+      "file": "_termui_impl.py",
+      "start_line": 301,
+      "end_line": 321,
+      "calls": [
+        "time"
+      ]
+    },
+    {
+      "name": "update",
+      "file": "_termui_impl.py",
+      "start_line": 323,
+      "end_line": 347,
+      "calls": [
+        "make_step",
+        "render_progress"
+      ]
+    },
+    {
+      "name": "finish",
+      "file": "_termui_impl.py",
+      "start_line": 349,
+      "end_line": 352,
+      "calls": []
+    },
+    {
+      "name": "generator",
+      "file": "_termui_impl.py",
+      "start_line": 354,
+      "end_line": 385,
+      "calls": [
+        "RuntimeError",
+        "render_progress",
+        "update",
+        "finish"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "_termui_impl.py",
+      "start_line": 389,
+      "end_line": 391,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "write",
+      "file": "_termui_impl.py",
+      "start_line": 393,
+      "end_line": 396,
+      "calls": [
+        "strip_ansi",
+        "write",
+        "super"
+      ]
+    },
+    {
+      "name": "_pager_contextmanager",
+      "file": "_termui_impl.py",
+      "start_line": 399,
+      "end_line": 427,
+      "calls": [
+        "_default_text_stdout",
+        "StringIO",
+        "isatty",
+        "_nullpager",
+        "split",
+        "get",
+        "_tempfilepager",
+        "_pipepager",
+        "startswith"
+      ]
+    },
+    {
+      "name": "get_pager_file",
+      "file": "_termui_impl.py",
+      "start_line": 431,
+      "end_line": 451,
+      "calls": [
+        "_pager_contextmanager",
+        "_has_binary_buffer",
+        "MaybeStripAnsi",
+        "isinstance",
+        "flush"
+      ]
+    },
+    {
+      "name": "_pipepager",
+      "file": "_termui_impl.py",
+      "start_line": 455,
+      "end_line": 555,
+      "calls": [
+        "_default_text_stdout",
+        "StringIO",
+        "which",
+        "absolute",
+        "Path",
+        "dict",
+        "get",
+        "join",
+        "Popen",
+        "str",
+        "cast",
+        "get_best_encoding",
+        "terminate",
+        "close",
+        "wait"
+      ]
+    },
+    {
+      "name": "_tempfilepager",
+      "file": "_termui_impl.py",
+      "start_line": 559,
+      "end_line": 606,
+      "calls": [
+        "_default_text_stdout",
+        "StringIO",
+        "which",
+        "absolute",
+        "Path",
+        "get_best_encoding",
+        "NamedTemporaryFile",
+        "cast",
+        "flush",
+        "close",
+        "call",
+        "str",
+        "unlink"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "_termui_impl.py",
+      "start_line": 610,
+      "end_line": 611,
+      "calls": []
+    },
+    {
+      "name": "__getattr__",
+      "file": "_termui_impl.py",
+      "start_line": 613,
+      "end_line": 614,
+      "calls": [
+        "getattr"
+      ]
+    },
+    {
+      "name": "buffer",
+      "file": "_termui_impl.py",
+      "start_line": 617,
+      "end_line": 618,
+      "calls": [
+        "_SkipClose"
+      ]
+    },
+    {
+      "name": "close",
+      "file": "_termui_impl.py",
+      "start_line": 620,
+      "end_line": 621,
+      "calls": []
+    },
+    {
+      "name": "_nullpager",
+      "file": "_termui_impl.py",
+      "start_line": 625,
+      "end_line": 637,
+      "calls": [
+        "get_best_encoding",
+        "_SkipClose"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "_termui_impl.py",
+      "start_line": 641,
+      "end_line": 651,
+      "calls": []
+    },
+    {
+      "name": "get_editor",
+      "file": "_termui_impl.py",
+      "start_line": 653,
+      "end_line": 668,
+      "calls": [
+        "get",
+        "which"
+      ]
+    },
+    {
+      "name": "edit_files",
+      "file": "_termui_impl.py",
+      "start_line": 670,
+      "end_line": 698,
+      "calls": [
+        "get_editor",
+        "copy",
+        "update",
+        "Popen",
+        "split",
+        "list",
+        "wait",
+        "ClickException",
+        "format",
+        "_"
+      ]
+    },
+    {
+      "name": "edit",
+      "file": "_termui_impl.py",
+      "start_line": 701,
+      "end_line": 701,
+      "calls": []
+    },
+    {
+      "name": "edit",
+      "file": "_termui_impl.py",
+      "start_line": 706,
+      "end_line": 706,
+      "calls": []
+    },
+    {
+      "name": "edit",
+      "file": "_termui_impl.py",
+      "start_line": 708,
+      "end_line": 753,
+      "calls": [
+        "isinstance",
+        "endswith",
+        "encode",
+        "replace",
+        "mkstemp",
+        "fdopen",
+        "write",
+        "utime",
+        "getatime",
+        "getmtime",
+        "edit_files",
+        "open",
+        "read",
+        "decode",
+        "unlink"
+      ]
+    },
+    {
+      "name": "open_url",
+      "file": "_termui_impl.py",
+      "start_line": 756,
+      "end_line": 823,
+      "calls": [
+        "startswith",
+        "unquote",
+        "append",
+        "_unquote_file",
+        "open",
+        "wait",
+        "Popen",
+        "close",
+        "call",
+        "startfile",
+        "dirname"
+      ]
+    },
+    {
+      "name": "_unquote_file",
+      "file": "_termui_impl.py",
+      "start_line": 759,
+      "end_line": 765,
+      "calls": [
+        "startswith",
+        "unquote"
+      ]
+    },
+    {
+      "name": "_translate_ch_to_exc",
+      "file": "_termui_impl.py",
+      "start_line": 826,
+      "end_line": 834,
+      "calls": [
+        "KeyboardInterrupt",
+        "EOFError"
+      ]
+    },
+    {
+      "name": "raw_terminal",
+      "file": "_termui_impl.py",
+      "start_line": 841,
+      "end_line": 842,
+      "calls": []
+    },
+    {
+      "name": "getchar",
+      "file": "_termui_impl.py",
+      "start_line": 844,
+      "end_line": 888,
+      "calls": [
+        "cast",
+        "func",
+        "_translate_ch_to_exc"
+      ]
+    },
+    {
+      "name": "raw_terminal",
+      "file": "_termui_impl.py",
+      "start_line": 895,
+      "end_line": 919,
+      "calls": [
+        "isatty",
+        "open",
+        "fileno",
+        "tcgetattr",
+        "setraw",
+        "tcsetattr",
+        "flush",
+        "close"
+      ]
+    },
+    {
+      "name": "getchar",
+      "file": "_termui_impl.py",
+      "start_line": 921,
+      "end_line": 929,
+      "calls": [
+        "raw_terminal",
+        "decode",
+        "read",
+        "get_best_encoding",
+        "isatty",
+        "write",
+        "_translate_ch_to_exc"
+      ]
+    },
+    {
+      "name": "_truncate_visible",
+      "file": "_textwrap.py",
+      "start_line": 11,
+      "end_line": 35,
+      "calls": [
+        "len",
+        "match",
+        "end"
+      ]
+    },
+    {
+      "name": "_handle_long_word",
+      "file": "_textwrap.py",
+      "start_line": 48,
+      "end_line": 64,
+      "calls": [
+        "max",
+        "_truncate_visible",
+        "len",
+        "append",
+        "pop"
+      ]
+    },
+    {
+      "name": "_wrap_chunks",
+      "file": "_textwrap.py",
+      "start_line": 66,
+      "end_line": 162,
+      "calls": [
+        "ValueError",
+        "term_len",
+        "lstrip",
+        "reverse",
+        "strip",
+        "append",
+        "pop",
+        "_handle_long_word",
+        "sum",
+        "map",
+        "len",
+        "join",
+        "rstrip"
+      ]
+    },
+    {
+      "name": "extra_indent",
+      "file": "_textwrap.py",
+      "start_line": 165,
+      "end_line": 175,
+      "calls": []
+    },
+    {
+      "name": "indent_only",
+      "file": "_textwrap.py",
+      "start_line": 177,
+      "end_line": 188,
+      "calls": [
+        "enumerate",
+        "splitlines",
+        "append",
+        "join"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "_utils.py",
+      "start_line": 18,
+      "end_line": 19,
+      "calls": []
+    },
+    {
+      "name": "get_buffer",
+      "file": "_winconsole.py",
+      "start_line": 106,
+      "end_line": 116,
+      "calls": [
+        "Py_buffer",
+        "PyObject_GetBuffer",
+        "py_object",
+        "byref",
+        "from_address",
+        "PyBuffer_Release"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "_winconsole.py",
+      "start_line": 120,
+      "end_line": 121,
+      "calls": []
+    },
+    {
+      "name": "isatty",
+      "file": "_winconsole.py",
+      "start_line": 123,
+      "end_line": 125,
+      "calls": [
+        "isatty",
+        "super"
+      ]
+    },
+    {
+      "name": "readable",
+      "file": "_winconsole.py",
+      "start_line": 129,
+      "end_line": 130,
+      "calls": []
+    },
+    {
+      "name": "readinto",
+      "file": "_winconsole.py",
+      "start_line": 132,
+      "end_line": 160,
+      "calls": [
+        "len",
+        "ValueError",
+        "get_buffer",
+        "c_ulong",
+        "ReadConsoleW",
+        "HANDLE",
+        "byref",
+        "GetLastError",
+        "sleep",
+        "OSError",
+        "format",
+        "_"
+      ]
+    },
+    {
+      "name": "writable",
+      "file": "_winconsole.py",
+      "start_line": 164,
+      "end_line": 165,
+      "calls": []
+    },
+    {
+      "name": "_get_error_message",
+      "file": "_winconsole.py",
+      "start_line": 168,
+      "end_line": 173,
+      "calls": [
+        "format",
+        "_"
+      ]
+    },
+    {
+      "name": "write",
+      "file": "_winconsole.py",
+      "start_line": 175,
+      "end_line": 192,
+      "calls": [
+        "len",
+        "get_buffer",
+        "min",
+        "c_ulong",
+        "WriteConsoleW",
+        "HANDLE",
+        "byref",
+        "OSError",
+        "_get_error_message",
+        "GetLastError"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "_winconsole.py",
+      "start_line": 196,
+      "end_line": 198,
+      "calls": []
+    },
+    {
+      "name": "name",
+      "file": "_winconsole.py",
+      "start_line": 201,
+      "end_line": 202,
+      "calls": []
+    },
+    {
+      "name": "write",
+      "file": "_winconsole.py",
+      "start_line": 204,
+      "end_line": 211,
+      "calls": [
+        "isinstance",
+        "write",
+        "flush"
+      ]
+    },
+    {
+      "name": "writelines",
+      "file": "_winconsole.py",
+      "start_line": 213,
+      "end_line": 215,
+      "calls": [
+        "write"
+      ]
+    },
+    {
+      "name": "__getattr__",
+      "file": "_winconsole.py",
+      "start_line": 217,
+      "end_line": 218,
+      "calls": [
+        "getattr"
+      ]
+    },
+    {
+      "name": "isatty",
+      "file": "_winconsole.py",
+      "start_line": 220,
+      "end_line": 221,
+      "calls": [
+        "isatty"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "_winconsole.py",
+      "start_line": 223,
+      "end_line": 224,
+      "calls": []
+    },
+    {
+      "name": "_get_text_stdin",
+      "file": "_winconsole.py",
+      "start_line": 227,
+      "end_line": 234,
+      "calls": [
+        "_NonClosingTextIOWrapper",
+        "BufferedReader",
+        "_WindowsConsoleReader",
+        "cast",
+        "ConsoleStream"
+      ]
+    },
+    {
+      "name": "_get_text_stdout",
+      "file": "_winconsole.py",
+      "start_line": 237,
+      "end_line": 244,
+      "calls": [
+        "_NonClosingTextIOWrapper",
+        "BufferedWriter",
+        "_WindowsConsoleWriter",
+        "cast",
+        "ConsoleStream"
+      ]
+    },
+    {
+      "name": "_get_text_stderr",
+      "file": "_winconsole.py",
+      "start_line": 247,
+      "end_line": 254,
+      "calls": [
+        "_NonClosingTextIOWrapper",
+        "BufferedWriter",
+        "_WindowsConsoleWriter",
+        "cast",
+        "ConsoleStream"
+      ]
+    },
+    {
+      "name": "_is_console",
+      "file": "_winconsole.py",
+      "start_line": 264,
+      "end_line": 274,
+      "calls": [
+        "hasattr",
+        "fileno",
+        "get_osfhandle",
+        "bool",
+        "GetConsoleMode",
+        "byref",
+        "DWORD"
+      ]
+    },
+    {
+      "name": "_get_windows_console_stream",
+      "file": "_winconsole.py",
+      "start_line": 277,
+      "end_line": 297,
+      "calls": [
+        "_is_console",
+        "get",
+        "fileno",
+        "getattr",
+        "func"
+      ]
+    },
+    {
+      "name": "_complete_visible_commands",
+      "file": "core.py",
+      "start_line": 57,
+      "end_line": 73,
+      "calls": [
+        "cast",
+        "list_commands",
+        "startswith",
+        "get_command"
+      ]
+    },
+    {
+      "name": "_check_nested_chain",
+      "file": "core.py",
+      "start_line": 76,
+      "end_line": 93,
+      "calls": [
+        "isinstance",
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "_format_deprecated_label",
+      "file": "core.py",
+      "start_line": 96,
+      "end_line": 101,
+      "calls": [
+        "upper",
+        "_",
+        "isinstance"
+      ]
+    },
+    {
+      "name": "_format_deprecated_suffix",
+      "file": "core.py",
+      "start_line": 104,
+      "end_line": 110,
+      "calls": [
+        "isinstance"
+      ]
+    },
+    {
+      "name": "batch",
+      "file": "core.py",
+      "start_line": 113,
+      "end_line": 114,
+      "calls": [
+        "list",
+        "zip",
+        "repeat",
+        "iter"
+      ]
+    },
+    {
+      "name": "augment_usage_errors",
+      "file": "core.py",
+      "start_line": 118,
+      "end_line": 133,
+      "calls": []
+    },
+    {
+      "name": "iter_params_for_processing",
+      "file": "core.py",
+      "start_line": 136,
+      "end_line": 160,
+      "calls": [
+        "index",
+        "float",
+        "sorted"
+      ]
+    },
+    {
+      "name": "sort_key",
+      "file": "core.py",
+      "start_line": 152,
+      "end_line": 158,
+      "calls": [
+        "index",
+        "float"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "core.py",
+      "start_line": 306,
+      "end_line": 480,
+      "calls": [
+        "set",
+        "getattr",
+        "get",
+        "upper",
+        "replace",
+        "ExitStack"
+      ]
+    },
+    {
+      "name": "protected_args",
+      "file": "core.py",
+      "start_line": 483,
+      "end_line": 492,
+      "calls": [
+        "warn"
+      ]
+    },
+    {
+      "name": "to_info_dict",
+      "file": "core.py",
+      "start_line": 494,
+      "end_line": 513,
+      "calls": [
+        "to_info_dict"
+      ]
+    },
+    {
+      "name": "__enter__",
+      "file": "core.py",
+      "start_line": 515,
+      "end_line": 518,
+      "calls": [
+        "push_context"
+      ]
+    },
+    {
+      "name": "__exit__",
+      "file": "core.py",
+      "start_line": 520,
+      "end_line": 532,
+      "calls": [
+        "_close_with_exception_info",
+        "pop_context"
+      ]
+    },
+    {
+      "name": "scope",
+      "file": "core.py",
+      "start_line": 535,
+      "end_line": 570,
+      "calls": []
+    },
+    {
+      "name": "meta",
+      "file": "core.py",
+      "start_line": 573,
+      "end_line": 598,
+      "calls": []
+    },
+    {
+      "name": "make_formatter",
+      "file": "core.py",
+      "start_line": 600,
+      "end_line": 612,
+      "calls": [
+        "formatter_class"
+      ]
+    },
+    {
+      "name": "with_resource",
+      "file": "core.py",
+      "start_line": 614,
+      "end_line": 641,
+      "calls": [
+        "enter_context"
+      ]
+    },
+    {
+      "name": "call_on_close",
+      "file": "core.py",
+      "start_line": 643,
+      "end_line": 653,
+      "calls": [
+        "callback"
+      ]
+    },
+    {
+      "name": "close",
+      "file": "core.py",
+      "start_line": 655,
+      "end_line": 660,
+      "calls": [
+        "_close_with_exception_info"
+      ]
+    },
+    {
+      "name": "_close_with_exception_info",
+      "file": "core.py",
+      "start_line": 662,
+      "end_line": 678,
+      "calls": [
+        "__exit__",
+        "ExitStack"
+      ]
+    },
+    {
+      "name": "command_path",
+      "file": "core.py",
+      "start_line": 681,
+      "end_line": 697,
+      "calls": [
+        "isinstance",
+        "get_params",
+        "extend",
+        "get_usage_pieces",
+        "join",
+        "lstrip"
+      ]
+    },
+    {
+      "name": "find_root",
+      "file": "core.py",
+      "start_line": 699,
+      "end_line": 704,
+      "calls": []
+    },
+    {
+      "name": "find_object",
+      "file": "core.py",
+      "start_line": 706,
+      "end_line": 716,
+      "calls": [
+        "isinstance"
+      ]
+    },
+    {
+      "name": "ensure_object",
+      "file": "core.py",
+      "start_line": 718,
+      "end_line": 725,
+      "calls": [
+        "find_object",
+        "object_type"
+      ]
+    },
+    {
+      "name": "_default_map_has",
+      "file": "core.py",
+      "start_line": 727,
+      "end_line": 739,
+      "calls": []
+    },
+    {
+      "name": "lookup_default",
+      "file": "core.py",
+      "start_line": 742,
+      "end_line": 744,
+      "calls": []
+    },
+    {
+      "name": "lookup_default",
+      "file": "core.py",
+      "start_line": 747,
+      "end_line": 749,
+      "calls": []
+    },
+    {
+      "name": "lookup_default",
+      "file": "core.py",
+      "start_line": 751,
+      "end_line": 771,
+      "calls": [
+        "_default_map_has",
+        "callable",
+        "value"
+      ]
+    },
+    {
+      "name": "fail",
+      "file": "core.py",
+      "start_line": 773,
+      "end_line": 779,
+      "calls": [
+        "UsageError"
+      ]
+    },
+    {
+      "name": "abort",
+      "file": "core.py",
+      "start_line": 781,
+      "end_line": 783,
+      "calls": [
+        "Abort"
+      ]
+    },
+    {
+      "name": "exit",
+      "file": "core.py",
+      "start_line": 785,
+      "end_line": 793,
+      "calls": [
+        "close",
+        "Exit"
+      ]
+    },
+    {
+      "name": "get_usage",
+      "file": "core.py",
+      "start_line": 795,
+      "end_line": 799,
+      "calls": [
+        "get_usage"
+      ]
+    },
+    {
+      "name": "get_help",
+      "file": "core.py",
+      "start_line": 801,
+      "end_line": 805,
+      "calls": [
+        "get_help"
+      ]
+    },
+    {
+      "name": "_make_sub_context",
+      "file": "core.py",
+      "start_line": 807,
+      "end_line": 813,
+      "calls": [
+        "type"
+      ]
+    },
+    {
+      "name": "invoke",
+      "file": "core.py",
+      "start_line": 816,
+      "end_line": 818,
+      "calls": []
+    },
+    {
+      "name": "invoke",
+      "file": "core.py",
+      "start_line": 821,
+      "end_line": 821,
+      "calls": []
+    },
+    {
+      "name": "invoke",
+      "file": "core.py",
+      "start_line": 823,
+      "end_line": 877,
+      "calls": [
+        "isinstance",
+        "TypeError",
+        "cast",
+        "_make_sub_context",
+        "get_default",
+        "type_cast_value",
+        "update",
+        "augment_usage_errors",
+        "callback"
+      ]
+    },
+    {
+      "name": "forward",
+      "file": "core.py",
+      "start_line": 879,
+      "end_line": 896,
+      "calls": [
+        "isinstance",
+        "TypeError",
+        "invoke"
+      ]
+    },
+    {
+      "name": "set_parameter_source",
+      "file": "core.py",
+      "start_line": 898,
+      "end_line": 905,
+      "calls": []
+    },
+    {
+      "name": "get_parameter_source",
+      "file": "core.py",
+      "start_line": 907,
+      "end_line": 923,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "core.py",
+      "start_line": 988,
+      "end_line": 1030,
+      "calls": []
+    },
+    {
+      "name": "to_info_dict",
+      "file": "core.py",
+      "start_line": 1032,
+      "end_line": 1041,
+      "calls": [
+        "to_info_dict",
+        "get_params"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "core.py",
+      "start_line": 1043,
+      "end_line": 1044,
+      "calls": []
+    },
+    {
+      "name": "get_usage",
+      "file": "core.py",
+      "start_line": 1046,
+      "end_line": 1053,
+      "calls": [
+        "make_formatter",
+        "format_usage",
+        "rstrip",
+        "getvalue"
+      ]
+    },
+    {
+      "name": "get_params",
+      "file": "core.py",
+      "start_line": 1055,
+      "end_line": 1078,
+      "calls": [
+        "get_help_option",
+        "Counter",
+        "items",
+        "warn"
+      ]
+    },
+    {
+      "name": "format_usage",
+      "file": "core.py",
+      "start_line": 1080,
+      "end_line": 1086,
+      "calls": [
+        "collect_usage_pieces",
+        "write_usage",
+        "join"
+      ]
+    },
+    {
+      "name": "collect_usage_pieces",
+      "file": "core.py",
+      "start_line": 1088,
+      "end_line": 1097,
+      "calls": [
+        "get_params",
+        "extend",
+        "get_usage_pieces"
+      ]
+    },
+    {
+      "name": "get_help_option_names",
+      "file": "core.py",
+      "start_line": 1099,
+      "end_line": 1105,
+      "calls": [
+        "set",
+        "difference_update",
+        "list"
+      ]
+    },
+    {
+      "name": "get_help_option",
+      "file": "core.py",
+      "start_line": 1107,
+      "end_line": 1132,
+      "calls": [
+        "get_help_option_names",
+        "help_option",
+        "pop"
+      ]
+    },
+    {
+      "name": "make_parser",
+      "file": "core.py",
+      "start_line": 1134,
+      "end_line": 1139,
+      "calls": [
+        "_OptionParser",
+        "get_params",
+        "add_to_parser"
+      ]
+    },
+    {
+      "name": "get_help",
+      "file": "core.py",
+      "start_line": 1141,
+      "end_line": 1148,
+      "calls": [
+        "make_formatter",
+        "format_help",
+        "rstrip",
+        "getvalue"
+      ]
+    },
+    {
+      "name": "get_short_help_str",
+      "file": "core.py",
+      "start_line": 1150,
+      "end_line": 1164,
+      "calls": [
+        "cleandoc",
+        "make_default_short_help",
+        "_",
+        "_format_deprecated_label",
+        "strip"
+      ]
+    },
+    {
+      "name": "format_help",
+      "file": "core.py",
+      "start_line": 1166,
+      "end_line": 1181,
+      "calls": [
+        "format_usage",
+        "format_help_text",
+        "format_options",
+        "format_epilog"
+      ]
+    },
+    {
+      "name": "format_help_text",
+      "file": "core.py",
+      "start_line": 1183,
+      "end_line": 1198,
+      "calls": [
+        "partition",
+        "cleandoc",
+        "_",
+        "_format_deprecated_label",
+        "write_paragraph",
+        "indentation",
+        "write_text"
+      ]
+    },
+    {
+      "name": "format_options",
+      "file": "core.py",
+      "start_line": 1200,
+      "end_line": 1210,
+      "calls": [
+        "get_params",
+        "get_help_record",
+        "append",
+        "section",
+        "_",
+        "write_dl"
+      ]
+    },
+    {
+      "name": "format_epilog",
+      "file": "core.py",
+      "start_line": 1212,
+      "end_line": 1219,
+      "calls": [
+        "cleandoc",
+        "write_paragraph",
+        "indentation",
+        "write_text"
+      ]
+    },
+    {
+      "name": "make_context",
+      "file": "core.py",
+      "start_line": 1221,
+      "end_line": 1256,
+      "calls": [
+        "items",
+        "context_class",
+        "scope",
+        "parse_args"
+      ]
+    },
+    {
+      "name": "parse_args",
+      "file": "core.py",
+      "start_line": 1258,
+      "end_line": 1292,
+      "calls": [
+        "NoArgsIsHelpError",
+        "make_parser",
+        "parse_args",
+        "iter_params_for_processing",
+        "get_params",
+        "handle_parse_result",
+        "items",
+        "fail",
+        "format",
+        "ngettext",
+        "len",
+        "join",
+        "map",
+        "update"
+      ]
+    },
+    {
+      "name": "invoke",
+      "file": "core.py",
+      "start_line": 1294,
+      "end_line": 1308,
+      "calls": [
+        "format",
+        "_",
+        "_format_deprecated_suffix",
+        "echo",
+        "style",
+        "invoke"
+      ]
+    },
+    {
+      "name": "shell_complete",
+      "file": "core.py",
+      "start_line": 1310,
+      "end_line": 1355,
+      "calls": [
+        "isalnum",
+        "get_params",
+        "isinstance",
+        "get_parameter_source",
+        "extend",
+        "CompletionItem",
+        "startswith",
+        "get_short_help_str",
+        "_complete_visible_commands"
+      ]
+    },
+    {
+      "name": "main",
+      "file": "core.py",
+      "start_line": 1358,
+      "end_line": 1365,
+      "calls": []
+    },
+    {
+      "name": "main",
+      "file": "core.py",
+      "start_line": 1368,
+      "end_line": 1375,
+      "calls": []
+    },
+    {
+      "name": "main",
+      "file": "core.py",
+      "start_line": 1377,
+      "end_line": 1488,
+      "calls": [
+        "_expand_args",
+        "list",
+        "_detect_program_name",
+        "_main_shell_completion",
+        "make_context",
+        "invoke",
+        "exit",
+        "echo",
+        "Abort",
+        "show",
+        "cast",
+        "PacifyFlushWrapper",
+        "_"
+      ]
+    },
+    {
+      "name": "_main_shell_completion",
+      "file": "core.py",
+      "start_line": 1490,
+      "end_line": 1520,
+      "calls": [
+        "replace",
+        "upper",
+        "get",
+        "shell_complete",
+        "exit"
+      ]
+    },
+    {
+      "name": "__call__",
+      "file": "core.py",
+      "start_line": 1522,
+      "end_line": 1524,
+      "calls": [
+        "main"
+      ]
+    },
+    {
+      "name": "__subclasscheck__",
+      "file": "core.py",
+      "start_line": 1528,
+      "end_line": 1529,
+      "calls": [
+        "issubclass"
+      ]
+    },
+    {
+      "name": "__instancecheck__",
+      "file": "core.py",
+      "start_line": 1531,
+      "end_line": 1532,
+      "calls": [
+        "isinstance"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "core.py",
+      "start_line": 1595,
+      "end_line": 1641,
+      "calls": [
+        "__init__",
+        "super",
+        "isinstance",
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "to_info_dict",
+      "file": "core.py",
+      "start_line": 1643,
+      "end_line": 1659,
+      "calls": [
+        "to_info_dict",
+        "super",
+        "list_commands",
+        "get_command",
+        "_make_sub_context",
+        "scope",
+        "update"
+      ]
+    },
+    {
+      "name": "add_command",
+      "file": "core.py",
+      "start_line": 1661,
+      "end_line": 1669,
+      "calls": [
+        "TypeError",
+        "_check_nested_chain"
+      ]
+    },
+    {
+      "name": "command",
+      "file": "core.py",
+      "start_line": 1672,
+      "end_line": 1672,
+      "calls": []
+    },
+    {
+      "name": "command",
+      "file": "core.py",
+      "start_line": 1675,
+      "end_line": 1677,
+      "calls": []
+    },
+    {
+      "name": "command",
+      "file": "core.py",
+      "start_line": 1679,
+      "end_line": 1718,
+      "calls": [
+        "callable",
+        "len",
+        "get",
+        "command",
+        "add_command",
+        "decorator"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "core.py",
+      "start_line": 1710,
+      "end_line": 1713,
+      "calls": [
+        "command",
+        "add_command"
+      ]
+    },
+    {
+      "name": "group",
+      "file": "core.py",
+      "start_line": 1721,
+      "end_line": 1721,
+      "calls": []
+    },
+    {
+      "name": "group",
+      "file": "core.py",
+      "start_line": 1724,
+      "end_line": 1726,
+      "calls": []
+    },
+    {
+      "name": "group",
+      "file": "core.py",
+      "start_line": 1728,
+      "end_line": 1770,
+      "calls": [
+        "callable",
+        "len",
+        "get",
+        "type",
+        "group",
+        "add_command",
+        "decorator"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "core.py",
+      "start_line": 1762,
+      "end_line": 1765,
+      "calls": [
+        "group",
+        "add_command"
+      ]
+    },
+    {
+      "name": "result_callback",
+      "file": "core.py",
+      "start_line": 1772,
+      "end_line": 1815,
+      "calls": [
+        "old_callback",
+        "f",
+        "update_wrapper",
+        "cast"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "core.py",
+      "start_line": 1801,
+      "end_line": 1813,
+      "calls": [
+        "old_callback",
+        "f",
+        "update_wrapper",
+        "cast"
+      ]
+    },
+    {
+      "name": "function",
+      "file": "core.py",
+      "start_line": 1808,
+      "end_line": 1810,
+      "calls": [
+        "old_callback",
+        "f"
+      ]
+    },
+    {
+      "name": "get_command",
+      "file": "core.py",
+      "start_line": 1817,
+      "end_line": 1821,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "list_commands",
+      "file": "core.py",
+      "start_line": 1823,
+      "end_line": 1825,
+      "calls": [
+        "sorted"
+      ]
+    },
+    {
+      "name": "collect_usage_pieces",
+      "file": "core.py",
+      "start_line": 1827,
+      "end_line": 1830,
+      "calls": [
+        "collect_usage_pieces",
+        "super",
+        "append"
+      ]
+    },
+    {
+      "name": "format_options",
+      "file": "core.py",
+      "start_line": 1832,
+      "end_line": 1834,
+      "calls": [
+        "format_options",
+        "super",
+        "format_commands"
+      ]
+    },
+    {
+      "name": "format_commands",
+      "file": "core.py",
+      "start_line": 1836,
+      "end_line": 1862,
+      "calls": [
+        "list_commands",
+        "get_command",
+        "append",
+        "len",
+        "max",
+        "get_short_help_str",
+        "section",
+        "_",
+        "write_dl"
+      ]
+    },
+    {
+      "name": "parse_args",
+      "file": "core.py",
+      "start_line": 1864,
+      "end_line": 1876,
+      "calls": [
+        "NoArgsIsHelpError",
+        "parse_args",
+        "super"
+      ]
+    },
+    {
+      "name": "invoke",
+      "file": "core.py",
+      "start_line": 1878,
+      "end_line": 1944,
+      "calls": [
+        "invoke",
+        "super",
+        "_process_result",
+        "fail",
+        "_",
+        "resolve_command",
+        "make_context",
+        "append"
+      ]
+    },
+    {
+      "name": "_process_result",
+      "file": "core.py",
+      "start_line": 1879,
+      "end_line": 1882,
+      "calls": [
+        "invoke"
+      ]
+    },
+    {
+      "name": "resolve_command",
+      "file": "core.py",
+      "start_line": 1946,
+      "end_line": 1970,
+      "calls": [
+        "make_str",
+        "get_command",
+        "token_normalize_func",
+        "_split_opt",
+        "parse_args",
+        "NoSuchCommand"
+      ]
+    },
+    {
+      "name": "shell_complete",
+      "file": "core.py",
+      "start_line": 1972,
+      "end_line": 1989,
+      "calls": [
+        "CompletionItem",
+        "get_short_help_str",
+        "_complete_visible_commands",
+        "extend",
+        "shell_complete",
+        "super"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "core.py",
+      "start_line": 2015,
+      "end_line": 2023,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "add_source",
+      "file": "core.py",
+      "start_line": 2025,
+      "end_line": 2027,
+      "calls": [
+        "append"
+      ]
+    },
+    {
+      "name": "get_command",
+      "file": "core.py",
+      "start_line": 2029,
+      "end_line": 2044,
+      "calls": [
+        "get_command",
+        "super",
+        "_check_nested_chain"
+      ]
+    },
+    {
+      "name": "list_commands",
+      "file": "core.py",
+      "start_line": 2046,
+      "end_line": 2052,
+      "calls": [
+        "set",
+        "list_commands",
+        "super",
+        "update",
+        "sorted"
+      ]
+    },
+    {
+      "name": "_check_iter",
+      "file": "core.py",
+      "start_line": 2055,
+      "end_line": 2062,
+      "calls": [
+        "isinstance",
+        "iter"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "core.py",
+      "start_line": 2158,
+      "end_line": 2233,
+      "calls": [
+        "_parse_decls",
+        "convert_type",
+        "ValueError"
+      ]
+    },
+    {
+      "name": "to_info_dict",
+      "file": "core.py",
+      "start_line": 2235,
+      "end_line": 2261,
+      "calls": [
+        "to_info_dict"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "core.py",
+      "start_line": 2263,
+      "end_line": 2264,
+      "calls": []
+    },
+    {
+      "name": "_parse_decls",
+      "file": "core.py",
+      "start_line": 2267,
+      "end_line": 2269,
+      "calls": []
+    },
+    {
+      "name": "human_readable_name",
+      "file": "core.py",
+      "start_line": 2272,
+      "end_line": 2276,
+      "calls": []
+    },
+    {
+      "name": "make_metavar",
+      "file": "core.py",
+      "start_line": 2278,
+      "end_line": 2290,
+      "calls": [
+        "get_metavar",
+        "upper"
+      ]
+    },
+    {
+      "name": "get_default",
+      "file": "core.py",
+      "start_line": 2293,
+      "end_line": 2295,
+      "calls": []
+    },
+    {
+      "name": "get_default",
+      "file": "core.py",
+      "start_line": 2298,
+      "end_line": 2300,
+      "calls": []
+    },
+    {
+      "name": "get_default",
+      "file": "core.py",
+      "start_line": 2302,
+      "end_line": 2333,
+      "calls": [
+        "lookup_default",
+        "_default_map_has",
+        "callable",
+        "value"
+      ]
+    },
+    {
+      "name": "add_to_parser",
+      "file": "core.py",
+      "start_line": 2336,
+      "end_line": 2336,
+      "calls": []
+    },
+    {
+      "name": "consume_value",
+      "file": "core.py",
+      "start_line": 2338,
+      "end_line": 2384,
+      "calls": [
+        "get",
+        "value_from_envvar",
+        "lookup_default",
+        "_default_map_has",
+        "isinstance",
+        "split_envvar_value",
+        "get_default"
+      ]
+    },
+    {
+      "name": "type_cast_value",
+      "file": "core.py",
+      "start_line": 2386,
+      "end_line": 2440,
+      "calls": [
+        "_check_iter",
+        "BadParameter",
+        "_",
+        "type",
+        "tuple",
+        "check_iter",
+        "len",
+        "format",
+        "ngettext",
+        "convert"
+      ]
+    },
+    {
+      "name": "check_iter",
+      "file": "core.py",
+      "start_line": 2396,
+      "end_line": 2405,
+      "calls": [
+        "_check_iter",
+        "BadParameter",
+        "_"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "core.py",
+      "start_line": 2411,
+      "end_line": 2412,
+      "calls": [
+        "type"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "core.py",
+      "start_line": 2416,
+      "end_line": 2417,
+      "calls": [
+        "tuple",
+        "type",
+        "check_iter"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "core.py",
+      "start_line": 2421,
+      "end_line": 2435,
+      "calls": [
+        "tuple",
+        "check_iter",
+        "len",
+        "BadParameter",
+        "format",
+        "ngettext",
+        "type"
+      ]
+    },
+    {
+      "name": "value_is_missing",
+      "file": "core.py",
+      "start_line": 2442,
+      "end_line": 2458,
+      "calls": []
+    },
+    {
+      "name": "process_value",
+      "file": "core.py",
+      "start_line": 2460,
+      "end_line": 2524,
+      "calls": [
+        "type_cast_value",
+        "value_is_missing",
+        "MissingParameter",
+        "items",
+        "callback",
+        "update"
+      ]
+    },
+    {
+      "name": "resolve_envvar_value",
+      "file": "core.py",
+      "start_line": 2526,
+      "end_line": 2569,
+      "calls": [
+        "isinstance",
+        "get"
+      ]
+    },
+    {
+      "name": "value_from_envvar",
+      "file": "core.py",
+      "start_line": 2571,
+      "end_line": 2585,
+      "calls": [
+        "resolve_envvar_value",
+        "split_envvar_value"
+      ]
+    },
+    {
+      "name": "handle_parse_result",
+      "file": "core.py",
+      "start_line": 2587,
+      "end_line": 2673,
+      "calls": [
+        "get",
+        "get_parameter_source",
+        "augment_usage_errors",
+        "consume_value",
+        "set_parameter_source",
+        "format",
+        "_",
+        "_format_deprecated_suffix",
+        "echo",
+        "style",
+        "process_value"
+      ]
+    },
+    {
+      "name": "get_help_record",
+      "file": "core.py",
+      "start_line": 2675,
+      "end_line": 2676,
+      "calls": []
+    },
+    {
+      "name": "get_usage_pieces",
+      "file": "core.py",
+      "start_line": 2678,
+      "end_line": 2679,
+      "calls": []
+    },
+    {
+      "name": "get_error_hint",
+      "file": "core.py",
+      "start_line": 2681,
+      "end_line": 2689,
+      "calls": [
+        "join"
+      ]
+    },
+    {
+      "name": "shell_complete",
+      "file": "core.py",
+      "start_line": 2691,
+      "end_line": 2712,
+      "calls": [
+        "_custom_shell_complete",
+        "isinstance",
+        "CompletionItem",
+        "cast",
+        "shell_complete"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "core.py",
+      "start_line": 2789,
+      "end_line": 2954,
+      "calls": [
+        "cleandoc",
+        "__init__",
+        "super",
+        "TypeError",
+        "capitalize",
+        "replace",
+        "_format_deprecated_label",
+        "BoolParamType",
+        "isinstance",
+        "convert_type",
+        "bool",
+        "IntRange",
+        "ValueError"
+      ]
+    },
+    {
+      "name": "to_info_dict",
+      "file": "core.py",
+      "start_line": 2956,
+      "end_line": 2973,
+      "calls": [
+        "to_info_dict",
+        "super",
+        "update"
+      ]
+    },
+    {
+      "name": "get_default",
+      "file": "core.py",
+      "start_line": 2975,
+      "end_line": 3006,
+      "calls": [
+        "get_default",
+        "super",
+        "callable",
+        "value"
+      ]
+    },
+    {
+      "name": "get_error_hint",
+      "file": "core.py",
+      "start_line": 3008,
+      "end_line": 3012,
+      "calls": [
+        "get_error_hint",
+        "super"
+      ]
+    },
+    {
+      "name": "_parse_decls",
+      "file": "core.py",
+      "start_line": 3014,
+      "end_line": 3073,
+      "calls": [
+        "isidentifier",
+        "TypeError",
+        "format",
+        "_",
+        "split",
+        "rstrip",
+        "append",
+        "_split_opt",
+        "lstrip",
+        "ValueError",
+        "sort",
+        "len",
+        "lower",
+        "replace"
+      ]
+    },
+    {
+      "name": "add_to_parser",
+      "file": "core.py",
+      "start_line": 3075,
+      "end_line": 3112,
+      "calls": [
+        "add_option"
+      ]
+    },
+    {
+      "name": "get_help_record",
+      "file": "core.py",
+      "start_line": 3114,
+      "end_line": 3157,
+      "calls": [
+        "join_options",
+        "make_metavar",
+        "_write_opts",
+        "append",
+        "get_help_extra",
+        "format",
+        "_",
+        "join"
+      ]
+    },
+    {
+      "name": "_write_opts",
+      "file": "core.py",
+      "start_line": 3120,
+      "end_line": 3131,
+      "calls": [
+        "join_options",
+        "make_metavar"
+      ]
+    },
+    {
+      "name": "get_help_extra",
+      "file": "core.py",
+      "start_line": 3159,
+      "end_line": 3241,
+      "calls": [
+        "upper",
+        "isinstance",
+        "tuple",
+        "str",
+        "get_default",
+        "join",
+        "isfunction",
+        "_",
+        "_split_opt",
+        "_describe_range"
+      ]
+    },
+    {
+      "name": "prompt_for_value",
+      "file": "core.py",
+      "start_line": 3243,
+      "end_line": 3291,
+      "calls": [
+        "get_default",
+        "bool",
+        "confirm",
+        "prompt",
+        "process_value"
+      ]
+    },
+    {
+      "name": "resolve_envvar_value",
+      "file": "core.py",
+      "start_line": 3293,
+      "end_line": 3315,
+      "calls": [
+        "resolve_envvar_value",
+        "super",
+        "upper",
+        "get"
+      ]
+    },
+    {
+      "name": "value_from_envvar",
+      "file": "core.py",
+      "start_line": 3317,
+      "end_line": 3357,
+      "calls": [
+        "resolve_envvar_value",
+        "str_to_bool",
+        "bool",
+        "split_envvar_value",
+        "batch"
+      ]
+    },
+    {
+      "name": "consume_value",
+      "file": "core.py",
+      "start_line": 3359,
+      "end_line": 3419,
+      "calls": [
+        "consume_value",
+        "super",
+        "prompt_for_value",
+        "isinstance",
+        "any"
+      ]
+    },
+    {
+      "name": "process_value",
+      "file": "core.py",
+      "start_line": 3421,
+      "end_line": 3436,
+      "calls": [
+        "callback",
+        "process_value",
+        "super"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "core.py",
+      "start_line": 3449,
+      "end_line": 3468,
+      "calls": [
+        "get",
+        "TypeError",
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "human_readable_name",
+      "file": "core.py",
+      "start_line": 3471,
+      "end_line": 3474,
+      "calls": [
+        "upper"
+      ]
+    },
+    {
+      "name": "make_metavar",
+      "file": "core.py",
+      "start_line": 3476,
+      "end_line": 3488,
+      "calls": [
+        "get_metavar",
+        "upper"
+      ]
+    },
+    {
+      "name": "_parse_decls",
+      "file": "core.py",
+      "start_line": 3490,
+      "end_line": 3507,
+      "calls": [
+        "TypeError",
+        "len",
+        "lower",
+        "replace",
+        "format",
+        "_"
+      ]
+    },
+    {
+      "name": "get_usage_pieces",
+      "file": "core.py",
+      "start_line": 3509,
+      "end_line": 3510,
+      "calls": [
+        "make_metavar"
+      ]
+    },
+    {
+      "name": "get_error_hint",
+      "file": "core.py",
+      "start_line": 3512,
+      "end_line": 3515,
+      "calls": [
+        "make_metavar"
+      ]
+    },
+    {
+      "name": "add_to_parser",
+      "file": "core.py",
+      "start_line": 3517,
+      "end_line": 3518,
+      "calls": [
+        "add_argument"
+      ]
+    },
+    {
+      "name": "__getattr__",
+      "file": "core.py",
+      "start_line": 3521,
+      "end_line": 3542,
+      "calls": [
+        "warn",
+        "AttributeError"
+      ]
+    },
+    {
+      "name": "pass_context",
+      "file": "decorators.py",
+      "start_line": 28,
+      "end_line": 36,
+      "calls": [
+        "f",
+        "get_current_context",
+        "update_wrapper"
+      ]
+    },
+    {
+      "name": "new_func",
+      "file": "decorators.py",
+      "start_line": 33,
+      "end_line": 34,
+      "calls": [
+        "f",
+        "get_current_context"
+      ]
+    },
+    {
+      "name": "pass_obj",
+      "file": "decorators.py",
+      "start_line": 39,
+      "end_line": 48,
+      "calls": [
+        "f",
+        "get_current_context",
+        "update_wrapper"
+      ]
+    },
+    {
+      "name": "new_func",
+      "file": "decorators.py",
+      "start_line": 45,
+      "end_line": 46,
+      "calls": [
+        "f",
+        "get_current_context"
+      ]
+    },
+    {
+      "name": "make_pass_decorator",
+      "file": "decorators.py",
+      "start_line": 51,
+      "end_line": 97,
+      "calls": [
+        "get_current_context",
+        "ensure_object",
+        "find_object",
+        "RuntimeError",
+        "invoke",
+        "update_wrapper"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "decorators.py",
+      "start_line": 76,
+      "end_line": 95,
+      "calls": [
+        "get_current_context",
+        "ensure_object",
+        "find_object",
+        "RuntimeError",
+        "invoke",
+        "update_wrapper"
+      ]
+    },
+    {
+      "name": "new_func",
+      "file": "decorators.py",
+      "start_line": 77,
+      "end_line": 93,
+      "calls": [
+        "get_current_context",
+        "ensure_object",
+        "find_object",
+        "RuntimeError",
+        "invoke"
+      ]
+    },
+    {
+      "name": "pass_meta_key",
+      "file": "decorators.py",
+      "start_line": 100,
+      "end_line": 130,
+      "calls": [
+        "get_current_context",
+        "invoke",
+        "update_wrapper"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "decorators.py",
+      "start_line": 115,
+      "end_line": 121,
+      "calls": [
+        "get_current_context",
+        "invoke",
+        "update_wrapper"
+      ]
+    },
+    {
+      "name": "new_func",
+      "file": "decorators.py",
+      "start_line": 116,
+      "end_line": 119,
+      "calls": [
+        "get_current_context",
+        "invoke"
+      ]
+    },
+    {
+      "name": "command",
+      "file": "decorators.py",
+      "start_line": 138,
+      "end_line": 138,
+      "calls": []
+    },
+    {
+      "name": "command",
+      "file": "decorators.py",
+      "start_line": 144,
+      "end_line": 148,
+      "calls": []
+    },
+    {
+      "name": "command",
+      "file": "decorators.py",
+      "start_line": 153,
+      "end_line": 158,
+      "calls": []
+    },
+    {
+      "name": "command",
+      "file": "decorators.py",
+      "start_line": 163,
+      "end_line": 165,
+      "calls": []
+    },
+    {
+      "name": "command",
+      "file": "decorators.py",
+      "start_line": 168,
+      "end_line": 255,
+      "calls": [
+        "callable",
+        "cast",
+        "isinstance",
+        "TypeError",
+        "pop",
+        "extend",
+        "reversed",
+        "get",
+        "replace",
+        "lower",
+        "rpartition",
+        "cls",
+        "decorator"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "decorators.py",
+      "start_line": 217,
+      "end_line": 250,
+      "calls": [
+        "isinstance",
+        "TypeError",
+        "pop",
+        "extend",
+        "reversed",
+        "get",
+        "callable",
+        "replace",
+        "lower",
+        "rpartition",
+        "cls"
+      ]
+    },
+    {
+      "name": "group",
+      "file": "decorators.py",
+      "start_line": 263,
+      "end_line": 263,
+      "calls": []
+    },
+    {
+      "name": "group",
+      "file": "decorators.py",
+      "start_line": 269,
+      "end_line": 273,
+      "calls": []
+    },
+    {
+      "name": "group",
+      "file": "decorators.py",
+      "start_line": 278,
+      "end_line": 283,
+      "calls": []
+    },
+    {
+      "name": "group",
+      "file": "decorators.py",
+      "start_line": 288,
+      "end_line": 290,
+      "calls": []
+    },
+    {
+      "name": "group",
+      "file": "decorators.py",
+      "start_line": 293,
+      "end_line": 311,
+      "calls": [
+        "cast",
+        "callable",
+        "command"
+      ]
+    },
+    {
+      "name": "_param_memo",
+      "file": "decorators.py",
+      "start_line": 314,
+      "end_line": 321,
+      "calls": [
+        "isinstance",
+        "append",
+        "hasattr"
+      ]
+    },
+    {
+      "name": "argument",
+      "file": "decorators.py",
+      "start_line": 324,
+      "end_line": 349,
+      "calls": [
+        "_param_memo",
+        "cls"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "decorators.py",
+      "start_line": 345,
+      "end_line": 347,
+      "calls": [
+        "_param_memo",
+        "cls"
+      ]
+    },
+    {
+      "name": "option",
+      "file": "decorators.py",
+      "start_line": 352,
+      "end_line": 377,
+      "calls": [
+        "_param_memo",
+        "cls"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "decorators.py",
+      "start_line": 373,
+      "end_line": 375,
+      "calls": [
+        "_param_memo",
+        "cls"
+      ]
+    },
+    {
+      "name": "confirmation_option",
+      "file": "decorators.py",
+      "start_line": 380,
+      "end_line": 401,
+      "calls": [
+        "abort",
+        "setdefault",
+        "_",
+        "option"
+      ]
+    },
+    {
+      "name": "callback",
+      "file": "decorators.py",
+      "start_line": 389,
+      "end_line": 391,
+      "calls": [
+        "abort"
+      ]
+    },
+    {
+      "name": "password_option",
+      "file": "decorators.py",
+      "start_line": 404,
+      "end_line": 418,
+      "calls": [
+        "setdefault",
+        "option"
+      ]
+    },
+    {
+      "name": "version_option",
+      "file": "decorators.py",
+      "start_line": 421,
+      "end_line": 524,
+      "calls": [
+        "_",
+        "currentframe",
+        "get",
+        "partition",
+        "find_root",
+        "version",
+        "RuntimeError",
+        "echo",
+        "exit",
+        "setdefault",
+        "option"
+      ]
+    },
+    {
+      "name": "callback",
+      "file": "decorators.py",
+      "start_line": 484,
+      "end_line": 514,
+      "calls": [
+        "find_root",
+        "version",
+        "RuntimeError",
+        "echo",
+        "exit"
+      ]
+    },
+    {
+      "name": "help_option",
+      "file": "decorators.py",
+      "start_line": 527,
+      "end_line": 551,
+      "calls": [
+        "echo",
+        "get_help",
+        "exit",
+        "setdefault",
+        "_",
+        "option"
+      ]
+    },
+    {
+      "name": "show_help",
+      "file": "decorators.py",
+      "start_line": 536,
+      "end_line": 540,
+      "calls": [
+        "echo",
+        "get_help",
+        "exit"
+      ]
+    },
+    {
+      "name": "_join_param_hints",
+      "file": "exceptions.py",
+      "start_line": 19,
+      "end_line": 23,
+      "calls": [
+        "isinstance",
+        "join",
+        "repr"
+      ]
+    },
+    {
+      "name": "_format_possibilities",
+      "file": "exceptions.py",
+      "start_line": 26,
+      "end_line": 32,
+      "calls": [
+        "join",
+        "repr",
+        "sorted",
+        "format",
+        "ngettext",
+        "len"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "exceptions.py",
+      "start_line": 41,
+      "end_line": 46,
+      "calls": [
+        "__init__",
+        "super",
+        "resolve_color_default"
+      ]
+    },
+    {
+      "name": "format_message",
+      "file": "exceptions.py",
+      "start_line": 48,
+      "end_line": 49,
+      "calls": []
+    },
+    {
+      "name": "__str__",
+      "file": "exceptions.py",
+      "start_line": 51,
+      "end_line": 52,
+      "calls": []
+    },
+    {
+      "name": "show",
+      "file": "exceptions.py",
+      "start_line": 54,
+      "end_line": 62,
+      "calls": [
+        "get_text_stderr",
+        "echo",
+        "format",
+        "_",
+        "format_message"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "exceptions.py",
+      "start_line": 76,
+      "end_line": 79,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "show",
+      "file": "exceptions.py",
+      "start_line": 81,
+      "end_line": 105,
+      "calls": [
+        "get_text_stderr",
+        "get_help_option",
+        "get_help_option_names",
+        "format",
+        "_",
+        "max",
+        "echo",
+        "get_usage",
+        "format_message"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "exceptions.py",
+      "start_line": 126,
+      "end_line": 135,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "format_message",
+      "file": "exceptions.py",
+      "start_line": 137,
+      "end_line": 147,
+      "calls": [
+        "get_error_hint",
+        "format",
+        "_",
+        "_join_param_hints"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "exceptions.py",
+      "start_line": 162,
+      "end_line": 171,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "format_message",
+      "file": "exceptions.py",
+      "start_line": 173,
+      "end_line": 211,
+      "calls": [
+        "get_error_hint",
+        "_join_param_hints",
+        "get_missing_message",
+        "_",
+        "format"
+      ]
+    },
+    {
+      "name": "__str__",
+      "file": "exceptions.py",
+      "start_line": 213,
+      "end_line": 218,
+      "calls": [
+        "format",
+        "_"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "exceptions.py",
+      "start_line": 227,
+      "end_line": 243,
+      "calls": [
+        "format",
+        "_",
+        "__init__",
+        "super",
+        "get_close_matches"
+      ]
+    },
+    {
+      "name": "format_message",
+      "file": "exceptions.py",
+      "start_line": 245,
+      "end_line": 248,
+      "calls": [
+        "_format_possibilities"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "exceptions.py",
+      "start_line": 257,
+      "end_line": 273,
+      "calls": [
+        "format",
+        "_",
+        "__init__",
+        "super",
+        "get_close_matches"
+      ]
+    },
+    {
+      "name": "format_message",
+      "file": "exceptions.py",
+      "start_line": 275,
+      "end_line": 278,
+      "calls": [
+        "_format_possibilities"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "exceptions.py",
+      "start_line": 291,
+      "end_line": 295,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "exceptions.py",
+      "start_line": 308,
+      "end_line": 310,
+      "calls": [
+        "__init__",
+        "super",
+        "get_help"
+      ]
+    },
+    {
+      "name": "show",
+      "file": "exceptions.py",
+      "start_line": 312,
+      "end_line": 313,
+      "calls": [
+        "echo",
+        "format_message"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "exceptions.py",
+      "start_line": 319,
+      "end_line": 325,
+      "calls": [
+        "_",
+        "__init__",
+        "super",
+        "format_filename"
+      ]
+    },
+    {
+      "name": "format_message",
+      "file": "exceptions.py",
+      "start_line": 327,
+      "end_line": 330,
+      "calls": [
+        "format",
+        "_"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "exceptions.py",
+      "start_line": 346,
+      "end_line": 347,
+      "calls": []
+    },
+    {
+      "name": "measure_table",
+      "file": "formatting.py",
+      "start_line": 14,
+      "end_line": 21,
+      "calls": [
+        "enumerate",
+        "max",
+        "get",
+        "term_len",
+        "tuple",
+        "sorted",
+        "items"
+      ]
+    },
+    {
+      "name": "iter_rows",
+      "file": "formatting.py",
+      "start_line": 24,
+      "end_line": 28,
+      "calls": [
+        "len"
+      ]
+    },
+    {
+      "name": "wrap_text",
+      "file": "formatting.py",
+      "start_line": 31,
+      "end_line": 107,
+      "calls": [
+        "expandtabs",
+        "TextWrapper",
+        "fill",
+        "strip",
+        "append",
+        "join",
+        "splitlines",
+        "_flush_par",
+        "term_len",
+        "lstrip",
+        "extra_indent",
+        "indent_only"
+      ]
+    },
+    {
+      "name": "_flush_par",
+      "file": "formatting.py",
+      "start_line": 78,
+      "end_line": 85,
+      "calls": [
+        "strip",
+        "append",
+        "join"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "formatting.py",
+      "start_line": 122,
+      "end_line": 139,
+      "calls": [
+        "max",
+        "min",
+        "get_terminal_size"
+      ]
+    },
+    {
+      "name": "write",
+      "file": "formatting.py",
+      "start_line": 141,
+      "end_line": 143,
+      "calls": [
+        "append"
+      ]
+    },
+    {
+      "name": "indent",
+      "file": "formatting.py",
+      "start_line": 145,
+      "end_line": 147,
+      "calls": []
+    },
+    {
+      "name": "dedent",
+      "file": "formatting.py",
+      "start_line": 149,
+      "end_line": 151,
+      "calls": []
+    },
+    {
+      "name": "write_usage",
+      "file": "formatting.py",
+      "start_line": 153,
+      "end_line": 197,
+      "calls": [
+        "format",
+        "_",
+        "write",
+        "rstrip",
+        "term_len",
+        "wrap_text",
+        "max"
+      ]
+    },
+    {
+      "name": "write_heading",
+      "file": "formatting.py",
+      "start_line": 199,
+      "end_line": 201,
+      "calls": [
+        "write"
+      ]
+    },
+    {
+      "name": "write_paragraph",
+      "file": "formatting.py",
+      "start_line": 203,
+      "end_line": 206,
+      "calls": [
+        "write"
+      ]
+    },
+    {
+      "name": "write_text",
+      "file": "formatting.py",
+      "start_line": 208,
+      "end_line": 222,
+      "calls": [
+        "write",
+        "wrap_text"
+      ]
+    },
+    {
+      "name": "write_dl",
+      "file": "formatting.py",
+      "start_line": 224,
+      "end_line": 266,
+      "calls": [
+        "list",
+        "measure_table",
+        "len",
+        "TypeError",
+        "min",
+        "iter_rows",
+        "write",
+        "term_len",
+        "max",
+        "wrap_text",
+        "splitlines"
+      ]
+    },
+    {
+      "name": "section",
+      "file": "formatting.py",
+      "start_line": 269,
+      "end_line": 281,
+      "calls": [
+        "write_paragraph",
+        "write_heading",
+        "indent",
+        "dedent"
+      ]
+    },
+    {
+      "name": "indentation",
+      "file": "formatting.py",
+      "start_line": 284,
+      "end_line": 290,
+      "calls": [
+        "indent",
+        "dedent"
+      ]
+    },
+    {
+      "name": "getvalue",
+      "file": "formatting.py",
+      "start_line": 292,
+      "end_line": 294,
+      "calls": [
+        "join"
+      ]
+    },
+    {
+      "name": "join_options",
+      "file": "formatting.py",
+      "start_line": 297,
+      "end_line": 315,
+      "calls": [
+        "_split_opt",
+        "append",
+        "len",
+        "sort",
+        "join"
+      ]
+    },
+    {
+      "name": "get_current_context",
+      "file": "globals.py",
+      "start_line": 13,
+      "end_line": 13,
+      "calls": []
+    },
+    {
+      "name": "get_current_context",
+      "file": "globals.py",
+      "start_line": 17,
+      "end_line": 17,
+      "calls": []
+    },
+    {
+      "name": "get_current_context",
+      "file": "globals.py",
+      "start_line": 20,
+      "end_line": 41,
+      "calls": [
+        "cast",
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "push_context",
+      "file": "globals.py",
+      "start_line": 44,
+      "end_line": 46,
+      "calls": [
+        "append",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "pop_context",
+      "file": "globals.py",
+      "start_line": 49,
+      "end_line": 51,
+      "calls": [
+        "pop"
+      ]
+    },
+    {
+      "name": "resolve_color_default",
+      "file": "globals.py",
+      "start_line": 54,
+      "end_line": 67,
+      "calls": [
+        "get_current_context"
+      ]
+    },
+    {
+      "name": "_unpack_args",
+      "file": "parser.py",
+      "start_line": 51,
+      "end_line": 108,
+      "calls": [
+        "deque",
+        "popleft",
+        "pop",
+        "append",
+        "_fetch",
+        "range",
+        "reverse",
+        "tuple",
+        "TypeError",
+        "len",
+        "reversed",
+        "list"
+      ]
+    },
+    {
+      "name": "_fetch",
+      "file": "parser.py",
+      "start_line": 68,
+      "end_line": 75,
+      "calls": [
+        "popleft",
+        "pop"
+      ]
+    },
+    {
+      "name": "_split_opt",
+      "file": "parser.py",
+      "start_line": 111,
+      "end_line": 117,
+      "calls": [
+        "isalnum"
+      ]
+    },
+    {
+      "name": "_normalize_opt",
+      "file": "parser.py",
+      "start_line": 120,
+      "end_line": 124,
+      "calls": [
+        "_split_opt",
+        "token_normalize_func"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "parser.py",
+      "start_line": 128,
+      "end_line": 163,
+      "calls": [
+        "set",
+        "_split_opt",
+        "ValueError",
+        "format",
+        "_",
+        "add",
+        "len",
+        "append"
+      ]
+    },
+    {
+      "name": "takes_value",
+      "file": "parser.py",
+      "start_line": 166,
+      "end_line": 167,
+      "calls": []
+    },
+    {
+      "name": "process",
+      "file": "parser.py",
+      "start_line": 169,
+      "end_line": 182,
+      "calls": [
+        "append",
+        "setdefault",
+        "get",
+        "ValueError"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "parser.py",
+      "start_line": 186,
+      "end_line": 189,
+      "calls": []
+    },
+    {
+      "name": "process",
+      "file": "parser.py",
+      "start_line": 191,
+      "end_line": 213,
+      "calls": [
+        "isinstance",
+        "sum",
+        "len",
+        "BadArgumentUsage",
+        "format",
+        "_",
+        "append"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "parser.py",
+      "start_line": 217,
+      "end_line": 221,
+      "calls": []
+    },
+    {
+      "name": "__init__",
+      "file": "parser.py",
+      "start_line": 241,
+      "end_line": 263,
+      "calls": []
+    },
+    {
+      "name": "add_option",
+      "file": "parser.py",
+      "start_line": 265,
+      "end_line": 288,
+      "calls": [
+        "_normalize_opt",
+        "_Option",
+        "update"
+      ]
+    },
+    {
+      "name": "add_argument",
+      "file": "parser.py",
+      "start_line": 290,
+      "end_line": 296,
+      "calls": [
+        "append",
+        "_Argument"
+      ]
+    },
+    {
+      "name": "parse_args",
+      "file": "parser.py",
+      "start_line": 298,
+      "end_line": 314,
+      "calls": [
+        "_ParsingState",
+        "_process_args_for_options",
+        "_process_args_for_args"
+      ]
+    },
+    {
+      "name": "_process_args_for_args",
+      "file": "parser.py",
+      "start_line": 316,
+      "end_line": 325,
+      "calls": [
+        "_unpack_args",
+        "enumerate",
+        "process"
+      ]
+    },
+    {
+      "name": "_process_args_for_options",
+      "file": "parser.py",
+      "start_line": 327,
+      "end_line": 361,
+      "calls": [
+        "pop",
+        "len",
+        "_process_opts",
+        "append",
+        "insert"
+      ]
+    },
+    {
+      "name": "_match_long_opt",
+      "file": "parser.py",
+      "start_line": 363,
+      "end_line": 388,
+      "calls": [
+        "NoSuchOption",
+        "insert",
+        "_get_value_from_state",
+        "BadOptionUsage",
+        "format",
+        "_",
+        "process"
+      ]
+    },
+    {
+      "name": "_match_short_opt",
+      "file": "parser.py",
+      "start_line": 390,
+      "end_line": 428,
+      "calls": [
+        "_normalize_opt",
+        "get",
+        "append",
+        "NoSuchOption",
+        "len",
+        "insert",
+        "_get_value_from_state",
+        "process",
+        "join"
+      ]
+    },
+    {
+      "name": "_get_value_from_state",
+      "file": "parser.py",
+      "start_line": 430,
+      "end_line": 468,
+      "calls": [
+        "len",
+        "BadOptionUsage",
+        "format",
+        "ngettext",
+        "isinstance",
+        "pop",
+        "tuple"
+      ]
+    },
+    {
+      "name": "_process_opts",
+      "file": "parser.py",
+      "start_line": 470,
+      "end_line": 500,
+      "calls": [
+        "split",
+        "_normalize_opt",
+        "_match_long_opt",
+        "_match_short_opt",
+        "append"
+      ]
+    },
+    {
+      "name": "__getattr__",
+      "file": "parser.py",
+      "start_line": 503,
+      "end_line": 533,
+      "calls": [
+        "warn",
+        "globals",
+        "AttributeError"
+      ]
+    },
+    {
+      "name": "shell_complete",
+      "file": "shell_completion.py",
+      "start_line": 19,
+      "end_line": 55,
+      "calls": [
+        "partition",
+        "get_completion_class",
+        "comp_cls",
+        "echo",
+        "encode",
+        "source",
+        "complete"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "shell_completion.py",
+      "start_line": 79,
+      "end_line": 89,
+      "calls": []
+    },
+    {
+      "name": "__getattr__",
+      "file": "shell_completion.py",
+      "start_line": 91,
+      "end_line": 92,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "shell_completion.py",
+      "start_line": 229,
+      "end_line": 239,
+      "calls": []
+    },
+    {
+      "name": "func_name",
+      "file": "shell_completion.py",
+      "start_line": 242,
+      "end_line": 247,
+      "calls": [
+        "sub",
+        "replace"
+      ]
+    },
+    {
+      "name": "source_vars",
+      "file": "shell_completion.py",
+      "start_line": 249,
+      "end_line": 259,
+      "calls": []
+    },
+    {
+      "name": "source",
+      "file": "shell_completion.py",
+      "start_line": 261,
+      "end_line": 267,
+      "calls": [
+        "source_vars"
+      ]
+    },
+    {
+      "name": "get_completion_args",
+      "file": "shell_completion.py",
+      "start_line": 269,
+      "end_line": 274,
+      "calls": []
+    },
+    {
+      "name": "get_completions",
+      "file": "shell_completion.py",
+      "start_line": 276,
+      "end_line": 286,
+      "calls": [
+        "_resolve_context",
+        "_resolve_incomplete",
+        "shell_complete"
+      ]
+    },
+    {
+      "name": "format_completion",
+      "file": "shell_completion.py",
+      "start_line": 288,
+      "end_line": 294,
+      "calls": []
+    },
+    {
+      "name": "complete",
+      "file": "shell_completion.py",
+      "start_line": 296,
+      "end_line": 306,
+      "calls": [
+        "get_completion_args",
+        "get_completions",
+        "format_completion",
+        "join"
+      ]
+    },
+    {
+      "name": "_check_version",
+      "file": "shell_completion.py",
+      "start_line": 316,
+      "end_line": 346,
+      "calls": [
+        "which",
+        "run",
+        "search",
+        "decode",
+        "groups",
+        "echo",
+        "_"
+      ]
+    },
+    {
+      "name": "source",
+      "file": "shell_completion.py",
+      "start_line": 348,
+      "end_line": 350,
+      "calls": [
+        "_check_version",
+        "source",
+        "super"
+      ]
+    },
+    {
+      "name": "get_completion_args",
+      "file": "shell_completion.py",
+      "start_line": 352,
+      "end_line": 362,
+      "calls": [
+        "split_arg_string",
+        "int"
+      ]
+    },
+    {
+      "name": "format_completion",
+      "file": "shell_completion.py",
+      "start_line": 364,
+      "end_line": 365,
+      "calls": []
+    },
+    {
+      "name": "get_completion_args",
+      "file": "shell_completion.py",
+      "start_line": 374,
+      "end_line": 384,
+      "calls": [
+        "split_arg_string",
+        "int"
+      ]
+    },
+    {
+      "name": "format_completion",
+      "file": "shell_completion.py",
+      "start_line": 386,
+      "end_line": 401,
+      "calls": [
+        "replace"
+      ]
+    },
+    {
+      "name": "get_completion_args",
+      "file": "shell_completion.py",
+      "start_line": 410,
+      "end_line": 422,
+      "calls": [
+        "split_arg_string",
+        "pop"
+      ]
+    },
+    {
+      "name": "format_completion",
+      "file": "shell_completion.py",
+      "start_line": 424,
+      "end_line": 438,
+      "calls": [
+        "replace"
+      ]
+    },
+    {
+      "name": "add_completion_class",
+      "file": "shell_completion.py",
+      "start_line": 451,
+      "end_line": 468,
+      "calls": []
+    },
+    {
+      "name": "get_completion_class",
+      "file": "shell_completion.py",
+      "start_line": 471,
+      "end_line": 478,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "split_arg_string",
+      "file": "shell_completion.py",
+      "start_line": 481,
+      "end_line": 515,
+      "calls": [
+        "shlex",
+        "append"
+      ]
+    },
+    {
+      "name": "_is_incomplete_argument",
+      "file": "shell_completion.py",
+      "start_line": 518,
+      "end_line": 538,
+      "calls": [
+        "isinstance",
+        "get",
+        "get_parameter_source",
+        "len"
+      ]
+    },
+    {
+      "name": "_start_of_option",
+      "file": "shell_completion.py",
+      "start_line": 541,
+      "end_line": 547,
+      "calls": []
+    },
+    {
+      "name": "_is_incomplete_option",
+      "file": "shell_completion.py",
+      "start_line": 550,
+      "end_line": 572,
+      "calls": [
+        "isinstance",
+        "enumerate",
+        "reversed",
+        "_start_of_option"
+      ]
+    },
+    {
+      "name": "_resolve_context",
+      "file": "shell_completion.py",
+      "start_line": 575,
+      "end_line": 633,
+      "calls": [
+        "make_context",
+        "copy",
+        "isinstance",
+        "resolve_command"
+      ]
+    },
+    {
+      "name": "_resolve_incomplete",
+      "file": "shell_completion.py",
+      "start_line": 636,
+      "end_line": 680,
+      "calls": [
+        "_start_of_option",
+        "partition",
+        "append",
+        "get_params",
+        "_is_incomplete_option",
+        "_is_incomplete_argument"
+      ]
+    },
+    {
+      "name": "_mask_hidden_input",
+      "file": "termui.py",
+      "start_line": 60,
+      "end_line": 75,
+      "calls": [
+        "replace",
+        "repr",
+        "sub",
+        "escape"
+      ]
+    },
+    {
+      "name": "hidden_prompt_func",
+      "file": "termui.py",
+      "start_line": 78,
+      "end_line": 81,
+      "calls": [
+        "getpass"
+      ]
+    },
+    {
+      "name": "_readline_prompt",
+      "file": "termui.py",
+      "start_line": 84,
+      "end_line": 101,
+      "calls": [
+        "echo",
+        "func",
+        "redirect_stdout"
+      ]
+    },
+    {
+      "name": "_build_prompt",
+      "file": "termui.py",
+      "start_line": 104,
+      "end_line": 119,
+      "calls": [
+        "isinstance",
+        "join",
+        "map",
+        "_format_default"
+      ]
+    },
+    {
+      "name": "_format_default",
+      "file": "termui.py",
+      "start_line": 122,
+      "end_line": 126,
+      "calls": [
+        "isinstance",
+        "hasattr"
+      ]
+    },
+    {
+      "name": "prompt",
+      "file": "termui.py",
+      "start_line": 129,
+      "end_line": 239,
+      "calls": [
+        "_readline_prompt",
+        "echo",
+        "Abort",
+        "convert_type",
+        "_build_prompt",
+        "_",
+        "prompt_func",
+        "value_proc",
+        "_mask_hidden_input",
+        "format"
+      ]
+    },
+    {
+      "name": "prompt_func",
+      "file": "termui.py",
+      "start_line": 191,
+      "end_line": 201,
+      "calls": [
+        "_readline_prompt",
+        "echo",
+        "Abort"
+      ]
+    },
+    {
+      "name": "confirm",
+      "file": "termui.py",
+      "start_line": 242,
+      "end_line": 298,
+      "calls": [
+        "_build_prompt",
+        "strip",
+        "lower",
+        "_readline_prompt",
+        "Abort",
+        "echo",
+        "_"
+      ]
+    },
+    {
+      "name": "get_pager_file",
+      "file": "termui.py",
+      "start_line": 301,
+      "end_line": 317,
+      "calls": [
+        "resolve_color_default",
+        "get_pager_file"
+      ]
+    },
+    {
+      "name": "echo_via_pager",
+      "file": "termui.py",
+      "start_line": 320,
+      "end_line": 348,
+      "calls": [
+        "isgeneratorfunction",
+        "cast",
+        "isinstance",
+        "iter",
+        "str",
+        "get_pager_file",
+        "chain",
+        "write"
+      ]
+    },
+    {
+      "name": "progressbar",
+      "file": "termui.py",
+      "start_line": 352,
+      "end_line": 368,
+      "calls": []
+    },
+    {
+      "name": "progressbar",
+      "file": "termui.py",
+      "start_line": 372,
+      "end_line": 389,
+      "calls": []
+    },
+    {
+      "name": "progressbar",
+      "file": "termui.py",
+      "start_line": 392,
+      "end_line": 548,
+      "calls": [
+        "resolve_color_default",
+        "ProgressBar"
+      ]
+    },
+    {
+      "name": "clear",
+      "file": "termui.py",
+      "start_line": 551,
+      "end_line": 562,
+      "calls": [
+        "isatty",
+        "echo"
+      ]
+    },
+    {
+      "name": "_interpret_color",
+      "file": "termui.py",
+      "start_line": 565,
+      "end_line": 573,
+      "calls": [
+        "isinstance",
+        "str"
+      ]
+    },
+    {
+      "name": "style",
+      "file": "termui.py",
+      "start_line": 576,
+      "end_line": 702,
+      "calls": [
+        "isinstance",
+        "str",
+        "append",
+        "_interpret_color",
+        "TypeError",
+        "format",
+        "_",
+        "join"
+      ]
+    },
+    {
+      "name": "unstyle",
+      "file": "termui.py",
+      "start_line": 705,
+      "end_line": 714,
+      "calls": [
+        "strip_ansi"
+      ]
+    },
+    {
+      "name": "secho",
+      "file": "termui.py",
+      "start_line": 717,
+      "end_line": 748,
+      "calls": [
+        "isinstance",
+        "style",
+        "echo"
+      ]
+    },
+    {
+      "name": "edit",
+      "file": "termui.py",
+      "start_line": 752,
+      "end_line": 758,
+      "calls": []
+    },
+    {
+      "name": "edit",
+      "file": "termui.py",
+      "start_line": 762,
+      "end_line": 768,
+      "calls": []
+    },
+    {
+      "name": "edit",
+      "file": "termui.py",
+      "start_line": 772,
+      "end_line": 779,
+      "calls": []
+    },
+    {
+      "name": "edit",
+      "file": "termui.py",
+      "start_line": 782,
+      "end_line": 837,
+      "calls": [
+        "Editor",
+        "edit",
+        "isinstance",
+        "edit_files"
+      ]
+    },
+    {
+      "name": "launch",
+      "file": "termui.py",
+      "start_line": 840,
+      "end_line": 866,
+      "calls": [
+        "open_url"
+      ]
+    },
+    {
+      "name": "getchar",
+      "file": "termui.py",
+      "start_line": 874,
+      "end_line": 901,
+      "calls": [
+        "_getchar"
+      ]
+    },
+    {
+      "name": "raw_terminal",
+      "file": "termui.py",
+      "start_line": 904,
+      "end_line": 907,
+      "calls": [
+        "f"
+      ]
+    },
+    {
+      "name": "pause",
+      "file": "termui.py",
+      "start_line": 910,
+      "end_line": 941,
+      "calls": [
+        "isatty",
+        "_",
+        "echo",
+        "getchar"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "testing.py",
+      "start_line": 29,
+      "end_line": 32,
+      "calls": []
+    },
+    {
+      "name": "__getattr__",
+      "file": "testing.py",
+      "start_line": 34,
+      "end_line": 35,
+      "calls": [
+        "getattr"
+      ]
+    },
+    {
+      "name": "_echo",
+      "file": "testing.py",
+      "start_line": 37,
+      "end_line": 41,
+      "calls": [
+        "write"
+      ]
+    },
+    {
+      "name": "read",
+      "file": "testing.py",
+      "start_line": 43,
+      "end_line": 44,
+      "calls": [
+        "_echo",
+        "read"
+      ]
+    },
+    {
+      "name": "read1",
+      "file": "testing.py",
+      "start_line": 46,
+      "end_line": 47,
+      "calls": [
+        "_echo",
+        "read1"
+      ]
+    },
+    {
+      "name": "readline",
+      "file": "testing.py",
+      "start_line": 49,
+      "end_line": 50,
+      "calls": [
+        "_echo",
+        "readline"
+      ]
+    },
+    {
+      "name": "readlines",
+      "file": "testing.py",
+      "start_line": 52,
+      "end_line": 53,
+      "calls": [
+        "_echo",
+        "readlines"
+      ]
+    },
+    {
+      "name": "__iter__",
+      "file": "testing.py",
+      "start_line": 55,
+      "end_line": 56,
+      "calls": [
+        "iter",
+        "_echo"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "testing.py",
+      "start_line": 58,
+      "end_line": 59,
+      "calls": [
+        "repr"
+      ]
+    },
+    {
+      "name": "_pause_echo",
+      "file": "testing.py",
+      "start_line": 63,
+      "end_line": 69,
+      "calls": []
+    },
+    {
+      "name": "__init__",
+      "file": "testing.py",
+      "start_line": 83,
+      "end_line": 86,
+      "calls": []
+    },
+    {
+      "name": "start",
+      "file": "testing.py",
+      "start_line": 88,
+      "end_line": 91,
+      "calls": [
+        "dup",
+        "TemporaryFile",
+        "dup2",
+        "fileno"
+      ]
+    },
+    {
+      "name": "stop",
+      "file": "testing.py",
+      "start_line": 93,
+      "end_line": 102,
+      "calls": [
+        "dup2",
+        "close",
+        "seek",
+        "read"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "testing.py",
+      "start_line": 111,
+      "end_line": 113,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "flush",
+      "file": "testing.py",
+      "start_line": 115,
+      "end_line": 117,
+      "calls": [
+        "flush",
+        "super"
+      ]
+    },
+    {
+      "name": "write",
+      "file": "testing.py",
+      "start_line": 119,
+      "end_line": 121,
+      "calls": [
+        "write",
+        "super"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "testing.py",
+      "start_line": 132,
+      "end_line": 135,
+      "calls": [
+        "BytesIO",
+        "BytesIOCopy"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "testing.py",
+      "start_line": 150,
+      "end_line": 160,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "close",
+      "file": "testing.py",
+      "start_line": 162,
+      "end_line": 168,
+      "calls": []
+    },
+    {
+      "name": "fileno",
+      "file": "testing.py",
+      "start_line": 170,
+      "end_line": 178,
+      "calls": [
+        "fileno",
+        "super"
+      ]
+    },
+    {
+      "name": "name",
+      "file": "testing.py",
+      "start_line": 181,
+      "end_line": 182,
+      "calls": []
+    },
+    {
+      "name": "mode",
+      "file": "testing.py",
+      "start_line": 185,
+      "end_line": 186,
+      "calls": []
+    },
+    {
+      "name": "make_input_stream",
+      "file": "testing.py",
+      "start_line": 189,
+      "end_line": 206,
+      "calls": [
+        "hasattr",
+        "_find_binary_reader",
+        "cast",
+        "TypeError",
+        "isinstance",
+        "encode",
+        "BytesIO"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "testing.py",
+      "start_line": 231,
+      "end_line": 250,
+      "calls": []
+    },
+    {
+      "name": "output",
+      "file": "testing.py",
+      "start_line": 253,
+      "end_line": 262,
+      "calls": [
+        "replace",
+        "decode"
+      ]
+    },
+    {
+      "name": "stdout",
+      "file": "testing.py",
+      "start_line": 265,
+      "end_line": 269,
+      "calls": [
+        "replace",
+        "decode"
+      ]
+    },
+    {
+      "name": "stderr",
+      "file": "testing.py",
+      "start_line": 272,
+      "end_line": 280,
+      "calls": [
+        "replace",
+        "decode"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "testing.py",
+      "start_line": 282,
+      "end_line": 284,
+      "calls": [
+        "repr",
+        "type"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "testing.py",
+      "start_line": 324,
+      "end_line": 344,
+      "calls": [
+        "ValueError"
+      ]
+    },
+    {
+      "name": "get_default_prog_name",
+      "file": "testing.py",
+      "start_line": 346,
+      "end_line": 351,
+      "calls": []
+    },
+    {
+      "name": "make_env",
+      "file": "testing.py",
+      "start_line": 353,
+      "end_line": 360,
+      "calls": [
+        "dict",
+        "update"
+      ]
+    },
+    {
+      "name": "isolation",
+      "file": "testing.py",
+      "start_line": 363,
+      "end_line": 558,
+      "calls": [
+        "make_input_stream",
+        "make_env",
+        "StreamMixer",
+        "cast",
+        "EchoingStdin",
+        "_NamedTextIOWrapper",
+        "_pause_echo",
+        "write",
+        "rstrip",
+        "next",
+        "EOFError",
+        "flush",
+        "read",
+        "old_pdb_init",
+        "items",
+        "get"
+      ]
+    },
+    {
+      "name": "visible_input",
+      "file": "testing.py",
+      "start_line": 439,
+      "end_line": 447,
+      "calls": [
+        "write",
+        "rstrip",
+        "next",
+        "EOFError",
+        "flush"
+      ]
+    },
+    {
+      "name": "hidden_input",
+      "file": "testing.py",
+      "start_line": 450,
+      "end_line": 456,
+      "calls": [
+        "write",
+        "flush",
+        "rstrip",
+        "next",
+        "EOFError"
+      ]
+    },
+    {
+      "name": "_getchar",
+      "file": "testing.py",
+      "start_line": 459,
+      "end_line": 466,
+      "calls": [
+        "read",
+        "write",
+        "flush"
+      ]
+    },
+    {
+      "name": "should_strip_ansi",
+      "file": "testing.py",
+      "start_line": 470,
+      "end_line": 475,
+      "calls": []
+    },
+    {
+      "name": "_patched_pdb_init",
+      "file": "testing.py",
+      "start_line": 489,
+      "end_line": 524,
+      "calls": [
+        "old_pdb_init"
+      ]
+    },
+    {
+      "name": "invoke",
+      "file": "testing.py",
+      "start_line": 560,
+      "end_line": 703,
+      "calls": [
+        "_FDCapture",
+        "start",
+        "isolation",
+        "isinstance",
+        "split",
+        "pop",
+        "get_default_prog_name",
+        "main",
+        "exc_info",
+        "cast",
+        "write",
+        "str",
+        "flush",
+        "stop",
+        "getvalue",
+        "Result"
+      ]
+    },
+    {
+      "name": "isolated_filesystem",
+      "file": "testing.py",
+      "start_line": 706,
+      "end_line": 736,
+      "calls": [
+        "getcwd",
+        "mkdtemp",
+        "chdir",
+        "rmtree"
+      ]
+    },
+    {
+      "name": "to_info_dict",
+      "file": "types.py",
+      "start_line": 75,
+      "end_line": 94,
+      "calls": [
+        "partition",
+        "type",
+        "hasattr"
+      ]
+    },
+    {
+      "name": "__call__",
+      "file": "types.py",
+      "start_line": 96,
+      "end_line": 104,
+      "calls": [
+        "convert"
+      ]
+    },
+    {
+      "name": "get_metavar",
+      "file": "types.py",
+      "start_line": 106,
+      "end_line": 107,
+      "calls": []
+    },
+    {
+      "name": "get_missing_message",
+      "file": "types.py",
+      "start_line": 109,
+      "end_line": 114,
+      "calls": []
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 116,
+      "end_line": 140,
+      "calls": [
+        "cast"
+      ]
+    },
+    {
+      "name": "split_envvar_value",
+      "file": "types.py",
+      "start_line": 142,
+      "end_line": 150,
+      "calls": [
+        "split"
+      ]
+    },
+    {
+      "name": "fail",
+      "file": "types.py",
+      "start_line": 152,
+      "end_line": 159,
+      "calls": [
+        "BadParameter"
+      ]
+    },
+    {
+      "name": "shell_complete",
+      "file": "types.py",
+      "start_line": 161,
+      "end_line": 176,
+      "calls": []
+    },
+    {
+      "name": "arity",
+      "file": "types.py",
+      "start_line": 184,
+      "end_line": 184,
+      "calls": []
+    },
+    {
+      "name": "__init__",
+      "file": "types.py",
+      "start_line": 192,
+      "end_line": 194,
+      "calls": []
+    },
+    {
+      "name": "to_info_dict",
+      "file": "types.py",
+      "start_line": 196,
+      "end_line": 197,
+      "calls": [
+        "to_info_dict",
+        "super"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 199,
+      "end_line": 213,
+      "calls": [
+        "func",
+        "str",
+        "decode",
+        "fail"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 219,
+      "end_line": 222,
+      "calls": []
+    },
+    {
+      "name": "__repr__",
+      "file": "types.py",
+      "start_line": 224,
+      "end_line": 225,
+      "calls": []
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 231,
+      "end_line": 248,
+      "calls": [
+        "isinstance",
+        "_get_argv_encoding",
+        "decode",
+        "getfilesystemencoding",
+        "str"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "types.py",
+      "start_line": 250,
+      "end_line": 251,
+      "calls": []
+    },
+    {
+      "name": "__init__",
+      "file": "types.py",
+      "start_line": 289,
+      "end_line": 293,
+      "calls": [
+        "tuple"
+      ]
+    },
+    {
+      "name": "to_info_dict",
+      "file": "types.py",
+      "start_line": 295,
+      "end_line": 300,
+      "calls": [
+        "to_info_dict",
+        "super"
+      ]
+    },
+    {
+      "name": "_normalized_mapping",
+      "file": "types.py",
+      "start_line": 302,
+      "end_line": 318,
+      "calls": [
+        "normalize_choice"
+      ]
+    },
+    {
+      "name": "normalize_choice",
+      "file": "types.py",
+      "start_line": 320,
+      "end_line": 338,
+      "calls": [
+        "isinstance",
+        "str",
+        "token_normalize_func",
+        "casefold"
+      ]
+    },
+    {
+      "name": "get_metavar",
+      "file": "types.py",
+      "start_line": 340,
+      "end_line": 356,
+      "calls": [
+        "upper",
+        "convert_type",
+        "type",
+        "join",
+        "fromkeys",
+        "str",
+        "values",
+        "_normalized_mapping"
+      ]
+    },
+    {
+      "name": "get_missing_message",
+      "file": "types.py",
+      "start_line": 358,
+      "end_line": 366,
+      "calls": [
+        "format",
+        "_",
+        "join",
+        "values",
+        "_normalized_mapping"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 368,
+      "end_line": 390,
+      "calls": [
+        "normalize_choice",
+        "_normalized_mapping",
+        "next",
+        "items",
+        "fail",
+        "get_invalid_choice_message"
+      ]
+    },
+    {
+      "name": "get_invalid_choice_message",
+      "file": "types.py",
+      "start_line": 392,
+      "end_line": 404,
+      "calls": [
+        "join",
+        "map",
+        "values",
+        "_normalized_mapping",
+        "format",
+        "ngettext",
+        "len"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "types.py",
+      "start_line": 406,
+      "end_line": 407,
+      "calls": [
+        "format",
+        "_",
+        "list"
+      ]
+    },
+    {
+      "name": "shell_complete",
+      "file": "types.py",
+      "start_line": 409,
+      "end_line": 429,
+      "calls": [
+        "normalize_choice",
+        "startswith",
+        "lower",
+        "CompletionItem"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "types.py",
+      "start_line": 459,
+      "end_line": 464,
+      "calls": []
+    },
+    {
+      "name": "to_info_dict",
+      "file": "types.py",
+      "start_line": 466,
+      "end_line": 467,
+      "calls": [
+        "to_info_dict",
+        "super"
+      ]
+    },
+    {
+      "name": "get_metavar",
+      "file": "types.py",
+      "start_line": 469,
+      "end_line": 470,
+      "calls": [
+        "join"
+      ]
+    },
+    {
+      "name": "_try_to_convert_date",
+      "file": "types.py",
+      "start_line": 472,
+      "end_line": 476,
+      "calls": [
+        "strptime"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 478,
+      "end_line": 499,
+      "calls": [
+        "isinstance",
+        "_try_to_convert_date",
+        "join",
+        "map",
+        "fail",
+        "format",
+        "ngettext",
+        "len"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "types.py",
+      "start_line": 501,
+      "end_line": 502,
+      "calls": []
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 508,
+      "end_line": 520,
+      "calls": [
+        "_number_class",
+        "fail",
+        "format",
+        "_"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "types.py",
+      "start_line": 532,
+      "end_line": 544,
+      "calls": []
+    },
+    {
+      "name": "to_info_dict",
+      "file": "types.py",
+      "start_line": 546,
+      "end_line": 554,
+      "calls": [
+        "to_info_dict",
+        "super"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 556,
+      "end_line": 587,
+      "calls": [
+        "convert",
+        "super",
+        "_clamp",
+        "fail",
+        "format",
+        "_",
+        "_describe_range"
+      ]
+    },
+    {
+      "name": "_clamp",
+      "file": "types.py",
+      "start_line": 590,
+      "end_line": 600,
+      "calls": []
+    },
+    {
+      "name": "_describe_range",
+      "file": "types.py",
+      "start_line": 602,
+      "end_line": 614,
+      "calls": []
+    },
+    {
+      "name": "__repr__",
+      "file": "types.py",
+      "start_line": 616,
+      "end_line": 618,
+      "calls": [
+        "type",
+        "_describe_range"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "types.py",
+      "start_line": 625,
+      "end_line": 626,
+      "calls": []
+    },
+    {
+      "name": "_clamp",
+      "file": "types.py",
+      "start_line": 646,
+      "end_line": 650,
+      "calls": []
+    },
+    {
+      "name": "__repr__",
+      "file": "types.py",
+      "start_line": 657,
+      "end_line": 658,
+      "calls": []
+    },
+    {
+      "name": "__init__",
+      "file": "types.py",
+      "start_line": 679,
+      "end_line": 692,
+      "calls": [
+        "__init__",
+        "super",
+        "TypeError"
+      ]
+    },
+    {
+      "name": "_clamp",
+      "file": "types.py",
+      "start_line": 694,
+      "end_line": 701,
+      "calls": [
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "str_to_bool",
+      "file": "types.py",
+      "start_line": 741,
+      "end_line": 753,
+      "calls": [
+        "isinstance",
+        "get",
+        "lower",
+        "strip"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 755,
+      "end_line": 767,
+      "calls": [
+        "str_to_bool",
+        "fail",
+        "format",
+        "_",
+        "join",
+        "sorted"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "types.py",
+      "start_line": 769,
+      "end_line": 770,
+      "calls": []
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 776,
+      "end_line": 789,
+      "calls": [
+        "isinstance",
+        "strip",
+        "UUID",
+        "fail",
+        "format",
+        "_"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "types.py",
+      "start_line": 791,
+      "end_line": 792,
+      "calls": []
+    },
+    {
+      "name": "__init__",
+      "file": "types.py",
+      "start_line": 833,
+      "end_line": 845,
+      "calls": []
+    },
+    {
+      "name": "to_info_dict",
+      "file": "types.py",
+      "start_line": 847,
+      "end_line": 852,
+      "calls": [
+        "to_info_dict",
+        "super"
+      ]
+    },
+    {
+      "name": "resolve_lazy_flag",
+      "file": "types.py",
+      "start_line": 854,
+      "end_line": 861,
+      "calls": [
+        "fspath"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 863,
+      "end_line": 908,
+      "calls": [
+        "_is_file_like",
+        "cast",
+        "resolve_lazy_flag",
+        "LazyFile",
+        "call_on_close",
+        "open_stream",
+        "safecall",
+        "fail",
+        "format_filename"
+      ]
+    },
+    {
+      "name": "shell_complete",
+      "file": "types.py",
+      "start_line": 910,
+      "end_line": 924,
+      "calls": [
+        "CompletionItem"
+      ]
+    },
+    {
+      "name": "_is_file_like",
+      "file": "types.py",
+      "start_line": 927,
+      "end_line": 928,
+      "calls": [
+        "hasattr"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "types.py",
+      "start_line": 975,
+      "end_line": 1002,
+      "calls": [
+        "_"
+      ]
+    },
+    {
+      "name": "to_info_dict",
+      "file": "types.py",
+      "start_line": 1004,
+      "end_line": 1013,
+      "calls": [
+        "to_info_dict",
+        "super"
+      ]
+    },
+    {
+      "name": "coerce_path_result",
+      "file": "types.py",
+      "start_line": 1015,
+      "end_line": 1026,
+      "calls": [
+        "isinstance",
+        "fsdecode",
+        "fsencode",
+        "cast",
+        "type"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 1028,
+      "end_line": 1099,
+      "calls": [
+        "realpath",
+        "stat",
+        "coerce_path_result",
+        "fail",
+        "format",
+        "_",
+        "title",
+        "format_filename",
+        "S_ISREG",
+        "S_ISDIR",
+        "access"
+      ]
+    },
+    {
+      "name": "shell_complete",
+      "file": "types.py",
+      "start_line": 1101,
+      "end_line": 1117,
+      "calls": [
+        "CompletionItem"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "types.py",
+      "start_line": 1138,
+      "end_line": 1139,
+      "calls": [
+        "convert_type"
+      ]
+    },
+    {
+      "name": "to_info_dict",
+      "file": "types.py",
+      "start_line": 1141,
+      "end_line": 1145,
+      "calls": [
+        "to_info_dict",
+        "super"
+      ]
+    },
+    {
+      "name": "name",
+      "file": "types.py",
+      "start_line": 1148,
+      "end_line": 1149,
+      "calls": [
+        "join"
+      ]
+    },
+    {
+      "name": "arity",
+      "file": "types.py",
+      "start_line": 1152,
+      "end_line": 1153,
+      "calls": [
+        "len"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "types.py",
+      "start_line": 1155,
+      "end_line": 1174,
+      "calls": [
+        "len",
+        "fail",
+        "format",
+        "ngettext",
+        "tuple",
+        "ty",
+        "zip"
+      ]
+    },
+    {
+      "name": "_guess_type",
+      "file": "types.py",
+      "start_line": 1177,
+      "end_line": 1209,
+      "calls": [
+        "isinstance",
+        "type",
+        "tuple",
+        "map"
+      ]
+    },
+    {
+      "name": "convert_type",
+      "file": "types.py",
+      "start_line": 1213,
+      "end_line": 1213,
+      "calls": []
+    },
+    {
+      "name": "convert_type",
+      "file": "types.py",
+      "start_line": 1217,
+      "end_line": 1219,
+      "calls": []
+    },
+    {
+      "name": "convert_type",
+      "file": "types.py",
+      "start_line": 1223,
+      "end_line": 1225,
+      "calls": []
+    },
+    {
+      "name": "convert_type",
+      "file": "types.py",
+      "start_line": 1228,
+      "end_line": 1269,
+      "calls": [
+        "_guess_type",
+        "isinstance",
+        "Tuple",
+        "issubclass",
+        "AssertionError",
+        "FuncParamType"
+      ]
+    },
+    {
+      "name": "_posixify",
+      "file": "utils.py",
+      "start_line": 33,
+      "end_line": 34,
+      "calls": [
+        "lower",
+        "join",
+        "split"
+      ]
+    },
+    {
+      "name": "safecall",
+      "file": "utils.py",
+      "start_line": 37,
+      "end_line": 47,
+      "calls": [
+        "func",
+        "update_wrapper"
+      ]
+    },
+    {
+      "name": "wrapper",
+      "file": "utils.py",
+      "start_line": 40,
+      "end_line": 45,
+      "calls": [
+        "func"
+      ]
+    },
+    {
+      "name": "make_str",
+      "file": "utils.py",
+      "start_line": 50,
+      "end_line": 57,
+      "calls": [
+        "isinstance",
+        "decode",
+        "getfilesystemencoding",
+        "str"
+      ]
+    },
+    {
+      "name": "make_default_short_help",
+      "file": "utils.py",
+      "start_line": 60,
+      "end_line": 110,
+      "calls": [
+        "find",
+        "split",
+        "len",
+        "enumerate",
+        "join"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "utils.py",
+      "start_line": 128,
+      "end_line": 151,
+      "calls": [
+        "fspath",
+        "open_stream",
+        "close",
+        "open"
+      ]
+    },
+    {
+      "name": "__getattr__",
+      "file": "utils.py",
+      "start_line": 153,
+      "end_line": 154,
+      "calls": [
+        "getattr",
+        "open"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "utils.py",
+      "start_line": 156,
+      "end_line": 159,
+      "calls": [
+        "repr",
+        "format_filename"
+      ]
+    },
+    {
+      "name": "open",
+      "file": "utils.py",
+      "start_line": 161,
+      "end_line": 177,
+      "calls": [
+        "open_stream",
+        "FileError"
+      ]
+    },
+    {
+      "name": "close",
+      "file": "utils.py",
+      "start_line": 179,
+      "end_line": 182,
+      "calls": [
+        "close"
+      ]
+    },
+    {
+      "name": "close_intelligently",
+      "file": "utils.py",
+      "start_line": 184,
+      "end_line": 189,
+      "calls": [
+        "close"
+      ]
+    },
+    {
+      "name": "__enter__",
+      "file": "utils.py",
+      "start_line": 191,
+      "end_line": 192,
+      "calls": []
+    },
+    {
+      "name": "__exit__",
+      "file": "utils.py",
+      "start_line": 194,
+      "end_line": 200,
+      "calls": [
+        "close_intelligently"
+      ]
+    },
+    {
+      "name": "__iter__",
+      "file": "utils.py",
+      "start_line": 202,
+      "end_line": 204,
+      "calls": [
+        "open",
+        "iter"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "utils.py",
+      "start_line": 210,
+      "end_line": 211,
+      "calls": []
+    },
+    {
+      "name": "__getattr__",
+      "file": "utils.py",
+      "start_line": 213,
+      "end_line": 214,
+      "calls": [
+        "getattr"
+      ]
+    },
+    {
+      "name": "__enter__",
+      "file": "utils.py",
+      "start_line": 216,
+      "end_line": 217,
+      "calls": []
+    },
+    {
+      "name": "__exit__",
+      "file": "utils.py",
+      "start_line": 219,
+      "end_line": 225,
+      "calls": []
+    },
+    {
+      "name": "__repr__",
+      "file": "utils.py",
+      "start_line": 227,
+      "end_line": 228,
+      "calls": [
+        "repr"
+      ]
+    },
+    {
+      "name": "__iter__",
+      "file": "utils.py",
+      "start_line": 230,
+      "end_line": 231,
+      "calls": [
+        "iter"
+      ]
+    },
+    {
+      "name": "echo",
+      "file": "utils.py",
+      "start_line": 234,
+      "end_line": 334,
+      "calls": [
+        "_default_text_stderr",
+        "_default_text_stdout",
+        "str",
+        "isinstance",
+        "flush",
+        "_find_binary_writer",
+        "write",
+        "resolve_color_default",
+        "should_strip_ansi",
+        "strip_ansi",
+        "auto_wrap_for_ansi"
+      ]
+    },
+    {
+      "name": "get_binary_stream",
+      "file": "utils.py",
+      "start_line": 337,
+      "end_line": 346,
+      "calls": [
+        "get",
+        "TypeError",
+        "format",
+        "_",
+        "opener"
+      ]
+    },
+    {
+      "name": "get_text_stream",
+      "file": "utils.py",
+      "start_line": 349,
+      "end_line": 367,
+      "calls": [
+        "get",
+        "TypeError",
+        "format",
+        "_",
+        "opener"
+      ]
+    },
+    {
+      "name": "open_file",
+      "file": "utils.py",
+      "start_line": 370,
+      "end_line": 416,
+      "calls": [
+        "cast",
+        "LazyFile",
+        "open_stream",
+        "KeepOpenFile"
+      ]
+    },
+    {
+      "name": "format_filename",
+      "file": "utils.py",
+      "start_line": 419,
+      "end_line": 458,
+      "calls": [
+        "basename",
+        "fspath",
+        "isinstance",
+        "decode",
+        "getfilesystemencoding",
+        "encode"
+      ]
+    },
+    {
+      "name": "get_app_dir",
+      "file": "utils.py",
+      "start_line": 461,
+      "end_line": 507,
+      "calls": [
+        "get",
+        "expanduser",
+        "join",
+        "_posixify"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "utils.py",
+      "start_line": 521,
+      "end_line": 522,
+      "calls": []
+    },
+    {
+      "name": "flush",
+      "file": "utils.py",
+      "start_line": 524,
+      "end_line": 531,
+      "calls": [
+        "flush"
+      ]
+    },
+    {
+      "name": "__getattr__",
+      "file": "utils.py",
+      "start_line": 533,
+      "end_line": 534,
+      "calls": [
+        "getattr"
+      ]
+    },
+    {
+      "name": "_detect_program_name",
+      "file": "utils.py",
+      "start_line": 537,
+      "end_line": 589,
+      "calls": [
+        "getattr",
+        "exists",
+        "basename",
+        "cast",
+        "splitext",
+        "lstrip"
+      ]
+    },
+    {
+      "name": "_expand_args",
+      "file": "utils.py",
+      "start_line": 592,
+      "end_line": 641,
+      "calls": [
+        "expanduser",
+        "expandvars",
+        "glob",
+        "append",
+        "extend"
+      ]
+    }
+  ],
+  "call_edges": [
+    {
+      "caller": "_make_text_stream",
+      "callee": "get_best_encoding"
+    },
+    {
+      "caller": "get_best_encoding",
+      "callee": "is_ascii_encoding"
+    },
+    {
+      "caller": "read1",
+      "callee": "read"
+    },
+    {
+      "caller": "readable",
+      "callee": "read"
+    },
+    {
+      "caller": "writable",
+      "callee": "write"
+    },
+    {
+      "caller": "_is_binary_reader",
+      "callee": "read"
+    },
+    {
+      "caller": "_is_binary_writer",
+      "callee": "write"
+    },
+    {
+      "caller": "_find_binary_reader",
+      "callee": "_is_binary_reader"
+    },
+    {
+      "caller": "_find_binary_writer",
+      "callee": "_is_binary_writer"
+    },
+    {
+      "caller": "_stream_is_misconfigured",
+      "callee": "is_ascii_encoding"
+    },
+    {
+      "caller": "_is_compatible_text_stream",
+      "callee": "_is_compat_stream_attr"
+    },
+    {
+      "caller": "_force_correct_text_stream",
+      "callee": "_is_compatible_text_stream"
+    },
+    {
+      "caller": "_force_correct_text_stream",
+      "callee": "_stream_is_misconfigured"
+    },
+    {
+      "caller": "_force_correct_text_stream",
+      "callee": "_make_text_stream"
+    },
+    {
+      "caller": "_force_correct_text_reader",
+      "callee": "_force_correct_text_stream"
+    },
+    {
+      "caller": "_force_correct_text_writer",
+      "callee": "_force_correct_text_stream"
+    },
+    {
+      "caller": "get_binary_stdin",
+      "callee": "_find_binary_reader"
+    },
+    {
+      "caller": "get_binary_stdout",
+      "callee": "_find_binary_writer"
+    },
+    {
+      "caller": "get_binary_stderr",
+      "callee": "_find_binary_writer"
+    },
+    {
+      "caller": "get_text_stdin",
+      "callee": "_get_windows_console_stream"
+    },
+    {
+      "caller": "get_text_stdin",
+      "callee": "_force_correct_text_reader"
+    },
+    {
+      "caller": "get_text_stdout",
+      "callee": "_get_windows_console_stream"
+    },
+    {
+      "caller": "get_text_stdout",
+      "callee": "_force_correct_text_writer"
+    },
+    {
+      "caller": "get_text_stderr",
+      "callee": "_get_windows_console_stream"
+    },
+    {
+      "caller": "get_text_stderr",
+      "callee": "_force_correct_text_writer"
+    },
+    {
+      "caller": "_wrap_io_open",
+      "callee": "open"
+    },
+    {
+      "caller": "open_stream",
+      "callee": "get_binary_stdout"
+    },
+    {
+      "caller": "open_stream",
+      "callee": "get_text_stdout"
+    },
+    {
+      "caller": "open_stream",
+      "callee": "get_binary_stdin"
+    },
+    {
+      "caller": "open_stream",
+      "callee": "get_text_stdin"
+    },
+    {
+      "caller": "open_stream",
+      "callee": "_wrap_io_open"
+    },
+    {
+      "caller": "open_stream",
+      "callee": "open"
+    },
+    {
+      "caller": "__exit__",
+      "callee": "close"
+    },
+    {
+      "caller": "should_strip_ansi",
+      "callee": "isatty"
+    },
+    {
+      "caller": "should_strip_ansi",
+      "callee": "_is_jupyter_kernel_output"
+    },
+    {
+      "caller": "auto_wrap_for_ansi",
+      "callee": "should_strip_ansi"
+    },
+    {
+      "caller": "term_len",
+      "callee": "strip_ansi"
+    },
+    {
+      "caller": "__init__",
+      "callee": "isatty"
+    },
+    {
+      "caller": "__enter__",
+      "callee": "render_progress"
+    },
+    {
+      "caller": "__exit__",
+      "callee": "render_finish"
+    },
+    {
+      "caller": "__iter__",
+      "callee": "render_progress"
+    },
+    {
+      "caller": "__iter__",
+      "callee": "generator"
+    },
+    {
+      "caller": "render_finish",
+      "callee": "write"
+    },
+    {
+      "caller": "render_finish",
+      "callee": "flush"
+    },
+    {
+      "caller": "format_progress_line",
+      "callee": "format_pos"
+    },
+    {
+      "caller": "format_progress_line",
+      "callee": "format_pct"
+    },
+    {
+      "caller": "format_progress_line",
+      "callee": "format_eta"
+    },
+    {
+      "caller": "format_progress_line",
+      "callee": "format_bar"
+    },
+    {
+      "caller": "render_progress",
+      "callee": "echo"
+    },
+    {
+      "caller": "render_progress",
+      "callee": "term_len"
+    },
+    {
+      "caller": "render_progress",
+      "callee": "format_progress_line"
+    },
+    {
+      "caller": "render_progress",
+      "callee": "flush"
+    },
+    {
+      "caller": "update",
+      "callee": "make_step"
+    },
+    {
+      "caller": "update",
+      "callee": "render_progress"
+    },
+    {
+      "caller": "generator",
+      "callee": "render_progress"
+    },
+    {
+      "caller": "generator",
+      "callee": "update"
+    },
+    {
+      "caller": "generator",
+      "callee": "finish"
+    },
+    {
+      "caller": "write",
+      "callee": "strip_ansi"
+    },
+    {
+      "caller": "_pager_contextmanager",
+      "callee": "isatty"
+    },
+    {
+      "caller": "_pager_contextmanager",
+      "callee": "_nullpager"
+    },
+    {
+      "caller": "_pager_contextmanager",
+      "callee": "_tempfilepager"
+    },
+    {
+      "caller": "_pager_contextmanager",
+      "callee": "_pipepager"
+    },
+    {
+      "caller": "get_pager_file",
+      "callee": "_pager_contextmanager"
+    },
+    {
+      "caller": "get_pager_file",
+      "callee": "_has_binary_buffer"
+    },
+    {
+      "caller": "get_pager_file",
+      "callee": "flush"
+    },
+    {
+      "caller": "_pipepager",
+      "callee": "get_best_encoding"
+    },
+    {
+      "caller": "_pipepager",
+      "callee": "close"
+    },
+    {
+      "caller": "_tempfilepager",
+      "callee": "get_best_encoding"
+    },
+    {
+      "caller": "_tempfilepager",
+      "callee": "flush"
+    },
+    {
+      "caller": "_tempfilepager",
+      "callee": "close"
+    },
+    {
+      "caller": "_nullpager",
+      "callee": "get_best_encoding"
+    },
+    {
+      "caller": "edit_files",
+      "callee": "get_editor"
+    },
+    {
+      "caller": "edit_files",
+      "callee": "update"
+    },
+    {
+      "caller": "edit",
+      "callee": "write"
+    },
+    {
+      "caller": "edit",
+      "callee": "edit_files"
+    },
+    {
+      "caller": "edit",
+      "callee": "open"
+    },
+    {
+      "caller": "edit",
+      "callee": "read"
+    },
+    {
+      "caller": "open_url",
+      "callee": "_unquote_file"
+    },
+    {
+      "caller": "open_url",
+      "callee": "open"
+    },
+    {
+      "caller": "open_url",
+      "callee": "close"
+    },
+    {
+      "caller": "getchar",
+      "callee": "func"
+    },
+    {
+      "caller": "getchar",
+      "callee": "_translate_ch_to_exc"
+    },
+    {
+      "caller": "raw_terminal",
+      "callee": "isatty"
+    },
+    {
+      "caller": "raw_terminal",
+      "callee": "open"
+    },
+    {
+      "caller": "raw_terminal",
+      "callee": "fileno"
+    },
+    {
+      "caller": "raw_terminal",
+      "callee": "flush"
+    },
+    {
+      "caller": "raw_terminal",
+      "callee": "close"
+    },
+    {
+      "caller": "getchar",
+      "callee": "raw_terminal"
+    },
+    {
+      "caller": "getchar",
+      "callee": "read"
+    },
+    {
+      "caller": "getchar",
+      "callee": "get_best_encoding"
+    },
+    {
+      "caller": "getchar",
+      "callee": "isatty"
+    },
+    {
+      "caller": "getchar",
+      "callee": "write"
+    },
+    {
+      "caller": "getchar",
+      "callee": "_translate_ch_to_exc"
+    },
+    {
+      "caller": "_handle_long_word",
+      "callee": "_truncate_visible"
+    },
+    {
+      "caller": "_wrap_chunks",
+      "callee": "term_len"
+    },
+    {
+      "caller": "_wrap_chunks",
+      "callee": "_handle_long_word"
+    },
+    {
+      "caller": "readinto",
+      "callee": "get_buffer"
+    },
+    {
+      "caller": "write",
+      "callee": "get_buffer"
+    },
+    {
+      "caller": "write",
+      "callee": "_get_error_message"
+    },
+    {
+      "caller": "write",
+      "callee": "flush"
+    },
+    {
+      "caller": "writelines",
+      "callee": "write"
+    },
+    {
+      "caller": "_is_console",
+      "callee": "fileno"
+    },
+    {
+      "caller": "_get_windows_console_stream",
+      "callee": "_is_console"
+    },
+    {
+      "caller": "_get_windows_console_stream",
+      "callee": "fileno"
+    },
+    {
+      "caller": "_get_windows_console_stream",
+      "callee": "func"
+    },
+    {
+      "caller": "_complete_visible_commands",
+      "callee": "list_commands"
+    },
+    {
+      "caller": "_complete_visible_commands",
+      "callee": "get_command"
+    },
+    {
+      "caller": "__enter__",
+      "callee": "push_context"
+    },
+    {
+      "caller": "__exit__",
+      "callee": "_close_with_exception_info"
+    },
+    {
+      "caller": "__exit__",
+      "callee": "pop_context"
+    },
+    {
+      "caller": "call_on_close",
+      "callee": "callback"
+    },
+    {
+      "caller": "close",
+      "callee": "_close_with_exception_info"
+    },
+    {
+      "caller": "_close_with_exception_info",
+      "callee": "__exit__"
+    },
+    {
+      "caller": "command_path",
+      "callee": "get_params"
+    },
+    {
+      "caller": "command_path",
+      "callee": "get_usage_pieces"
+    },
+    {
+      "caller": "ensure_object",
+      "callee": "find_object"
+    },
+    {
+      "caller": "lookup_default",
+      "callee": "_default_map_has"
+    },
+    {
+      "caller": "exit",
+      "callee": "close"
+    },
+    {
+      "caller": "invoke",
+      "callee": "_make_sub_context"
+    },
+    {
+      "caller": "invoke",
+      "callee": "get_default"
+    },
+    {
+      "caller": "invoke",
+      "callee": "type_cast_value"
+    },
+    {
+      "caller": "invoke",
+      "callee": "update"
+    },
+    {
+      "caller": "invoke",
+      "callee": "augment_usage_errors"
+    },
+    {
+      "caller": "invoke",
+      "callee": "callback"
+    },
+    {
+      "caller": "forward",
+      "callee": "invoke"
+    },
+    {
+      "caller": "to_info_dict",
+      "callee": "get_params"
+    },
+    {
+      "caller": "get_usage",
+      "callee": "make_formatter"
+    },
+    {
+      "caller": "get_usage",
+      "callee": "format_usage"
+    },
+    {
+      "caller": "get_usage",
+      "callee": "getvalue"
+    },
+    {
+      "caller": "get_params",
+      "callee": "get_help_option"
+    },
+    {
+      "caller": "format_usage",
+      "callee": "collect_usage_pieces"
+    },
+    {
+      "caller": "format_usage",
+      "callee": "write_usage"
+    },
+    {
+      "caller": "collect_usage_pieces",
+      "callee": "get_params"
+    },
+    {
+      "caller": "collect_usage_pieces",
+      "callee": "get_usage_pieces"
+    },
+    {
+      "caller": "get_help_option",
+      "callee": "get_help_option_names"
+    },
+    {
+      "caller": "get_help_option",
+      "callee": "help_option"
+    },
+    {
+      "caller": "make_parser",
+      "callee": "get_params"
+    },
+    {
+      "caller": "make_parser",
+      "callee": "add_to_parser"
+    },
+    {
+      "caller": "get_help",
+      "callee": "make_formatter"
+    },
+    {
+      "caller": "get_help",
+      "callee": "format_help"
+    },
+    {
+      "caller": "get_help",
+      "callee": "getvalue"
+    },
+    {
+      "caller": "get_short_help_str",
+      "callee": "make_default_short_help"
+    },
+    {
+      "caller": "get_short_help_str",
+      "callee": "_format_deprecated_label"
+    },
+    {
+      "caller": "format_help",
+      "callee": "format_usage"
+    },
+    {
+      "caller": "format_help",
+      "callee": "format_help_text"
+    },
+    {
+      "caller": "format_help",
+      "callee": "format_options"
+    },
+    {
+      "caller": "format_help",
+      "callee": "format_epilog"
+    },
+    {
+      "caller": "format_help_text",
+      "callee": "_format_deprecated_label"
+    },
+    {
+      "caller": "format_help_text",
+      "callee": "write_paragraph"
+    },
+    {
+      "caller": "format_help_text",
+      "callee": "indentation"
+    },
+    {
+      "caller": "format_help_text",
+      "callee": "write_text"
+    },
+    {
+      "caller": "format_options",
+      "callee": "get_params"
+    },
+    {
+      "caller": "format_options",
+      "callee": "get_help_record"
+    },
+    {
+      "caller": "format_options",
+      "callee": "section"
+    },
+    {
+      "caller": "format_options",
+      "callee": "write_dl"
+    },
+    {
+      "caller": "format_epilog",
+      "callee": "write_paragraph"
+    },
+    {
+      "caller": "format_epilog",
+      "callee": "indentation"
+    },
+    {
+      "caller": "format_epilog",
+      "callee": "write_text"
+    },
+    {
+      "caller": "make_context",
+      "callee": "scope"
+    },
+    {
+      "caller": "make_context",
+      "callee": "parse_args"
+    },
+    {
+      "caller": "parse_args",
+      "callee": "make_parser"
+    },
+    {
+      "caller": "parse_args",
+      "callee": "iter_params_for_processing"
+    },
+    {
+      "caller": "parse_args",
+      "callee": "get_params"
+    },
+    {
+      "caller": "parse_args",
+      "callee": "handle_parse_result"
+    },
+    {
+      "caller": "parse_args",
+      "callee": "fail"
+    },
+    {
+      "caller": "parse_args",
+      "callee": "update"
+    },
+    {
+      "caller": "invoke",
+      "callee": "_format_deprecated_suffix"
+    },
+    {
+      "caller": "invoke",
+      "callee": "echo"
+    },
+    {
+      "caller": "invoke",
+      "callee": "style"
+    },
+    {
+      "caller": "shell_complete",
+      "callee": "get_params"
+    },
+    {
+      "caller": "shell_complete",
+      "callee": "get_parameter_source"
+    },
+    {
+      "caller": "shell_complete",
+      "callee": "get_short_help_str"
+    },
+    {
+      "caller": "shell_complete",
+      "callee": "_complete_visible_commands"
+    },
+    {
+      "caller": "main",
+      "callee": "_expand_args"
+    },
+    {
+      "caller": "main",
+      "callee": "_detect_program_name"
+    },
+    {
+      "caller": "main",
+      "callee": "_main_shell_completion"
+    },
+    {
+      "caller": "main",
+      "callee": "make_context"
+    },
+    {
+      "caller": "main",
+      "callee": "invoke"
+    },
+    {
+      "caller": "main",
+      "callee": "exit"
+    },
+    {
+      "caller": "main",
+      "callee": "echo"
+    },
+    {
+      "caller": "main",
+      "callee": "show"
+    },
+    {
+      "caller": "_main_shell_completion",
+      "callee": "shell_complete"
+    },
+    {
+      "caller": "_main_shell_completion",
+      "callee": "exit"
+    },
+    {
+      "caller": "__call__",
+      "callee": "main"
+    },
+    {
+      "caller": "to_info_dict",
+      "callee": "list_commands"
+    },
+    {
+      "caller": "to_info_dict",
+      "callee": "get_command"
+    },
+    {
+      "caller": "to_info_dict",
+      "callee": "_make_sub_context"
+    },
+    {
+      "caller": "to_info_dict",
+      "callee": "scope"
+    },
+    {
+      "caller": "to_info_dict",
+      "callee": "update"
+    },
+    {
+      "caller": "add_command",
+      "callee": "_check_nested_chain"
+    },
+    {
+      "caller": "command",
+      "callee": "add_command"
+    },
+    {
+      "caller": "command",
+      "callee": "decorator"
+    },
+    {
+      "caller": "decorator",
+      "callee": "command"
+    },
+    {
+      "caller": "decorator",
+      "callee": "add_command"
+    },
+    {
+      "caller": "group",
+      "callee": "add_command"
+    },
+    {
+      "caller": "group",
+      "callee": "decorator"
+    },
+    {
+      "caller": "decorator",
+      "callee": "group"
+    },
+    {
+      "caller": "decorator",
+      "callee": "add_command"
+    },
+    {
+      "caller": "format_options",
+      "callee": "format_commands"
+    },
+    {
+      "caller": "format_commands",
+      "callee": "list_commands"
+    },
+    {
+      "caller": "format_commands",
+      "callee": "get_command"
+    },
+    {
+      "caller": "format_commands",
+      "callee": "get_short_help_str"
+    },
+    {
+      "caller": "format_commands",
+      "callee": "section"
+    },
+    {
+      "caller": "format_commands",
+      "callee": "write_dl"
+    },
+    {
+      "caller": "invoke",
+      "callee": "_process_result"
+    },
+    {
+      "caller": "invoke",
+      "callee": "fail"
+    },
+    {
+      "caller": "invoke",
+      "callee": "resolve_command"
+    },
+    {
+      "caller": "invoke",
+      "callee": "make_context"
+    },
+    {
+      "caller": "_process_result",
+      "callee": "invoke"
+    },
+    {
+      "caller": "resolve_command",
+      "callee": "make_str"
+    },
+    {
+      "caller": "resolve_command",
+      "callee": "get_command"
+    },
+    {
+      "caller": "resolve_command",
+      "callee": "_split_opt"
+    },
+    {
+      "caller": "resolve_command",
+      "callee": "parse_args"
+    },
+    {
+      "caller": "shell_complete",
+      "callee": "get_short_help_str"
+    },
+    {
+      "caller": "shell_complete",
+      "callee": "_complete_visible_commands"
+    },
+    {
+      "caller": "get_command",
+      "callee": "_check_nested_chain"
+    },
+    {
+      "caller": "list_commands",
+      "callee": "update"
+    },
+    {
+      "caller": "__init__",
+      "callee": "_parse_decls"
+    },
+    {
+      "caller": "__init__",
+      "callee": "convert_type"
+    },
+    {
+      "caller": "make_metavar",
+      "callee": "get_metavar"
+    },
+    {
+      "caller": "get_default",
+      "callee": "lookup_default"
+    },
+    {
+      "caller": "get_default",
+      "callee": "_default_map_has"
+    },
+    {
+      "caller": "consume_value",
+      "callee": "value_from_envvar"
+    },
+    {
+      "caller": "consume_value",
+      "callee": "lookup_default"
+    },
+    {
+      "caller": "consume_value",
+      "callee": "_default_map_has"
+    },
+    {
+      "caller": "consume_value",
+      "callee": "split_envvar_value"
+    },
+    {
+      "caller": "consume_value",
+      "callee": "get_default"
+    },
+    {
+      "caller": "type_cast_value",
+      "callee": "_check_iter"
+    },
+    {
+      "caller": "type_cast_value",
+      "callee": "check_iter"
+    },
+    {
+      "caller": "type_cast_value",
+      "callee": "convert"
+    },
+    {
+      "caller": "check_iter",
+      "callee": "_check_iter"
+    },
+    {
+      "caller": "convert",
+      "callee": "check_iter"
+    },
+    {
+      "caller": "convert",
+      "callee": "check_iter"
+    },
+    {
+      "caller": "process_value",
+      "callee": "type_cast_value"
+    },
+    {
+      "caller": "process_value",
+      "callee": "value_is_missing"
+    },
+    {
+      "caller": "process_value",
+      "callee": "callback"
+    },
+    {
+      "caller": "process_value",
+      "callee": "update"
+    },
+    {
+      "caller": "value_from_envvar",
+      "callee": "resolve_envvar_value"
+    },
+    {
+      "caller": "value_from_envvar",
+      "callee": "split_envvar_value"
+    },
+    {
+      "caller": "handle_parse_result",
+      "callee": "get_parameter_source"
+    },
+    {
+      "caller": "handle_parse_result",
+      "callee": "augment_usage_errors"
+    },
+    {
+      "caller": "handle_parse_result",
+      "callee": "consume_value"
+    },
+    {
+      "caller": "handle_parse_result",
+      "callee": "set_parameter_source"
+    },
+    {
+      "caller": "handle_parse_result",
+      "callee": "_format_deprecated_suffix"
+    },
+    {
+      "caller": "handle_parse_result",
+      "callee": "echo"
+    },
+    {
+      "caller": "handle_parse_result",
+      "callee": "style"
+    },
+    {
+      "caller": "handle_parse_result",
+      "callee": "process_value"
+    },
+    {
+      "caller": "__init__",
+      "callee": "_format_deprecated_label"
+    },
+    {
+      "caller": "__init__",
+      "callee": "convert_type"
+    },
+    {
+      "caller": "to_info_dict",
+      "callee": "update"
+    },
+    {
+      "caller": "_parse_decls",
+      "callee": "_split_opt"
+    },
+    {
+      "caller": "add_to_parser",
+      "callee": "add_option"
+    },
+    {
+      "caller": "get_help_record",
+      "callee": "join_options"
+    },
+    {
+      "caller": "get_help_record",
+      "callee": "make_metavar"
+    },
+    {
+      "caller": "get_help_record",
+      "callee": "_write_opts"
+    },
+    {
+      "caller": "get_help_record",
+      "callee": "get_help_extra"
+    },
+    {
+      "caller": "_write_opts",
+      "callee": "join_options"
+    },
+    {
+      "caller": "_write_opts",
+      "callee": "make_metavar"
+    },
+    {
+      "caller": "get_help_extra",
+      "callee": "get_default"
+    },
+    {
+      "caller": "get_help_extra",
+      "callee": "_split_opt"
+    },
+    {
+      "caller": "get_help_extra",
+      "callee": "_describe_range"
+    },
+    {
+      "caller": "prompt_for_value",
+      "callee": "get_default"
+    },
+    {
+      "caller": "prompt_for_value",
+      "callee": "confirm"
+    },
+    {
+      "caller": "prompt_for_value",
+      "callee": "prompt"
+    },
+    {
+      "caller": "prompt_for_value",
+      "callee": "process_value"
+    },
+    {
+      "caller": "value_from_envvar",
+      "callee": "resolve_envvar_value"
+    },
+    {
+      "caller": "value_from_envvar",
+      "callee": "str_to_bool"
+    },
+    {
+      "caller": "value_from_envvar",
+      "callee": "split_envvar_value"
+    },
+    {
+      "caller": "value_from_envvar",
+      "callee": "batch"
+    },
+    {
+      "caller": "consume_value",
+      "callee": "prompt_for_value"
+    },
+    {
+      "caller": "process_value",
+      "callee": "callback"
+    },
+    {
+      "caller": "make_metavar",
+      "callee": "get_metavar"
+    },
+    {
+      "caller": "get_usage_pieces",
+      "callee": "make_metavar"
+    },
+    {
+      "caller": "get_error_hint",
+      "callee": "make_metavar"
+    },
+    {
+      "caller": "add_to_parser",
+      "callee": "add_argument"
+    },
+    {
+      "caller": "pass_context",
+      "callee": "get_current_context"
+    },
+    {
+      "caller": "new_func",
+      "callee": "get_current_context"
+    },
+    {
+      "caller": "pass_obj",
+      "callee": "get_current_context"
+    },
+    {
+      "caller": "new_func",
+      "callee": "get_current_context"
+    },
+    {
+      "caller": "make_pass_decorator",
+      "callee": "get_current_context"
+    },
+    {
+      "caller": "make_pass_decorator",
+      "callee": "ensure_object"
+    },
+    {
+      "caller": "make_pass_decorator",
+      "callee": "find_object"
+    },
+    {
+      "caller": "make_pass_decorator",
+      "callee": "invoke"
+    },
+    {
+      "caller": "decorator",
+      "callee": "get_current_context"
+    },
+    {
+      "caller": "decorator",
+      "callee": "ensure_object"
+    },
+    {
+      "caller": "decorator",
+      "callee": "find_object"
+    },
+    {
+      "caller": "decorator",
+      "callee": "invoke"
+    },
+    {
+      "caller": "new_func",
+      "callee": "get_current_context"
+    },
+    {
+      "caller": "new_func",
+      "callee": "ensure_object"
+    },
+    {
+      "caller": "new_func",
+      "callee": "find_object"
+    },
+    {
+      "caller": "new_func",
+      "callee": "invoke"
+    },
+    {
+      "caller": "pass_meta_key",
+      "callee": "get_current_context"
+    },
+    {
+      "caller": "pass_meta_key",
+      "callee": "invoke"
+    },
+    {
+      "caller": "decorator",
+      "callee": "get_current_context"
+    },
+    {
+      "caller": "decorator",
+      "callee": "invoke"
+    },
+    {
+      "caller": "new_func",
+      "callee": "get_current_context"
+    },
+    {
+      "caller": "new_func",
+      "callee": "invoke"
+    },
+    {
+      "caller": "command",
+      "callee": "decorator"
+    },
+    {
+      "caller": "group",
+      "callee": "command"
+    },
+    {
+      "caller": "argument",
+      "callee": "_param_memo"
+    },
+    {
+      "caller": "decorator",
+      "callee": "_param_memo"
+    },
+    {
+      "caller": "option",
+      "callee": "_param_memo"
+    },
+    {
+      "caller": "decorator",
+      "callee": "_param_memo"
+    },
+    {
+      "caller": "confirmation_option",
+      "callee": "abort"
+    },
+    {
+      "caller": "confirmation_option",
+      "callee": "option"
+    },
+    {
+      "caller": "callback",
+      "callee": "abort"
+    },
+    {
+      "caller": "password_option",
+      "callee": "option"
+    },
+    {
+      "caller": "version_option",
+      "callee": "find_root"
+    },
+    {
+      "caller": "version_option",
+      "callee": "echo"
+    },
+    {
+      "caller": "version_option",
+      "callee": "exit"
+    },
+    {
+      "caller": "version_option",
+      "callee": "option"
+    },
+    {
+      "caller": "callback",
+      "callee": "find_root"
+    },
+    {
+      "caller": "callback",
+      "callee": "echo"
+    },
+    {
+      "caller": "callback",
+      "callee": "exit"
+    },
+    {
+      "caller": "help_option",
+      "callee": "echo"
+    },
+    {
+      "caller": "help_option",
+      "callee": "get_help"
+    },
+    {
+      "caller": "help_option",
+      "callee": "exit"
+    },
+    {
+      "caller": "help_option",
+      "callee": "option"
+    },
+    {
+      "caller": "show_help",
+      "callee": "echo"
+    },
+    {
+      "caller": "show_help",
+      "callee": "get_help"
+    },
+    {
+      "caller": "show_help",
+      "callee": "exit"
+    },
+    {
+      "caller": "__init__",
+      "callee": "resolve_color_default"
+    },
+    {
+      "caller": "show",
+      "callee": "get_text_stderr"
+    },
+    {
+      "caller": "show",
+      "callee": "echo"
+    },
+    {
+      "caller": "show",
+      "callee": "format_message"
+    },
+    {
+      "caller": "show",
+      "callee": "get_text_stderr"
+    },
+    {
+      "caller": "show",
+      "callee": "get_help_option"
+    },
+    {
+      "caller": "show",
+      "callee": "get_help_option_names"
+    },
+    {
+      "caller": "show",
+      "callee": "echo"
+    },
+    {
+      "caller": "show",
+      "callee": "get_usage"
+    },
+    {
+      "caller": "show",
+      "callee": "format_message"
+    },
+    {
+      "caller": "format_message",
+      "callee": "get_error_hint"
+    },
+    {
+      "caller": "format_message",
+      "callee": "_join_param_hints"
+    },
+    {
+      "caller": "format_message",
+      "callee": "get_error_hint"
+    },
+    {
+      "caller": "format_message",
+      "callee": "_join_param_hints"
+    },
+    {
+      "caller": "format_message",
+      "callee": "get_missing_message"
+    },
+    {
+      "caller": "format_message",
+      "callee": "_format_possibilities"
+    },
+    {
+      "caller": "format_message",
+      "callee": "_format_possibilities"
+    },
+    {
+      "caller": "__init__",
+      "callee": "get_help"
+    },
+    {
+      "caller": "show",
+      "callee": "echo"
+    },
+    {
+      "caller": "show",
+      "callee": "format_message"
+    },
+    {
+      "caller": "__init__",
+      "callee": "format_filename"
+    },
+    {
+      "caller": "measure_table",
+      "callee": "term_len"
+    },
+    {
+      "caller": "wrap_text",
+      "callee": "_flush_par"
+    },
+    {
+      "caller": "wrap_text",
+      "callee": "term_len"
+    },
+    {
+      "caller": "wrap_text",
+      "callee": "extra_indent"
+    },
+    {
+      "caller": "wrap_text",
+      "callee": "indent_only"
+    },
+    {
+      "caller": "write_usage",
+      "callee": "write"
+    },
+    {
+      "caller": "write_usage",
+      "callee": "term_len"
+    },
+    {
+      "caller": "write_usage",
+      "callee": "wrap_text"
+    },
+    {
+      "caller": "write_heading",
+      "callee": "write"
+    },
+    {
+      "caller": "write_paragraph",
+      "callee": "write"
+    },
+    {
+      "caller": "write_text",
+      "callee": "write"
+    },
+    {
+      "caller": "write_text",
+      "callee": "wrap_text"
+    },
+    {
+      "caller": "write_dl",
+      "callee": "measure_table"
+    },
+    {
+      "caller": "write_dl",
+      "callee": "iter_rows"
+    },
+    {
+      "caller": "write_dl",
+      "callee": "write"
+    },
+    {
+      "caller": "write_dl",
+      "callee": "term_len"
+    },
+    {
+      "caller": "write_dl",
+      "callee": "wrap_text"
+    },
+    {
+      "caller": "section",
+      "callee": "write_paragraph"
+    },
+    {
+      "caller": "section",
+      "callee": "write_heading"
+    },
+    {
+      "caller": "section",
+      "callee": "indent"
+    },
+    {
+      "caller": "section",
+      "callee": "dedent"
+    },
+    {
+      "caller": "indentation",
+      "callee": "indent"
+    },
+    {
+      "caller": "indentation",
+      "callee": "dedent"
+    },
+    {
+      "caller": "join_options",
+      "callee": "_split_opt"
+    },
+    {
+      "caller": "resolve_color_default",
+      "callee": "get_current_context"
+    },
+    {
+      "caller": "_unpack_args",
+      "callee": "_fetch"
+    },
+    {
+      "caller": "_normalize_opt",
+      "callee": "_split_opt"
+    },
+    {
+      "caller": "__init__",
+      "callee": "_split_opt"
+    },
+    {
+      "caller": "add_option",
+      "callee": "_normalize_opt"
+    },
+    {
+      "caller": "add_option",
+      "callee": "update"
+    },
+    {
+      "caller": "parse_args",
+      "callee": "_process_args_for_options"
+    },
+    {
+      "caller": "parse_args",
+      "callee": "_process_args_for_args"
+    },
+    {
+      "caller": "_process_args_for_args",
+      "callee": "_unpack_args"
+    },
+    {
+      "caller": "_process_args_for_args",
+      "callee": "process"
+    },
+    {
+      "caller": "_process_args_for_options",
+      "callee": "_process_opts"
+    },
+    {
+      "caller": "_match_long_opt",
+      "callee": "_get_value_from_state"
+    },
+    {
+      "caller": "_match_long_opt",
+      "callee": "process"
+    },
+    {
+      "caller": "_match_short_opt",
+      "callee": "_normalize_opt"
+    },
+    {
+      "caller": "_match_short_opt",
+      "callee": "_get_value_from_state"
+    },
+    {
+      "caller": "_match_short_opt",
+      "callee": "process"
+    },
+    {
+      "caller": "_process_opts",
+      "callee": "_normalize_opt"
+    },
+    {
+      "caller": "_process_opts",
+      "callee": "_match_long_opt"
+    },
+    {
+      "caller": "_process_opts",
+      "callee": "_match_short_opt"
+    },
+    {
+      "caller": "shell_complete",
+      "callee": "get_completion_class"
+    },
+    {
+      "caller": "shell_complete",
+      "callee": "echo"
+    },
+    {
+      "caller": "shell_complete",
+      "callee": "source"
+    },
+    {
+      "caller": "shell_complete",
+      "callee": "complete"
+    },
+    {
+      "caller": "source",
+      "callee": "source_vars"
+    },
+    {
+      "caller": "get_completions",
+      "callee": "_resolve_context"
+    },
+    {
+      "caller": "get_completions",
+      "callee": "_resolve_incomplete"
+    },
+    {
+      "caller": "get_completions",
+      "callee": "shell_complete"
+    },
+    {
+      "caller": "complete",
+      "callee": "get_completion_args"
+    },
+    {
+      "caller": "complete",
+      "callee": "get_completions"
+    },
+    {
+      "caller": "complete",
+      "callee": "format_completion"
+    },
+    {
+      "caller": "_check_version",
+      "callee": "echo"
+    },
+    {
+      "caller": "source",
+      "callee": "_check_version"
+    },
+    {
+      "caller": "get_completion_args",
+      "callee": "split_arg_string"
+    },
+    {
+      "caller": "get_completion_args",
+      "callee": "split_arg_string"
+    },
+    {
+      "caller": "get_completion_args",
+      "callee": "split_arg_string"
+    },
+    {
+      "caller": "_is_incomplete_argument",
+      "callee": "get_parameter_source"
+    },
+    {
+      "caller": "_is_incomplete_option",
+      "callee": "_start_of_option"
+    },
+    {
+      "caller": "_resolve_context",
+      "callee": "make_context"
+    },
+    {
+      "caller": "_resolve_context",
+      "callee": "resolve_command"
+    },
+    {
+      "caller": "_resolve_incomplete",
+      "callee": "_start_of_option"
+    },
+    {
+      "caller": "_resolve_incomplete",
+      "callee": "get_params"
+    },
+    {
+      "caller": "_resolve_incomplete",
+      "callee": "_is_incomplete_option"
+    },
+    {
+      "caller": "_resolve_incomplete",
+      "callee": "_is_incomplete_argument"
+    },
+    {
+      "caller": "_readline_prompt",
+      "callee": "echo"
+    },
+    {
+      "caller": "_readline_prompt",
+      "callee": "func"
+    },
+    {
+      "caller": "_build_prompt",
+      "callee": "_format_default"
+    },
+    {
+      "caller": "prompt",
+      "callee": "_readline_prompt"
+    },
+    {
+      "caller": "prompt",
+      "callee": "echo"
+    },
+    {
+      "caller": "prompt",
+      "callee": "convert_type"
+    },
+    {
+      "caller": "prompt",
+      "callee": "_build_prompt"
+    },
+    {
+      "caller": "prompt",
+      "callee": "prompt_func"
+    },
+    {
+      "caller": "prompt",
+      "callee": "_mask_hidden_input"
+    },
+    {
+      "caller": "prompt_func",
+      "callee": "_readline_prompt"
+    },
+    {
+      "caller": "prompt_func",
+      "callee": "echo"
+    },
+    {
+      "caller": "confirm",
+      "callee": "_build_prompt"
+    },
+    {
+      "caller": "confirm",
+      "callee": "_readline_prompt"
+    },
+    {
+      "caller": "confirm",
+      "callee": "echo"
+    },
+    {
+      "caller": "get_pager_file",
+      "callee": "resolve_color_default"
+    },
+    {
+      "caller": "echo_via_pager",
+      "callee": "get_pager_file"
+    },
+    {
+      "caller": "echo_via_pager",
+      "callee": "write"
+    },
+    {
+      "caller": "progressbar",
+      "callee": "resolve_color_default"
+    },
+    {
+      "caller": "clear",
+      "callee": "isatty"
+    },
+    {
+      "caller": "clear",
+      "callee": "echo"
+    },
+    {
+      "caller": "style",
+      "callee": "_interpret_color"
+    },
+    {
+      "caller": "unstyle",
+      "callee": "strip_ansi"
+    },
+    {
+      "caller": "secho",
+      "callee": "style"
+    },
+    {
+      "caller": "secho",
+      "callee": "echo"
+    },
+    {
+      "caller": "edit",
+      "callee": "edit_files"
+    },
+    {
+      "caller": "launch",
+      "callee": "open_url"
+    },
+    {
+      "caller": "getchar",
+      "callee": "_getchar"
+    },
+    {
+      "caller": "pause",
+      "callee": "isatty"
+    },
+    {
+      "caller": "pause",
+      "callee": "echo"
+    },
+    {
+      "caller": "pause",
+      "callee": "getchar"
+    },
+    {
+      "caller": "_echo",
+      "callee": "write"
+    },
+    {
+      "caller": "read",
+      "callee": "_echo"
+    },
+    {
+      "caller": "read1",
+      "callee": "_echo"
+    },
+    {
+      "caller": "readline",
+      "callee": "_echo"
+    },
+    {
+      "caller": "readlines",
+      "callee": "_echo"
+    },
+    {
+      "caller": "__iter__",
+      "callee": "_echo"
+    },
+    {
+      "caller": "start",
+      "callee": "fileno"
+    },
+    {
+      "caller": "stop",
+      "callee": "close"
+    },
+    {
+      "caller": "stop",
+      "callee": "read"
+    },
+    {
+      "caller": "make_input_stream",
+      "callee": "_find_binary_reader"
+    },
+    {
+      "caller": "make_env",
+      "callee": "update"
+    },
+    {
+      "caller": "isolation",
+      "callee": "make_input_stream"
+    },
+    {
+      "caller": "isolation",
+      "callee": "make_env"
+    },
+    {
+      "caller": "isolation",
+      "callee": "_pause_echo"
+    },
+    {
+      "caller": "isolation",
+      "callee": "write"
+    },
+    {
+      "caller": "isolation",
+      "callee": "flush"
+    },
+    {
+      "caller": "isolation",
+      "callee": "read"
+    },
+    {
+      "caller": "visible_input",
+      "callee": "write"
+    },
+    {
+      "caller": "visible_input",
+      "callee": "flush"
+    },
+    {
+      "caller": "hidden_input",
+      "callee": "write"
+    },
+    {
+      "caller": "hidden_input",
+      "callee": "flush"
+    },
+    {
+      "caller": "_getchar",
+      "callee": "read"
+    },
+    {
+      "caller": "_getchar",
+      "callee": "write"
+    },
+    {
+      "caller": "_getchar",
+      "callee": "flush"
+    },
+    {
+      "caller": "invoke",
+      "callee": "start"
+    },
+    {
+      "caller": "invoke",
+      "callee": "isolation"
+    },
+    {
+      "caller": "invoke",
+      "callee": "get_default_prog_name"
+    },
+    {
+      "caller": "invoke",
+      "callee": "main"
+    },
+    {
+      "caller": "invoke",
+      "callee": "write"
+    },
+    {
+      "caller": "invoke",
+      "callee": "flush"
+    },
+    {
+      "caller": "invoke",
+      "callee": "stop"
+    },
+    {
+      "caller": "invoke",
+      "callee": "getvalue"
+    },
+    {
+      "caller": "__call__",
+      "callee": "convert"
+    },
+    {
+      "caller": "convert",
+      "callee": "func"
+    },
+    {
+      "caller": "convert",
+      "callee": "fail"
+    },
+    {
+      "caller": "convert",
+      "callee": "_get_argv_encoding"
+    },
+    {
+      "caller": "_normalized_mapping",
+      "callee": "normalize_choice"
+    },
+    {
+      "caller": "get_metavar",
+      "callee": "convert_type"
+    },
+    {
+      "caller": "get_metavar",
+      "callee": "_normalized_mapping"
+    },
+    {
+      "caller": "get_missing_message",
+      "callee": "_normalized_mapping"
+    },
+    {
+      "caller": "convert",
+      "callee": "normalize_choice"
+    },
+    {
+      "caller": "convert",
+      "callee": "_normalized_mapping"
+    },
+    {
+      "caller": "convert",
+      "callee": "fail"
+    },
+    {
+      "caller": "convert",
+      "callee": "get_invalid_choice_message"
+    },
+    {
+      "caller": "get_invalid_choice_message",
+      "callee": "_normalized_mapping"
+    },
+    {
+      "caller": "shell_complete",
+      "callee": "normalize_choice"
+    },
+    {
+      "caller": "convert",
+      "callee": "_try_to_convert_date"
+    },
+    {
+      "caller": "convert",
+      "callee": "fail"
+    },
+    {
+      "caller": "convert",
+      "callee": "fail"
+    },
+    {
+      "caller": "convert",
+      "callee": "_clamp"
+    },
+    {
+      "caller": "convert",
+      "callee": "fail"
+    },
+    {
+      "caller": "convert",
+      "callee": "_describe_range"
+    },
+    {
+      "caller": "__repr__",
+      "callee": "_describe_range"
+    },
+    {
+      "caller": "convert",
+      "callee": "str_to_bool"
+    },
+    {
+      "caller": "convert",
+      "callee": "fail"
+    },
+    {
+      "caller": "convert",
+      "callee": "fail"
+    },
+    {
+      "caller": "convert",
+      "callee": "_is_file_like"
+    },
+    {
+      "caller": "convert",
+      "callee": "resolve_lazy_flag"
+    },
+    {
+      "caller": "convert",
+      "callee": "call_on_close"
+    },
+    {
+      "caller": "convert",
+      "callee": "open_stream"
+    },
+    {
+      "caller": "convert",
+      "callee": "safecall"
+    },
+    {
+      "caller": "convert",
+      "callee": "fail"
+    },
+    {
+      "caller": "convert",
+      "callee": "format_filename"
+    },
+    {
+      "caller": "convert",
+      "callee": "coerce_path_result"
+    },
+    {
+      "caller": "convert",
+      "callee": "fail"
+    },
+    {
+      "caller": "convert",
+      "callee": "format_filename"
+    },
+    {
+      "caller": "__init__",
+      "callee": "convert_type"
+    },
+    {
+      "caller": "convert",
+      "callee": "fail"
+    },
+    {
+      "caller": "convert_type",
+      "callee": "_guess_type"
+    },
+    {
+      "caller": "safecall",
+      "callee": "func"
+    },
+    {
+      "caller": "wrapper",
+      "callee": "func"
+    },
+    {
+      "caller": "__init__",
+      "callee": "open_stream"
+    },
+    {
+      "caller": "__init__",
+      "callee": "close"
+    },
+    {
+      "caller": "__init__",
+      "callee": "open"
+    },
+    {
+      "caller": "__getattr__",
+      "callee": "open"
+    },
+    {
+      "caller": "__repr__",
+      "callee": "format_filename"
+    },
+    {
+      "caller": "open",
+      "callee": "open_stream"
+    },
+    {
+      "caller": "close_intelligently",
+      "callee": "close"
+    },
+    {
+      "caller": "__exit__",
+      "callee": "close_intelligently"
+    },
+    {
+      "caller": "__iter__",
+      "callee": "open"
+    },
+    {
+      "caller": "echo",
+      "callee": "flush"
+    },
+    {
+      "caller": "echo",
+      "callee": "_find_binary_writer"
+    },
+    {
+      "caller": "echo",
+      "callee": "write"
+    },
+    {
+      "caller": "echo",
+      "callee": "resolve_color_default"
+    },
+    {
+      "caller": "echo",
+      "callee": "should_strip_ansi"
+    },
+    {
+      "caller": "echo",
+      "callee": "strip_ansi"
+    },
+    {
+      "caller": "echo",
+      "callee": "auto_wrap_for_ansi"
+    },
+    {
+      "caller": "open_file",
+      "callee": "open_stream"
+    },
+    {
+      "caller": "get_app_dir",
+      "callee": "_posixify"
+    }
+  ],
+  "imports": {
+    "__init__.py": [
+      ".core",
+      ".decorators",
+      ".exceptions",
+      ".formatting",
+      ".globals",
+      ".termui",
+      ".types",
+      ".utils",
+      "warnings",
+      ".parser",
+      "importlib.metadata"
+    ],
+    "_compat.py": [
+      "codecs",
+      "collections.abc",
+      "io",
+      "os",
+      "re",
+      "sys",
+      "typing",
+      "types",
+      "weakref",
+      "errno",
+      "random",
+      "._winconsole",
+      "locale",
+      "colorama"
+    ],
+    "_termui_impl.py": [
+      "collections.abc",
+      "contextlib",
+      "io",
+      "math",
+      "os",
+      "shlex",
+      "sys",
+      "time",
+      "typing",
+      "gettext",
+      "pathlib",
+      "types",
+      "._compat",
+      ".exceptions",
+      ".utils",
+      "operator",
+      "shutil",
+      "subprocess",
+      "tempfile",
+      "urllib.parse",
+      "webbrowser",
+      "msvcrt",
+      "termios",
+      "tty"
+    ],
+    "_textwrap.py": [
+      "collections.abc",
+      "textwrap",
+      "contextlib",
+      "._compat"
+    ],
+    "_utils.py": [
+      "enum",
+      "typing"
+    ],
+    "_winconsole.py": [
+      "collections.abc",
+      "io",
+      "sys",
+      "time",
+      "typing",
+      "ctypes",
+      "ctypes.wintypes",
+      "gettext",
+      "._compat",
+      "msvcrt",
+      "typing_extensions"
+    ],
+    "core.py": [
+      "collections.abc",
+      "enum",
+      "errno",
+      "inspect",
+      "os",
+      "sys",
+      "typing",
+      "abc",
+      "collections",
+      "contextlib",
+      "functools",
+      "gettext",
+      "itertools",
+      "types",
+      ".",
+      "._utils",
+      ".exceptions",
+      ".formatting",
+      ".globals",
+      ".parser",
+      ".termui",
+      ".utils",
+      ".shell_completion",
+      "warnings",
+      ".decorators",
+      "click.shell_completion"
+    ],
+    "decorators.py": [
+      "inspect",
+      "typing",
+      "functools",
+      "gettext",
+      ".core",
+      ".globals",
+      ".utils",
+      "typing_extensions",
+      "importlib.metadata"
+    ],
+    "exceptions.py": [
+      "collections.abc",
+      "typing",
+      "gettext",
+      "._compat",
+      ".globals",
+      ".utils",
+      ".core",
+      "difflib"
+    ],
+    "formatting.py": [
+      "collections.abc",
+      "contextlib",
+      "gettext",
+      "._compat",
+      ".parser",
+      "._textwrap",
+      "shutil"
+    ],
+    "globals.py": [
+      "typing",
+      "threading",
+      ".core"
+    ],
+    "parser.py": [
+      "collections.abc",
+      "typing",
+      "collections",
+      "gettext",
+      "._utils",
+      ".exceptions",
+      ".core",
+      "warnings",
+      ".shell_completion"
+    ],
+    "shell_completion.py": [
+      "collections.abc",
+      "os",
+      "re",
+      "typing",
+      "gettext",
+      ".core",
+      ".utils",
+      "shutil",
+      "subprocess",
+      "shlex"
+    ],
+    "termui.py": [
+      "collections.abc",
+      "inspect",
+      "io",
+      "itertools",
+      "re",
+      "sys",
+      "typing",
+      "contextlib",
+      "gettext",
+      "._compat",
+      ".exceptions",
+      ".globals",
+      ".types",
+      ".utils",
+      "._termui_impl",
+      "getpass"
+    ],
+    "testing.py": [
+      "collections.abc",
+      "contextlib",
+      "io",
+      "os",
+      "pdb",
+      "shlex",
+      "sys",
+      "tempfile",
+      "typing",
+      "types",
+      ".",
+      "._compat",
+      "_typeshed",
+      ".core",
+      "shutil"
+    ],
+    "types.py": [
+      "abc",
+      "collections.abc",
+      "enum",
+      "os",
+      "stat",
+      "sys",
+      "typing",
+      "uuid",
+      "datetime",
+      "gettext",
+      "._compat",
+      ".exceptions",
+      ".utils",
+      "typing_extensions",
+      ".core",
+      ".shell_completion",
+      "click.shell_completion",
+      "operator"
+    ],
+    "utils.py": [
+      "collections.abc",
+      "os",
+      "re",
+      "sys",
+      "typing",
+      "functools",
+      "gettext",
+      "types",
+      "._compat",
+      ".globals",
+      "typing_extensions",
+      ".exceptions",
+      "errno",
+      "glob"
+    ]
+  },
+  "import_edges": [
+    {
+      "importer": "__init__.py",
+      "imported": "core.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "decorators.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "exceptions.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "formatting.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "termui.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "types.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "utils.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "parser.py"
+    },
+    {
+      "importer": "_compat.py",
+      "imported": "types.py"
+    },
+    {
+      "importer": "_compat.py",
+      "imported": "_winconsole.py"
+    },
+    {
+      "importer": "_termui_impl.py",
+      "imported": "types.py"
+    },
+    {
+      "importer": "_termui_impl.py",
+      "imported": "_compat.py"
+    },
+    {
+      "importer": "_termui_impl.py",
+      "imported": "exceptions.py"
+    },
+    {
+      "importer": "_termui_impl.py",
+      "imported": "utils.py"
+    },
+    {
+      "importer": "_textwrap.py",
+      "imported": "_compat.py"
+    },
+    {
+      "importer": "_winconsole.py",
+      "imported": "_compat.py"
+    },
+    {
+      "importer": "core.py",
+      "imported": "types.py"
+    },
+    {
+      "importer": "core.py",
+      "imported": "_utils.py"
+    },
+    {
+      "importer": "core.py",
+      "imported": "exceptions.py"
+    },
+    {
+      "importer": "core.py",
+      "imported": "formatting.py"
+    },
+    {
+      "importer": "core.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "core.py",
+      "imported": "parser.py"
+    },
+    {
+      "importer": "core.py",
+      "imported": "termui.py"
+    },
+    {
+      "importer": "core.py",
+      "imported": "utils.py"
+    },
+    {
+      "importer": "core.py",
+      "imported": "shell_completion.py"
+    },
+    {
+      "importer": "core.py",
+      "imported": "decorators.py"
+    },
+    {
+      "importer": "decorators.py",
+      "imported": "core.py"
+    },
+    {
+      "importer": "decorators.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "decorators.py",
+      "imported": "utils.py"
+    },
+    {
+      "importer": "exceptions.py",
+      "imported": "_compat.py"
+    },
+    {
+      "importer": "exceptions.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "exceptions.py",
+      "imported": "utils.py"
+    },
+    {
+      "importer": "exceptions.py",
+      "imported": "core.py"
+    },
+    {
+      "importer": "formatting.py",
+      "imported": "_compat.py"
+    },
+    {
+      "importer": "formatting.py",
+      "imported": "parser.py"
+    },
+    {
+      "importer": "formatting.py",
+      "imported": "_textwrap.py"
+    },
+    {
+      "importer": "globals.py",
+      "imported": "core.py"
+    },
+    {
+      "importer": "parser.py",
+      "imported": "_utils.py"
+    },
+    {
+      "importer": "parser.py",
+      "imported": "exceptions.py"
+    },
+    {
+      "importer": "parser.py",
+      "imported": "core.py"
+    },
+    {
+      "importer": "parser.py",
+      "imported": "shell_completion.py"
+    },
+    {
+      "importer": "shell_completion.py",
+      "imported": "core.py"
+    },
+    {
+      "importer": "shell_completion.py",
+      "imported": "utils.py"
+    },
+    {
+      "importer": "termui.py",
+      "imported": "_compat.py"
+    },
+    {
+      "importer": "termui.py",
+      "imported": "exceptions.py"
+    },
+    {
+      "importer": "termui.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "termui.py",
+      "imported": "types.py"
+    },
+    {
+      "importer": "termui.py",
+      "imported": "utils.py"
+    },
+    {
+      "importer": "termui.py",
+      "imported": "_termui_impl.py"
+    },
+    {
+      "importer": "testing.py",
+      "imported": "types.py"
+    },
+    {
+      "importer": "testing.py",
+      "imported": "_compat.py"
+    },
+    {
+      "importer": "testing.py",
+      "imported": "core.py"
+    },
+    {
+      "importer": "types.py",
+      "imported": "_compat.py"
+    },
+    {
+      "importer": "types.py",
+      "imported": "exceptions.py"
+    },
+    {
+      "importer": "types.py",
+      "imported": "utils.py"
+    },
+    {
+      "importer": "types.py",
+      "imported": "core.py"
+    },
+    {
+      "importer": "types.py",
+      "imported": "shell_completion.py"
+    },
+    {
+      "importer": "utils.py",
+      "imported": "types.py"
+    },
+    {
+      "importer": "utils.py",
+      "imported": "_compat.py"
+    },
+    {
+      "importer": "utils.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "utils.py",
+      "imported": "exceptions.py"
+    }
+  ],
+  "classes": [
+    {
+      "name": "_NonClosingTextIOWrapper",
+      "file": "_compat.py",
+      "start_line": 57,
+      "end_line": 80,
+      "bases": [
+        "TextIOWrapper"
+      ]
+    },
+    {
+      "name": "_FixupStream",
+      "file": "_compat.py",
+      "start_line": 83,
+      "end_line": 149,
+      "bases": []
+    },
+    {
+      "name": "_AtomicFile",
+      "file": "_compat.py",
+      "start_line": 453,
+      "end_line": 486,
+      "bases": []
+    },
+    {
+      "name": "_BufferedTextPagerStream",
+      "file": "_termui_impl.py",
+      "start_line": 36,
+      "end_line": 37,
+      "bases": [
+        "Protocol"
+      ]
+    },
+    {
+      "name": "ProgressBar",
+      "file": "_termui_impl.py",
+      "start_line": 56,
+      "end_line": 385,
+      "bases": [
+        "Generic"
+      ]
+    },
+    {
+      "name": "MaybeStripAnsi",
+      "file": "_termui_impl.py",
+      "start_line": 388,
+      "end_line": 396,
+      "bases": [
+        "TextIOWrapper"
+      ]
+    },
+    {
+      "name": "_SkipClose",
+      "file": "_termui_impl.py",
+      "start_line": 609,
+      "end_line": 621,
+      "bases": []
+    },
+    {
+      "name": "Editor",
+      "file": "_termui_impl.py",
+      "start_line": 640,
+      "end_line": 753,
+      "bases": []
+    },
+    {
+      "name": "TextWrapper",
+      "file": "_textwrap.py",
+      "start_line": 38,
+      "end_line": 188,
+      "bases": [
+        "TextWrapper"
+      ]
+    },
+    {
+      "name": "Sentinel",
+      "file": "_utils.py",
+      "start_line": 7,
+      "end_line": 19,
+      "bases": [
+        "Enum"
+      ]
+    },
+    {
+      "name": "Py_buffer",
+      "file": "_winconsole.py",
+      "start_line": 88,
+      "end_line": 101,
+      "bases": [
+        "Structure"
+      ]
+    },
+    {
+      "name": "_WindowsConsoleRawIOBase",
+      "file": "_winconsole.py",
+      "start_line": 119,
+      "end_line": 125,
+      "bases": [
+        "RawIOBase"
+      ]
+    },
+    {
+      "name": "_WindowsConsoleReader",
+      "file": "_winconsole.py",
+      "start_line": 128,
+      "end_line": 160,
+      "bases": [
+        "_WindowsConsoleRawIOBase"
+      ]
+    },
+    {
+      "name": "_WindowsConsoleWriter",
+      "file": "_winconsole.py",
+      "start_line": 163,
+      "end_line": 192,
+      "bases": [
+        "_WindowsConsoleRawIOBase"
+      ]
+    },
+    {
+      "name": "ConsoleStream",
+      "file": "_winconsole.py",
+      "start_line": 195,
+      "end_line": 224,
+      "bases": []
+    },
+    {
+      "name": "ParameterSource",
+      "file": "core.py",
+      "start_line": 163,
+      "end_line": 199,
+      "bases": [
+        "IntEnum"
+      ]
+    },
+    {
+      "name": "Context",
+      "file": "core.py",
+      "start_line": 202,
+      "end_line": 923,
+      "bases": []
+    },
+    {
+      "name": "Command",
+      "file": "core.py",
+      "start_line": 926,
+      "end_line": 1524,
+      "bases": []
+    },
+    {
+      "name": "_FakeSubclassCheck",
+      "file": "core.py",
+      "start_line": 1527,
+      "end_line": 1532,
+      "bases": [
+        "type"
+      ]
+    },
+    {
+      "name": "_BaseCommand",
+      "file": "core.py",
+      "start_line": 1535,
+      "end_line": 1539,
+      "bases": [
+        "Command"
+      ]
+    },
+    {
+      "name": "Group",
+      "file": "core.py",
+      "start_line": 1542,
+      "end_line": 1989,
+      "bases": [
+        "Command"
+      ]
+    },
+    {
+      "name": "_MultiCommand",
+      "file": "core.py",
+      "start_line": 1992,
+      "end_line": 1996,
+      "bases": [
+        "Group"
+      ]
+    },
+    {
+      "name": "CommandCollection",
+      "file": "core.py",
+      "start_line": 1999,
+      "end_line": 2052,
+      "bases": [
+        "Group"
+      ]
+    },
+    {
+      "name": "Parameter",
+      "file": "core.py",
+      "start_line": 2065,
+      "end_line": 2712,
+      "bases": [
+        "ABC"
+      ]
+    },
+    {
+      "name": "Option",
+      "file": "core.py",
+      "start_line": 2715,
+      "end_line": 3436,
+      "bases": [
+        "Parameter"
+      ]
+    },
+    {
+      "name": "Argument",
+      "file": "core.py",
+      "start_line": 3439,
+      "end_line": 3518,
+      "bases": [
+        "Parameter"
+      ]
+    },
+    {
+      "name": "ClickException",
+      "file": "exceptions.py",
+      "start_line": 35,
+      "end_line": 62,
+      "bases": [
+        "Exception"
+      ]
+    },
+    {
+      "name": "UsageError",
+      "file": "exceptions.py",
+      "start_line": 65,
+      "end_line": 105,
+      "bases": [
+        "ClickException"
+      ]
+    },
+    {
+      "name": "BadParameter",
+      "file": "exceptions.py",
+      "start_line": 108,
+      "end_line": 147,
+      "bases": [
+        "UsageError"
+      ]
+    },
+    {
+      "name": "MissingParameter",
+      "file": "exceptions.py",
+      "start_line": 150,
+      "end_line": 218,
+      "bases": [
+        "BadParameter"
+      ]
+    },
+    {
+      "name": "NoSuchOption",
+      "file": "exceptions.py",
+      "start_line": 221,
+      "end_line": 248,
+      "bases": [
+        "UsageError"
+      ]
+    },
+    {
+      "name": "NoSuchCommand",
+      "file": "exceptions.py",
+      "start_line": 251,
+      "end_line": 278,
+      "bases": [
+        "UsageError"
+      ]
+    },
+    {
+      "name": "BadOptionUsage",
+      "file": "exceptions.py",
+      "start_line": 281,
+      "end_line": 295,
+      "bases": [
+        "UsageError"
+      ]
+    },
+    {
+      "name": "BadArgumentUsage",
+      "file": "exceptions.py",
+      "start_line": 298,
+      "end_line": 304,
+      "bases": [
+        "UsageError"
+      ]
+    },
+    {
+      "name": "NoArgsIsHelpError",
+      "file": "exceptions.py",
+      "start_line": 307,
+      "end_line": 313,
+      "bases": [
+        "UsageError"
+      ]
+    },
+    {
+      "name": "FileError",
+      "file": "exceptions.py",
+      "start_line": 316,
+      "end_line": 330,
+      "bases": [
+        "ClickException"
+      ]
+    },
+    {
+      "name": "Abort",
+      "file": "exceptions.py",
+      "start_line": 333,
+      "end_line": 334,
+      "bases": [
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "Exit",
+      "file": "exceptions.py",
+      "start_line": 337,
+      "end_line": 347,
+      "bases": [
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "HelpFormatter",
+      "file": "formatting.py",
+      "start_line": 110,
+      "end_line": 294,
+      "bases": []
+    },
+    {
+      "name": "_Option",
+      "file": "parser.py",
+      "start_line": 127,
+      "end_line": 182,
+      "bases": []
+    },
+    {
+      "name": "_Argument",
+      "file": "parser.py",
+      "start_line": 185,
+      "end_line": 213,
+      "bases": []
+    },
+    {
+      "name": "_ParsingState",
+      "file": "parser.py",
+      "start_line": 216,
+      "end_line": 221,
+      "bases": []
+    },
+    {
+      "name": "_OptionParser",
+      "file": "parser.py",
+      "start_line": 224,
+      "end_line": 500,
+      "bases": []
+    },
+    {
+      "name": "CompletionItem",
+      "file": "shell_completion.py",
+      "start_line": 58,
+      "end_line": 92,
+      "bases": []
+    },
+    {
+      "name": "ShellComplete",
+      "file": "shell_completion.py",
+      "start_line": 205,
+      "end_line": 306,
+      "bases": []
+    },
+    {
+      "name": "BashComplete",
+      "file": "shell_completion.py",
+      "start_line": 309,
+      "end_line": 365,
+      "bases": [
+        "ShellComplete"
+      ]
+    },
+    {
+      "name": "ZshComplete",
+      "file": "shell_completion.py",
+      "start_line": 368,
+      "end_line": 401,
+      "bases": [
+        "ShellComplete"
+      ]
+    },
+    {
+      "name": "FishComplete",
+      "file": "shell_completion.py",
+      "start_line": 404,
+      "end_line": 438,
+      "bases": [
+        "ShellComplete"
+      ]
+    },
+    {
+      "name": "EchoingStdin",
+      "file": "testing.py",
+      "start_line": 28,
+      "end_line": 59,
+      "bases": []
+    },
+    {
+      "name": "_FDCapture",
+      "file": "testing.py",
+      "start_line": 72,
+      "end_line": 102,
+      "bases": []
+    },
+    {
+      "name": "BytesIOCopy",
+      "file": "testing.py",
+      "start_line": 105,
+      "end_line": 121,
+      "bases": [
+        "BytesIO"
+      ]
+    },
+    {
+      "name": "StreamMixer",
+      "file": "testing.py",
+      "start_line": 124,
+      "end_line": 135,
+      "bases": []
+    },
+    {
+      "name": "_NamedTextIOWrapper",
+      "file": "testing.py",
+      "start_line": 138,
+      "end_line": 186,
+      "bases": [
+        "TextIOWrapper"
+      ]
+    },
+    {
+      "name": "Result",
+      "file": "testing.py",
+      "start_line": 209,
+      "end_line": 284,
+      "bases": []
+    },
+    {
+      "name": "CliRunner",
+      "file": "testing.py",
+      "start_line": 287,
+      "end_line": 736,
+      "bases": []
+    },
+    {
+      "name": "ParamTypeInfoDict",
+      "file": "types.py",
+      "start_line": 32,
+      "end_line": 34,
+      "bases": [
+        "TypedDict"
+      ]
+    },
+    {
+      "name": "ParamType",
+      "file": "types.py",
+      "start_line": 37,
+      "end_line": 176,
+      "bases": [
+        "Generic",
+        "ABC"
+      ]
+    },
+    {
+      "name": "CompositeParamType",
+      "file": "types.py",
+      "start_line": 179,
+      "end_line": 184,
+      "bases": [
+        "ParamType"
+      ]
+    },
+    {
+      "name": "FuncParamTypeInfoDict",
+      "file": "types.py",
+      "start_line": 187,
+      "end_line": 188,
+      "bases": [
+        "ParamTypeInfoDict"
+      ]
+    },
+    {
+      "name": "FuncParamType",
+      "file": "types.py",
+      "start_line": 191,
+      "end_line": 213,
+      "bases": [
+        "ParamType"
+      ]
+    },
+    {
+      "name": "UnprocessedParamType",
+      "file": "types.py",
+      "start_line": 216,
+      "end_line": 225,
+      "bases": [
+        "ParamType"
+      ]
+    },
+    {
+      "name": "StringParamType",
+      "file": "types.py",
+      "start_line": 228,
+      "end_line": 251,
+      "bases": [
+        "ParamType"
+      ]
+    },
+    {
+      "name": "ChoiceInfoDict",
+      "file": "types.py",
+      "start_line": 254,
+      "end_line": 256,
+      "bases": [
+        "ParamTypeInfoDict"
+      ]
+    },
+    {
+      "name": "Choice",
+      "file": "types.py",
+      "start_line": 259,
+      "end_line": 429,
+      "bases": [
+        "ParamType",
+        "Generic"
+      ]
+    },
+    {
+      "name": "DateTimeInfoDict",
+      "file": "types.py",
+      "start_line": 432,
+      "end_line": 433,
+      "bases": [
+        "ParamTypeInfoDict"
+      ]
+    },
+    {
+      "name": "DateTime",
+      "file": "types.py",
+      "start_line": 436,
+      "end_line": 502,
+      "bases": [
+        "ParamType"
+      ]
+    },
+    {
+      "name": "_NumberParamTypeBase",
+      "file": "types.py",
+      "start_line": 505,
+      "end_line": 520,
+      "bases": [
+        "ParamType"
+      ]
+    },
+    {
+      "name": "NumberRangeInfoDict",
+      "file": "types.py",
+      "start_line": 523,
+      "end_line": 528,
+      "bases": [
+        "ParamTypeInfoDict"
+      ]
+    },
+    {
+      "name": "_NumberRangeBase",
+      "file": "types.py",
+      "start_line": 531,
+      "end_line": 618,
+      "bases": [
+        "_NumberParamTypeBase"
+      ]
+    },
+    {
+      "name": "IntParamType",
+      "file": "types.py",
+      "start_line": 621,
+      "end_line": 626,
+      "bases": [
+        "_NumberParamTypeBase"
+      ]
+    },
+    {
+      "name": "IntRange",
+      "file": "types.py",
+      "start_line": 629,
+      "end_line": 650,
+      "bases": [
+        "_NumberRangeBase",
+        "IntParamType"
+      ]
+    },
+    {
+      "name": "FloatParamType",
+      "file": "types.py",
+      "start_line": 653,
+      "end_line": 658,
+      "bases": [
+        "_NumberParamTypeBase"
+      ]
+    },
+    {
+      "name": "FloatRange",
+      "file": "types.py",
+      "start_line": 661,
+      "end_line": 701,
+      "bases": [
+        "_NumberRangeBase",
+        "FloatParamType"
+      ]
+    },
+    {
+      "name": "BoolParamType",
+      "file": "types.py",
+      "start_line": 704,
+      "end_line": 770,
+      "bases": [
+        "ParamType"
+      ]
+    },
+    {
+      "name": "UUIDParameterType",
+      "file": "types.py",
+      "start_line": 773,
+      "end_line": 792,
+      "bases": [
+        "ParamType"
+      ]
+    },
+    {
+      "name": "FileInfoDict",
+      "file": "types.py",
+      "start_line": 795,
+      "end_line": 797,
+      "bases": [
+        "ParamTypeInfoDict"
+      ]
+    },
+    {
+      "name": "File",
+      "file": "types.py",
+      "start_line": 800,
+      "end_line": 924,
+      "bases": [
+        "ParamType"
+      ]
+    },
+    {
+      "name": "PathInfoDict",
+      "file": "types.py",
+      "start_line": 931,
+      "end_line": 937,
+      "bases": [
+        "ParamTypeInfoDict"
+      ]
+    },
+    {
+      "name": "Path",
+      "file": "types.py",
+      "start_line": 940,
+      "end_line": 1117,
+      "bases": [
+        "ParamType"
+      ]
+    },
+    {
+      "name": "TupleInfoDict",
+      "file": "types.py",
+      "start_line": 1120,
+      "end_line": 1121,
+      "bases": [
+        "ParamTypeInfoDict"
+      ]
+    },
+    {
+      "name": "Tuple",
+      "file": "types.py",
+      "start_line": 1124,
+      "end_line": 1174,
+      "bases": [
+        "CompositeParamType"
+      ]
+    },
+    {
+      "name": "OptionHelpExtra",
+      "file": "types.py",
+      "start_line": 1305,
+      "end_line": 1309,
+      "bases": [
+        "TypedDict"
+      ]
+    },
+    {
+      "name": "LazyFile",
+      "file": "utils.py",
+      "start_line": 113,
+      "end_line": 204,
+      "bases": []
+    },
+    {
+      "name": "KeepOpenFile",
+      "file": "utils.py",
+      "start_line": 207,
+      "end_line": 231,
+      "bases": []
+    },
+    {
+      "name": "PacifyFlushWrapper",
+      "file": "utils.py",
+      "start_line": 510,
+      "end_line": 534,
+      "bases": []
+    }
+  ],
+  "class_edges": [
+    {
+      "sub": "_WindowsConsoleReader",
+      "base": "_WindowsConsoleRawIOBase"
+    },
+    {
+      "sub": "_WindowsConsoleWriter",
+      "base": "_WindowsConsoleRawIOBase"
+    },
+    {
+      "sub": "_BaseCommand",
+      "base": "Command"
+    },
+    {
+      "sub": "Group",
+      "base": "Command"
+    },
+    {
+      "sub": "_MultiCommand",
+      "base": "Group"
+    },
+    {
+      "sub": "CommandCollection",
+      "base": "Group"
+    },
+    {
+      "sub": "Option",
+      "base": "Parameter"
+    },
+    {
+      "sub": "Argument",
+      "base": "Parameter"
+    },
+    {
+      "sub": "UsageError",
+      "base": "ClickException"
+    },
+    {
+      "sub": "BadParameter",
+      "base": "UsageError"
+    },
+    {
+      "sub": "MissingParameter",
+      "base": "BadParameter"
+    },
+    {
+      "sub": "NoSuchOption",
+      "base": "UsageError"
+    },
+    {
+      "sub": "NoSuchCommand",
+      "base": "UsageError"
+    },
+    {
+      "sub": "BadOptionUsage",
+      "base": "UsageError"
+    },
+    {
+      "sub": "BadArgumentUsage",
+      "base": "UsageError"
+    },
+    {
+      "sub": "NoArgsIsHelpError",
+      "base": "UsageError"
+    },
+    {
+      "sub": "FileError",
+      "base": "ClickException"
+    },
+    {
+      "sub": "BashComplete",
+      "base": "ShellComplete"
+    },
+    {
+      "sub": "ZshComplete",
+      "base": "ShellComplete"
+    },
+    {
+      "sub": "FishComplete",
+      "base": "ShellComplete"
+    },
+    {
+      "sub": "CompositeParamType",
+      "base": "ParamType"
+    },
+    {
+      "sub": "FuncParamTypeInfoDict",
+      "base": "ParamTypeInfoDict"
+    },
+    {
+      "sub": "FuncParamType",
+      "base": "ParamType"
+    },
+    {
+      "sub": "UnprocessedParamType",
+      "base": "ParamType"
+    },
+    {
+      "sub": "StringParamType",
+      "base": "ParamType"
+    },
+    {
+      "sub": "ChoiceInfoDict",
+      "base": "ParamTypeInfoDict"
+    },
+    {
+      "sub": "Choice",
+      "base": "ParamType"
+    },
+    {
+      "sub": "DateTimeInfoDict",
+      "base": "ParamTypeInfoDict"
+    },
+    {
+      "sub": "DateTime",
+      "base": "ParamType"
+    },
+    {
+      "sub": "_NumberParamTypeBase",
+      "base": "ParamType"
+    },
+    {
+      "sub": "NumberRangeInfoDict",
+      "base": "ParamTypeInfoDict"
+    },
+    {
+      "sub": "_NumberRangeBase",
+      "base": "_NumberParamTypeBase"
+    },
+    {
+      "sub": "IntParamType",
+      "base": "_NumberParamTypeBase"
+    },
+    {
+      "sub": "IntRange",
+      "base": "_NumberRangeBase"
+    },
+    {
+      "sub": "IntRange",
+      "base": "IntParamType"
+    },
+    {
+      "sub": "FloatParamType",
+      "base": "_NumberParamTypeBase"
+    },
+    {
+      "sub": "FloatRange",
+      "base": "_NumberRangeBase"
+    },
+    {
+      "sub": "FloatRange",
+      "base": "FloatParamType"
+    },
+    {
+      "sub": "BoolParamType",
+      "base": "ParamType"
+    },
+    {
+      "sub": "UUIDParameterType",
+      "base": "ParamType"
+    },
+    {
+      "sub": "FileInfoDict",
+      "base": "ParamTypeInfoDict"
+    },
+    {
+      "sub": "File",
+      "base": "ParamType"
+    },
+    {
+      "sub": "PathInfoDict",
+      "base": "ParamTypeInfoDict"
+    },
+    {
+      "sub": "Path",
+      "base": "ParamType"
+    },
+    {
+      "sub": "TupleInfoDict",
+      "base": "ParamTypeInfoDict"
+    },
+    {
+      "sub": "Tuple",
+      "base": "CompositeParamType"
+    }
+  ],
+  "constants": [
+    {
+      "name": "CYGWIN",
+      "file": "_compat.py",
+      "line": 13,
+      "comment": ""
+    },
+    {
+      "name": "WIN",
+      "file": "_compat.py",
+      "line": 14,
+      "comment": ""
+    },
+    {
+      "name": "MAC",
+      "file": "_compat.py",
+      "line": 15,
+      "comment": ""
+    },
+    {
+      "name": "V",
+      "file": "_termui_impl.py",
+      "line": 33,
+      "comment": ""
+    },
+    {
+      "name": "UNSET",
+      "file": "_utils.py",
+      "line": 22,
+      "comment": ""
+    },
+    {
+      "name": "FLAG_NEEDS_VALUE",
+      "file": "_utils.py",
+      "line": 25,
+      "comment": ""
+    },
+    {
+      "name": "T_UNSET",
+      "file": "_utils.py",
+      "line": 32,
+      "comment": ""
+    },
+    {
+      "name": "T_FLAG_NEEDS_VALUE",
+      "file": "_utils.py",
+      "line": 35,
+      "comment": ""
+    },
+    {
+      "name": "STDIN_HANDLE",
+      "file": "_winconsole.py",
+      "line": 54,
+      "comment": ""
+    },
+    {
+      "name": "STDOUT_HANDLE",
+      "file": "_winconsole.py",
+      "line": 55,
+      "comment": ""
+    },
+    {
+      "name": "STDERR_HANDLE",
+      "file": "_winconsole.py",
+      "line": 56,
+      "comment": ""
+    },
+    {
+      "name": "ERROR_SUCCESS",
+      "file": "_winconsole.py",
+      "line": 61,
+      "comment": ""
+    },
+    {
+      "name": "ERROR_NOT_ENOUGH_MEMORY",
+      "file": "_winconsole.py",
+      "line": 62,
+      "comment": ""
+    },
+    {
+      "name": "ERROR_OPERATION_ABORTED",
+      "file": "_winconsole.py",
+      "line": 63,
+      "comment": ""
+    },
+    {
+      "name": "STDIN_FILENO",
+      "file": "_winconsole.py",
+      "line": 65,
+      "comment": ""
+    },
+    {
+      "name": "STDOUT_FILENO",
+      "file": "_winconsole.py",
+      "line": 66,
+      "comment": ""
+    },
+    {
+      "name": "STDERR_FILENO",
+      "file": "_winconsole.py",
+      "line": 67,
+      "comment": ""
+    },
+    {
+      "name": "EOF",
+      "file": "_winconsole.py",
+      "line": 69,
+      "comment": ""
+    },
+    {
+      "name": "MAX_BYTES_WRITTEN",
+      "file": "_winconsole.py",
+      "line": 70,
+      "comment": ""
+    },
+    {
+      "name": "F",
+      "file": "core.py",
+      "line": 53,
+      "comment": ""
+    },
+    {
+      "name": "V",
+      "file": "core.py",
+      "line": 54,
+      "comment": ""
+    },
+    {
+      "name": "R",
+      "file": "decorators.py",
+      "line": 22,
+      "comment": ""
+    },
+    {
+      "name": "T",
+      "file": "decorators.py",
+      "line": 23,
+      "comment": ""
+    },
+    {
+      "name": "FC",
+      "file": "decorators.py",
+      "line": 25,
+      "comment": ""
+    },
+    {
+      "name": "FORCED_WIDTH",
+      "file": "formatting.py",
+      "line": 11,
+      "comment": "# Can force a width.  This is used by the test system"
+    },
+    {
+      "name": "V",
+      "file": "parser.py",
+      "line": 48,
+      "comment": ""
+    },
+    {
+      "name": "_SOURCE_BASH",
+      "file": "shell_completion.py",
+      "line": 96,
+      "comment": "# Only Bash >= 4.4 has the nosort option."
+    },
+    {
+      "name": "_SOURCE_ZSH",
+      "file": "shell_completion.py",
+      "line": 134,
+      "comment": "# handling of colons in ZshComplet.format_completion.)"
+    },
+    {
+      "name": "_SOURCE_FISH",
+      "file": "shell_completion.py",
+      "line": 178,
+      "comment": ""
+    },
+    {
+      "name": "V",
+      "file": "termui.py",
+      "line": 29,
+      "comment": ""
+    },
+    {
+      "name": "_HIDDEN_INPUT_MASK",
+      "file": "termui.py",
+      "line": 57,
+      "comment": ""
+    },
+    {
+      "name": "UNPROCESSED",
+      "file": "types.py",
+      "line": 1283,
+      "comment": "#: .. versionadded:: 4.0"
+    },
+    {
+      "name": "STRING",
+      "file": "types.py",
+      "line": 1287,
+      "comment": "#: can also be selected by using ``str`` as type."
+    },
+    {
+      "name": "INT",
+      "file": "types.py",
+      "line": 1291,
+      "comment": "#: type."
+    },
+    {
+      "name": "FLOAT",
+      "file": "types.py",
+      "line": 1295,
+      "comment": "#: ``float`` as type."
+    },
+    {
+      "name": "BOOL",
+      "file": "types.py",
+      "line": 1299,
+      "comment": "#: also be selected by using ``bool`` as a type."
+    },
+    {
+      "name": "UUID",
+      "file": "types.py",
+      "line": 1302,
+      "comment": "#: A UUID parameter."
+    },
+    {
+      "name": "R",
+      "file": "utils.py",
+      "line": 30,
+      "comment": ""
+    }
+  ]
+}

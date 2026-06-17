@@ -1,0 +1,214 @@
+{
+ "raw": {
+  "label": "raw",
+  "untangle_applied": false,
+  "untangle_max_src": null,
+  "n_bugs_total": 501,
+  "n_patch_ok": 501,
+  "n_bugs_with_src_py": 500,
+  "n_multifile_src_bugs": 66,
+  "n_cochange_edges": 157,
+  "src_py_fanout_hist": {
+   "0": 1,
+   "1": 434,
+   "2": 49,
+   "3": 8,
+   "4": 6,
+   "5": 2,
+   "8": 1
+  },
+  "per_project": {
+   "PySnooper": {
+    "bugs": 3,
+    "multifile": 1,
+    "edges": 1
+   },
+   "ansible": {
+    "bugs": 18,
+    "multifile": 1,
+    "edges": 1
+   },
+   "black": {
+    "bugs": 23,
+    "multifile": 2,
+    "edges": 4
+   },
+   "cookiecutter": {
+    "bugs": 4,
+    "multifile": 1,
+    "edges": 3
+   },
+   "fastapi": {
+    "bugs": 16,
+    "multifile": 1,
+    "edges": 6
+   },
+   "httpie": {
+    "bugs": 5,
+    "multifile": 1,
+    "edges": 1
+   },
+   "keras": {
+    "bugs": 45,
+    "multifile": 7,
+    "edges": 20
+   },
+   "luigi": {
+    "bugs": 33,
+    "multifile": 1,
+    "edges": 1
+   },
+   "matplotlib": {
+    "bugs": 30,
+    "multifile": 4,
+    "edges": 11
+   },
+   "pandas": {
+    "bugs": 169,
+    "multifile": 30,
+    "edges": 55
+   },
+   "sanic": {
+    "bugs": 5,
+    "multifile": 0,
+    "edges": 0
+   },
+   "scrapy": {
+    "bugs": 40,
+    "multifile": 1,
+    "edges": 28
+   },
+   "spacy": {
+    "bugs": 10,
+    "multifile": 1,
+    "edges": 1
+   },
+   "thefuck": {
+    "bugs": 32,
+    "multifile": 2,
+    "edges": 7
+   },
+   "tornado": {
+    "bugs": 16,
+    "multifile": 3,
+    "edges": 3
+   },
+   "tqdm": {
+    "bugs": 9,
+    "multifile": 1,
+    "edges": 1
+   },
+   "youtube-dl": {
+    "bugs": 43,
+    "multifile": 9,
+    "edges": 14
+   }
+  }
+ },
+ "untangled": {
+  "label": "untangled",
+  "untangle_applied": true,
+  "untangle_max_src": 8,
+  "n_bugs_total": 501,
+  "n_patch_ok": 501,
+  "n_bugs_with_src_py": 500,
+  "n_multifile_src_bugs": 66,
+  "n_cochange_edges": 157,
+  "src_py_fanout_hist": {
+   "0": 1,
+   "1": 434,
+   "2": 49,
+   "3": 8,
+   "4": 6,
+   "5": 2,
+   "8": 1
+  },
+  "per_project": {
+   "PySnooper": {
+    "bugs": 3,
+    "multifile": 1,
+    "edges": 1
+   },
+   "ansible": {
+    "bugs": 18,
+    "multifile": 1,
+    "edges": 1
+   },
+   "black": {
+    "bugs": 23,
+    "multifile": 2,
+    "edges": 4
+   },
+   "cookiecutter": {
+    "bugs": 4,
+    "multifile": 1,
+    "edges": 3
+   },
+   "fastapi": {
+    "bugs": 16,
+    "multifile": 1,
+    "edges": 6
+   },
+   "httpie": {
+    "bugs": 5,
+    "multifile": 1,
+    "edges": 1
+   },
+   "keras": {
+    "bugs": 45,
+    "multifile": 7,
+    "edges": 20
+   },
+   "luigi": {
+    "bugs": 33,
+    "multifile": 1,
+    "edges": 1
+   },
+   "matplotlib": {
+    "bugs": 30,
+    "multifile": 4,
+    "edges": 11
+   },
+   "pandas": {
+    "bugs": 169,
+    "multifile": 30,
+    "edges": 55
+   },
+   "sanic": {
+    "bugs": 5,
+    "multifile": 0,
+    "edges": 0
+   },
+   "scrapy": {
+    "bugs": 40,
+    "multifile": 1,
+    "edges": 28
+   },
+   "spacy": {
+    "bugs": 10,
+    "multifile": 1,
+    "edges": 1
+   },
+   "thefuck": {
+    "bugs": 32,
+    "multifile": 2,
+    "edges": 7
+   },
+   "tornado": {
+    "bugs": 16,
+    "multifile": 3,
+    "edges": 3
+   },
+   "tqdm": {
+    "bugs": 9,
+    "multifile": 1,
+    "edges": 1
+   },
+   "youtube-dl": {
+    "bugs": 43,
+    "multifile": 9,
+    "edges": 14
+   }
+  }
+ }
+}

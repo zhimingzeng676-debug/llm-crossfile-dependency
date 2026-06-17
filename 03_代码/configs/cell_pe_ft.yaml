@@ -1,0 +1,9 @@
+name: cell_pe_ft
+repo_root: repos/werkzeug
+commits_path: null
+
+chunking: {strategy: function, include_graph_cards: true}
+embedder: {type: hashing, dim: 512}
+backend: {type: none, top_k: 5}
+llm: {type: api, model: dep, base_url: "http://localhost:8001/v1", temperature: 0.0}
+prompt_file: configs/prompts/pe_cot.yaml

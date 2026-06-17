@@ -1,0 +1,70 @@
+{
+  "all": {
+    "label": "全样本",
+    "n": 49,
+    "seen_baseline": 0.0,
+    "seen_full": 0.986,
+    "gain_seen": 0.986,
+    "unseen_baseline": 0.0,
+    "unseen_full": 1.0,
+    "gain_unseen": 1.0,
+    "memory_standalone(seenB-unseenB)": 0.0,
+    "structure_no_memory(unseenF-unseenB)": 1.0,
+    "card_transfer(unseenF-seenF)": 0.014
+  },
+  "forward": {
+    "label": "forward",
+    "n": 27,
+    "seen_baseline": 0.0,
+    "seen_full": 1.0,
+    "gain_seen": 1.0,
+    "unseen_baseline": 0.0,
+    "unseen_full": 1.0,
+    "gain_unseen": 1.0,
+    "memory_standalone(seenB-unseenB)": 0.0,
+    "structure_no_memory(unseenF-unseenB)": 1.0,
+    "card_transfer(unseenF-seenF)": 0.0
+  },
+  "reverse": {
+    "label": "reverse",
+    "n": 22,
+    "seen_baseline": 0.0,
+    "seen_full": 0.97,
+    "gain_seen": 0.97,
+    "unseen_baseline": 0.0,
+    "unseen_full": 1.0,
+    "gain_unseen": 1.0,
+    "memory_standalone(seenB-unseenB)": 0.0,
+    "structure_no_memory(unseenF-unseenB)": 1.0,
+    "card_transfer(unseenF-seenF)": 0.03
+  },
+  "stats": {
+    "structure_no_memory_unseenF_vs_unseenB": {
+      "a": 1.0,
+      "b": 0.0,
+      "delta": 1.0,
+      "t": Infinity,
+      "p": 0.0
+    },
+    "card_transfer_unseenF_vs_seenF": {
+      "a": 1.0,
+      "b": 0.986,
+      "delta": 0.014,
+      "t": 1.0,
+      "p": 0.3223252185211163
+    },
+    "memory_seenForced_vs_unseenForced": {
+      "a": 0.169,
+      "b": 0.017,
+      "delta": 0.152,
+      "t": 5.4,
+      "p": 2.0111821004305873e-06
+    }
+  },
+  "forced_baseline": {
+    "seen_baseline_forced": 0.169,
+    "unseen_baseline_forced": 0.017,
+    "pure_memory_contribution(seenF-unseenF)": 0.152,
+    "note": "强制猜测(禁abstain)下的纯记忆贡献:seen 减 unseen"
+  }
+}

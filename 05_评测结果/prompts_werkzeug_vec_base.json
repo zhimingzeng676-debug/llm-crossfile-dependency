@@ -1,0 +1,1660 @@
+[
+ {
+  "id": "FWD-01",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/csp.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/csp.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ContentSecurityPolicy\n文件内定义的函数: csp_property, __init__, _get_value, _set_value, _del_value, to_header, __str__, __repr__\n\n[代码片段 2] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 3] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[代码片段 4] 来源: datastructures/etag.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/etag.py\n它依赖(import)的仓库内文件: http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ETags\n文件内定义的函数: __init__, as_set, is_weak, is_strong, contains_weak, contains, contains_raw, to_header, __call__, __bool__, __str__, __len__, __iter__, __contains__, __repr__\n\n[代码片段 5] 来源: datastructures/auth.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/auth.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: Authorization, WWWAuthenticate\n文件内定义的函数: __init__, __getattr__, __getitem__, get, __contains__, __eq__, from_header, to_header, __str__, __repr__, __init__, _trigger_on_update, type, type, parameters, parameters, token, token, __getitem__, __setitem__, __delitem__, __getattr__, __setattr__, __delattr__, __contains__, __eq__, get, from_header, to_header, __str__\n\n[问题] 在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "datastructures/csp.py",
+   "wrappers/__init__.py",
+   "datastructures/headers.py",
+   "datastructures/etag.py",
+   "datastructures/auth.py"
+  ],
+  "expected_sources": [
+   "datastructures/headers.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "mixins",
+    "structures",
+    "exceptions"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-02",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,formparser.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: routing/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 routing/__init__.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 3] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 4] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 文件 formparser.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: TStreamFactory, FormDataParser, MultiPartParser\n文件内定义的函数: __call__, default_stream_factory, parse_form_data, __init__, parse_from_environ, parse, _parse_multipart, _parse_urlencoded, __init__, fail, get_part_charset, start_file_streaming, parse, _chunk_iter\n\n[问题] 在 werkzeug 中,formparser.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "routing/__init__.py",
+   "testapp.py",
+   "__init__.py",
+   "formparser.py"
+  ],
+  "expected_sources": [
+   "formparser.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "http",
+    "multipart",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-03",
+  "category": "forward_dep",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,http.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: middleware/proxy_fix.py (第 0-0 行)\n[依赖图卡片] 文件 middleware/proxy_fix.py\n它依赖(import)的仓库内文件: http.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: ProxyFix\n文件内定义的函数: __init__, _get_real_value, __call__\n\n[代码片段 3] 来源: sansio/http.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/http.py\n它依赖(import)的仓库内文件: _internal.py, http.py\n它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n文件内定义的类: (无)\n文件内定义的函数: is_resource_modified, _cookie_unslash_replace, parse_cookie\n\n[代码片段 4] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 5] 来源: sansio/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/__init__.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[问题] 在 werkzeug 中,http.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "middleware/proxy_fix.py",
+   "sansio/http.py",
+   "testapp.py",
+   "sansio/__init__.py"
+  ],
+  "expected_sources": [
+   "http.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "sansio"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-04",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,routing/map.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 routing/__init__.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 文件 routing/matcher.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py\n文件内定义的类: SlashRequired, State, StateMachineMatcher\n文件内定义的函数: __init__, add, update, _update_state, match, _match\n\n[代码片段 3] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 文件 routing/converters.py\n它依赖(import)的仓库内文件: routing/map.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py, routing/rules.py\n文件内定义的类: ValidationError, BaseConverter, UnicodeConverter, AnyConverter, PathConverter, NumberConverter, IntegerConverter, FloatConverter, UUIDConverter\n文件内定义的函数: __init_subclass__, __init__, to_python, to_url, __init__, __init__, to_url, __init__, to_python, to_url, signed_regex, __init__, to_python, to_url\n\n[代码片段 4] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 文件 routing/exceptions.py\n它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n文件内定义的类: RoutingException, RequestRedirect, RequestPath, RequestAliasRedirect, BuildError, WebsocketMismatch, NoMatch\n文件内定义的函数: __init__, get_response, __init__, __init__, __init__, suggested, closest_rule, _score_rule, __str__, __init__\n\n[代码片段 5] 来源: routing/map.py (第 0-0 行)\n[依赖图卡片] 文件 routing/map.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, routing/converters.py, routing/exceptions.py, routing/matcher.py, routing/rules.py, urls.py, wrappers/request.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/converters.py, routing/exceptions.py, routing/rules.py\n文件内定义的类: Map, MapAdapter\n文件内定义的函数: __init__, merge_slashes, merge_slashes, is_endpoint_expecting, _rules, iter_rules, add, bind, bind_to_environ, _get_wsgi_string, update, __repr__, __init__, dispatch, match, match, match, _handle_match, test, allowed_methods, get_host, get_default_redirect, encode_query_args, make_redirect_url, make_alias_redirect_url, _partial_build, build\n\n[问题] 在 werkzeug 中,routing/map.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "routing/__init__.py",
+   "routing/matcher.py",
+   "routing/converters.py",
+   "routing/exceptions.py",
+   "routing/map.py"
+  ],
+  "expected_sources": [
+   "routing/map.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "converters",
+    "matcher",
+    "rules",
+    "urls",
+    "request",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-05",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 文件 routing/matcher.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py\n文件内定义的类: SlashRequired, State, StateMachineMatcher\n文件内定义的函数: __init__, add, update, _update_state, match, _match\n\n[代码片段 2] 来源: routing/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 routing/__init__.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 3] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 文件 routing/exceptions.py\n它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n文件内定义的类: RoutingException, RequestRedirect, RequestPath, RequestAliasRedirect, BuildError, WebsocketMismatch, NoMatch\n文件内定义的函数: __init__, get_response, __init__, __init__, __init__, suggested, closest_rule, _score_rule, __str__, __init__\n\n[代码片段 4] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 文件 routing/converters.py\n它依赖(import)的仓库内文件: routing/map.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py, routing/rules.py\n文件内定义的类: ValidationError, BaseConverter, UnicodeConverter, AnyConverter, PathConverter, NumberConverter, IntegerConverter, FloatConverter, UUIDConverter\n文件内定义的函数: __init_subclass__, __init__, to_python, to_url, __init__, __init__, to_url, __init__, to_python, to_url, signed_regex, __init__, to_python, to_url\n\n[代码片段 5] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[问题] 在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "routing/matcher.py",
+   "routing/__init__.py",
+   "routing/exceptions.py",
+   "routing/converters.py",
+   "wrappers/__init__.py"
+  ],
+  "expected_sources": [
+   "routing/matcher.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "converters",
+    "exceptions",
+    "rules"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-06",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: sansio/http.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/http.py\n它依赖(import)的仓库内文件: _internal.py, http.py\n它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n文件内定义的类: (无)\n文件内定义的函数: is_resource_modified, _cookie_unslash_replace, parse_cookie\n\n[代码片段 2] 来源: sansio/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/__init__.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 3] 来源: sansio/utils.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/utils.py\n它依赖(import)的仓库内文件: _internal.py, exceptions.py, http.py, urls.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, sansio/request.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: host_is_trusted, get_host, get_current_url, get_content_length\n\n[代码片段 4] 来源: sansio/request.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/request.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, http.py, sansio/http.py, sansio/utils.py, user_agent.py, utils.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: Request\n文件内定义的函数: __init__, __repr__, args, access_route, full_path, is_secure, url, base_url, root_url, host_url, host, cookies, content_length, _parse_content_type, mimetype, mimetype_params, pragma, accept_mimetypes, accept_charsets, accept_encodings, accept_languages, cache_control, if_match, if_none_match, if_modified_since, if_unmodified_since, if_range, range, user_agent, authorization\n\n[代码片段 5] 来源: user_agent.py (第 0-0 行)\n[依赖图卡片] 文件 user_agent.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n文件内定义的类: UserAgent\n文件内定义的函数: __init__, __repr__, __str__, __bool__, to_header\n\n[问题] 在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "sansio/http.py",
+   "sansio/__init__.py",
+   "sansio/utils.py",
+   "sansio/request.py",
+   "user_agent.py"
+  ],
+  "expected_sources": [
+   "sansio/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures",
+    "http",
+    "utils",
+    "user_agent"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-07",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: sansio/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/__init__.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: sansio/http.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/http.py\n它依赖(import)的仓库内文件: _internal.py, http.py\n它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n文件内定义的类: (无)\n文件内定义的函数: is_resource_modified, _cookie_unslash_replace, parse_cookie\n\n[代码片段 3] 来源: sansio/utils.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/utils.py\n它依赖(import)的仓库内文件: _internal.py, exceptions.py, http.py, urls.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, sansio/request.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: host_is_trusted, get_host, get_current_url, get_content_length\n\n[代码片段 4] 来源: sansio/multipart.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/multipart.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, exceptions.py, http.py\n它被这些文件依赖/使用(import 它的使用方): formparser.py, test.py\n文件内定义的类: Event, Preamble, Field, File, Data, Epilogue, NeedData, State, MultipartDecoder, MultipartEncoder\n文件内定义的函数: __init__, receive_data, next_event, _parse_headers, _parse_data, _last_partial_boundary_index, __init__, send_event\n\n[代码片段 5] 来源: user_agent.py (第 0-0 行)\n[依赖图卡片] 文件 user_agent.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n文件内定义的类: UserAgent\n文件内定义的函数: __init__, __repr__, __str__, __bool__, to_header\n\n[问题] 在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "sansio/__init__.py",
+   "sansio/http.py",
+   "sansio/utils.py",
+   "sansio/multipart.py",
+   "user_agent.py"
+  ],
+  "expected_sources": [
+   "sansio/response.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures",
+    "cache_control",
+    "http",
+    "utils"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-08",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,serving.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 3] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 4] 来源: routing/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 routing/__init__.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: sansio/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/__init__.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[问题] 在 werkzeug 中,serving.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "__init__.py",
+   "testapp.py",
+   "wrappers/__init__.py",
+   "routing/__init__.py",
+   "sansio/__init__.py"
+  ],
+  "expected_sources": [
+   "serving.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "_reloader",
+    "debug",
+    "tbtools",
+    "exceptions",
+    "http",
+    "shared_data",
+    "urls"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-09",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,test.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 2] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 3] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 4] 来源: routing/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 routing/__init__.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: middleware/proxy_fix.py (第 0-0 行)\n[依赖图卡片] 文件 middleware/proxy_fix.py\n它依赖(import)的仓库内文件: http.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: ProxyFix\n文件内定义的函数: __init__, _get_real_value, __call__\n\n[问题] 在 werkzeug 中,test.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "testapp.py",
+   "__init__.py",
+   "wrappers/__init__.py",
+   "routing/__init__.py",
+   "middleware/proxy_fix.py"
+  ],
+  "expected_sources": [
+   "test.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "http",
+    "multipart",
+    "urls",
+    "utils",
+    "request",
+    "response",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-10",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 3] 来源: wrappers/__init__.py (第 1-3 行)\n文件: wrappers/__init__.py\n(模块级代码:import、常量、配置)\nfrom .request import Request as Request\nfrom .response import Response as Response\nfrom .response import ResponseStream as ResponseStream\n\n[代码片段 4] 来源: wrappers/request.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/request.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, formparser.py, sansio/request.py, test.py, utils.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): _internal.py, debug/__init__.py, exceptions.py, routing/exceptions.py, routing/map.py, test.py, testapp.py, utils.py, wrappers/__init__.py, wrappers/response.py\n文件内定义的类: Request\n文件内定义的函数: __init__, from_values, application, application, _get_file_stream, want_form_data_parsed, make_form_data_parser, _load_form_data, _get_stream_for_parsing, close, __enter__, __exit__, stream, data, get_data, get_data, get_data, form, values, files, script_root, url_root, json, get_json, get_json, get_json, on_json_loading_failed\n\n[代码片段 5] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 文件 routing/exceptions.py\n它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n文件内定义的类: RoutingException, RequestRedirect, RequestPath, RequestAliasRedirect, BuildError, WebsocketMismatch, NoMatch\n文件内定义的函数: __init__, get_response, __init__, __init__, __init__, suggested, closest_rule, _score_rule, __str__, __init__\n\n[问题] 在 werkzeug 中,wrappers/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "testapp.py",
+   "wrappers/__init__.py",
+   "wrappers/request.py",
+   "routing/exceptions.py"
+  ],
+  "expected_sources": [
+   "wrappers/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "formparser",
+    "request",
+    "test",
+    "utils",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-11",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 3] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 文件 routing/exceptions.py\n它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n文件内定义的类: RoutingException, RequestRedirect, RequestPath, RequestAliasRedirect, BuildError, WebsocketMismatch, NoMatch\n文件内定义的函数: __init__, get_response, __init__, __init__, __init__, suggested, closest_rule, _score_rule, __str__, __init__\n\n[代码片段 4] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: wrappers/__init__.py (第 1-3 行)\n文件: wrappers/__init__.py\n(模块级代码:import、常量、配置)\nfrom .request import Request as Request\nfrom .response import Response as Response\nfrom .response import ResponseStream as ResponseStream\n\n[问题] 在 werkzeug 中,wrappers/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "testapp.py",
+   "routing/exceptions.py",
+   "__init__.py",
+   "wrappers/__init__.py"
+  ],
+  "expected_sources": [
+   "wrappers/response.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "http",
+    "response",
+    "test",
+    "urls",
+    "utils",
+    "request",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-01",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 _internal.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 3] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 4] 来源: routing/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 routing/__init__.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: sansio/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/__init__.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 _internal.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "testapp.py",
+   "__init__.py",
+   "routing/__init__.py",
+   "sansio/__init__.py"
+  ],
+  "expected_sources": [
+   "_internal.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_reloader",
+    "file_storage",
+    "headers",
+    "mixins",
+    "structures",
+    "debug",
+    "exceptions",
+    "formparser",
+    "http",
+    "map",
+    "utils",
+    "serving",
+    "test",
+    "request",
+    "response"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-02",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/__init__.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/csp.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/csp.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ContentSecurityPolicy\n文件内定义的函数: csp_property, __init__, _get_value, _set_value, _del_value, to_header, __str__, __repr__\n\n[代码片段 2] 来源: datastructures/etag.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/etag.py\n它依赖(import)的仓库内文件: http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ETags\n文件内定义的函数: __init__, as_set, is_weak, is_strong, contains_weak, contains, contains_raw, to_header, __call__, __bool__, __str__, __len__, __iter__, __contains__, __repr__\n\n[代码片段 3] 来源: datastructures/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/__init__.py\n它依赖(import)的仓库内文件: datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/etag.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/range.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): exceptions.py, formparser.py, middleware/http_proxy.py, middleware/lint.py, routing/map.py, routing/rules.py, sansio/multipart.py, sansio/request.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: __getattr__\n\n[代码片段 4] 来源: datastructures/auth.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/auth.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: Authorization, WWWAuthenticate\n文件内定义的函数: __init__, __getattr__, __getitem__, get, __contains__, __eq__, from_header, to_header, __str__, __repr__, __init__, _trigger_on_update, type, type, parameters, parameters, token, token, __getitem__, __setitem__, __delitem__, __getattr__, __setattr__, __delattr__, __contains__, __eq__, get, from_header, to_header, __str__\n\n[代码片段 5] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 datastructures/__init__.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "datastructures/csp.py",
+   "datastructures/etag.py",
+   "datastructures/__init__.py",
+   "datastructures/auth.py",
+   "wrappers/__init__.py"
+  ],
+  "expected_sources": [
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "map",
+    "rules",
+    "multipart",
+    "request",
+    "response",
+    "test",
+    "urls",
+    "utils"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-03",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/mixins.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/csp.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/csp.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ContentSecurityPolicy\n文件内定义的函数: csp_property, __init__, _get_value, _set_value, _del_value, to_header, __str__, __repr__\n\n[代码片段 2] 来源: datastructures/mixins.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/mixins.py\n它依赖(import)的仓库内文件: _internal.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/cache_control.py, datastructures/headers.py, datastructures/structures.py\n文件内定义的类: ImmutableListMixin, ImmutableDictMixin, ImmutableMultiDictMixin, ImmutableHeadersMixin, UpdateDictMixin\n文件内定义的函数: _immutable_error, __hash__, __reduce_ex__, __delitem__, __iadd__, __imul__, __setitem__, append, remove, extend, insert, pop, reverse, sort, fromkeys, fromkeys, fromkeys, __reduce_ex__, _iter_hashitems, __hash__, setdefault, update, __ior__, pop, popitem, __setitem__, __delitem__, clear, __reduce_ex__, _iter_hashitems\n\n[代码片段 3] 来源: datastructures/etag.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/etag.py\n它依赖(import)的仓库内文件: http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ETags\n文件内定义的函数: __init__, as_set, is_weak, is_strong, contains_weak, contains, contains_raw, to_header, __call__, __bool__, __str__, __len__, __iter__, __contains__, __repr__\n\n[代码片段 4] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[代码片段 5] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 datastructures/mixins.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "datastructures/csp.py",
+   "datastructures/mixins.py",
+   "datastructures/etag.py",
+   "datastructures/headers.py",
+   "testapp.py"
+  ],
+  "expected_sources": [
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures",
+    "cache_control",
+    "headers",
+    "structures"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-04",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/structures.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/csp.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/csp.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ContentSecurityPolicy\n文件内定义的函数: csp_property, __init__, _get_value, _set_value, _del_value, to_header, __str__, __repr__\n\n[代码片段 2] 来源: datastructures/etag.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/etag.py\n它依赖(import)的仓库内文件: http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ETags\n文件内定义的函数: __init__, as_set, is_weak, is_strong, contains_weak, contains, contains_raw, to_header, __call__, __bool__, __str__, __len__, __iter__, __contains__, __repr__\n\n[代码片段 3] 来源: datastructures/auth.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/auth.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: Authorization, WWWAuthenticate\n文件内定义的函数: __init__, __getattr__, __getitem__, get, __contains__, __eq__, from_header, to_header, __str__, __repr__, __init__, _trigger_on_update, type, type, parameters, parameters, token, token, __getitem__, __setitem__, __delitem__, __getattr__, __setattr__, __delattr__, __contains__, __eq__, get, from_header, to_header, __str__\n\n[代码片段 4] 来源: datastructures/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/__init__.py\n它依赖(import)的仓库内文件: datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/etag.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/range.py, datastructures/structures.py\n它被这些文件依赖/使用(import 它的使用方): exceptions.py, formparser.py, middleware/http_proxy.py, middleware/lint.py, routing/map.py, routing/rules.py, sansio/multipart.py, sansio/request.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: __getattr__\n\n[代码片段 5] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 datastructures/structures.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "datastructures/csp.py",
+   "datastructures/etag.py",
+   "datastructures/auth.py",
+   "datastructures/__init__.py",
+   "datastructures/headers.py"
+  ],
+  "expected_sources": [
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures",
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "file_storage",
+    "headers"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-05",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 exceptions.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 3] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 文件 routing/exceptions.py\n它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n文件内定义的类: RoutingException, RequestRedirect, RequestPath, RequestAliasRedirect, BuildError, WebsocketMismatch, NoMatch\n文件内定义的函数: __init__, get_response, __init__, __init__, __init__, suggested, closest_rule, _score_rule, __str__, __init__\n\n[代码片段 4] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: routing/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 routing/__init__.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 exceptions.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "testapp.py",
+   "routing/exceptions.py",
+   "__init__.py",
+   "routing/__init__.py"
+  ],
+  "expected_sources": [
+   "exceptions.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "headers",
+    "debug",
+    "formparser",
+    "http_proxy",
+    "exceptions",
+    "map",
+    "multipart",
+    "utils",
+    "serving",
+    "request",
+    "response",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-06",
+  "category": "reverse_dep",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 formparser.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 文件 formparser.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: TStreamFactory, FormDataParser, MultiPartParser\n文件内定义的函数: __call__, default_stream_factory, parse_form_data, __init__, parse_from_environ, parse, _parse_multipart, _parse_urlencoded, __init__, fail, get_part_charset, start_file_streaming, parse, _chunk_iter\n\n[代码片段 2] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 3] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 4] 来源: routing/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 routing/__init__.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 formparser.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "formparser.py",
+   "testapp.py",
+   "wrappers/__init__.py",
+   "routing/__init__.py",
+   "__init__.py"
+  ],
+  "expected_sources": [
+   "formparser.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "request"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-07",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 http.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: sansio/http.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/http.py\n它依赖(import)的仓库内文件: _internal.py, http.py\n它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n文件内定义的类: (无)\n文件内定义的函数: is_resource_modified, _cookie_unslash_replace, parse_cookie\n\n[代码片段 3] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 4] 来源: middleware/proxy_fix.py (第 0-0 行)\n[依赖图卡片] 文件 middleware/proxy_fix.py\n它依赖(import)的仓库内文件: http.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: ProxyFix\n文件内定义的函数: __init__, _get_real_value, __call__\n\n[代码片段 5] 来源: middleware/http_proxy.py (第 0-0 行)\n[依赖图卡片] 文件 middleware/http_proxy.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, exceptions.py, http.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: ProxyMiddleware\n文件内定义的函数: __init__, _set_defaults, proxy_to, application, read, __call__\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 http.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "sansio/http.py",
+   "testapp.py",
+   "middleware/proxy_fix.py",
+   "middleware/http_proxy.py"
+  ],
+  "expected_sources": [
+   "http.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "auth",
+    "csp",
+    "etag",
+    "debug",
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "proxy_fix",
+    "shared_data",
+    "http",
+    "multipart",
+    "request",
+    "response",
+    "utils",
+    "serving",
+    "test"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-08",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 routing/rules.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 routing/__init__.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 文件 routing/matcher.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py\n文件内定义的类: SlashRequired, State, StateMachineMatcher\n文件内定义的函数: __init__, add, update, _update_state, match, _match\n\n[代码片段 3] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 文件 routing/rules.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, routing/converters.py, routing/map.py, urls.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/exceptions.py, routing/map.py, routing/matcher.py\n文件内定义的类: Weighting, RulePart, RuleFactory, Subdomain, Submount, EndpointPrefix, RuleTemplate, RuleTemplateFactory, Rule\n文件内定义的函数: _find, _pythonize, parse_converter_args, get_rules, __init__, get_rules, __init__, get_rules, __init__, get_rules, __init__, __call__, __init__, get_rules, _prefix_names, __init__, empty, get_empty_kwargs, get_rules, refresh, bind, get_converter, _encode_query_vars, _parse_rule, compile, _get_func_code, _compile_builder, _convert, _parts, _join\n\n[代码片段 4] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 文件 routing/exceptions.py\n它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n文件内定义的类: RoutingException, RequestRedirect, RequestPath, RequestAliasRedirect, BuildError, WebsocketMismatch, NoMatch\n文件内定义的函数: __init__, get_response, __init__, __init__, __init__, suggested, closest_rule, _score_rule, __str__, __init__\n\n[代码片段 5] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 routing/rules.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "routing/__init__.py",
+   "routing/matcher.py",
+   "routing/rules.py",
+   "routing/exceptions.py",
+   "testapp.py"
+  ],
+  "expected_sources": [
+   "routing/rules.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing",
+    "exceptions",
+    "map",
+    "matcher"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-09",
+  "category": "reverse_dep",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 sansio/request.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: sansio/http.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/http.py\n它依赖(import)的仓库内文件: _internal.py, http.py\n它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n文件内定义的类: (无)\n文件内定义的函数: is_resource_modified, _cookie_unslash_replace, parse_cookie\n\n[代码片段 2] 来源: sansio/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/__init__.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 3] 来源: sansio/utils.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/utils.py\n它依赖(import)的仓库内文件: _internal.py, exceptions.py, http.py, urls.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, sansio/request.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: host_is_trusted, get_host, get_current_url, get_content_length\n\n[代码片段 4] 来源: sansio/request.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/request.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, http.py, sansio/http.py, sansio/utils.py, user_agent.py, utils.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: Request\n文件内定义的函数: __init__, __repr__, args, access_route, full_path, is_secure, url, base_url, root_url, host_url, host, cookies, content_length, _parse_content_type, mimetype, mimetype_params, pragma, accept_mimetypes, accept_charsets, accept_encodings, accept_languages, cache_control, if_match, if_none_match, if_modified_since, if_unmodified_since, if_range, range, user_agent, authorization\n\n[代码片段 5] 来源: user_agent.py (第 0-0 行)\n[依赖图卡片] 文件 user_agent.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n文件内定义的类: UserAgent\n文件内定义的函数: __init__, __repr__, __str__, __bool__, to_header\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 sansio/request.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "sansio/http.py",
+   "sansio/__init__.py",
+   "sansio/utils.py",
+   "sansio/request.py",
+   "user_agent.py"
+  ],
+  "expected_sources": [
+   "sansio/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "request"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-10",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 urls.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: urls.py (第 0-0 行)\n[依赖图卡片] 文件 urls.py\n它依赖(import)的仓库内文件: datastructures/__init__.py\n它被这些文件依赖/使用(import 它的使用方): routing/map.py, routing/rules.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: _codec_error_url_quote, _make_unquote_part, _unquote_partial, uri_to_iri, iri_to_uri, _decode_idna, _urlencode\n\n[代码片段 2] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 3] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 4] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 文件 routing/exceptions.py\n它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n文件内定义的类: RoutingException, RequestRedirect, RequestPath, RequestAliasRedirect, BuildError, WebsocketMismatch, NoMatch\n文件内定义的函数: __init__, get_response, __init__, __init__, __init__, suggested, closest_rule, _score_rule, __str__, __init__\n\n[代码片段 5] 来源: routing/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 routing/__init__.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 urls.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "urls.py",
+   "wrappers/__init__.py",
+   "testapp.py",
+   "routing/exceptions.py",
+   "routing/__init__.py"
+  ],
+  "expected_sources": [
+   "urls.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "map",
+    "rules",
+    "utils",
+    "serving",
+    "test",
+    "response"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-11",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 utils.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 3] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 文件 utils.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, security.py, wrappers/__init__.py, wrappers/request.py, wrappers/response.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, debug/tbtools.py, middleware/shared_data.py, routing/exceptions.py, sansio/request.py, sansio/response.py, test.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: cached_property, environ_property, header_property, ImportStringError\n文件内定义的函数: __init__, __set__, __get__, __delete__, lookup, lookup, get_content_type, secure_filename, redirect, append_slash_redirect, send_file, send_from_directory, import_string, find_modules, __init__, __repr__\n\n[代码片段 4] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: sansio/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/__init__.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 utils.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "testapp.py",
+   "utils.py",
+   "__init__.py",
+   "sansio/__init__.py"
+  ],
+  "expected_sources": [
+   "utils.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "debug",
+    "tbtools",
+    "shared_data",
+    "exceptions",
+    "request",
+    "response",
+    "test"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-12",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 wrappers/request.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 3] 来源: wrappers/request.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/request.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, formparser.py, sansio/request.py, test.py, utils.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): _internal.py, debug/__init__.py, exceptions.py, routing/exceptions.py, routing/map.py, test.py, testapp.py, utils.py, wrappers/__init__.py, wrappers/response.py\n文件内定义的类: Request\n文件内定义的函数: __init__, from_values, application, application, _get_file_stream, want_form_data_parsed, make_form_data_parser, _load_form_data, _get_stream_for_parsing, close, __enter__, __exit__, stream, data, get_data, get_data, get_data, form, values, files, script_root, url_root, json, get_json, get_json, get_json, on_json_loading_failed\n\n[代码片段 4] 来源: wrappers/__init__.py (第 1-3 行)\n文件: wrappers/__init__.py\n(模块级代码:import、常量、配置)\nfrom .request import Request as Request\nfrom .response import Response as Response\nfrom .response import ResponseStream as ResponseStream\n\n[代码片段 5] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 文件 routing/exceptions.py\n它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n文件内定义的类: RoutingException, RequestRedirect, RequestPath, RequestAliasRedirect, BuildError, WebsocketMismatch, NoMatch\n文件内定义的函数: __init__, get_response, __init__, __init__, __init__, suggested, closest_rule, _score_rule, __str__, __init__\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 wrappers/request.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "testapp.py",
+   "wrappers/request.py",
+   "wrappers/__init__.py",
+   "routing/exceptions.py"
+  ],
+  "expected_sources": [
+   "wrappers/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "debug",
+    "exceptions",
+    "map",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers",
+    "response"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-13",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 wsgi.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 3] 来源: sansio/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/__init__.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 4] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: middleware/proxy_fix.py (第 0-0 行)\n[依赖图卡片] 文件 middleware/proxy_fix.py\n它依赖(import)的仓库内文件: http.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: ProxyFix\n文件内定义的函数: __init__, _get_real_value, __call__\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 wsgi.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "testapp.py",
+   "sansio/__init__.py",
+   "__init__.py",
+   "middleware/proxy_fix.py"
+  ],
+  "expected_sources": [
+   "wsgi.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "formparser",
+    "local",
+    "http_proxy",
+    "lint",
+    "shared_data",
+    "map",
+    "test",
+    "utils",
+    "request",
+    "response"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-01",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Accept 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 NotFound\n定义位置: exceptions.py 第 351-361 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: datastructures/accept.py (第 0-0 行)\n[依赖图卡片] 类 Accept\n定义位置: datastructures/accept.py 第 11-198 行\n它继承自: ImmutableList [datastructures/structures.py]\n继承它的子类: MIMEAccept [datastructures/accept.py], LanguageAccept [datastructures/accept.py], CharsetAccept [datastructures/accept.py]\n\n[代码片段 3] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 类 SlashRequired\n定义位置: routing/matcher.py 第 16-17 行\n它继承自: Exception\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 NotAcceptable\n定义位置: exceptions.py 第 400-413 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 Unauthorized\n定义位置: exceptions.py 第 264-333 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 Accept 继承自哪个类?那个基类定义在哪个文件?",
+  "retrieved_sources": [
+   "exceptions.py",
+   "datastructures/accept.py",
+   "routing/matcher.py",
+   "exceptions.py",
+   "exceptions.py"
+  ],
+  "expected_sources": [
+   "datastructures/accept.py",
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableList",
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-02",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 FileMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wsgi.py (第 0-0 行)\n[依赖图卡片] 类 FileWrapper\n定义位置: wsgi.py 第 300-349 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 类 FileMultiDict\n定义位置: datastructures/file_storage.py 第 165-205 行\n它继承自: MultiDict [datastructures/structures.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: middleware/lint.py (第 0-0 行)\n[依赖图卡片] 类 GuardedWrite\n定义位置: middleware/lint.py 第 122-130 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 类 ImportStringError\n定义位置: utils.py 第 645-684 行\n它继承自: ImportError\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 类 SlashRequired\n定义位置: routing/matcher.py 第 16-17 行\n它继承自: Exception\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 FileMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+  "retrieved_sources": [
+   "wsgi.py",
+   "datastructures/file_storage.py",
+   "middleware/lint.py",
+   "utils.py",
+   "routing/matcher.py"
+  ],
+  "expected_sources": [
+   "datastructures/file_storage.py",
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "MultiDict",
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-03",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 EnvironHeaders 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 类 EnvironHeaders\n定义位置: datastructures/headers.py 第 605-658 行\n它继承自: ImmutableHeadersMixin [datastructures/mixins.py], Headers [datastructures/headers.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: test.py (第 0-0 行)\n[依赖图卡片] 类 EnvironBuilder\n定义位置: test.py 第 178-764 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 类 environ_property\n定义位置: utils.py 第 116-140 行\n它继承自: _DictAccessorProperty [_internal.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 类 Headers\n定义位置: datastructures/headers.py 第 20-583 行\n它继承自: (无基类)\n继承它的子类: EnvironHeaders [datastructures/headers.py]\n\n[代码片段 5] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 类 SlashRequired\n定义位置: routing/matcher.py 第 16-17 行\n它继承自: Exception\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 EnvironHeaders 继承自哪个类?那个基类定义在哪个文件?",
+  "retrieved_sources": [
+   "datastructures/headers.py",
+   "test.py",
+   "utils.py",
+   "datastructures/headers.py",
+   "routing/matcher.py"
+  ],
+  "expected_sources": [
+   "datastructures/headers.py",
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableHeadersMixin",
+    "datastructures/mixins.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-04",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 RequestCacheControl 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: sansio/request.py (第 0-0 行)\n[依赖图卡片] 类 Request\n定义位置: sansio/request.py 第 39-536 行\n它继承自: (无基类)\n继承它的子类: Request [wrappers/request.py]\n\n[代码片段 2] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 RequestEntityTooLarge\n定义位置: exceptions.py 第 487-495 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: datastructures/cache_control.py (第 0-0 行)\n[依赖图卡片] 类 RequestCacheControl\n定义位置: datastructures/cache_control.py 第 157-208 行\n它继承自: ImmutableDictMixin [datastructures/mixins.py], _CacheControl [datastructures/cache_control.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 RequestTimeout\n定义位置: exceptions.py 第 416-426 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 RequestURITooLarge\n定义位置: exceptions.py 第 498-508 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 RequestCacheControl 继承自哪个类?那个基类定义在哪个文件?",
+  "retrieved_sources": [
+   "sansio/request.py",
+   "exceptions.py",
+   "datastructures/cache_control.py",
+   "exceptions.py",
+   "exceptions.py"
+  ],
+  "expected_sources": [
+   "datastructures/cache_control.py",
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableDictMixin",
+    "datastructures/mixins.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-05",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 ContentSecurityPolicy 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/csp.py (第 0-0 行)\n[依赖图卡片] 类 ContentSecurityPolicy\n定义位置: datastructures/csp.py 第 22-100 行\n它继承自: CallbackDict [datastructures/structures.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: datastructures/range.py (第 0-0 行)\n[依赖图卡片] 类 ContentRange\n定义位置: datastructures/range.py 第 143-210 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 类 SlashRequired\n定义位置: routing/matcher.py 第 16-17 行\n它继承自: Exception\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: wrappers/response.py (第 0-0 行)\n[依赖图卡片] 类 ResponseStream\n定义位置: wrappers/response.py 第 796-838 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 类 WebsocketMismatch\n定义位置: routing/exceptions.py 第 141-144 行\n它继承自: BadRequest [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 ContentSecurityPolicy 继承自哪个类?那个基类定义在哪个文件?",
+  "retrieved_sources": [
+   "datastructures/csp.py",
+   "datastructures/range.py",
+   "routing/matcher.py",
+   "wrappers/response.py",
+   "routing/exceptions.py"
+  ],
+  "expected_sources": [
+   "datastructures/csp.py",
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "CallbackDict",
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-06",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 CombinedMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 类 ImportStringError\n定义位置: utils.py 第 645-684 行\n它继承自: ImportError\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 MultiPartParser\n定义位置: formparser.py 第 292-415 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: datastructures/structures.py (第 0-0 行)\n[依赖图卡片] 类 CombinedMultiDict\n定义位置: datastructures/structures.py 第 816-958 行\n它继承自: ImmutableMultiDictMixin [datastructures/mixins.py], MultiDict [datastructures/structures.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 类 SlashRequired\n定义位置: routing/matcher.py 第 16-17 行\n它继承自: Exception\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 CombinedMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+  "retrieved_sources": [
+   "routing/rules.py",
+   "utils.py",
+   "formparser.py",
+   "datastructures/structures.py",
+   "routing/matcher.py"
+  ],
+  "expected_sources": [
+   "datastructures/structures.py",
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableMultiDictMixin",
+    "datastructures/mixins.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-07",
+  "category": "inheritance",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/request.py (第 0-0 行)\n[依赖图卡片] 类 Request\n定义位置: wrappers/request.py 第 31-650 行\n它继承自: Request [sansio/request.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: sansio/request.py (第 0-0 行)\n[依赖图卡片] 类 Request\n定义位置: sansio/request.py 第 39-536 行\n它继承自: (无基类)\n继承它的子类: Request [wrappers/request.py]\n\n[代码片段 3] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 RequestEntityTooLarge\n定义位置: exceptions.py 第 487-495 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 RequestTimeout\n定义位置: exceptions.py 第 416-426 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 类 RequestPath\n定义位置: routing/exceptions.py 第 49-56 行\n它继承自: RoutingException [routing/exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "wrappers/request.py",
+   "sansio/request.py",
+   "exceptions.py",
+   "exceptions.py",
+   "routing/exceptions.py"
+  ],
+  "expected_sources": [
+   "wrappers/request.py",
+   "sansio/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "sansio/request.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-08",
+  "category": "inheritance",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/response.py (第 804-806 行)\n文件: wrappers/response.py\n函数: __init__\ndef __init__(self, response: Response):\n        self.response = response\n        self.closed = False\n\n[代码片段 2] 来源: wrappers/response.py (第 266-266 行)\n文件: wrappers/response.py\n函数: get_data\ndef get_data(self, as_text: t.Literal[True]) -> str: ...\n\n[代码片段 3] 来源: wrappers/response.py (第 0-0 行)\n[依赖图卡片] 类 ResponseStream\n定义位置: wrappers/response.py 第 796-838 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: wrappers/response.py (第 0-0 行)\n[依赖图卡片] 类 Response\n定义位置: wrappers/response.py 第 39-793 行\n它继承自: Response [sansio/response.py]\n继承它的子类: TestResponse [test.py]\n\n[代码片段 5] 来源: wrappers/request.py (第 384-389 行)\n文件: wrappers/request.py\n函数: get_data\ndef get_data(\n        self,\n        cache: bool = True,\n        as_text: t.Literal[True] = ...,\n        parse_form_data: bool = False,\n    ) -> str: ...\n\n[问题] 在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在哪个文件?",
+  "retrieved_sources": [
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/request.py"
+  ],
+  "expected_sources": [
+   "wrappers/response.py",
+   "sansio/response.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "sansio/response.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-09",
+  "category": "inheritance",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,异常类 BadRequestKeyError 同时继承了哪两个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 BadRequestKeyError\n定义位置: exceptions.py 第 203-231 行\n它继承自: BadRequest [exceptions.py], KeyError\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 BadHost\n定义位置: exceptions.py 第 257-261 行\n它继承自: BadRequest [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 BadRequest\n定义位置: exceptions.py 第 190-200 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: BadRequestKeyError [exceptions.py], ClientDisconnected [exceptions.py], SecurityError [exceptions.py], BadHost [exceptions.py], WebsocketMismatch [routing/exceptions.py]\n\n[代码片段 4] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 SecurityError\n定义位置: exceptions.py 第 249-254 行\n它继承自: BadRequest [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 类 WebsocketMismatch\n定义位置: routing/exceptions.py 第 141-144 行\n它继承自: BadRequest [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,异常类 BadRequestKeyError 同时继承了哪两个类?",
+  "retrieved_sources": [
+   "exceptions.py",
+   "exceptions.py",
+   "exceptions.py",
+   "exceptions.py",
+   "routing/exceptions.py"
+  ],
+  "expected_sources": [
+   "exceptions.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "BadRequest",
+    "KeyError"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-10",
+  "category": "inheritance",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,有哪些异常类直接继承自 HTTPException?请尽量列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 Unauthorized\n定义位置: exceptions.py 第 264-333 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 HTTPVersionNotSupported\n定义位置: exceptions.py 第 823-832 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 Gone\n定义位置: exceptions.py 第 446-457 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 NotAcceptable\n定义位置: exceptions.py 第 400-413 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 NotFound\n定义位置: exceptions.py 第 351-361 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,有哪些异常类直接继承自 HTTPException?请尽量列出。",
+  "retrieved_sources": [
+   "exceptions.py",
+   "exceptions.py",
+   "exceptions.py",
+   "exceptions.py",
+   "exceptions.py"
+  ],
+  "expected_sources": [
+   "exceptions.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "BadGateway",
+    "BadRequest",
+    "Conflict",
+    "ExpectationFailed",
+    "FailedDependency",
+    "Forbidden",
+    "GatewayTimeout",
+    "Gone",
+    "HTTPVersionNotSupported",
+    "ImATeapot",
+    "InternalServerError",
+    "LengthRequired",
+    "Locked",
+    "MethodNotAllowed",
+    "MisdirectedRequest",
+    "NotAcceptable",
+    "NotFound",
+    "NotImplemented",
+    "PreconditionFailed",
+    "PreconditionRequired",
+    "RequestEntityTooLarge",
+    "RequestHeaderFieldsTooLarge",
+    "RequestRedirect",
+    "RequestTimeout",
+    "RequestURITooLarge",
+    "RequestedRangeNotSatisfiable",
+    "Unauthorized",
+    "UnavailableForLegalReasons",
+    "UnprocessableEntity",
+    "UnsupportedMediaType",
+    "_RetryAfter"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-11",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些类继承(混入)了 ImmutableDictMixin?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/mixins.py (第 0-0 行)\n[依赖图卡片] 类 ImmutableHeadersMixin\n定义位置: datastructures/mixins.py 第 172-228 行\n它继承自: (无基类)\n继承它的子类: EnvironHeaders [datastructures/headers.py]\n\n[代码片段 2] 来源: datastructures/mixins.py (第 0-0 行)\n[依赖图卡片] 类 ImmutableListMixin\n定义位置: datastructures/mixins.py 第 23-73 行\n它继承自: (无基类)\n继承它的子类: ImmutableList [datastructures/structures.py]\n\n[代码片段 3] 来源: datastructures/structures.py (第 0-0 行)\n[依赖图卡片] 类 ImmutableDict\n定义位置: datastructures/structures.py 第 961-978 行\n它继承自: ImmutableDictMixin [datastructures/mixins.py], dict\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: datastructures/mixins.py (第 0-0 行)\n[依赖图卡片] 类 ImmutableDictMixin\n定义位置: datastructures/mixins.py 第 76-139 行\n它继承自: Generic\n继承它的子类: RequestCacheControl [datastructures/cache_control.py], ImmutableMultiDictMixin [datastructures/mixins.py], ImmutableTypeConversionDict [datastructures/structures.py], ImmutableDict [datastructures/structures.py]\n\n[代码片段 5] 来源: serving.py (第 0-0 行)\n[依赖图卡片] 类 ForkingMixIn\n定义位置: serving.py 第 73-74 行\n它继承自: (无基类)\n继承它的子类: ForkingWSGIServer [serving.py]\n\n[问题] 在 werkzeug 中,哪些类继承(混入)了 ImmutableDictMixin?",
+  "retrieved_sources": [
+   "datastructures/mixins.py",
+   "datastructures/mixins.py",
+   "datastructures/structures.py",
+   "datastructures/mixins.py",
+   "serving.py"
+  ],
+  "expected_sources": [
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableDict",
+    "ImmutableMultiDictMixin",
+    "ImmutableTypeConversionDict",
+    "RequestCacheControl"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-12",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些类继承(混入)了 CallbackDict?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/range.py (第 0-0 行)\n[依赖图卡片] 类 _CallbackProperty\n定义位置: datastructures/range.py 第 120-140 行\n它继承自: Generic\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 类 SlashRequired\n定义位置: routing/matcher.py 第 16-17 行\n它继承自: Exception\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: datastructures/mixins.py (第 0-0 行)\n[依赖图卡片] 类 UpdateDictMixin\n定义位置: datastructures/mixins.py 第 245-317 行\n它继承自: dict\n继承它的子类: CallbackDict [datastructures/structures.py]\n\n[代码片段 4] 来源: datastructures/structures.py (第 0-0 行)\n[依赖图卡片] 类 CallbackDict\n定义位置: datastructures/structures.py 第 1038-1056 行\n它继承自: UpdateDictMixin [datastructures/mixins.py], dict\n继承它的子类: _CacheControl [datastructures/cache_control.py], ContentSecurityPolicy [datastructures/csp.py]\n\n[代码片段 5] 来源: wsgi.py (第 0-0 行)\n[依赖图卡片] 类 _RangeWrapper\n定义位置: wsgi.py 第 352-436 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,哪些类继承(混入)了 CallbackDict?",
+  "retrieved_sources": [
+   "datastructures/range.py",
+   "routing/matcher.py",
+   "datastructures/mixins.py",
+   "datastructures/structures.py",
+   "wsgi.py"
+  ],
+  "expected_sources": [
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ContentSecurityPolicy",
+    "_CacheControl"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-01",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Authorization 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: sansio/request.py (第 481-489 行)\n文件: sansio/request.py\n函数: authorization\ndef authorization(self) -> Authorization | None:\n        \"\"\"The ``Authorization`` header parsed into an :class:`.Authorization` object.\n        ``None`` if the header is not present.\n\n        .. versionchanged:: 2.3\n            :class:`Authorization` is no longer a ``dict``. The ``token`` attribute\n            was added for auth schemes that use a token instead of parameters.\n        \"\"\"\n        return Authorization.from_header(self.headers.get(\"Authorization\"))\n\n[代码片段 2] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 BadHost\n定义位置: exceptions.py 第 257-261 行\n它继承自: BadRequest [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: datastructures/auth.py (第 0-0 行)\n[依赖图卡片] 类 Authorization\n定义位置: datastructures/auth.py 第 17-140 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 5] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[问题] 在 werkzeug 中,类 Authorization 定义在哪个文件里?",
+  "retrieved_sources": [
+   "sansio/request.py",
+   "exceptions.py",
+   "datastructures/auth.py",
+   "testapp.py",
+   "PROVENANCE.md"
+  ],
+  "expected_sources": [
+   "datastructures/auth.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/auth.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-02",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 BaseConverter 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 2] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 3] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 类 UUIDConverter\n定义位置: routing/converters.py 第 230-249 行\n它继承自: BaseConverter [routing/converters.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 类 BaseConverter\n定义位置: routing/converters.py 第 18-45 行\n它继承自: (无基类)\n继承它的子类: UnicodeConverter [routing/converters.py], AnyConverter [routing/converters.py], PathConverter [routing/converters.py], NumberConverter [routing/converters.py], UUIDConverter [routing/converters.py]\n\n[代码片段 5] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 类 PathConverter\n定义位置: routing/converters.py 第 112-124 行\n它继承自: BaseConverter [routing/converters.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 BaseConverter 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "testapp.py",
+   "routing/converters.py",
+   "routing/converters.py",
+   "routing/converters.py"
+  ],
+  "expected_sources": [
+   "routing/converters.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/converters.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-03",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 CombinedMultiDict 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 2] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 类 FileMultiDict\n定义位置: datastructures/file_storage.py 第 165-205 行\n它继承自: MultiDict [datastructures/structures.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: datastructures/structures.py (第 0-0 行)\n[依赖图卡片] 类 CombinedMultiDict\n定义位置: datastructures/structures.py 第 816-958 行\n它继承自: ImmutableMultiDictMixin [datastructures/mixins.py], MultiDict [datastructures/structures.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: datastructures/structures.py (第 0-0 行)\n[依赖图卡片] 类 ImmutableMultiDict\n定义位置: datastructures/structures.py 第 981-995 行\n它继承自: ImmutableMultiDictMixin [datastructures/mixins.py], MultiDict [datastructures/structures.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 类 WebsocketMismatch\n定义位置: routing/exceptions.py 第 141-144 行\n它继承自: BadRequest [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 CombinedMultiDict 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "datastructures/file_storage.py",
+   "datastructures/structures.py",
+   "datastructures/structures.py",
+   "routing/exceptions.py"
+  ],
+  "expected_sources": [
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-04",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 FileStorage 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 类 FileStorage\n定义位置: datastructures/file_storage.py 第 16-162 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: wrappers/request.py (第 478-498 行)\n文件: wrappers/request.py\n函数: files\ndef files(self) -> ImmutableMultiDict[str, FileStorage]:\n        \"\"\":class:`~werkzeug.datastructures.MultiDict` object containing\n        all uploaded files.  Each key in :attr:`files` is the name from the\n        ``<input type=\"file\" name=\"\">``.  Each value in :attr:`files` is a\n        Werkzeug :class:`~werkzeug.datastructures.FileStorage` object.\n\n        It basically behaves like a standard file object you know from Python,\n        with the difference that it also has a\n        :meth:`~werkzeug.datastructures.FileStorage.save` function that can\n        store the file on the filesystem.\n\n        Note that :attr:`files` will only contain data if the request method was\n        POST, PUT or PATCH and the ``<form>`` that posted to the request had\n        ``enctype=\"multipart/form-data\"``.  It will be empty otherwise.\n\n        See the :class:`~werkzeug.datastructures.MultiDict` /\n        :class:`~werkzeug.datastructures.FileStorage` documentation for\n        more details about the used data structure.\n        \"\"\"\n        self._load_form_data()\n        return self.files\n\n[代码片段 3] 来源: wsgi.py (第 0-0 行)\n[依赖图卡片] 类 FileWrapper\n定义位置: wsgi.py 第 300-349 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 5] 来源: wrappers/request.py (第 478-498 行)\n[调用图卡片] 函数 files\n定义位置: wrappers/request.py 第 478-498 行\n它调用的仓库内函数: _load_form_data\n它被这些函数调用: (没有仓库内调用方)\n\n[问题] 在 werkzeug 中,类 FileStorage 定义在哪个文件里?",
+  "retrieved_sources": [
+   "datastructures/file_storage.py",
+   "wrappers/request.py",
+   "wsgi.py",
+   "testapp.py",
+   "wrappers/request.py"
+  ],
+  "expected_sources": [
+   "datastructures/file_storage.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/file_storage.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-05",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 HTTPException 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 RequestTimeout\n定义位置: exceptions.py 第 416-426 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 类 RequestRedirect\n定义位置: routing/exceptions.py 第 28-46 行\n它继承自: HTTPException [exceptions.py], RoutingException [routing/exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 4] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 类 WebsocketMismatch\n定义位置: routing/exceptions.py 第 141-144 行\n它继承自: BadRequest [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 类 RequestURITooLarge\n定义位置: exceptions.py 第 498-508 行\n它继承自: HTTPException [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 HTTPException 定义在哪个文件里?",
+  "retrieved_sources": [
+   "exceptions.py",
+   "routing/exceptions.py",
+   "testapp.py",
+   "routing/exceptions.py",
+   "exceptions.py"
+  ],
+  "expected_sources": [
+   "exceptions.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "exceptions.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-06",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Headers 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 类 Headers\n定义位置: datastructures/headers.py 第 20-583 行\n它继承自: (无基类)\n继承它的子类: EnvironHeaders [datastructures/headers.py]\n\n[代码片段 2] 来源: datastructures/structures.py (第 0-0 行)\n[依赖图卡片] 类 HeaderSet\n定义位置: datastructures/structures.py 第 1059-1211 行\n它继承自: MutableSet\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: exceptions.py (第 389-397 行)\n文件: exceptions.py\n函数: get_headers\ndef get_headers(\n        self,\n        environ: WSGIEnvironment | None = None,\n        scope: dict[str, t.Any] | None = None,\n    ) -> list[tuple[str, str]]:\n        headers = super().get_headers(environ, scope)\n        if self.valid_methods:\n            headers.append((\"Allow\", \", \".join(self.valid_methods)))\n        return headers\n\n[代码片段 4] 来源: exceptions.py (第 549-557 行)\n文件: exceptions.py\n函数: get_headers\ndef get_headers(\n        self,\n        environ: WSGIEnvironment | None = None,\n        scope: dict[str, t.Any] | None = None,\n    ) -> list[tuple[str, str]]:\n        headers = super().get_headers(environ, scope)\n        if self.length is not None:\n            headers.append((\"Content-Range\", f\"{self.units} */{self.length}\"))\n        return headers\n\n[代码片段 5] 来源: exceptions.py (第 325-333 行)\n文件: exceptions.py\n函数: get_headers\ndef get_headers(\n        self,\n        environ: WSGIEnvironment | None = None,\n        scope: dict[str, t.Any] | None = None,\n    ) -> list[tuple[str, str]]:\n        headers = super().get_headers(environ, scope)\n        if self.www_authenticate:\n            headers.extend((\"WWW-Authenticate\", str(x)) for x in self.www_authenticate)\n        return headers\n\n[问题] 在 werkzeug 中,类 Headers 定义在哪个文件里?",
+  "retrieved_sources": [
+   "datastructures/headers.py",
+   "datastructures/structures.py",
+   "exceptions.py",
+   "exceptions.py",
+   "exceptions.py"
+  ],
+  "expected_sources": [
+   "datastructures/headers.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/headers.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-07",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Map 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/map.py (第 0-0 行)\n[依赖图卡片] 类 Map\n定义位置: routing/map.py 第 41-379 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 4] 来源: routing/map.py (第 0-0 行)\n[依赖图卡片] 类 MapAdapter\n定义位置: routing/map.py 第 382-928 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: wsgi.py (第 0-0 行)\n[依赖图卡片] 类 FileWrapper\n定义位置: wsgi.py 第 300-349 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 Map 定义在哪个文件里?",
+  "retrieved_sources": [
+   "routing/map.py",
+   "testapp.py",
+   "testapp.py",
+   "routing/map.py",
+   "wsgi.py"
+  ],
+  "expected_sources": [
+   "routing/map.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/map.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-08",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 MapAdapter 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/map.py (第 0-0 行)\n[依赖图卡片] 类 MapAdapter\n定义位置: routing/map.py 第 382-928 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 4] 来源: datastructures/etag.py (第 33-35 行)\n[调用图卡片] 函数 is_weak\n定义位置: datastructures/etag.py 第 33-35 行\n它调用的仓库内函数: (无)\n它被这些函数调用: contains_weak [datastructures/etag.py]\n\n[代码片段 5] 来源: formparser.py (第 270-289 行)\n[调用图卡片] 函数 _parse_urlencoded\n定义位置: formparser.py 第 270-289 行\n它调用的仓库内函数: read\n它被这些函数调用: (没有仓库内调用方)\n\n[问题] 在 werkzeug 中,类 MapAdapter 定义在哪个文件里?",
+  "retrieved_sources": [
+   "routing/map.py",
+   "testapp.py",
+   "testapp.py",
+   "datastructures/etag.py",
+   "formparser.py"
+  ],
+  "expected_sources": [
+   "routing/map.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/map.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-09",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 MultiDict 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 2] 来源: datastructures/structures.py (第 0-0 行)\n[依赖图卡片] 类 ImmutableDict\n定义位置: datastructures/structures.py 第 961-978 行\n它继承自: ImmutableDictMixin [datastructures/mixins.py], dict\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 4] 来源: wsgi.py (第 0-0 行)\n[依赖图卡片] 类 FileWrapper\n定义位置: wsgi.py 第 300-349 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: datastructures/file_storage.py (第 0-0 行)\n[依赖图卡片] 类 FileMultiDict\n定义位置: datastructures/file_storage.py 第 165-205 行\n它继承自: MultiDict [datastructures/structures.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 MultiDict 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "datastructures/structures.py",
+   "testapp.py",
+   "wsgi.py",
+   "datastructures/file_storage.py"
+  ],
+  "expected_sources": [
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-10",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Rule 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RulePart\n定义位置: routing/rules.py 第 28-42 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: routing/rules.py (第 250-251 行)\n文件: routing/rules.py\n函数: __init__\ndef __init__(self, rules: t.Iterable[Rule]) -> None:\n        self.rules = list(rules)\n\n[代码片段 3] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Rule\n定义位置: routing/rules.py 第 329-927 行\n它继承自: RuleFactory [routing/rules.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 198-203 行)\n文件: routing/rules.py\n函数: get_rules\ndef get_rules(self, map: Map) -> t.Iterator[Rule]:\n        for rulefactory in self.rules:\n            for rule in rulefactory.get_rules(map):\n                rule = rule.empty()\n                rule.rule = self.path + rule.rule\n                yield rule\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplateFactory\n定义位置: routing/rules.py 第 257-293 行\n它继承自: RuleFactory [routing/rules.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 Rule 定义在哪个文件里?",
+  "retrieved_sources": [
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "routing/rules.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/rules.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-11",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 StateMachineMatcher 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 类 StateMachineMatcher\n定义位置: routing/matcher.py 第 33-202 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 类 NoMatch\n定义位置: routing/exceptions.py 第 147-152 行\n它继承自: Exception\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 4] 来源: wsgi.py (第 0-0 行)\n[依赖图卡片] 类 FileWrapper\n定义位置: wsgi.py 第 300-349 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 类 WebsocketMismatch\n定义位置: routing/exceptions.py 第 141-144 行\n它继承自: BadRequest [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 StateMachineMatcher 定义在哪个文件里?",
+  "retrieved_sources": [
+   "routing/matcher.py",
+   "routing/exceptions.py",
+   "testapp.py",
+   "wsgi.py",
+   "routing/exceptions.py"
+  ],
+  "expected_sources": [
+   "routing/matcher.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/matcher.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-12",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 WSGIWarning 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: middleware/lint.py (第 0-0 行)\n[依赖图卡片] 类 WSGIWarning\n定义位置: middleware/lint.py 第 33-34 行\n它继承自: Warning\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: wsgi.py (第 0-0 行)\n[依赖图卡片] 类 FileWrapper\n定义位置: wsgi.py 第 300-349 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 类 WebsocketMismatch\n定义位置: routing/exceptions.py 第 141-144 行\n它继承自: BadRequest [exceptions.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: middleware/lint.py (第 0-0 行)\n[依赖图卡片] 类 HTTPWarning\n定义位置: middleware/lint.py 第 37-38 行\n它继承自: Warning\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: middleware/lint.py (第 0-0 行)\n[依赖图卡片] 类 GuardedWrite\n定义位置: middleware/lint.py 第 122-130 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 WSGIWarning 定义在哪个文件里?",
+  "retrieved_sources": [
+   "middleware/lint.py",
+   "wsgi.py",
+   "routing/exceptions.py",
+   "middleware/lint.py",
+   "middleware/lint.py"
+  ],
+  "expected_sources": [
+   "middleware/lint.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "middleware/lint.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "DAT-01",
+  "category": "dataflow",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,常量 PIN_TIME 在哪个文件中定义?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: debug/__init__.py (第 314-318 行)\n[调用图卡片] 函数 pin\n定义位置: debug/__init__.py 第 314-318 行\n它调用的仓库内函数: get_pin_and_cookie_name\n它被这些函数调用: (没有仓库内调用方)\n\n[代码片段 2] 来源: debug/__init__.py (第 44-45 行)\n[调用图卡片] 函数 hash_pin\n定义位置: debug/__init__.py 第 44-45 行\n它调用的仓库内函数: (无)\n它被这些函数调用: check_pin_trust [debug/__init__.py], pin_auth [debug/__init__.py]\n\n[代码片段 3] 来源: debug/__init__.py (第 474-526 行)\n[调用图卡片] 函数 pin_auth\n定义位置: debug/__init__.py 第 474-526 行\n它调用的仓库内函数: check_host_trust, check_pin_trust, _fail_pin_auth, strip, set_cookie, hash_pin, delete_cookie\n它被这些函数调用: __call__ [datastructures/etag.py]\n\n[代码片段 4] 来源: debug/__init__.py (第 314-318 行)\n文件: debug/__init__.py\n函数: pin\ndef pin(self) -> str | None:\n        if not hasattr(self, \"_pin\"):\n            pin_cookie = get_pin_and_cookie_name(self.app)\n            self._pin, self._pin_cookie = pin_cookie  # type: ignore\n        return self._pin\n\n[代码片段 5] 来源: debug/__init__.py (第 329-334 行)\n[调用图卡片] 函数 pin_cookie_name\n定义位置: debug/__init__.py 第 329-334 行\n它调用的仓库内函数: get_pin_and_cookie_name\n它被这些函数调用: (没有仓库内调用方)\n\n[问题] 在 werkzeug 中,常量 PIN_TIME 在哪个文件中定义?",
+  "retrieved_sources": [
+   "debug/__init__.py",
+   "debug/__init__.py",
+   "debug/__init__.py",
+   "debug/__init__.py",
+   "debug/__init__.py"
+  ],
+  "expected_sources": [
+   "debug/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "debug/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "DAT-02",
+  "category": "dataflow",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,常量 HELP_HTML 在哪个文件中定义?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: sansio/request.py (第 401-406 行)\n文件: sansio/request.py\n函数: cache_control\ndef cache_control(self) -> RequestCacheControl:\n        \"\"\"A :class:`~werkzeug.datastructures.RequestCacheControl` object\n        for the incoming cache control headers.\n        \"\"\"\n        cache_control = self.headers.get(\"Cache-Control\")\n        return parse_cache_control_header(cache_control, None, RequestCacheControl)\n\n[代码片段 2] 来源: http.py (第 679-682 行)\n文件: http.py\n函数: parse_cache_control_header\ndef parse_cache_control_header(\n    value: str | None,\n    on_update: t.Callable[[ds.cache_control._CacheControl], None] | None = None,\n) -> ds.RequestCacheControl: ...\n\n[代码片段 3] 来源: wrappers/__init__.py (第 1-3 行)\n文件: wrappers/__init__.py\n(模块级代码:import、常量、配置)\nfrom .request import Request as Request\nfrom .response import Response as Response\nfrom .response import ResponseStream as ResponseStream\n\n[代码片段 4] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 5] 来源: middleware/dispatcher.py (第 62-81 行)\n文件: middleware/dispatcher.py\n函数: __call__\ndef __call__(\n        self, environ: WSGIEnvironment, start_response: StartResponse\n    ) -> t.Iterable[bytes]:\n        script = environ.get(\"PATH_INFO\", \"\")\n        path_info = \"\"\n\n        while \"/\" in script:\n            if script in self.mounts:\n                app = self.mounts[script]\n                break\n\n            script, last_item = script.rsplit(\"/\", 1)\n            path_info = f\"/{last_item}{path_info}\"\n        else:\n            app = self.mounts.get(script, self.app)\n\n        original_script_name = environ.get(\"SCRIPT_NAME\", \"\")\n        environ[\"SCRIPT_NAME\"] = original_script_name + script\n        environ[\"PATH_INFO\"] = path_info\n        return app(environ, start_response)\n\n[问题] 在 werkzeug 中,常量 HELP_HTML 在哪个文件中定义?",
+  "retrieved_sources": [
+   "sansio/request.py",
+   "http.py",
+   "wrappers/__init__.py",
+   "testapp.py",
+   "middleware/dispatcher.py"
+  ],
+  "expected_sources": [
+   "debug/repr.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "debug/repr.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "DAT-03",
+  "category": "dataflow",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,常量 OBJECT_DUMP_HTML 在哪个文件中定义?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: debug/repr.py (第 242-264 行)\n[调用图卡片] 函数 dump_object\n定义位置: debug/repr.py 第 242-264 行\n它调用的仓库内函数: items, append, repr, __repr__, render_object_dump\n它被这些函数调用: dump [debug/repr.py]\n\n[代码片段 2] 来源: debug/repr.py (第 43-52 行)\n[调用图卡片] 函数 dump\n定义位置: debug/repr.py 第 43-52 行\n它调用的仓库内函数: dump_locals, dump_object, _write\n它被这些函数调用: (没有仓库内调用方)\n\n[代码片段 3] 来源: http.py (第 290-300 行)\n[调用图卡片] 函数 dump_csp_header\n定义位置: http.py 第 290-300 行\n它调用的仓库内函数: items\n它被这些函数调用: to_header [datastructures/accept.py]\n\n[代码片段 4] 来源: http.py (第 1268-1420 行)\n[调用图卡片] 函数 dump_cookie\n定义位置: http.py 第 1268-1420 行\n它调用的仓库内函数: http_date, append\n它被这些函数调用: set_cookie [sansio/response.py], set_cookie [sansio/response.py]\n\n[代码片段 5] 来源: http.py (第 290-300 行)\n文件: http.py\n函数: dump_csp_header\ndef dump_csp_header(header: ds.ContentSecurityPolicy) -> str:\n    \"\"\"Dump a Content Security Policy header.\n\n    These are structured into policies such as \"default-src 'self';\n    script-src 'self'\".\n\n    .. versionadded:: 1.0.0\n       Support for Content Security Policy headers was added.\n\n    \"\"\"\n    return \"; \".join(f\"{key} {value}\" for key, value in header.items())\n\n[问题] 在 werkzeug 中,常量 OBJECT_DUMP_HTML 在哪个文件中定义?",
+  "retrieved_sources": [
+   "debug/repr.py",
+   "debug/repr.py",
+   "http.py",
+   "http.py",
+   "http.py"
+  ],
+  "expected_sources": [
+   "debug/repr.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "debug/repr.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-01",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/response.py 是否(间接)依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: urls.py (第 0-0 行)\n[依赖图卡片] 文件 urls.py\n它依赖(import)的仓库内文件: datastructures/__init__.py\n它被这些文件依赖/使用(import 它的使用方): routing/map.py, routing/rules.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: _codec_error_url_quote, _make_unquote_part, _unquote_partial, uri_to_iri, iri_to_uri, _decode_idna, _urlencode\n\n[代码片段 3] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[代码片段 4] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 5] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 文件 routing/exceptions.py\n它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n文件内定义的类: RoutingException, RequestRedirect, RequestPath, RequestAliasRedirect, BuildError, WebsocketMismatch, NoMatch\n文件内定义的函数: __init__, get_response, __init__, __init__, __init__, suggested, closest_rule, _score_rule, __str__, __init__\n\n[问题] 在 werkzeug 中,wrappers/response.py 是否(间接)依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "urls.py",
+   "datastructures/headers.py",
+   "testapp.py",
+   "routing/exceptions.py"
+  ],
+  "expected_sources": [
+   "wrappers/response.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-02",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,routing/map.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: urls.py (第 0-0 行)\n[依赖图卡片] 文件 urls.py\n它依赖(import)的仓库内文件: datastructures/__init__.py\n它被这些文件依赖/使用(import 它的使用方): routing/map.py, routing/rules.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: _codec_error_url_quote, _make_unquote_part, _unquote_partial, uri_to_iri, iri_to_uri, _decode_idna, _urlencode\n\n[代码片段 2] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 文件 routing/matcher.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py\n文件内定义的类: SlashRequired, State, StateMachineMatcher\n文件内定义的函数: __init__, add, update, _update_state, match, _match\n\n[代码片段 3] 来源: routing/map.py (第 0-0 行)\n[依赖图卡片] 文件 routing/map.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, routing/converters.py, routing/exceptions.py, routing/matcher.py, routing/rules.py, urls.py, wrappers/request.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/converters.py, routing/exceptions.py, routing/rules.py\n文件内定义的类: Map, MapAdapter\n文件内定义的函数: __init__, merge_slashes, merge_slashes, is_endpoint_expecting, _rules, iter_rules, add, bind, bind_to_environ, _get_wsgi_string, update, __repr__, __init__, dispatch, match, match, match, _handle_match, test, allowed_methods, get_host, get_default_redirect, encode_query_args, make_redirect_url, make_alias_redirect_url, _partial_build, build\n\n[代码片段 4] 来源: routing/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 routing/__init__.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 文件 routing/converters.py\n它依赖(import)的仓库内文件: routing/map.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py, routing/rules.py\n文件内定义的类: ValidationError, BaseConverter, UnicodeConverter, AnyConverter, PathConverter, NumberConverter, IntegerConverter, FloatConverter, UUIDConverter\n文件内定义的函数: __init_subclass__, __init__, to_python, to_url, __init__, __init__, to_url, __init__, to_python, to_url, signed_regex, __init__, to_python, to_url\n\n[问题] 在 werkzeug 中,routing/map.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "urls.py",
+   "routing/matcher.py",
+   "routing/map.py",
+   "routing/__init__.py",
+   "routing/converters.py"
+  ],
+  "expected_sources": [
+   "routing/map.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-03",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/request.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: wrappers/request.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/request.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, formparser.py, sansio/request.py, test.py, utils.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): _internal.py, debug/__init__.py, exceptions.py, routing/exceptions.py, routing/map.py, test.py, testapp.py, utils.py, wrappers/__init__.py, wrappers/response.py\n文件内定义的类: Request\n文件内定义的函数: __init__, from_values, application, application, _get_file_stream, want_form_data_parsed, make_form_data_parser, _load_form_data, _get_stream_for_parsing, close, __enter__, __exit__, stream, data, get_data, get_data, get_data, form, values, files, script_root, url_root, json, get_json, get_json, get_json, on_json_loading_failed\n\n[代码片段 3] 来源: wrappers/request.py (第 384-389 行)\n文件: wrappers/request.py\n函数: get_data\ndef get_data(\n        self,\n        cache: bool = True,\n        as_text: t.Literal[True] = ...,\n        parse_form_data: bool = False,\n    ) -> str: ...\n\n[代码片段 4] 来源: urls.py (第 0-0 行)\n[依赖图卡片] 文件 urls.py\n它依赖(import)的仓库内文件: datastructures/__init__.py\n它被这些文件依赖/使用(import 它的使用方): routing/map.py, routing/rules.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: _codec_error_url_quote, _make_unquote_part, _unquote_partial, uri_to_iri, iri_to_uri, _decode_idna, _urlencode\n\n[代码片段 5] 来源: _internal.py (第 0-0 行)\n[依赖图卡片] 文件 _internal.py\n它依赖(import)的仓库内文件: wrappers/request.py\n它被这些文件依赖/使用(import 它的使用方): _reloader.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/structures.py, debug/__init__.py, exceptions.py, formparser.py, http.py, routing/map.py, sansio/http.py, sansio/utils.py, serving.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: _Missing, _ColorStreamHandler, _DictAccessorProperty\n文件内定义的函数: __repr__, __reduce__, _wsgi_decoding_dance, _wsgi_encoding_dance, _get_environ, _has_level_handler, __init__, _log, _dt_as_utc, _dt_as_utc, _dt_as_utc, __init__, lookup, __get__, __get__, __get__, __set__, __delete__, __repr__, _plain_int\n\n[问题] 在 werkzeug 中,wrappers/request.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "wrappers/request.py",
+   "wrappers/request.py",
+   "urls.py",
+   "_internal.py"
+  ],
+  "expected_sources": [
+   "wrappers/request.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-04",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,routing/map.py 是否(间接)依赖 http.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: urls.py (第 0-0 行)\n[依赖图卡片] 文件 urls.py\n它依赖(import)的仓库内文件: datastructures/__init__.py\n它被这些文件依赖/使用(import 它的使用方): routing/map.py, routing/rules.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: _codec_error_url_quote, _make_unquote_part, _unquote_partial, uri_to_iri, iri_to_uri, _decode_idna, _urlencode\n\n[代码片段 2] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 文件 routing/matcher.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py\n文件内定义的类: SlashRequired, State, StateMachineMatcher\n文件内定义的函数: __init__, add, update, _update_state, match, _match\n\n[代码片段 3] 来源: routing/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 routing/__init__.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 4] 来源: routing/exceptions.py (第 0-0 行)\n[依赖图卡片] 文件 routing/exceptions.py\n它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n文件内定义的类: RoutingException, RequestRedirect, RequestPath, RequestAliasRedirect, BuildError, WebsocketMismatch, NoMatch\n文件内定义的函数: __init__, get_response, __init__, __init__, __init__, suggested, closest_rule, _score_rule, __str__, __init__\n\n[代码片段 5] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 文件 routing/converters.py\n它依赖(import)的仓库内文件: routing/map.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py, routing/rules.py\n文件内定义的类: ValidationError, BaseConverter, UnicodeConverter, AnyConverter, PathConverter, NumberConverter, IntegerConverter, FloatConverter, UUIDConverter\n文件内定义的函数: __init_subclass__, __init__, to_python, to_url, __init__, __init__, to_url, __init__, to_python, to_url, signed_regex, __init__, to_python, to_url\n\n[问题] 在 werkzeug 中,routing/map.py 是否(间接)依赖 http.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "urls.py",
+   "routing/matcher.py",
+   "routing/__init__.py",
+   "routing/exceptions.py",
+   "routing/converters.py"
+  ],
+  "expected_sources": [
+   "routing/map.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-05",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/response.py 是直接 import 了 datastructures/structures.py,还是通过 datastructures/__init__.py 间接依赖的?给出完整的中间文件路径。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/__init__.py\n它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: datastructures/csp.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/csp.py\n它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ContentSecurityPolicy\n文件内定义的函数: csp_property, __init__, _get_value, _set_value, _del_value, to_header, __str__, __repr__\n\n[代码片段 3] 来源: urls.py (第 0-0 行)\n[依赖图卡片] 文件 urls.py\n它依赖(import)的仓库内文件: datastructures/__init__.py\n它被这些文件依赖/使用(import 它的使用方): routing/map.py, routing/rules.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: _codec_error_url_quote, _make_unquote_part, _unquote_partial, uri_to_iri, iri_to_uri, _decode_idna, _urlencode\n\n[代码片段 4] 来源: wrappers/response.py (第 266-266 行)\n文件: wrappers/response.py\n函数: get_data\ndef get_data(self, as_text: t.Literal[True]) -> str: ...\n\n[代码片段 5] 来源: datastructures/etag.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/etag.py\n它依赖(import)的仓库内文件: http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ETags\n文件内定义的函数: __init__, as_set, is_weak, is_strong, contains_weak, contains, contains_raw, to_header, __call__, __bool__, __str__, __len__, __iter__, __contains__, __repr__\n\n[问题] 在 werkzeug 中,wrappers/response.py 是直接 import 了 datastructures/structures.py,还是通过 datastructures/__init__.py 间接依赖的?给出完整的中间文件路径。",
+  "retrieved_sources": [
+   "wrappers/__init__.py",
+   "datastructures/csp.py",
+   "urls.py",
+   "wrappers/response.py",
+   "datastructures/etag.py"
+  ],
+  "expected_sources": [
+   "wrappers/response.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ }
+]

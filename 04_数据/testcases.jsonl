@@ -1,0 +1,61 @@
+// 测试用例集:一行一条 JSON。// 开头是注释行,加载时跳过。
+// 四个 category 对应课题的四个优化方向。判定规则的设计依据见 mock_repo/README.md 的调用链图。
+//
+// ===== call_chain 调用链分析 =====
+{"id": "CC-01", "category": "call_chain", "priority": "P0", "question": "process_payment 函数定义在哪个文件?", "judge": {"type": "keyword_all", "keywords": ["gateway.py"]}, "expected_sources": ["payment/gateway.py"], "notes": "最基本的定位问题,答案必须给出文件名"}
+{"id": "CC-02", "category": "call_chain", "priority": "P0", "question": "process_payment 调用了哪些函数?", "judge": {"type": "keyword_all", "keywords": ["validate_card", "assess_risk", "calculate_fee"]}, "expected_sources": ["payment/gateway.py"], "notes": "正向调用链。固定切块可能把函数体切断导致漏报,是切块策略消融的关键用例"}
+{"id": "CC-03", "category": "call_chain", "priority": "P2", "question": "luhn_check 是被哪个函数调用的?", "judge": {"type": "keyword_all", "keywords": ["validate_card"]}, "expected_sources": ["payment/validation.py"], "notes": "反向调用查询(谁调用了我)。已知难点:纯文本检索很难答,需要调用图辅助(repo_parser 已产出,接入是 NEXT_STEPS)"}
+{"id": "CC-04", "category": "call_chain", "priority": "P1", "question": "process_refund 调用了哪些函数来完成退款?", "judge": {"type": "keyword_all", "keywords": ["find_payment", "validate_refund_window", "log_event"]}, "expected_sources": ["payment/refund.py"], "notes": "另一条正向调用链,验证 CC-02 的结论不是孤例"}
+//
+// ===== history 历史追踪 =====
+{"id": "HI-01", "category": "history", "priority": "P0", "question": "谁修改了手续费的逻辑?", "judge": {"type": "keyword_all", "keywords": ["liuyang"]}, "expected_sources": ["commit:M92b4e7", "commit:1b3e8f2"], "notes": "按内容反查提交人,历史追踪最基本能力"}
+{"id": "HI-02", "category": "history", "priority": "P1", "question": "手续费为什么要向上取整?", "judge": {"type": "keyword_any", "keywords": ["亏损", "抹掉"]}, "expected_sources": ["commit:M92b4e7", "payment/fees.py"], "notes": "改动动机:答案在 commit message 和代码注释里都有,检索命中任一来源都应答对"}
+{"id": "HI-03", "category": "history", "priority": "P1", "question": "退款功能是谁在什么时候加的?", "judge": {"type": "keyword_all", "keywords": ["chenjing", "2026-04-01"]}, "expected_sources": ["commit:e15fa33"], "notes": "人 + 时间双要素,考察 commit 块的作者/日期行是否被完整引用"}
+{"id": "HI-04", "category": "history", "priority": "P2", "question": "卡号校验最初是怎么实现的,后来为什么换掉?", "judge": {"type": "keyword_any", "keywords": ["只检查长度", "临时方案"]}, "expected_sources": ["commit:b7e201d"], "notes": "演进类问题:'最初的实现'只存在于 commit message 里,代码里已经没有了"}
+//
+// ===== cross_file 跨文件搜索 =====
+{"id": "CF-01", "category": "cross_file", "priority": "P1", "question": "哪些文件用到了 log_event?", "judge": {"type": "keyword_all", "keywords": ["gateway", "refund"]}, "expected_sources": ["commit:0a9d7c4", "utils/logging_utils.py"], "notes": "跨文件引用查找。提示:commit 0a9d7c4 的改动文件列表本身就是完美答案"}
+{"id": "CF-02", "category": "cross_file", "priority": "P0", "question": "单笔支付金额上限是多少?在哪个文件定义?", "judge": {"type": "keyword_all", "keywords": ["validation.py", "MAX_AMOUNT_CENTS"]}, "expected_sources": ["payment/validation.py"], "notes": "常量定义定位:值 + 文件双要素"}
+{"id": "CF-03", "category": "cross_file", "priority": "P2", "question": "models.py 里定义的数据结构被哪些模块使用?", "judge": {"type": "keyword_all", "keywords": ["gateway", "refund"]}, "expected_sources": ["payment/gateway.py", "payment/refund.py"], "notes": "import 依赖反查,难点同 CC-03(反向查询),预期普遍低分,留作改进对照"}
+{"id": "CF-04", "category": "cross_file", "priority": "P1", "question": "USD 的手续费率是多少?", "judge": {"type": "keyword_any", "keywords": ["2.9", "0.029"]}, "expected_sources": ["payment/fees.py", "commit:1b3e8f2"], "notes": "具体配置值查找,答案在 fees.py 费率表和 commit message 里都有"}
+//
+// ===== semantic 语义检索 =====
+{"id": "SE-01", "category": "semantic", "priority": "P0", "question": "卡号校验用的是什么算法?", "judge": {"type": "keyword_any", "keywords": ["luhn", "模 10"]}, "expected_sources": ["payment/validation.py", "commit:b7e201d"], "notes": "问题里没有出现 luhn 这个词,考察从'卡号校验'到 Luhn 的关联(对哈希词袋靠的是注释里的中文)"}
+{"id": "SE-02", "category": "semantic", "priority": "P0", "question": "支付前的安全检查是在哪里做的?", "judge": {"type": "keyword_any", "keywords": ["risk", "assess_risk", "风控"]}, "expected_sources": ["payment/risk.py"], "notes": "'安全检查'在代码里叫'风控',典型的语义鸿沟用例 —— 换上真语义 embedding 后最该提升的就是这类"}
+{"id": "SE-03", "category": "semantic", "priority": "P1", "question": "退款有什么时间限制?", "judge": {"type": "keyword_any", "keywords": ["30 天", "REFUND_WINDOW_DAYS"]}, "expected_sources": ["payment/refund.py"], "notes": "业务规则查询,答案在 refund.py 的常量和注释里"}
+{"id": "SE-04", "category": "semantic", "priority": "P1", "question": "多大金额算大额交易?", "judge": {"type": "keyword_any", "keywords": ["500_000", "LARGE_AMOUNT_THRESHOLD", "50 万"]}, "expected_sources": ["payment/risk.py"], "notes": "'大额交易'与代码中 LARGE_AMOUNT_THRESHOLD 的语义关联(靠 risk.py 的中文注释)"}
+//
+// ===== 第二阶段扩充(2026-06-10):新模块用例 + 刁钻 badcase,设计依据见 mock_repo/README.md "陷阱设计" =====
+//
+// ----- call_chain 追加 -----
+{"id": "CC-05", "category": "call_chain", "priority": "P0", "question": "checkout 函数调用了哪些函数?", "judge": {"type": "keyword_all", "keywords": ["apply_coupon", "process_payment", "save_payment"]}, "expected_sources": ["payment/checkout.py"], "notes": "新模块的正向调用链"}
+{"id": "CC-06", "category": "call_chain", "priority": "P2", "question": "从 checkout 到 luhn_check 的调用要经过哪些函数?", "judge": {"type": "keyword_all", "keywords": ["process_payment", "validate_card"]}, "expected_sources": ["payment/checkout.py", "payment/gateway.py"], "notes": "深调用链(4 层)badcase:单块装不下整条链,已知所有当前配置都难答全,留作图遍历检索的靶子"}
+{"id": "CC-07", "category": "call_chain", "priority": "P1", "question": "assess_risk 定义在哪个文件?它被谁调用?", "judge": {"type": "keyword_all", "keywords": ["risk.py", "process_payment"]}, "expected_sources": ["payment/risk.py"], "notes": "定位+反向调用复合问题,图卡片应同时给出两个要素"}
+{"id": "CC-08", "category": "call_chain", "priority": "P1", "question": "apply_coupon 被哪个函数调用?", "judge": {"type": "keyword_all", "keywords": ["checkout"]}, "expected_sources": ["payment/checkout.py", "payment/coupons.py"], "notes": "反向调用,验证图卡片不是只对 CC-03 一条有效"}
+{"id": "CC-09", "category": "call_chain", "priority": "P1", "question": "log_event 被哪些函数调用?", "judge": {"type": "keyword_all", "keywords": ["process_payment", "process_refund", "apply_coupon"]}, "expected_sources": ["utils/logging_utils.py"], "notes": "一对多反向调用(3 个调用方),比单调用方更考察图卡片的完整性"}
+{"id": "CC-10", "category": "call_chain", "priority": "P2", "question": "coupon_value 函数是干什么的?谁调用它?", "judge": {"type": "keyword_all", "keywords": ["apply_coupon"]}, "expected_sources": ["payment/coupons.py"], "notes": "同文件内的反向调用"}
+//
+// ----- history 追加 -----
+{"id": "HI-05", "category": "history", "priority": "P0", "question": "优惠券功能是谁开发的?", "judge": {"type": "keyword_all", "keywords": ["wangfang"]}, "expected_sources": ["commit:2c7f0a1", "commit:4e9f2c8"], "notes": "新增提交的按人追溯"}
+{"id": "HI-06", "category": "history", "priority": "P1", "question": "旧版安全检查模块为什么被废弃了?", "judge": {"type": "keyword_any", "keywords": ["assess_risk", "统一"]}, "expected_sources": ["commit:5fa03d2", "legacy/security_check.py"], "notes": "废弃动机:commit message 和模块 docstring 都有答案"}
+{"id": "HI-07", "category": "history", "priority": "P1", "question": "优惠券模块修过什么 bug?", "judge": {"type": "keyword_any", "keywords": ["超过支付金额", "负金额"]}, "expected_sources": ["commit:4e9f2c8"], "notes": "按模块过滤 bug 类提交"}
+{"id": "HI-08", "category": "history", "priority": "P2", "question": "2026 年 5 月仓库里发生了哪些改动?", "judge": {"type": "keyword_any", "keywords": ["优惠券", "checkout", "废弃"]}, "expected_sources": ["commit:2c7f0a1", "commit:3d8e1b5", "commit:4e9f2c8", "commit:5fa03d2", "commit:1b3e8f2"], "notes": "按时间段聚合,纯检索很难'聚合',能命中任一即可"}
+{"id": "HI-09", "category": "history", "priority": "P2", "question": "手续费费率改为按货币配置是哪个提交?", "judge": {"type": "keyword_all", "keywords": ["1b3e8f2"]}, "expected_sources": ["commit:1b3e8f2"], "notes": "要求答出 commit hash 本身"}
+//
+// ----- cross_file 追加 -----
+{"id": "CF-05", "category": "cross_file", "priority": "P1", "question": "MAX_DISCOUNT_CENTS 的值是多少?", "judge": {"type": "keyword_all", "keywords": ["3000"]}, "expected_sources": ["payment/coupons.py"], "notes": "注释与代码不一致 badcase:上一行注释写'最高抵扣 50 元'(过时),代码是 3000 分=30 元。以代码为准;考察回答是否引用代码事实"}
+{"id": "CF-06", "category": "cross_file", "priority": "P1", "question": "哪些模块 import 了 utils.logging_utils?", "judge": {"type": "keyword_all", "keywords": ["gateway", "refund", "coupons"]}, "expected_sources": ["utils/logging_utils.py", "commit:0a9d7c4"], "notes": "import 反查,图文件卡片的主场"}
+{"id": "CF-07", "category": "cross_file", "priority": "P0", "question": "REFUND_WINDOW_DAYS 在哪里定义?值是多少?", "judge": {"type": "all_groups", "groups": [["refund.py"], ["30 天", "REFUND_WINDOW_DAYS = 30", "= 30"]]}, "expected_sources": ["payment/refund.py"], "notes": "常量定位双要素,BM25 应对精确标识符更稳。第三阶段收紧:原关键词裸 '30' 会误匹配行号标注(第 1-30 行),换成 all_groups"}
+{"id": "CF-08", "category": "cross_file", "priority": "P1", "question": "黑名单用户列表在哪个文件里维护?", "judge": {"type": "keyword_any", "keywords": ["risk.py", "BLACKLISTED_USERS"]}, "expected_sources": ["payment/risk.py"], "notes": "注意 legacy/security_check.py 里有个'旧黑名单'当干扰项"}
+{"id": "CF-09", "category": "cross_file", "priority": "P1", "question": "checkout.py 依赖(import)了哪些模块?", "judge": {"type": "keyword_all", "keywords": ["coupons", "gateway", "refund"]}, "expected_sources": ["payment/checkout.py"], "notes": "正向 import 查询"}
+{"id": "CF-10", "category": "cross_file", "priority": "P1", "question": "支付单的状态一共有哪几种?", "judge": {"type": "keyword_all", "keywords": ["PENDING", "SUCCEEDED", "FAILED", "REFUNDED"]}, "expected_sources": ["payment/models.py"], "notes": "枚举值枚举,要求答案完整(keyword_all 四个全要,可拿部分分)"}
+//
+// ----- semantic 追加 -----
+{"id": "SE-05", "category": "semantic", "priority": "P0", "question": "支付的安全检查现在到底在哪做?有没有旧的实现?", "judge": {"type": "keyword_all", "keywords": ["risk", "legacy"]}, "expected_sources": ["payment/risk.py", "legacy/security_check.py"], "notes": "命名误导 badcase:legacy 模块名字更像'安全检查',但已废弃。理想回答应同时指出新旧并说明谁是现役"}
+{"id": "SE-06", "category": "semantic", "priority": "P1", "question": "用优惠券最多能便宜多少钱?", "judge": {"type": "keyword_any", "keywords": ["3000", "MAX_DISCOUNT_CENTS"]}, "expected_sources": ["payment/coupons.py"], "notes": "语义鸿沟:'便宜'对应代码里的'抵扣',哈希词袋零词面重合"}
+{"id": "SE-07", "category": "semantic", "priority": "P1", "question": "怎么判断一笔支付还能不能退款?", "judge": {"type": "keyword_any", "keywords": ["SUCCEEDED", "30 天", "时间窗口"]}, "expected_sources": ["payment/refund.py"], "notes": "业务规则综合(状态+时间窗口),命中任一要素即可"}
+{"id": "SE-08", "category": "semantic", "priority": "P1", "question": "用户下单购买的总入口是哪个函数?", "judge": {"type": "keyword_any", "keywords": ["checkout"]}, "expected_sources": ["payment/checkout.py"], "notes": "语义鸿沟:'下单购买'→checkout,代码注释里有'下单/一键购买'字样"}
+{"id": "SE-09", "category": "semantic", "priority": "P1", "question": "系统是怎么防止同一笔支付被退两次款的?", "judge": {"type": "keyword_any", "keywords": ["SUCCEEDED"]}, "expected_sources": ["payment/refund.py", "commit:f68c1b9"], "notes": "机制类问题:答案是'只有 SUCCEEDED 状态才能退'。第三阶段收紧:删掉过泛的'状态'(几乎任何引用 models/refund 的回答都含它,假阳性)"}
+{"id": "SE-10", "category": "semantic", "priority": "P1", "question": "如果货币不在费率表里,手续费按多少收?", "judge": {"type": "keyword_any", "keywords": ["DEFAULT_FEE_RATE", "0.03", "3%"]}, "expected_sources": ["payment/fees.py"], "notes": "兜底逻辑查询,'不在表里'→get 的 default 参数"}
+{"id": "SE-11", "category": "semantic", "priority": "P2", "question": "业务事件的日志打点统一从哪里走?", "judge": {"type": "keyword_any", "keywords": ["log_event", "logging_utils"]}, "expected_sources": ["utils/logging_utils.py"], "notes": "'打点'是黑话,代码注释里写的是'统一打点入口'"}
+{"id": "SE-12", "category": "semantic", "priority": "P2", "question": "为什么金额要用分作单位而不是元?", "judge": {"type": "keyword_any", "keywords": ["浮点", "误差"]}, "expected_sources": ["payment/models.py"], "notes": "设计动机类问题,答案只在 models.py 的注释里(amount 单位是分,避免浮点误差)"}

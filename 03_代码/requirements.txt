@@ -1,0 +1,17 @@
+# 本项目实际用到的依赖(当前 conda 环境 y 已全部装好,无需再装)
+# 新机器安装(国内网络建议阿里云源,清华源实测 SSL 不稳):
+#   pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+faiss-cpu>=1.8
+tree-sitter>=0.23
+tree-sitter-python>=0.23
+numpy>=1.26
+pydantic>=2.5
+PyYAML>=6.0
+rich>=13.0
+
+# 第二阶段兑现:真语义 embedding(同时需要 torch,本环境已有)
+sentence-transformers>=5.0
+
+# 模型权重不走 pip:bge-small-zh-v1.5 已在 models/ 目录(95MB)。
+# 缺失时的下载方法(huggingface_hub 走镜像会被校验拦,用 curl 直下):
+# 见 scripts/download_model.py 的 docstring。

@@ -1,0 +1,443 @@
+[
+ {
+  "id": "FW00",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 __init__.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u33, u37, u42",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 __init__.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW01",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u08/u03.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u15, u35",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u08/u03.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW02",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u08/u04.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u22, u35",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u08/u04.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW03",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u08/u07.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u15, u35",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u08/u07.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW04",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u08/u12.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u00, u14, u35",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u08/u12.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW05",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u08/u14.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u00, u11, u22, u35",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u08/u14.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW06",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u08/u35.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u00, u22",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u08/u35.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW07",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u09/u05.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u26, u36",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u09/u05.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW08",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u09/u36.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u05, u41",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u09/u36.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW09",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u11.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u00, u08, u15, u27, u28",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u11.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW10",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u13.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u00, u08, u11, u15, u23, u43",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u13.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW11",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u15.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u00, u31",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u15.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW12",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u21/u16.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u08, u11, u15, u43",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u21/u16.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW13",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u21/u17.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u08, u15, u43",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u21/u17.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW14",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u21/u34.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u15, u32, u41, u43",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u21/u34.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW15",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u29/__init__.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u06, u11, u19, u20, u30",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u29/__init__.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW16",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u29/u11.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u19, u27, u28, u30, u41",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u29/u11.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW17",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u29/u20.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u06, u11, u30",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u29/u20.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW18",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u29/u30.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u06, u08, u19, u39",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u29/u30.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW19",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u31/u23.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u08, u11, u15",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u31/u23.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW20",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u31/u27.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u08, u15, u40, u41",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u31/u27.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW21",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u31/u28.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u04, u08, u15, u41",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u31/u28.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW22",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u31/u41.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u00, u11, u15, u39",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u31/u41.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW23",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u38.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u27, u28, u33",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u38.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW24",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u42/__init__.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u27, u28",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u42/__init__.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW25",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u42/u27.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u00, u08, u11, u13, u37, u41, u43",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u42/u27.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW26",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 某 Python 项目 中,文件 u43.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "u11, u31, u41",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,文件 u43.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV00",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u08/u04.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u08, u28",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u08/u04.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV01",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u08/u14.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u08, u12",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u08/u14.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV02",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u08/u22.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u04, u08, u14, u35",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u08/u22.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV03",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u08/u35.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u02, u03, u04, u07, u08, u12, u14",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u08/u35.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV04",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u09/u05.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u09, u36",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u09/u05.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV05",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u09/u36.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u05, u09, u33",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u09/u36.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV06",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u29/u06.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u19, u20, u29, u30",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u29/u06.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV07",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u29/u11.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u19, u20, u29",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u29/u11.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV08",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u29/u19.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u06, u11, u29, u30",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u29/u19.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV09",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u29/u20.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u19, u29",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u29/u20.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV10",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u29/u30.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u11, u19, u20, u29",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u29/u30.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV11",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u31/__init__.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u15, u43",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u31/__init__.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV12",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u31/u15.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u27, u28",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u31/u15.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV13",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u31/u23.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u13, u37",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u31/u23.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV14",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u31/u41.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u09, u27, u43",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u31/u41.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV15",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u32.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u09, u34, u41",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u32.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV16",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u33.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u38, werkzeug",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u33.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV17",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u37.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u27, u28, werkzeug",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u37.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV18",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u39.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u19, u28, u30, u33, u37, u41",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u39.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV19",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u41.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u09, u11, u27, u28, u34, u36, u37",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u41.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV20",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u42/__init__.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u41, werkzeug",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u42/__init__.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV21",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 某 Python 项目 中,项目内哪些文件直接 import 了 u42/u28.py?只列文件名(模块名),逗号分隔。",
+  "gold": "u09, u11, u37, u38, u41, u42",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 某 Python 项目 中,项目内哪些文件直接 import 了 u42/u28.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ }
+]

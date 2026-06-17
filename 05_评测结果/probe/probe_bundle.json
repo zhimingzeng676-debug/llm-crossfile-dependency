@@ -1,0 +1,146 @@
+[
+ {
+  "id": "FWD-01-concise",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, mixins, structures, exceptions",
+  "notes": "正向依赖,共 4 个:['_internal.py', 'datastructures/mixins.py', 'datastructures/structur",
+  "obj_correct": true
+ },
+ {
+  "id": "FWD-01-verbose",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, mixins, structures, exceptions",
+  "notes": "正向依赖,共 4 个:['_internal.py', 'datastructures/mixins.py', 'datastructures/structur",
+  "obj_correct": true
+ },
+ {
+  "id": "FWD-01-hedged",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, mixins, structures, exceptions",
+  "notes": "正向依赖,共 4 个:['_internal.py', 'datastructures/mixins.py', 'datastructures/structur",
+  "obj_correct": true
+ },
+ {
+  "id": "FWD-01-wrongconf",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, mixins, structures, exceptions",
+  "notes": "正向依赖,共 4 个:['_internal.py', 'datastructures/mixins.py', 'datastructures/structur",
+  "obj_correct": false
+ },
+ {
+  "id": "FWD-05-concise",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "converters, exceptions, rules",
+  "notes": "正向依赖,共 3 个:['routing/converters.py', 'routing/exceptions.py', 'routing/rules.py'",
+  "obj_correct": true
+ },
+ {
+  "id": "FWD-05-verbose",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "converters, exceptions, rules",
+  "notes": "正向依赖,共 3 个:['routing/converters.py', 'routing/exceptions.py', 'routing/rules.py'",
+  "obj_correct": true
+ },
+ {
+  "id": "FWD-05-hedged",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "converters, exceptions, rules",
+  "notes": "正向依赖,共 3 个:['routing/converters.py', 'routing/exceptions.py', 'routing/rules.py'",
+  "obj_correct": true
+ },
+ {
+  "id": "FWD-05-wrongconf",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "converters, exceptions, rules",
+  "notes": "正向依赖,共 3 个:['routing/converters.py', 'routing/exceptions.py', 'routing/rules.py'",
+  "obj_correct": false
+ },
+ {
+  "id": "FWD-06-concise",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "datastructures, http, utils, user_agent",
+  "notes": "正向依赖,共 6 个:['datastructures/__init__.py', 'http.py', 'sansio/http.py', 'sansio/u",
+  "obj_correct": true
+ },
+ {
+  "id": "FWD-06-verbose",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "datastructures, http, utils, user_agent",
+  "notes": "正向依赖,共 6 个:['datastructures/__init__.py', 'http.py', 'sansio/http.py', 'sansio/u",
+  "obj_correct": true
+ },
+ {
+  "id": "FWD-06-hedged",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "datastructures, http, utils, user_agent",
+  "notes": "正向依赖,共 6 个:['datastructures/__init__.py', 'http.py', 'sansio/http.py', 'sansio/u",
+  "obj_correct": true
+ },
+ {
+  "id": "FWD-06-wrongconf",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "datastructures, http, utils, user_agent",
+  "notes": "正向依赖,共 6 个:['datastructures/__init__.py', 'http.py', 'sansio/http.py', 'sansio/u",
+  "obj_correct": false
+ },
+ {
+  "id": "FWD-07-concise",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "datastructures, cache_control, http, utils",
+  "notes": "正向依赖,共 4 个:['datastructures/__init__.py', 'datastructures/cache_control.py', 'ht",
+  "obj_correct": true
+ },
+ {
+  "id": "FWD-07-verbose",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "datastructures, cache_control, http, utils",
+  "notes": "正向依赖,共 4 个:['datastructures/__init__.py', 'datastructures/cache_control.py', 'ht",
+  "obj_correct": true
+ },
+ {
+  "id": "FWD-07-hedged",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "datastructures, cache_control, http, utils",
+  "notes": "正向依赖,共 4 个:['datastructures/__init__.py', 'datastructures/cache_control.py', 'ht",
+  "obj_correct": true
+ },
+ {
+  "id": "FWD-07-wrongconf",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "question": "在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "datastructures, cache_control, http, utils",
+  "notes": "正向依赖,共 4 个:['datastructures/__init__.py', 'datastructures/cache_control.py', 'ht",
+  "obj_correct": false
+ }
+]

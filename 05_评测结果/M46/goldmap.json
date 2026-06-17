@@ -1,0 +1,2496 @@
+{
+ "L-con-CPython-0": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "_tkinter"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": true
+ },
+ "L-con-CPython-1": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "sphinx"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-2": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "ctypes"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-3": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "locale"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-4": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "locale"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-5": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "_decimal"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-6": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "nt"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-7": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "readline"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-8": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "ssl"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-9": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "_asyncio"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-10": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "ssl"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-11": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "ssl"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-12": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "_asyncio"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-13": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "_bisect"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-14": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "readline"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-15": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "_codecs"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-16": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "_interpreters"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-17": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "multiprocessing"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-18": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "_ctypes"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-19": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "_datetime"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-20": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "dbm"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-21": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "_decimal",
+   "_decimal",
+   "_decimal"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-22": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "zlib"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-23": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "ssl"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-24": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "_functools"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-CPython-25": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "msvcrt"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-dyn-CPython-0": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-dyn-CPython-1": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-dyn-CPython-2": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-dyn-CPython-3": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-dyn-CPython-4": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-dyn-CPython-5": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-dyn-CPython-6": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-dyn-CPython-7": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-dyn-CPython-8": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-dyn-CPython-9": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-ref-CPython-0": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ref-CPython-1": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ref-CPython-2": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ref-CPython-3": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ref-CPython-4": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ref-CPython-5": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ref-CPython-6": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ref-CPython-7": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-con-flask-0": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "asgiref"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-flask-1": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "dotenv"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-dyn-flask-0": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-dyn-flask-1": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-ref-flask-0": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ref-flask-1": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ref-flask-2": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-con-requests-0": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "charset_normalizer"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-requests-1": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "urllib3"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-requests-2": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "threading"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-requests-3": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "charset_normalizer"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-requests-4": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "winreg"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-dyn-requests-0": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-dyn-requests-1": {
+  "dirty_type": "dynamic",
+  "gold_complete": [
+   "运行时",
+   "运行时数据",
+   "运行时输入",
+   "运行时确定",
+   "运行时决定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "__import__",
+   "importlib",
+   "import_module"
+  ],
+  "gold_detect": [
+   "动态",
+   "运行时",
+   "无法静态",
+   "不能静态",
+   "无法确定",
+   "取决于",
+   "随"
+  ],
+  "real_omission": true
+ },
+ "L-con-pydantic-0": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "typing"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-pydantic-1": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "mypy"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-pydantic-2": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "email_validator"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-pydantic-3": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "email_validator"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-pydantic-4": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "functools"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-pydantic-5": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "dotenv"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-pydantic-6": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "mypy"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-pydantic-7": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "email_validator"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-pydantic-8": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "typing"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-con-pydantic-9": {
+  "dirty_type": "conditional",
+  "gold_complete": [
+   "cython"
+  ],
+  "gold_mech": [
+   "try",
+   "except",
+   "ImportError"
+  ],
+  "gold_detect": [
+   "可选",
+   "条件",
+   "缺失",
+   "降级",
+   "optional",
+   "并非",
+   "不一定",
+   "未安装",
+   "如果"
+  ],
+  "real_omission": false
+ },
+ "L-ref-pydantic-0": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ref-pydantic-1": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ref-pydantic-2": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ref-pydantic-3": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时确定",
+   "属性名",
+   "字符串",
+   "取决于"
+  ],
+  "gold_mech": [
+   "getattr",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "属性",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-bld-go-0": {
+  "dirty_type": "buildtag",
+  "gold_complete": [
+   "nomsgpack"
+  ],
+  "gold_mech": [
+   "go:build",
+   "+build",
+   "构建标签",
+   "条件编译",
+   "build"
+  ],
+  "gold_detect": [
+   "条件",
+   "平台",
+   "构建",
+   "build",
+   "仅在",
+   "只在",
+   "特定",
+   "取决于"
+  ],
+  "real_omission": true
+ },
+ "L-bld-go-1": {
+  "dirty_type": "buildtag",
+  "gold_complete": [
+   "nomsgpack"
+  ],
+  "gold_mech": [
+   "go:build",
+   "+build",
+   "构建标签",
+   "条件编译",
+   "build"
+  ],
+  "gold_detect": [
+   "条件",
+   "平台",
+   "构建",
+   "build",
+   "仅在",
+   "只在",
+   "特定",
+   "取决于"
+  ],
+  "real_omission": true
+ },
+ "L-ref-go-0": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "reflect",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于"
+  ],
+  "real_omission": true
+ },
+ "L-ref-go-1": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "reflect",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于"
+  ],
+  "real_omission": true
+ },
+ "L-bld-go-2": {
+  "dirty_type": "buildtag",
+  "gold_complete": [
+   "nomsgpack"
+  ],
+  "gold_mech": [
+   "go:build",
+   "+build",
+   "构建标签",
+   "条件编译",
+   "build"
+  ],
+  "gold_detect": [
+   "条件",
+   "平台",
+   "构建",
+   "build",
+   "仅在",
+   "只在",
+   "特定",
+   "取决于"
+  ],
+  "real_omission": true
+ },
+ "L-ref-go-2": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "reflect",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于"
+  ],
+  "real_omission": true
+ },
+ "L-ref-go-3": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "reflect",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于"
+  ],
+  "real_omission": true
+ },
+ "L-bld-go-3": {
+  "dirty_type": "buildtag",
+  "gold_complete": [
+   "go_json"
+  ],
+  "gold_mech": [
+   "go:build",
+   "+build",
+   "构建标签",
+   "条件编译",
+   "build"
+  ],
+  "gold_detect": [
+   "条件",
+   "平台",
+   "构建",
+   "build",
+   "仅在",
+   "只在",
+   "特定",
+   "取决于"
+  ],
+  "real_omission": false
+ },
+ "L-bld-go-4": {
+  "dirty_type": "buildtag",
+  "gold_complete": [
+   "jsoniter"
+  ],
+  "gold_mech": [
+   "go:build",
+   "+build",
+   "构建标签",
+   "条件编译",
+   "build"
+  ],
+  "gold_detect": [
+   "条件",
+   "平台",
+   "构建",
+   "build",
+   "仅在",
+   "只在",
+   "特定",
+   "取决于"
+  ],
+  "real_omission": true
+ },
+ "L-bld-go-5": {
+  "dirty_type": "buildtag",
+  "gold_complete": [
+   "jsoniter"
+  ],
+  "gold_mech": [
+   "go:build",
+   "+build",
+   "构建标签",
+   "条件编译",
+   "build"
+  ],
+  "gold_detect": [
+   "条件",
+   "平台",
+   "构建",
+   "build",
+   "仅在",
+   "只在",
+   "特定",
+   "取决于"
+  ],
+  "real_omission": false
+ },
+ "L-bld-go-6": {
+  "dirty_type": "buildtag",
+  "gold_complete": [
+   "sonic"
+  ],
+  "gold_mech": [
+   "go:build",
+   "+build",
+   "构建标签",
+   "条件编译",
+   "build"
+  ],
+  "gold_detect": [
+   "条件",
+   "平台",
+   "构建",
+   "build",
+   "仅在",
+   "只在",
+   "特定",
+   "取决于"
+  ],
+  "real_omission": false
+ },
+ "L-bld-go-7": {
+  "dirty_type": "buildtag",
+  "gold_complete": [
+   "appengine"
+  ],
+  "gold_mech": [
+   "go:build",
+   "+build",
+   "构建标签",
+   "条件编译",
+   "build"
+  ],
+  "gold_detect": [
+   "条件",
+   "平台",
+   "构建",
+   "build",
+   "仅在",
+   "只在",
+   "特定",
+   "取决于"
+  ],
+  "real_omission": true
+ },
+ "L-ref-go-4": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "reflect",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于"
+  ],
+  "real_omission": true
+ },
+ "L-ref-go-5": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于"
+  ],
+  "gold_mech": [
+   "reflect",
+   "反射"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于"
+  ],
+  "real_omission": true
+ },
+ "L-jref-java-0": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于",
+   "字符串"
+  ],
+  "gold_mech": [
+   "反射",
+   "reflect",
+   "Class.forName",
+   "getDeclared",
+   "newInstance",
+   "TypeToken"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-jref-java-1": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于",
+   "字符串"
+  ],
+  "gold_mech": [
+   "反射",
+   "reflect",
+   "Class.forName",
+   "getDeclared",
+   "newInstance",
+   "TypeToken"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-jref-java-2": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于",
+   "字符串"
+  ],
+  "gold_mech": [
+   "反射",
+   "reflect",
+   "Class.forName",
+   "getDeclared",
+   "newInstance",
+   "TypeToken"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-jref-java-3": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于",
+   "字符串"
+  ],
+  "gold_mech": [
+   "反射",
+   "reflect",
+   "Class.forName",
+   "getDeclared",
+   "newInstance",
+   "TypeToken"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-jref-java-4": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于",
+   "字符串"
+  ],
+  "gold_mech": [
+   "反射",
+   "reflect",
+   "Class.forName",
+   "getDeclared",
+   "newInstance",
+   "TypeToken"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-jref-java-5": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于",
+   "字符串"
+  ],
+  "gold_mech": [
+   "反射",
+   "reflect",
+   "Class.forName",
+   "getDeclared",
+   "newInstance",
+   "TypeToken"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-jref-java-6": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于",
+   "字符串"
+  ],
+  "gold_mech": [
+   "反射",
+   "reflect",
+   "Class.forName",
+   "getDeclared",
+   "newInstance",
+   "TypeToken"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-jref-java-7": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于",
+   "字符串"
+  ],
+  "gold_mech": [
+   "反射",
+   "reflect",
+   "Class.forName",
+   "getDeclared",
+   "newInstance",
+   "TypeToken"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-jref-java-8": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于",
+   "字符串"
+  ],
+  "gold_mech": [
+   "反射",
+   "reflect",
+   "Class.forName",
+   "getDeclared",
+   "newInstance",
+   "TypeToken"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-jref-java-9": {
+  "dirty_type": "reflection",
+  "gold_complete": [
+   "运行时",
+   "运行时类型",
+   "运行时确定",
+   "取决于",
+   "字符串"
+  ],
+  "gold_mech": [
+   "反射",
+   "reflect",
+   "Class.forName",
+   "getDeclared",
+   "newInstance",
+   "TypeToken"
+  ],
+  "gold_detect": [
+   "反射",
+   "动态",
+   "运行时",
+   "无法静态",
+   "类型",
+   "取决于",
+   "字符串"
+  ],
+  "real_omission": true
+ },
+ "L-ifd-c-0": {
+  "dirty_type": "ifdef",
+  "gold_complete": [
+   "wait",
+   "LUA_USE_POSIX"
+  ],
+  "gold_mech": [
+   "#ifdef",
+   "#if",
+   "条件编译",
+   "宏",
+   "defined"
+  ],
+  "gold_detect": [
+   "条件",
+   "宏",
+   "平台",
+   "编译",
+   "仅当",
+   "只在",
+   "取决于",
+   "如果定义"
+  ],
+  "real_omission": false
+ },
+ "L-ifd-c-1": {
+  "dirty_type": "ifdef",
+  "gold_complete": [
+   "types",
+   "LUA_USE_POSIX"
+  ],
+  "gold_mech": [
+   "#ifdef",
+   "#if",
+   "条件编译",
+   "宏",
+   "defined"
+  ],
+  "gold_detect": [
+   "条件",
+   "宏",
+   "平台",
+   "编译",
+   "仅当",
+   "只在",
+   "取决于",
+   "如果定义"
+  ],
+  "real_omission": true
+ },
+ "L-ifd-c-2": {
+  "dirty_type": "ifdef",
+  "gold_complete": [
+   "unistd",
+   "LUA_USE_POSIX"
+  ],
+  "gold_mech": [
+   "#ifdef",
+   "#if",
+   "条件编译",
+   "宏",
+   "defined"
+  ],
+  "gold_detect": [
+   "条件",
+   "宏",
+   "平台",
+   "编译",
+   "仅当",
+   "只在",
+   "取决于",
+   "如果定义"
+  ],
+  "real_omission": true
+ },
+ "L-ifd-c-3": {
+  "dirty_type": "ifdef",
+  "gold_complete": [
+   "unistd",
+   "LUA_USE_POSIX"
+  ],
+  "gold_mech": [
+   "#ifdef",
+   "#if",
+   "条件编译",
+   "宏",
+   "defined"
+  ],
+  "gold_detect": [
+   "条件",
+   "宏",
+   "平台",
+   "编译",
+   "仅当",
+   "只在",
+   "取决于",
+   "如果定义"
+  ],
+  "real_omission": false
+ },
+ "L-ifd-c-4": {
+  "dirty_type": "ifdef",
+  "gold_complete": [
+   "ljumptab",
+   "LUA_USE_JUMPTABLE"
+  ],
+  "gold_mech": [
+   "#ifdef",
+   "#if",
+   "条件编译",
+   "宏",
+   "defined"
+  ],
+  "gold_detect": [
+   "条件",
+   "宏",
+   "平台",
+   "编译",
+   "仅当",
+   "只在",
+   "取决于",
+   "如果定义"
+  ],
+  "real_omission": true
+ },
+ "L-ifd-c-5": {
+  "dirty_type": "ifdef",
+  "gold_complete": [
+   "ltests.c",
+   "LUA_DEBUG"
+  ],
+  "gold_mech": [
+   "#ifdef",
+   "#if",
+   "条件编译",
+   "宏",
+   "defined"
+  ],
+  "gold_detect": [
+   "条件",
+   "宏",
+   "平台",
+   "编译",
+   "仅当",
+   "只在",
+   "取决于",
+   "如果定义"
+  ],
+  "real_omission": true
+ },
+ "L-ifd-c-6": {
+  "dirty_type": "ifdef",
+  "gold_complete": [
+   "assert",
+   "LUA_USE_APICHECK"
+  ],
+  "gold_mech": [
+   "#ifdef",
+   "#if",
+   "条件编译",
+   "宏",
+   "defined"
+  ],
+  "gold_detect": [
+   "条件",
+   "宏",
+   "平台",
+   "编译",
+   "仅当",
+   "只在",
+   "取决于",
+   "如果定义"
+  ],
+  "real_omission": false
+ }
+}

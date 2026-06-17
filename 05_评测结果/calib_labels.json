@@ -1,0 +1,82 @@
+[
+ {
+  "id": "purellm|LOC-01",
+  "human": 0.0
+ },
+ {
+  "id": "purellm|REV-07",
+  "human": 0.0
+ },
+ {
+  "id": "purellm|INH-07",
+  "human": 0.0
+ },
+ {
+  "id": "purellm|FWD-03",
+  "human": 0.0
+ },
+ {
+  "id": "baseline|INH-08",
+  "human": 0.0
+ },
+ {
+  "id": "baseline|DAT-02",
+  "human": 0.0
+ },
+ {
+  "id": "graphcards|INH-07",
+  "human": 1.0
+ },
+ {
+  "id": "graphcards|REV-02",
+  "human": 0.14
+ },
+ {
+  "id": "graphcards|FWD-10",
+  "human": 0.0
+ },
+ {
+  "id": "graphcards|IND-01",
+  "human": 1.0
+ },
+ {
+  "id": "graphcards|LOC-04",
+  "human": 1.0
+ },
+ {
+  "id": "graphcards|INH-10",
+  "human": 0.2
+ },
+ {
+  "id": "full|REV-07",
+  "human": 0.22
+ },
+ {
+  "id": "full|INH-07",
+  "human": 1.0
+ },
+ {
+  "id": "full|FWD-10",
+  "human": 1.0
+ },
+ {
+  "id": "full|LOC-01",
+  "human": 1.0
+ },
+ {
+  "id": "full|IND-05",
+  "human": 1.0
+ },
+ {
+  "id": "full|INH-12",
+  "human": 0.5
+ },
+ {
+  "id": "full|REV-11",
+  "human": 1.0
+ },
+ {
+  "id": "full|DAT-02",
+  "human": 1.0
+ }
+]

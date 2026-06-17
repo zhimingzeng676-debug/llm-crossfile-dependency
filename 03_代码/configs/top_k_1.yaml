@@ -1,0 +1,19 @@
+# 消融实验:top_k 3 -> 1,其余与 baseline 相同。
+# 假设:只取最相关的 1 块,检索排序稍有偏差答案就丢了,预期分数下降 ——
+# 用来量化"多取几块"带来的容错收益。
+name: top_k_1
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl
+chunking:
+  strategy: fixed
+  chunk_lines: 40
+  overlap: 10
+embedder:
+  type: hashing
+  dim: 512
+backend:
+  type: local_rag
+  top_k: 1
+llm:
+  type: mock
+prompt_file: configs/prompts/plain.yaml

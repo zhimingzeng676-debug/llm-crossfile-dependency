@@ -1,0 +1,23 @@
+# E13(组合验证):常量卡 + cross-encoder rerank 同时开。
+# 逻辑:E12 显示常量卡"+1 修复 −2 稀释";稀释的解药正是一把够强的精排尺子。
+# 假设:cross-encoder 把候选池里被稀释的正确块捞回 top3,组合 > 各自单独。
+name: best_stack_final
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl
+chunking:
+  strategy: function
+  include_graph_cards: true
+  include_constant_cards: true
+embedder:
+  type: sentence_transformer
+  model_name: models/bge-small-en-v1.5  # M65 审计:英文/代码任务用 en(R@5 0.93≫zh 0.32),零成本;勿改回 zh(冒烟测试会拦)
+backend:
+  type: hybrid
+  top_k: 3
+  rerank: true
+  rerank_candidates: 10
+  rerank_scorer: cross_encoder
+  rerank_model: models/bge-reranker-base
+llm:
+  type: mock
+prompt_file: configs/prompts/plain.yaml

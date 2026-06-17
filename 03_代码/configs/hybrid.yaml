@@ -1,0 +1,18 @@
+# 消融实验(第二阶段):baseline + 混合检索(向量+BM25,RRF 融合),其余不变。
+# 假设:BM25 对精确标识符查询(常量名、函数名)更强,与向量互补,整体命中率应不降反升。
+name: hybrid
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl
+chunking:
+  strategy: fixed
+  chunk_lines: 40
+  overlap: 10
+embedder:
+  type: hashing
+  dim: 512
+backend:
+  type: hybrid
+  top_k: 3
+llm:
+  type: mock
+prompt_file: configs/prompts/plain.yaml

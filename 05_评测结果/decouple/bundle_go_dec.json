@@ -1,0 +1,82 @@
+[
+ {
+  "id": "go-LOC-30",
+  "category": "symbol_location",
+  "question": "在 gorilla-gin 项目中,符号 Accounts(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "auth.go",
+  "gold_kw": [
+   "auth.go"
+  ],
+  "notes": "(独立raw-line grep符号定义+人工)"
+ },
+ {
+  "id": "go-LOC-31",
+  "category": "symbol_location",
+  "question": "在 gorilla-gin 项目中,符号 BasicAuthForRealm(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "auth.go",
+  "gold_kw": [
+   "auth.go"
+  ],
+  "notes": "(独立raw-line grep符号定义+人工)"
+ },
+ {
+  "id": "go-LOC-32",
+  "category": "symbol_location",
+  "question": "在 gorilla-gin 项目中,符号 BasicAuth(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "auth.go",
+  "gold_kw": [
+   "auth.go"
+  ],
+  "notes": "(独立raw-line grep符号定义+人工)"
+ },
+ {
+  "id": "go-LOC-33",
+  "category": "symbol_location",
+  "question": "在 gorilla-gin 项目中,符号 BasicAuthForProxy(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "auth.go",
+  "gold_kw": [
+   "auth.go"
+  ],
+  "notes": "(独立raw-line grep符号定义+人工)"
+ },
+ {
+  "id": "go-LOC-34",
+  "category": "symbol_location",
+  "question": "在 gorilla-gin 项目中,符号 ContextKeyType(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "context.go",
+  "gold_kw": [
+   "context.go"
+  ],
+  "notes": "(独立raw-line grep符号定义+人工)"
+ },
+ {
+  "id": "go-LOC-35",
+  "category": "symbol_location",
+  "question": "在 gorilla-gin 项目中,符号 Context(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "context.go",
+  "gold_kw": [
+   "context.go"
+  ],
+  "notes": "(独立raw-line grep符号定义+人工)"
+ },
+ {
+  "id": "go-LOC-36",
+  "category": "symbol_location",
+  "question": "在 gorilla-gin 项目中,符号 Negotiate(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "context.go",
+  "gold_kw": [
+   "context.go"
+  ],
+  "notes": "(独立raw-line grep符号定义+人工)"
+ },
+ {
+  "id": "go-LOC-37",
+  "category": "symbol_location",
+  "question": "在 gorilla-gin 项目中,符号 Copy(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "context.go",
+  "gold_kw": [
+   "context.go"
+  ],
+  "notes": "(独立raw-line grep符号定义+人工)"
+ }
+]

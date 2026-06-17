@@ -1,0 +1,55 @@
+{
+ "model": "Qwen/Qwen2.5-14B-Instruct",
+ "pass@1": 1.0,
+ "n": 12,
+ "results": [
+  {
+   "id": "P00",
+   "pass": true
+  },
+  {
+   "id": "P01",
+   "pass": true
+  },
+  {
+   "id": "P02",
+   "pass": true
+  },
+  {
+   "id": "P03",
+   "pass": true
+  },
+  {
+   "id": "P04",
+   "pass": true
+  },
+  {
+   "id": "P05",
+   "pass": true
+  },
+  {
+   "id": "P06",
+   "pass": true
+  },
+  {
+   "id": "P07",
+   "pass": true
+  },
+  {
+   "id": "P08",
+   "pass": true
+  },
+  {
+   "id": "P09",
+   "pass": true
+  },
+  {
+   "id": "P10",
+   "pass": true
+  },
+  {
+   "id": "P11",
+   "pass": true
+  }
+ ]
+}

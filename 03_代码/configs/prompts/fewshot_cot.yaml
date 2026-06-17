@@ -1,0 +1,10 @@
+# PE 实验条件 3:Few-shot + CoT
+# 给两个"理想回答范例"教模型输出格式(答案要点 + 出处),再叠加思维链。
+name: fewshot_cot
+system: 你是一个严谨的代码分析专家。回答必须给出代码出处(文件名和行号),格式参照示例。
+few_shot:
+  - question: 函数 save_payment 定义在哪个文件?
+    answer: save_payment 定义在 payment/refund.py(第 22 行附近),作用是把支付单写入内存字典 _PAYMENT_DB。
+  - question: validate_amount 检查了什么?
+    answer: validate_amount 定义在 payment/validation.py,检查金额必须为正且不超过单笔上限 MAX_AMOUNT_CENTS(100 万分,即 1 万元)。
+cot: true

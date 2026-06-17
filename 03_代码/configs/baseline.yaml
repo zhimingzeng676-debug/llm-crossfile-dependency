@@ -1,0 +1,17 @@
+# 基线配置:所有消融实验都以它为参照,每个实验只改其中一个变量。
+name: baseline
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl   # 提交历史也索引(历史追踪类问题需要)
+chunking:
+  strategy: fixed      # 固定行数滑窗
+  chunk_lines: 40
+  overlap: 10
+embedder:
+  type: hashing        # 本地哈希词袋(将来可换 sentence_transformer)
+  dim: 512
+backend:
+  type: local_rag      # 将来可换 repomind
+  top_k: 3
+llm:
+  type: mock           # 将来可换 api
+prompt_file: configs/prompts/plain.yaml

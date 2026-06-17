@@ -1,0 +1,736 @@
+[
+ {
+  "id": "R-REV-01",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 error.py?请尽量列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: error.py (第 0-0 行)\n[依赖图卡片] 文件 error.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, constructor.py, emitter.py, parser.py, reader.py, representer.py, resolver.py, scanner.py, serializer.py\n文件内定义的类: Mark, YAMLError, MarkedYAMLError\n文件内定义的函数: __init__, get_snippet, __str__, __init__, __str__\n\n[代码片段 2] 来源: serializer.py (第 0-0 行)\n[依赖图卡片] 文件 serializer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py\n文件内定义的类: SerializerError, Serializer\n文件内定义的函数: __init__, open, close, serialize, anchor_node, generate_anchor, serialize_node\n\n[代码片段 3] 来源: reader.py (第 0-0 行)\n[依赖图卡片] 文件 reader.py\n它依赖(import)的仓库内文件: error.py\n它被这些文件依赖/使用(import 它的使用方): loader.py\n文件内定义的类: ReaderError, Reader\n文件内定义的函数: __init__, __str__, __init__, peek, prefix, forward, get_mark, determine_encoding, check_printable, update, update_raw\n\n[代码片段 4] 来源: resolver.py (第 0-0 行)\n[依赖图卡片] 文件 resolver.py\n它依赖(import)的仓库内文件: error.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py, loader.py\n文件内定义的类: ResolverError, BaseResolver, Resolver\n文件内定义的函数: __init__, add_implicit_resolver, add_path_resolver, descend_resolver, ascend_resolver, check_resolver_prefix, resolve\n\n[代码片段 5] 来源: composer.py (第 0-0 行)\n[依赖图卡片] 文件 composer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): loader.py\n文件内定义的类: ComposerError, Composer\n文件内定义的函数: __init__, check_node, get_node, get_single_node, compose_document, compose_node, compose_scalar_node, compose_sequence_node, compose_mapping_node\n\n[问题] 在该项目中,哪些文件 import(依赖)了 error.py?请尽量列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "error.py",
+   "serializer.py",
+   "reader.py",
+   "resolver.py",
+   "composer.py"
+  ],
+  "expected_sources": [
+   "error.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__init__",
+    "composer",
+    "constructor",
+    "emitter",
+    "parser",
+    "reader",
+    "representer",
+    "resolver",
+    "scanner",
+    "serializer"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-02",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 nodes.py?请尽量列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: nodes.py (第 0-0 行)\n[依赖图卡片] 文件 nodes.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, constructor.py, representer.py, resolver.py, serializer.py\n文件内定义的类: Node, ScalarNode, CollectionNode, SequenceNode, MappingNode\n文件内定义的函数: __init__, __repr__, __init__, __init__\n\n[代码片段 2] 来源: composer.py (第 0-0 行)\n[依赖图卡片] 文件 composer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): loader.py\n文件内定义的类: ComposerError, Composer\n文件内定义的函数: __init__, check_node, get_node, get_single_node, compose_document, compose_node, compose_scalar_node, compose_sequence_node, compose_mapping_node\n\n[代码片段 3] 来源: serializer.py (第 0-0 行)\n[依赖图卡片] 文件 serializer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py\n文件内定义的类: SerializerError, Serializer\n文件内定义的函数: __init__, open, close, serialize, anchor_node, generate_anchor, serialize_node\n\n[代码片段 4] 来源: resolver.py (第 0-0 行)\n[依赖图卡片] 文件 resolver.py\n它依赖(import)的仓库内文件: error.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py, loader.py\n文件内定义的类: ResolverError, BaseResolver, Resolver\n文件内定义的函数: __init__, add_implicit_resolver, add_path_resolver, descend_resolver, ascend_resolver, check_resolver_prefix, resolve\n\n[代码片段 5] 来源: events.py (第 0-0 行)\n[依赖图卡片] 文件 events.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, emitter.py, parser.py, serializer.py\n文件内定义的类: Event, NodeEvent, CollectionStartEvent, CollectionEndEvent, StreamStartEvent, StreamEndEvent, DocumentStartEvent, DocumentEndEvent, AliasEvent, ScalarEvent, SequenceStartEvent, SequenceEndEvent, MappingStartEvent, MappingEndEvent\n文件内定义的函数: __init__, __repr__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[问题] 在该项目中,哪些文件 import(依赖)了 nodes.py?请尽量列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "nodes.py",
+   "composer.py",
+   "serializer.py",
+   "resolver.py",
+   "events.py"
+  ],
+  "expected_sources": [
+   "nodes.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__init__",
+    "composer",
+    "constructor",
+    "representer",
+    "resolver",
+    "serializer"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-03",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 events.py?请尽量列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: events.py (第 0-0 行)\n[依赖图卡片] 文件 events.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, emitter.py, parser.py, serializer.py\n文件内定义的类: Event, NodeEvent, CollectionStartEvent, CollectionEndEvent, StreamStartEvent, StreamEndEvent, DocumentStartEvent, DocumentEndEvent, AliasEvent, ScalarEvent, SequenceStartEvent, SequenceEndEvent, MappingStartEvent, MappingEndEvent\n文件内定义的函数: __init__, __repr__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 2] 来源: serializer.py (第 0-0 行)\n[依赖图卡片] 文件 serializer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py\n文件内定义的类: SerializerError, Serializer\n文件内定义的函数: __init__, open, close, serialize, anchor_node, generate_anchor, serialize_node\n\n[代码片段 3] 来源: composer.py (第 0-0 行)\n[依赖图卡片] 文件 composer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): loader.py\n文件内定义的类: ComposerError, Composer\n文件内定义的函数: __init__, check_node, get_node, get_single_node, compose_document, compose_node, compose_scalar_node, compose_sequence_node, compose_mapping_node\n\n[代码片段 4] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: cyaml.py, dumper.py, error.py, events.py, loader.py, nodes.py, tokens.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: YAMLObjectMetaclass, YAMLObject\n文件内定义的函数: warnings, scan, parse, compose, compose_all, load, load_all, full_load, full_load_all, safe_load, safe_load_all, unsafe_load, unsafe_load_all, emit, serialize_all, serialize, dump_all, dump, safe_dump_all, safe_dump, add_implicit_resolver, add_path_resolver, add_constructor, add_multi_constructor, add_representer, add_multi_representer, __init__, from_yaml, to_yaml\n\n[代码片段 5] 来源: cyaml.py (第 0-0 行)\n[依赖图卡片] 文件 cyaml.py\n它依赖(import)的仓库内文件: constructor.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: CBaseLoader, CSafeLoader, CFullLoader, CUnsafeLoader, CLoader, CBaseDumper, CSafeDumper, CDumper\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[问题] 在该项目中,哪些文件 import(依赖)了 events.py?请尽量列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "events.py",
+   "serializer.py",
+   "composer.py",
+   "__init__.py",
+   "cyaml.py"
+  ],
+  "expected_sources": [
+   "events.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__init__",
+    "composer",
+    "emitter",
+    "parser",
+    "serializer"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-04",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 tokens.py?请尽量列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: tokens.py (第 0-0 行)\n[依赖图卡片] 文件 tokens.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, parser.py, scanner.py\n文件内定义的类: Token, DirectiveToken, DocumentStartToken, DocumentEndToken, StreamStartToken, StreamEndToken, BlockSequenceStartToken, BlockMappingStartToken, BlockEndToken, FlowSequenceStartToken, FlowMappingStartToken, FlowSequenceEndToken, FlowMappingEndToken, KeyToken, ValueToken, BlockEntryToken, FlowEntryToken, AliasToken, AnchorToken, TagToken, ScalarToken\n文件内定义的函数: __init__, __repr__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 2] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: cyaml.py, dumper.py, error.py, events.py, loader.py, nodes.py, tokens.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: YAMLObjectMetaclass, YAMLObject\n文件内定义的函数: warnings, scan, parse, compose, compose_all, load, load_all, full_load, full_load_all, safe_load, safe_load_all, unsafe_load, unsafe_load_all, emit, serialize_all, serialize, dump_all, dump, safe_dump_all, safe_dump, add_implicit_resolver, add_path_resolver, add_constructor, add_multi_constructor, add_representer, add_multi_representer, __init__, from_yaml, to_yaml\n\n[代码片段 3] 来源: events.py (第 0-0 行)\n[依赖图卡片] 文件 events.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, emitter.py, parser.py, serializer.py\n文件内定义的类: Event, NodeEvent, CollectionStartEvent, CollectionEndEvent, StreamStartEvent, StreamEndEvent, DocumentStartEvent, DocumentEndEvent, AliasEvent, ScalarEvent, SequenceStartEvent, SequenceEndEvent, MappingStartEvent, MappingEndEvent\n文件内定义的函数: __init__, __repr__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 4] 来源: cyaml.py (第 0-0 行)\n[依赖图卡片] 文件 cyaml.py\n它依赖(import)的仓库内文件: constructor.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: CBaseLoader, CSafeLoader, CFullLoader, CUnsafeLoader, CLoader, CBaseDumper, CSafeDumper, CDumper\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 5] 来源: serializer.py (第 0-0 行)\n[依赖图卡片] 文件 serializer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py\n文件内定义的类: SerializerError, Serializer\n文件内定义的函数: __init__, open, close, serialize, anchor_node, generate_anchor, serialize_node\n\n[问题] 在该项目中,哪些文件 import(依赖)了 tokens.py?请尽量列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "tokens.py",
+   "__init__.py",
+   "events.py",
+   "cyaml.py",
+   "serializer.py"
+  ],
+  "expected_sources": [
+   "tokens.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__init__",
+    "parser",
+    "scanner"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-05",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 resolver.py?请尽量列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: resolver.py (第 0-0 行)\n[依赖图卡片] 文件 resolver.py\n它依赖(import)的仓库内文件: error.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py, loader.py\n文件内定义的类: ResolverError, BaseResolver, Resolver\n文件内定义的函数: __init__, add_implicit_resolver, add_path_resolver, descend_resolver, ascend_resolver, check_resolver_prefix, resolve\n\n[代码片段 2] 来源: cyaml.py (第 0-0 行)\n[依赖图卡片] 文件 cyaml.py\n它依赖(import)的仓库内文件: constructor.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: CBaseLoader, CSafeLoader, CFullLoader, CUnsafeLoader, CLoader, CBaseDumper, CSafeDumper, CDumper\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 3] 来源: loader.py (第 0-0 行)\n[依赖图卡片] 文件 loader.py\n它依赖(import)的仓库内文件: composer.py, constructor.py, parser.py, reader.py, resolver.py, scanner.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseLoader, FullLoader, SafeLoader, Loader, UnsafeLoader\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__\n\n[代码片段 4] 来源: dumper.py (第 0-0 行)\n[依赖图卡片] 文件 dumper.py\n它依赖(import)的仓库内文件: emitter.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseDumper, SafeDumper, Dumper\n文件内定义的函数: __init__, __init__, __init__\n\n[代码片段 5] 来源: nodes.py (第 0-0 行)\n[依赖图卡片] 文件 nodes.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, constructor.py, representer.py, resolver.py, serializer.py\n文件内定义的类: Node, ScalarNode, CollectionNode, SequenceNode, MappingNode\n文件内定义的函数: __init__, __repr__, __init__, __init__\n\n[问题] 在该项目中,哪些文件 import(依赖)了 resolver.py?请尽量列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "resolver.py",
+   "cyaml.py",
+   "loader.py",
+   "dumper.py",
+   "nodes.py"
+  ],
+  "expected_sources": [
+   "resolver.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "cyaml",
+    "dumper",
+    "loader"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-06",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 constructor.py?请尽量列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: constructor.py (第 0-0 行)\n[依赖图卡片] 文件 constructor.py\n它依赖(import)的仓库内文件: error.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, loader.py\n文件内定义的类: ConstructorError, BaseConstructor, SafeConstructor, FullConstructor, UnsafeConstructor, Constructor\n文件内定义的函数: __init__, check_data, check_state_key, get_data, get_single_data, construct_document, construct_object, construct_scalar, construct_sequence, construct_mapping, construct_pairs, add_constructor, add_multi_constructor, construct_scalar, flatten_mapping, construct_mapping, construct_yaml_null, construct_yaml_bool, construct_yaml_int, construct_yaml_float, construct_yaml_binary, construct_yaml_timestamp, construct_yaml_omap, construct_yaml_pairs, construct_yaml_set, construct_yaml_str, construct_yaml_seq, construct_yaml_map, construct_yaml_object, construct_undefined\n\n[代码片段 2] 来源: composer.py (第 0-0 行)\n[依赖图卡片] 文件 composer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): loader.py\n文件内定义的类: ComposerError, Composer\n文件内定义的函数: __init__, check_node, get_node, get_single_node, compose_document, compose_node, compose_scalar_node, compose_sequence_node, compose_mapping_node\n\n[代码片段 3] 来源: cyaml.py (第 0-0 行)\n[依赖图卡片] 文件 cyaml.py\n它依赖(import)的仓库内文件: constructor.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: CBaseLoader, CSafeLoader, CFullLoader, CUnsafeLoader, CLoader, CBaseDumper, CSafeDumper, CDumper\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 4] 来源: loader.py (第 0-0 行)\n[依赖图卡片] 文件 loader.py\n它依赖(import)的仓库内文件: composer.py, constructor.py, parser.py, reader.py, resolver.py, scanner.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseLoader, FullLoader, SafeLoader, Loader, UnsafeLoader\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__\n\n[代码片段 5] 来源: nodes.py (第 0-0 行)\n[依赖图卡片] 文件 nodes.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, constructor.py, representer.py, resolver.py, serializer.py\n文件内定义的类: Node, ScalarNode, CollectionNode, SequenceNode, MappingNode\n文件内定义的函数: __init__, __repr__, __init__, __init__\n\n[问题] 在该项目中,哪些文件 import(依赖)了 constructor.py?请尽量列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "constructor.py",
+   "composer.py",
+   "cyaml.py",
+   "loader.py",
+   "nodes.py"
+  ],
+  "expected_sources": [
+   "constructor.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "cyaml",
+    "loader"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-01",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,__init__.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: events.py (第 0-0 行)\n[依赖图卡片] 文件 events.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, emitter.py, parser.py, serializer.py\n文件内定义的类: Event, NodeEvent, CollectionStartEvent, CollectionEndEvent, StreamStartEvent, StreamEndEvent, DocumentStartEvent, DocumentEndEvent, AliasEvent, ScalarEvent, SequenceStartEvent, SequenceEndEvent, MappingStartEvent, MappingEndEvent\n文件内定义的函数: __init__, __repr__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 2] 来源: loader.py (第 0-0 行)\n[依赖图卡片] 文件 loader.py\n它依赖(import)的仓库内文件: composer.py, constructor.py, parser.py, reader.py, resolver.py, scanner.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseLoader, FullLoader, SafeLoader, Loader, UnsafeLoader\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__\n\n[代码片段 3] 来源: cyaml.py (第 0-0 行)\n[依赖图卡片] 文件 cyaml.py\n它依赖(import)的仓库内文件: constructor.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: CBaseLoader, CSafeLoader, CFullLoader, CUnsafeLoader, CLoader, CBaseDumper, CSafeDumper, CDumper\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 4] 来源: dumper.py (第 0-0 行)\n[依赖图卡片] 文件 dumper.py\n它依赖(import)的仓库内文件: emitter.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseDumper, SafeDumper, Dumper\n文件内定义的函数: __init__, __init__, __init__\n\n[代码片段 5] 来源: nodes.py (第 0-0 行)\n[依赖图卡片] 文件 nodes.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, constructor.py, representer.py, resolver.py, serializer.py\n文件内定义的类: Node, ScalarNode, CollectionNode, SequenceNode, MappingNode\n文件内定义的函数: __init__, __repr__, __init__, __init__\n\n[问题] 在该项目中,__init__.py 直接依赖(import)了哪些项目内模块?请列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "events.py",
+   "loader.py",
+   "cyaml.py",
+   "dumper.py",
+   "nodes.py"
+  ],
+  "expected_sources": [
+   "__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "cyaml",
+    "dumper",
+    "error",
+    "events",
+    "loader",
+    "nodes",
+    "tokens"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-02",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,loader.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: loader.py (第 0-0 行)\n[依赖图卡片] 文件 loader.py\n它依赖(import)的仓库内文件: composer.py, constructor.py, parser.py, reader.py, resolver.py, scanner.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseLoader, FullLoader, SafeLoader, Loader, UnsafeLoader\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__\n\n[代码片段 2] 来源: reader.py (第 0-0 行)\n[依赖图卡片] 文件 reader.py\n它依赖(import)的仓库内文件: error.py\n它被这些文件依赖/使用(import 它的使用方): loader.py\n文件内定义的类: ReaderError, Reader\n文件内定义的函数: __init__, __str__, __init__, peek, prefix, forward, get_mark, determine_encoding, check_printable, update, update_raw\n\n[代码片段 3] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: cyaml.py, dumper.py, error.py, events.py, loader.py, nodes.py, tokens.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: YAMLObjectMetaclass, YAMLObject\n文件内定义的函数: warnings, scan, parse, compose, compose_all, load, load_all, full_load, full_load_all, safe_load, safe_load_all, unsafe_load, unsafe_load_all, emit, serialize_all, serialize, dump_all, dump, safe_dump_all, safe_dump, add_implicit_resolver, add_path_resolver, add_constructor, add_multi_constructor, add_representer, add_multi_representer, __init__, from_yaml, to_yaml\n\n[代码片段 4] 来源: composer.py (第 0-0 行)\n[依赖图卡片] 文件 composer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): loader.py\n文件内定义的类: ComposerError, Composer\n文件内定义的函数: __init__, check_node, get_node, get_single_node, compose_document, compose_node, compose_scalar_node, compose_sequence_node, compose_mapping_node\n\n[代码片段 5] 来源: resolver.py (第 0-0 行)\n[依赖图卡片] 文件 resolver.py\n它依赖(import)的仓库内文件: error.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py, loader.py\n文件内定义的类: ResolverError, BaseResolver, Resolver\n文件内定义的函数: __init__, add_implicit_resolver, add_path_resolver, descend_resolver, ascend_resolver, check_resolver_prefix, resolve\n\n[问题] 在该项目中,loader.py 直接依赖(import)了哪些项目内模块?请列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "loader.py",
+   "reader.py",
+   "__init__.py",
+   "composer.py",
+   "resolver.py"
+  ],
+  "expected_sources": [
+   "loader.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "composer",
+    "constructor",
+    "parser",
+    "reader",
+    "resolver",
+    "scanner"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-03",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,cyaml.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: cyaml.py (第 0-0 行)\n[依赖图卡片] 文件 cyaml.py\n它依赖(import)的仓库内文件: constructor.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: CBaseLoader, CSafeLoader, CFullLoader, CUnsafeLoader, CLoader, CBaseDumper, CSafeDumper, CDumper\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 2] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: cyaml.py, dumper.py, error.py, events.py, loader.py, nodes.py, tokens.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: YAMLObjectMetaclass, YAMLObject\n文件内定义的函数: warnings, scan, parse, compose, compose_all, load, load_all, full_load, full_load_all, safe_load, safe_load_all, unsafe_load, unsafe_load_all, emit, serialize_all, serialize, dump_all, dump, safe_dump_all, safe_dump, add_implicit_resolver, add_path_resolver, add_constructor, add_multi_constructor, add_representer, add_multi_representer, __init__, from_yaml, to_yaml\n\n[代码片段 3] 来源: cyaml.py (第 1-101 行)\n文件: cyaml.py\n(模块级代码:import、常量、配置)\n__all__ = [\n    'CBaseLoader', 'CSafeLoader', 'CFullLoader', 'CUnsafeLoader', 'CLoader',\n    'CBaseDumper', 'CSafeDumper', 'CDumper'\n]\n\nfrom yaml._yaml import CParser, CEmitter\n\nfrom .constructor import *\n\nfrom .serializer import *\nfrom .representer import *\n\nfrom .resolver import *\n\nclass CBaseLoader(CParser, BaseConstructor, BaseResolver):\n\n\nclass CSafeLoader(CParser, SafeConstructor, Resolver):\n\n\nclass CFullLoader(CParser, FullConstructor, Resolver):\n\n\nclass CUnsafeLoader(CParser, UnsafeConstructor, Resolver):\n\n\nclass CLoader(CParser, Constructor, Resolver):\n\n\nclass CBaseDumper(CEmitter, BaseRepresenter, BaseResolver):\n\n\nclass CSafeDumper(CEmitter, SafeRepresenter, Resolver):\n\n\nclass CDumper(CEmitter, Serializer, Representer, Resolver):\n\n[代码片段 4] 来源: serializer.py (第 0-0 行)\n[依赖图卡片] 文件 serializer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py\n文件内定义的类: SerializerError, Serializer\n文件内定义的函数: __init__, open, close, serialize, anchor_node, generate_anchor, serialize_node\n\n[代码片段 5] 来源: resolver.py (第 0-0 行)\n[依赖图卡片] 文件 resolver.py\n它依赖(import)的仓库内文件: error.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py, loader.py\n文件内定义的类: ResolverError, BaseResolver, Resolver\n文件内定义的函数: __init__, add_implicit_resolver, add_path_resolver, descend_resolver, ascend_resolver, check_resolver_prefix, resolve\n\n[问题] 在该项目中,cyaml.py 直接依赖(import)了哪些项目内模块?请列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "cyaml.py",
+   "__init__.py",
+   "cyaml.py",
+   "serializer.py",
+   "resolver.py"
+  ],
+  "expected_sources": [
+   "cyaml.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "constructor",
+    "representer",
+    "resolver",
+    "serializer"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-04",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,dumper.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: dumper.py (第 0-0 行)\n[依赖图卡片] 文件 dumper.py\n它依赖(import)的仓库内文件: emitter.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseDumper, SafeDumper, Dumper\n文件内定义的函数: __init__, __init__, __init__\n\n[代码片段 2] 来源: dumper.py (第 1-62 行)\n文件: dumper.py\n(模块级代码:import、常量、配置)\n__all__ = ['BaseDumper', 'SafeDumper', 'Dumper']\n\nfrom .emitter import *\nfrom .serializer import *\nfrom .representer import *\nfrom .resolver import *\n\nclass BaseDumper(Emitter, Serializer, BaseRepresenter, BaseResolver):\n\n\nclass SafeDumper(Emitter, Serializer, SafeRepresenter, Resolver):\n\n\nclass Dumper(Emitter, Serializer, Representer, Resolver):\n\n[代码片段 3] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: cyaml.py, dumper.py, error.py, events.py, loader.py, nodes.py, tokens.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: YAMLObjectMetaclass, YAMLObject\n文件内定义的函数: warnings, scan, parse, compose, compose_all, load, load_all, full_load, full_load_all, safe_load, safe_load_all, unsafe_load, unsafe_load_all, emit, serialize_all, serialize, dump_all, dump, safe_dump_all, safe_dump, add_implicit_resolver, add_path_resolver, add_constructor, add_multi_constructor, add_representer, add_multi_representer, __init__, from_yaml, to_yaml\n\n[代码片段 4] 来源: serializer.py (第 0-0 行)\n[依赖图卡片] 文件 serializer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py\n文件内定义的类: SerializerError, Serializer\n文件内定义的函数: __init__, open, close, serialize, anchor_node, generate_anchor, serialize_node\n\n[代码片段 5] 来源: resolver.py (第 0-0 行)\n[依赖图卡片] 文件 resolver.py\n它依赖(import)的仓库内文件: error.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py, loader.py\n文件内定义的类: ResolverError, BaseResolver, Resolver\n文件内定义的函数: __init__, add_implicit_resolver, add_path_resolver, descend_resolver, ascend_resolver, check_resolver_prefix, resolve\n\n[问题] 在该项目中,dumper.py 直接依赖(import)了哪些项目内模块?请列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "dumper.py",
+   "dumper.py",
+   "__init__.py",
+   "serializer.py",
+   "resolver.py"
+  ],
+  "expected_sources": [
+   "dumper.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "emitter",
+    "representer",
+    "resolver",
+    "serializer"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-05",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,parser.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: parser.py (第 0-0 行)\n[依赖图卡片] 文件 parser.py\n它依赖(import)的仓库内文件: error.py, events.py, scanner.py, tokens.py\n它被这些文件依赖/使用(import 它的使用方): loader.py\n文件内定义的类: ParserError, Parser\n文件内定义的函数: __init__, dispose, check_event, peek_event, get_event, parse_stream_start, parse_implicit_document_start, parse_document_start, parse_document_end, parse_document_content, process_directives, parse_block_node, parse_flow_node, parse_block_node_or_indentless_sequence, parse_node, parse_block_sequence_first_entry, parse_block_sequence_entry, parse_indentless_sequence_entry, parse_block_mapping_first_key, parse_block_mapping_key, parse_block_mapping_value, parse_flow_sequence_first_entry, parse_flow_sequence_entry, parse_flow_sequence_entry_mapping_key, parse_flow_sequence_entry_mapping_value, parse_flow_sequence_entry_mapping_end, parse_flow_mapping_first_key, parse_flow_mapping_key, parse_flow_mapping_value, parse_flow_mapping_empty_value\n\n[代码片段 2] 来源: events.py (第 0-0 行)\n[依赖图卡片] 文件 events.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, emitter.py, parser.py, serializer.py\n文件内定义的类: Event, NodeEvent, CollectionStartEvent, CollectionEndEvent, StreamStartEvent, StreamEndEvent, DocumentStartEvent, DocumentEndEvent, AliasEvent, ScalarEvent, SequenceStartEvent, SequenceEndEvent, MappingStartEvent, MappingEndEvent\n文件内定义的函数: __init__, __repr__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 3] 来源: loader.py (第 0-0 行)\n[依赖图卡片] 文件 loader.py\n它依赖(import)的仓库内文件: composer.py, constructor.py, parser.py, reader.py, resolver.py, scanner.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseLoader, FullLoader, SafeLoader, Loader, UnsafeLoader\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__\n\n[代码片段 4] 来源: tokens.py (第 0-0 行)\n[依赖图卡片] 文件 tokens.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, parser.py, scanner.py\n文件内定义的类: Token, DirectiveToken, DocumentStartToken, DocumentEndToken, StreamStartToken, StreamEndToken, BlockSequenceStartToken, BlockMappingStartToken, BlockEndToken, FlowSequenceStartToken, FlowMappingStartToken, FlowSequenceEndToken, FlowMappingEndToken, KeyToken, ValueToken, BlockEntryToken, FlowEntryToken, AliasToken, AnchorToken, TagToken, ScalarToken\n文件内定义的函数: __init__, __repr__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 5] 来源: dumper.py (第 0-0 行)\n[依赖图卡片] 文件 dumper.py\n它依赖(import)的仓库内文件: emitter.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseDumper, SafeDumper, Dumper\n文件内定义的函数: __init__, __init__, __init__\n\n[问题] 在该项目中,parser.py 直接依赖(import)了哪些项目内模块?请列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "parser.py",
+   "events.py",
+   "loader.py",
+   "tokens.py",
+   "dumper.py"
+  ],
+  "expected_sources": [
+   "parser.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "error",
+    "events",
+    "scanner",
+    "tokens"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-01",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 ComposerError 继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: composer.py (第 0-0 行)\n[依赖图卡片] 类 ComposerError\n定义位置: composer.py 第 8-9 行\n它继承自: MarkedYAMLError [error.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: error.py (第 0-0 行)\n[依赖图卡片] 类 MarkedYAMLError\n定义位置: error.py 第 48-74 行\n它继承自: YAMLError [error.py]\n继承它的子类: ComposerError [composer.py], ParserError [parser.py], ScannerError [scanner.py]\n\n[代码片段 3] 来源: composer.py (第 0-0 行)\n[依赖图卡片] 类 Composer\n定义位置: composer.py 第 11-138 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: constructor.py (第 0-0 行)\n[依赖图卡片] 类 ConstructorError\n定义位置: constructor.py 第 16-17 行\n它继承自: MarkedYAMLError\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: representer.py (第 0-0 行)\n[依赖图卡片] 类 RepresenterError\n定义位置: representer.py 第 10-11 行\n它继承自: YAMLError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 ComposerError 继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "composer.py",
+   "error.py",
+   "composer.py",
+   "constructor.py",
+   "representer.py"
+  ],
+  "expected_sources": [
+   "composer.py",
+   "error.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "MarkedYAMLError",
+    "error.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-02",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 EmitterError 继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: emitter.py (第 0-0 行)\n[依赖图卡片] 类 EmitterError\n定义位置: emitter.py 第 14-15 行\n它继承自: YAMLError [error.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: error.py (第 0-0 行)\n[依赖图卡片] 类 YAMLError\n定义位置: error.py 第 45-46 行\n它继承自: Exception\n继承它的子类: EmitterError [emitter.py], MarkedYAMLError [error.py], ReaderError [reader.py], SerializerError [serializer.py]\n\n[代码片段 3] 来源: emitter.py (第 0-0 行)\n[依赖图卡片] 类 Emitter\n定义位置: emitter.py 第 31-1137 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: emitter.py (第 0-0 行)\n[依赖图卡片] 类 ScalarAnalysis\n定义位置: emitter.py 第 17-29 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: representer.py (第 0-0 行)\n[依赖图卡片] 类 RepresenterError\n定义位置: representer.py 第 10-11 行\n它继承自: YAMLError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 EmitterError 继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "emitter.py",
+   "error.py",
+   "emitter.py",
+   "emitter.py",
+   "representer.py"
+  ],
+  "expected_sources": [
+   "emitter.py",
+   "error.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "YAMLError",
+    "error.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-03",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 ParserError 继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: parser.py (第 0-0 行)\n[依赖图卡片] 类 ParserError\n定义位置: parser.py 第 69-70 行\n它继承自: MarkedYAMLError [error.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: error.py (第 0-0 行)\n[依赖图卡片] 类 MarkedYAMLError\n定义位置: error.py 第 48-74 行\n它继承自: YAMLError [error.py]\n继承它的子类: ComposerError [composer.py], ParserError [parser.py], ScannerError [scanner.py]\n\n[代码片段 3] 来源: parser.py (第 0-0 行)\n[依赖图卡片] 类 Parser\n定义位置: parser.py 第 72-588 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: representer.py (第 0-0 行)\n[依赖图卡片] 类 RepresenterError\n定义位置: representer.py 第 10-11 行\n它继承自: YAMLError\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: resolver.py (第 0-0 行)\n[依赖图卡片] 类 ResolverError\n定义位置: resolver.py 第 9-10 行\n它继承自: YAMLError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 ParserError 继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "parser.py",
+   "error.py",
+   "parser.py",
+   "representer.py",
+   "resolver.py"
+  ],
+  "expected_sources": [
+   "parser.py",
+   "error.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "MarkedYAMLError",
+    "error.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-04",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 ReaderError 继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: reader.py (第 0-0 行)\n[依赖图卡片] 类 ReaderError\n定义位置: reader.py 第 24-43 行\n它继承自: YAMLError [error.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: error.py (第 0-0 行)\n[依赖图卡片] 类 YAMLError\n定义位置: error.py 第 45-46 行\n它继承自: Exception\n继承它的子类: EmitterError [emitter.py], MarkedYAMLError [error.py], ReaderError [reader.py], SerializerError [serializer.py]\n\n[代码片段 3] 来源: reader.py (第 0-0 行)\n[依赖图卡片] 类 Reader\n定义位置: reader.py 第 45-185 行\n它继承自: object\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: representer.py (第 0-0 行)\n[依赖图卡片] 类 RepresenterError\n定义位置: representer.py 第 10-11 行\n它继承自: YAMLError\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: resolver.py (第 0-0 行)\n[依赖图卡片] 类 ResolverError\n定义位置: resolver.py 第 9-10 行\n它继承自: YAMLError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 ReaderError 继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "reader.py",
+   "error.py",
+   "reader.py",
+   "representer.py",
+   "resolver.py"
+  ],
+  "expected_sources": [
+   "reader.py",
+   "error.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "YAMLError",
+    "error.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-05",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 ScannerError 继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: scanner.py (第 0-0 行)\n[依赖图卡片] 类 ScannerError\n定义位置: scanner.py 第 32-33 行\n它继承自: MarkedYAMLError [error.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: error.py (第 0-0 行)\n[依赖图卡片] 类 MarkedYAMLError\n定义位置: error.py 第 48-74 行\n它继承自: YAMLError [error.py]\n继承它的子类: ComposerError [composer.py], ParserError [parser.py], ScannerError [scanner.py]\n\n[代码片段 3] 来源: scanner.py (第 0-0 行)\n[依赖图卡片] 类 Scanner\n定义位置: scanner.py 第 46-1435 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: representer.py (第 0-0 行)\n[依赖图卡片] 类 RepresenterError\n定义位置: representer.py 第 10-11 行\n它继承自: YAMLError\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: resolver.py (第 0-0 行)\n[依赖图卡片] 类 ResolverError\n定义位置: resolver.py 第 9-10 行\n它继承自: YAMLError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 ScannerError 继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "scanner.py",
+   "error.py",
+   "scanner.py",
+   "representer.py",
+   "resolver.py"
+  ],
+  "expected_sources": [
+   "scanner.py",
+   "error.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "MarkedYAMLError",
+    "error.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-06",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 SerializerError 继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: serializer.py (第 0-0 行)\n[依赖图卡片] 类 SerializerError\n定义位置: serializer.py 第 8-9 行\n它继承自: YAMLError [error.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: error.py (第 0-0 行)\n[依赖图卡片] 类 YAMLError\n定义位置: error.py 第 45-46 行\n它继承自: Exception\n继承它的子类: EmitterError [emitter.py], MarkedYAMLError [error.py], ReaderError [reader.py], SerializerError [serializer.py]\n\n[代码片段 3] 来源: serializer.py (第 0-0 行)\n[依赖图卡片] 类 Serializer\n定义位置: serializer.py 第 11-110 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: representer.py (第 0-0 行)\n[依赖图卡片] 类 RepresenterError\n定义位置: representer.py 第 10-11 行\n它继承自: YAMLError\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: resolver.py (第 0-0 行)\n[依赖图卡片] 类 ResolverError\n定义位置: resolver.py 第 9-10 行\n它继承自: YAMLError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 SerializerError 继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "serializer.py",
+   "error.py",
+   "serializer.py",
+   "representer.py",
+   "resolver.py"
+  ],
+  "expected_sources": [
+   "serializer.py",
+   "error.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "YAMLError",
+    "error.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-01",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 BaseLoader 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: loader.py (第 0-0 行)\n[依赖图卡片] 类 BaseLoader\n定义位置: loader.py 第 11-19 行\n它继承自: Reader, Scanner, Parser, Composer, BaseConstructor, BaseResolver\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: loader.py (第 0-0 行)\n[依赖图卡片] 文件 loader.py\n它依赖(import)的仓库内文件: composer.py, constructor.py, parser.py, reader.py, resolver.py, scanner.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseLoader, FullLoader, SafeLoader, Loader, UnsafeLoader\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__\n\n[代码片段 3] 来源: loader.py (第 1-63 行)\n文件: loader.py\n(模块级代码:import、常量、配置)\n__all__ = ['BaseLoader', 'FullLoader', 'SafeLoader', 'Loader', 'UnsafeLoader']\n\nfrom .reader import *\nfrom .scanner import *\nfrom .parser import *\nfrom .composer import *\nfrom .constructor import *\nfrom .resolver import *\n\nclass BaseLoader(Reader, Scanner, Parser, Composer, BaseConstructor, BaseResolver):\n\n\nclass FullLoader(Reader, Scanner, Parser, Composer, FullConstructor, Resolver):\n\n\nclass SafeLoader(Reader, Scanner, Parser, Composer, SafeConstructor, Resolver):\n\n\nclass Loader(Reader, Scanner, Parser, Composer, Constructor, Resolver):\n\n\n# UnsafeLoader is the same as Loader (which is and was always unsafe on\n# untrusted input). Use of either Loader or UnsafeLoader should be rare, since\n# FullLoad should be able to load almost all YAML safely. Loader is left intact\n# to ensure backwards compatibility.\nclass UnsafeLoader(Reader, Scanner, Parser, Composer, Constructor, Resolver):\n\n[代码片段 4] 来源: cyaml.py (第 0-0 行)\n[依赖图卡片] 类 CBaseLoader\n定义位置: cyaml.py 第 16-21 行\n它继承自: CParser, BaseConstructor, BaseResolver\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: loader.py (第 43-49 行)\n文件: loader.py\n函数: __init__\ndef __init__(self, stream):\n        Reader.__init__(self, stream)\n        Scanner.__init__(self)\n        Parser.__init__(self)\n        Composer.__init__(self)\n        Constructor.__init__(self)\n        Resolver.__init__(self)\n\n[问题] 在该项目中,类 BaseLoader 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "loader.py",
+   "loader.py",
+   "loader.py",
+   "cyaml.py",
+   "loader.py"
+  ],
+  "expected_sources": [
+   "loader.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "loader.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-02",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 SafeDumper 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: dumper.py (第 0-0 行)\n[依赖图卡片] 类 SafeDumper\n定义位置: dumper.py 第 27-43 行\n它继承自: Emitter, Serializer, SafeRepresenter, Resolver\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: dumper.py (第 0-0 行)\n[依赖图卡片] 文件 dumper.py\n它依赖(import)的仓库内文件: emitter.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseDumper, SafeDumper, Dumper\n文件内定义的函数: __init__, __init__, __init__\n\n[代码片段 3] 来源: dumper.py (第 1-62 行)\n文件: dumper.py\n(模块级代码:import、常量、配置)\n__all__ = ['BaseDumper', 'SafeDumper', 'Dumper']\n\nfrom .emitter import *\nfrom .serializer import *\nfrom .representer import *\nfrom .resolver import *\n\nclass BaseDumper(Emitter, Serializer, BaseRepresenter, BaseResolver):\n\n\nclass SafeDumper(Emitter, Serializer, SafeRepresenter, Resolver):\n\n\nclass Dumper(Emitter, Serializer, Representer, Resolver):\n\n[代码片段 4] 来源: __init__.py (第 263-269 行)\n文件: __init__.py\n函数: safe_dump\ndef safe_dump(data, stream=None, **kwds):\n    \"\"\"\n    Serialize a Python object into a YAML stream.\n    Produce only basic YAML tags.\n    If stream is None, return the produced string instead.\n    \"\"\"\n    return dump_all([data], stream, Dumper=SafeDumper, **kwds)\n\n[代码片段 5] 来源: __init__.py (第 255-261 行)\n文件: __init__.py\n函数: safe_dump_all\ndef safe_dump_all(documents, stream=None, **kwds):\n    \"\"\"\n    Serialize a sequence of Python objects into a YAML stream.\n    Produce only basic YAML tags.\n    If stream is None, return the produced string instead.\n    \"\"\"\n    return dump_all(documents, stream, Dumper=SafeDumper, **kwds)\n\n[问题] 在该项目中,类 SafeDumper 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "dumper.py",
+   "dumper.py",
+   "dumper.py",
+   "__init__.py",
+   "__init__.py"
+  ],
+  "expected_sources": [
+   "dumper.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "dumper.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-03",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 MappingNode 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: nodes.py (第 0-0 行)\n[依赖图卡片] 类 MappingNode\n定义位置: nodes.py 第 47-48 行\n它继承自: CollectionNode [nodes.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: nodes.py (第 0-0 行)\n[依赖图卡片] 文件 nodes.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, constructor.py, representer.py, resolver.py, serializer.py\n文件内定义的类: Node, ScalarNode, CollectionNode, SequenceNode, MappingNode\n文件内定义的函数: __init__, __repr__, __init__, __init__\n\n[代码片段 3] 来源: nodes.py (第 1-49 行)\n文件: nodes.py\n(模块级代码:import、常量、配置)\nclass Node(object):\n\nclass ScalarNode(Node):\n    id = 'scalar'\n\nclass CollectionNode(Node):\n\nclass SequenceNode(CollectionNode):\n    id = 'sequence'\n\nclass MappingNode(CollectionNode):\n    id = 'mapping'\n\n[代码片段 4] 来源: constructor.py (第 173-178 行)\n文件: constructor.py\n函数: construct_scalar\ndef construct_scalar(self, node):\n        if isinstance(node, MappingNode):\n            for key_node, value_node in node.value:\n                if key_node.tag == 'tag:yaml.org,2002:value':\n                    return self.construct_scalar(value_node)\n        return super().construct_scalar(node)\n\n[代码片段 5] 来源: nodes.py (第 0-0 行)\n[依赖图卡片] 类 CollectionNode\n定义位置: nodes.py 第 35-42 行\n它继承自: Node [nodes.py]\n继承它的子类: SequenceNode [nodes.py], MappingNode [nodes.py]\n\n[问题] 在该项目中,类 MappingNode 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "nodes.py",
+   "nodes.py",
+   "nodes.py",
+   "constructor.py",
+   "nodes.py"
+  ],
+  "expected_sources": [
+   "nodes.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "nodes.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-04",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 FlowEntryToken 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: tokens.py (第 0-0 行)\n[依赖图卡片] 类 FlowEntryToken\n定义位置: tokens.py 第 72-73 行\n它继承自: Token [tokens.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: tokens.py (第 0-0 行)\n[依赖图卡片] 类 FlowSequenceEndToken\n定义位置: tokens.py 第 57-58 行\n它继承自: Token [tokens.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: tokens.py (第 0-0 行)\n[依赖图卡片] 类 FlowMappingEndToken\n定义位置: tokens.py 第 60-61 行\n它继承自: Token [tokens.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: tokens.py (第 0-0 行)\n[依赖图卡片] 文件 tokens.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, parser.py, scanner.py\n文件内定义的类: Token, DirectiveToken, DocumentStartToken, DocumentEndToken, StreamStartToken, StreamEndToken, BlockSequenceStartToken, BlockMappingStartToken, BlockEndToken, FlowSequenceStartToken, FlowMappingStartToken, FlowSequenceEndToken, FlowMappingEndToken, KeyToken, ValueToken, BlockEntryToken, FlowEntryToken, AliasToken, AnchorToken, TagToken, ScalarToken\n文件内定义的函数: __init__, __repr__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 5] 来源: tokens.py (第 0-0 行)\n[依赖图卡片] 类 Token\n定义位置: tokens.py 第 2-12 行\n它继承自: object\n继承它的子类: DirectiveToken [tokens.py], DocumentStartToken [tokens.py], DocumentEndToken [tokens.py], StreamStartToken [tokens.py], StreamEndToken [tokens.py], BlockSequenceStartToken [tokens.py], BlockMappingStartToken [tokens.py], BlockEndToken [tokens.py], FlowSequenceStartToken [tokens.py], FlowMappingStartToken [tokens.py], FlowSequenceEndToken [tokens.py], FlowMappingEndToken [tokens.py], KeyToken [tokens.py], ValueToken [tokens.py], BlockEntryToken [tokens.py], FlowEntryToken [tokens.py], AliasToken [tokens.py], AnchorToken [tokens.py], TagToken [tokens.py], ScalarToken [tokens.py]\n\n[问题] 在该项目中,类 FlowEntryToken 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "tokens.py",
+   "tokens.py",
+   "tokens.py",
+   "tokens.py",
+   "tokens.py"
+  ],
+  "expected_sources": [
+   "tokens.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "tokens.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-05",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 SafeConstructor 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: constructor.py (第 0-0 行)\n[依赖图卡片] 类 SafeConstructor\n定义位置: constructor.py 第 171-429 行\n它继承自: BaseConstructor [constructor.py]\n继承它的子类: FullConstructor [constructor.py]\n\n[代码片段 2] 来源: constructor.py (第 0-0 行)\n[依赖图卡片] 类 BaseConstructor\n定义位置: constructor.py 第 19-169 行\n它继承自: (无基类)\n继承它的子类: SafeConstructor [constructor.py]\n\n[代码片段 3] 来源: constructor.py (第 0-0 行)\n[依赖图卡片] 类 Constructor\n定义位置: constructor.py 第 747-748 行\n它继承自: UnsafeConstructor [constructor.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: constructor.py (第 0-0 行)\n[依赖图卡片] 类 FullConstructor\n定义位置: constructor.py 第 482-659 行\n它继承自: SafeConstructor [constructor.py]\n继承它的子类: UnsafeConstructor [constructor.py]\n\n[代码片段 5] 来源: constructor.py (第 0-0 行)\n[依赖图卡片] 类 UnsafeConstructor\n定义位置: constructor.py 第 713-727 行\n它继承自: FullConstructor [constructor.py]\n继承它的子类: Constructor [constructor.py]\n\n[问题] 在该项目中,类 SafeConstructor 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "constructor.py",
+   "constructor.py",
+   "constructor.py",
+   "constructor.py",
+   "constructor.py"
+  ],
+  "expected_sources": [
+   "constructor.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "constructor.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-06",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 Constructor 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: constructor.py (第 0-0 行)\n[依赖图卡片] 类 Constructor\n定义位置: constructor.py 第 747-748 行\n它继承自: UnsafeConstructor [constructor.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: constructor.py (第 0-0 行)\n[依赖图卡片] 类 ConstructorError\n定义位置: constructor.py 第 16-17 行\n它继承自: MarkedYAMLError\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: constructor.py (第 0-0 行)\n[依赖图卡片] 类 BaseConstructor\n定义位置: constructor.py 第 19-169 行\n它继承自: (无基类)\n继承它的子类: SafeConstructor [constructor.py]\n\n[代码片段 4] 来源: constructor.py (第 160-163 行)\n文件: constructor.py\n函数: add_constructor\ndef add_constructor(cls, tag, constructor):\n        if not 'yaml_constructors' in cls.__dict__:\n            cls.yaml_constructors = cls.yaml_constructors.copy()\n        cls.yaml_constructors[tag] = constructor\n\n[代码片段 5] 来源: constructor.py (第 426-429 行)\n文件: constructor.py\n函数: construct_undefined\ndef construct_undefined(self, node):\n        raise ConstructorError(None, None,\n                \"could not determine a constructor for the tag %r\" % node.tag,\n                node.start_mark)\n\n[问题] 在该项目中,类 Constructor 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "constructor.py",
+   "constructor.py",
+   "constructor.py",
+   "constructor.py",
+   "constructor.py"
+  ],
+  "expected_sources": [
+   "constructor.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "constructor.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-IND-01",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,__init__.py 是否间接依赖 representer.py?经过哪个中间文件(完整路径)?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: dumper.py (第 0-0 行)\n[依赖图卡片] 文件 dumper.py\n它依赖(import)的仓库内文件: emitter.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseDumper, SafeDumper, Dumper\n文件内定义的函数: __init__, __init__, __init__\n\n[代码片段 2] 来源: representer.py (第 0-0 行)\n[依赖图卡片] 文件 representer.py\n它依赖(import)的仓库内文件: error.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py\n文件内定义的类: RepresenterError, BaseRepresenter, SafeRepresenter, Representer\n文件内定义的函数: __init__, represent, represent_data, add_representer, add_multi_representer, represent_scalar, represent_sequence, represent_mapping, ignore_aliases, ignore_aliases, represent_none, represent_str, represent_binary, represent_bool, represent_int, represent_float, represent_list, represent_dict, represent_set, represent_date, represent_datetime, represent_yaml_object, represent_undefined, represent_complex, represent_tuple, represent_name, represent_module, represent_object, represent_ordered_dict\n\n[代码片段 3] 来源: cyaml.py (第 0-0 行)\n[依赖图卡片] 文件 cyaml.py\n它依赖(import)的仓库内文件: constructor.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: CBaseLoader, CSafeLoader, CFullLoader, CUnsafeLoader, CLoader, CBaseDumper, CSafeDumper, CDumper\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 4] 来源: nodes.py (第 0-0 行)\n[依赖图卡片] 文件 nodes.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, constructor.py, representer.py, resolver.py, serializer.py\n文件内定义的类: Node, ScalarNode, CollectionNode, SequenceNode, MappingNode\n文件内定义的函数: __init__, __repr__, __init__, __init__\n\n[代码片段 5] 来源: error.py (第 0-0 行)\n[依赖图卡片] 文件 error.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, constructor.py, emitter.py, parser.py, reader.py, representer.py, resolver.py, scanner.py, serializer.py\n文件内定义的类: Mark, YAMLError, MarkedYAMLError\n文件内定义的函数: __init__, get_snippet, __str__, __init__, __str__\n\n[问题] 在该项目中,__init__.py 是否间接依赖 representer.py?经过哪个中间文件(完整路径)?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "dumper.py",
+   "representer.py",
+   "cyaml.py",
+   "nodes.py",
+   "error.py"
+  ],
+  "expected_sources": [
+   "__init__.py",
+   "cyaml.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "cyaml.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-IND-02",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,cyaml.py 是否间接依赖 error.py?经过哪个中间文件(完整路径)?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: cyaml.py (第 0-0 行)\n[依赖图卡片] 文件 cyaml.py\n它依赖(import)的仓库内文件: constructor.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: CBaseLoader, CSafeLoader, CFullLoader, CUnsafeLoader, CLoader, CBaseDumper, CSafeDumper, CDumper\n文件内定义的函数: __init__, __init__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 2] 来源: resolver.py (第 0-0 行)\n[依赖图卡片] 文件 resolver.py\n它依赖(import)的仓库内文件: error.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py, loader.py\n文件内定义的类: ResolverError, BaseResolver, Resolver\n文件内定义的函数: __init__, add_implicit_resolver, add_path_resolver, descend_resolver, ascend_resolver, check_resolver_prefix, resolve\n\n[代码片段 3] 来源: __init__.py (第 0-0 行)\n[依赖图卡片] 文件 __init__.py\n它依赖(import)的仓库内文件: cyaml.py, dumper.py, error.py, events.py, loader.py, nodes.py, tokens.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: YAMLObjectMetaclass, YAMLObject\n文件内定义的函数: warnings, scan, parse, compose, compose_all, load, load_all, full_load, full_load_all, safe_load, safe_load_all, unsafe_load, unsafe_load_all, emit, serialize_all, serialize, dump_all, dump, safe_dump_all, safe_dump, add_implicit_resolver, add_path_resolver, add_constructor, add_multi_constructor, add_representer, add_multi_representer, __init__, from_yaml, to_yaml\n\n[代码片段 4] 来源: constructor.py (第 0-0 行)\n[依赖图卡片] 文件 constructor.py\n它依赖(import)的仓库内文件: error.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, loader.py\n文件内定义的类: ConstructorError, BaseConstructor, SafeConstructor, FullConstructor, UnsafeConstructor, Constructor\n文件内定义的函数: __init__, check_data, check_state_key, get_data, get_single_data, construct_document, construct_object, construct_scalar, construct_sequence, construct_mapping, construct_pairs, add_constructor, add_multi_constructor, construct_scalar, flatten_mapping, construct_mapping, construct_yaml_null, construct_yaml_bool, construct_yaml_int, construct_yaml_float, construct_yaml_binary, construct_yaml_timestamp, construct_yaml_omap, construct_yaml_pairs, construct_yaml_set, construct_yaml_str, construct_yaml_seq, construct_yaml_map, construct_yaml_object, construct_undefined\n\n[代码片段 5] 来源: serializer.py (第 0-0 行)\n[依赖图卡片] 文件 serializer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py\n文件内定义的类: SerializerError, Serializer\n文件内定义的函数: __init__, open, close, serialize, anchor_node, generate_anchor, serialize_node\n\n[问题] 在该项目中,cyaml.py 是否间接依赖 error.py?经过哪个中间文件(完整路径)?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "cyaml.py",
+   "resolver.py",
+   "__init__.py",
+   "constructor.py",
+   "serializer.py"
+  ],
+  "expected_sources": [
+   "cyaml.py",
+   "constructor.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "constructor.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-IND-03",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,dumper.py 是否间接依赖 events.py?经过哪个中间文件(完整路径)?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: emitter.py (第 0-0 行)\n[依赖图卡片] 文件 emitter.py\n它依赖(import)的仓库内文件: error.py, events.py\n它被这些文件依赖/使用(import 它的使用方): dumper.py\n文件内定义的类: EmitterError, ScalarAnalysis, Emitter\n文件内定义的函数: __init__, __init__, dispose, emit, need_more_events, need_events, increase_indent, expect_stream_start, expect_nothing, expect_first_document_start, expect_document_start, expect_document_end, expect_document_root, expect_node, expect_alias, expect_scalar, expect_flow_sequence, expect_first_flow_sequence_item, expect_flow_sequence_item, expect_flow_mapping, expect_first_flow_mapping_key, expect_flow_mapping_key, expect_flow_mapping_simple_value, expect_flow_mapping_value, expect_block_sequence, expect_first_block_sequence_item, expect_block_sequence_item, expect_block_mapping, expect_first_block_mapping_key, expect_block_mapping_key\n\n[代码片段 2] 来源: dumper.py (第 0-0 行)\n[依赖图卡片] 文件 dumper.py\n它依赖(import)的仓库内文件: emitter.py, representer.py, resolver.py, serializer.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: BaseDumper, SafeDumper, Dumper\n文件内定义的函数: __init__, __init__, __init__\n\n[代码片段 3] 来源: events.py (第 0-0 行)\n[依赖图卡片] 文件 events.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): __init__.py, composer.py, emitter.py, parser.py, serializer.py\n文件内定义的类: Event, NodeEvent, CollectionStartEvent, CollectionEndEvent, StreamStartEvent, StreamEndEvent, DocumentStartEvent, DocumentEndEvent, AliasEvent, ScalarEvent, SequenceStartEvent, SequenceEndEvent, MappingStartEvent, MappingEndEvent\n文件内定义的函数: __init__, __repr__, __init__, __init__, __init__, __init__, __init__, __init__\n\n[代码片段 4] 来源: serializer.py (第 0-0 行)\n[依赖图卡片] 文件 serializer.py\n它依赖(import)的仓库内文件: error.py, events.py, nodes.py\n它被这些文件依赖/使用(import 它的使用方): cyaml.py, dumper.py\n文件内定义的类: SerializerError, Serializer\n文件内定义的函数: __init__, open, close, serialize, anchor_node, generate_anchor, serialize_node\n\n[代码片段 5] 来源: events.py (第 0-0 行)\n[依赖图卡片] 类 CollectionEndEvent\n定义位置: events.py 第 31-32 行\n它继承自: Event [events.py]\n继承它的子类: SequenceEndEvent [events.py], MappingEndEvent [events.py]\n\n[问题] 在该项目中,dumper.py 是否间接依赖 events.py?经过哪个中间文件(完整路径)?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "emitter.py",
+   "dumper.py",
+   "events.py",
+   "serializer.py",
+   "events.py"
+  ],
+  "expected_sources": [
+   "dumper.py",
+   "emitter.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "emitter.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ }
+]

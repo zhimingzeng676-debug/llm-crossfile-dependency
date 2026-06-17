@@ -1,0 +1,74 @@
+[
+ {
+  "id": "XIND-01",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未提及serving.py,结论错误\"}"
+ },
+ {
+  "id": "XIND-02",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提及test.py作为中间文件\"}"
+ },
+ {
+  "id": "XIND-03",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提及正确中间文件wrappers/__init__.py\"}"
+ },
+ {
+  "id": "XIND-04",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0, \"reason\": \"未提及正确依赖路径和中间文件\"}"
+ },
+ {
+  "id": "XIND-05",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "XIND-06",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"命中了datastructures/auth.py\"}"
+ },
+ {
+  "id": "XIND-07",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中了中间文件datastructures/file_storage.py\"}"
+ },
+ {
+  "id": "XIND-08",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"正确命中所有要点\"}"
+ },
+ {
+  "id": "XIND-09",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中中间文件datastructures/structures.py\"}"
+ },
+ {
+  "id": "XIND-10",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"正确命中所有要点\"}"
+ },
+ {
+  "id": "XIND-11",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未提及http.py,结论错误\"}"
+ },
+ {
+  "id": "XIND-12",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点，无遗漏或错误\"}"
+ },
+ {
+  "id": "XIND-13",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"命中了中间文件datastructures/structures.py\"}"
+ },
+ {
+  "id": "XIND-14",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0, \"reason\": \"未提及正确依赖路径和中间文件\"}"
+ },
+ {
+  "id": "XIND-15",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"提到http.py但未明确依赖关系\"}"
+ },
+ {
+  "id": "XIND-16",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点，无遗漏或错误\"}"
+ },
+ {
+  "id": "XIND-17",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"漏掉了headers.py,错用了_internal.py\"}"
+ },
+ {
+  "id": "XIND-18",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点，无遗漏或错误\"}"
+ }
+]

@@ -1,0 +1,16 @@
+#!/bin/bash
+# M42 记忆vs结构:seen/unseen × baseline/full,Qwen 生成 n=3。judge-independent 本地打分。
+LOCK=<REMOTE_WORKDIR>/eval_M42.lock
+[ -f "$LOCK" ] && { echo "RUNNING"; exit 0; }
+touch "$LOCK"
+cd <REMOTE_WORKDIR>/phaseN
+LOG=<REMOTE_WORKDIR>/logs/eval_M42.log
+echo "=== M42 MEMVSSTRUCT START $(date) ===" > $LOG
+CONDS="seen_baseline seen_full unseen_baseline unseen_full"
+nuke(){ nvidia-smi --query-compute-apps=pid --format=csv,noheader|xargs -r kill -9 2>/dev/null; pkill -9 -i -f vllm 2>/dev/null; pkill -9 -f EngineCore 2>/dev/null; sleep 6; }
+wait_ready(){ for i in $(seq 1 50); do curl -s --max-time 5 http://localhost:8000/v1/models 2>/dev/null|grep -q "$1" && { echo "READY $1 ($i)">>$LOG; return 0; }; sleep 12; done; echo "TIMEOUT $1">>$LOG; return 1; }
+nuke; setsid bash -c "vllm serve <MODEL_DIR>/Qwen2.5-14B-Instruct --served-model-name qwen --port 8000 --max-model-len 16384 --gpu-memory-utilization 0.88 > <REMOTE_WORKDIR>/logs/vllm_M42.log 2>&1" </dev/null >/dev/null 2>&1 &
+wait_ready qwen
+for c in $CONDS; do python3 gen_text.py bundle_${c}.json ans_${c}.json qwen 0.7 3 24 >> $LOG 2>&1; echo "  gen $c done">>$LOG; done
+nuke; rm -f "$LOCK"
+echo "=== M42 MEMVSSTRUCT DONE $(date) ===" >> $LOG

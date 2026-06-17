@@ -1,0 +1,450 @@
+[
+ {
+  "id": "FWD-01",
+  "question": "在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, mixins, structures, exceptions",
+  "notes": "正向依赖,共 4 个:['_internal.py', 'datastructures/mixins.py', 'datastructures/structures.py', 'exceptions.py'](来源:datastructures/headers.py 顶部 import 段)",
+  "difficulty": "medium",
+  "category": "forward_dep"
+ },
+ {
+  "id": "FWD-02",
+  "question": "在 werkzeug 中,formparser.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, datastructures, exceptions, http, multipart, wsgi",
+  "notes": "正向依赖,共 6 个:['_internal.py', 'datastructures/__init__.py', 'exceptions.py', 'http.py', 'sansio/multipart.py', 'wsgi.py'](来源:formparser.py 顶部 import 段)",
+  "difficulty": "hard",
+  "category": "forward_dep"
+ },
+ {
+  "id": "FWD-03",
+  "question": "在 werkzeug 中,http.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, sansio",
+  "notes": "正向依赖,共 2 个:['_internal.py', 'sansio/__init__.py'](来源:http.py 顶部 import 段)",
+  "difficulty": "easy",
+  "category": "forward_dep"
+ },
+ {
+  "id": "FWD-04",
+  "question": "在 werkzeug 中,routing/map.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, datastructures, exceptions, converters, matcher, rules, urls, request, wsgi",
+  "notes": "正向依赖,共 10 个:['_internal.py', 'datastructures/__init__.py', 'exceptions.py', 'routing/converters.py', 'routing/exceptions.py', 'routing/matcher.py', 'routing/rules.py', 'urls.py', 'wrappers/request.py', 'wsgi.py'](来源:routing/map.py 顶部 import 段)",
+  "difficulty": "hard",
+  "category": "forward_dep"
+ },
+ {
+  "id": "FWD-05",
+  "question": "在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "converters, exceptions, rules",
+  "notes": "正向依赖,共 3 个:['routing/converters.py', 'routing/exceptions.py', 'routing/rules.py'](来源:routing/matcher.py 顶部 import 段)",
+  "difficulty": "medium",
+  "category": "forward_dep"
+ },
+ {
+  "id": "FWD-06",
+  "question": "在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "datastructures, http, utils, user_agent",
+  "notes": "正向依赖,共 6 个:['datastructures/__init__.py', 'http.py', 'sansio/http.py', 'sansio/utils.py', 'user_agent.py', 'utils.py'](来源:sansio/request.py 顶部 import 段)",
+  "difficulty": "hard",
+  "category": "forward_dep"
+ },
+ {
+  "id": "FWD-07",
+  "question": "在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "datastructures, cache_control, http, utils",
+  "notes": "正向依赖,共 4 个:['datastructures/__init__.py', 'datastructures/cache_control.py', 'http.py', 'utils.py'](来源:sansio/response.py 顶部 import 段)",
+  "difficulty": "medium",
+  "category": "forward_dep"
+ },
+ {
+  "id": "FWD-08",
+  "question": "在 werkzeug 中,serving.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, _reloader, debug, tbtools, exceptions, http, shared_data, urls",
+  "notes": "正向依赖,共 8 个:['_internal.py', '_reloader.py', 'debug/__init__.py', 'debug/tbtools.py', 'exceptions.py', 'http.py', 'middleware/shared_data.py', 'urls.py'](来源:serving.py 顶部 import 段)",
+  "difficulty": "hard",
+  "category": "forward_dep"
+ },
+ {
+  "id": "FWD-09",
+  "question": "在 werkzeug 中,test.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, datastructures, http, multipart, urls, utils, request, response, wsgi",
+  "notes": "正向依赖,共 9 个:['_internal.py', 'datastructures/__init__.py', 'http.py', 'sansio/multipart.py', 'urls.py', 'utils.py', 'wrappers/request.py', 'wrappers/response.py', 'wsgi.py'](来源:test.py 顶部 import 段)",
+  "difficulty": "hard",
+  "category": "forward_dep"
+ },
+ {
+  "id": "FWD-10",
+  "question": "在 werkzeug 中,wrappers/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, datastructures, exceptions, formparser, request, test, utils, wsgi",
+  "notes": "正向依赖,共 8 个:['_internal.py', 'datastructures/__init__.py', 'exceptions.py', 'formparser.py', 'sansio/request.py', 'test.py', 'utils.py', 'wsgi.py'](来源:wrappers/request.py 顶部 import 段)",
+  "difficulty": "hard",
+  "category": "forward_dep"
+ },
+ {
+  "id": "FWD-11",
+  "question": "在 werkzeug 中,wrappers/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "gold": "_internal, datastructures, exceptions, http, response, test, urls, utils, request, wsgi",
+  "notes": "正向依赖,共 10 个:['_internal.py', 'datastructures/__init__.py', 'exceptions.py', 'http.py', 'sansio/response.py', 'test.py', 'urls.py', 'utils.py', 'wrappers/request.py', 'wsgi.py'](来源:wrappers/response.py 顶部 import 段)",
+  "difficulty": "hard",
+  "category": "forward_dep"
+ },
+ {
+  "id": "REV-01",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 _internal.py?请尽可能完整列出。",
+  "gold": "_reloader, file_storage, headers, mixins, structures, debug, exceptions, formparser, http, map, utils, serving, test, request, response",
+  "notes": "反向依赖,共 17 个使用方:['_reloader.py', 'datastructures/file_storage.py', 'datastructures/headers.py', 'datastructures/mixins.py', 'datastructures/structures.py', 'debug/__init__.py', 'exceptions.py', 'formparser.py', 'http.py', 'routing/map.py', 'sansio/http.py', 'sansio/utils.py', 'serving.py', 'test.py', 'utils.py', 'wrappers/request.py', 'wrappers/response.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "hard",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "REV-02",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/__init__.py?请尽可能完整列出。",
+  "gold": "exceptions, formparser, http_proxy, lint, map, rules, multipart, request, response, test, urls, utils",
+  "notes": "反向依赖,共 14 个使用方:['exceptions.py', 'formparser.py', 'middleware/http_proxy.py', 'middleware/lint.py', 'routing/map.py', 'routing/rules.py', 'sansio/multipart.py', 'sansio/request.py', 'sansio/response.py', 'test.py', 'urls.py', 'utils.py', 'wrappers/request.py', 'wrappers/response.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "hard",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "REV-03",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/mixins.py?请尽可能完整列出。",
+  "gold": "datastructures, cache_control, headers, structures",
+  "notes": "反向依赖,共 4 个使用方:['datastructures/__init__.py', 'datastructures/cache_control.py', 'datastructures/headers.py', 'datastructures/structures.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "medium",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "REV-04",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/structures.py?请尽可能完整列出。",
+  "gold": "datastructures, accept, auth, cache_control, csp, file_storage, headers",
+  "notes": "反向依赖,共 7 个使用方:['datastructures/__init__.py', 'datastructures/accept.py', 'datastructures/auth.py', 'datastructures/cache_control.py', 'datastructures/csp.py', 'datastructures/file_storage.py', 'datastructures/headers.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "hard",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "REV-05",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 exceptions.py?请尽可能完整列出。",
+  "gold": "headers, debug, formparser, http_proxy, exceptions, map, multipart, utils, serving, request, response, wsgi",
+  "notes": "反向依赖,共 13 个使用方:['datastructures/headers.py', 'debug/__init__.py', 'formparser.py', 'middleware/http_proxy.py', 'routing/exceptions.py', 'routing/map.py', 'sansio/multipart.py', 'sansio/utils.py', 'serving.py', 'utils.py', 'wrappers/request.py', 'wrappers/response.py', 'wsgi.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "hard",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "REV-06",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 formparser.py?请尽可能完整列出。",
+  "gold": "request",
+  "notes": "反向依赖,共 1 个使用方:['wrappers/request.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "easy",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "REV-07",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 http.py?请尽可能完整列出。",
+  "gold": "auth, csp, etag, debug, exceptions, formparser, http_proxy, lint, proxy_fix, shared_data, http, multipart, request, response, utils, serving, test",
+  "notes": "反向依赖,共 18 个使用方:['datastructures/auth.py', 'datastructures/csp.py', 'datastructures/etag.py', 'debug/__init__.py', 'exceptions.py', 'formparser.py', 'middleware/http_proxy.py', 'middleware/lint.py', 'middleware/proxy_fix.py', 'middleware/shared_data.py', 'sansio/http.py', 'sansio/multipart.py', 'sansio/request.py', 'sansio/response.py', 'sansio/utils.py', 'serving.py', 'test.py', 'wrappers/response.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "hard",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "REV-08",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 routing/rules.py?请尽可能完整列出。",
+  "gold": "routing, exceptions, map, matcher",
+  "notes": "反向依赖,共 4 个使用方:['routing/__init__.py', 'routing/exceptions.py', 'routing/map.py', 'routing/matcher.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "medium",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "REV-09",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 sansio/request.py?请尽可能完整列出。",
+  "gold": "request",
+  "notes": "反向依赖,共 1 个使用方:['wrappers/request.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "easy",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "REV-10",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 urls.py?请尽可能完整列出。",
+  "gold": "map, rules, utils, serving, test, response",
+  "notes": "反向依赖,共 6 个使用方:['routing/map.py', 'routing/rules.py', 'sansio/utils.py', 'serving.py', 'test.py', 'wrappers/response.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "medium",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "REV-11",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 utils.py?请尽可能完整列出。",
+  "gold": "debug, tbtools, shared_data, exceptions, request, response, test",
+  "notes": "反向依赖,共 9 个使用方:['debug/__init__.py', 'debug/tbtools.py', 'middleware/shared_data.py', 'routing/exceptions.py', 'sansio/request.py', 'sansio/response.py', 'test.py', 'wrappers/request.py', 'wrappers/response.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "hard",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "REV-12",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 wrappers/request.py?请尽可能完整列出。",
+  "gold": "_internal, debug, exceptions, map, test, testapp, utils, wrappers, response",
+  "notes": "反向依赖,共 10 个使用方:['_internal.py', 'debug/__init__.py', 'exceptions.py', 'routing/exceptions.py', 'routing/map.py', 'test.py', 'testapp.py', 'utils.py', 'wrappers/__init__.py', 'wrappers/response.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "hard",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "REV-13",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 wsgi.py?请尽可能完整列出。",
+  "gold": "formparser, local, http_proxy, lint, shared_data, map, test, utils, request, response",
+  "notes": "反向依赖,共 10 个使用方:['formparser.py', 'local.py', 'middleware/http_proxy.py', 'middleware/lint.py', 'middleware/shared_data.py', 'routing/map.py', 'test.py', 'utils.py', 'wrappers/request.py', 'wrappers/response.py']。高扇入考察长上下文/跨文件关联",
+  "difficulty": "hard",
+  "category": "reverse_dep"
+ },
+ {
+  "id": "INH-01",
+  "question": "在 werkzeug 中,类 Accept 继承自哪个类?那个基类定义在哪个文件?",
+  "gold": "ImmutableList, datastructures/structures.py",
+  "notes": "Accept(datastructures/accept.py) 继承自 ImmutableList(datastructures/structures.py),跨文件继承",
+  "difficulty": "medium",
+  "category": "inheritance"
+ },
+ {
+  "id": "INH-02",
+  "question": "在 werkzeug 中,类 FileMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+  "gold": "MultiDict, datastructures/structures.py",
+  "notes": "FileMultiDict(datastructures/file_storage.py) 继承自 MultiDict(datastructures/structures.py),跨文件继承",
+  "difficulty": "medium",
+  "category": "inheritance"
+ },
+ {
+  "id": "INH-03",
+  "question": "在 werkzeug 中,类 EnvironHeaders 继承自哪个类?那个基类定义在哪个文件?",
+  "gold": "ImmutableHeadersMixin, datastructures/mixins.py",
+  "notes": "EnvironHeaders(datastructures/headers.py) 继承自 ImmutableHeadersMixin(datastructures/mixins.py),跨文件继承",
+  "difficulty": "medium",
+  "category": "inheritance"
+ },
+ {
+  "id": "INH-04",
+  "question": "在 werkzeug 中,类 RequestCacheControl 继承自哪个类?那个基类定义在哪个文件?",
+  "gold": "ImmutableDictMixin, datastructures/mixins.py",
+  "notes": "RequestCacheControl(datastructures/cache_control.py) 继承自 ImmutableDictMixin(datastructures/mixins.py),跨文件继承",
+  "difficulty": "medium",
+  "category": "inheritance"
+ },
+ {
+  "id": "INH-05",
+  "question": "在 werkzeug 中,类 ContentSecurityPolicy 继承自哪个类?那个基类定义在哪个文件?",
+  "gold": "CallbackDict, datastructures/structures.py",
+  "notes": "ContentSecurityPolicy(datastructures/csp.py) 继承自 CallbackDict(datastructures/structures.py),跨文件继承",
+  "difficulty": "medium",
+  "category": "inheritance"
+ },
+ {
+  "id": "INH-06",
+  "question": "在 werkzeug 中,类 CombinedMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+  "gold": "ImmutableMultiDictMixin, datastructures/mixins.py",
+  "notes": "CombinedMultiDict(datastructures/structures.py) 继承自 ImmutableMultiDictMixin(datastructures/mixins.py),跨文件继承",
+  "difficulty": "medium",
+  "category": "inheritance"
+ },
+ {
+  "id": "INH-07",
+  "question": "在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?",
+  "gold": "sansio/request.py",
+  "notes": "别名继承陷阱:base 写作 _SansIORequest,实为 `from ..sansio.request import Request as _SansIORequest`。名字不匹配,检索/解析易断裂——隐式依赖典型",
+  "difficulty": "hard",
+  "category": "inheritance"
+ },
+ {
+  "id": "INH-08",
+  "question": "在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在哪个文件?",
+  "gold": "sansio/response.py",
+  "notes": "同 INH-07:Response 继承自 sansio/response.py 的 Response(别名 _SansIOResponse)",
+  "difficulty": "hard",
+  "category": "inheritance"
+ },
+ {
+  "id": "INH-09",
+  "question": "在 werkzeug 中,异常类 BadRequestKeyError 同时继承了哪两个类?",
+  "gold": "BadRequest, KeyError",
+  "notes": "多继承:['BadRequest', 'KeyError'](exceptions.py)",
+  "difficulty": "hard",
+  "category": "inheritance"
+ },
+ {
+  "id": "INH-10",
+  "question": "在 werkzeug 中,有哪些异常类直接继承自 HTTPException?请尽量列出。",
+  "gold": "BadGateway, BadRequest, Conflict, ExpectationFailed, FailedDependency, Forbidden, GatewayTimeout, Gone, HTTPVersionNotSupported, ImATeapot, InternalServerError, LengthRequired, Locked, MethodNotAllowed, MisdirectedRequest, NotAcceptable, NotFound, NotImplemented, PreconditionFailed, PreconditionRequired, RequestEntityTooLarge, RequestHeaderFieldsTooLarge, RequestRedirect, RequestTimeout, RequestURITooLarge, RequestedRangeNotSatisfiable, Unauthorized, UnavailableForLegalReasons, UnprocessableEntity, UnsupportedMediaType, _RetryAfter",
+  "notes": "子类枚举,共 31 个直接子类(均在 exceptions.py)",
+  "difficulty": "hard",
+  "category": "inheritance"
+ },
+ {
+  "id": "INH-11",
+  "question": "在 werkzeug 中,哪些类继承(混入)了 ImmutableDictMixin?",
+  "gold": "ImmutableDict, ImmutableMultiDictMixin, ImmutableTypeConversionDict, RequestCacheControl",
+  "notes": "反向继承:ImmutableDictMixin 被 ['ImmutableDict', 'ImmutableMultiDictMixin', 'ImmutableTypeConversionDict', 'RequestCacheControl'] 继承",
+  "difficulty": "medium",
+  "category": "inheritance"
+ },
+ {
+  "id": "INH-12",
+  "question": "在 werkzeug 中,哪些类继承(混入)了 CallbackDict?",
+  "gold": "ContentSecurityPolicy, _CacheControl",
+  "notes": "反向继承:CallbackDict 被 ['ContentSecurityPolicy', '_CacheControl'] 继承",
+  "difficulty": "medium",
+  "category": "inheritance"
+ },
+ {
+  "id": "LOC-01",
+  "question": "在 werkzeug 中,类 Authorization 定义在哪个文件里?",
+  "gold": "datastructures/auth.py",
+  "notes": "Authorization 定义于 datastructures/auth.py",
+  "difficulty": "easy",
+  "category": "symbol_location"
+ },
+ {
+  "id": "LOC-02",
+  "question": "在 werkzeug 中,类 BaseConverter 定义在哪个文件里?",
+  "gold": "routing/converters.py",
+  "notes": "BaseConverter 定义于 routing/converters.py",
+  "difficulty": "easy",
+  "category": "symbol_location"
+ },
+ {
+  "id": "LOC-03",
+  "question": "在 werkzeug 中,类 CombinedMultiDict 定义在哪个文件里?",
+  "gold": "datastructures/structures.py",
+  "notes": "CombinedMultiDict 定义于 datastructures/structures.py",
+  "difficulty": "easy",
+  "category": "symbol_location"
+ },
+ {
+  "id": "LOC-04",
+  "question": "在 werkzeug 中,类 FileStorage 定义在哪个文件里?",
+  "gold": "datastructures/file_storage.py",
+  "notes": "FileStorage 定义于 datastructures/file_storage.py",
+  "difficulty": "easy",
+  "category": "symbol_location"
+ },
+ {
+  "id": "LOC-05",
+  "question": "在 werkzeug 中,类 HTTPException 定义在哪个文件里?",
+  "gold": "exceptions.py",
+  "notes": "HTTPException 定义于 exceptions.py",
+  "difficulty": "easy",
+  "category": "symbol_location"
+ },
+ {
+  "id": "LOC-06",
+  "question": "在 werkzeug 中,类 Headers 定义在哪个文件里?",
+  "gold": "datastructures/headers.py",
+  "notes": "Headers 定义于 datastructures/headers.py",
+  "difficulty": "easy",
+  "category": "symbol_location"
+ },
+ {
+  "id": "LOC-07",
+  "question": "在 werkzeug 中,类 Map 定义在哪个文件里?",
+  "gold": "routing/map.py",
+  "notes": "Map 定义于 routing/map.py",
+  "difficulty": "easy",
+  "category": "symbol_location"
+ },
+ {
+  "id": "LOC-08",
+  "question": "在 werkzeug 中,类 MapAdapter 定义在哪个文件里?",
+  "gold": "routing/map.py",
+  "notes": "MapAdapter 定义于 routing/map.py",
+  "difficulty": "easy",
+  "category": "symbol_location"
+ },
+ {
+  "id": "LOC-09",
+  "question": "在 werkzeug 中,类 MultiDict 定义在哪个文件里?",
+  "gold": "datastructures/structures.py",
+  "notes": "MultiDict 定义于 datastructures/structures.py",
+  "difficulty": "easy",
+  "category": "symbol_location"
+ },
+ {
+  "id": "LOC-10",
+  "question": "在 werkzeug 中,类 Rule 定义在哪个文件里?",
+  "gold": "routing/rules.py",
+  "notes": "Rule 定义于 routing/rules.py",
+  "difficulty": "easy",
+  "category": "symbol_location"
+ },
+ {
+  "id": "LOC-11",
+  "question": "在 werkzeug 中,类 StateMachineMatcher 定义在哪个文件里?",
+  "gold": "routing/matcher.py",
+  "notes": "StateMachineMatcher 定义于 routing/matcher.py",
+  "difficulty": "easy",
+  "category": "symbol_location"
+ },
+ {
+  "id": "LOC-12",
+  "question": "在 werkzeug 中,类 WSGIWarning 定义在哪个文件里?",
+  "gold": "middleware/lint.py",
+  "notes": "WSGIWarning 定义于 middleware/lint.py",
+  "difficulty": "easy",
+  "category": "symbol_location"
+ },
+ {
+  "id": "DAT-01",
+  "question": "在 werkzeug 中,常量 PIN_TIME 在哪个文件中定义?",
+  "gold": "debug/__init__.py",
+  "notes": "PIN_TIME @ debug/__init__.py:41",
+  "difficulty": "easy",
+  "category": "dataflow"
+ },
+ {
+  "id": "DAT-02",
+  "question": "在 werkzeug 中,常量 HELP_HTML 在哪个文件中定义?",
+  "gold": "debug/repr.py",
+  "notes": "HELP_HTML @ debug/repr.py:23",
+  "difficulty": "easy",
+  "category": "dataflow"
+ },
+ {
+  "id": "DAT-03",
+  "question": "在 werkzeug 中,常量 OBJECT_DUMP_HTML 在哪个文件中定义?",
+  "gold": "debug/repr.py",
+  "notes": "OBJECT_DUMP_HTML @ debug/repr.py:29",
+  "difficulty": "easy",
+  "category": "dataflow"
+ },
+ {
+  "id": "IND-01",
+  "question": "在 werkzeug 中,wrappers/response.py 是否(间接)依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "gold": "datastructures/__init__.py",
+  "notes": "间接依赖:wrappers/response.py -> datastructures/__init__.py -> ... -> datastructures/mixins.py(最短 2 跳)。考察隐式/多跳依赖,单次检索拿不到中间节点",
+  "difficulty": "hard",
+  "category": "indirect_dep"
+ },
+ {
+  "id": "IND-02",
+  "question": "在 werkzeug 中,routing/map.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "gold": "datastructures/__init__.py",
+  "notes": "间接依赖:routing/map.py -> datastructures/__init__.py -> ... -> datastructures/structures.py(最短 2 跳)。考察隐式/多跳依赖,单次检索拿不到中间节点",
+  "difficulty": "hard",
+  "category": "indirect_dep"
+ },
+ {
+  "id": "IND-03",
+  "question": "在 werkzeug 中,wrappers/request.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "gold": "datastructures/__init__.py",
+  "notes": "间接依赖:wrappers/request.py -> datastructures/__init__.py -> ... -> datastructures/structures.py(最短 2 跳)。考察隐式/多跳依赖,单次检索拿不到中间节点",
+  "difficulty": "hard",
+  "category": "indirect_dep"
+ },
+ {
+  "id": "IND-04",
+  "question": "在 werkzeug 中,routing/map.py 是否(间接)依赖 http.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "gold": "datastructures/__init__.py",
+  "notes": "间接依赖:routing/map.py -> datastructures/__init__.py -> ... -> http.py(最短 2 跳)。考察隐式/多跳依赖,单次检索拿不到中间节点",
+  "difficulty": "hard",
+  "category": "indirect_dep"
+ },
+ {
+  "id": "IND-05",
+  "question": "在 werkzeug 中,wrappers/response.py 是直接 import 了 datastructures/structures.py,还是通过 datastructures/__init__.py 间接依赖的?给出完整的中间文件路径。",
+  "gold": "datastructures/__init__.py",
+  "notes": "response.py 直接依赖 datastructures/__init__.py(包),structures.py 是经由包再分发的间接依赖",
+  "difficulty": "hard",
+  "category": "indirect_dep"
+ }
+]

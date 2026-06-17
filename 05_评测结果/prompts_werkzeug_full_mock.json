@@ -1,0 +1,282 @@
+[
+ {
+  "id": "FWD-01",
+  "category": "forward_dep",
+  "difficulty": "medium"
+ },
+ {
+  "id": "FWD-02",
+  "category": "forward_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "FWD-03",
+  "category": "forward_dep",
+  "difficulty": "easy"
+ },
+ {
+  "id": "FWD-04",
+  "category": "forward_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "FWD-05",
+  "category": "forward_dep",
+  "difficulty": "medium"
+ },
+ {
+  "id": "FWD-06",
+  "category": "forward_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "FWD-07",
+  "category": "forward_dep",
+  "difficulty": "medium"
+ },
+ {
+  "id": "FWD-08",
+  "category": "forward_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "FWD-09",
+  "category": "forward_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "FWD-10",
+  "category": "forward_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "FWD-11",
+  "category": "forward_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "REV-01",
+  "category": "reverse_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "REV-02",
+  "category": "reverse_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "REV-03",
+  "category": "reverse_dep",
+  "difficulty": "medium"
+ },
+ {
+  "id": "REV-04",
+  "category": "reverse_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "REV-05",
+  "category": "reverse_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "REV-06",
+  "category": "reverse_dep",
+  "difficulty": "easy"
+ },
+ {
+  "id": "REV-07",
+  "category": "reverse_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "REV-08",
+  "category": "reverse_dep",
+  "difficulty": "medium"
+ },
+ {
+  "id": "REV-09",
+  "category": "reverse_dep",
+  "difficulty": "easy"
+ },
+ {
+  "id": "REV-10",
+  "category": "reverse_dep",
+  "difficulty": "medium"
+ },
+ {
+  "id": "REV-11",
+  "category": "reverse_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "REV-12",
+  "category": "reverse_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "REV-13",
+  "category": "reverse_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "INH-01",
+  "category": "inheritance",
+  "difficulty": "medium"
+ },
+ {
+  "id": "INH-02",
+  "category": "inheritance",
+  "difficulty": "medium"
+ },
+ {
+  "id": "INH-03",
+  "category": "inheritance",
+  "difficulty": "medium"
+ },
+ {
+  "id": "INH-04",
+  "category": "inheritance",
+  "difficulty": "medium"
+ },
+ {
+  "id": "INH-05",
+  "category": "inheritance",
+  "difficulty": "medium"
+ },
+ {
+  "id": "INH-06",
+  "category": "inheritance",
+  "difficulty": "medium"
+ },
+ {
+  "id": "INH-07",
+  "category": "inheritance",
+  "difficulty": "hard"
+ },
+ {
+  "id": "INH-08",
+  "category": "inheritance",
+  "difficulty": "hard"
+ },
+ {
+  "id": "INH-09",
+  "category": "inheritance",
+  "difficulty": "hard"
+ },
+ {
+  "id": "INH-10",
+  "category": "inheritance",
+  "difficulty": "hard"
+ },
+ {
+  "id": "INH-11",
+  "category": "inheritance",
+  "difficulty": "medium"
+ },
+ {
+  "id": "INH-12",
+  "category": "inheritance",
+  "difficulty": "medium"
+ },
+ {
+  "id": "LOC-01",
+  "category": "symbol_location",
+  "difficulty": "easy"
+ },
+ {
+  "id": "LOC-02",
+  "category": "symbol_location",
+  "difficulty": "easy"
+ },
+ {
+  "id": "LOC-03",
+  "category": "symbol_location",
+  "difficulty": "easy"
+ },
+ {
+  "id": "LOC-04",
+  "category": "symbol_location",
+  "difficulty": "easy"
+ },
+ {
+  "id": "LOC-05",
+  "category": "symbol_location",
+  "difficulty": "easy"
+ },
+ {
+  "id": "LOC-06",
+  "category": "symbol_location",
+  "difficulty": "easy"
+ },
+ {
+  "id": "LOC-07",
+  "category": "symbol_location",
+  "difficulty": "easy"
+ },
+ {
+  "id": "LOC-08",
+  "category": "symbol_location",
+  "difficulty": "easy"
+ },
+ {
+  "id": "LOC-09",
+  "category": "symbol_location",
+  "difficulty": "easy"
+ },
+ {
+  "id": "LOC-10",
+  "category": "symbol_location",
+  "difficulty": "easy"
+ },
+ {
+  "id": "LOC-11",
+  "category": "symbol_location",
+  "difficulty": "easy"
+ },
+ {
+  "id": "LOC-12",
+  "category": "symbol_location",
+  "difficulty": "easy"
+ },
+ {
+  "id": "DAT-01",
+  "category": "dataflow",
+  "difficulty": "easy"
+ },
+ {
+  "id": "DAT-02",
+  "category": "dataflow",
+  "difficulty": "easy"
+ },
+ {
+  "id": "DAT-03",
+  "category": "dataflow",
+  "difficulty": "easy"
+ },
+ {
+  "id": "IND-01",
+  "category": "indirect_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "IND-02",
+  "category": "indirect_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "IND-03",
+  "category": "indirect_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "IND-04",
+  "category": "indirect_dep",
+  "difficulty": "hard"
+ },
+ {
+  "id": "IND-05",
+  "category": "indirect_dep",
+  "difficulty": "hard"
+ }
+]

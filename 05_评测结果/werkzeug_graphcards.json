@@ -1,0 +1,2135 @@
+{
+  "config_name": "werkzeug_graphcards",
+  "config": {
+    "name": "werkzeug_graphcards",
+    "repo_root": "repos/werkzeug",
+    "commits_path": null,
+    "index_dir": "indexes/werkzeug_graphcards",
+    "chunking": {
+      "strategy": "function",
+      "chunk_lines": 40,
+      "overlap": 10,
+      "include_graph_cards": true,
+      "include_constant_cards": false
+    },
+    "embedder": {
+      "type": "sentence_transformer",
+      "dim": 512,
+      "model_name": "models/bge-small-zh-v1.5"
+    },
+    "backend": {
+      "type": "hybrid",
+      "top_k": 5,
+      "vector_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rerank": false,
+      "rerank_candidates": 10,
+      "rerank_scorer": "lexical",
+      "rerank_model": "models/bge-reranker-base"
+    },
+    "llm": {
+      "type": "mock",
+      "max_lines": 6,
+      "model": "",
+      "base_url": "",
+      "temperature": 0.0
+    },
+    "prompt_file": "configs/prompts/plain.yaml"
+  },
+  "n_cases": 56,
+  "elapsed_sec": 0.72,
+  "summary": {
+    "overall": {
+      "n": 56,
+      "avg_answer_score": 0.8067,
+      "retrieval_hit_rate": 0.6964,
+      "recall_at_k": 0.6339,
+      "mrr": 0.5116
+    },
+    "by_category": {
+      "dataflow": {
+        "n": 3,
+        "avg_answer_score": 0.6667,
+        "retrieval_hit_rate": 0.6667,
+        "recall_at_k": 0.6667,
+        "mrr": 0.6667
+      },
+      "forward_dep": {
+        "n": 11,
+        "avg_answer_score": 0.6919,
+        "retrieval_hit_rate": 0.3636,
+        "recall_at_k": 0.3636,
+        "mrr": 0.2455
+      },
+      "indirect_dep": {
+        "n": 5,
+        "avg_answer_score": 0.8,
+        "retrieval_hit_rate": 0.8,
+        "recall_at_k": 0.5,
+        "mrr": 0.25
+      },
+      "inheritance": {
+        "n": 12,
+        "avg_answer_score": 0.8542,
+        "retrieval_hit_rate": 1.0,
+        "recall_at_k": 0.8333,
+        "mrr": 0.8958
+      },
+      "reverse_dep": {
+        "n": 13,
+        "avg_answer_score": 0.7164,
+        "retrieval_hit_rate": 0.3846,
+        "recall_at_k": 0.3846,
+        "mrr": 0.1756
+      },
+      "symbol_location": {
+        "n": 12,
+        "avg_answer_score": 1.0,
+        "retrieval_hit_rate": 1.0,
+        "recall_at_k": 1.0,
+        "mrr": 0.8056
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "n": 18,
+        "avg_answer_score": 0.9444,
+        "retrieval_hit_rate": 0.8333,
+        "recall_at_k": 0.8333,
+        "mrr": 0.6759
+      },
+      "medium": {
+        "n": 14,
+        "avg_answer_score": 0.9107,
+        "retrieval_hit_rate": 0.9286,
+        "recall_at_k": 0.8214,
+        "mrr": 0.7381
+      },
+      "hard": {
+        "n": 24,
+        "avg_answer_score": 0.6427,
+        "retrieval_hit_rate": 0.4583,
+        "recall_at_k": 0.375,
+        "mrr": 0.2562
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "FWD-01",
+      "category": "forward_dep",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/file_storage.py (第 0-0 行);datastructures/__init__.py (第 0-0 行);datastructures/headers.py (第 0-0 行);datastructures/csp.py (第 0-0 行):\n  它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n  它依赖(import)的仓库内文件: datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/etag.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/range.py, datastructures/structures.py\n  [依赖图卡片] 文件 datastructures/headers.py\n  它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n  它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n  它依赖(import)的仓库内文件: datastructures/structures.py, http.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['_internal', 'mixins', 'structures', 'exceptions'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/headers.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:datastructures/headers.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0313
+        },
+        {
+          "chunk_id": "graph:file:datastructures/csp.py",
+          "score": 0.0305
+        },
+        {
+          "chunk_id": "graph:file:datastructures/file_storage.py",
+          "score": 0.03
+        },
+        {
+          "chunk_id": "graph:file:datastructures/__init__.py",
+          "score": 0.0282
+        }
+      ]
+    },
+    {
+      "id": "FWD-02",
+      "category": "forward_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,formparser.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+      "answer": "根据检索到的代码,相关内容位于 sansio/multipart.py (第 0-0 行);formparser.py (第 0-0 行);testapp.py (第 0-0 行);wrappers/__init__.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): formparser.py, test.py\n  [依赖图卡片] 文件 formparser.py\n  它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n  它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['_internal', 'datastructures', 'exceptions', 'http', 'multipart', 'wsgi'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 formparser.py",
+      "recall_at_k": 1.0,
+      "mrr": 0.5,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:formparser.py",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0303
+        },
+        {
+          "chunk_id": "graph:file:sansio/multipart.py",
+          "score": 0.03
+        },
+        {
+          "chunk_id": "graph:file:sansio/__init__.py",
+          "score": 0.0296
+        }
+      ]
+    },
+    {
+      "id": "FWD-03",
+      "category": "forward_dep",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,http.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+      "answer": "根据检索到的代码,相关内容位于 sansio/http.py (第 0-0 行);middleware/http_proxy.py (第 0-0 行);middleware/proxy_fix.py (第 0-0 行);sansio/__init__.py (第 0-0 行):\n  它依赖(import)的仓库内文件: _internal.py, http.py\n  它依赖(import)的仓库内文件: datastructures/__init__.py, exceptions.py, http.py, wsgi.py\n  它依赖(import)的仓库内文件: http.py\n  它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n  [依赖图卡片] 文件 sansio/http.py\n  它被这些文件依赖/使用(import 它的使用方): sansio/request.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['_internal', 'sansio'],缺失 []",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['http.py'],实际 ['sansio/http.py', 'testapp.py', 'middleware/proxy_fix.py', 'sansio/__init__.py', 'middleware/http_proxy.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:sansio/http.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:middleware/proxy_fix.py",
+          "score": 0.0311
+        },
+        {
+          "chunk_id": "graph:file:sansio/__init__.py",
+          "score": 0.031
+        },
+        {
+          "chunk_id": "graph:file:middleware/http_proxy.py",
+          "score": 0.0305
+        }
+      ]
+    },
+    {
+      "id": "FWD-04",
+      "category": "forward_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,routing/map.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+      "answer": "根据检索到的代码,相关内容位于 routing/__init__.py (第 0-0 行);routing/matcher.py (第 0-0 行);routing/converters.py (第 0-0 行);routing/exceptions.py (第 0-0 行):\n  它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py\n  它依赖(import)的仓库内文件: routing/map.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py, routing/rules.py\n  它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py",
+      "answer_score": 0.5556,
+      "answer_judge_detail": "命中 ['exceptions', 'converters', 'matcher', 'rules', 'request'],缺失 ['_internal', 'datastructures', 'urls', 'wsgi']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 routing/map.py",
+      "recall_at_k": 1.0,
+      "mrr": 0.2,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:routing/__init__.py",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "graph:file:routing/matcher.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:routing/converters.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:routing/exceptions.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:routing/map.py",
+          "score": 0.0305
+        }
+      ]
+    },
+    {
+      "id": "FWD-05",
+      "category": "forward_dep",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+      "answer": "根据检索到的代码,相关内容位于 routing/__init__.py (第 0-0 行);routing/exceptions.py (第 0-0 行);routing/converters.py (第 0-0 行);routing/map.py (第 0-0 行);routing/matcher.py (第 0-0 行):\n  它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py, routing/rules.py\n  它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, routing/converters.py, routing/exceptions.py, routing/matcher.py, routing/rules.py, urls.py, wrappers/request.py, wsgi.py\n  [依赖图卡片] 文件 routing/matcher.py\n  它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/rules.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['converters', 'exceptions', 'rules'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 routing/matcher.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:routing/matcher.py",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:file:routing/__init__.py",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:file:routing/exceptions.py",
+          "score": 0.0317
+        },
+        {
+          "chunk_id": "graph:file:routing/converters.py",
+          "score": 0.0312
+        },
+        {
+          "chunk_id": "graph:file:routing/map.py",
+          "score": 0.0301
+        }
+      ]
+    },
+    {
+      "id": "FWD-06",
+      "category": "forward_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+      "answer": "根据检索到的代码,相关内容位于 sansio/http.py (第 0-0 行);sansio/utils.py (第 0-0 行);user_agent.py (第 0-0 行);testapp.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n  它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, sansio/request.py, wsgi.py\n  它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n  [依赖图卡片] 文件 sansio/http.py\n  它依赖(import)的仓库内文件: _internal.py, http.py",
+      "answer_score": 0.75,
+      "answer_judge_detail": "命中 ['http', 'utils', 'user_agent'],缺失 ['datastructures']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['sansio/request.py'],实际 ['sansio/http.py', 'sansio/utils.py', 'user_agent.py', 'sansio/__init__.py', 'testapp.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:sansio/http.py",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:file:sansio/utils.py",
+          "score": 0.031
+        },
+        {
+          "chunk_id": "graph:file:user_agent.py",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "graph:file:sansio/__init__.py",
+          "score": 0.0304
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0304
+        }
+      ]
+    },
+    {
+      "id": "FWD-07",
+      "category": "forward_dep",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+      "answer": "根据检索到的代码,相关内容位于 sansio/http.py (第 0-0 行);sansio/utils.py (第 0-0 行);testapp.py (第 0-0 行);user_agent.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n  它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, sansio/request.py, wsgi.py\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n  [依赖图卡片] 文件 sansio/http.py\n  它依赖(import)的仓库内文件: _internal.py, http.py",
+      "answer_score": 0.5,
+      "answer_judge_detail": "命中 ['http', 'utils'],缺失 ['datastructures', 'cache_control']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['sansio/response.py'],实际 ['sansio/http.py', 'sansio/__init__.py', 'testapp.py', 'sansio/utils.py', 'user_agent.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:sansio/http.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:sansio/__init__.py",
+          "score": 0.0313
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0298
+        },
+        {
+          "chunk_id": "graph:file:sansio/utils.py",
+          "score": 0.0298
+        },
+        {
+          "chunk_id": "graph:file:user_agent.py",
+          "score": 0.0295
+        }
+      ]
+    },
+    {
+      "id": "FWD-08",
+      "category": "forward_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,serving.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+      "answer": "根据检索到的代码,相关内容位于 testapp.py (第 0-0 行);__init__.py (第 0-0 行);urls.py (第 0-0 行);sansio/__init__.py (第 0-0 行);wrappers/__init__.py (第 0-0 行):\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n  它被这些文件依赖/使用(import 它的使用方): routing/map.py, routing/rules.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n  它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py",
+      "answer_score": 0.25,
+      "answer_judge_detail": "命中 ['http', 'urls'],缺失 ['_internal', '_reloader', 'debug', 'tbtools', 'exceptions', 'shared_data']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['serving.py'],实际 ['testapp.py', '__init__.py', 'sansio/__init__.py', 'wrappers/__init__.py', 'urls.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:file:__init__.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:sansio/__init__.py",
+          "score": 0.0297
+        },
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0296
+        },
+        {
+          "chunk_id": "graph:file:urls.py",
+          "score": 0.0294
+        }
+      ]
+    },
+    {
+      "id": "FWD-09",
+      "category": "forward_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,test.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+      "answer": "根据检索到的代码,相关内容位于 __init__.py (第 0-0 行);urls.py (第 0-0 行);testapp.py (第 0-0 行);wrappers/__init__.py (第 0-0 行):\n  它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n  它被这些文件依赖/使用(import 它的使用方): routing/map.py, routing/rules.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: datastructures/__init__.py\n  它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py",
+      "answer_score": 0.5556,
+      "answer_judge_detail": "命中 ['datastructures', 'urls', 'utils', 'request', 'response'],缺失 ['_internal', 'http', 'multipart', 'wsgi']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['test.py'],实际 ['testapp.py', '__init__.py', 'urls.py', 'wrappers/__init__.py', 'sansio/__init__.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "graph:file:__init__.py",
+          "score": 0.0318
+        },
+        {
+          "chunk_id": "graph:file:urls.py",
+          "score": 0.0299
+        },
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0298
+        },
+        {
+          "chunk_id": "graph:file:sansio/__init__.py",
+          "score": 0.029
+        }
+      ]
+    },
+    {
+      "id": "FWD-10",
+      "category": "forward_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,wrappers/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+      "answer": "根据检索到的代码,相关内容位于 wrappers/__init__.py (第 0-0 行);testapp.py (第 0-0 行);routing/exceptions.py (第 0-0 行):\n  它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n  [依赖图卡片] 文件 wrappers/__init__.py\n  它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py",
+      "answer_score": 0.5,
+      "answer_judge_detail": "命中 ['exceptions', 'request', 'test', 'utils'],缺失 ['_internal', 'datastructures', 'formparser', 'wsgi']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['wrappers/request.py'],实际 ['wrappers/__init__.py', 'wrappers/__init__.py', 'testapp.py', 'routing/exceptions.py', '__init__.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "wrappers/__init__.py::<module>",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "graph:file:routing/exceptions.py",
+          "score": 0.0305
+        },
+        {
+          "chunk_id": "__init__.py::<module>",
+          "score": 0.03
+        }
+      ]
+    },
+    {
+      "id": "FWD-11",
+      "category": "forward_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,wrappers/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+      "answer": "根据检索到的代码,相关内容位于 wrappers/__init__.py (第 0-0 行);testapp.py (第 0-0 行);routing/exceptions.py (第 0-0 行);__init__.py (第 0-0 行):\n  它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n  [依赖图卡片] 文件 wrappers/__init__.py\n  它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py",
+      "answer_score": 0.5,
+      "answer_judge_detail": "命中 ['exceptions', 'response', 'test', 'utils', 'request'],缺失 ['_internal', 'datastructures', 'http', 'urls', 'wsgi']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['wrappers/response.py'],实际 ['wrappers/__init__.py', 'testapp.py', 'wrappers/__init__.py', 'routing/exceptions.py', '__init__.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "wrappers/__init__.py::<module>",
+          "score": 0.0318
+        },
+        {
+          "chunk_id": "graph:file:routing/exceptions.py",
+          "score": 0.031
+        },
+        {
+          "chunk_id": "graph:file:__init__.py",
+          "score": 0.0299
+        }
+      ]
+    },
+    {
+      "id": "REV-01",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 _internal.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 sansio/http.py (第 0-0 行);formparser.py (第 0-0 行);wrappers/__init__.py (第 0-0 行);sansio/__init__.py (第 0-0 行):\n  它依赖(import)的仓库内文件: _internal.py, http.py\n  它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n  它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n  它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n  它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n  它被这些文件依赖/使用(import 它的使用方): wrappers/request.py",
+      "answer_score": 0.4,
+      "answer_judge_detail": "命中 ['structures', 'exceptions', 'formparser', 'http', 'utils', 'request'],缺失 ['_reloader', 'file_storage', 'headers', 'mixins', 'debug', 'map', 'serving', 'test', 'response']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['_internal.py'],实际 ['testapp.py', 'sansio/http.py', 'wrappers/__init__.py', 'sansio/__init__.py', 'formparser.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "graph:file:sansio/http.py",
+          "score": 0.0303
+        },
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0301
+        },
+        {
+          "chunk_id": "graph:file:sansio/__init__.py",
+          "score": 0.0299
+        },
+        {
+          "chunk_id": "graph:file:formparser.py",
+          "score": 0.0299
+        }
+      ]
+    },
+    {
+      "id": "REV-02",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/__init__.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/csp.py (第 0-0 行);datastructures/etag.py (第 0-0 行);wrappers/__init__.py (第 0-0 行);__init__.py (第 0-0 行);middleware/http_proxy.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n  它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n  它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n  它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py\n  它依赖(import)的仓库内文件: datastructures/__init__.py, exceptions.py, http.py, wsgi.py\n  [依赖图卡片] 文件 wrappers/__init__.py",
+      "answer_score": 0.3333,
+      "answer_judge_detail": "命中 ['exceptions', 'http_proxy', 'test', 'utils'],缺失 ['formparser', 'lint', 'map', 'rules', 'multipart', 'request', 'response', 'urls']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['datastructures/__init__.py'],实际 ['datastructures/csp.py', 'wrappers/__init__.py', '__init__.py', 'datastructures/etag.py', 'middleware/http_proxy.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:datastructures/csp.py",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:__init__.py",
+          "score": 0.031
+        },
+        {
+          "chunk_id": "graph:file:datastructures/etag.py",
+          "score": 0.0306
+        },
+        {
+          "chunk_id": "graph:file:middleware/http_proxy.py",
+          "score": 0.0303
+        }
+      ]
+    },
+    {
+      "id": "REV-03",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/mixins.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/mixins.py (第 0-0 行);datastructures/csp.py (第 0-0 行);datastructures/headers.py (第 0-0 行);datastructures/__init__.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/cache_control.py, datastructures/headers.py, datastructures/structures.py\n  它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n  它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n  它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n  它依赖(import)的仓库内文件: datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/etag.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/range.py, datastructures/structures.py\n  [依赖图卡片] 文件 datastructures/mixins.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['datastructures', 'cache_control', 'headers', 'structures'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/mixins.py",
+      "recall_at_k": 1.0,
+      "mrr": 0.25,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:datastructures/csp.py",
+          "score": 0.0318
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0318
+        },
+        {
+          "chunk_id": "graph:file:datastructures/headers.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:datastructures/mixins.py",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "graph:file:datastructures/__init__.py",
+          "score": 0.0303
+        }
+      ]
+    },
+    {
+      "id": "REV-04",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/structures.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/csp.py (第 0-0 行);datastructures/file_storage.py (第 0-0 行);datastructures/headers.py (第 0-0 行):\n  它依赖(import)的仓库内文件: datastructures/structures.py, http.py\n  它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n  它依赖(import)的仓库内文件: _internal.py, datastructures/headers.py, datastructures/structures.py\n  它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n  它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n  它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py",
+      "answer_score": 0.5714,
+      "answer_judge_detail": "命中 ['datastructures', 'csp', 'file_storage', 'headers'],缺失 ['accept', 'auth', 'cache_control']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['datastructures/structures.py'],实际 ['datastructures/csp.py', 'datastructures/file_storage.py', 'datastructures/headers.py', 'datastructures/__init__.py', 'datastructures/auth.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:datastructures/csp.py",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:file:datastructures/file_storage.py",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "graph:file:datastructures/headers.py",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "graph:file:datastructures/__init__.py",
+          "score": 0.0303
+        },
+        {
+          "chunk_id": "graph:file:datastructures/auth.py",
+          "score": 0.0302
+        }
+      ]
+    },
+    {
+      "id": "REV-05",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 exceptions.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 routing/exceptions.py (第 0-0 行);routing/__init__.py (第 0-0 行);wrappers/__init__.py (第 0-0 行);testapp.py (第 0-0 行):\n  它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n  它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n  它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n  [依赖图卡片] 文件 routing/exceptions.py\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py",
+      "answer_score": 0.5,
+      "answer_judge_detail": "命中 ['exceptions', 'map', 'utils', 'serving', 'request', 'response'],缺失 ['headers', 'debug', 'formparser', 'http_proxy', 'multipart', 'wsgi']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['exceptions.py'],实际 ['testapp.py', 'routing/__init__.py', 'routing/exceptions.py', 'wrappers/__init__.py', '__init__.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:file:routing/__init__.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:routing/exceptions.py",
+          "score": 0.031
+        },
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0305
+        },
+        {
+          "chunk_id": "graph:file:__init__.py",
+          "score": 0.0295
+        }
+      ]
+    },
+    {
+      "id": "REV-06",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 formparser.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 formparser.py (第 0-0 行);wrappers/__init__.py (第 0-0 行);sansio/__init__.py (第 0-0 行);testapp.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n  它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n  它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n  [依赖图卡片] 文件 formparser.py\n  它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['request'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 formparser.py",
+      "recall_at_k": 1.0,
+      "mrr": 0.5,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:file:formparser.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "graph:file:sansio/__init__.py",
+          "score": 0.0306
+        },
+        {
+          "chunk_id": "graph:file:__init__.py",
+          "score": 0.0301
+        }
+      ]
+    },
+    {
+      "id": "REV-07",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 http.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 sansio/__init__.py (第 0-0 行);sansio/http.py (第 0-0 行);middleware/http_proxy.py (第 0-0 行);middleware/proxy_fix.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n  它依赖(import)的仓库内文件: _internal.py, http.py\n  它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n  它依赖(import)的仓库内文件: datastructures/__init__.py, exceptions.py, http.py, wsgi.py\n  它依赖(import)的仓库内文件: http.py\n  [依赖图卡片] 文件 sansio/http.py",
+      "answer_score": 0.2941,
+      "answer_judge_detail": "命中 ['exceptions', 'http_proxy', 'proxy_fix', 'http', 'request'],缺失 ['auth', 'csp', 'etag', 'debug', 'formparser', 'lint', 'shared_data', 'multipart', 'response', 'utils', 'serving', 'test']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['http.py'],实际 ['sansio/http.py', 'testapp.py', 'sansio/__init__.py', 'middleware/proxy_fix.py', 'middleware/http_proxy.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:sansio/http.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0317
+        },
+        {
+          "chunk_id": "graph:file:sansio/__init__.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:middleware/proxy_fix.py",
+          "score": 0.031
+        },
+        {
+          "chunk_id": "graph:file:middleware/http_proxy.py",
+          "score": 0.031
+        }
+      ]
+    },
+    {
+      "id": "REV-08",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 routing/rules.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 routing/rules.py (第 0-0 行);routing/__init__.py (第 0-0 行);routing/matcher.py (第 0-0 行);routing/exceptions.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/exceptions.py, routing/map.py, routing/matcher.py\n  它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n  它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/rules.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py\n  它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['routing', 'exceptions', 'map', 'matcher'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 routing/rules.py",
+      "recall_at_k": 1.0,
+      "mrr": 0.3333,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:routing/__init__.py",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "graph:file:routing/matcher.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:routing/rules.py",
+          "score": 0.0317
+        },
+        {
+          "chunk_id": "graph:file:routing/exceptions.py",
+          "score": 0.0312
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0301
+        }
+      ]
+    },
+    {
+      "id": "REV-09",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 sansio/request.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 sansio/http.py (第 0-0 行);sansio/utils.py (第 0-0 行);user_agent.py (第 0-0 行);sansio/__init__.py (第 0-0 行);testapp.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n  它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, sansio/request.py, wsgi.py\n  它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n  它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n  [依赖图卡片] 文件 sansio/http.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['request'],缺失 []",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['sansio/request.py'],实际 ['sansio/http.py', 'sansio/__init__.py', 'sansio/utils.py', 'user_agent.py', 'testapp.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:sansio/http.py",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "graph:file:sansio/__init__.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:sansio/utils.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:user_agent.py",
+          "score": 0.0313
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0304
+        }
+      ]
+    },
+    {
+      "id": "REV-10",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 urls.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 urls.py (第 0-0 行);wrappers/__init__.py (第 0-0 行);sansio/utils.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): routing/map.py, routing/rules.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n  它依赖(import)的仓库内文件: _internal.py, exceptions.py, http.py, urls.py\n  它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, sansio/request.py, wsgi.py\n  [依赖图卡片] 文件 urls.py\n  它依赖(import)的仓库内文件: datastructures/__init__.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['map', 'rules', 'utils', 'serving', 'test', 'response'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 urls.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:urls.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0311
+        },
+        {
+          "chunk_id": "graph:file:sansio/utils.py",
+          "score": 0.0301
+        },
+        {
+          "chunk_id": "graph:file:routing/__init__.py",
+          "score": 0.0289
+        }
+      ]
+    },
+    {
+      "id": "REV-11",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 utils.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 wrappers/__init__.py (第 0-0 行);security.py (第 0-0 行);sansio/__init__.py (第 0-0 行);routing/exceptions.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n  它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, middleware/shared_data.py, utils.py\n  它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n  它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n  它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py",
+      "answer_score": 0.7143,
+      "answer_judge_detail": "命中 ['debug', 'shared_data', 'exceptions', 'request', 'response'],缺失 ['tbtools', 'test']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['utils.py'],实际 ['wrappers/__init__.py', 'testapp.py', 'sansio/__init__.py', 'security.py', 'routing/exceptions.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:sansio/__init__.py",
+          "score": 0.0303
+        },
+        {
+          "chunk_id": "graph:file:security.py",
+          "score": 0.0298
+        },
+        {
+          "chunk_id": "graph:file:routing/exceptions.py",
+          "score": 0.0296
+        }
+      ]
+    },
+    {
+      "id": "REV-12",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 wrappers/request.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 utils.py (第 0-0 行);wrappers/request.py (第 0-0 行);wrappers/__init__.py (第 0-0 行);testapp.py (第 0-0 行);routing/exceptions.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, debug/tbtools.py, middleware/shared_data.py, routing/exceptions.py, sansio/request.py, sansio/response.py, test.py, wrappers/request.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): _internal.py, debug/__init__.py, exceptions.py, routing/exceptions.py, routing/map.py, test.py, testapp.py, utils.py, wrappers/__init__.py, wrappers/response.py\n  它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, security.py, wrappers/__init__.py, wrappers/request.py, wrappers/response.py, wsgi.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['_internal', 'debug', 'exceptions', 'map', 'test', 'testapp', 'utils', 'wrappers', 'response'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 wrappers/request.py",
+      "recall_at_k": 1.0,
+      "mrr": 0.2,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:file:routing/exceptions.py",
+          "score": 0.031
+        },
+        {
+          "chunk_id": "graph:file:utils.py",
+          "score": 0.0304
+        },
+        {
+          "chunk_id": "graph:file:wrappers/request.py",
+          "score": 0.0298
+        }
+      ]
+    },
+    {
+      "id": "REV-13",
+      "category": "reverse_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,哪些文件 import(依赖)了 wsgi.py?请尽可能完整列出。",
+      "answer": "根据检索到的代码,相关内容位于 sansio/__init__.py (第 0-0 行);wrappers/__init__.py (第 0-0 行);middleware/http_proxy.py (第 0-0 行);testapp.py (第 0-0 行);__init__.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): http.py, wsgi.py\n  它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n  它依赖(import)的仓库内文件: datastructures/__init__.py, exceptions.py, http.py, wsgi.py\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: serving.py, test.py, wrappers/__init__.py",
+      "answer_score": 0.5,
+      "answer_judge_detail": "命中 ['http_proxy', 'test', 'utils', 'request', 'response'],缺失 ['formparser', 'local', 'lint', 'shared_data', 'map']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['wsgi.py'],实际 ['sansio/__init__.py', 'testapp.py', 'wrappers/__init__.py', 'middleware/http_proxy.py', '__init__.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:sansio/__init__.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0311
+        },
+        {
+          "chunk_id": "graph:file:middleware/http_proxy.py",
+          "score": 0.031
+        },
+        {
+          "chunk_id": "graph:file:__init__.py",
+          "score": 0.0301
+        }
+      ]
+    },
+    {
+      "id": "INH-01",
+      "category": "inheritance",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,类 Accept 继承自哪个类?那个基类定义在哪个文件?",
+      "answer": "根据检索到的代码,相关内容位于 exceptions.py (第 0-0 行);serving.py (第 0-0 行);datastructures/headers.py (第 0-0 行);datastructures/accept.py (第 0-0 行):\n  它继承自: (无基类)\n  它继承自: (无基类)\n  它继承自: (无基类)\n  [依赖图卡片] 类 Accept\n  定义位置: datastructures/accept.py 第 11-198 行\n  它继承自: ImmutableList [datastructures/structures.py]",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['ImmutableList', 'datastructures/structures.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/accept.py",
+      "recall_at_k": 0.5,
+      "mrr": 0.25,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:exceptions.py:Aborter",
+          "score": 0.0288
+        },
+        {
+          "chunk_id": "graph:class:exceptions.py:NotFound",
+          "score": 0.0164
+        },
+        {
+          "chunk_id": "graph:class:serving.py:ForkingMixIn",
+          "score": 0.0164
+        },
+        {
+          "chunk_id": "graph:class:datastructures/accept.py:Accept",
+          "score": 0.0161
+        },
+        {
+          "chunk_id": "graph:class:datastructures/headers.py:Headers",
+          "score": 0.0161
+        }
+      ]
+    },
+    {
+      "id": "INH-02",
+      "category": "inheritance",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,类 FileMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+      "answer": "根据检索到的代码,相关内容位于 formparser.py (第 0-0 行);wsgi.py (第 0-0 行);datastructures/file_storage.py (第 0-0 行);datastructures/structures.py (第 0-0 行):\n  它继承自: (无基类)\n  它继承自: (无基类)\n  [依赖图卡片] 类 FileMultiDict\n  它继承自: MultiDict [datastructures/structures.py]\n  它继承自: TypeConversionDict [datastructures/structures.py]\n  继承它的子类: FileMultiDict [datastructures/file_storage.py], _OrderedMultiDict [datastructures/structures.py], CombinedMultiDict [datastructures/structures.py], ImmutableMultiDict [datastructures/structures.py]",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['MultiDict', 'datastructures/structures.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/file_storage.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:datastructures/file_storage.py:FileMultiDict",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:class:formparser.py:MultiPartParser",
+          "score": 0.029
+        },
+        {
+          "chunk_id": "graph:class:formparser.py:FormDataParser",
+          "score": 0.0288
+        },
+        {
+          "chunk_id": "graph:class:wsgi.py:FileWrapper",
+          "score": 0.0164
+        },
+        {
+          "chunk_id": "graph:class:datastructures/structures.py:MultiDict",
+          "score": 0.0161
+        }
+      ]
+    },
+    {
+      "id": "INH-03",
+      "category": "inheritance",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,类 EnvironHeaders 继承自哪个类?那个基类定义在哪个文件?",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/headers.py (第 0-0 行);datastructures/mixins.py (第 0-0 行);test.py (第 0-0 行);formparser.py (第 0-0 行):\n  它继承自: (无基类)\n  它继承自: (无基类)\n  它继承自: (无基类)\n  它继承自: (无基类)\n  [依赖图卡片] 类 EnvironHeaders\n  它继承自: ImmutableHeadersMixin [datastructures/mixins.py], Headers [datastructures/headers.py]",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['ImmutableHeadersMixin', 'datastructures/mixins.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/headers.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:datastructures/headers.py:EnvironHeaders",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:class:datastructures/headers.py:Headers",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "graph:class:datastructures/mixins.py:ImmutableHeadersMixin",
+          "score": 0.0313
+        },
+        {
+          "chunk_id": "graph:class:test.py:EnvironBuilder",
+          "score": 0.0296
+        },
+        {
+          "chunk_id": "graph:class:formparser.py:MultiPartParser",
+          "score": 0.0274
+        }
+      ]
+    },
+    {
+      "id": "INH-04",
+      "category": "inheritance",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,类 RequestCacheControl 继承自哪个类?那个基类定义在哪个文件?",
+      "answer": "根据检索到的代码,相关内容位于 sansio/request.py (第 0-0 行);local.py (第 0-0 行);datastructures/cache_control.py (第 0-0 行):\n  它继承自: (无基类)\n  它继承自: (无基类)\n  [依赖图卡片] 类 RequestCacheControl\n  它继承自: ImmutableDictMixin [datastructures/mixins.py], _CacheControl [datastructures/cache_control.py]\n  它继承自: CallbackDict [datastructures/structures.py]\n  继承它的子类: RequestCacheControl [datastructures/cache_control.py], ResponseCacheControl [datastructures/cache_control.py]",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['ImmutableDictMixin', 'datastructures/mixins.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/cache_control.py",
+      "recall_at_k": 0.5,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:datastructures/cache_control.py:RequestCacheControl",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "graph:class:sansio/request.py:Request",
+          "score": 0.0309
+        },
+        {
+          "chunk_id": "graph:class:local.py:_ProxyLookup",
+          "score": 0.0282
+        },
+        {
+          "chunk_id": "graph:class:datastructures/cache_control.py:_CacheControl",
+          "score": 0.0164
+        },
+        {
+          "chunk_id": "graph:class:exceptions.py:RequestEntityTooLarge",
+          "score": 0.0161
+        }
+      ]
+    },
+    {
+      "id": "INH-05",
+      "category": "inheritance",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,类 ContentSecurityPolicy 继承自哪个类?那个基类定义在哪个文件?",
+      "answer": "根据检索到的代码,相关内容位于 local.py (第 0-0 行);datastructures/range.py (第 0-0 行);datastructures/csp.py (第 0-0 行);datastructures/structures.py (第 0-0 行):\n  它继承自: (无基类)\n  它继承自: (无基类)\n  [依赖图卡片] 类 ContentSecurityPolicy\n  它继承自: CallbackDict [datastructures/structures.py]\n  它继承自: UpdateDictMixin [datastructures/mixins.py], dict\n  继承它的子类: _CacheControl [datastructures/cache_control.py], ContentSecurityPolicy [datastructures/csp.py]",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['CallbackDict', 'datastructures/structures.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/csp.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:datastructures/csp.py:ContentSecurityPolicy",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "graph:class:local.py:_ProxyLookup",
+          "score": 0.0288
+        },
+        {
+          "chunk_id": "graph:class:datastructures/range.py:ContentRange",
+          "score": 0.0161
+        },
+        {
+          "chunk_id": "graph:class:datastructures/structures.py:CallbackDict",
+          "score": 0.0161
+        },
+        {
+          "chunk_id": "graph:class:routing/matcher.py:SlashRequired",
+          "score": 0.0159
+        }
+      ]
+    },
+    {
+      "id": "INH-06",
+      "category": "inheritance",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,类 CombinedMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+      "answer": "根据检索到的代码,相关内容位于 formparser.py (第 0-0 行);local.py (第 0-0 行);routing/rules.py (第 0-0 行);datastructures/structures.py (第 0-0 行);utils.py (第 0-0 行):\n  它继承自: (无基类)\n  它继承自: (无基类)\n  它继承自: (无基类)\n  [依赖图卡片] 类 CombinedMultiDict\n  它继承自: ImmutableMultiDictMixin [datastructures/mixins.py], MultiDict [datastructures/structures.py]\n  它继承自: ImportError",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['ImmutableMultiDictMixin', 'datastructures/mixins.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/structures.py",
+      "recall_at_k": 0.5,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:datastructures/structures.py:CombinedMultiDict",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "graph:class:formparser.py:MultiPartParser",
+          "score": 0.0296
+        },
+        {
+          "chunk_id": "graph:class:local.py:_ProxyLookup",
+          "score": 0.0294
+        },
+        {
+          "chunk_id": "graph:class:routing/rules.py:RuleTemplate",
+          "score": 0.0164
+        },
+        {
+          "chunk_id": "graph:class:utils.py:ImportStringError",
+          "score": 0.0161
+        }
+      ]
+    },
+    {
+      "id": "INH-07",
+      "category": "inheritance",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?",
+      "answer": "根据检索到的代码,相关内容位于 wrappers/request.py (第 0-0 行);wrappers/request.py (第 312-313 行);wrappers/request.py (第 376-381 行);sansio/request.py (第 0-0 行);wrappers/request.py (第 391-427 行):\n  它继承自: Request [sansio/request.py]\n  文件: wrappers/request.py\n  文件: wrappers/request.py\n  继承它的子类: Request [wrappers/request.py]\n  定义位置: wrappers/request.py 第 391-427 行\n  它被这些函数调用: get_resource [debug/__init__.py], text [test.py], data [wrappers/request.py], get_json [wrappers/request.py], get_json [wrappers/request.py], add_etag [wrappers/response.py]",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['sansio/request.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 wrappers/request.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:func:get_data",
+          "score": 0.0427
+        },
+        {
+          "chunk_id": "graph:class:wrappers/request.py:Request",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:class:sansio/request.py:Request",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "wrappers/request.py::__enter__",
+          "score": 0.0289
+        },
+        {
+          "chunk_id": "wrappers/request.py::get_data",
+          "score": 0.0276
+        }
+      ]
+    },
+    {
+      "id": "INH-08",
+      "category": "inheritance",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在哪个文件?",
+      "answer": "根据检索到的代码,相关内容位于 wrappers/response.py (第 0-0 行);wrappers/response.py (第 804-806 行);wrappers/response.py (第 263-263 行);wrappers/request.py (第 376-381 行):\n  定义位置: wrappers/response.py 第 796-838 行\n  文件: wrappers/response.py\n  文件: wrappers/response.py\n  定义位置: wrappers/response.py 第 39-793 行\n  文件: wrappers/request.py\n  它继承自: Response [sansio/response.py]",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['sansio/response.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 wrappers/response.py",
+      "recall_at_k": 0.5,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:wrappers/response.py:ResponseStream",
+          "score": 0.0317
+        },
+        {
+          "chunk_id": "wrappers/response.py::__init__",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "wrappers/response.py::get_data",
+          "score": 0.0313
+        },
+        {
+          "chunk_id": "wrappers/request.py::get_data",
+          "score": 0.0299
+        },
+        {
+          "chunk_id": "graph:class:wrappers/response.py:Response",
+          "score": 0.0293
+        }
+      ]
+    },
+    {
+      "id": "INH-09",
+      "category": "inheritance",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,异常类 BadRequestKeyError 同时继承了哪两个类?",
+      "answer": "根据检索到的代码,相关内容位于 exceptions.py (第 0-0 行);datastructures/structures.py (第 662-665 行);datastructures/structures.py (第 787-799 行):\n  继承它的子类: BadRequestKeyError [exceptions.py], ClientDisconnected [exceptions.py], SecurityError [exceptions.py], BadHost [exceptions.py], WebsocketMismatch [routing/exceptions.py]\n  [依赖图卡片] 类 BadRequestKeyError\n  它继承自: BadRequest [exceptions.py], KeyError\n  它继承自: HTTPException [exceptions.py]\n  raise exceptions.BadRequestKeyError(key)\n  raise exceptions.BadRequestKeyError(e.args[0]) from None",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['BadRequest', 'KeyError'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 exceptions.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:exceptions.py:BadRequestKeyError",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "graph:class:exceptions.py:BadRequest",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "datastructures/structures.py::__getitem__",
+          "score": 0.0303
+        },
+        {
+          "chunk_id": "datastructures/structures.py::popitem",
+          "score": 0.03
+        },
+        {
+          "chunk_id": "datastructures/headers.py::_get_key",
+          "score": 0.0289
+        }
+      ]
+    },
+    {
+      "id": "INH-10",
+      "category": "inheritance",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,有哪些异常类直接继承自 HTTPException?请尽量列出。",
+      "answer": "根据检索到的代码,相关内容位于 exceptions.py (第 0-0 行):\n  它继承自: HTTPException [exceptions.py]\n  继承它的子类: (没有仓库内子类)",
+      "answer_score": 0.0,
+      "answer_judge_detail": "命中 [],缺失 ['BadGateway', 'BadRequest', 'Conflict', 'ExpectationFailed', 'FailedDependency', 'Forbidden', 'GatewayTimeout', 'Gone', 'HTTPVersionNotSupported', 'ImATeapot', 'InternalServerError', 'LengthRequired', 'Locked', 'MethodNotAllowed', 'MisdirectedRequest', 'NotAcceptable', 'NotFound', 'NotImplemented', 'PreconditionFailed', 'PreconditionRequired', 'RequestEntityTooLarge', 'RequestHeaderFieldsTooLarge', 'RequestRedirect', 'RequestTimeout', 'RequestURITooLarge', 'RequestedRangeNotSatisfiable', 'Unauthorized', 'UnavailableForLegalReasons', 'UnprocessableEntity', 'UnsupportedMediaType', '_RetryAfter']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 exceptions.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:exceptions.py:Unauthorized",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "graph:class:exceptions.py:NotFound",
+          "score": 0.0313
+        },
+        {
+          "chunk_id": "graph:class:exceptions.py:NotAcceptable",
+          "score": 0.031
+        },
+        {
+          "chunk_id": "graph:class:exceptions.py:Gone",
+          "score": 0.0306
+        },
+        {
+          "chunk_id": "graph:class:exceptions.py:Forbidden",
+          "score": 0.0296
+        }
+      ]
+    },
+    {
+      "id": "INH-11",
+      "category": "inheritance",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,哪些类继承(混入)了 ImmutableDictMixin?",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/structures.py (第 0-0 行);datastructures/mixins.py (第 0-0 行);datastructures/mixins.py (第 91-93 行):\n  它继承自: ImmutableDictMixin [datastructures/mixins.py], dict\n  它继承自: ImmutableDictMixin [datastructures/mixins.py], TypeConversionDict [datastructures/structures.py]\n  它继承自: ImmutableDictMixin [datastructures/mixins.py]\n  ) -> ImmutableDictMixin[K, t.Any | None]: ...\n  [依赖图卡片] 类 ImmutableDictMixin\n  它继承自: Generic",
+      "answer_score": 0.25,
+      "answer_judge_detail": "命中 ['ImmutableDict'],缺失 ['ImmutableMultiDictMixin', 'ImmutableTypeConversionDict', 'RequestCacheControl']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/mixins.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "datastructures/mixins.py::fromkeys",
+          "score": 0.0448
+        },
+        {
+          "chunk_id": "graph:class:datastructures/structures.py:ImmutableDict",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:class:datastructures/structures.py:ImmutableTypeConversionDict",
+          "score": 0.0313
+        },
+        {
+          "chunk_id": "graph:class:datastructures/mixins.py:ImmutableDictMixin",
+          "score": 0.031
+        },
+        {
+          "chunk_id": "graph:class:datastructures/mixins.py:ImmutableMultiDictMixin",
+          "score": 0.0306
+        }
+      ]
+    },
+    {
+      "id": "INH-12",
+      "category": "inheritance",
+      "priority": "P1",
+      "difficulty": "medium",
+      "question": "在 werkzeug 中,哪些类继承(混入)了 CallbackDict?",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/mixins.py (第 0-0 行);datastructures/csp.py (第 0-0 行);datastructures/structures.py (第 0-0 行):\n  继承它的子类: CallbackDict [datastructures/structures.py]\n  它继承自: CallbackDict [datastructures/structures.py]\n  它继承自: dict\n  [依赖图卡片] 类 CallbackDict\n  它继承自: UpdateDictMixin [datastructures/mixins.py], dict\n  继承它的子类: _CacheControl [datastructures/cache_control.py], ContentSecurityPolicy [datastructures/csp.py]",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['ContentSecurityPolicy', '_CacheControl'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/structures.py",
+      "recall_at_k": 1.0,
+      "mrr": 0.5,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:datastructures/mixins.py:UpdateDictMixin",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:class:datastructures/structures.py:CallbackDict",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:class:datastructures/range.py:_CallbackProperty",
+          "score": 0.0164
+        },
+        {
+          "chunk_id": "graph:class:routing/matcher.py:SlashRequired",
+          "score": 0.0161
+        },
+        {
+          "chunk_id": "graph:class:datastructures/csp.py:ContentSecurityPolicy",
+          "score": 0.0161
+        }
+      ]
+    },
+    {
+      "id": "LOC-01",
+      "category": "symbol_location",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,类 Authorization 定义在哪个文件里?",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/auth.py (第 0-0 行);sansio/request.py (第 481-489 行):\n  [依赖图卡片] 类 Authorization\n  文件: sansio/request.py\n  函数: authorization\n  def authorization(self) -> Authorization | None:\n  \"\"\"The ``Authorization`` header parsed into an :class:`.Authorization` object.\n  :class:`Authorization` is no longer a ``dict``. The ``token`` attribute",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['datastructures/auth.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/auth.py",
+      "recall_at_k": 1.0,
+      "mrr": 0.5,
+      "retrieved": [
+        {
+          "chunk_id": "sansio/request.py::authorization",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:class:datastructures/auth.py:Authorization",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "testapp.py::_get_werkzeug_version",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "PROVENANCE.md#L1-14",
+          "score": 0.0305
+        },
+        {
+          "chunk_id": "graph:func:authorization",
+          "score": 0.0292
+        }
+      ]
+    },
+    {
+      "id": "LOC-02",
+      "category": "symbol_location",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,类 BaseConverter 定义在哪个文件里?",
+      "answer": "根据检索到的代码,相关内容位于 routing/converters.py (第 0-0 行);testapp.py (第 182-188 行):\n  [依赖图卡片] 类 UUIDConverter\n  定义位置: routing/converters.py 第 230-249 行\n  它继承自: BaseConverter [routing/converters.py]\n  文件: testapp.py\n  函数: _get_werkzeug_version\n  def _get_werkzeug_version() -> str:",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['routing/converters.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 routing/converters.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:routing/converters.py:UUIDConverter",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "testapp.py::_get_werkzeug_version",
+          "score": 0.0313
+        },
+        {
+          "chunk_id": "graph:class:routing/converters.py:AnyConverter",
+          "score": 0.0313
+        },
+        {
+          "chunk_id": "graph:class:routing/converters.py:PathConverter",
+          "score": 0.0313
+        },
+        {
+          "chunk_id": "graph:class:routing/converters.py:UnicodeConverter",
+          "score": 0.0309
+        }
+      ]
+    },
+    {
+      "id": "LOC-03",
+      "category": "symbol_location",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,类 CombinedMultiDict 定义在哪个文件里?",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/structures.py (第 0-0 行);wrappers/request.py (第 449-475 行);testapp.py (第 182-188 行):\n  [依赖图卡片] 类 CombinedMultiDict\n  \"\"\"A :class:`werkzeug.datastructures.CombinedMultiDict` that\n  定义位置: datastructures/structures.py 第 816-958 行\n  文件: testapp.py\n  函数: _get_werkzeug_version\n  def _get_werkzeug_version() -> str:",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['datastructures/structures.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/structures.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:datastructures/structures.py:CombinedMultiDict",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "testapp.py::_get_werkzeug_version",
+          "score": 0.0318
+        },
+        {
+          "chunk_id": "graph:class:datastructures/mixins.py:ImmutableMultiDictMixin",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "wrappers/request.py::values",
+          "score": 0.0164
+        },
+        {
+          "chunk_id": "graph:class:datastructures/file_storage.py:FileMultiDict",
+          "score": 0.0161
+        }
+      ]
+    },
+    {
+      "id": "LOC-04",
+      "category": "symbol_location",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,类 FileStorage 定义在哪个文件里?",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/file_storage.py (第 0-0 行);wrappers/request.py (第 478-498 行):\n  [依赖图卡片] 类 FileStorage\n  Werkzeug :class:`~werkzeug.datastructures.FileStorage` object.\n  :meth:`~werkzeug.datastructures.FileStorage.save` function that can\n  :class:`~werkzeug.datastructures.FileStorage` documentation for\n  定义位置: datastructures/file_storage.py 第 16-162 行\n  文件: wrappers/request.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['datastructures/file_storage.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/file_storage.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:datastructures/file_storage.py:FileStorage",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "wrappers/request.py::files",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "testapp.py::_get_werkzeug_version",
+          "score": 0.0312
+        },
+        {
+          "chunk_id": "graph:func:files",
+          "score": 0.0287
+        },
+        {
+          "chunk_id": "graph:class:wsgi.py:FileWrapper",
+          "score": 0.0159
+        }
+      ]
+    },
+    {
+      "id": "LOC-05",
+      "category": "symbol_location",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,类 HTTPException 定义在哪个文件里?",
+      "answer": "根据检索到的代码,相关内容位于 exceptions.py (第 0-0 行):\n  [依赖图卡片] 类 RequestTimeout\n  定义位置: exceptions.py 第 416-426 行\n  它继承自: HTTPException [exceptions.py]\n  [依赖图卡片] 类 Forbidden\n  定义位置: exceptions.py 第 336-348 行\n  [依赖图卡片] 类 NotFound",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['exceptions.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 exceptions.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:exceptions.py:RequestTimeout",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:class:exceptions.py:Forbidden",
+          "score": 0.0311
+        },
+        {
+          "chunk_id": "graph:class:exceptions.py:NotFound",
+          "score": 0.0302
+        },
+        {
+          "chunk_id": "graph:class:exceptions.py:Unauthorized",
+          "score": 0.0297
+        },
+        {
+          "chunk_id": "graph:class:exceptions.py:RequestURITooLarge",
+          "score": 0.0293
+        }
+      ]
+    },
+    {
+      "id": "LOC-06",
+      "category": "symbol_location",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,类 Headers 定义在哪个文件里?",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/headers.py (第 0-0 行):\n  [依赖图卡片] 类 Headers\n  定义位置: datastructures/headers.py 第 20-583 行\n  定义位置: datastructures/headers.py 第 605-658 行\n  继承它的子类: EnvironHeaders [datastructures/headers.py]\n  [依赖图卡片] 类 EnvironHeaders\n  它继承自: ImmutableHeadersMixin [datastructures/mixins.py], Headers [datastructures/headers.py]",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['datastructures/headers.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/headers.py",
+      "recall_at_k": 1.0,
+      "mrr": 0.3333,
+      "retrieved": [
+        {
+          "chunk_id": "graph:func:get_headers",
+          "score": 0.0721
+        },
+        {
+          "chunk_id": "exceptions.py::get_headers",
+          "score": 0.0604
+        },
+        {
+          "chunk_id": "graph:class:datastructures/headers.py:Headers",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:class:datastructures/headers.py:EnvironHeaders",
+          "score": 0.0301
+        },
+        {
+          "chunk_id": "testapp.py::_get_werkzeug_version",
+          "score": 0.0164
+        }
+      ]
+    },
+    {
+      "id": "LOC-07",
+      "category": "symbol_location",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,类 Map 定义在哪个文件里?",
+      "answer": "根据检索到的代码,相关内容位于 routing/map.py (第 0-0 行);routing/converters.py (第 220-227 行):\n  [依赖图卡片] 类 Map\n  定义位置: routing/map.py 第 41-379 行\n  定义位置: routing/map.py 第 382-928 行\n  [依赖图卡片] 类 MapAdapter\n  文件: routing/converters.py\n  map: Map,",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['routing/map.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 routing/map.py",
+      "recall_at_k": 1.0,
+      "mrr": 0.3333,
+      "retrieved": [
+        {
+          "chunk_id": "routing/converters.py::__init__",
+          "score": 0.0581
+        },
+        {
+          "chunk_id": "routing/rules.py::get_rules",
+          "score": 0.0411
+        },
+        {
+          "chunk_id": "graph:class:routing/map.py:Map",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "graph:class:routing/map.py:MapAdapter",
+          "score": 0.0318
+        },
+        {
+          "chunk_id": "testapp.py::_get_werkzeug_version",
+          "score": 0.0317
+        }
+      ]
+    },
+    {
+      "id": "LOC-08",
+      "category": "symbol_location",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,类 MapAdapter 定义在哪个文件里?",
+      "answer": "根据检索到的代码,相关内容位于 routing/map.py (第 0-0 行);testapp.py (第 182-188 行):\n  [依赖图卡片] 类 MapAdapter\n  定义位置: routing/map.py 第 382-928 行\n  文件: testapp.py\n  函数: _get_werkzeug_version\n  def _get_werkzeug_version() -> str:\n  global _werkzeug_version",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['routing/map.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 routing/map.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:routing/map.py:MapAdapter",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "testapp.py::_get_werkzeug_version",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "graph:func:_get_werkzeug_version",
+          "score": 0.0161
+        },
+        {
+          "chunk_id": "routing/exceptions.py::__init__",
+          "score": 0.0159
+        },
+        {
+          "chunk_id": "graph:func:is_weak",
+          "score": 0.0156
+        }
+      ]
+    },
+    {
+      "id": "LOC-09",
+      "category": "symbol_location",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,类 MultiDict 定义在哪个文件里?",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/structures.py (第 0-0 行);wrappers/request.py (第 478-498 行);datastructures/file_storage.py (第 0-0 行):\n  [依赖图卡片] 类 MultiDict\n  \"\"\":class:`~werkzeug.datastructures.MultiDict` object containing\n  See the :class:`~werkzeug.datastructures.MultiDict` /\n  [依赖图卡片] 类 FileMultiDict\n  定义位置: datastructures/file_storage.py 第 165-205 行\n  它继承自: MultiDict [datastructures/structures.py]",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['datastructures/structures.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/structures.py",
+      "recall_at_k": 1.0,
+      "mrr": 0.5,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:datastructures/file_storage.py:FileMultiDict",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "graph:class:datastructures/structures.py:MultiDict",
+          "score": 0.0278
+        },
+        {
+          "chunk_id": "testapp.py::_get_werkzeug_version",
+          "score": 0.0164
+        },
+        {
+          "chunk_id": "wrappers/request.py::files",
+          "score": 0.0164
+        },
+        {
+          "chunk_id": "graph:class:datastructures/structures.py:ImmutableDict",
+          "score": 0.0161
+        }
+      ]
+    },
+    {
+      "id": "LOC-10",
+      "category": "symbol_location",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,类 Rule 定义在哪个文件里?",
+      "answer": "根据检索到的代码,相关内容位于 routing/rules.py (第 0-0 行);routing/rules.py (第 270-293 行):\n  [依赖图卡片] 类 Rule\n  文件: routing/rules.py\n  def get_rules(self, map: Map) -> t.Iterator[Rule]:\n  for rule in rulefactory.get_rules(map):\n  if rule.defaults:\n  for key, value in rule.defaults.items():",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['routing/rules.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 routing/rules.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "routing/rules.py::get_rules",
+          "score": 0.107
+        },
+        {
+          "chunk_id": "routing/rules.py::__init__",
+          "score": 0.0572
+        },
+        {
+          "chunk_id": "graph:class:routing/rules.py:Rule",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:class:routing/rules.py:RuleFactory",
+          "score": 0.0294
+        },
+        {
+          "chunk_id": "routing/map.py::_rules",
+          "score": 0.0274
+        }
+      ]
+    },
+    {
+      "id": "LOC-11",
+      "category": "symbol_location",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,类 StateMachineMatcher 定义在哪个文件里?",
+      "answer": "根据检索到的代码,相关内容位于 routing/matcher.py (第 0-0 行);testapp.py (第 182-188 行):\n  文件内定义的类: SlashRequired, State, StateMachineMatcher\n  [依赖图卡片] 类 StateMachineMatcher\n  文件内定义的函数: __init__, add, update, _update_state, match, _match\n  定义位置: routing/matcher.py 第 33-202 行\n  文件: testapp.py\n  函数: _get_werkzeug_version",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['routing/matcher.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 routing/matcher.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:routing/matcher.py:StateMachineMatcher",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "testapp.py::_get_werkzeug_version",
+          "score": 0.031
+        },
+        {
+          "chunk_id": "graph:class:routing/exceptions.py:NoMatch",
+          "score": 0.0161
+        },
+        {
+          "chunk_id": "graph:file:routing/matcher.py",
+          "score": 0.0161
+        },
+        {
+          "chunk_id": "graph:func:_get_werkzeug_version",
+          "score": 0.0159
+        }
+      ]
+    },
+    {
+      "id": "LOC-12",
+      "category": "symbol_location",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,类 WSGIWarning 定义在哪个文件里?",
+      "answer": "根据检索到的代码,相关内容位于 middleware/lint.py (第 0-0 行);middleware/lint.py (第 117-119 行);testapp.py (第 182-188 行):\n  [依赖图卡片] 类 WSGIWarning\n  定义位置: middleware/lint.py 第 33-34 行\n  文件: middleware/lint.py\n  warn(\"The application closed the error stream!\", WSGIWarning, stacklevel=2)\n  文件: testapp.py\n  函数: _get_werkzeug_version",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['middleware/lint.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 middleware/lint.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:class:middleware/lint.py:WSGIWarning",
+          "score": 0.0328
+        },
+        {
+          "chunk_id": "middleware/lint.py::close",
+          "score": 0.0305
+        },
+        {
+          "chunk_id": "testapp.py::_get_werkzeug_version",
+          "score": 0.0294
+        },
+        {
+          "chunk_id": "graph:class:wsgi.py:FileWrapper",
+          "score": 0.0161
+        },
+        {
+          "chunk_id": "middleware/lint.py::check_start_response",
+          "score": 0.0161
+        }
+      ]
+    },
+    {
+      "id": "DAT-01",
+      "category": "dataflow",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,常量 PIN_TIME 在哪个文件中定义?",
+      "answer": "根据检索到的代码,相关内容位于 debug/__init__.py (第 437-462 行);debug/__init__.py (第 321-326 行):\n  return (time.time() - PIN_TIME) < ts\n  self._pin = None\n  文件: debug/__init__.py\n  函数: pin\n  def pin(self, value: str | None) -> None:\n  # Set _pin to None explicitly to prevent regeneration by the getter",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['debug/__init__.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 debug/__init__.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "debug/__init__.py::pin",
+          "score": 0.0577
+        },
+        {
+          "chunk_id": "graph:func:pin",
+          "score": 0.0313
+        },
+        {
+          "chunk_id": "debug/__init__.py::_fail_pin_auth",
+          "score": 0.03
+        },
+        {
+          "chunk_id": "debug/__init__.py::pin_cookie_name",
+          "score": 0.0282
+        },
+        {
+          "chunk_id": "debug/__init__.py::check_pin_trust",
+          "score": 0.0164
+        }
+      ]
+    },
+    {
+      "id": "DAT-02",
+      "category": "dataflow",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,常量 HELP_HTML 在哪个文件中定义?",
+      "answer": "根据检索到的代码,相关内容位于 wrappers/request.py (第 567-569 行);testapp.py (第 182-188 行):\n  定义位置: wrappers/request.py 第 567-569 行\n  文件: testapp.py\n  函数: _get_werkzeug_version\n  def _get_werkzeug_version() -> str:\n  global _werkzeug_version\n  if not _werkzeug_version:",
+      "answer_score": 0.0,
+      "answer_judge_detail": "命中 [],缺失 ['debug/repr.py']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['debug/repr.py'],实际 ['wrappers/request.py', 'testapp.py', 'wrappers/request.py', 'wrappers/request.py', 'sansio/request.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:func:get_json",
+          "score": 0.0435
+        },
+        {
+          "chunk_id": "testapp.py::_get_werkzeug_version",
+          "score": 0.0299
+        },
+        {
+          "chunk_id": "wrappers/request.py::get_data",
+          "score": 0.0284
+        },
+        {
+          "chunk_id": "wrappers/request.py::get_json",
+          "score": 0.0284
+        },
+        {
+          "chunk_id": "sansio/request.py::cache_control",
+          "score": 0.0164
+        }
+      ]
+    },
+    {
+      "id": "DAT-03",
+      "category": "dataflow",
+      "priority": "P1",
+      "difficulty": "easy",
+      "question": "在 werkzeug 中,常量 OBJECT_DUMP_HTML 在哪个文件中定义?",
+      "answer": "根据检索到的代码,相关内容位于 debug/repr.py (第 242-264 行);debug/repr.py (第 43-52 行);debug/repr.py (第 270-282 行):\n  [调用图卡片] 函数 dump_object\n  它调用的仓库内函数: items, append, repr, __repr__, render_object_dump\n  def dump(obj: object = missing) -> None:\n  rv = gen.dump_object(obj)\n  [调用图卡片] 函数 render_object_dump\n  它被这些函数调用: dump_object [debug/repr.py], dump_locals [debug/repr.py]",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['debug/repr.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 debug/repr.py",
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:func:dump_object",
+          "score": 0.0311
+        },
+        {
+          "chunk_id": "debug/repr.py::dump",
+          "score": 0.0301
+        },
+        {
+          "chunk_id": "graph:func:render_object_dump",
+          "score": 0.0292
+        },
+        {
+          "chunk_id": "graph:func:dump_locals",
+          "score": 0.0285
+        },
+        {
+          "chunk_id": "debug/repr.py::dump_locals",
+          "score": 0.0276
+        }
+      ]
+    },
+    {
+      "id": "IND-01",
+      "category": "indirect_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,wrappers/response.py 是否(间接)依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+      "answer": "根据检索到的代码,相关内容位于 _internal.py (第 0-0 行);wrappers/__init__.py (第 0-0 行);datastructures/__init__.py (第 0-0 行);testapp.py (第 0-0 行);urls.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): _reloader.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/structures.py, debug/__init__.py, exceptions.py, formparser.py, http.py, routing/map.py, sansio/http.py, sansio/utils.py, serving.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/etag.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/range.py, datastructures/structures.py\n  它被这些文件依赖/使用(import 它的使用方): exceptions.py, formparser.py, middleware/http_proxy.py, middleware/lint.py, routing/map.py, routing/rules.py, sansio/multipart.py, sansio/request.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): routing/map.py, routing/rules.py, sansio/utils.py, serving.py, test.py, wrappers/response.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['datastructures/__init__.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/__init__.py",
+      "recall_at_k": 0.5,
+      "mrr": 0.3333,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:testapp.py",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "graph:file:datastructures/__init__.py",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "graph:file:urls.py",
+          "score": 0.0306
+        },
+        {
+          "chunk_id": "graph:file:_internal.py",
+          "score": 0.0306
+        }
+      ]
+    },
+    {
+      "id": "IND-02",
+      "category": "indirect_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,routing/map.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+      "answer": "根据检索到的代码,相关内容位于 routing/map.py (第 0-0 行);routing/matcher.py (第 0-0 行);routing/__init__.py (第 0-0 行);routing/exceptions.py (第 0-0 行):\n  [依赖图卡片] 文件 routing/map.py\n  它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, routing/converters.py, routing/exceptions.py, routing/matcher.py, routing/rules.py, urls.py, wrappers/request.py, wsgi.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py\n  它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n  它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['datastructures/__init__.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 routing/map.py",
+      "recall_at_k": 0.5,
+      "mrr": 0.25,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:routing/matcher.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:routing/__init__.py",
+          "score": 0.032
+        },
+        {
+          "chunk_id": "graph:file:urls.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:routing/map.py",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "graph:file:routing/exceptions.py",
+          "score": 0.0308
+        }
+      ]
+    },
+    {
+      "id": "IND-03",
+      "category": "indirect_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,wrappers/request.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+      "answer": "根据检索到的代码,相关内容位于 _internal.py (第 0-0 行);wrappers/request.py (第 0-0 行);wrappers/__init__.py (第 0-0 行);datastructures/__init__.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): _reloader.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/structures.py, debug/__init__.py, exceptions.py, formparser.py, http.py, routing/map.py, sansio/http.py, sansio/utils.py, serving.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n  [依赖图卡片] 文件 wrappers/request.py\n  它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, formparser.py, sansio/request.py, test.py, utils.py, wsgi.py\n  它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n  它依赖(import)的仓库内文件: datastructures/accept.py, datastructures/auth.py, datastructures/cache_control.py, datastructures/csp.py, datastructures/etag.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/range.py, datastructures/structures.py\n  它被这些文件依赖/使用(import 它的使用方): exceptions.py, formparser.py, middleware/http_proxy.py, middleware/lint.py, routing/map.py, routing/rules.py, sansio/multipart.py, sansio/request.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wrappers/response.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['datastructures/__init__.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 wrappers/request.py",
+      "recall_at_k": 1.0,
+      "mrr": 0.3333,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:_internal.py",
+          "score": 0.031
+        },
+        {
+          "chunk_id": "graph:file:wrappers/request.py",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "wrappers/request.py::get_data",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "graph:file:datastructures/__init__.py",
+          "score": 0.03
+        }
+      ]
+    },
+    {
+      "id": "IND-04",
+      "category": "indirect_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,routing/map.py 是否(间接)依赖 http.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+      "answer": "根据检索到的代码,相关内容位于 routing/__init__.py (第 0-0 行);routing/matcher.py (第 0-0 行);routing/exceptions.py (第 0-0 行);routing/converters.py (第 0-0 行):\n  它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/map.py, routing/matcher.py, routing/rules.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py\n  它依赖(import)的仓库内文件: exceptions.py, routing/map.py, routing/rules.py, utils.py, wrappers/request.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py\n  它依赖(import)的仓库内文件: routing/map.py\n  它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py, routing/matcher.py, routing/rules.py",
+      "answer_score": 0.0,
+      "answer_judge_detail": "命中 [],缺失 ['datastructures/__init__.py']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['routing/map.py', 'datastructures/__init__.py'],实际 ['routing/__init__.py', 'routing/matcher.py', 'routing/exceptions.py', 'urls.py', 'routing/converters.py']",
+      "recall_at_k": 0.0,
+      "mrr": 0.0,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:routing/__init__.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:routing/matcher.py",
+          "score": 0.0323
+        },
+        {
+          "chunk_id": "graph:file:routing/exceptions.py",
+          "score": 0.0315
+        },
+        {
+          "chunk_id": "graph:file:urls.py",
+          "score": 0.0313
+        },
+        {
+          "chunk_id": "graph:file:routing/converters.py",
+          "score": 0.031
+        }
+      ]
+    },
+    {
+      "id": "IND-05",
+      "category": "indirect_dep",
+      "priority": "P1",
+      "difficulty": "hard",
+      "question": "在 werkzeug 中,wrappers/response.py 是直接 import 了 datastructures/structures.py,还是通过 datastructures/__init__.py 间接依赖的?给出完整的中间文件路径。",
+      "answer": "根据检索到的代码,相关内容位于 datastructures/cache_control.py (第 0-0 行);wrappers/__init__.py (第 0-0 行);datastructures/csp.py (第 0-0 行);datastructures/__init__.py (第 0-0 行):\n  它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, sansio/response.py\n  [依赖图卡片] 文件 wrappers/__init__.py\n  它依赖(import)的仓库内文件: wrappers/request.py, wrappers/response.py\n  它被这些文件依赖/使用(import 它的使用方): __init__.py, utils.py\n  它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n  [依赖图卡片] 文件 datastructures/__init__.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['datastructures/__init__.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 datastructures/__init__.py",
+      "recall_at_k": 0.5,
+      "mrr": 0.3333,
+      "retrieved": [
+        {
+          "chunk_id": "graph:file:wrappers/__init__.py",
+          "score": 0.0325
+        },
+        {
+          "chunk_id": "graph:file:datastructures/csp.py",
+          "score": 0.0308
+        },
+        {
+          "chunk_id": "graph:file:datastructures/__init__.py",
+          "score": 0.0304
+        },
+        {
+          "chunk_id": "graph:file:routing/exceptions.py",
+          "score": 0.0303
+        },
+        {
+          "chunk_id": "graph:file:datastructures/cache_control.py",
+          "score": 0.0303
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1324 @@
+[
+ {
+  "id": "FWD-01",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/headers.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "mixins",
+    "structures",
+    "exceptions"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-02",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,formparser.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,formparser.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "formparser.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "http",
+    "multipart",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-03",
+  "category": "forward_dep",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,http.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,http.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "http.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "sansio"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-04",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,routing/map.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,routing/map.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "routing/map.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "converters",
+    "matcher",
+    "rules",
+    "urls",
+    "request",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-05",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "routing/matcher.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "converters",
+    "exceptions",
+    "rules"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-06",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "sansio/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures",
+    "http",
+    "utils",
+    "user_agent"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-07",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "sansio/response.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures",
+    "cache_control",
+    "http",
+    "utils"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-08",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,serving.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,serving.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "serving.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "_reloader",
+    "debug",
+    "tbtools",
+    "exceptions",
+    "http",
+    "shared_data",
+    "urls"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-09",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,test.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,test.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "test.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "http",
+    "multipart",
+    "urls",
+    "utils",
+    "request",
+    "response",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-10",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,wrappers/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "wrappers/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "formparser",
+    "request",
+    "test",
+    "utils",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-11",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,wrappers/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "wrappers/response.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "http",
+    "response",
+    "test",
+    "urls",
+    "utils",
+    "request",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-01",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 _internal.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 _internal.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "_internal.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_reloader",
+    "file_storage",
+    "headers",
+    "mixins",
+    "structures",
+    "debug",
+    "exceptions",
+    "formparser",
+    "http",
+    "map",
+    "utils",
+    "serving",
+    "test",
+    "request",
+    "response"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-02",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/__init__.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 datastructures/__init__.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "map",
+    "rules",
+    "multipart",
+    "request",
+    "response",
+    "test",
+    "urls",
+    "utils"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-03",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/mixins.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 datastructures/mixins.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures",
+    "cache_control",
+    "headers",
+    "structures"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-04",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/structures.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 datastructures/structures.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures",
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "file_storage",
+    "headers"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-05",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 exceptions.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 exceptions.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "exceptions.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "headers",
+    "debug",
+    "formparser",
+    "http_proxy",
+    "exceptions",
+    "map",
+    "multipart",
+    "utils",
+    "serving",
+    "request",
+    "response",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-06",
+  "category": "reverse_dep",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 formparser.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 formparser.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "formparser.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "request"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-07",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 http.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 http.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "http.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "auth",
+    "csp",
+    "etag",
+    "debug",
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "proxy_fix",
+    "shared_data",
+    "http",
+    "multipart",
+    "request",
+    "response",
+    "utils",
+    "serving",
+    "test"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-08",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 routing/rules.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 routing/rules.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "routing/rules.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing",
+    "exceptions",
+    "map",
+    "matcher"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-09",
+  "category": "reverse_dep",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 sansio/request.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 sansio/request.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "sansio/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "request"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-10",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 urls.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 urls.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "urls.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "map",
+    "rules",
+    "utils",
+    "serving",
+    "test",
+    "response"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-11",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 utils.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 utils.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "utils.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "debug",
+    "tbtools",
+    "shared_data",
+    "exceptions",
+    "request",
+    "response",
+    "test"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-12",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 wrappers/request.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 wrappers/request.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "wrappers/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "debug",
+    "exceptions",
+    "map",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers",
+    "response"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-13",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 wsgi.py?请尽可能完整列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 wsgi.py?请尽可能完整列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "wsgi.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "formparser",
+    "local",
+    "http_proxy",
+    "lint",
+    "shared_data",
+    "map",
+    "test",
+    "utils",
+    "request",
+    "response"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-01",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Accept 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 Accept 继承自哪个类?那个基类定义在哪个文件?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/accept.py",
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableList",
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-02",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 FileMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 FileMultiDict 继承自哪个类?那个基类定义在哪个文件?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/file_storage.py",
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "MultiDict",
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-03",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 EnvironHeaders 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 EnvironHeaders 继承自哪个类?那个基类定义在哪个文件?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/headers.py",
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableHeadersMixin",
+    "datastructures/mixins.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-04",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 RequestCacheControl 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 RequestCacheControl 继承自哪个类?那个基类定义在哪个文件?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/cache_control.py",
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableDictMixin",
+    "datastructures/mixins.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-05",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 ContentSecurityPolicy 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 ContentSecurityPolicy 继承自哪个类?那个基类定义在哪个文件?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/csp.py",
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "CallbackDict",
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-06",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 CombinedMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 CombinedMultiDict 继承自哪个类?那个基类定义在哪个文件?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/structures.py",
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableMultiDictMixin",
+    "datastructures/mixins.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-07",
+  "category": "inheritance",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "wrappers/request.py",
+   "sansio/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "sansio/request.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-08",
+  "category": "inheritance",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在哪个文件?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在哪个文件?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "wrappers/response.py",
+   "sansio/response.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "sansio/response.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-09",
+  "category": "inheritance",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,异常类 BadRequestKeyError 同时继承了哪两个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,异常类 BadRequestKeyError 同时继承了哪两个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "exceptions.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "BadRequest",
+    "KeyError"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-10",
+  "category": "inheritance",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,有哪些异常类直接继承自 HTTPException?请尽量列出。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,有哪些异常类直接继承自 HTTPException?请尽量列出。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "exceptions.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "BadGateway",
+    "BadRequest",
+    "Conflict",
+    "ExpectationFailed",
+    "FailedDependency",
+    "Forbidden",
+    "GatewayTimeout",
+    "Gone",
+    "HTTPVersionNotSupported",
+    "ImATeapot",
+    "InternalServerError",
+    "LengthRequired",
+    "Locked",
+    "MethodNotAllowed",
+    "MisdirectedRequest",
+    "NotAcceptable",
+    "NotFound",
+    "NotImplemented",
+    "PreconditionFailed",
+    "PreconditionRequired",
+    "RequestEntityTooLarge",
+    "RequestHeaderFieldsTooLarge",
+    "RequestRedirect",
+    "RequestTimeout",
+    "RequestURITooLarge",
+    "RequestedRangeNotSatisfiable",
+    "Unauthorized",
+    "UnavailableForLegalReasons",
+    "UnprocessableEntity",
+    "UnsupportedMediaType",
+    "_RetryAfter"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-11",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些类继承(混入)了 ImmutableDictMixin?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些类继承(混入)了 ImmutableDictMixin?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableDict",
+    "ImmutableMultiDictMixin",
+    "ImmutableTypeConversionDict",
+    "RequestCacheControl"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-12",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些类继承(混入)了 CallbackDict?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,哪些类继承(混入)了 CallbackDict?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ContentSecurityPolicy",
+    "_CacheControl"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-01",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Authorization 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 Authorization 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/auth.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/auth.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-02",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 BaseConverter 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 BaseConverter 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "routing/converters.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/converters.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-03",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 CombinedMultiDict 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 CombinedMultiDict 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-04",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 FileStorage 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 FileStorage 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/file_storage.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/file_storage.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-05",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 HTTPException 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 HTTPException 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "exceptions.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "exceptions.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-06",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Headers 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 Headers 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/headers.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/headers.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-07",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Map 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 Map 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "routing/map.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/map.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-08",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 MapAdapter 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 MapAdapter 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "routing/map.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/map.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-09",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 MultiDict 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 MultiDict 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-10",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Rule 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 Rule 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "routing/rules.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/rules.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-11",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 StateMachineMatcher 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 StateMachineMatcher 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "routing/matcher.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/matcher.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-12",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 WSGIWarning 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,类 WSGIWarning 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "middleware/lint.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "middleware/lint.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "DAT-01",
+  "category": "dataflow",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,常量 PIN_TIME 在哪个文件中定义?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,常量 PIN_TIME 在哪个文件中定义?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "debug/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "debug/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "DAT-02",
+  "category": "dataflow",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,常量 HELP_HTML 在哪个文件中定义?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,常量 HELP_HTML 在哪个文件中定义?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "debug/repr.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "debug/repr.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "DAT-03",
+  "category": "dataflow",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,常量 OBJECT_DUMP_HTML 在哪个文件中定义?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,常量 OBJECT_DUMP_HTML 在哪个文件中定义?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "debug/repr.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "debug/repr.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-01",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/response.py 是否(间接)依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,wrappers/response.py 是否(间接)依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "wrappers/response.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-02",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,routing/map.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,routing/map.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "routing/map.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-03",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/request.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,wrappers/request.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "wrappers/request.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-04",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,routing/map.py 是否(间接)依赖 http.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,routing/map.py 是否(间接)依赖 http.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "routing/map.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-05",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/response.py 是直接 import 了 datastructures/structures.py,还是通过 datastructures/__init__.py 间接依赖的?给出完整的中间文件路径。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n[问题] 在 werkzeug 中,wrappers/response.py 是直接 import 了 datastructures/structures.py,还是通过 datastructures/__init__.py 间接依赖的?给出完整的中间文件路径。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [],
+  "expected_sources": [
+   "wrappers/response.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ }
+]

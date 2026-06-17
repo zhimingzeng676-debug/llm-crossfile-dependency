@@ -1,0 +1,462 @@
+{
+  "functions": [
+    {
+      "name": "check_payment_security",
+      "file": "legacy/security_check.py",
+      "start_line": 12,
+      "end_line": 17,
+      "calls": []
+    },
+    {
+      "name": "checkout",
+      "file": "payment/checkout.py",
+      "start_line": 14,
+      "end_line": 25,
+      "calls": [
+        "Payment",
+        "apply_coupon",
+        "process_payment",
+        "save_payment"
+      ]
+    },
+    {
+      "name": "coupon_value",
+      "file": "payment/coupons.py",
+      "start_line": 21,
+      "end_line": 24,
+      "calls": [
+        "get",
+        "min"
+      ]
+    },
+    {
+      "name": "apply_coupon",
+      "file": "payment/coupons.py",
+      "start_line": 27,
+      "end_line": 37,
+      "calls": [
+        "coupon_value",
+        "min",
+        "log_event"
+      ]
+    },
+    {
+      "name": "get_fee_rate",
+      "file": "payment/fees.py",
+      "start_line": 15,
+      "end_line": 17,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "calculate_fee",
+      "file": "payment/fees.py",
+      "start_line": 20,
+      "end_line": 24,
+      "calls": [
+        "get_fee_rate",
+        "int"
+      ]
+    },
+    {
+      "name": "process_payment",
+      "file": "payment/gateway.py",
+      "start_line": 17,
+      "end_line": 53,
+      "calls": [
+        "Payment",
+        "uuid4",
+        "validate_card",
+        "log_event",
+        "validate_amount",
+        "assess_risk",
+        "calculate_fee"
+      ]
+    },
+    {
+      "name": "save_payment",
+      "file": "payment/refund.py",
+      "start_line": 19,
+      "end_line": 21,
+      "calls": []
+    },
+    {
+      "name": "find_payment",
+      "file": "payment/refund.py",
+      "start_line": 24,
+      "end_line": 26,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "validate_refund_window",
+      "file": "payment/refund.py",
+      "start_line": 29,
+      "end_line": 32,
+      "calls": [
+        "timedelta",
+        "now"
+      ]
+    },
+    {
+      "name": "process_refund",
+      "file": "payment/refund.py",
+      "start_line": 35,
+      "end_line": 51,
+      "calls": [
+        "find_payment",
+        "validate_refund_window",
+        "log_event"
+      ]
+    },
+    {
+      "name": "is_blacklisted",
+      "file": "payment/risk.py",
+      "start_line": 21,
+      "end_line": 23,
+      "calls": []
+    },
+    {
+      "name": "assess_risk",
+      "file": "payment/risk.py",
+      "start_line": 26,
+      "end_line": 38,
+      "calls": [
+        "is_blacklisted"
+      ]
+    },
+    {
+      "name": "luhn_check",
+      "file": "payment/validation.py",
+      "start_line": 12,
+      "end_line": 24,
+      "calls": [
+        "int",
+        "isdigit",
+        "len",
+        "enumerate",
+        "reversed"
+      ]
+    },
+    {
+      "name": "validate_card",
+      "file": "payment/validation.py",
+      "start_line": 27,
+      "end_line": 33,
+      "calls": [
+        "luhn_check"
+      ]
+    },
+    {
+      "name": "validate_amount",
+      "file": "payment/validation.py",
+      "start_line": 36,
+      "end_line": 38,
+      "calls": []
+    },
+    {
+      "name": "log_event",
+      "file": "utils/logging_utils.py",
+      "start_line": 10,
+      "end_line": 17,
+      "calls": [
+        "isoformat",
+        "now",
+        "join",
+        "items",
+        "print",
+        "strip"
+      ]
+    }
+  ],
+  "call_edges": [
+    {
+      "caller": "checkout",
+      "callee": "apply_coupon"
+    },
+    {
+      "caller": "checkout",
+      "callee": "process_payment"
+    },
+    {
+      "caller": "checkout",
+      "callee": "save_payment"
+    },
+    {
+      "caller": "apply_coupon",
+      "callee": "coupon_value"
+    },
+    {
+      "caller": "apply_coupon",
+      "callee": "log_event"
+    },
+    {
+      "caller": "calculate_fee",
+      "callee": "get_fee_rate"
+    },
+    {
+      "caller": "process_payment",
+      "callee": "validate_card"
+    },
+    {
+      "caller": "process_payment",
+      "callee": "log_event"
+    },
+    {
+      "caller": "process_payment",
+      "callee": "validate_amount"
+    },
+    {
+      "caller": "process_payment",
+      "callee": "assess_risk"
+    },
+    {
+      "caller": "process_payment",
+      "callee": "calculate_fee"
+    },
+    {
+      "caller": "process_refund",
+      "callee": "find_payment"
+    },
+    {
+      "caller": "process_refund",
+      "callee": "validate_refund_window"
+    },
+    {
+      "caller": "process_refund",
+      "callee": "log_event"
+    },
+    {
+      "caller": "assess_risk",
+      "callee": "is_blacklisted"
+    },
+    {
+      "caller": "validate_card",
+      "callee": "luhn_check"
+    }
+  ],
+  "imports": {
+    "demo.py": [
+      "payment.gateway",
+      "payment.models",
+      "payment.refund",
+      "payment.checkout"
+    ],
+    "payment/checkout.py": [
+      ".coupons",
+      ".gateway",
+      ".models",
+      ".refund"
+    ],
+    "payment/coupons.py": [
+      "utils.logging_utils",
+      ".models"
+    ],
+    "payment/gateway.py": [
+      "uuid",
+      "utils.logging_utils",
+      ".fees",
+      ".models",
+      ".risk",
+      ".validation"
+    ],
+    "payment/models.py": [
+      "dataclasses",
+      "datetime",
+      "enum"
+    ],
+    "payment/refund.py": [
+      "datetime",
+      "utils.logging_utils",
+      ".models"
+    ],
+    "payment/risk.py": [
+      "enum"
+    ],
+    "payment/validation.py": [
+      ".models"
+    ],
+    "utils/logging_utils.py": [
+      "datetime"
+    ]
+  },
+  "import_edges": [
+    {
+      "importer": "demo.py",
+      "imported": "payment/gateway.py"
+    },
+    {
+      "importer": "demo.py",
+      "imported": "payment/models.py"
+    },
+    {
+      "importer": "demo.py",
+      "imported": "payment/refund.py"
+    },
+    {
+      "importer": "demo.py",
+      "imported": "payment/checkout.py"
+    },
+    {
+      "importer": "payment/checkout.py",
+      "imported": "payment/coupons.py"
+    },
+    {
+      "importer": "payment/checkout.py",
+      "imported": "payment/gateway.py"
+    },
+    {
+      "importer": "payment/checkout.py",
+      "imported": "payment/models.py"
+    },
+    {
+      "importer": "payment/checkout.py",
+      "imported": "payment/refund.py"
+    },
+    {
+      "importer": "payment/coupons.py",
+      "imported": "utils/logging_utils.py"
+    },
+    {
+      "importer": "payment/coupons.py",
+      "imported": "payment/models.py"
+    },
+    {
+      "importer": "payment/gateway.py",
+      "imported": "utils/logging_utils.py"
+    },
+    {
+      "importer": "payment/gateway.py",
+      "imported": "payment/fees.py"
+    },
+    {
+      "importer": "payment/gateway.py",
+      "imported": "payment/models.py"
+    },
+    {
+      "importer": "payment/gateway.py",
+      "imported": "payment/risk.py"
+    },
+    {
+      "importer": "payment/gateway.py",
+      "imported": "payment/validation.py"
+    },
+    {
+      "importer": "payment/refund.py",
+      "imported": "utils/logging_utils.py"
+    },
+    {
+      "importer": "payment/refund.py",
+      "imported": "payment/models.py"
+    },
+    {
+      "importer": "payment/validation.py",
+      "imported": "payment/models.py"
+    }
+  ],
+  "classes": [
+    {
+      "name": "PaymentStatus",
+      "file": "payment/models.py",
+      "start_line": 12,
+      "end_line": 18,
+      "bases": [
+        "Enum"
+      ]
+    },
+    {
+      "name": "Card",
+      "file": "payment/models.py",
+      "start_line": 22,
+      "end_line": 28,
+      "bases": []
+    },
+    {
+      "name": "Payment",
+      "file": "payment/models.py",
+      "start_line": 32,
+      "end_line": 41,
+      "bases": []
+    },
+    {
+      "name": "RiskLevel",
+      "file": "payment/risk.py",
+      "start_line": 15,
+      "end_line": 18,
+      "bases": [
+        "Enum"
+      ]
+    }
+  ],
+  "class_edges": [],
+  "constants": [
+    {
+      "name": "GOOD_CARD",
+      "file": "demo.py",
+      "line": 12,
+      "comment": "# 4242... 是一个能通过 Luhn 校验的经典测试卡号"
+    },
+    {
+      "name": "_OLD_BLACKLIST",
+      "file": "legacy/security_check.py",
+      "line": 9,
+      "comment": "# 旧版黑名单,已不再维护(新黑名单在 payment/risk.py)"
+    },
+    {
+      "name": "MAX_DISCOUNT_CENTS",
+      "file": "payment/coupons.py",
+      "line": 11,
+      "comment": "# 单张优惠券最高抵扣 50 元"
+    },
+    {
+      "name": "_COUPON_VALUES",
+      "file": "payment/coupons.py",
+      "line": 14,
+      "comment": "# mock 的优惠券面额表:码 -> 抵扣金额(分)"
+    },
+    {
+      "name": "FEE_RATES",
+      "file": "payment/fees.py",
+      "line": 7,
+      "comment": "# 各货币的费率表。新增货币时在这里加一行即可。"
+    },
+    {
+      "name": "DEFAULT_FEE_RATE",
+      "file": "payment/fees.py",
+      "line": 12,
+      "comment": ""
+    },
+    {
+      "name": "REFUND_WINDOW_DAYS",
+      "file": "payment/refund.py",
+      "line": 13,
+      "comment": "# 退款时间窗口:支付成功后 30 天内"
+    },
+    {
+      "name": "_PAYMENT_DB",
+      "file": "payment/refund.py",
+      "line": 16,
+      "comment": "# mock 项目没有数据库,用内存字典模拟支付单存储"
+    },
+    {
+      "name": "BLACKLISTED_USERS",
+      "file": "payment/risk.py",
+      "line": 9,
+      "comment": "# 命中黑名单的用户直接判 HIGH 风险"
+    },
+    {
+      "name": "LARGE_AMOUNT_THRESHOLD",
+      "file": "payment/risk.py",
+      "line": 12,
+      "comment": "# 单笔超过该金额(分)视为大额,升一级风险"
+    },
+    {
+      "name": "MAX_AMOUNT_CENTS",
+      "file": "payment/validation.py",
+      "line": 9,
+      "comment": "# 单笔支付金额上限:100 万分 = 1 万元"
+    }
+  ]
+}

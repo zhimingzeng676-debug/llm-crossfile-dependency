@@ -1,0 +1,72 @@
+{
+ "complete_by_condition_and_partition": {
+  "humble": {
+   "all103": 0.417,
+   "determinable58": 0.098,
+   "nondet45": 0.83
+  },
+  "humble_prompt": {
+   "all103": 0.689,
+   "determinable58": 0.741,
+   "nondet45": 0.622
+  },
+  "humble_source": {
+   "all103": 0.845,
+   "determinable58": 0.902,
+   "nondet45": 0.77
+  },
+  "humble_source_masked": {
+   "all103": 0.759,
+   "determinable58": 0.759,
+   "nondet45": null
+  }
+ },
+ "circularity": {
+  "snippet_contains_answer": "58/103 (全部 determinable)",
+  "humble_source_det": 0.902,
+  "humble_source_masked_det": 0.759,
+  "circular_component": 0.144
+ },
+ "paired": {
+  "humble_source vs humble  [determinable=循环]": {
+   "to": 0.902,
+   "from": 0.098,
+   "delta": 0.805,
+   "t": 18.21,
+   "p": 1.9650295451850683e-25,
+   "n": 58
+  },
+  "humble_source vs humble  [nondet=去循环]": {
+   "to": 0.77,
+   "from": 0.83,
+   "delta": -0.059,
+   "t": -1.13,
+   "p": 0.2625255962414388,
+   "n": 45
+  },
+  "humble_source_masked vs humble [determinable,去循环]": {
+   "to": 0.759,
+   "from": 0.098,
+   "delta": 0.661,
+   "t": 12.09,
+   "p": 2.32190071933581e-17,
+   "n": 58
+  },
+  "humble_source vs humble_source_masked [循环成分]": {
+   "to": 0.902,
+   "from": 0.759,
+   "delta": 0.144,
+   "t": 2.5,
+   "p": 0.015295571791152096,
+   "n": 58
+  },
+  "humble_prompt vs humble [全样本,只问不喂]": {
+   "to": 0.689,
+   "from": 0.417,
+   "delta": 0.272,
+   "t": 4.48,
+   "p": 1.922136239816818e-05,
+   "n": 103
+  }
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "d3_neutral": {
+  "strict": {
+   "n_cases": 19,
+   "n_runs": 10,
+   "identify_I1": 0.2,
+   "identify_I2_hard": 0.153,
+   "by_category": {
+    "dynamic": {
+     "n": 4,
+     "I1": 0.925,
+     "I2": 0.725
+    },
+    "conditional": {
+     "n": 15,
+     "I1": 0.007,
+     "I2": 0.0
+    }
+   }
+  },
+  "humble": {
+   "n_cases": 19,
+   "n_runs": 10,
+   "identify_I1": 0.926,
+   "identify_I2_hard": 0.195,
+   "by_category": {
+    "dynamic": {
+     "n": 4,
+     "I1": 1.0,
+     "I2": 0.9
+    },
+    "conditional": {
+     "n": 15,
+     "I1": 0.907,
+     "I2": 0.007
+    }
+   }
+  },
+  "baseline": {
+   "n_cases": 19,
+   "n_runs": 10,
+   "identify_I1": 0.168,
+   "identify_I2_hard": 0.011,
+   "by_category": {
+    "dynamic": {
+     "n": 4,
+     "I1": 0.7,
+     "I2": 0.05
+    },
+    "conditional": {
+     "n": 15,
+     "I1": 0.027,
+     "I2": 0.0
+    }
+   }
+  }
+ }
+}

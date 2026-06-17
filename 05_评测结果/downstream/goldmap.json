@@ -1,0 +1,466 @@
+{
+ "_internal.py": {
+  "gold_full": [
+   "_reloader",
+   "debug",
+   "exceptions",
+   "file_storage",
+   "formparser",
+   "headers",
+   "http",
+   "map",
+   "mixins",
+   "request",
+   "response",
+   "serving",
+   "structures",
+   "test",
+   "utils"
+  ],
+  "dropped": "map",
+  "card_wrong": [
+   "_reloader",
+   "debug",
+   "exceptions",
+   "file_storage",
+   "formparser",
+   "headers",
+   "http",
+   "mixins",
+   "request",
+   "response",
+   "serving",
+   "structures",
+   "test",
+   "utils"
+  ]
+ },
+ "datastructures/__init__.py": {
+  "gold_full": [
+   "exceptions",
+   "formparser",
+   "http_proxy",
+   "lint",
+   "map",
+   "multipart",
+   "request",
+   "response",
+   "rules",
+   "test",
+   "urls",
+   "utils"
+  ],
+  "dropped": "request",
+  "card_wrong": [
+   "exceptions",
+   "formparser",
+   "http_proxy",
+   "lint",
+   "map",
+   "multipart",
+   "response",
+   "rules",
+   "test",
+   "urls",
+   "utils"
+  ]
+ },
+ "datastructures/cache_control.py": {
+  "gold_full": [
+   "datastructures",
+   "response"
+  ],
+  "dropped": "response",
+  "card_wrong": [
+   "datastructures"
+  ]
+ },
+ "datastructures/headers.py": {
+  "gold_full": [
+   "datastructures",
+   "file_storage"
+  ],
+  "dropped": "file_storage",
+  "card_wrong": [
+   "datastructures"
+  ]
+ },
+ "datastructures/mixins.py": {
+  "gold_full": [
+   "cache_control",
+   "datastructures",
+   "headers",
+   "structures"
+  ],
+  "dropped": "headers",
+  "card_wrong": [
+   "cache_control",
+   "datastructures",
+   "structures"
+  ]
+ },
+ "datastructures/structures.py": {
+  "gold_full": [
+   "accept",
+   "auth",
+   "cache_control",
+   "csp",
+   "datastructures",
+   "file_storage",
+   "headers"
+  ],
+  "dropped": "csp",
+  "card_wrong": [
+   "accept",
+   "auth",
+   "cache_control",
+   "datastructures",
+   "file_storage",
+   "headers"
+  ]
+ },
+ "debug/console.py": {
+  "gold_full": [
+   "debug",
+   "tbtools"
+  ],
+  "dropped": "tbtools",
+  "card_wrong": [
+   "debug"
+  ]
+ },
+ "debug/tbtools.py": {
+  "gold_full": [
+   "console",
+   "debug",
+   "serving"
+  ],
+  "dropped": "debug",
+  "card_wrong": [
+   "console",
+   "serving"
+  ]
+ },
+ "exceptions.py": {
+  "gold_full": [
+   "debug",
+   "formparser",
+   "headers",
+   "http_proxy",
+   "map",
+   "multipart",
+   "request",
+   "response",
+   "serving",
+   "utils",
+   "wsgi"
+  ],
+  "dropped": "multipart",
+  "card_wrong": [
+   "debug",
+   "formparser",
+   "headers",
+   "http_proxy",
+   "map",
+   "request",
+   "response",
+   "serving",
+   "utils",
+   "wsgi"
+  ]
+ },
+ "http.py": {
+  "gold_full": [
+   "auth",
+   "csp",
+   "debug",
+   "etag",
+   "exceptions",
+   "formparser",
+   "http_proxy",
+   "lint",
+   "multipart",
+   "proxy_fix",
+   "request",
+   "response",
+   "serving",
+   "shared_data",
+   "test",
+   "utils"
+  ],
+  "dropped": "multipart",
+  "card_wrong": [
+   "auth",
+   "csp",
+   "debug",
+   "etag",
+   "exceptions",
+   "formparser",
+   "http_proxy",
+   "lint",
+   "proxy_fix",
+   "request",
+   "response",
+   "serving",
+   "shared_data",
+   "test",
+   "utils"
+  ]
+ },
+ "routing/converters.py": {
+  "gold_full": [
+   "map",
+   "matcher",
+   "routing",
+   "rules"
+  ],
+  "dropped": "routing",
+  "card_wrong": [
+   "map",
+   "matcher",
+   "rules"
+  ]
+ },
+ "routing/exceptions.py": {
+  "gold_full": [
+   "map",
+   "matcher",
+   "routing"
+  ],
+  "dropped": "matcher",
+  "card_wrong": [
+   "map",
+   "routing"
+  ]
+ },
+ "routing/map.py": {
+  "gold_full": [
+   "converters",
+   "exceptions",
+   "routing",
+   "rules"
+  ],
+  "dropped": "routing",
+  "card_wrong": [
+   "converters",
+   "exceptions",
+   "rules"
+  ]
+ },
+ "routing/matcher.py": {
+  "gold_full": [
+   "map",
+   "routing"
+  ],
+  "dropped": "routing",
+  "card_wrong": [
+   "map"
+  ]
+ },
+ "routing/rules.py": {
+  "gold_full": [
+   "exceptions",
+   "map",
+   "matcher",
+   "routing"
+  ],
+  "dropped": "matcher",
+  "card_wrong": [
+   "exceptions",
+   "map",
+   "routing"
+  ]
+ },
+ "sansio/__init__.py": {
+  "gold_full": [
+   "http",
+   "wsgi"
+  ],
+  "dropped": "wsgi",
+  "card_wrong": [
+   "http"
+  ]
+ },
+ "sansio/http.py": {
+  "gold_full": [
+   "request",
+   "response"
+  ],
+  "dropped": "response",
+  "card_wrong": [
+   "request"
+  ]
+ },
+ "sansio/multipart.py": {
+  "gold_full": [
+   "formparser",
+   "test"
+  ],
+  "dropped": "test",
+  "card_wrong": [
+   "formparser"
+  ]
+ },
+ "sansio/utils.py": {
+  "gold_full": [
+   "debug",
+   "request",
+   "wsgi"
+  ],
+  "dropped": "request",
+  "card_wrong": [
+   "debug",
+   "wsgi"
+  ]
+ },
+ "security.py": {
+  "gold_full": [
+   "debug",
+   "shared_data",
+   "utils"
+  ],
+  "dropped": "shared_data",
+  "card_wrong": [
+   "debug",
+   "utils"
+  ]
+ },
+ "serving.py": {
+  "gold_full": [
+   "__init__",
+   "testapp"
+  ],
+  "dropped": "testapp",
+  "card_wrong": [
+   "__init__"
+  ]
+ },
+ "test.py": {
+  "gold_full": [
+   "__init__",
+   "request",
+   "response"
+  ],
+  "dropped": "request",
+  "card_wrong": [
+   "__init__",
+   "response"
+  ]
+ },
+ "urls.py": {
+  "gold_full": [
+   "map",
+   "response",
+   "rules",
+   "serving",
+   "test",
+   "utils"
+  ],
+  "dropped": "serving",
+  "card_wrong": [
+   "map",
+   "response",
+   "rules",
+   "test",
+   "utils"
+  ]
+ },
+ "utils.py": {
+  "gold_full": [
+   "debug",
+   "exceptions",
+   "request",
+   "response",
+   "shared_data",
+   "tbtools",
+   "test"
+  ],
+  "dropped": "response",
+  "card_wrong": [
+   "debug",
+   "exceptions",
+   "request",
+   "shared_data",
+   "tbtools",
+   "test"
+  ]
+ },
+ "wrappers/__init__.py": {
+  "gold_full": [
+   "__init__",
+   "utils"
+  ],
+  "dropped": "utils",
+  "card_wrong": [
+   "__init__"
+  ]
+ },
+ "wrappers/request.py": {
+  "gold_full": [
+   "_internal",
+   "debug",
+   "exceptions",
+   "map",
+   "response",
+   "test",
+   "testapp",
+   "utils",
+   "wrappers"
+  ],
+  "dropped": "response",
+  "card_wrong": [
+   "_internal",
+   "debug",
+   "exceptions",
+   "map",
+   "test",
+   "testapp",
+   "utils",
+   "wrappers"
+  ]
+ },
+ "wrappers/response.py": {
+  "gold_full": [
+   "debug",
+   "exceptions",
+   "test",
+   "testapp",
+   "utils",
+   "wrappers"
+  ],
+  "dropped": "testapp",
+  "card_wrong": [
+   "debug",
+   "exceptions",
+   "test",
+   "utils",
+   "wrappers"
+  ]
+ },
+ "wsgi.py": {
+  "gold_full": [
+   "formparser",
+   "http_proxy",
+   "lint",
+   "local",
+   "map",
+   "request",
+   "response",
+   "shared_data",
+   "test",
+   "utils"
+  ],
+  "dropped": "request",
+  "card_wrong": [
+   "formparser",
+   "http_proxy",
+   "lint",
+   "local",
+   "map",
+   "response",
+   "shared_data",
+   "test",
+   "utils"
+  ]
+ }
+}

@@ -1,0 +1,20 @@
+# 消融实验(第二阶段):baseline + 调用图卡片,其余不变。
+# 假设:把调用图文本化进索引,能救活反向查询用例(CC-03 谁调用了我 / CF-03 谁用了我),
+# 且不伤其他用例(卡片只是多出来的候选块,排不上号就不会出现)。
+name: graph_cards
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl
+chunking:
+  strategy: fixed
+  chunk_lines: 40
+  overlap: 10
+  include_graph_cards: true
+embedder:
+  type: hashing
+  dim: 512
+backend:
+  type: local_rag
+  top_k: 3
+llm:
+  type: mock
+prompt_file: configs/prompts/plain.yaml

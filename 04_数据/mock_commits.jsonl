@@ -1,0 +1,13 @@
+{"hash": "a1f3c92", "author": "zhangwei", "date": "2026-03-02", "message": "feat: 初始化支付网关,实现 process_payment 基本流程", "files": ["payment/gateway.py", "payment/models.py"]}
+{"hash": "b7e201d", "author": "zhangwei", "date": "2026-03-05", "message": "feat: 接入 Luhn 算法做卡号校验,替换原来只检查长度的临时方案", "files": ["payment/validation.py"]}
+{"hash": "c4d88a0", "author": "liuyang", "date": "2026-03-11", "message": "feat: 新增风控模块,支付前检查黑名单和大额交易", "files": ["payment/risk.py", "payment/gateway.py"]}
+{"hash": "M92b4e7", "author": "liuyang", "date": "2026-03-18", "message": "fix: 手续费向上取整,修复 0.5 分手续费被抹掉导致平台亏损的 bug", "files": ["payment/fees.py"]}
+{"hash": "e15fa33", "author": "chenjing", "date": "2026-04-01", "message": "feat: 实现退款流程 process_refund,限制 30 天退款窗口", "files": ["payment/refund.py"]}
+{"hash": "f68c1b9", "author": "chenjing", "date": "2026-04-09", "message": "fix: 退款前校验支付单状态必须是 SUCCEEDED,防止重复退款", "files": ["payment/refund.py"]}
+{"hash": "0a9d7c4", "author": "zhangwei", "date": "2026-04-15", "message": "refactor: 统一事件日志入口 log_event,替换散落各处的 print", "files": ["utils/logging_utils.py", "payment/gateway.py", "payment/refund.py"]}
+{"hash": "1b3e8f2", "author": "liuyang", "date": "2026-05-06", "message": "feat: 手续费费率改为按货币配置,新增 USD 通道费率 2.9%", "files": ["payment/fees.py"]}
+{"hash": "2c7f0a1", "author": "wangfang", "date": "2026-05-12", "message": "feat: 新增优惠券模块,下单时按面额抵扣,单张上限 MAX_DISCOUNT_CENTS", "files": ["payment/coupons.py"]}
+{"hash": "3d8e1b5", "author": "wangfang", "date": "2026-05-13", "message": "feat: 新增下单入口 checkout,串起优惠券抵扣和支付流程", "files": ["payment/checkout.py"]}
+{"hash": "4e9f2c8", "author": "wangfang", "date": "2026-05-20", "message": "fix: 优惠券抵扣金额不能超过支付金额本身,避免出现负金额支付单", "files": ["payment/coupons.py"]}
+{"hash": "5fa03d2", "author": "zhangwei", "date": "2026-05-26", "message": "refactor: 废弃 legacy/security_check 旧版安全检查,风控统一走 risk.assess_risk", "files": ["legacy/security_check.py", "payment/risk.py"]}
+{"hash": "6ab14e6", "author": "chenjing", "date": "2026-06-02", "message": "docs: 补充 README 的模块结构和调用链说明", "files": ["README.md"]}

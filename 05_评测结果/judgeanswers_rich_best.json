@@ -1,0 +1,106 @@
+[
+ {
+  "id": "R-REV-01",
+  "answer": "{\"hit\": 5, \"total\": 36, \"score\": 0.139, \"reason\": \"遗漏大量依赖文件\"}"
+ },
+ {
+  "id": "R-REV-02",
+  "answer": "{\"hit\": 5, \"total\": 26, \"score\": 0.19230769230769232, \"reason\": \"遗漏了大部分文件名\"}"
+ },
+ {
+  "id": "R-REV-03",
+  "answer": "{\"hit\": 4, \"total\": 25, \"score\": 0.16, \"reason\": \"遗漏大量要点，仅列出四个文件\"}"
+ },
+ {
+  "id": "R-REV-04",
+  "answer": "{\"hit\": 0, \"total\": 20, \"score\": 0, \"reason\": \"遗漏所有正确文件名\"}"
+ },
+ {
+  "id": "R-REV-05",
+  "answer": "{\"hit\": 4, \"total\": 20, \"score\": 0.2, \"reason\": \"遗漏了大部分依赖文件\"}"
+ },
+ {
+  "id": "R-REV-06",
+  "answer": "{\"hit\": 18, \"total\": 18, \"score\": 1.0, \"reason\": \"完全命中所有要点，无遗漏或错误\"}"
+ },
+ {
+  "id": "R-FWD-01",
+  "answer": "{\"hit\": 2, \"total\": 19, \"score\": 0.105, \"reason\": \"遗漏大量依赖项，仅正确2个\"}"
+ },
+ {
+  "id": "R-FWD-02",
+  "answer": "{\"hit\": 1, \"total\": 14, \"score\": 0.07142857142857142, \"reason\": \"仅正确列出ansi.py,其余均错误\"}"
+ },
+ {
+  "id": "R-FWD-03",
+  "answer": "{\"hit\": 14, \"total\": 14, \"score\": 1.0, \"reason\": \"完全命中所有要点，无遗漏或错误\"}"
+ },
+ {
+  "id": "R-FWD-04",
+  "answer": "{\"hit\": 0, \"total\": 14, \"score\": 0, \"reason\": \"未命中任何要点，给出错误信息\"}"
+ },
+ {
+  "id": "R-FWD-05",
+  "answer": "{\"hit\": 13, \"total\": 13, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-01",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-02",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-03",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-04",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-05",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-06",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-LOC-01",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名markdown.py\"}"
+ },
+ {
+  "id": "R-LOC-02",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名console.py\"}"
+ },
+ {
+  "id": "R-LOC-03",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名padding.py\"}"
+ },
+ {
+  "id": "R-LOC-04",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名text.py\"}"
+ },
+ {
+  "id": "R-LOC-05",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名_windows.py\"}"
+ },
+ {
+  "id": "R-LOC-06",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名ansi.py\"}"
+ },
+ {
+  "id": "R-IND-01",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中了中间文件\"}"
+ },
+ {
+  "id": "R-IND-02",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中了中间文件color.py\"}"
+ },
+ {
+  "id": "R-IND-03",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中pretty.py\"}"
+ }
+]

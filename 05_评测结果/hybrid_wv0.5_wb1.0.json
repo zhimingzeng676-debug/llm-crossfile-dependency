@@ -1,0 +1,1097 @@
+{
+  "config_name": "hybrid_wv0.5_wb1.0",
+  "config": {
+    "name": "hybrid_wv0.5_wb1.0",
+    "repo_root": "mock_repo",
+    "commits_path": "data/mock_commits.jsonl",
+    "index_dir": "indexes/hybrid",
+    "chunking": {
+      "strategy": "fixed",
+      "chunk_lines": 40,
+      "overlap": 10,
+      "include_graph_cards": false,
+      "include_constant_cards": false
+    },
+    "embedder": {
+      "type": "hashing",
+      "dim": 512,
+      "model_name": "models/bge-small-zh-v1.5"
+    },
+    "backend": {
+      "type": "hybrid",
+      "top_k": 3,
+      "vector_weight": 0.5,
+      "bm25_weight": 1.0,
+      "rerank": false,
+      "rerank_candidates": 10,
+      "rerank_scorer": "lexical",
+      "rerank_model": "models/bge-reranker-base"
+    },
+    "llm": {
+      "type": "mock",
+      "max_lines": 6,
+      "model": "",
+      "base_url": "",
+      "temperature": 0.0
+    },
+    "prompt_file": "configs/prompts/plain.yaml"
+  },
+  "n_cases": 41,
+  "elapsed_sec": 0.02,
+  "summary": {
+    "overall": {
+      "n": 41,
+      "avg_answer_score": 0.7317,
+      "retrieval_hit_rate": 0.7805
+    },
+    "by_category": {
+      "call_chain": {
+        "n": 10,
+        "avg_answer_score": 0.6667,
+        "retrieval_hit_rate": 0.7
+      },
+      "cross_file": {
+        "n": 10,
+        "avg_answer_score": 0.6833,
+        "retrieval_hit_rate": 0.7
+      },
+      "history": {
+        "n": 9,
+        "avg_answer_score": 0.7222,
+        "retrieval_hit_rate": 0.7778
+      },
+      "semantic": {
+        "n": 12,
+        "avg_answer_score": 0.8333,
+        "retrieval_hit_rate": 0.9167
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "CC-01",
+      "category": "call_chain",
+      "priority": "P0",
+      "question": "process_payment 函数定义在哪个文件?",
+      "answer": "根据检索到的代码,相关内容位于 payment/gateway.py (第 1-40 行);提交历史 commit:a1f3c92;demo.py (第 1-32 行):\n  process_payment 是核心函数,串起校验、风控、计费三道工序,\n  提交说明: feat: 初始化支付网关,实现 process_payment 基本流程\n  def process_payment(user_id: str, card: Card, amount: int, currency: str = \"CNY\") -> Payment:\n  from payment.gateway import process_payment\n  p1 = process_payment(\"u_normal_01\", GOOD_CARD, 1000)\n  p2 = process_payment(\"u_fraud_001\", GOOD_CARD, 1000)",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['gateway.py'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/gateway.py",
+      "retrieved": [
+        {
+          "chunk_id": "commit:a1f3c92",
+          "score": 0.0241
+        },
+        {
+          "chunk_id": "demo.py#L1-32",
+          "score": 0.024
+        },
+        {
+          "chunk_id": "payment/gateway.py#L1-40",
+          "score": 0.0236
+        }
+      ]
+    },
+    {
+      "id": "CC-02",
+      "category": "call_chain",
+      "priority": "P0",
+      "question": "process_payment 调用了哪些函数?",
+      "answer": "根据检索到的代码(README.md (第 1-40 行)),其中发起的函数/构造调用有: PayFlow, checkout, apply_coupon, coupon_value, process_payment, save_payment, validate_card, luhn_check, validate_amount, assess_risk, is_blacklisted, calculate_fee, get_fee_rate, log_event, process_refund, find_payment。",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['validate_card', 'assess_risk', 'calculate_fee'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/gateway.py",
+      "retrieved": [
+        {
+          "chunk_id": "payment/checkout.py#L1-25",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "README.md#L1-40",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "payment/gateway.py#L1-40",
+          "score": 0.0239
+        }
+      ]
+    },
+    {
+      "id": "CC-03",
+      "category": "call_chain",
+      "priority": "P2",
+      "question": "luhn_check 是被哪个函数调用的?",
+      "answer": "根据检索到的代码(README.md (第 1-40 行)),其中发起的函数/构造调用有: PayFlow, checkout, apply_coupon, coupon_value, process_payment, save_payment, validate_card, luhn_check, validate_amount, assess_risk, is_blacklisted, calculate_fee, get_fee_rate, log_event, process_refund, find_payment。",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['validate_card'],缺失 []",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['payment/validation.py'],实际 ['README.md', 'README.md', 'commit:5fa03d2']",
+      "retrieved": [
+        {
+          "chunk_id": "README.md#L1-40",
+          "score": 0.0245
+        },
+        {
+          "chunk_id": "README.md#L31-55",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "commit:5fa03d2",
+          "score": 0.023
+        }
+      ]
+    },
+    {
+      "id": "CC-04",
+      "category": "call_chain",
+      "priority": "P1",
+      "question": "process_refund 调用了哪些函数来完成退款?",
+      "answer": "根据检索到的代码(README.md (第 1-40 行)),其中发起的函数/构造调用有: PayFlow, checkout, apply_coupon, coupon_value, process_payment, save_payment, validate_card, luhn_check, validate_amount, assess_risk, is_blacklisted, calculate_fee, get_fee_rate, log_event, process_refund, find_payment。",
+      "answer_score": 0.6667,
+      "answer_judge_detail": "命中 ['find_payment', 'log_event'],缺失 ['validate_refund_window']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/refund.py",
+      "retrieved": [
+        {
+          "chunk_id": "README.md#L1-40",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "commit:e15fa33",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "payment/refund.py#L31-51",
+          "score": 0.0236
+        }
+      ]
+    },
+    {
+      "id": "HI-01",
+      "category": "history",
+      "priority": "P0",
+      "question": "谁修改了手续费的逻辑?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:M92b4e7;提交历史 commit:1b3e8f2;payment/fees.py (第 1-24 行):\n  提交 M92b4e7 作者: liuyang 日期: 2026-03-18\n  提交说明: fix: 手续费向上取整,修复 0.5 分手续费被抹掉导致平台亏损的 bug\n  提交 1b3e8f2 作者: liuyang 日期: 2026-05-06\n  提交说明: feat: 手续费费率改为按货币配置,新增 USD 通道费率 2.9%\n  \"\"\"手续费计算。\n  \"\"\"计算手续费(分),向上取整保证平台不亏损。\"\"\"",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['liuyang'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 commit:M92b4e7",
+      "retrieved": [
+        {
+          "chunk_id": "commit:M92b4e7",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "commit:1b3e8f2",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "payment/fees.py#L1-24",
+          "score": 0.0238
+        }
+      ]
+    },
+    {
+      "id": "HI-02",
+      "category": "history",
+      "priority": "P1",
+      "question": "手续费为什么要向上取整?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:M92b4e7;payment/fees.py (第 1-24 行);提交历史 commit:1b3e8f2:\n  提交说明: fix: 手续费向上取整,修复 0.5 分手续费被抹掉导致平台亏损的 bug\n  \"\"\"计算手续费(分),向上取整保证平台不亏损。\"\"\"\n  提交说明: feat: 手续费费率改为按货币配置,新增 USD 通道费率 2.9%\n  \"\"\"手续费计算。\n  提交 M92b4e7 作者: liuyang 日期: 2026-03-18\n  改动文件: payment/fees.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['亏损', '抹掉']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 commit:M92b4e7",
+      "retrieved": [
+        {
+          "chunk_id": "commit:M92b4e7",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "payment/fees.py#L1-24",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "commit:1b3e8f2",
+          "score": 0.0238
+        }
+      ]
+    },
+    {
+      "id": "HI-03",
+      "category": "history",
+      "priority": "P1",
+      "question": "退款功能是谁在什么时候加的?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:f68c1b9;payment/refund.py (第 1-40 行):\n  提交 f68c1b9 作者: chenjing 日期: 2026-04-09\n  提交说明: fix: 退款前校验支付单状态必须是 SUCCEEDED,防止重复退款\n  \"\"\"退款流程。\n  退款有时间窗口限制:支付成功后 30 天内才允许退款(REFUND_WINDOW_DAYS)。\n  # 退款时间窗口:支付成功后 30 天内\n  \"\"\"检查是否还在退款时间窗口内(30 天)。\"\"\"",
+      "answer_score": 0.5,
+      "answer_judge_detail": "命中 ['chenjing'],缺失 ['2026-04-01']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['commit:e15fa33'],实际 ['payment/refund.py', 'legacy/__init__.py', 'commit:f68c1b9']",
+      "retrieved": [
+        {
+          "chunk_id": "payment/refund.py#L1-40",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "legacy/__init__.py#L1-1",
+          "score": 0.0239
+        },
+        {
+          "chunk_id": "commit:f68c1b9",
+          "score": 0.0238
+        }
+      ]
+    },
+    {
+      "id": "HI-04",
+      "category": "history",
+      "priority": "P2",
+      "question": "卡号校验最初是怎么实现的,后来为什么换掉?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:b7e201d;payment/validation.py (第 1-38 行);demo.py (第 1-32 行):\n  提交说明: feat: 接入 Luhn 算法做卡号校验,替换原来只检查长度的临时方案\n  \"\"\"卡号与金额校验。\n  卡号合法性用 Luhn 算法(模 10 校验)判断,这是银行卡号的行业标准校验方式。\n  \"\"\"校验银行卡:卡号过 Luhn 校验,且未过期。\"\"\"\n  # 4242... 是一个能通过 Luhn 校验的经典测试卡号\n  GOOD_CARD = Card(\"4242424242424242\", \"Alice\", 12, 2028)",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['只检查长度', '临时方案']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 commit:b7e201d",
+      "retrieved": [
+        {
+          "chunk_id": "commit:b7e201d",
+          "score": 0.0245
+        },
+        {
+          "chunk_id": "payment/validation.py#L1-38",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "demo.py#L1-32",
+          "score": 0.0234
+        }
+      ]
+    },
+    {
+      "id": "CF-01",
+      "category": "cross_file",
+      "priority": "P1",
+      "question": "哪些文件用到了 log_event?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:0a9d7c4;payment/gateway.py (第 31-53 行);utils/logging_utils.py (第 1-17 行):\n  提交说明: refactor: 统一事件日志入口 log_event,替换散落各处的 print\n  log_event(\"payment.rejected\", payment.payment_id, reason=\"invalid_card\")\n  log_event(\"payment.rejected\", payment.payment_id, reason=\"invalid_amount\")\n  log_event(\"payment.rejected\", payment.payment_id, reason=\"high_risk\")\n  log_event(\"payment.succeeded\", payment.payment_id, fee=payment.fee)\n  所有业务事件(支付成功/失败、退款等)都走 log_event,",
+      "answer_score": 0.5,
+      "answer_judge_detail": "命中 ['gateway'],缺失 ['refund']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 commit:0a9d7c4",
+      "retrieved": [
+        {
+          "chunk_id": "commit:0a9d7c4",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "payment/gateway.py#L31-53",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "utils/logging_utils.py#L1-17",
+          "score": 0.0239
+        }
+      ]
+    },
+    {
+      "id": "CF-02",
+      "category": "cross_file",
+      "priority": "P0",
+      "question": "单笔支付金额上限是多少?在哪个文件定义?",
+      "answer": "根据检索到的代码,相关内容位于 payment/coupons.py (第 1-37 行);提交历史 commit:4e9f2c8;payment/risk.py (第 1-38 行):\n  抵扣规则:固定面额,但不能超过上限,也不能把支付金额抵成负数。\n  提交说明: fix: 优惠券抵扣金额不能超过支付金额本身,避免出现负金额支付单\n  抵扣不能超过支付金额本身(否则出现负金额支付单)。\n  \"\"\"对支付单应用优惠券,返回实际抵扣金额(分)。\n  每笔支付在扣款前都要先过 assess_risk,高风险直接拒绝。\n  # 单笔超过该金额(分)视为大额,升一级风险",
+      "answer_score": 0.0,
+      "answer_judge_detail": "命中 [],缺失 ['validation.py', 'MAX_AMOUNT_CENTS']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['payment/validation.py'],实际 ['commit:4e9f2c8', 'payment/coupons.py', 'payment/risk.py']",
+      "retrieved": [
+        {
+          "chunk_id": "commit:4e9f2c8",
+          "score": 0.0241
+        },
+        {
+          "chunk_id": "payment/coupons.py#L1-37",
+          "score": 0.0238
+        },
+        {
+          "chunk_id": "payment/risk.py#L1-38",
+          "score": 0.0229
+        }
+      ]
+    },
+    {
+      "id": "CF-03",
+      "category": "cross_file",
+      "priority": "P2",
+      "question": "models.py 里定义的数据结构被哪些模块使用?",
+      "answer": "根据检索到的代码,相关内容位于 payment/models.py (第 1-40 行);README.md (第 1-40 行);提交历史 commit:c4d88a0:\n  所有跨模块共享的数据结构都集中放在这里,\n  - `payment/models.py` — 数据模型(Payment / Card)\n  ## 模块结构\n  \"\"\"数据模型:支付单与银行卡。\n  \"\"\"银行卡信息。card_number 仅在校验时使用,不落库。\"\"\"\n  提交说明: feat: 新增风控模块,支付前检查黑名单和大额交易",
+      "answer_score": 0.0,
+      "answer_judge_detail": "命中 [],缺失 ['gateway', 'refund']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['payment/gateway.py', 'payment/refund.py'],实际 ['README.md', 'payment/models.py', 'commit:c4d88a0']",
+      "retrieved": [
+        {
+          "chunk_id": "README.md#L1-40",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "payment/models.py#L1-40",
+          "score": 0.0241
+        },
+        {
+          "chunk_id": "commit:c4d88a0",
+          "score": 0.0231
+        }
+      ]
+    },
+    {
+      "id": "CF-04",
+      "category": "cross_file",
+      "priority": "P1",
+      "question": "USD 的手续费率是多少?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:1b3e8f2;提交历史 commit:M92b4e7;payment/fees.py (第 1-24 行):\n  提交说明: feat: 手续费费率改为按货币配置,新增 USD 通道费率 2.9%\n  提交说明: fix: 手续费向上取整,修复 0.5 分手续费被抹掉导致平台亏损的 bug\n  \"\"\"手续费计算。\n  \"\"\"计算手续费(分),向上取整保证平台不亏损。\"\"\"\n  费率按货币区分:人民币 0.6%,美元 2.9%(模拟跨境通道更贵)。\n  # 各货币的费率表。新增货币时在这里加一行即可。",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['2.9']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/fees.py",
+      "retrieved": [
+        {
+          "chunk_id": "commit:1b3e8f2",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "payment/fees.py#L1-24",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "commit:M92b4e7",
+          "score": 0.0238
+        }
+      ]
+    },
+    {
+      "id": "SE-01",
+      "category": "semantic",
+      "priority": "P0",
+      "question": "卡号校验用的是什么算法?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:b7e201d;payment/validation.py (第 1-38 行);提交历史 commit:f68c1b9:\n  提交说明: feat: 接入 Luhn 算法做卡号校验,替换原来只检查长度的临时方案\n  卡号合法性用 Luhn 算法(模 10 校验)判断,这是银行卡号的行业标准校验方式。\n  \"\"\"卡号与金额校验。\n  \"\"\"校验银行卡:卡号过 Luhn 校验,且未过期。\"\"\"\n  提交说明: fix: 退款前校验支付单状态必须是 SUCCEEDED,防止重复退款\n  \"\"\"Luhn 模 10 算法:从右往左,偶数位翻倍(>9 则减 9),总和能被 10 整除即合法。\"\"\"",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['luhn', '模 10']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/validation.py",
+      "retrieved": [
+        {
+          "chunk_id": "commit:b7e201d",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "payment/validation.py#L1-38",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "commit:f68c1b9",
+          "score": 0.0232
+        }
+      ]
+    },
+    {
+      "id": "SE-02",
+      "category": "semantic",
+      "priority": "P0",
+      "question": "支付前的安全检查是在哪里做的?",
+      "answer": "根据检索到的代码,相关内容位于 README.md (第 31-55 行);payment/risk.py (第 1-38 行);legacy/security_check.py (第 1-17 行):\n  和\"支付安全检查\"高度匹配,但它**已废弃、无调用方**;真正的安全检查是\n  \"\"\"风控检查:支付执行前的安全防线。\n  \"\"\"(已废弃)旧版支付安全检查。\n  支付安全检查现在统一走 payment/risk.py 的 assess_risk。\n  \"\"\"(已废弃,勿用)旧版安全检查:只查旧黑名单,不看金额。\n  每笔支付在扣款前都要先过 assess_risk,高风险直接拒绝。",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['risk', 'assess_risk', '风控']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/risk.py",
+      "retrieved": [
+        {
+          "chunk_id": "legacy/security_check.py#L1-17",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "payment/risk.py#L1-38",
+          "score": 0.0239
+        },
+        {
+          "chunk_id": "README.md#L31-55",
+          "score": 0.0239
+        }
+      ]
+    },
+    {
+      "id": "SE-03",
+      "category": "semantic",
+      "priority": "P1",
+      "question": "退款有什么时间限制?",
+      "answer": "根据检索到的代码,相关内容位于 payment/refund.py (第 1-40 行);提交历史 commit:e15fa33;payment/refund.py (第 31-51 行):\n  退款有时间窗口限制:支付成功后 30 天内才允许退款(REFUND_WINDOW_DAYS)。\n  提交说明: feat: 实现退款流程 process_refund,限制 30 天退款窗口\n  # 退款时间窗口:支付成功后 30 天内\n  \"\"\"检查是否还在退款时间窗口内(30 天)。\"\"\"\n  \"\"\"处理退款:找单 -> 检查状态 -> 检查时间窗口 -> 改状态记日志。\n  \"\"\"处理退款:找单 -> 检查状态 -> 检查时间窗口 -> 改状态记日志。",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['30 天', 'REFUND_WINDOW_DAYS']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/refund.py",
+      "retrieved": [
+        {
+          "chunk_id": "payment/refund.py#L1-40",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "commit:e15fa33",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "payment/refund.py#L31-51",
+          "score": 0.0237
+        }
+      ]
+    },
+    {
+      "id": "SE-04",
+      "category": "semantic",
+      "priority": "P1",
+      "question": "多大金额算大额交易?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:c4d88a0;payment/risk.py (第 1-38 行);提交历史 commit:4e9f2c8:\n  提交说明: feat: 新增风控模块,支付前检查黑名单和大额交易\n  2. 大额交易   -> MEDIUM(放行但记录)\n  # 单笔超过该金额(分)视为大额,升一级风险\n  LARGE_AMOUNT_THRESHOLD = 500_000\n  提交说明: fix: 优惠券抵扣金额不能超过支付金额本身,避免出现负金额支付单\n  提交 c4d88a0 作者: liuyang 日期: 2026-03-11",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['500_000', 'LARGE_AMOUNT_THRESHOLD']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/risk.py",
+      "retrieved": [
+        {
+          "chunk_id": "commit:c4d88a0",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "payment/risk.py#L1-38",
+          "score": 0.0241
+        },
+        {
+          "chunk_id": "commit:4e9f2c8",
+          "score": 0.0239
+        }
+      ]
+    },
+    {
+      "id": "CC-05",
+      "category": "call_chain",
+      "priority": "P0",
+      "question": "checkout 函数调用了哪些函数?",
+      "answer": "根据检索到的代码(README.md (第 1-40 行)),其中发起的函数/构造调用有: PayFlow, checkout, apply_coupon, coupon_value, process_payment, save_payment, validate_card, luhn_check, validate_amount, assess_risk, is_blacklisted, calculate_fee, get_fee_rate, log_event, process_refund, find_payment。",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['apply_coupon', 'process_payment', 'save_payment'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/checkout.py",
+      "retrieved": [
+        {
+          "chunk_id": "README.md#L1-40",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "payment/gateway.py#L1-40",
+          "score": 0.0239
+        },
+        {
+          "chunk_id": "payment/checkout.py#L1-25",
+          "score": 0.0239
+        }
+      ]
+    },
+    {
+      "id": "CC-06",
+      "category": "call_chain",
+      "priority": "P2",
+      "question": "从 checkout 到 luhn_check 的调用要经过哪些函数?",
+      "answer": "根据检索到的代码(README.md (第 1-40 行)),其中发起的函数/构造调用有: PayFlow, checkout, apply_coupon, coupon_value, process_payment, save_payment, validate_card, luhn_check, validate_amount, assess_risk, is_blacklisted, calculate_fee, get_fee_rate, log_event, process_refund, find_payment。",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['process_payment', 'validate_card'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/checkout.py",
+      "retrieved": [
+        {
+          "chunk_id": "README.md#L1-40",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "README.md#L31-55",
+          "score": 0.0239
+        },
+        {
+          "chunk_id": "payment/checkout.py#L1-25",
+          "score": 0.0237
+        }
+      ]
+    },
+    {
+      "id": "CC-07",
+      "category": "call_chain",
+      "priority": "P1",
+      "question": "assess_risk 定义在哪个文件?它被谁调用?",
+      "answer": "根据检索到的代码(legacy/security_check.py (第 1-17 行)),其中发起的函数/构造调用有: set。",
+      "answer_score": 0.0,
+      "answer_judge_detail": "命中 [],缺失 ['risk.py', 'process_payment']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['payment/risk.py'],实际 ['legacy/security_check.py', 'commit:5fa03d2', 'README.md']",
+      "retrieved": [
+        {
+          "chunk_id": "legacy/security_check.py#L1-17",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "commit:5fa03d2",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "README.md#L31-55",
+          "score": 0.0234
+        }
+      ]
+    },
+    {
+      "id": "CC-08",
+      "category": "call_chain",
+      "priority": "P1",
+      "question": "apply_coupon 被哪个函数调用?",
+      "answer": "根据检索到的代码(README.md (第 1-40 行)),其中发起的函数/构造调用有: PayFlow, checkout, apply_coupon, coupon_value, process_payment, save_payment, validate_card, luhn_check, validate_amount, assess_risk, is_blacklisted, calculate_fee, get_fee_rate, log_event, process_refund, find_payment。",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['checkout'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/checkout.py",
+      "retrieved": [
+        {
+          "chunk_id": "README.md#L1-40",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "payment/checkout.py#L1-25",
+          "score": 0.0238
+        },
+        {
+          "chunk_id": "README.md#L31-55",
+          "score": 0.0232
+        }
+      ]
+    },
+    {
+      "id": "CC-09",
+      "category": "call_chain",
+      "priority": "P1",
+      "question": "log_event 被哪些函数调用?",
+      "answer": "根据检索到的代码(payment/gateway.py (第 31-53 行)),其中发起的函数/构造调用有: validate_card, log_event, validate_amount, assess_risk, calculate_fee。",
+      "answer_score": 0.0,
+      "answer_judge_detail": "命中 [],缺失 ['process_payment', 'process_refund', 'apply_coupon']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['utils/logging_utils.py'],实际 ['README.md', 'payment/gateway.py', 'README.md']",
+      "retrieved": [
+        {
+          "chunk_id": "README.md#L1-40",
+          "score": 0.0245
+        },
+        {
+          "chunk_id": "payment/gateway.py#L31-53",
+          "score": 0.0236
+        },
+        {
+          "chunk_id": "README.md#L31-55",
+          "score": 0.0236
+        }
+      ]
+    },
+    {
+      "id": "CC-10",
+      "category": "call_chain",
+      "priority": "P2",
+      "question": "coupon_value 函数是干什么的?谁调用它?",
+      "answer": "根据检索到的代码(payment/coupons.py (第 1-37 行)),其中发起的函数/构造调用有: get, min, log_event。",
+      "answer_score": 0.0,
+      "answer_judge_detail": "命中 [],缺失 ['apply_coupon']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/coupons.py",
+      "retrieved": [
+        {
+          "chunk_id": "payment/coupons.py#L1-37",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "README.md#L1-40",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "payment/checkout.py#L1-25",
+          "score": 0.0234
+        }
+      ]
+    },
+    {
+      "id": "HI-05",
+      "category": "history",
+      "priority": "P0",
+      "question": "优惠券功能是谁开发的?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:3d8e1b5;提交历史 commit:2c7f0a1;payment/coupons.py (第 1-37 行):\n  提交 3d8e1b5 作者: wangfang 日期: 2026-05-13\n  提交说明: feat: 新增下单入口 checkout,串起优惠券抵扣和支付流程\n  提交 2c7f0a1 作者: wangfang 日期: 2026-05-12\n  提交说明: feat: 新增优惠券模块,下单时按面额抵扣,单张上限 MAX_DISCOUNT_CENTS\n  \"\"\"优惠券:下单时抵扣一部分金额。\n  # 单张优惠券最高抵扣 50 元",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['wangfang'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 commit:2c7f0a1",
+      "retrieved": [
+        {
+          "chunk_id": "payment/coupons.py#L1-37",
+          "score": 0.0241
+        },
+        {
+          "chunk_id": "commit:3d8e1b5",
+          "score": 0.0237
+        },
+        {
+          "chunk_id": "commit:2c7f0a1",
+          "score": 0.0236
+        }
+      ]
+    },
+    {
+      "id": "HI-06",
+      "category": "history",
+      "priority": "P1",
+      "question": "旧版安全检查模块为什么被废弃了?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:5fa03d2;legacy/security_check.py (第 1-17 行);提交历史 commit:c4d88a0:\n  提交说明: refactor: 废弃 legacy/security_check 旧版安全检查,风控统一走 risk.assess_risk\n  \"\"\"(已废弃,勿用)旧版安全检查:只查旧黑名单,不看金额。\n  \"\"\"(已废弃)旧版支付安全检查。\n  支付安全检查现在统一走 payment/risk.py 的 assess_risk。\n  提交说明: feat: 新增风控模块,支付前检查黑名单和大额交易\n  此模块已于 2026-05 废弃,没有任何调用方。",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['assess_risk', '统一']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 commit:5fa03d2",
+      "retrieved": [
+        {
+          "chunk_id": "legacy/security_check.py#L1-17",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "commit:5fa03d2",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "commit:c4d88a0",
+          "score": 0.0233
+        }
+      ]
+    },
+    {
+      "id": "HI-07",
+      "category": "history",
+      "priority": "P1",
+      "question": "优惠券模块修过什么 bug?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:2c7f0a1;payment/coupons.py (第 1-37 行):\n  提交说明: feat: 新增优惠券模块,下单时按面额抵扣,单张上限 MAX_DISCOUNT_CENTS\n  \"\"\"优惠券:下单时抵扣一部分金额。\n  # 单张优惠券最高抵扣 50 元\n  # mock 的优惠券面额表:码 -> 抵扣金额(分)\n  \"\"\"查优惠券面额,无效券返回 0。面额超过上限的按上限截断。\"\"\"\n  \"\"\"对支付单应用优惠券,返回实际抵扣金额(分)。",
+      "answer_score": 0.0,
+      "answer_judge_detail": "全部未命中 ['超过支付金额', '负金额']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['commit:4e9f2c8'],实际 ['commit:2c7f0a1', 'payment/coupons.py', 'payment/checkout.py']",
+      "retrieved": [
+        {
+          "chunk_id": "commit:2c7f0a1",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "payment/coupons.py#L1-37",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "payment/checkout.py#L1-25",
+          "score": 0.0234
+        }
+      ]
+    },
+    {
+      "id": "HI-08",
+      "category": "history",
+      "priority": "P2",
+      "question": "2026 年 5 月仓库里发生了哪些改动?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:5fa03d2;提交历史 commit:M92b4e7;提交历史 commit:a1f3c92:\n  提交 5fa03d2 作者: zhangwei 日期: 2026-05-26\n  改动文件: legacy/security_check.py, payment/risk.py\n  提交 M92b4e7 作者: liuyang 日期: 2026-03-18\n  提交说明: fix: 手续费向上取整,修复 0.5 分手续费被抹掉导致平台亏损的 bug\n  改动文件: payment/fees.py\n  提交 a1f3c92 作者: zhangwei 日期: 2026-03-02",
+      "answer_score": 0.0,
+      "answer_judge_detail": "全部未命中 ['优惠券', 'checkout', '废弃']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 commit:5fa03d2",
+      "retrieved": [
+        {
+          "chunk_id": "commit:M92b4e7",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "commit:5fa03d2",
+          "score": 0.0234
+        },
+        {
+          "chunk_id": "commit:a1f3c92",
+          "score": 0.0228
+        }
+      ]
+    },
+    {
+      "id": "HI-09",
+      "category": "history",
+      "priority": "P2",
+      "question": "手续费费率改为按货币配置是哪个提交?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:1b3e8f2;提交历史 commit:M92b4e7;payment/fees.py (第 1-24 行):\n  提交说明: feat: 手续费费率改为按货币配置,新增 USD 通道费率 2.9%\n  提交说明: fix: 手续费向上取整,修复 0.5 分手续费被抹掉导致平台亏损的 bug\n  费率按货币区分:人民币 0.6%,美元 2.9%(模拟跨境通道更贵)。\n  \"\"\"查询某货币的费率,未配置的货币按 DEFAULT_FEE_RATE(3%)兜底。\"\"\"\n  提交 1b3e8f2 作者: liuyang 日期: 2026-05-06\n  提交 M92b4e7 作者: liuyang 日期: 2026-03-18",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['1b3e8f2'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 commit:1b3e8f2",
+      "retrieved": [
+        {
+          "chunk_id": "commit:1b3e8f2",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "payment/fees.py#L1-24",
+          "score": 0.0241
+        },
+        {
+          "chunk_id": "commit:M92b4e7",
+          "score": 0.0239
+        }
+      ]
+    },
+    {
+      "id": "CF-05",
+      "category": "cross_file",
+      "priority": "P1",
+      "question": "MAX_DISCOUNT_CENTS 的值是多少?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:2c7f0a1;payment/coupons.py (第 1-37 行);payment/validation.py (第 1-38 行):\n  提交说明: feat: 新增优惠券模块,下单时按面额抵扣,单张上限 MAX_DISCOUNT_CENTS\n  MAX_DISCOUNT_CENTS = 3000\n  return min(value, MAX_DISCOUNT_CENTS)\n  MAX_AMOUNT_CENTS = 1_000_000\n  \"\"\"校验金额:必须为正,且不超过单笔上限 MAX_AMOUNT_CENTS。\"\"\"\n  return 0 < amount <= MAX_AMOUNT_CENTS",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['3000'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/coupons.py",
+      "retrieved": [
+        {
+          "chunk_id": "commit:2c7f0a1",
+          "score": 0.0245
+        },
+        {
+          "chunk_id": "payment/coupons.py#L1-37",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "payment/validation.py#L1-38",
+          "score": 0.0234
+        }
+      ]
+    },
+    {
+      "id": "CF-06",
+      "category": "cross_file",
+      "priority": "P1",
+      "question": "哪些模块 import 了 utils.logging_utils?",
+      "answer": "根据检索到的代码,相关内容位于 payment/gateway.py (第 1-40 行);提交历史 commit:0a9d7c4;README.md (第 31-55 行):\n  from utils.logging_utils import log_event\n  改动文件: utils/logging_utils.py, payment/gateway.py, payment/refund.py\n  └── log_event (utils/logging_utils.py)\n  import uuid\n  from .fees import calculate_fee\n  from .models import Card, Payment, PaymentStatus",
+      "answer_score": 0.6667,
+      "answer_judge_detail": "命中 ['gateway', 'refund'],缺失 ['coupons']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 commit:0a9d7c4",
+      "retrieved": [
+        {
+          "chunk_id": "commit:0a9d7c4",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "README.md#L31-55",
+          "score": 0.0232
+        },
+        {
+          "chunk_id": "payment/gateway.py#L1-40",
+          "score": 0.0232
+        }
+      ]
+    },
+    {
+      "id": "CF-07",
+      "category": "cross_file",
+      "priority": "P0",
+      "question": "REFUND_WINDOW_DAYS 在哪里定义?值是多少?",
+      "answer": "根据检索到的代码,相关内容位于 payment/refund.py (第 1-40 行);payment/refund.py (第 31-51 行):\n  退款有时间窗口限制:支付成功后 30 天内才允许退款(REFUND_WINDOW_DAYS)。\n  REFUND_WINDOW_DAYS = 30\n  deadline = payment.created_at + timedelta(days=REFUND_WINDOW_DAYS)\n  deadline = payment.created_at + timedelta(days=REFUND_WINDOW_DAYS)\n  def validate_refund_window(payment: Payment) -> bool:\n  if not validate_refund_window(payment):",
+      "answer_score": 1.0,
+      "answer_judge_detail": "通过组 [\"['refund.py']->['refund.py']\", \"['30 天', 'REFUND_WINDOW_DAYS = 30', '= 30']->['30 天', 'REFUND_WINDOW_DAYS = 30', '= 30']\"],未过组 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/refund.py",
+      "retrieved": [
+        {
+          "chunk_id": "payment/refund.py#L1-40",
+          "score": 0.0241
+        },
+        {
+          "chunk_id": "README.md#L31-55",
+          "score": 0.0241
+        },
+        {
+          "chunk_id": "payment/refund.py#L31-51",
+          "score": 0.0237
+        }
+      ]
+    },
+    {
+      "id": "CF-08",
+      "category": "cross_file",
+      "priority": "P1",
+      "question": "黑名单用户列表在哪个文件里维护?",
+      "answer": "根据检索到的代码,相关内容位于 payment/risk.py (第 1-38 行);demo.py (第 1-32 行);提交历史 commit:c4d88a0:\n  1. 黑名单用户 -> HIGH(直接会被 gateway 拒绝)\n  # 2. 黑名单用户:风控拦截\n  p2 = process_payment(\"u_fraud_001\", GOOD_CARD, 1000)\n  # 命中黑名单的用户直接判 HIGH 风险\n  \"\"\"用户是否在欺诈黑名单中。\"\"\"\n  提交说明: feat: 新增风控模块,支付前检查黑名单和大额交易",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['risk.py']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/risk.py",
+      "retrieved": [
+        {
+          "chunk_id": "payment/risk.py#L1-38",
+          "score": 0.0241
+        },
+        {
+          "chunk_id": "commit:c4d88a0",
+          "score": 0.0237
+        },
+        {
+          "chunk_id": "demo.py#L1-32",
+          "score": 0.0236
+        }
+      ]
+    },
+    {
+      "id": "CF-09",
+      "category": "cross_file",
+      "priority": "P1",
+      "question": "checkout.py 依赖(import)了哪些模块?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:3d8e1b5;payment/models.py (第 1-40 行);README.md (第 1-40 行):\n  改动文件: payment/checkout.py\n  避免 gateway / refund / risk 之间互相 import 导致循环依赖。\n  它模拟一个极简的支付服务,刻意设计了跨文件的函数调用关系和 import 依赖,\n  - `payment/checkout.py` — 下单入口,`checkout` 串起优惠券+支付(第二阶段新增)\n  checkout (checkout.py)                ← 全仓库最深调用链的起点(4 层)\n  提交说明: feat: 新增下单入口 checkout,串起优惠券抵扣和支付流程",
+      "answer_score": 0.6667,
+      "answer_judge_detail": "命中 ['gateway', 'refund'],缺失 ['coupons']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['payment/checkout.py'],实际 ['README.md', 'commit:3d8e1b5', 'payment/models.py']",
+      "retrieved": [
+        {
+          "chunk_id": "README.md#L1-40",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "commit:3d8e1b5",
+          "score": 0.0236
+        },
+        {
+          "chunk_id": "payment/models.py#L1-40",
+          "score": 0.0235
+        }
+      ]
+    },
+    {
+      "id": "CF-10",
+      "category": "cross_file",
+      "priority": "P1",
+      "question": "支付单的状态一共有哪几种?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:f68c1b9;payment/models.py (第 1-40 行);payment/refund.py (第 1-40 行):\n  提交说明: fix: 退款前校验支付单状态必须是 SUCCEEDED,防止重复退款\n  \"\"\"支付单状态机:PENDING -> SUCCEEDED / FAILED -> REFUNDED。\"\"\"\n  只有 SUCCEEDED 状态的支付单才能退款,防止重复退款。\n  \"\"\"数据模型:支付单与银行卡。\n  \"\"\"一笔支付单。amount 单位是分(避免浮点误差)。\"\"\"\n  # mock 项目没有数据库,用内存字典模拟支付单存储",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['PENDING', 'SUCCEEDED', 'FAILED', 'REFUNDED'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/models.py",
+      "retrieved": [
+        {
+          "chunk_id": "commit:f68c1b9",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "payment/models.py#L1-40",
+          "score": 0.0238
+        },
+        {
+          "chunk_id": "payment/refund.py#L1-40",
+          "score": 0.0236
+        }
+      ]
+    },
+    {
+      "id": "SE-05",
+      "category": "semantic",
+      "priority": "P0",
+      "question": "支付的安全检查现在到底在哪做?有没有旧的实现?",
+      "answer": "根据检索到的代码,相关内容位于 legacy/security_check.py (第 1-17 行);payment/risk.py (第 1-38 行);提交历史 commit:a1f3c92:\n  支付安全检查现在统一走 payment/risk.py 的 assess_risk。\n  \"\"\"(已废弃)旧版支付安全检查。\n  \"\"\"风控检查:支付执行前的安全防线。\n  \"\"\"(已废弃,勿用)旧版安全检查:只查旧黑名单,不看金额。\n  提交说明: feat: 初始化支付网关,实现 process_payment 基本流程\n  \"\"\"综合评估一笔支付的风险等级。",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['risk', 'legacy'],缺失 []",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/risk.py",
+      "retrieved": [
+        {
+          "chunk_id": "legacy/security_check.py#L1-17",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "payment/risk.py#L1-38",
+          "score": 0.0237
+        },
+        {
+          "chunk_id": "commit:a1f3c92",
+          "score": 0.0233
+        }
+      ]
+    },
+    {
+      "id": "SE-06",
+      "category": "semantic",
+      "priority": "P1",
+      "question": "用优惠券最多能便宜多少钱?",
+      "answer": "根据检索到的代码,相关内容位于 payment/coupons.py (第 1-37 行);提交历史 commit:2c7f0a1:\n  # 单张优惠券最高抵扣 50 元\n  \"\"\"对支付单应用优惠券,返回实际抵扣金额(分)。\n  提交说明: feat: 新增优惠券模块,下单时按面额抵扣,单张上限 MAX_DISCOUNT_CENTS\n  MAX_DISCOUNT_CENTS = 3000\n  \"\"\"优惠券:下单时抵扣一部分金额。\n  # mock 的优惠券面额表:码 -> 抵扣金额(分)",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['3000', 'MAX_DISCOUNT_CENTS']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/coupons.py",
+      "retrieved": [
+        {
+          "chunk_id": "payment/coupons.py#L1-37",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "payment/checkout.py#L1-25",
+          "score": 0.0238
+        },
+        {
+          "chunk_id": "commit:2c7f0a1",
+          "score": 0.0237
+        }
+      ]
+    },
+    {
+      "id": "SE-07",
+      "category": "semantic",
+      "priority": "P1",
+      "question": "怎么判断一笔支付还能不能退款?",
+      "answer": "根据检索到的代码,相关内容位于 demo.py (第 1-32 行);payment/refund.py (第 1-40 行);payment/refund.py (第 31-51 行):\n  \"\"\"mock 仓库的自检 demo:跑一笔成功支付、一笔风控拒绝、一次退款。\n  只有 SUCCEEDED 状态的支付单才能退款,防止重复退款。\n  只有 SUCCEEDED 状态的支付单才能退款,防止重复退款。\n  退款有时间窗口限制:支付成功后 30 天内才允许退款(REFUND_WINDOW_DAYS)。\n  # 退款时间窗口:支付成功后 30 天内\n  REFUND_WINDOW_DAYS = 30",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['SUCCEEDED', '30 天', '时间窗口']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/refund.py",
+      "retrieved": [
+        {
+          "chunk_id": "demo.py#L1-32",
+          "score": 0.0245
+        },
+        {
+          "chunk_id": "payment/refund.py#L1-40",
+          "score": 0.0238
+        },
+        {
+          "chunk_id": "payment/refund.py#L31-51",
+          "score": 0.0238
+        }
+      ]
+    },
+    {
+      "id": "SE-08",
+      "category": "semantic",
+      "priority": "P1",
+      "question": "用户下单购买的总入口是哪个函数?",
+      "answer": "根据检索到的代码,相关内容位于 payment/checkout.py (第 1-25 行);提交历史 commit:3d8e1b5;README.md (第 1-40 行):\n  \"\"\"下单入口:用户视角的\"一键购买\"。\n  提交说明: feat: 新增下单入口 checkout,串起优惠券抵扣和支付流程\n  - `payment/checkout.py` — 下单入口,`checkout` 串起优惠券+支付(第二阶段新增)\n  - `payment/gateway.py` — 支付入口,`process_payment` 是核心函数\n  它模拟一个极简的支付服务,刻意设计了跨文件的函数调用关系和 import 依赖,\n  checkout 是比 process_payment 更高一层的入口:先抵扣优惠券,再走支付,",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['checkout']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/checkout.py",
+      "retrieved": [
+        {
+          "chunk_id": "README.md#L1-40",
+          "score": 0.0239
+        },
+        {
+          "chunk_id": "payment/checkout.py#L1-25",
+          "score": 0.0239
+        },
+        {
+          "chunk_id": "commit:3d8e1b5",
+          "score": 0.0238
+        }
+      ]
+    },
+    {
+      "id": "SE-09",
+      "category": "semantic",
+      "priority": "P1",
+      "question": "系统是怎么防止同一笔支付被退两次款的?",
+      "answer": "根据检索到的代码,相关内容位于 payment/models.py (第 31-41 行);payment/risk.py (第 1-38 行);demo.py (第 1-32 行):\n  \"\"\"一笔支付单。amount 单位是分(避免浮点误差)。\"\"\"\n  \"\"\"综合评估一笔支付的风险等级。\n  \"\"\"mock 仓库的自检 demo:跑一笔成功支付、一笔风控拒绝、一次退款。\n  每笔支付在扣款前都要先过 assess_risk,高风险直接拒绝。\n  这个文件同时也是 RAG 用例里\"项目怎么用\"类问题的素材。\n  # 1. 正常支付:1000 分 = 10 元",
+      "answer_score": 0.0,
+      "answer_judge_detail": "全部未命中 ['SUCCEEDED']",
+      "retrieval_hit": 0.0,
+      "retrieval_detail": "预期 ['payment/refund.py', 'commit:f68c1b9'],实际 ['payment/models.py', 'demo.py', 'payment/risk.py']",
+      "retrieved": [
+        {
+          "chunk_id": "payment/models.py#L31-41",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "demo.py#L1-32",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "payment/risk.py#L1-38",
+          "score": 0.0238
+        }
+      ]
+    },
+    {
+      "id": "SE-10",
+      "category": "semantic",
+      "priority": "P1",
+      "question": "如果货币不在费率表里,手续费按多少收?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:1b3e8f2;payment/fees.py (第 1-24 行);提交历史 commit:M92b4e7:\n  提交说明: feat: 手续费费率改为按货币配置,新增 USD 通道费率 2.9%\n  # 各货币的费率表。新增货币时在这里加一行即可。\n  提交说明: fix: 手续费向上取整,修复 0.5 分手续费被抹掉导致平台亏损的 bug\n  FEE_RATES = {\n  \"\"\"手续费计算。\n  费率按货币区分:人民币 0.6%,美元 2.9%(模拟跨境通道更贵)。",
+      "answer_score": 0.0,
+      "answer_judge_detail": "全部未命中 ['DEFAULT_FEE_RATE', '0.03', '3%']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/fees.py",
+      "retrieved": [
+        {
+          "chunk_id": "payment/fees.py#L1-24",
+          "score": 0.0245
+        },
+        {
+          "chunk_id": "commit:1b3e8f2",
+          "score": 0.0243
+        },
+        {
+          "chunk_id": "commit:M92b4e7",
+          "score": 0.0238
+        }
+      ]
+    },
+    {
+      "id": "SE-11",
+      "category": "semantic",
+      "priority": "P2",
+      "question": "业务事件的日志打点统一从哪里走?",
+      "answer": "根据检索到的代码,相关内容位于 utils/logging_utils.py (第 1-17 行);提交历史 commit:0a9d7c4;payment/refund.py (第 31-51 行):\n  \"\"\"事件日志:全服务统一的打点入口。\n  提交说明: refactor: 统一事件日志入口 log_event,替换散落各处的 print\n  所有业务事件(支付成功/失败、退款等)都走 log_event,\n  \"\"\"记录一条结构化事件日志。\n  方便将来统一接入监控系统,而不是散落各处的 print。\n  \"\"\"处理退款:找单 -> 检查状态 -> 检查时间窗口 -> 改状态记日志。",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['log_event', 'logging_utils']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 utils/logging_utils.py",
+      "retrieved": [
+        {
+          "chunk_id": "utils/logging_utils.py#L1-17",
+          "score": 0.0246
+        },
+        {
+          "chunk_id": "commit:0a9d7c4",
+          "score": 0.0242
+        },
+        {
+          "chunk_id": "payment/refund.py#L31-51",
+          "score": 0.023
+        }
+      ]
+    },
+    {
+      "id": "SE-12",
+      "category": "semantic",
+      "priority": "P2",
+      "question": "为什么金额要用分作单位而不是元?",
+      "answer": "根据检索到的代码,相关内容位于 提交历史 commit:4e9f2c8;payment/models.py (第 31-41 行);payment/models.py (第 1-40 行):\n  提交说明: fix: 优惠券抵扣金额不能超过支付金额本身,避免出现负金额支付单\n  \"\"\"一笔支付单。amount 单位是分(避免浮点误差)。\"\"\"\n  \"\"\"一笔支付单。amount 单位是分(避免浮点误差)。\"\"\"\n  提交 4e9f2c8 作者: wangfang 日期: 2026-05-20\n  改动文件: payment/coupons.py",
+      "answer_score": 1.0,
+      "answer_judge_detail": "命中 ['浮点', '误差']",
+      "retrieval_hit": 1.0,
+      "retrieval_detail": "检索命中 payment/models.py",
+      "retrieved": [
+        {
+          "chunk_id": "payment/models.py#L31-41",
+          "score": 0.0241
+        },
+        {
+          "chunk_id": "commit:4e9f2c8",
+          "score": 0.0238
+        },
+        {
+          "chunk_id": "payment/models.py#L1-40",
+          "score": 0.0232
+        }
+      ]
+    }
+  ]
+}

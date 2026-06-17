@@ -1,0 +1,20 @@
+# M9 第二层 level(d):原始代码 RAG(无卡片) + CoT prompt,通用 14B。
+# 配 werkzeug_baseline_general(原始码+plain)做"无卡片档位的 CoT 增益"测量。
+name: werkzeug_rawcot
+repo_root: repos/werkzeug
+commits_path: null
+index_dir: indexes/werkzeug_baseline
+chunking:
+  strategy: function
+embedder:
+  type: sentence_transformer
+  model_name: models/bge-small-en-v1.5  # M65 审计:英文/代码任务用 en(R@5 0.93≫zh 0.32),零成本;勿改回 zh(冒烟测试会拦)
+backend:
+  type: hybrid
+  top_k: 5
+llm:
+  type: api
+  model: Qwen/Qwen2.5-14B-Instruct
+  base_url: http://localhost:8000/v1
+  temperature: 0.0
+prompt_file: configs/prompts/pe_cot.yaml

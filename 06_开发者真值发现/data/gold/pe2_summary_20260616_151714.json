@@ -1,0 +1,22 @@
+{
+ "stamp": "20260616_151714",
+ "n_edges": 1342,
+ "n_fetched": 633,
+ "n_absent": 709,
+ "visible": {
+  "strict": 0.4455,
+  "med": 0.7156,
+  "loose": 0.9194
+ },
+ "invisible": {
+  "strict": 0.5545,
+  "med": 0.2844,
+  "loose": 0.0806
+ },
+ "invisible_subtypes_med": {
+  "dynamic_or_registry_hint": 119,
+  "same_dir_sibling_no_static_edge": 37,
+  "package_init_coupling": 22,
+  "cross_dir_no_static_edge": 2
+ }
+}

@@ -1,0 +1,2770 @@
+{
+ "wz_T1_drop1": {
+  "_internal.py": {
+   "gold_full": [
+    "_reloader",
+    "debug",
+    "exceptions",
+    "file_storage",
+    "formparser",
+    "headers",
+    "http",
+    "map",
+    "mixins",
+    "request",
+    "response",
+    "serving",
+    "structures",
+    "test",
+    "utils"
+   ],
+   "dropped": [
+    "map"
+   ],
+   "fake": []
+  },
+  "datastructures/__init__.py": {
+   "gold_full": [
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "map",
+    "multipart",
+    "request",
+    "response",
+    "rules",
+    "test",
+    "urls",
+    "utils"
+   ],
+   "dropped": [
+    "request"
+   ],
+   "fake": []
+  },
+  "datastructures/cache_control.py": {
+   "gold_full": [
+    "datastructures",
+    "response"
+   ],
+   "dropped": [
+    "response"
+   ],
+   "fake": []
+  },
+  "datastructures/headers.py": {
+   "gold_full": [
+    "datastructures",
+    "file_storage"
+   ],
+   "dropped": [
+    "file_storage"
+   ],
+   "fake": []
+  },
+  "datastructures/mixins.py": {
+   "gold_full": [
+    "cache_control",
+    "datastructures",
+    "headers",
+    "structures"
+   ],
+   "dropped": [
+    "headers"
+   ],
+   "fake": []
+  },
+  "datastructures/structures.py": {
+   "gold_full": [
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "datastructures",
+    "file_storage",
+    "headers"
+   ],
+   "dropped": [
+    "csp"
+   ],
+   "fake": []
+  },
+  "debug/console.py": {
+   "gold_full": [
+    "debug",
+    "tbtools"
+   ],
+   "dropped": [
+    "tbtools"
+   ],
+   "fake": []
+  },
+  "debug/tbtools.py": {
+   "gold_full": [
+    "console",
+    "debug",
+    "serving"
+   ],
+   "dropped": [
+    "debug"
+   ],
+   "fake": []
+  },
+  "exceptions.py": {
+   "gold_full": [
+    "debug",
+    "formparser",
+    "headers",
+    "http_proxy",
+    "map",
+    "multipart",
+    "request",
+    "response",
+    "serving",
+    "utils",
+    "wsgi"
+   ],
+   "dropped": [
+    "multipart"
+   ],
+   "fake": []
+  },
+  "http.py": {
+   "gold_full": [
+    "auth",
+    "csp",
+    "debug",
+    "etag",
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "multipart",
+    "proxy_fix",
+    "request",
+    "response",
+    "serving",
+    "shared_data",
+    "test",
+    "utils"
+   ],
+   "dropped": [
+    "multipart"
+   ],
+   "fake": []
+  },
+  "routing/converters.py": {
+   "gold_full": [
+    "map",
+    "matcher",
+    "routing",
+    "rules"
+   ],
+   "dropped": [
+    "routing"
+   ],
+   "fake": []
+  },
+  "routing/exceptions.py": {
+   "gold_full": [
+    "map",
+    "matcher",
+    "routing"
+   ],
+   "dropped": [
+    "matcher"
+   ],
+   "fake": []
+  },
+  "routing/map.py": {
+   "gold_full": [
+    "converters",
+    "exceptions",
+    "routing",
+    "rules"
+   ],
+   "dropped": [
+    "routing"
+   ],
+   "fake": []
+  },
+  "routing/matcher.py": {
+   "gold_full": [
+    "map",
+    "routing"
+   ],
+   "dropped": [
+    "routing"
+   ],
+   "fake": []
+  },
+  "routing/rules.py": {
+   "gold_full": [
+    "exceptions",
+    "map",
+    "matcher",
+    "routing"
+   ],
+   "dropped": [
+    "matcher"
+   ],
+   "fake": []
+  },
+  "sansio/__init__.py": {
+   "gold_full": [
+    "http",
+    "wsgi"
+   ],
+   "dropped": [
+    "wsgi"
+   ],
+   "fake": []
+  },
+  "sansio/http.py": {
+   "gold_full": [
+    "request",
+    "response"
+   ],
+   "dropped": [
+    "response"
+   ],
+   "fake": []
+  },
+  "sansio/multipart.py": {
+   "gold_full": [
+    "formparser",
+    "test"
+   ],
+   "dropped": [
+    "test"
+   ],
+   "fake": []
+  },
+  "sansio/utils.py": {
+   "gold_full": [
+    "debug",
+    "request",
+    "wsgi"
+   ],
+   "dropped": [
+    "request"
+   ],
+   "fake": []
+  },
+  "security.py": {
+   "gold_full": [
+    "debug",
+    "shared_data",
+    "utils"
+   ],
+   "dropped": [
+    "shared_data"
+   ],
+   "fake": []
+  },
+  "serving.py": {
+   "gold_full": [
+    "__init__",
+    "testapp"
+   ],
+   "dropped": [
+    "testapp"
+   ],
+   "fake": []
+  },
+  "test.py": {
+   "gold_full": [
+    "__init__",
+    "request",
+    "response"
+   ],
+   "dropped": [
+    "request"
+   ],
+   "fake": []
+  },
+  "urls.py": {
+   "gold_full": [
+    "map",
+    "response",
+    "rules",
+    "serving",
+    "test",
+    "utils"
+   ],
+   "dropped": [
+    "serving"
+   ],
+   "fake": []
+  },
+  "utils.py": {
+   "gold_full": [
+    "debug",
+    "exceptions",
+    "request",
+    "response",
+    "shared_data",
+    "tbtools",
+    "test"
+   ],
+   "dropped": [
+    "response"
+   ],
+   "fake": []
+  },
+  "wrappers/__init__.py": {
+   "gold_full": [
+    "__init__",
+    "utils"
+   ],
+   "dropped": [
+    "utils"
+   ],
+   "fake": []
+  },
+  "wrappers/request.py": {
+   "gold_full": [
+    "_internal",
+    "debug",
+    "exceptions",
+    "map",
+    "response",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers"
+   ],
+   "dropped": [
+    "response"
+   ],
+   "fake": []
+  },
+  "wrappers/response.py": {
+   "gold_full": [
+    "debug",
+    "exceptions",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers"
+   ],
+   "dropped": [
+    "testapp"
+   ],
+   "fake": []
+  },
+  "wsgi.py": {
+   "gold_full": [
+    "formparser",
+    "http_proxy",
+    "lint",
+    "local",
+    "map",
+    "request",
+    "response",
+    "shared_data",
+    "test",
+    "utils"
+   ],
+   "dropped": [
+    "request"
+   ],
+   "fake": []
+  }
+ },
+ "cpy_T1_drop1": {
+  "Lib/__future__.py": {
+   "gold_full": [
+    "__init__",
+    "_context",
+    "_meta",
+    "_module_completer",
+    "_parser",
+    "_re",
+    "_threading_handler",
+    "codeop",
+    "commands",
+    "completing_reader",
+    "console",
+    "content",
+    "fancycompleter",
+    "historical_reader",
+    "input",
+    "layout",
+    "pager",
+    "pydoc",
+    "readers",
+    "readline",
+    "simple_interact",
+    "trace",
+    "windows_console"
+   ],
+   "dropped": [
+    "content"
+   ],
+   "fake": []
+  },
+  "Lib/_collections_abc.py": {
+   "gold_full": [
+    "contextvars",
+    "io",
+    "locale",
+    "os",
+    "random",
+    "types",
+    "weakref"
+   ],
+   "dropped": [
+    "os"
+   ],
+   "fake": []
+  },
+  "Lib/_colorize.py": {
+   "gold_full": [
+    "__main__",
+    "calendar",
+    "console",
+    "dump",
+    "fancycompleter",
+    "timeit",
+    "tool"
+   ],
+   "dropped": [
+    "dump"
+   ],
+   "fake": []
+  },
+  "Lib/_pyrepl/base_eventqueue.py": {
+   "gold_full": [
+    "unix_eventqueue",
+    "windows_eventqueue"
+   ],
+   "dropped": [
+    "windows_eventqueue"
+   ],
+   "fake": []
+  },
+  "Lib/_pyrepl/console.py": {
+   "gold_full": [
+    "__main__",
+    "base_eventqueue",
+    "main",
+    "readline",
+    "windows_console"
+   ],
+   "dropped": [
+    "main"
+   ],
+   "fake": []
+  },
+  "Lib/_pyrepl/fancycompleter.py": {
+   "gold_full": [
+    "_module_completer",
+    "readline"
+   ],
+   "dropped": [
+    "readline"
+   ],
+   "fake": []
+  },
+  "Lib/_pyrepl/pager.py": {
+   "gold_full": [
+    "_sitebuiltins",
+    "commands",
+    "pydoc"
+   ],
+   "dropped": [
+    "commands"
+   ],
+   "fake": []
+  },
+  "Lib/_pyrepl/reader.py": {
+   "gold_full": [
+    "_threading_handler",
+    "completing_reader",
+    "historical_reader"
+   ],
+   "dropped": [
+    "completing_reader"
+   ],
+   "fake": []
+  },
+  "Lib/_pyrepl/render.py": {
+   "gold_full": [
+    "commands",
+    "completing_reader",
+    "console",
+    "windows_console"
+   ],
+   "dropped": [
+    "console"
+   ],
+   "fake": []
+  },
+  "Lib/_pyrepl/simple_interact.py": {
+   "gold_full": [
+    "__main__",
+    "main"
+   ],
+   "dropped": [
+    "main"
+   ],
+   "fake": []
+  },
+  "Lib/_pyrepl/trace.py": {
+   "gold_full": [
+    "base_eventqueue",
+    "commands",
+    "console",
+    "main",
+    "unix_eventqueue",
+    "windows_console"
+   ],
+   "dropped": [
+    "main"
+   ],
+   "fake": []
+  },
+  "Lib/_pyrepl/types.py": {
+   "gold_full": [
+    "_module_completer",
+    "completing_reader",
+    "console",
+    "historical_reader",
+    "input",
+    "layout",
+    "readline"
+   ],
+   "dropped": [
+    "historical_reader"
+   ],
+   "fake": []
+  },
+  "Lib/_pyrepl/unix_console.py": {
+   "gold_full": [
+    "readline",
+    "simple_interact"
+   ],
+   "dropped": [
+    "simple_interact"
+   ],
+   "fake": []
+  },
+  "Lib/_pyrepl/windows_console.py": {
+   "gold_full": [
+    "readline",
+    "simple_interact"
+   ],
+   "dropped": [
+    "simple_interact"
+   ],
+   "fake": []
+  },
+  "Lib/_sitebuiltins.py": {
+   "gold_full": [
+    "commands",
+    "simple_interact"
+   ],
+   "dropped": [
+    "simple_interact"
+   ],
+   "fake": []
+  },
+  "Lib/_weakrefset.py": {
+   "gold_full": [
+    "_py_abc",
+    "process",
+    "threading",
+    "weakref"
+   ],
+   "dropped": [
+    "threading"
+   ],
+   "fake": []
+  },
+  "Lib/abc.py": {
+   "gold_full": [
+    "__init__",
+    "_abc",
+    "_collections_abc",
+    "_policybase",
+    "_pyio",
+    "collector",
+    "console",
+    "display",
+    "functools",
+    "input",
+    "io",
+    "numbers",
+    "os",
+    "reduction",
+    "selectors",
+    "simple",
+    "types",
+    "widgets"
+   ],
+   "dropped": [
+    "input"
+   ],
+   "fake": []
+  },
+  "Lib/annotationlib.py": {
+   "gold_full": [
+    "_collections_abc",
+    "functools",
+    "pydoc"
+   ],
+   "dropped": [
+    "functools"
+   ],
+   "fake": []
+  },
+  "Lib/argparse.py": {
+   "gold_full": [
+    "__init__",
+    "__main__",
+    "_uninstall",
+    "calendar",
+    "cli",
+    "code",
+    "compileall",
+    "dis",
+    "gzip",
+    "mimetypes",
+    "pickle",
+    "platform",
+    "py_compile",
+    "random",
+    "tarfile",
+    "timeit",
+    "tool",
+    "trace",
+    "uuid",
+    "zipapp"
+   ],
+   "dropped": [
+    "pickle"
+   ],
+   "fake": []
+  },
+  "Lib/ast.py": {
+   "gold_full": [
+    "__main__",
+    "_ast_unparse",
+    "console",
+    "dumb",
+    "pyclbr",
+    "pydoc"
+   ],
+   "dropped": [
+    "dumb"
+   ],
+   "fake": []
+  },
+  "Lib/asyncio/log.py": {
+   "gold_full": [
+    "base_events",
+    "base_subprocess",
+    "proactor_events",
+    "selector_events",
+    "sslproto",
+    "streams",
+    "subprocess",
+    "unix_events",
+    "windows_events"
+   ],
+   "dropped": [
+    "sslproto"
+   ],
+   "fake": []
+  },
+  "Lib/asyncio/streams.py": {
+   "gold_full": [
+    "__init__",
+    "base_events"
+   ],
+   "dropped": [
+    "base_events"
+   ],
+   "fake": []
+  }
+ },
+ "flask_T1_drop1": {
+  "app.py": {
+   "gold_full": [
+    "__init__",
+    "cli",
+    "ctx",
+    "globals",
+    "sessions",
+    "templating",
+    "testing"
+   ],
+   "dropped": [
+    "globals"
+   ],
+   "fake": []
+  },
+  "blueprints.py": {
+   "gold_full": [
+    "__init__",
+    "debughelpers"
+   ],
+   "dropped": [
+    "debughelpers"
+   ],
+   "fake": []
+  },
+  "cli.py": {
+   "gold_full": [
+    "__main__",
+    "blueprints",
+    "testing"
+   ],
+   "dropped": [
+    "blueprints"
+   ],
+   "fake": []
+  },
+  "config.py": {
+   "gold_full": [
+    "__init__",
+    "app"
+   ],
+   "dropped": [
+    "app"
+   ],
+   "fake": []
+  },
+  "ctx.py": {
+   "gold_full": [
+    "__init__",
+    "app",
+    "globals"
+   ],
+   "dropped": [
+    "app"
+   ],
+   "fake": []
+  },
+  "debughelpers.py": {
+   "gold_full": [
+    "app",
+    "templating",
+    "wrappers"
+   ],
+   "dropped": [
+    "templating"
+   ],
+   "fake": []
+  },
+  "globals.py": {
+   "gold_full": [
+    "__init__",
+    "app",
+    "blueprints",
+    "cli",
+    "ctx",
+    "debughelpers",
+    "helpers",
+    "json",
+    "logging",
+    "templating",
+    "views",
+    "wrappers"
+   ],
+   "dropped": [
+    "helpers"
+   ],
+   "fake": []
+  },
+  "helpers.py": {
+   "gold_full": [
+    "__init__",
+    "app",
+    "blueprints",
+    "cli",
+    "scaffold",
+    "templating",
+    "wrappers"
+   ],
+   "dropped": [
+    "cli"
+   ],
+   "fake": []
+  },
+  "json/__init__.py": {
+   "gold_full": [
+    "__init__",
+    "tag"
+   ],
+   "dropped": [
+    "tag"
+   ],
+   "fake": []
+  },
+  "json/provider.py": {
+   "gold_full": [
+    "app",
+    "json"
+   ],
+   "dropped": [
+    "json"
+   ],
+   "fake": []
+  },
+  "sansio/app.py": {
+   "gold_full": [
+    "blueprints",
+    "config",
+    "debughelpers",
+    "logging",
+    "provider",
+    "templating"
+   ],
+   "dropped": [
+    "logging"
+   ],
+   "fake": []
+  },
+  "sansio/scaffold.py": {
+   "gold_full": [
+    "app",
+    "blueprints",
+    "debughelpers",
+    "templating"
+   ],
+   "dropped": [
+    "debughelpers"
+   ],
+   "fake": []
+  },
+  "sessions.py": {
+   "gold_full": [
+    "app",
+    "ctx",
+    "globals",
+    "testing"
+   ],
+   "dropped": [
+    "globals"
+   ],
+   "fake": []
+  },
+  "signals.py": {
+   "gold_full": [
+    "__init__",
+    "app",
+    "ctx",
+    "helpers",
+    "templating"
+   ],
+   "dropped": [
+    "ctx"
+   ],
+   "fake": []
+  },
+  "templating.py": {
+   "gold_full": [
+    "__init__",
+    "app",
+    "scaffold"
+   ],
+   "dropped": [
+    "app"
+   ],
+   "fake": []
+  },
+  "wrappers.py": {
+   "gold_full": [
+    "__init__",
+    "app",
+    "blueprints",
+    "ctx",
+    "debughelpers",
+    "globals",
+    "helpers",
+    "json",
+    "sessions"
+   ],
+   "dropped": [
+    "debughelpers"
+   ],
+   "fake": []
+  }
+ },
+ "gson_T1_drop1": {
+  "gson/src/main/java-templates/com/google/gson/internal/GsonBuildConfig.java": {
+   "gold_full": [
+    "Gson",
+    "ReflectionHelper"
+   ],
+   "dropped": [
+    "ReflectionHelper"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/Gson.java": {
+   "gold_full": [
+    "ArrayTypeAdapter",
+    "BagOfPrimitivesDeserializationBenchmark",
+    "CollectionTypeAdapterFactory",
+    "CollectionsDeserializationBenchmark",
+    "DefaultDateTypeAdapter",
+    "EnumTypeAdapter",
+    "Excluder",
+    "InterceptorFactory",
+    "JavaTimeTypeAdapters",
+    "JsonAdapter",
+    "JsonAdapterAnnotationTypeAdapterFactory",
+    "LegacyProtoTypeAdapterFactory",
+    "MapTypeAdapterFactory",
+    "NumberTypeAdapter",
+    "ObjectTypeAdapter",
+    "ParseBenchmark",
+    "PostConstructAdapterFactory",
+    "ReflectiveTypeAdapterFactory",
+    "RuntimeTypeAdapterFactory",
+    "SerializationBenchmark",
+    "SqlDateTypeAdapter",
+    "SqlTimeTypeAdapter",
+    "SqlTimestampTypeAdapter",
+    "TreeTypeAdapter",
+    "TypeAdapterRuntimeTypeWrapper",
+    "TypeAdapters"
+   ],
+   "dropped": [
+    "NumberTypeAdapter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/GsonBuilder.java": {
+   "gold_full": [
+    "JsonAdapter",
+    "ParseBenchmark",
+    "SerializationBenchmark",
+    "Since",
+    "Until"
+   ],
+   "dropped": [
+    "SerializationBenchmark"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/InstanceCreator.java": {
+   "gold_full": [
+    "ConstructorConstructor",
+    "JsonAdapter",
+    "JsonPostDeserializer"
+   ],
+   "dropped": [
+    "JsonAdapter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/JsonArray.java": {
+   "gold_full": [
+    "JsonElementTypeAdapter",
+    "JsonTreeReader",
+    "JsonTreeWriter",
+    "ProtoTypeAdapter"
+   ],
+   "dropped": [
+    "JsonTreeWriter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/JsonDeserializationContext.java": {
+   "gold_full": [
+    "ProtoTypeAdapter",
+    "TreeTypeAdapter"
+   ],
+   "dropped": [
+    "TreeTypeAdapter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/JsonDeserializer.java": {
+   "gold_full": [
+    "JsonAdapter",
+    "JsonAdapterAnnotationTypeAdapterFactory",
+    "ProtoTypeAdapter",
+    "TreeTypeAdapter"
+   ],
+   "dropped": [
+    "ProtoTypeAdapter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/JsonElement.java": {
+   "gold_full": [
+    "JsonElementTypeAdapter",
+    "JsonTreeReader",
+    "JsonTreeWriter",
+    "MapTypeAdapterFactory",
+    "ParseBenchmark",
+    "ProtoTypeAdapter",
+    "RuntimeTypeAdapterFactory",
+    "Streams",
+    "TreeTypeAdapter",
+    "TypeAdapters"
+   ],
+   "dropped": [
+    "ProtoTypeAdapter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/JsonIOException.java": {
+   "gold_full": [
+    "ConstructorConstructor",
+    "ReflectionHelper",
+    "ReflectiveTypeAdapterFactory",
+    "Streams",
+    "TypeAdapters"
+   ],
+   "dropped": [
+    "ReflectiveTypeAdapterFactory"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/JsonNull.java": {
+   "gold_full": [
+    "JsonElementTypeAdapter",
+    "JsonTreeReader",
+    "JsonTreeWriter",
+    "Streams"
+   ],
+   "dropped": [
+    "JsonTreeWriter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/JsonObject.java": {
+   "gold_full": [
+    "JsonElementTypeAdapter",
+    "JsonTreeReader",
+    "JsonTreeWriter",
+    "ProtoTypeAdapter",
+    "RuntimeTypeAdapterFactory"
+   ],
+   "dropped": [
+    "JsonTreeWriter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/JsonParseException.java": {
+   "gold_full": [
+    "LegacyProtoTypeAdapterFactory",
+    "ProtoTypeAdapter",
+    "ReflectiveTypeAdapterFactory",
+    "RuntimeTypeAdapterFactory",
+    "Streams",
+    "TreeTypeAdapter",
+    "UtcDateTypeAdapter"
+   ],
+   "dropped": [
+    "RuntimeTypeAdapterFactory"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/JsonPrimitive.java": {
+   "gold_full": [
+    "JsonElementTypeAdapter",
+    "JsonTreeReader",
+    "JsonTreeWriter",
+    "MapTypeAdapterFactory",
+    "RuntimeTypeAdapterFactory"
+   ],
+   "dropped": [
+    "JsonTreeWriter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/JsonSerializationContext.java": {
+   "gold_full": [
+    "ProtoTypeAdapter",
+    "TreeTypeAdapter"
+   ],
+   "dropped": [
+    "TreeTypeAdapter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/JsonSerializer.java": {
+   "gold_full": [
+    "JsonAdapter",
+    "JsonAdapterAnnotationTypeAdapterFactory",
+    "ProtoTypeAdapter",
+    "TreeTypeAdapter"
+   ],
+   "dropped": [
+    "ProtoTypeAdapter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/JsonSyntaxException.java": {
+   "gold_full": [
+    "DefaultDateTypeAdapter",
+    "JavaTimeTypeAdapters",
+    "LegacyProtoTypeAdapterFactory",
+    "MapTypeAdapterFactory",
+    "NumberTypeAdapter",
+    "ReflectiveTypeAdapterFactory",
+    "SqlDateTypeAdapter",
+    "SqlTimeTypeAdapter",
+    "Streams",
+    "TypeAdapters"
+   ],
+   "dropped": [
+    "ReflectiveTypeAdapterFactory"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/ReflectionAccessFilter.java": {
+   "gold_full": [
+    "ConstructorConstructor",
+    "ReflectionAccessFilterHelper",
+    "ReflectiveTypeAdapterFactory"
+   ],
+   "dropped": [
+    "ReflectionAccessFilterHelper"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/Strictness.java": {
+   "gold_full": [
+    "JsonReader",
+    "JsonWriter",
+    "MalformedJsonException"
+   ],
+   "dropped": [
+    "JsonWriter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/ToNumberPolicy.java": {
+   "gold_full": [
+    "NumberTypeAdapter",
+    "ObjectTypeAdapter"
+   ],
+   "dropped": [
+    "ObjectTypeAdapter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/ToNumberStrategy.java": {
+   "gold_full": [
+    "NumberTypeAdapter",
+    "ObjectTypeAdapter"
+   ],
+   "dropped": [
+    "ObjectTypeAdapter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/TypeAdapter.java": {
+   "gold_full": [
+    "ArrayTypeAdapter",
+    "CollectionTypeAdapterFactory",
+    "DefaultDateTypeAdapter",
+    "EnumTypeAdapter",
+    "Excluder",
+    "InterceptorFactory",
+    "JavaTimeTypeAdapters",
+    "JsonAdapter",
+    "JsonAdapterAnnotationTypeAdapterFactory",
+    "JsonElementTypeAdapter",
+    "LegacyProtoTypeAdapterFactory",
+    "MapTypeAdapterFactory",
+    "NumberTypeAdapter",
+    "ObjectTypeAdapter",
+    "PostConstructAdapterFactory",
+    "ReflectiveTypeAdapterFactory",
+    "RuntimeTypeAdapterFactory",
+    "SerializationDelegatingTypeAdapter",
+    "SqlDateTypeAdapter",
+    "SqlTimeTypeAdapter",
+    "SqlTimestampTypeAdapter",
+    "TreeTypeAdapter",
+    "TypeAdapterRuntimeTypeWrapper",
+    "TypeAdapters",
+    "UtcDateTypeAdapter"
+   ],
+   "dropped": [
+    "NumberTypeAdapter"
+   ],
+   "fake": []
+  },
+  "gson/src/main/java/com/google/gson/TypeAdapterFactory.java": {
+   "gold_full": [
+    "ArrayTypeAdapter",
+    "CollectionTypeAdapterFactory",
+    "DefaultDateTypeAdapter",
+    "EnumTypeAdapter",
+    "Excluder",
+    "InterceptorFactory",
+    "JavaTimeTypeAdapters",
+    "JsonAdapter",
+    "JsonAdapterAnnotationTypeAdapterFactory",
+    "LegacyProtoTypeAdapterFactory",
+    "MapTypeAdapterFactory",
+    "NumberTypeAdapter",
+    "ObjectTypeAdapter",
+    "PostConstructAdapterFactory",
+    "ReflectiveTypeAdapterFactory",
+    "RuntimeTypeAdapterFactory",
+    "SqlDateTypeAdapter",
+    "SqlTimeTypeAdapter",
+    "SqlTimestampTypeAdapter",
+    "SqlTypesSupport",
+    "TreeTypeAdapter",
+    "TypeAdapters"
+   ],
+   "dropped": [
+    "NumberTypeAdapter"
+   ],
+   "fake": []
+  }
+ },
+ "wz_T2_drop1": {
+  "_internal.py": {
+   "gold_full": [
+    "_reloader",
+    "debug",
+    "exceptions",
+    "file_storage",
+    "formparser",
+    "headers",
+    "http",
+    "map",
+    "mixins",
+    "request",
+    "response",
+    "serving",
+    "structures",
+    "test",
+    "utils"
+   ],
+   "dropped": [
+    "map"
+   ],
+   "fake": []
+  },
+  "datastructures/__init__.py": {
+   "gold_full": [
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "map",
+    "multipart",
+    "request",
+    "response",
+    "rules",
+    "test",
+    "urls",
+    "utils"
+   ],
+   "dropped": [
+    "request"
+   ],
+   "fake": []
+  },
+  "datastructures/cache_control.py": {
+   "gold_full": [
+    "datastructures",
+    "response"
+   ],
+   "dropped": [
+    "response"
+   ],
+   "fake": []
+  },
+  "datastructures/headers.py": {
+   "gold_full": [
+    "datastructures",
+    "file_storage"
+   ],
+   "dropped": [
+    "file_storage"
+   ],
+   "fake": []
+  },
+  "datastructures/mixins.py": {
+   "gold_full": [
+    "cache_control",
+    "datastructures",
+    "headers",
+    "structures"
+   ],
+   "dropped": [
+    "headers"
+   ],
+   "fake": []
+  },
+  "datastructures/structures.py": {
+   "gold_full": [
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "datastructures",
+    "file_storage",
+    "headers"
+   ],
+   "dropped": [
+    "csp"
+   ],
+   "fake": []
+  },
+  "debug/console.py": {
+   "gold_full": [
+    "debug",
+    "tbtools"
+   ],
+   "dropped": [
+    "tbtools"
+   ],
+   "fake": []
+  },
+  "debug/tbtools.py": {
+   "gold_full": [
+    "console",
+    "debug",
+    "serving"
+   ],
+   "dropped": [
+    "debug"
+   ],
+   "fake": []
+  },
+  "exceptions.py": {
+   "gold_full": [
+    "debug",
+    "formparser",
+    "headers",
+    "http_proxy",
+    "map",
+    "multipart",
+    "request",
+    "response",
+    "serving",
+    "utils",
+    "wsgi"
+   ],
+   "dropped": [
+    "multipart"
+   ],
+   "fake": []
+  },
+  "http.py": {
+   "gold_full": [
+    "auth",
+    "csp",
+    "debug",
+    "etag",
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "multipart",
+    "proxy_fix",
+    "request",
+    "response",
+    "serving",
+    "shared_data",
+    "test",
+    "utils"
+   ],
+   "dropped": [
+    "multipart"
+   ],
+   "fake": []
+  },
+  "routing/converters.py": {
+   "gold_full": [
+    "map",
+    "matcher",
+    "routing",
+    "rules"
+   ],
+   "dropped": [
+    "routing"
+   ],
+   "fake": []
+  },
+  "routing/exceptions.py": {
+   "gold_full": [
+    "map",
+    "matcher",
+    "routing"
+   ],
+   "dropped": [
+    "matcher"
+   ],
+   "fake": []
+  },
+  "routing/map.py": {
+   "gold_full": [
+    "converters",
+    "exceptions",
+    "routing",
+    "rules"
+   ],
+   "dropped": [
+    "routing"
+   ],
+   "fake": []
+  },
+  "routing/matcher.py": {
+   "gold_full": [
+    "map",
+    "routing"
+   ],
+   "dropped": [
+    "routing"
+   ],
+   "fake": []
+  },
+  "routing/rules.py": {
+   "gold_full": [
+    "exceptions",
+    "map",
+    "matcher",
+    "routing"
+   ],
+   "dropped": [
+    "matcher"
+   ],
+   "fake": []
+  },
+  "sansio/__init__.py": {
+   "gold_full": [
+    "http",
+    "wsgi"
+   ],
+   "dropped": [
+    "wsgi"
+   ],
+   "fake": []
+  },
+  "sansio/http.py": {
+   "gold_full": [
+    "request",
+    "response"
+   ],
+   "dropped": [
+    "response"
+   ],
+   "fake": []
+  },
+  "sansio/multipart.py": {
+   "gold_full": [
+    "formparser",
+    "test"
+   ],
+   "dropped": [
+    "test"
+   ],
+   "fake": []
+  },
+  "sansio/utils.py": {
+   "gold_full": [
+    "debug",
+    "request",
+    "wsgi"
+   ],
+   "dropped": [
+    "request"
+   ],
+   "fake": []
+  },
+  "security.py": {
+   "gold_full": [
+    "debug",
+    "shared_data",
+    "utils"
+   ],
+   "dropped": [
+    "shared_data"
+   ],
+   "fake": []
+  },
+  "serving.py": {
+   "gold_full": [
+    "__init__",
+    "testapp"
+   ],
+   "dropped": [
+    "testapp"
+   ],
+   "fake": []
+  },
+  "test.py": {
+   "gold_full": [
+    "__init__",
+    "request",
+    "response"
+   ],
+   "dropped": [
+    "request"
+   ],
+   "fake": []
+  },
+  "urls.py": {
+   "gold_full": [
+    "map",
+    "response",
+    "rules",
+    "serving",
+    "test",
+    "utils"
+   ],
+   "dropped": [
+    "serving"
+   ],
+   "fake": []
+  },
+  "utils.py": {
+   "gold_full": [
+    "debug",
+    "exceptions",
+    "request",
+    "response",
+    "shared_data",
+    "tbtools",
+    "test"
+   ],
+   "dropped": [
+    "response"
+   ],
+   "fake": []
+  },
+  "wrappers/__init__.py": {
+   "gold_full": [
+    "__init__",
+    "utils"
+   ],
+   "dropped": [
+    "utils"
+   ],
+   "fake": []
+  },
+  "wrappers/request.py": {
+   "gold_full": [
+    "_internal",
+    "debug",
+    "exceptions",
+    "map",
+    "response",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers"
+   ],
+   "dropped": [
+    "response"
+   ],
+   "fake": []
+  },
+  "wrappers/response.py": {
+   "gold_full": [
+    "debug",
+    "exceptions",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers"
+   ],
+   "dropped": [
+    "testapp"
+   ],
+   "fake": []
+  },
+  "wsgi.py": {
+   "gold_full": [
+    "formparser",
+    "http_proxy",
+    "lint",
+    "local",
+    "map",
+    "request",
+    "response",
+    "shared_data",
+    "test",
+    "utils"
+   ],
+   "dropped": [
+    "request"
+   ],
+   "fake": []
+  }
+ },
+ "wz_T3_drop1": {
+  "__init__.py": {
+   "gold_full": [
+    "serving",
+    "test",
+    "wrappers"
+   ],
+   "dropped": [
+    "test"
+   ],
+   "fake": []
+  },
+  "datastructures/__init__.py": {
+   "gold_full": [
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "etag",
+    "file_storage",
+    "headers",
+    "mixins",
+    "range",
+    "structures"
+   ],
+   "dropped": [
+    "file_storage"
+   ],
+   "fake": []
+  },
+  "datastructures/auth.py": {
+   "gold_full": [
+    "http",
+    "structures"
+   ],
+   "dropped": [
+    "structures"
+   ],
+   "fake": []
+  },
+  "datastructures/cache_control.py": {
+   "gold_full": [
+    "mixins",
+    "structures"
+   ],
+   "dropped": [
+    "structures"
+   ],
+   "fake": []
+  },
+  "datastructures/csp.py": {
+   "gold_full": [
+    "http",
+    "structures"
+   ],
+   "dropped": [
+    "structures"
+   ],
+   "fake": []
+  },
+  "datastructures/file_storage.py": {
+   "gold_full": [
+    "_internal",
+    "headers",
+    "structures"
+   ],
+   "dropped": [
+    "headers"
+   ],
+   "fake": []
+  },
+  "datastructures/headers.py": {
+   "gold_full": [
+    "_internal",
+    "exceptions",
+    "mixins",
+    "structures"
+   ],
+   "dropped": [
+    "mixins"
+   ],
+   "fake": []
+  },
+  "datastructures/structures.py": {
+   "gold_full": [
+    "_internal",
+    "mixins"
+   ],
+   "dropped": [
+    "mixins"
+   ],
+   "fake": []
+  },
+  "debug/__init__.py": {
+   "gold_full": [
+    "_internal",
+    "console",
+    "exceptions",
+    "http",
+    "request",
+    "response",
+    "security",
+    "tbtools",
+    "utils"
+   ],
+   "dropped": [
+    "request"
+   ],
+   "fake": []
+  },
+  "debug/console.py": {
+   "gold_full": [
+    "repr",
+    "tbtools"
+   ],
+   "dropped": [
+    "tbtools"
+   ],
+   "fake": []
+  },
+  "debug/tbtools.py": {
+   "gold_full": [
+    "console",
+    "utils"
+   ],
+   "dropped": [
+    "utils"
+   ],
+   "fake": []
+  },
+  "exceptions.py": {
+   "gold_full": [
+    "_internal",
+    "datastructures",
+    "http",
+    "request",
+    "response"
+   ],
+   "dropped": [
+    "http"
+   ],
+   "fake": []
+  },
+  "formparser.py": {
+   "gold_full": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "http",
+    "multipart",
+    "wsgi"
+   ],
+   "dropped": [
+    "http"
+   ],
+   "fake": []
+  },
+  "http.py": {
+   "gold_full": [
+    "_internal",
+    "sansio"
+   ],
+   "dropped": [
+    "sansio"
+   ],
+   "fake": []
+  },
+  "middleware/http_proxy.py": {
+   "gold_full": [
+    "datastructures",
+    "exceptions",
+    "http",
+    "wsgi"
+   ],
+   "dropped": [
+    "http"
+   ],
+   "fake": []
+  },
+  "middleware/lint.py": {
+   "gold_full": [
+    "datastructures",
+    "http",
+    "wsgi"
+   ],
+   "dropped": [
+    "http"
+   ],
+   "fake": []
+  },
+  "middleware/shared_data.py": {
+   "gold_full": [
+    "http",
+    "security",
+    "utils",
+    "wsgi"
+   ],
+   "dropped": [
+    "utils"
+   ],
+   "fake": []
+  },
+  "routing/__init__.py": {
+   "gold_full": [
+    "converters",
+    "exceptions",
+    "map",
+    "matcher",
+    "rules"
+   ],
+   "dropped": [
+    "map"
+   ],
+   "fake": []
+  },
+  "routing/exceptions.py": {
+   "gold_full": [
+    "map",
+    "request",
+    "response",
+    "rules",
+    "utils"
+   ],
+   "dropped": [
+    "response"
+   ],
+   "fake": []
+  },
+  "routing/map.py": {
+   "gold_full": [
+    "_internal",
+    "converters",
+    "datastructures",
+    "exceptions",
+    "matcher",
+    "request",
+    "rules",
+    "urls",
+    "wsgi"
+   ],
+   "dropped": [
+    "matcher"
+   ],
+   "fake": []
+  },
+  "routing/matcher.py": {
+   "gold_full": [
+    "converters",
+    "exceptions",
+    "rules"
+   ],
+   "dropped": [
+    "exceptions"
+   ],
+   "fake": []
+  },
+  "routing/rules.py": {
+   "gold_full": [
+    "converters",
+    "datastructures",
+    "map",
+    "urls"
+   ],
+   "dropped": [
+    "map"
+   ],
+   "fake": []
+  },
+  "sansio/multipart.py": {
+   "gold_full": [
+    "datastructures",
+    "exceptions",
+    "http"
+   ],
+   "dropped": [
+    "exceptions"
+   ],
+   "fake": []
+  },
+  "sansio/request.py": {
+   "gold_full": [
+    "datastructures",
+    "http",
+    "user_agent",
+    "utils"
+   ],
+   "dropped": [
+    "user_agent"
+   ],
+   "fake": []
+  },
+  "sansio/response.py": {
+   "gold_full": [
+    "cache_control",
+    "datastructures",
+    "http",
+    "utils"
+   ],
+   "dropped": [
+    "http"
+   ],
+   "fake": []
+  },
+  "sansio/utils.py": {
+   "gold_full": [
+    "_internal",
+    "exceptions",
+    "http",
+    "urls"
+   ],
+   "dropped": [
+    "http"
+   ],
+   "fake": []
+  },
+  "serving.py": {
+   "gold_full": [
+    "_internal",
+    "_reloader",
+    "debug",
+    "exceptions",
+    "http",
+    "shared_data",
+    "tbtools",
+    "urls"
+   ],
+   "dropped": [
+    "http"
+   ],
+   "fake": []
+  },
+  "test.py": {
+   "gold_full": [
+    "_internal",
+    "datastructures",
+    "http",
+    "multipart",
+    "request",
+    "response",
+    "urls",
+    "utils",
+    "wsgi"
+   ],
+   "dropped": [
+    "request"
+   ],
+   "fake": []
+  }
+ },
+ "wz_T1_dropN": {
+  "_internal.py": {
+   "gold_full": [
+    "_reloader",
+    "debug",
+    "exceptions",
+    "file_storage",
+    "formparser",
+    "headers",
+    "http",
+    "map",
+    "mixins",
+    "request",
+    "response",
+    "serving",
+    "structures",
+    "test",
+    "utils"
+   ],
+   "dropped": [
+    "_reloader",
+    "debug",
+    "exceptions",
+    "file_storage",
+    "formparser",
+    "headers",
+    "http"
+   ],
+   "fake": []
+  },
+  "datastructures/__init__.py": {
+   "gold_full": [
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "map",
+    "multipart",
+    "request",
+    "response",
+    "rules",
+    "test",
+    "urls",
+    "utils"
+   ],
+   "dropped": [
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "map",
+    "multipart"
+   ],
+   "fake": []
+  },
+  "datastructures/cache_control.py": {
+   "gold_full": [
+    "datastructures",
+    "response"
+   ],
+   "dropped": [
+    "datastructures"
+   ],
+   "fake": []
+  },
+  "datastructures/headers.py": {
+   "gold_full": [
+    "datastructures",
+    "file_storage"
+   ],
+   "dropped": [
+    "datastructures"
+   ],
+   "fake": []
+  },
+  "datastructures/mixins.py": {
+   "gold_full": [
+    "cache_control",
+    "datastructures",
+    "headers",
+    "structures"
+   ],
+   "dropped": [
+    "cache_control",
+    "datastructures"
+   ],
+   "fake": []
+  },
+  "datastructures/structures.py": {
+   "gold_full": [
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "datastructures",
+    "file_storage",
+    "headers"
+   ],
+   "dropped": [
+    "accept",
+    "auth",
+    "cache_control"
+   ],
+   "fake": []
+  },
+  "debug/console.py": {
+   "gold_full": [
+    "debug",
+    "tbtools"
+   ],
+   "dropped": [
+    "debug"
+   ],
+   "fake": []
+  },
+  "debug/tbtools.py": {
+   "gold_full": [
+    "console",
+    "debug",
+    "serving"
+   ],
+   "dropped": [
+    "console"
+   ],
+   "fake": []
+  },
+  "exceptions.py": {
+   "gold_full": [
+    "debug",
+    "formparser",
+    "headers",
+    "http_proxy",
+    "map",
+    "multipart",
+    "request",
+    "response",
+    "serving",
+    "utils",
+    "wsgi"
+   ],
+   "dropped": [
+    "debug",
+    "formparser",
+    "headers",
+    "http_proxy",
+    "map"
+   ],
+   "fake": []
+  },
+  "http.py": {
+   "gold_full": [
+    "auth",
+    "csp",
+    "debug",
+    "etag",
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "multipart",
+    "proxy_fix",
+    "request",
+    "response",
+    "serving",
+    "shared_data",
+    "test",
+    "utils"
+   ],
+   "dropped": [
+    "auth",
+    "csp",
+    "debug",
+    "etag",
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint"
+   ],
+   "fake": []
+  },
+  "routing/converters.py": {
+   "gold_full": [
+    "map",
+    "matcher",
+    "routing",
+    "rules"
+   ],
+   "dropped": [
+    "map",
+    "matcher"
+   ],
+   "fake": []
+  },
+  "routing/exceptions.py": {
+   "gold_full": [
+    "map",
+    "matcher",
+    "routing"
+   ],
+   "dropped": [
+    "map"
+   ],
+   "fake": []
+  },
+  "routing/map.py": {
+   "gold_full": [
+    "converters",
+    "exceptions",
+    "routing",
+    "rules"
+   ],
+   "dropped": [
+    "converters",
+    "exceptions"
+   ],
+   "fake": []
+  },
+  "routing/matcher.py": {
+   "gold_full": [
+    "map",
+    "routing"
+   ],
+   "dropped": [
+    "map"
+   ],
+   "fake": []
+  },
+  "routing/rules.py": {
+   "gold_full": [
+    "exceptions",
+    "map",
+    "matcher",
+    "routing"
+   ],
+   "dropped": [
+    "exceptions",
+    "map"
+   ],
+   "fake": []
+  },
+  "sansio/__init__.py": {
+   "gold_full": [
+    "http",
+    "wsgi"
+   ],
+   "dropped": [
+    "http"
+   ],
+   "fake": []
+  },
+  "sansio/http.py": {
+   "gold_full": [
+    "request",
+    "response"
+   ],
+   "dropped": [
+    "request"
+   ],
+   "fake": []
+  },
+  "sansio/multipart.py": {
+   "gold_full": [
+    "formparser",
+    "test"
+   ],
+   "dropped": [
+    "formparser"
+   ],
+   "fake": []
+  },
+  "sansio/utils.py": {
+   "gold_full": [
+    "debug",
+    "request",
+    "wsgi"
+   ],
+   "dropped": [
+    "debug"
+   ],
+   "fake": []
+  },
+  "security.py": {
+   "gold_full": [
+    "debug",
+    "shared_data",
+    "utils"
+   ],
+   "dropped": [
+    "debug"
+   ],
+   "fake": []
+  },
+  "serving.py": {
+   "gold_full": [
+    "__init__",
+    "testapp"
+   ],
+   "dropped": [
+    "__init__"
+   ],
+   "fake": []
+  },
+  "test.py": {
+   "gold_full": [
+    "__init__",
+    "request",
+    "response"
+   ],
+   "dropped": [
+    "__init__"
+   ],
+   "fake": []
+  },
+  "urls.py": {
+   "gold_full": [
+    "map",
+    "response",
+    "rules",
+    "serving",
+    "test",
+    "utils"
+   ],
+   "dropped": [
+    "map",
+    "response",
+    "rules"
+   ],
+   "fake": []
+  },
+  "utils.py": {
+   "gold_full": [
+    "debug",
+    "exceptions",
+    "request",
+    "response",
+    "shared_data",
+    "tbtools",
+    "test"
+   ],
+   "dropped": [
+    "debug",
+    "exceptions",
+    "request"
+   ],
+   "fake": []
+  },
+  "wrappers/__init__.py": {
+   "gold_full": [
+    "__init__",
+    "utils"
+   ],
+   "dropped": [
+    "__init__"
+   ],
+   "fake": []
+  },
+  "wrappers/request.py": {
+   "gold_full": [
+    "_internal",
+    "debug",
+    "exceptions",
+    "map",
+    "response",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers"
+   ],
+   "dropped": [
+    "_internal",
+    "debug",
+    "exceptions",
+    "map"
+   ],
+   "fake": []
+  },
+  "wrappers/response.py": {
+   "gold_full": [
+    "debug",
+    "exceptions",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers"
+   ],
+   "dropped": [
+    "debug",
+    "exceptions",
+    "test"
+   ],
+   "fake": []
+  },
+  "wsgi.py": {
+   "gold_full": [
+    "formparser",
+    "http_proxy",
+    "lint",
+    "local",
+    "map",
+    "request",
+    "response",
+    "shared_data",
+    "test",
+    "utils"
+   ],
+   "dropped": [
+    "formparser",
+    "http_proxy",
+    "lint",
+    "local",
+    "map"
+   ],
+   "fake": []
+  }
+ },
+ "wz_T1_overreport": {
+  "_internal.py": {
+   "gold_full": [
+    "_reloader",
+    "debug",
+    "exceptions",
+    "file_storage",
+    "formparser",
+    "headers",
+    "http",
+    "map",
+    "mixins",
+    "request",
+    "response",
+    "serving",
+    "structures",
+    "test",
+    "utils"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "accept"
+   ]
+  },
+  "datastructures/__init__.py": {
+   "gold_full": [
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "map",
+    "multipart",
+    "request",
+    "response",
+    "rules",
+    "test",
+    "urls",
+    "utils"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "datastructures/cache_control.py": {
+   "gold_full": [
+    "datastructures",
+    "response"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "datastructures/headers.py": {
+   "gold_full": [
+    "datastructures",
+    "file_storage"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "datastructures/mixins.py": {
+   "gold_full": [
+    "cache_control",
+    "datastructures",
+    "headers",
+    "structures"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "datastructures/structures.py": {
+   "gold_full": [
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "datastructures",
+    "file_storage",
+    "headers"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "debug/console.py": {
+   "gold_full": [
+    "debug",
+    "tbtools"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "debug/tbtools.py": {
+   "gold_full": [
+    "console",
+    "debug",
+    "serving"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "exceptions.py": {
+   "gold_full": [
+    "debug",
+    "formparser",
+    "headers",
+    "http_proxy",
+    "map",
+    "multipart",
+    "request",
+    "response",
+    "serving",
+    "utils",
+    "wsgi"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "http.py": {
+   "gold_full": [
+    "auth",
+    "csp",
+    "debug",
+    "etag",
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "multipart",
+    "proxy_fix",
+    "request",
+    "response",
+    "serving",
+    "shared_data",
+    "test",
+    "utils"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "routing/converters.py": {
+   "gold_full": [
+    "map",
+    "matcher",
+    "routing",
+    "rules"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "routing/exceptions.py": {
+   "gold_full": [
+    "map",
+    "matcher",
+    "routing"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "routing/map.py": {
+   "gold_full": [
+    "converters",
+    "exceptions",
+    "routing",
+    "rules"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "routing/matcher.py": {
+   "gold_full": [
+    "map",
+    "routing"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "routing/rules.py": {
+   "gold_full": [
+    "exceptions",
+    "map",
+    "matcher",
+    "routing"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "sansio/__init__.py": {
+   "gold_full": [
+    "http",
+    "wsgi"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "sansio/http.py": {
+   "gold_full": [
+    "request",
+    "response"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "sansio/multipart.py": {
+   "gold_full": [
+    "formparser",
+    "test"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "sansio/utils.py": {
+   "gold_full": [
+    "debug",
+    "request",
+    "wsgi"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "security.py": {
+   "gold_full": [
+    "debug",
+    "shared_data",
+    "utils"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "serving.py": {
+   "gold_full": [
+    "__init__",
+    "testapp"
+   ],
+   "dropped": [],
+   "fake": [
+    "_internal",
+    "_reloader"
+   ]
+  },
+  "test.py": {
+   "gold_full": [
+    "__init__",
+    "request",
+    "response"
+   ],
+   "dropped": [],
+   "fake": [
+    "_internal",
+    "_reloader"
+   ]
+  },
+  "urls.py": {
+   "gold_full": [
+    "map",
+    "response",
+    "rules",
+    "serving",
+    "test",
+    "utils"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "utils.py": {
+   "gold_full": [
+    "debug",
+    "exceptions",
+    "request",
+    "response",
+    "shared_data",
+    "tbtools",
+    "test"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "wrappers/__init__.py": {
+   "gold_full": [
+    "__init__",
+    "utils"
+   ],
+   "dropped": [],
+   "fake": [
+    "_internal",
+    "_reloader"
+   ]
+  },
+  "wrappers/request.py": {
+   "gold_full": [
+    "_internal",
+    "debug",
+    "exceptions",
+    "map",
+    "response",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_reloader"
+   ]
+  },
+  "wrappers/response.py": {
+   "gold_full": [
+    "debug",
+    "exceptions",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  },
+  "wsgi.py": {
+   "gold_full": [
+    "formparser",
+    "http_proxy",
+    "lint",
+    "local",
+    "map",
+    "request",
+    "response",
+    "shared_data",
+    "test",
+    "utils"
+   ],
+   "dropped": [],
+   "fake": [
+    "__init__",
+    "_internal"
+   ]
+  }
+ }
+}

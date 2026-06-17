@@ -1,0 +1,274 @@
+{
+  "wz_T1_drop1": {
+    "correct": {
+      "rec": 0.958,
+      "recov": 0.929,
+      "hed": 0.0,
+      "abst": 0.0,
+      "dang": 0.071,
+      "fp": 0.0
+    },
+    "wrong": {
+      "rec": 0.684,
+      "recov": 0.036,
+      "hed": 0.06,
+      "abst": 0.036,
+      "dang": 0.845,
+      "fp": 0.0
+    },
+    "humble": {
+      "rec": 0.695,
+      "recov": 0.071,
+      "hed": 0.274,
+      "abst": 0.024,
+      "dang": 0.679,
+      "fp": 0.0
+    },
+    "nocard": {
+      "rec": 0.002,
+      "recov": 0.0,
+      "hed": 0.0,
+      "abst": 1.0,
+      "dang": 0.0,
+      "fp": 0.0
+    }
+  },
+  "cpy_T1_drop1": {
+    "correct": {
+      "rec": 0.85,
+      "recov": 0.848,
+      "hed": 0.015,
+      "abst": 0.0,
+      "dang": 0.045,
+      "fp": 0.0
+    },
+    "wrong": {
+      "rec": 0.551,
+      "recov": 0.0,
+      "hed": 0.045,
+      "abst": 0.0,
+      "dang": 0.773,
+      "fp": 0.0
+    },
+    "humble": {
+      "rec": 0.625,
+      "recov": 0.0,
+      "hed": 0.424,
+      "abst": 0.03,
+      "dang": 0.576,
+      "fp": 0.0
+    },
+    "nocard": {
+      "rec": 0.0,
+      "recov": 0.0,
+      "hed": 0.0,
+      "abst": 1.0,
+      "dang": 0.0,
+      "fp": 0.0
+    }
+  },
+  "flask_T1_drop1": {
+    "correct": {
+      "rec": 0.938,
+      "recov": 0.938,
+      "hed": 0.021,
+      "abst": 0.021,
+      "dang": 0.0,
+      "fp": 0.0
+    },
+    "wrong": {
+      "rec": 0.707,
+      "recov": 0.0,
+      "hed": 0.021,
+      "abst": 0.0,
+      "dang": 0.979,
+      "fp": 0.0
+    },
+    "humble": {
+      "rec": 0.643,
+      "recov": 0.062,
+      "hed": 0.333,
+      "abst": 0.042,
+      "dang": 0.625,
+      "fp": 0.0
+    },
+    "nocard": {
+      "rec": 0.01,
+      "recov": 0.021,
+      "hed": 0.0,
+      "abst": 1.0,
+      "dang": 0.0,
+      "fp": 0.0
+    }
+  },
+  "gson_T1_drop1": {
+    "correct": {
+      "rec": 0.784,
+      "recov": 0.788,
+      "hed": 0.03,
+      "abst": 0.061,
+      "dang": 0.015,
+      "fp": 0.0
+    },
+    "wrong": {
+      "rec": 0.588,
+      "recov": 0.0,
+      "hed": 0.045,
+      "abst": 0.0,
+      "dang": 0.818,
+      "fp": 0.0
+    },
+    "humble": {
+      "rec": 0.557,
+      "recov": 0.0,
+      "hed": 0.455,
+      "abst": 0.076,
+      "dang": 0.515,
+      "fp": 0.0
+    },
+    "nocard": {
+      "rec": 0.0,
+      "recov": 0.0,
+      "hed": 0.0,
+      "abst": 1.0,
+      "dang": 0.0,
+      "fp": 0.0
+    }
+  },
+  "wz_T2_drop1": {
+    "correct": {
+      "rec": 0.865,
+      "recov": 0.917,
+      "hed": 0.0,
+      "abst": 0.0,
+      "dang": 0.071,
+      "fp": 0.0
+    },
+    "wrong": {
+      "rec": 0.575,
+      "recov": 0.095,
+      "hed": 0.0,
+      "abst": 0.0,
+      "dang": 0.798,
+      "fp": 0.0
+    },
+    "humble": {
+      "rec": 0.607,
+      "recov": 0.095,
+      "hed": 0.012,
+      "abst": 0.0,
+      "dang": 0.762,
+      "fp": 0.0
+    },
+    "nocard": {
+      "rec": 0.236,
+      "recov": 0.202,
+      "hed": 0.048,
+      "abst": 0.048,
+      "dang": 0.214,
+      "fp": 0.0
+    }
+  },
+  "wz_T3_drop1": {
+    "correct": {
+      "rec": 0.971,
+      "recov": 0.964,
+      "hed": 0.0,
+      "abst": 0.0,
+      "dang": 0.0,
+      "fp": 0.0
+    },
+    "wrong": {
+      "rec": 0.681,
+      "recov": 0.0,
+      "hed": 0.0,
+      "abst": 0.036,
+      "dang": 0.929,
+      "fp": 0.0
+    },
+    "humble": {
+      "rec": 0.654,
+      "recov": 0.0,
+      "hed": 0.917,
+      "abst": 0.071,
+      "dang": 0.048,
+      "fp": 0.0
+    },
+    "nocard": {
+      "rec": 0.02,
+      "recov": 0.024,
+      "hed": 0.024,
+      "abst": 1.0,
+      "dang": 0.0,
+      "fp": 0.0
+    }
+  },
+  "wz_T1_dropN": {
+    "wrong": {
+      "rec": 0.555,
+      "recov": 0.095,
+      "hed": 0.012,
+      "abst": 0.0,
+      "dang": 0.857,
+      "fp": 0.0
+    },
+    "humble": {
+      "rec": 0.611,
+      "recov": 0.179,
+      "hed": 0.238,
+      "abst": 0.012,
+      "dang": 0.738,
+      "fp": 0.0
+    },
+    "correct": {
+      "rec": 0.958,
+      "recov": 0.929,
+      "hed": 0.0,
+      "abst": 0.0,
+      "dang": 0.071,
+      "fp": 0.0
+    },
+    "nocard": {
+      "rec": 0.002,
+      "recov": 0.0,
+      "hed": 0.0,
+      "abst": 1.0,
+      "dang": 0.0,
+      "fp": 0.0
+    }
+  },
+  "wz_T1_overreport": {
+    "wrong": {
+      "rec": 0.744,
+      "recov": 1.0,
+      "hed": 0.0,
+      "abst": 0.024,
+      "dang": 0.0,
+      "fp": 0.833
+    },
+    "humble": {
+      "rec": 0.931,
+      "recov": 1.0,
+      "hed": 0.155,
+      "abst": 0.012,
+      "dang": 0.0,
+      "fp": 0.935
+    },
+    "correct": {
+      "rec": 0.958,
+      "recov": 0.929,
+      "hed": 0.0,
+      "abst": 0.0,
+      "dang": 0.071,
+      "fp": 0.0
+    },
+    "nocard": {
+      "rec": 0.002,
+      "recov": 0.0,
+      "hed": 0.0,
+      "abst": 1.0,
+      "dang": 0.0,
+      "fp": 0.0
+    }
+  }
+}

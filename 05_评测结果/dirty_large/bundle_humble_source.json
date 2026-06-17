@@ -1,0 +1,929 @@
+[
+ {
+  "id": "L-con-CPython-0",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Doc/conf.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=_tkinter；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/conf.py\n它 import 的模块(静态分析): importlib, os, patchlevel, sys\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import _tkinter\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Doc/conf.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-1",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Doc/tools/extensions/pyspecific.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=sphinx；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/pyspecific.py\n它 import 的模块(静态分析): re, sphinx\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n        from sphinx.domains.python import pairindextypes\n    except ImportError\n\n问题:请准确、完整地说明 CPython/Doc/tools/extensions/pyspecific.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-2",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/_ios_support.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=ctypes；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/_ios_support.py\n它 import 的模块(静态分析): ctypes, sys\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from ctypes import cdll, c_void_p, c_char_p, util\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/_ios_support.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-3",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/_pydecimal.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=locale；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/_pydecimal.py\n它 import 的模块(静态分析): collections, contextvars, itertools, locale, math, numbers, re, sys, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import locale as _locale\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/_pydecimal.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-4",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/_pyio.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=locale；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/_pyio.py\n它 import 的模块(静态分析): _thread, abc, codecs, errno, io, locale, msvcrt, os, stat, sys, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n            import locale\n        except ImportError\n\n问题:请准确、完整地说明 CPython/Lib/_pyio.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-5",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/_pylong.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=_decimal；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/_pylong.py\n它 import 的模块(静态分析): _decimal, collections, decimal, itertools, re\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import _decimal\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/_pylong.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-6",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/_pyrepl/windows_console.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=nt；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/windows_console.py\n它 import 的模块(静态分析): __future__, console, ctypes, dataclasses, io, nt, os, render, sys, trace, types, typing, windows_eventqueue\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import nt\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/_pyrepl/windows_console.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-7",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/asyncio/__main__.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=readline；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/__main__.py\n它 import 的模块(静态分析): _colorize, _pyrepl, argparse, ast, asyncio, code, concurrent, contextvars, inspect, os, readline, rlcompleter, site, sys, threading, tokenize, types, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n        import readline  # NoQA\n    except ImportError\n\n问题:请准确、完整地说明 CPython/Lib/asyncio/__main__.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-8",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/asyncio/base_events.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=ssl；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/base_events.py\n它 import 的模块(静态分析): collections, concurrent, contextvars, errno, heapq, inspect, itertools, log, math, os, socket, ssl, stat, streams, subprocess, sys, threading, time, traceback, warnings, weakref\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import ssl\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/asyncio/base_events.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-9",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/asyncio/futures.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=_asyncio；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/futures.py\n它 import 的模块(静态分析): _asyncio, concurrent, contextvars, logging, sys, types\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import _asyncio\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/asyncio/futures.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-10",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/asyncio/selector_events.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=ssl；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/selector_events.py\n它 import 的模块(静态分析): collections, errno, functools, itertools, log, os, selectors, socket, ssl, warnings, weakref\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import ssl\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/asyncio/selector_events.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-11",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/asyncio/sslproto.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=ssl；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/sslproto.py\n它 import 的模块(静态分析): collections, enum, log, ssl, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import ssl\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/asyncio/sslproto.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-12",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/asyncio/tasks.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=_asyncio；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/tasks.py\n它 import 的模块(静态分析): _asyncio, concurrent, contextvars, functools, inspect, itertools, math, types, weakref\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import _asyncio\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/asyncio/tasks.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-13",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/bisect.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=_bisect；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/bisect.py\n它 import 的模块(静态分析): _bisect\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from _bisect import *\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/bisect.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-14",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/code.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=readline；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/code.py\n它 import 的模块(静态分析): argparse, builtins, codeop, readline, sys, traceback\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n            import readline  # noqa: F401\n        except ImportError\n\n问题:请准确、完整地说明 CPython/Lib/code.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-15",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/codecs.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=_codecs；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/codecs.py\n它 import 的模块(静态分析): _codecs, builtins, encodings, sys, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from _codecs import *\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/codecs.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-16",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/concurrent/futures/__init__.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=_interpreters；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/__init__.py\n它 import 的模块(静态分析): _interpreters, concurrent, interpreter, process, thread\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import _interpreters\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/concurrent/futures/__init__.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-17",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/concurrent/futures/process.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=multiprocessing；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/process.py\n它 import 的模块(静态分析): concurrent, functools, itertools, multiprocessing, os, queue, sys, threading, traceback, weakref\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n        import multiprocessing.synchronize  # noqa: F401\n    except ImportError\n\n问题:请准确、完整地说明 CPython/Lib/concurrent/futures/process.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-18",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/ctypes/macholib/dyld.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=_ctypes；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/dyld.py\n它 import 的模块(静态分析): _ctypes, ctypes, itertools, os\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from _ctypes import _dyld_shared_cache_contains_path\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/ctypes/macholib/dyld.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-19",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/datetime.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=_datetime；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/datetime.py\n它 import 的模块(静态分析): _datetime, _pydatetime\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from _datetime import *\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/datetime.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-20",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/dbm/__init__.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=dbm；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/__init__.py\n它 import 的模块(静态分析): dbm, io, os, struct, sys\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from dbm import ndbm\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/dbm/__init__.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-21",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/decimal.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=_decimal/_decimal；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/decimal.py\n它 import 的模块(静态分析): _decimal, _pydecimal, sys\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from _decimal import *\n    from _decimal import __libmpdec_version__  # noqa: F401\n    from _decimal import __getattr__  # noqa: F401\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/decimal.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-22",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/ensurepip/__init__.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=zlib；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/__init__.py\n它 import 的模块(静态分析): argparse, contextlib, importlib, os, pathlib, pip, shutil, subprocess, sys, sysconfig, tempfile, zlib\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n        import zlib\n    except ImportError\n\n问题:请准确、完整地说明 CPython/Lib/ensurepip/__init__.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-23",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/ftplib.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=ssl；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/ftplib.py\n它 import 的模块(静态分析): netrc, re, socket, ssl, sys\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import ssl\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/ftplib.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-24",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/functools.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=_functools；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/functools.py\n它 import 的模块(静态分析): _functools, _thread, abc, annotationlib, collections, operator, reprlib, types, typing, weakref\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from _functools import cmp_to_key\nexcept ImportError\n\n问题:请准确、完整地说明 CPython/Lib/functools.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-25",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 CPython/Lib/getpass.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=msvcrt；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/getpass.py\n它 import 的模块(静态分析): contextlib, io, msvcrt, os, pwd, sys, termios, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n        import msvcrt\n    except ImportError\n\n问题:请准确、完整地说明 CPython/Lib/getpass.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-0",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 CPython/Lib/_py_warnings.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/_py_warnings.py\n它 import 的模块(静态分析): _contextvars, _thread, builtins, functools, inspect, linecache, re, sys, traceback, tracemalloc, types\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\n__import__(module, None, None, [klass]\n\n问题:请准确、完整地说明 CPython/Lib/_py_warnings.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-1",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 CPython/Lib/_pyrepl/_module_completer.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/_module_completer.py\n它 import 的模块(静态分析): __future__, contextlib, dataclasses, fancycompleter, importlib, io, itertools, os, pkgutil, re, sys, token, tokenize, types, typing\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\nimportlib.import_module(fqname\n\n问题:请准确、完整地说明 CPython/Lib/_pyrepl/_module_completer.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-2",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 CPython/Lib/dbm/__init__.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/__init__.py\n它 import 的模块(静态分析): dbm, io, os, struct, sys\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\n__import__(name, fromlist=['open']\n\n问题:请准确、完整地说明 CPython/Lib/dbm/__init__.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-3",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 CPython/Lib/encodings/__init__.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/__init__.py\n它 import 的模块(静态分析): _codecs, _win_cp_codecs, codecs, sys, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\n__import__('encodings.' + modname, fromlist=_import_tail,\n\n问题:请准确、完整地说明 CPython/Lib/encodings/__init__.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-4",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 CPython/Lib/idlelib/editor.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/editor.py\n它 import 的模块(静态分析): idlelib, importlib, os, platform, re, string, subprocess, sys, tkinter, tokenize, traceback, unittest, webbrowser\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\nimportlib.import_module('.' + fname, package=__package__\n\n问题:请准确、完整地说明 CPython/Lib/idlelib/editor.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-5",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 CPython/Lib/idlelib/pyshell.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/pyshell.py\n它 import 的模块(静态分析): code, getopt, idlelib, itertools, linecache, os, platform, pydoc, re, socket, subprocess, sys, textwrap, threading, time, tkinter, tokenize, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\n__import__('idlelib.run'\n\n问题:请准确、完整地说明 CPython/Lib/idlelib/pyshell.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-6",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 CPython/Lib/idlelib/run.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/run.py\n它 import 的模块(静态分析): __main__, _thread, atexit, contextlib, functools, idlelib, io, linecache, pydoc, queue, sys, textwrap, threading, time, tkinter, traceback, unittest, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\n__import__('idlelib.run'\n\n问题:请准确、完整地说明 CPython/Lib/idlelib/run.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-7",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 CPython/Lib/importlib/_bootstrap.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/_bootstrap.py\n它 import 的模块(静态分析): _frozen_importlib_external\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\n__import__(name, globals=None, locals=None, fromlist=(\n\n问题:请准确、完整地说明 CPython/Lib/importlib/_bootstrap.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-8",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 CPython/Lib/importlib/resources/_common.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/_common.py\n它 import 的模块(静态分析): _adapters, abc, contextlib, functools, importlib, inspect, itertools, os, pathlib, tempfile, types, typing\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\nimportlib.import_module(cand\n\n问题:请准确、完整地说明 CPython/Lib/importlib/resources/_common.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-9",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 CPython/Lib/importlib/util.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/util.py\n它 import 的模块(静态分析): _abc, _bootstrap, _bootstrap_external, _imp, sys, threading, types\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\nimportlib.import_module(\n\n问题:请准确、完整地说明 CPython/Lib/importlib/util.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-0",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 CPython/Lib/_pyrepl/_module_completer.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/_module_completer.py\n它 import 的模块(静态分析): __future__, contextlib, dataclasses, fancycompleter, importlib, io, itertools, os, pkgutil, re, sys, token, tokenize, types, typing\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(module, attr\n\n问题:请准确、完整地说明 CPython/Lib/_pyrepl/_module_completer.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-1",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 CPython/Lib/idlelib/editor.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/editor.py\n它 import 的模块(静态分析): idlelib, importlib, os, platform, re, string, subprocess, sys, tkinter, tokenize, traceback, unittest, webbrowser\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(mod, name\n\n问题:请准确、完整地说明 CPython/Lib/idlelib/editor.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-2",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 CPython/Lib/idlelib/idle_test/htest.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/htest.py\n它 import 的模块(静态分析): idlelib, importlib, textwrap, tkinter\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(mod, test_name\n\n问题:请准确、完整地说明 CPython/Lib/idlelib/idle_test/htest.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-3",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 CPython/Lib/importlib/_bootstrap.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/_bootstrap.py\n它 import 的模块(静态分析): _frozen_importlib_external\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(module, \"__spec__\", None\n\n问题:请准确、完整地说明 CPython/Lib/importlib/_bootstrap.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-4",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 CPython/Lib/importlib/_bootstrap_external.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/_bootstrap_external.py\n它 import 的模块(静态分析): _imp, _io, _warnings, importlib, marshal, nt, posix, sys, tokenize, winreg\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(module, path_attr_name\n\n问题:请准确、完整地说明 CPython/Lib/importlib/_bootstrap_external.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-5",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 CPython/Lib/pickle.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/pickle.py\n它 import 的模块(静态分析): _compat_pickle, _pickle, argparse, codecs, copyreg, functools, io, itertools, pprint, struct, sys, types\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(sys.modules[module], name\n\n问题:请准确、完整地说明 CPython/Lib/pickle.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-6",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 CPython/Lib/pydoc.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/pydoc.py\n它 import 的模块(静态分析): __future__, _pyrepl, annotationlib, ast, builtins, collections, email, getopt, http, importlib, inspect, io, os, pkgutil, platform, pydoc_data, re, reprlib, select, sys, sysconfig, textwrap, threading, time, tokenize, traceback, urllib, warnings, webbrowser\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(module, name\n\n问题:请准确、完整地说明 CPython/Lib/pydoc.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-7",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 CPython/Lib/unittest/loader.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 CPython/loader.py\n它 import 的模块(静态分析): fnmatch, functools, os, re, sys, traceback, types\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(module, name\n\n问题:请准确、完整地说明 CPython/Lib/unittest/loader.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-flask-0",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 flask/app.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=asgiref；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 flask/app.py\n它 import 的模块(静态分析): __future__, _typeshed, asgiref, click, collections, ctx, datetime, debughelpers, globals, helpers, inspect, itertools, os, sansio, sessions, signals, sys, templating, testing, types, typing, urllib, weakref, werkzeug, wrappers\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n            from asgiref.sync import async_to_sync as asgiref_async_to_sync\n        except ImportError\n\n问题:请准确、完整地说明 flask/app.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-flask-1",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 flask/cli.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=dotenv；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 flask/cli.py\n它 import 的模块(静态分析): __future__, _typeshed, app, ast, click, code, collections, cryptography, dotenv, functools, globals, helpers, importlib, importlib_metadata, inspect, operator, os, platform, re, readline, rlcompleter, ssl, sys, traceback, types, typing, werkzeug\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n        import dotenv  # noqa: F401\n    except ImportError\n\n问题:请准确、完整地说明 flask/cli.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-flask-0",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 flask/cli.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 flask/cli.py\n它 import 的模块(静态分析): __future__, _typeshed, app, ast, click, code, collections, cryptography, dotenv, functools, globals, helpers, importlib, importlib_metadata, inspect, operator, os, platform, re, readline, rlcompleter, ssl, sys, traceback, types, typing, werkzeug\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\n__import__(module_name\n\n问题:请准确、完整地说明 flask/cli.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-flask-1",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 flask/helpers.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 flask/helpers.py\n它 import 的模块(静态分析): __future__, datetime, functools, globals, importlib, os, signals, sys, typing, werkzeug, wrappers\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\n__import__(import_name\n\n问题:请准确、完整地说明 flask/helpers.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-flask-0",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 flask/cli.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 flask/cli.py\n它 import 的模块(静态分析): __future__, _typeshed, app, ast, click, code, collections, cryptography, dotenv, functools, globals, helpers, importlib, importlib_metadata, inspect, operator, os, platform, re, readline, rlcompleter, ssl, sys, traceback, types, typing, werkzeug\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(module, attr_name, None\n\n问题:请准确、完整地说明 flask/cli.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-flask-1",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 flask/helpers.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 flask/helpers.py\n它 import 的模块(静态分析): __future__, datetime, functools, globals, importlib, os, signals, sys, typing, werkzeug, wrappers\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(mod, \"__file__\", None\n\n问题:请准确、完整地说明 flask/helpers.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-flask-2",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 flask/sansio/app.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 flask/app.py\n它 import 的模块(静态分析): __future__, blueprints, config, ctx, datetime, helpers, itertools, json, logging, os, scaffold, sys, templating, testing, typing, werkzeug\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(sys.modules[\"__main__\"], \"__file__\", None\n\n问题:请准确、完整地说明 flask/sansio/app.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-requests-0",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 requests/__init__.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=charset_normalizer；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 requests/__init__.py\n它 import 的模块(静态分析): __version__, api, chardet, charset_normalizer, cryptography, exceptions, logging, models, sessions, ssl, status_codes, urllib3, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from charset_normalizer import __version__ as charset_normalizer_version\nexcept ImportError\n\n问题:请准确、完整地说明 requests/__init__.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-requests-1",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 requests/adapters.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=urllib3；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 requests/adapters.py\n它 import 的模块(静态分析): auth, compat, cookies, exceptions, models, os, socket, ssl, structures, typing, urllib3, utils, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from urllib3.contrib.socks import SOCKSProxyManager\nexcept ImportError\n\n问题:请准确、完整地说明 requests/adapters.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-requests-2",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 requests/cookies.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=threading；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 requests/cookies.py\n它 import 的模块(静态分析): _internal_utils, calendar, compat, copy, dummy_threading, threading, time\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import threading\nexcept ImportError\n\n问题:请准确、完整地说明 requests/cookies.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-requests-3",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 requests/help.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=charset_normalizer；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 requests/help.py\n它 import 的模块(静态分析): OpenSSL, chardet, charset_normalizer, cryptography, idna, json, platform, ssl, sys, urllib3\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import charset_normalizer\nexcept ImportError\n\n问题:请准确、完整地说明 requests/help.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-requests-4",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 requests/utils.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=winreg；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 requests/utils.py\n它 import 的模块(静态分析): __version__, _internal_utils, codecs, collections, compat, contextlib, cookies, exceptions, io, netrc, os, re, socket, struct, structures, sys, tempfile, urllib3, warnings, winreg, zipfile\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n            import winreg\n        except ImportError\n\n问题:请准确、完整地说明 requests/utils.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-requests-0",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 requests/compat.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 requests/compat.py\n它 import 的模块(静态分析): collections, http, importlib, io, json, simplejson, sys, urllib\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\nimportlib.import_module(lib\n\n问题:请准确、完整地说明 requests/compat.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-requests-1",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "请准确、完整地说明 requests/packages.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=dynamic；具体脏依赖=运行时/运行时数据；机制=__import__/importlib；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 requests/packages.py\n它 import 的模块(静态分析): compat, sys\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\n__import__(package\n\n问题:请准确、完整地说明 requests/packages.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-0",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 pydantic/_internal/_typing_extra.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=typing；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/_typing_extra.py\n它 import 的模块(静态分析): __future__, _dataclasses, _utils, collections, dataclasses, eval_type_backport, functools, re, sys, types, typing, typing_extensions, warnings, zoneinfo\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from typing import _TypingBase  # type: ignore[attr-defined]\nexcept ImportError\n\n问题:请准确、完整地说明 pydantic/_internal/_typing_extra.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-1",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 pydantic/mypy.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=mypy；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/mypy.py\n它 import 的模块(静态分析): __future__, configparser, mypy, pydantic, sys, tomli, tomllib, typing, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from mypy.types import TypeVarDef  # type: ignore[attr-defined]\nexcept ImportError\n\n问题:请准确、完整地说明 pydantic/mypy.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-2",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 pydantic/networks.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=email_validator；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/networks.py\n它 import 的模块(静态分析): __future__, _internal, _migration, annotated_handlers, dataclasses, email_validator, importlib, ipaddress, json_schema, pydantic_core, re, typing, typing_extensions\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n        import email_validator\n    except ImportError\n\n问题:请准确、完整地说明 pydantic/networks.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-3",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 pydantic/v1/_hypothesis_plugin.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=email_validator；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/_hypothesis_plugin.py\n它 import 的模块(静态分析): contextlib, datetime, email_validator, fractions, hypothesis, ipaddress, json, math, pydantic, typing\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import email_validator\nexcept ImportError\n\n问题:请准确、完整地说明 pydantic/v1/_hypothesis_plugin.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-4",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 pydantic/v1/dataclasses.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=functools；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/dataclasses.py\n它 import 的模块(静态分析): contextlib, copy, dataclasses, functools, pydantic, sys, typing, typing_extensions\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from functools import cached_property\nexcept ImportError\n\n问题:请准确、完整地说明 pydantic/v1/dataclasses.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-5",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 pydantic/v1/env_settings.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=dotenv；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/env_settings.py\n它 import 的模块(静态分析): dotenv, os, pathlib, pydantic, typing, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n        from dotenv import dotenv_values\n    except ImportError\n\n问题:请准确、完整地说明 pydantic/v1/env_settings.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-6",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 pydantic/v1/mypy.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=mypy；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/mypy.py\n它 import 的模块(静态分析): configparser, mypy, pydantic, sys, toml, tomli, tomllib, typing, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from mypy.types import TypeVarDef  # type: ignore[attr-defined]\nexcept ImportError\n\n问题:请准确、完整地说明 pydantic/v1/mypy.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-7",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 pydantic/v1/networks.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=email_validator；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/networks.py\n它 import 的模块(静态分析): email_validator, ipaddress, pydantic, re, typing, typing_extensions\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n        import email_validator\n    except ImportError\n\n问题:请准确、完整地说明 pydantic/v1/networks.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-8",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 pydantic/v1/typing.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=typing；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/typing.py\n它 import 的模块(静态分析): collections, os, pydantic, sys, types, typing, typing_extensions\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    from typing import _TypingBase as typing_base  # type: ignore\nexcept ImportError\n\n问题:请准确、完整地说明 pydantic/v1/typing.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-9",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "请准确、完整地说明 pydantic/v1/version.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=conditional；具体脏依赖=cython；机制=try/except；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/version.py\n它 import 的模块(静态分析): cython, importlib, pathlib, platform, sys\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ntry:\n    import cython  # type: ignore\nexcept ImportError\n\n问题:请准确、完整地说明 pydantic/v1/version.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-pydantic-0",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 pydantic/__init__.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/__init__.py\n它 import 的模块(静态分析): _internal, _migration, aliases, annotated_handlers, config, deprecated, errors, fields, functional_serializers, functional_validators, importlib, json_schema, main, networks, pydantic_core, root_model, type_adapter, types, typing, validate_call_decorator, version, warnings\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(module, attr_name\n\n问题:请准确、完整地说明 pydantic/__init__.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-pydantic-1",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 pydantic/_internal/_typing_extra.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/_typing_extra.py\n它 import 的模块(静态分析): __future__, _dataclasses, _utils, collections, dataclasses, eval_type_backport, functools, re, sys, types, typing, typing_extensions, warnings, zoneinfo\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(sys.modules.get(base.__module__, None\n\n问题:请准确、完整地说明 pydantic/_internal/_typing_extra.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-pydantic-2",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 pydantic/_internal/_validators.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/_validators.py\n它 import 的模块(静态分析): __future__, importlib, ipaddress, math, pydantic_core, re, typing\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(module, attribute\n\n问题:请准确、完整地说明 pydantic/_internal/_validators.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-pydantic-3",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 pydantic/v1/utils.py 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时确定；机制=getattr/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 pydantic/utils.py\n它 import 的模块(静态分析): collections, copy, importlib, inspect, itertools, keyword, pathlib, pydantic, types, typing, typing_extensions, warnings, weakref\n(注:本卡片由静态 import 分析生成)\n\n[相关源码片段]\ngetattr(module, class_name\n\n问题:请准确、完整地说明 pydantic/v1/utils.py 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-0",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "请准确、完整地说明 go_gin/binding/binding.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=buildtag；具体脏依赖=nomsgpack；机制=go:build/+build；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/binding/binding.go\n(静态分析)\n\n[相关源码片段]\n//go:build !nomsgpack\n\n问题:请准确、完整地说明 go_gin/binding/binding.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-1",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "请准确、完整地说明 go_gin/binding/binding_nomsgpack.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=buildtag；具体脏依赖=nomsgpack；机制=go:build/+build；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/binding/binding_nomsgpack.go\n(静态分析)\n\n[相关源码片段]\n//go:build nomsgpack\n\n问题:请准确、完整地说明 go_gin/binding/binding_nomsgpack.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-go-0",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 go_gin/binding/default_validator.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=reflect/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/binding/default_validator.go\n它依赖的模块/头(静态分析): reflect, strconv, strings, sync, v10\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nreflect.ValueOf(obj\n\n问题:请准确、完整地说明 go_gin/binding/default_validator.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-go-1",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 go_gin/binding/form_mapping.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=reflect/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/binding/form_mapping.go\n它依赖的模块/头(静态分析): encoding, errors, fmt, maps, multipart, reflect, strconv, strings, time, json, bytesconv\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nreflect.ValueOf(ptr\n\n问题:请准确、完整地说明 go_gin/binding/form_mapping.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-2",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "请准确、完整地说明 go_gin/binding/msgpack.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=buildtag；具体脏依赖=nomsgpack；机制=go:build/+build；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/binding/msgpack.go\n它依赖的模块/头(静态分析): bytes, io, http, codec\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n//go:build !nomsgpack\n\n问题:请准确、完整地说明 go_gin/binding/msgpack.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-go-2",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 go_gin/binding/multipart_form_mapping.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=reflect/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/binding/multipart_form_mapping.go\n它依赖的模块/头(静态分析): errors, multipart, http, reflect\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nreflect.ValueOf(files[0]\n\n问题:请准确、完整地说明 go_gin/binding/multipart_form_mapping.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-go-3",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 go_gin/binding/plain.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=reflect/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/binding/plain.go\n它依赖的模块/头(静态分析): fmt, io, http, reflect, bytesconv\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nreflect.ValueOf(obj\n\n问题:请准确、完整地说明 go_gin/binding/plain.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-3",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "请准确、完整地说明 go_gin/codec/json/go_json.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=buildtag；具体脏依赖=go_json；机制=go:build/+build；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/codec/json/go_json.go\n它依赖的模块/头(静态分析): io, go-json\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n//go:build go_json\n\n问题:请准确、完整地说明 go_gin/codec/json/go_json.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-4",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "请准确、完整地说明 go_gin/codec/json/json.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=buildtag；具体脏依赖=jsoniter；机制=go:build/+build；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/codec/json/json.go\n它依赖的模块/头(静态分析): json, io\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n//go:build !jsoniter && !go_json && !(sonic && (linux || windows || darwin))\n\n问题:请准确、完整地说明 go_gin/codec/json/json.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-5",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "请准确、完整地说明 go_gin/codec/json/jsoniter.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=buildtag；具体脏依赖=jsoniter；机制=go:build/+build；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/codec/json/jsoniter.go\n它依赖的模块/头(静态分析): io, go\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n//go:build jsoniter\n\n问题:请准确、完整地说明 go_gin/codec/json/jsoniter.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-6",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "请准确、完整地说明 go_gin/codec/json/sonic.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=buildtag；具体脏依赖=sonic；机制=go:build/+build；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/codec/json/sonic.go\n它依赖的模块/头(静态分析): io, sonic\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n//go:build sonic && (linux || windows || darwin)\n\n问题:请准确、完整地说明 go_gin/codec/json/sonic.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-7",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "请准确、完整地说明 go_gin/context_appengine.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=buildtag；具体脏依赖=appengine；机制=go:build/+build；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/context_appengine.go\n(静态分析)\n\n[相关源码片段]\n//go:build appengine\n\n问题:请准确、完整地说明 go_gin/context_appengine.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-go-4",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 go_gin/errors.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=reflect/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/errors.go\n它依赖的模块/头(静态分析): fmt, reflect, strings, json\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nreflect.ValueOf(msg.Meta\n\n问题:请准确、完整地说明 go_gin/errors.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-go-5",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 go_gin/testdata/protoexample/test.pb.go 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=reflect/反射；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 go_gin/testdata/protoexample/test.pb.go\n它依赖的模块/头(静态分析): protoreflect, protoimpl, reflect, sync\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nreflect.EnumNumber(x\n\n问题:请准确、完整地说明 go_gin/testdata/protoexample/test.pb.go 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-0",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 java_gson/extras/src/main/java/com/google/gson/interceptors/InterceptorFactory.java 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=反射/reflect；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 java_gson/extras/src/main/java/com/google/gson/interceptors/InterceptorFactory.java\n它依赖的模块/头(静态分析): Gson, TypeAdapter, TypeAdapterFactory, TypeToken, JsonReader, JsonWriter, IOException\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nimport com.google.gson.reflect.TypeToken;\n\n问题:请准确、完整地说明 java_gson/extras/src/main/java/com/google/gson/interceptors/InterceptorFactory.java 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-1",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 java_gson/extras/src/main/java/com/google/gson/typeadapters/PostConstructAdapterFactory.java 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=反射/reflect；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 java_gson/extras/src/main/java/com/google/gson/typeadapters/PostConstructAdapterFactory.java\n它依赖的模块/头(静态分析): Gson, TypeAdapter, TypeAdapterFactory, TypeToken, JsonReader, JsonWriter, IOException, InvocationTargetException, Method, PostConstruct\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nimport com.google.gson.reflect.TypeToken;\n\n问题:请准确、完整地说明 java_gson/extras/src/main/java/com/google/gson/typeadapters/PostConstructAdapterFactory.java 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-2",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 java_gson/extras/src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=反射/reflect；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 java_gson/extras/src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java\n它依赖的模块/头(静态分析): CanIgnoreReturnValue, Gson, JsonElement, JsonObject, JsonParseException, JsonPrimitive, TypeAdapter, TypeAdapterFactory, TypeToken, JsonReader, JsonWriter, IOException\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nimport com.google.gson.reflect.TypeToken;\n\n问题:请准确、完整地说明 java_gson/extras/src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-3",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/FieldAttributes.java 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=反射/reflect；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 java_gson/gson/src/main/java/com/google/gson/FieldAttributes.java\n它依赖的模块/头(静态分析): Annotation, Field, Type, Arrays, Collection, Objects\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n* Type listParameterizedType = new TypeToken&lt;List&lt;String&gt;&gt;() {}.getType(\n\n问题:请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/FieldAttributes.java 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-4",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/Gson.java 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=反射/reflect；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 java_gson/gson/src/main/java/com/google/gson/Gson.java\n它依赖的模块/头(静态分析): JsonAdapter, ConstructorConstructor, Excluder, GsonBuildConfig, Primitives, Streams, JsonAdapterAnnotationTypeAdapterFactory, JsonTreeReader, JsonTreeWriter, SerializationDelegatingTypeAdapter, TypeToken, JsonReader\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nimport com.google.gson.reflect.TypeToken;\n\n问题:请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/Gson.java 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-5",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/GsonBuilder.java 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=反射/reflect；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 java_gson/gson/src/main/java/com/google/gson/GsonBuilder.java\n它依赖的模块/头(静态分析): CanIgnoreReturnValue, InlineMe, Since, Until, ConstructorConstructor, Excluder, ArrayTypeAdapter, CollectionTypeAdapterFactory, DefaultDateTypeAdapter, JsonAdapterAnnotationTypeAdapterFactory, MapTypeAdapterFactory, NumberTypeAdapter\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nimport com.google.gson.reflect.TypeToken;\n\n问题:请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/GsonBuilder.java 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-6",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=反射/reflect；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 java_gson/gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java\n它依赖的模块/头(静态分析): Gson, TypeAdapter, TypeAdapterFactory, GsonTypes, TypeToken, JsonReader, JsonToken, JsonWriter, IOException, Array, GenericArrayType, Type\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nimport com.google.gson.reflect.TypeToken;\n\n问题:请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-7",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=反射/reflect；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 java_gson/gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java\n它依赖的模块/头(静态分析): Gson, TypeAdapter, TypeAdapterFactory, ConstructorConstructor, GsonTypes, ObjectConstructor, TypeToken, JsonReader, JsonToken, JsonWriter, IOException, Type\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nimport com.google.gson.reflect.TypeToken;\n\n问题:请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-8",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=反射/reflect；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 java_gson/gson/src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java\n它依赖的模块/头(静态分析): Gson, JsonSyntaxException, TypeAdapter, TypeAdapterFactory, JavaVersion, PreJava9DateFormatProvider, ISO8601Utils, TypeToken, JsonReader, JsonToken, JsonWriter, IOException\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nimport com.google.gson.reflect.TypeToken;\n\n问题:请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-9",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=reflection；具体脏依赖=运行时/运行时类型；机制=反射/reflect；无法静态确定(运行时决定)",
+  "notes": "(脏-大样本 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 java_gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java\n它依赖的模块/头(静态分析): Gson, TypeAdapter, TypeAdapterFactory, SerializedName, TypeToken, JsonReader, JsonToken, JsonWriter, IOException, AccessibleObject, Field, Arrays\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\nimport com.google.gson.reflect.TypeToken;\n\n问题:请准确、完整地说明 java_gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-0",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "请准确、完整地说明 c_lua/lauxlib.c 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=ifdef；具体脏依赖=wait/LUA_USE_POSIX；机制=#ifdef/#if；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 c_lua/lauxlib.c\n它依赖的模块/头(静态分析): lprefix.h, errno.h, stdarg.h, stdio.h, stdlib.h, string.h, lua.h, lauxlib.h, llimits.h, wait.h\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n#if defined(LUA_USE_POSIX)\n\n#include <sys/wait.h>\n\n问题:请准确、完整地说明 c_lua/lauxlib.c 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-1",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "请准确、完整地说明 c_lua/liolib.c 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=ifdef；具体脏依赖=types/LUA_USE_POSIX；机制=#ifdef/#if；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 c_lua/liolib.c\n它依赖的模块/头(静态分析): lprefix.h, ctype.h, errno.h, locale.h, stdio.h, stdlib.h, string.h, lua.h, lauxlib.h, lualib.h\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n#if defined(LUA_USE_POSIX) || defined(LUA_USE_OFF_T)\t/* { */\n\n#include <sys/types.h>\n\n问题:请准确、完整地说明 c_lua/liolib.c 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-2",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "请准确、完整地说明 c_lua/loslib.c 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=ifdef；具体脏依赖=unistd/LUA_USE_POSIX；机制=#ifdef/#if；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 c_lua/loslib.c\n它依赖的模块/头(静态分析): lprefix.h, errno.h, locale.h, stdlib.h, string.h, time.h, lua.h, lauxlib.h, lualib.h, llimits.h\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n#if defined(LUA_USE_POSIX)\t/* { */\n\n#include <unistd.h>\n\n问题:请准确、完整地说明 c_lua/loslib.c 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-3",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "请准确、完整地说明 c_lua/lua.c 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=ifdef；具体脏依赖=unistd/LUA_USE_POSIX；机制=#ifdef/#if；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 c_lua/lua.c\n它依赖的模块/头(静态分析): lprefix.h, stdio.h, stdlib.h, string.h, signal.h, lua.h, lauxlib.h, lualib.h, llimits.h, unistd.h\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n#if defined(LUA_USE_POSIX)\t/* { */\n\n#include <unistd.h>\n\n问题:请准确、完整地说明 c_lua/lua.c 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-4",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "请准确、完整地说明 c_lua/lvm.c 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=ifdef；具体脏依赖=ljumptab/LUA_USE_JUMPTABLE；机制=#ifdef/#if；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 c_lua/lvm.c\n它依赖的模块/头(静态分析): lprefix.h, float.h, limits.h, math.h, stdio.h, stdlib.h, string.h, lua.h, lapi.h, ldebug.h\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n#if LUA_USE_JUMPTABLE\n#include \"ljumptab.h\"\n\n问题:请准确、完整地说明 c_lua/lvm.c 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-5",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "请准确、完整地说明 c_lua/onelua.c 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=ifdef；具体脏依赖=ltests.c/LUA_DEBUG；机制=#ifdef/#if；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 c_lua/onelua.c\n它依赖的模块/头(静态分析): lprefix.h, assert.h, ctype.h, errno.h, float.h, limits.h, locale.h, math.h, setjmp.h, signal.h\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n#if defined(LUA_DEBUG)\n#include \"ltests.c\"\n\n问题:请准确、完整地说明 c_lua/onelua.c 实际会依赖/导入哪些模块。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-6",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "请准确、完整地说明 c_lua/lapi.h 实际会依赖/导入哪些模块。",
+  "gold": "脏类型=ifdef；具体脏依赖=assert/LUA_USE_APICHECK；机制=#ifdef/#if；可静态确定(源码里有,卡片漏标其条件性)",
+  "notes": "(脏-大样本 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。以下依赖卡片由**静态分析**生成,**可能不完整**——运行时动态导入、条件导入、反射、条件编译等依赖可能被遗漏或未标注其条件性。请**结合卡片与你自己对该项目的了解**作答,对静态分析可能遗漏/误标的依赖要主动指出并说明。\n\n[依赖卡片] 文件 c_lua/lapi.h\n它依赖的模块/头(静态分析): llimits.h, lstate.h, assert.h\n(注:本卡片由静态分析生成)\n\n[相关源码片段]\n#if defined(LUA_USE_APICHECK)\n#include <assert.h>\n\n问题:请准确、完整地说明 c_lua/lapi.h 实际会依赖/导入哪些模块。\n请直接回答。"
+ }
+]

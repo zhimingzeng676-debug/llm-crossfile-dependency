@@ -1,0 +1,42 @@
+# —— AI 协作痕迹 / 会话(不提交)——
+.claude/
+**/.claude/
+*.session.json
+*.session.jsonl
+WORKLOG.md
+01_报告/day*.md
+01_报告/day3[AB].md
+
+# —— Python ——
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# —— OS / 编辑器 / 临时 ——
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+*~
+/tmp/
+
+# —— 大模型权重(超 GitHub 100MB,见 README §权重 / MODEL_CARD)——
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.gguf
+*.onnx
+
+# —— 凭据(绝不提交)——
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+.env
+.env.*
+secrets.*
+**/configs/llm_api.yaml
+*_credentials*

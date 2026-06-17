@@ -1,0 +1,979 @@
+{
+ "model": "coder",
+ "n": 56,
+ "results": [
+  {
+   "id": "FWD-03",
+   "keywords": [
+    "_internal",
+    "sansio"
+   ],
+   "category": "forward_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0chttp.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. sansio",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0chttp.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. sansio",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],http.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. sansio",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],http.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. sansio",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],http.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. sansio"
+   }
+  },
+  {
+   "id": "FWD-05",
+   "keywords": [
+    "converters",
+    "exceptions",
+    "rules"
+   ],
+   "category": "forward_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0crouting/matcher.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u7684\u9879\u76ee\u5185\u6a21\u5757\u6709\uff1a\n\n1. converters\n2. exceptions\n3. rules",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`routing/matcher.py` \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u7684\u9879\u76ee\u5185\u6a21\u5757\u5305\u62ec\uff1a\n\n1. converters\n2. exceptions\n3. rules",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`routing/matcher.py` \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. converters\n2. exceptions\n3. rules",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],routing/matcher.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. converters\n2. exceptions\n3. rules",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],routing/matcher.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. converters\n2. exceptions\n3. rules"
+   }
+  },
+  {
+   "id": "FWD-07",
+   "keywords": [
+    "datastructures",
+    "cache_control",
+    "http",
+    "utils"
+   ],
+   "category": "forward_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0csansio/response.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\uff08import\uff09\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. datastructures\n2. cache_control\n3. http\n4. utils",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0csansio/response.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. datastructures\n2. cache_control\n3. http\n4. utils",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0csansio/response.py \u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. datastructures\n2. cache_control\n3. http\n4. utils",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],sansio/response.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. datastructures\n2. cache_control\n3. http\n4. utils",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0csansio/response.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. datastructures\n2. cache_control\n3. http\n4. utils"
+   }
+  },
+  {
+   "id": "FWD-06",
+   "keywords": [
+    "datastructures",
+    "http",
+    "utils",
+    "user_agent"
+   ],
+   "category": "forward_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0csansio/request.py \u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. datastructures\n2. http\n3. utils\n4. user_agent",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0csansio/request.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. datastructures\n2. http\n3. utils\n4. user_agent",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0csansio/request.py \u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. datastructures\n2. http\n3. utils\n4. user_agent",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],sansio/request.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. datastructures\n2. http\n3. utils\n4. user_agent",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],sansio/request.py\u8fd9\u4e2a\u6587\u4ef6\u5728werkzeug\u4e2d\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. datastructures\n2. http\n3. utils\n4. user_agent"
+   }
+  },
+  {
+   "id": "FWD-01",
+   "keywords": [
+    "_internal",
+    "mixins",
+    "structures",
+    "exceptions"
+   ],
+   "category": "forward_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],datastructures/headers.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. mixins\n3. structures\n4. exceptions",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cdatastructures/headers.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. mixins\n3. structures\n4. exceptions",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],datastructures/headers.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. mixins\n3. structures\n4. exceptions",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],datastructures/headers.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. mixins\n3. structures\n4. exceptions",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],datastructures/headers.py\u8fd9\u4e2a\u6587\u4ef6\u5728werkzeug\u4e2d\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. mixins\n3. structures\n4. exceptions"
+   }
+  },
+  {
+   "id": "FWD-02",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "http",
+    "multipart",
+    "wsgi"
+   ],
+   "category": "forward_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`formparser.py` \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\uff08import\uff09\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. `_internal`\n2. `datastructures`\n3. `exceptions`\n4. `http`\n5. `multipart`\n6. `wsgi`\n\n\u8fd9\u4e9b\u6a21\u5757\u90fd\u662f werkzeug \u9879\u76ee\u5185\u90e8\u7684\u6a21\u5757\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cformparser.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b werkzeug \u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. exceptions\n4. http\n5. multipart\n6. wsgi",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cformparser.py \u76f4\u63a5\u4f9d\u8d56\u7684 werkzeug \u9879\u76ee\u5185\u7684\u6a21\u5757\u5305\u62ec:\n\n1. _internal\n2. datastructures\n3. exceptions\n4. http\n5. multipart\n6. wsgi",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`formparser.py` \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. `_internal`\n2. `datastructures`\n3. `exceptions`\n4. `http`\n5. `multipart`\n6. `wsgi`",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],formparser.py\u8fd9\u4e2a\u6587\u4ef6\u5728werkzeug\u4e2d\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. datastructures\n3. exceptions\n4. http\n5. multipart\n6. wsgi"
+   }
+  },
+  {
+   "id": "FWD-08",
+   "keywords": [
+    "_internal",
+    "_reloader",
+    "debug",
+    "tbtools",
+    "exceptions",
+    "http",
+    "shared_data",
+    "urls"
+   ],
+   "category": "forward_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cserving.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\uff08import\uff09\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. _reloader\n3. debug\n4. tbtools\n5. exceptions\n6. http\n7. shared_data\n8. urls",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`serving.py` \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. `_internal`\n2. `_reloader`\n3. `debug`\n4. `tbtools`\n5. `exceptions`\n6. `http`\n7. `shared_data`\n8. `urls`",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],serving.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. _reloader\n3. debug\n4. tbtools\n5. exceptions\n6. http\n7. shared_data\n8. urls",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],serving.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. _reloader\n3. debug\n4. tbtools\n5. exceptions\n6. http\n7. shared_data\n8. urls",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cserving.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u7684 werkzeug \u9879\u76ee\u5185\u7684\u6a21\u5757\u5305\u62ec\uff1a\n\n1. _internal\n2. _reloader\n3. debug\n4. tbtools\n5. exceptions\n6. http\n7. shared_data\n8. urls"
+   }
+  },
+  {
+   "id": "FWD-04",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "converters",
+    "matcher",
+    "rules",
+    "urls",
+    "request",
+    "wsgi"
+   ],
+   "category": "forward_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0crouting/map.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. exceptions\n4. converters\n5. matcher\n6. rules\n7. urls\n8. request\n9. wsgi",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`routing/map.py` \u6587\u4ef6\u5728 Werkzeug \u9879\u76ee\u5185\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u6a21\u5757\uff1a\n\n1. `_internal`\n2. `datastructures`\n3. `exceptions`\n4. `converters`\n5. `matcher`\n6. `rules`\n7. `urls`\n8. `request`\n9. `wsgi`\n\n\u8fd9\u4e9b\u6a21\u5757\u90fd\u662f werkzeug \u9879\u76ee\u5185\u90e8\u7684\u6a21\u5757\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`routing/map.py` \u6587\u4ef6\u5728 Werkzeug \u9879\u76ee\u5185\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u6a21\u5757\uff1a\n\n1. `_internal`\n2. `datastructures`\n3. `exceptions`\n4. `converters`\n5. `matcher`\n6. `rules`\n7. `urls`\n8. `request`\n9. `wsgi`\n\n\u8fd9\u4e9b\u6a21\u5757\u90fd\u662f Werkzeug \u9879\u76ee\u5185\u90e8\u7684\u6a21\u5757\uff0c`routing/map.py` \u6587\u4ef6\u901a\u8fc7\u5bfc\u5165\u8fd9\u4e9b\u6a21\u5757\u6765\u5b9e\u73b0\u5176\u529f\u80fd\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`routing/map.py` \u6587\u4ef6\u5728 Werkzeug \u4e2d\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. `_internal`\n2. `datastructures`\n3. `exceptions`\n4. `converters`\n5. `matcher`\n6. `rules`\n7. `urls`\n8. `request`\n9. `wsgi`\n\n\u8fd9\u4e9b\u6a21\u5757\u90fd\u662f werkzeug \u9879\u76ee\u5185\u90e8\u7684\u6a21\u5757\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],routing/map.py\u8fd9\u4e2a\u6587\u4ef6\u5728werkzeug\u4e2d\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. datastructures\n3. exceptions\n4. converters\n5. matcher\n6. rules\n7. urls\n8. request\n9. wsgi"
+   }
+  },
+  {
+   "id": "FWD-09",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "http",
+    "multipart",
+    "urls",
+    "utils",
+    "request",
+    "response",
+    "wsgi"
+   ],
+   "category": "forward_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0ctest.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. http\n4. multipart\n5. urls\n6. utils\n7. request\n8. response\n9. wsgi",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0ctest.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. http\n4. multipart\n5. urls\n6. utils\n7. request\n8. response\n9. wsgi",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0ctest.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. http\n4. multipart\n5. urls\n6. utils\n7. request\n8. response\n9. wsgi",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0ctest.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. http\n4. multipart\n5. urls\n6. utils\n7. request\n8. response\n9. wsgi",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],test.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. datastructures\n3. http\n4. multipart\n5. urls\n6. utils\n7. request\n8. response\n9. wsgi"
+   }
+  },
+  {
+   "id": "FWD-10",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "formparser",
+    "request",
+    "test",
+    "utils",
+    "wsgi"
+   ],
+   "category": "forward_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/request.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. exceptions\n4. formparser\n5. request\n6. test\n7. utils\n8. wsgi",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/request.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. exceptions\n4. formparser\n5. request\n6. test\n7. utils\n8. wsgi",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/request.py \u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. exceptions\n4. formparser\n5. request\n6. test\n7. utils\n8. wsgi",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/request.py \u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. exceptions\n4. formparser\n5. request\n6. test\n7. utils\n8. wsgi",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],wrappers/request.py\u8fd9\u4e2a\u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757:\n\n1. _internal\n2. datastructures\n3. exceptions\n4. formparser\n5. request\n6. test\n7. utils\n8. wsgi"
+   }
+  },
+  {
+   "id": "REV-03",
+   "keywords": [
+    "datastructures",
+    "cache_control",
+    "headers",
+    "structures"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`datastructures/mixins.py` \u6ca1\u6709\u88ab\u5176\u4ed6\u6587\u4ef6\u76f4\u63a5\u5bfc\u5165\uff08\u4f9d\u8d56\uff09\u3002\u4f9d\u8d56\u56fe\u4e2d\u6ca1\u6709\u663e\u793a\u4efb\u4f55\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\u4e8e `datastructures/mixins.py`\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`datastructures/mixins.py` \u88ab\u4ee5\u4e0b\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\uff1a\n\n1. `cache_control`\n2. `headers`\n3. `structures`",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cdatastructures/mixins.py \u88ab\u4ee5\u4e0b\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\uff1a\n\n1. cache_control\n2. headers\n3. structures",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d,\u4ee5\u4e0b\u6587\u4ef6/\u6a21\u5757 import(\u4f9d\u8d56)\u4e86 datastructures/mixins.py:\n\n1. cache_control\n2. headers\n3. structures",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `datastructures/mixins.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6\u6216\u6a21\u5757\uff1a\n\n1. `cache_control`\n2. `headers`\n3. `structures`\n\n\u8fd9\u4e9b\u6a21\u5757\u6216\u6587\u4ef6\u5728\u9879\u76ee\u5185\u90e8\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u5bfc\u5165\u4e86 `datastructures/mixins.py`\u3002"
+   }
+  },
+  {
+   "id": "FWD-11",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "http",
+    "response",
+    "test",
+    "urls",
+    "utils",
+    "request",
+    "wsgi"
+   ],
+   "category": "forward_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/response.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. exceptions\n4. http\n5. response\n6. test\n7. urls\n8. utils\n9. request\n10. wsgi",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/response.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. exceptions\n4. http\n5. response\n6. test\n7. urls\n8. utils\n9. request\n10. wsgi",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/response.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. exceptions\n4. http\n5. response\n6. test\n7. urls\n8. utils\n9. request\n10. wsgi",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/response.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. exceptions\n4. http\n5. response\n6. test\n7. urls\n8. utils\n9. request\n10. wsgi",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/response.py \u6587\u4ef6\u76f4\u63a5\u4f9d\u8d56(import)\u4e86\u4ee5\u4e0b\u9879\u76ee\u5185\u7684\u6a21\u5757\uff1a\n\n1. _internal\n2. datastructures\n3. exceptions\n4. http\n5. response\n6. test\n7. urls\n8. utils\n9. request\n10. wsgi"
+   }
+  },
+  {
+   "id": "REV-02",
+   "keywords": [
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "map",
+    "rules",
+    "multipart",
+    "request",
+    "response",
+    "test",
+    "urls",
+    "utils"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u6587\u4ef6/\u6a21\u5757\u5728\u9879\u76ee\u5185\u4f9d\u8d56\u4e86 `datastructures/__init__.py`\uff1a\n\n1. `_internal.py`\n2. `_reloader.py`\n3. `accept.py`\n4. `auth.py`\n5. `cache_control.py`",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `datastructures/__init__.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. exceptions\n2. formparser\n3. http_proxy\n4. lint\n5. map\n6. rules\n7. multipart\n8. request\n9. response\n10. test\n11. urls\n12. utils",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `datastructures/__init__.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. exceptions\n2. formparser\n3. http_proxy\n4. lint\n5. map\n6. rules\n7. multipart\n8. request\n9. response\n10. test\n11. urls\n12. utils",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `datastructures/__init__.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `exceptions`\n2. `formparser`\n3. `http_proxy`\n4. `lint`\n5. `map`\n6. `rules`\n7. `multipart`\n8. `request`\n9. `response`\n10. `test`\n11. `urls`\n12. `utils`\n\n\u8fd9\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u90fd\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u4ece `datastructures/__init__.py` \u5bfc\u5165\u4e86\u6240\u9700\u7684\u7c7b\u6216\u51fd\u6570\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247]\uff0c\u5728 werkzeug \u4e2d\uff0c\u4ee5\u4e0b\u6587\u4ef6\u6216\u6a21\u5757 import(\u4f9d\u8d56)\u4e86 datastructures/__init__.py\uff1a\n\n1. exceptions\n2. formparser\n3. http_proxy\n4. lint\n5. map\n6. rules\n7. multipart\n8. request\n9. response\n10. test\n11. urls\n12. utils"
+   }
+  },
+  {
+   "id": "REV-04",
+   "keywords": [
+    "datastructures",
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "file_storage",
+    "headers"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `datastructures/structures.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `accept`\n2. `auth`\n3. `cache_control`\n4. `csp`\n5. `file_storage`\n6. `headers`\n\n\u8fd9\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u90fd\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u4f9d\u8d56\u4e8e `datastructures/structures.py`\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `datastructures/structures.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `accept`\n2. `auth`\n3. `cache_control`\n4. `csp`\n5. `file_storage`\n6. `headers`\n\n\u8fd9\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u90fd\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u4f9d\u8d56\u4e8e `datastructures/structures.py`\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `datastructures/structures.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `accept`\n2. `auth`\n3. `cache_control`\n4. `csp`\n5. `file_storage`\n6. `headers`\n\n\u8fd9\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u90fd\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u4ece `datastructures/structures.py` \u5bfc\u5165\u4e86\u6240\u9700\u7684\u7c7b\u6216\u51fd\u6570\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d,\u4ee5\u4e0b\u6587\u4ef6/\u6a21\u5757 import(\u4f9d\u8d56)\u4e86 datastructures/structures.py:\n\n1. accept\n2. auth\n3. cache_control\n4. csp\n5. file_storage\n6. headers",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `datastructures/structures.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `accept`\n2. `auth`\n3. `cache_control`\n4. `csp`\n5. `file_storage`\n6. `headers`\n\n\u8fd9\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u90fd\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u4ece `datastructures/structures.py` \u5bfc\u5165\u4e86\u6240\u9700\u7684\u7c7b\u6216\u51fd\u6570\u3002"
+   }
+  },
+  {
+   "id": "REV-01",
+   "keywords": [
+    "_reloader",
+    "file_storage",
+    "headers",
+    "mixins",
+    "structures",
+    "debug",
+    "exceptions",
+    "formparser",
+    "http",
+    "map",
+    "utils",
+    "serving",
+    "test",
+    "request",
+    "response"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u6587\u4ef6\u6216\u6a21\u5757\u5728\u9879\u76ee\u5185\u4f9d\u8d56\u4e8e `_internal.py`\uff1a\n\n1. `__init__.py`\n2. `local.py`\n3. `middleware/__init__.py`\n4. `middleware/dispatcher.py`\n5. `middleware/lint.py`\n6. `middleware/profiler.py`\n\n\u8fd9\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u90fd\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u4ece `_internal.py` \u5bfc\u5165\u4e86\u67d0\u4e9b\u529f\u80fd\u6216\u7c7b\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `_internal.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `_reloader`\n2. `file_storage`\n3. `headers`\n4. `mixins`\n5. `structures`\n6. `debug`\n7. `exceptions`\n8. `formparser`\n9. `http`\n10. `map`\n11. `utils`\n12. `serving`\n13. `test`\n14. `request`\n15. `response`\n\n\u8fd9\u4e9b\u6587\u4ef6/\u6a21\u5757\u90fd\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u4f9d\u8d56\u4e8e `_internal.py`\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `_internal.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `serving.py`\n2. `test.py`\n3. `wrappers.py`",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e _internal.py \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\u5217\u8868:\n\n1. _reloader\n2. file_storage\n3. headers\n4. mixins\n5. structures\n6. debug\n7. exceptions\n8. formparser\n9. http\n10. map\n11. utils\n12. serving\n13. test\n14. request\n15. response",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `_internal.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `_reloader`\n2. `file_storage`\n3. `headers`\n4. `mixins`\n5. `structures`\n6. `debug`\n7. `exceptions`\n8. `formparser`\n9. `http`\n10. `map`\n11. `utils`\n12. `serving`\n13. `test`\n14. `request`\n15. `response`\n\n\u8fd9\u4e9b\u6587\u4ef6/\u6a21\u5757\u90fd\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u4ece `_internal.py` \u5bfc\u5165\u4e86\u67d0\u4e9b\u529f\u80fd\u6216\u7c7b\u3002"
+   }
+  },
+  {
+   "id": "REV-05",
+   "keywords": [
+    "headers",
+    "debug",
+    "formparser",
+    "http_proxy",
+    "exceptions",
+    "map",
+    "multipart",
+    "utils",
+    "serving",
+    "request",
+    "response",
+    "wsgi"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u76f4\u63a5\u663e\u793a\u4efb\u4f55\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\u4e8e `exceptions.py`\u3002\u56e0\u6b64\uff0c\u6839\u636e\u5f53\u524d\u4fe1\u606f\u65e0\u6cd5\u786e\u5b9a\u5728 werkzeug \u4e2d\u54ea\u4e9b\u6587\u4ef6 import(\u4f9d\u8d56)\u4e86 `exceptions.py`\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u5217\u51fa\u4f9d\u8d56\u4e8e exceptions.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u4ece\u7ed9\u5b9a\u7684\u4fe1\u606f\u4e2d\u786e\u5b9a\u54ea\u4e9b\u6587\u4ef6 import(\u4f9d\u8d56)\u4e86 exceptions.py\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u76f4\u63a5\u663e\u793a\u4efb\u4f55\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\u4e8e `exceptions.py`\u3002\u56e0\u6b64\uff0c\u6839\u636e\u5f53\u524d\u4fe1\u606f\u65e0\u6cd5\u786e\u5b9a\u54ea\u4e9b\u6587\u4ef6\u5bfc\u5165\u4e86 `exceptions.py`\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d,\u4ee5\u4e0b\u6587\u4ef6/\u6a21\u5757 import(\u4f9d\u8d56)\u4e86 exceptions.py:\n\n1. headers\n2. debug\n3. formparser\n4. http_proxy\n5. map\n6. multipart\n7. utils\n8. serving\n9. request\n10. response\n11. wsgi",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `exceptions.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `headers`\n2. `debug`\n3. `formparser`\n4. `http_proxy`\n5. `map`\n6. `multipart`\n7. `utils`\n8. `serving`\n9. `request`\n10. `response`\n11. `wsgi`\n\n\u8fd9\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u90fd\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u5bfc\u5165\u4e86 `exceptions.py`\u3002"
+   }
+  },
+  {
+   "id": "REV-06",
+   "keywords": [
+    "request"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u76f4\u63a5\u663e\u793a formparser.py \u88ab\u54ea\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u5bfc\u5165\uff08\u4f9d\u8d56\uff09\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u53ea\u5217\u51fa\u4e86 formparser.py \u4e0e request \u7684\u4f9d\u8d56\u5173\u7cfb\uff0c\u4f46\u6ca1\u6709\u6d89\u53ca\u5176\u4ed6\u5177\u4f53\u6587\u4ef6\u5bf9 formparser.py \u7684\u4f9d\u8d56\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u4ece\u7ed9\u5b9a\u4fe1\u606f\u4e2d\u5b8c\u6574\u5217\u51fa\u6240\u6709\u4f9d\u8d56 formparser.py \u7684\u9879\u76ee\u5185\u6587\u4ef6\u6216\u6a21\u5757\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u76f4\u63a5\u663e\u793a\u4efb\u4f55\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\u4e8e `formparser.py`\u3002\u56e0\u6b64\uff0c\u6839\u636e\u5f53\u524d\u4fe1\u606f\u65e0\u6cd5\u5217\u51fa\u4f9d\u8d56\u4e8e `formparser.py` \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u76f4\u63a5\u663e\u793a formparser.py \u6587\u4ef6\u88ab\u54ea\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u5bfc\u5165\uff08\u4f9d\u8d56\uff09\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u6ca1\u6709\u5217\u51fa formparser.py \u7684\u5177\u4f53\u4f9d\u8d56\u5173\u7cfb\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u4ece\u7ed9\u5b9a\u7684\u4fe1\u606f\u4e2d\u786e\u5b9a\u54ea\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\u4e8e formparser.py\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u5217\u51fa\u4f9d\u8d56\u4e8e formparser.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u4f9d\u8d56\u56fe\u4e2d\u6ca1\u6709\u663e\u793a formparser.py \u88ab\u5176\u4ed6\u6587\u4ef6\u5bfc\u5165\u7684\u4fe1\u606f\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u5217\u51fa\u4f9d\u8d56\u4e8e formparser.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u4f9d\u8d56\u56fe\u4e2d\u4ec5\u663e\u793a\u4e86 formparser.py \u4f9d\u8d56\u4e8e request \u6a21\u5757,\u4f46\u6ca1\u6709\u63d0\u5230\u6709\u5176\u4ed6\u6587\u4ef6\u4f9d\u8d56\u4e8e formparser.py\u3002\u56e0\u6b64,\u65e0\u6cd5\u4ece\u7ed9\u5b9a\u7684\u4fe1\u606f\u4e2d\u786e\u5b9a\u54ea\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\u4e8e formparser.py\u3002"
+   }
+  },
+  {
+   "id": "REV-09",
+   "keywords": [
+    "request"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u4f9d\u8d56\u4e8e sansio/request.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u53ea\u5217\u51fa\u4e86\u4e0e request \u76f8\u5173\u7684\u4f9d\u8d56\u5173\u7cfb\uff0c\u4f46\u6ca1\u6709\u63d0\u5230 sansio/request.py\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u4ece\u7ed9\u5b9a\u7684\u4fe1\u606f\u4e2d\u786e\u5b9a\u54ea\u4e9b\u6587\u4ef6\u5bfc\u5165\u4e86 sansio/request.py\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u5730 import sansio/request.py \u7684\u8bb0\u5f55\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u5217\u51fa\u4f9d\u8d56\u4e8e sansio/request.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u76f4\u63a5\u663e\u793a\u4efb\u4f55\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\u4e8e `sansio/request.py`\u3002\u56e0\u6b64\uff0c\u6839\u636e\u5f53\u524d\u4fe1\u606f\u65e0\u6cd5\u5217\u51fa\u4f9d\u8d56\u4e8e\u8be5\u6587\u4ef6\u7684\u9879\u76ee\u5185\u4f9d\u8d56\u6587\u4ef6/\u6a21\u5757\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d\u6ca1\u6709\u6587\u4ef6\u660e\u786e import(\u4f9d\u8d56)\u4e86 sansio/request.py\u3002\u4f9d\u8d56\u56fe\u4e2d\u6ca1\u6709\u663e\u793a\u4efb\u4f55\u6587\u4ef6\u4f9d\u8d56\u4e8e sansio/request.py\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u5217\u51fa\u4f9d\u8d56\u4e8e sansio/request.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u56e0\u6b64,\u65e0\u6cd5\u786e\u5b9a\u662f\u5426\u6709\u5176\u4ed6\u6587\u4ef6 import(\u4f9d\u8d56)\u4e86 sansio/request.py\u3002"
+   }
+  },
+  {
+   "id": "REV-08",
+   "keywords": [
+    "routing",
+    "exceptions",
+    "map",
+    "matcher"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u76f4\u63a5\u663e\u793a\u4efb\u4f55\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\u4e8e `routing/rules.py`\u3002\u56e0\u6b64\uff0c\u6839\u636e\u5f53\u524d\u4fe1\u606f\u65e0\u6cd5\u5217\u51fa\u4f9d\u8d56\u4e8e `routing/rules.py` \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u76f4\u63a5\u663e\u793a routing/rules.py \u88ab\u54ea\u4e9b\u6587\u4ef6\u5bfc\u5165\u3002\u4e0d\u8fc7\uff0c\u53ef\u4ee5\u63a8\u65ad\u51fa\u4ee5\u4e0b\u4f9d\u8d56\u5173\u7cfb\uff1a\n\n1. routing \u6a21\u5757\n2. exceptions \u6a21\u5757\n3. map \u6a21\u5757\n4. matcher \u6a21\u5757\n\n\u8fd9\u4e9b\u6a21\u5757\u53ef\u80fd\u5728\u5b83\u4eec\u7684\u5b9e\u73b0\u4e2d\u4f7f\u7528\u4e86 routing/rules.py \u4e2d\u7684\u529f\u80fd\u6216\u7c7b\u3002\u7531\u4e8e\u4f9d\u8d56\u56fe\u5361\u7247\u6ca1\u6709\u63d0\u4f9b\u66f4\u8be6\u7ec6\u7684\u5bfc\u5165\u4fe1\u606f\uff0c\u65e0\u6cd5\u786e\u5b9a\u5177\u4f53\u662f\u54ea\u4e9b\u6587\u4ef6\u5bfc\u5165\u4e86 routing/rules.py\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4e0e `routing/rules.py` \u76f8\u5173\u7684\u4f9d\u8d56\u5173\u7cfb\u5305\u62ec\uff1a\n\n1. `routing`\n2. `exceptions`\n3. `map`\n4. `matcher`\n\n\u8fd9\u4e9b\u6a21\u5757\u6216\u6587\u4ef6\u5728\u9879\u76ee\u5185\u90e8\u4f9d\u8d56\u4e8e `routing/rules.py`\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d,\u4ee5\u4e0b\u6587\u4ef6/\u6a21\u5757 import(\u4f9d\u8d56)\u4e86 routing/rules.py:\n\n1. routing\n2. exceptions\n3. map\n4. matcher",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56 routing/rules.py \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. routing\n2. exceptions\n3. map\n4. matcher"
+   }
+  },
+  {
+   "id": "REV-07",
+   "keywords": [
+    "auth",
+    "csp",
+    "etag",
+    "debug",
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "proxy_fix",
+    "shared_data",
+    "http",
+    "multipart",
+    "request",
+    "response",
+    "utils",
+    "serving",
+    "test"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `http.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `serving`\n2. `test`\n3. `wrappers`",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u5217\u51fa\u4f9d\u8d56\u4e8e http.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u786e\u5b9a\u662f\u5426\u6709\u6587\u4ef6\u4f9d\u8d56\u4e8e http.py\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u5217\u51fa\u4f9d\u8d56\u4e8e http.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u4ece\u7ed9\u5b9a\u7684\u4fe1\u606f\u4e2d\u786e\u5b9a\u54ea\u4e9b\u6587\u4ef6 import(\u4f9d\u8d56)\u4e86 http.py\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `http.py` \u7684 Werkzeug \u5185\u90e8\u6587\u4ef6\u6216\u6a21\u5757\uff1a\n\n1. `auth`\n2. `csp`\n3. `etag`\n4. `debug`\n5. `exceptions`\n6. `formparser`\n7. `http_proxy`\n8. `lint`\n9. `proxy_fix`\n10. `shared_data`\n11. `http`\n12. `multipart`\n13. `request`\n14. `response`\n15. `utils`\n16. `serving`\n17. `test`\n\n\u8fd9\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u90fd\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u4f9d\u8d56\u4e8e `http.py`\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `http.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `auth`\n2. `csp`\n3. `etag`\n4. `debug`\n5. `exceptions`\n6. `formparser`\n7. `http_proxy`\n8. `lint`\n9. `proxy_fix`\n10. `shared_data`\n11. `multipart`\n12. `request`\n13. `response`\n14. `utils`\n15. `serving`\n16. `test`\n\n\u8fd9\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u90fd\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u5bfc\u5165\u4e86 `http.py`\u3002"
+   }
+  },
+  {
+   "id": "REV-10",
+   "keywords": [
+    "map",
+    "rules",
+    "utils",
+    "serving",
+    "test",
+    "response"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u5217\u51fa\u4f9d\u8d56\u4e8e urls.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u5e76\u6ca1\u6709\u663e\u793a\u4efb\u4f55\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\u4e8e urls.py\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u5217\u51fa\u4f9d\u8d56\u4e8e urls.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u4ece\u7ed9\u5b9a\u7684\u4fe1\u606f\u4e2d\u786e\u5b9a\u54ea\u4e9b\u6587\u4ef6 import(\u4f9d\u8d56)\u4e86 urls.py\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u76f4\u63a5\u663e\u793a\u4efb\u4f55\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\u4e8e `urls.py`\u3002\u4f9d\u8d56\u56fe\u4e2d\u5217\u51fa\u4e86 `urls.py` \u4e0e\u5176\u4ed6\u6587\u4ef6\u7684\u4f9d\u8d56\u5173\u7cfb\uff0c\u4f46\u6ca1\u6709\u53cd\u5411\u4f9d\u8d56\u4fe1\u606f\uff0c\u5373\u6ca1\u6709\u663e\u793a\u54ea\u4e9b\u6587\u4ef6\u4f9d\u8d56\u4e8e `urls.py`\u3002\n\n\u56e0\u6b64\uff0c\u6839\u636e\u7ed9\u5b9a\u7684\u4fe1\u606f\uff0c\u65e0\u6cd5\u786e\u5b9a\u54ea\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u5728 werkzeug \u4e2d\u4f9d\u8d56\u4e8e `urls.py`\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u5217\u51fa\u4f9d\u8d56\u4e8e urls.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u4f9d\u8d56\u56fe\u4e2d\u63d0\u5230\u7684\u6587\u4ef6\u5305\u62ec map, rules, utils, serving, test, \u548c response,\u4f46\u6ca1\u6709\u660e\u786e\u6307\u51fa\u5b83\u4eec\u662f\u5426\u4f9d\u8d56\u4e8e urls.py\u3002\u8981\u786e\u5b9a\u5177\u4f53\u4f9d\u8d56\u5173\u7cfb,\u9700\u8981\u8fdb\u4e00\u6b65\u5206\u6790\u8fd9\u4e9b\u6587\u4ef6\u7684\u5185\u5bb9\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u5217\u51fa\u4f9d\u8d56\u4e8e urls.py \u7684\u6587\u4ef6\u3002\u4f9d\u8d56\u56fe\u4e2d\u63d0\u5230\u7684\u6587\u4ef6\u5305\u62ec map\u3001rules\u3001utils\u3001serving\u3001test \u548c response\uff0c\u4f46\u6ca1\u6709\u660e\u786e\u6307\u51fa\u8fd9\u4e9b\u6587\u4ef6\u662f\u5426\u4f9d\u8d56\u4e8e urls.py\u3002\u8981\u786e\u5b9a\u5177\u4f53\u4f9d\u8d56\u5173\u7cfb\uff0c\u9700\u8981\u67e5\u770b\u6bcf\u4e2a\u6587\u4ef6\u7684\u5185\u5bb9\u3002"
+   }
+  },
+  {
+   "id": "REV-12",
+   "keywords": [
+    "_internal",
+    "debug",
+    "exceptions",
+    "map",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers",
+    "response"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `wrappers/request.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `__init__.py`\n2. `testapp`",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `wrappers/request.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `__init__.py`\n2. `wrappers`",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `wrappers/request.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `__init__.py`\n2. `serving.py`\n3. `test.py`\n4. `utils.py`\n5. `wrappers/response.py`",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `wrappers/request.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `serving.py`\n2. `test.py`\n3. `utils.py`",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `wrappers/request.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `wrappers/response.py`\n2. `test/test.py`\n3. `test/testapp.py`\n4. `debug/__init__.py`\n5. `_internal/__init__.py`\n6. `utils/__init__.py`\n7. `map/__init__.py`\n8. `exceptions/__init__.py`\n\n\u8fd9\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u5728\u4ee3\u7801\u4e2d\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u5bfc\u5165\u4e86 `wrappers/request.py`\u3002"
+   }
+  },
+  {
+   "id": "INH-02",
+   "keywords": [
+    "multidict",
+    "datastructures/structures.py"
+   ],
+   "category": "inheritance",
+   "ans": {
+    "pos0": "1. \u7c7b `FileMultiDict` \u7ee7\u627f\u81ea `MultiDict`\u3002\n2. \u57fa\u7c7b `MultiDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos25": "1. \u7c7b `FileMultiDict` \u7ee7\u627f\u81ea `MultiDict`\u3002\n2. \u57fa\u7c7b `MultiDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "1. \u7c7b `FileMultiDict` \u7ee7\u627f\u81ea `MultiDict`\u3002\n2. \u57fa\u7c7b `MultiDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "1. \u7c7b `FileMultiDict` \u7ee7\u627f\u81ea `MultiDict`\u3002\n2. \u57fa\u7c7b `MultiDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "1. \u7c7b `FileMultiDict` \u7ee7\u627f\u81ea `MultiDict`\u3002\n2. \u57fa\u7c7b `MultiDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002"
+   }
+  },
+  {
+   "id": "INH-03",
+   "keywords": [
+    "immutableheadersmixin",
+    "datastructures/mixins.py"
+   ],
+   "category": "inheritance",
+   "ans": {
+    "pos0": "1. \u7c7b `EnvironHeaders` \u7ee7\u627f\u81ea `ImmutableHeadersMixin`\u3002\n2. \u57fa\u7c7b `ImmutableHeadersMixin` \u5b9a\u4e49\u5728 `datastructures/mixins.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos25": "1. \u7c7b `EnvironHeaders` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/headers.py`\u3002\n2. \u7c7b `EnvironHeaders` \u7ee7\u627f\u81ea `ImmutableHeadersMixin`\u3002\n3. \u57fa\u7c7b `ImmutableHeadersMixin` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/mixins.py`\u3002",
+    "pos50": "1. \u7c7b `EnvironHeaders` \u7ee7\u627f\u81ea `ImmutableHeadersMixin`\u3002\n2. \u57fa\u7c7b `ImmutableHeadersMixin` \u5b9a\u4e49\u5728 `datastructures/mixins.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "1. \u7c7b `EnvironHeaders` \u7ee7\u627f\u81ea `ImmutableHeadersMixin`\u3002\n2. \u57fa\u7c7b `ImmutableHeadersMixin` \u5b9a\u4e49\u5728 `datastructures/mixins.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "1. \u7c7b `EnvironHeaders` \u7ee7\u627f\u81ea `ImmutableHeadersMixin`\u3002\n2. \u57fa\u7c7b `ImmutableHeadersMixin` \u5b9a\u4e49\u5728 `datastructures/mixins.py` \u6587\u4ef6\u4e2d\u3002"
+   }
+  },
+  {
+   "id": "REV-13",
+   "keywords": [
+    "formparser",
+    "local",
+    "http_proxy",
+    "lint",
+    "shared_data",
+    "map",
+    "test",
+    "utils",
+    "request",
+    "response"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u6587\u4ef6\u6216\u6a21\u5757\u5728\u9879\u76ee\u5185\u4f9d\u8d56\u4e86 wsgi.py\uff1a\n\n1. __init__.py\n2. _internal.py\n3. _reloader.py\n4. datastructures/__init__.py\n5. datastructures/accept.py\n6. datastructures/auth.py",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u4f9d\u8d56\u4e8e wsgi.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u56e0\u6b64\uff0c\u7b54\u6848\u662f\uff1a\n\n\u65e0\u4f9d\u8d56\u4e8e wsgi.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u4f9d\u8d56\u4e8e wsgi.py \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\u5305\u62ec\uff1a\n\n1. formparser\n2. local\n3. http_proxy\n4. lint\n5. shared_data\n6. map\n7. test\n8. utils\n9. request\n10. response",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u4ee5\u4e0b\u6587\u4ef6/\u6a21\u5757 import(\u4f9d\u8d56)\u4e86 wsgi.py\uff1a\n\n1. formparser\n2. local\n3. http_proxy\n4. lint\n5. shared_data\n6. map\n7. test\n8. utils\n9. request\n10. response",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u4f9d\u8d56\u4e8e `wsgi.py` \u7684\u9879\u76ee\u5185\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `formparser`\n2. `local`\n3. `http_proxy`\n4. `lint`\n5. `shared_data`\n6. `map`\n7. `test`\n8. `utils`\n9. `request`\n10. `response`\n\n\u8fd9\u4e9b\u6587\u4ef6\u6216\u6a21\u5757\u90fd\u76f4\u63a5\u6216\u95f4\u63a5\u5730\u5bfc\u5165\u4e86 `wsgi.py`\u3002"
+   }
+  },
+  {
+   "id": "INH-04",
+   "keywords": [
+    "immutabledictmixin",
+    "datastructures/mixins.py"
+   ],
+   "category": "inheritance",
+   "ans": {
+    "pos0": "1. \u7c7b `RequestCacheControl` \u7ee7\u627f\u81ea `ImmutableDictMixin`\u3002\n2. \u57fa\u7c7b `ImmutableDictMixin` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/mixins.py` \u4e2d\u3002",
+    "pos25": "1. \u7c7b `RequestCacheControl` \u7ee7\u627f\u81ea `ImmutableDictMixin`\u3002\n2. \u57fa\u7c7b `ImmutableDictMixin` \u5b9a\u4e49\u5728 `datastructures/mixins.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "1. \u7c7b `RequestCacheControl` \u7ee7\u627f\u81ea `ImmutableDictMixin`\u3002\n2. \u57fa\u7c7b `ImmutableDictMixin` \u5b9a\u4e49\u5728 `datastructures/mixins.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "1. \u7c7b `RequestCacheControl` \u7ee7\u627f\u81ea `ImmutableDictMixin`\u3002\n2. \u57fa\u7c7b `ImmutableDictMixin` \u5b9a\u4e49\u5728 `datastructures/mixins.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "1. \u7c7b `RequestCacheControl` \u7ee7\u627f\u81ea `ImmutableDictMixin`\u3002\n2. \u57fa\u7c7b `ImmutableDictMixin` \u5b9a\u4e49\u5728 `datastructures/mixins.py` \u6587\u4ef6\u4e2d\u3002"
+   }
+  },
+  {
+   "id": "REV-11",
+   "keywords": [
+    "debug",
+    "tbtools",
+    "shared_data",
+    "exceptions",
+    "request",
+    "response",
+    "test"
+   ],
+   "category": "reverse_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u76f4\u63a5\u663e\u793a\u4efb\u4f55\u6587\u4ef6\u6216\u6a21\u5757\u4f9d\u8d56\u4e8e `utils.py`\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u5217\u51fa\u4e86\u4e0e `utils.py` \u76f8\u5173\u7684\u4f9d\u8d56\u5173\u7cfb\uff0c\u4f46\u6ca1\u6709\u660e\u786e\u6307\u51fa\u54ea\u4e9b\u6587\u4ef6\u5bfc\u5165\u4e86 `utils.py`\u3002\n\n\u8981\u786e\u5b9a\u5177\u4f53\u54ea\u4e9b\u6587\u4ef6\u5bfc\u5165\u4e86 `utils.py`\uff0c\u9700\u8981\u67e5\u770b\u9879\u76ee\u7684\u6e90\u4ee3\u7801\u5e76\u8fdb\u884c\u9759\u6001\u5206\u6790\u3002\u6839\u636e\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u7684\u4fe1\u606f\uff0c\u53ef\u4ee5\u8003\u8651\u4ee5\u4e0b\u6587\u4ef6\u548c\u6a21\u5757\u4f5c\u4e3a\u6f5c\u5728\u7684\u4f9d\u8d56\u8005\uff1a\n\n1. `__init__.py`\n2. `_internal.py`\n3. `_reloader.py`\n4. `datastructures/__init__.py`\n5. `datastructures/accept.py`\n6. `datastructures/auth.py`\n\n\u8fd9\u4e9b\u6587\u4ef6\u548c\u6a21\u5757\u90fd\u4e0e `utils.py` \u5728\u540c\u4e00\u4e2a\u9879\u76ee\u5185\uff0c\u5e76\u4e14\u5728\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u6709\u63d0\u5230\u3002\u7136\u800c\uff0c\u8981\u786e\u8ba4\u5b83\u4eec\u662f\u5426\u786e\u5b9e\u5bfc\u5165\u4e86 `utils.py`\uff0c\u9700\u8981\u8fdb\u4e00\u6b65\u68c0\u67e5\u8fd9\u4e9b\u6587\u4ef6\u7684\u6e90\u4ee3\u7801\u3002\n\n\u8bf7\u6ce8\u610f\uff0c\u4f9d\u8d56\u56fe\u5361\u7247\u53ef\u80fd\u4e0d\u5305\u542b\u6240\u6709\u53ef\u80fd\u7684\u4f9d\u8d56\u5173\u7cfb\uff0c\u56e0\u6b64\u53ef\u80fd\u5b58\u5728\u5176\u4ed6\u6587\u4ef6\u4e5f\u4f9d\u8d56\u4e8e `utils.py`\uff0c\u4f46\u672a\u5728\u5361\u7247\u4e2d\u5217\u51fa\u3002\u8981\u83b7\u5f97\u5b8c\u6574\u7684\u4f9d\u8d56\u5173\u7cfb\u5217\u8868\uff0c\u5efa\u8bae\u4f7f\u7528\u4e13\u95e8\u7684\u9759\u6001\u5206\u6790\u5de5\u5177\u6765\u626b\u63cf\u6574\u4e2a\u9879\u76ee\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u5217\u51fa\u4f9d\u8d56\u4e8e utils.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u4ece\u7ed9\u5b9a\u7684\u4fe1\u606f\u4e2d\u786e\u5b9a\u54ea\u4e9b\u6587\u4ef6\u5bfc\u5165\u4e86 utils.py\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u5217\u51fa\u4f9d\u8d56\u4e8e utils.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u4ece\u7ed9\u5b9a\u7684\u4fe1\u606f\u4e2d\u786e\u5b9a\u54ea\u4e9b\u6587\u4ef6\u5bfc\u5165\u4e86 utils.py\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d\u6ca1\u6709\u76f4\u63a5\u5217\u51fa\u4f9d\u8d56\u4e8e utils.py \u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002\u4f9d\u8d56\u56fe\u4e2d\u5217\u51fa\u4e86\u4e0e utils.py \u76f8\u5173\u7684\u5176\u4ed6\u6587\u4ef6\u548c\u6a21\u5757,\u4f46\u6ca1\u6709\u660e\u786e\u6307\u51fa\u54ea\u4e9b\u6587\u4ef6 import \u4e86 utils.py\u3002\u8981\u5b8c\u6574\u5217\u51fa\u6240\u6709\u4f9d\u8d56\u4e8e utils.py \u7684\u6587\u4ef6,\u9700\u8981\u8fdb\u4e00\u6b65\u5206\u6790\u9879\u76ee\u7684\u5bfc\u5165\u5173\u7cfb\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u4ee5\u4e0b\u6587\u4ef6\u6216\u6a21\u5757 import(\u4f9d\u8d56)\u4e86 utils.py\uff1a\n\n1. debug\n2. tbtools\n3. shared_data\n4. exceptions\n5. request\n6. response\n7. test"
+   }
+  },
+  {
+   "id": "INH-07",
+   "keywords": [
+    "sansio/request.py"
+   ],
+   "category": "inheritance",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u5728 werkzeug \u4e2d,wrappers/request.py \u91cc\u7684 Request \u7c7b\u7ee7\u627f\u81ea sansio/request.py \u6587\u4ef6\u91cc\u7684 Request \u7c7b\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/request.py \u91cc\u7684 Request \u7c7b\u7ee7\u627f\u81ea sansio/request.py \u91cc\u7684 Request \u7c7b\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/request.py \u91cc\u7684 Request \u7c7b\u7ee7\u627f\u81ea sansio/request.py \u91cc\u7684 Request \u7c7b\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/request.py \u91cc\u7684 Request \u7c7b\u7ee7\u627f\u81ea sansio/request.py \u6587\u4ef6\u91cc\u7684 Request \u7c7b\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d,wrappers/request.py \u91cc\u7684 Request \u7c7b\u7ee7\u627f\u81ea sansio/request.py \u6587\u4ef6\u91cc\u7684 Request \u7c7b\u3002"
+   }
+  },
+  {
+   "id": "INH-06",
+   "keywords": [
+    "immutablemultidictmixin",
+    "datastructures/mixins.py"
+   ],
+   "category": "inheritance",
+   "ans": {
+    "pos0": "1. \u7c7b CombinedMultiDict \u7ee7\u627f\u81ea MultiDict\u3002\n2. \u57fa\u7c7b MultiDict \u5b9a\u4e49\u5728\u6587\u4ef6 datastructures/structures.py \u4e2d\u3002",
+    "pos25": "1. \u7c7b CombinedMultiDict \u7ee7\u627f\u81ea MultiDict\u3002\n2. \u57fa\u7c7b MultiDict \u5b9a\u4e49\u5728 datastructures/structures.py \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "1. \u7c7b CombinedMultiDict \u7ee7\u627f\u81ea MultiDict\u3002\n2. \u57fa\u7c7b MultiDict \u5b9a\u4e49\u5728 datastructures/structures.py \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "1. \u7c7b CombinedMultiDict \u7ee7\u627f\u81ea MultiDict\u3002\n2. \u57fa\u7c7b MultiDict \u5b9a\u4e49\u5728 datastructures/structures.py \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "1. \u7c7b CombinedMultiDict \u7ee7\u627f\u81ea ImmutableMultiDictMixin\u3002\n2. \u57fa\u7c7b ImmutableMultiDictMixin \u5b9a\u4e49\u5728 datastructures/mixins.py \u6587\u4ef6\u4e2d\u3002"
+   }
+  },
+  {
+   "id": "INH-08",
+   "keywords": [
+    "sansio/response.py"
+   ],
+   "category": "inheritance",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,wrappers/response.py \u91cc\u7684 Response \u7c7b\u7684\u57fa\u7c7b\u5b9a\u4e49\u5728\u4ee5\u4e0b\u6587\u4ef6/\u6a21\u5757\u4e2d:\n\n1. sansio/response.py",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/response.py \u91cc\u7684 Response \u7c7b\u7684\u57fa\u7c7b\u5b9a\u4e49\u5728 sansio/response.py \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/response.py \u91cc\u7684 Response \u7c7b\u7684\u57fa\u7c7b\u5b9a\u4e49\u5728 sansio/response.py \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/response.py \u91cc\u7684 Response \u7c7b\u7684\u57fa\u7c7b\u5b9a\u4e49\u5728 sansio/response.py \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d,wrappers/response.py \u91cc\u7684 Response \u7c7b\u7684\u57fa\u7c7b\u5b9a\u4e49\u5728 sansio/response.py \u6587\u4ef6\u4e2d\u3002"
+   }
+  },
+  {
+   "id": "INH-09",
+   "keywords": [
+    "badrequest",
+    "keyerror"
+   ],
+   "category": "inheritance",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u5728 werkzeug \u4e2d,\u5f02\u5e38\u7c7b BadRequestKeyError \u540c\u65f6\u7ee7\u627f\u4e86\u4ee5\u4e0b\u4e24\u4e2a\u7c7b:\n\n1. BadRequest\n2. KeyError",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u5728 werkzeug \u4e2d,\u5f02\u5e38\u7c7b BadRequestKeyError \u540c\u65f6\u7ee7\u627f\u4e86\u4ee5\u4e0b\u4e24\u4e2a\u7c7b:\n\n1. BadRequest\n2. KeyError",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u5728 werkzeug \u4e2d,\u5f02\u5e38\u7c7b BadRequestKeyError \u540c\u65f6\u7ee7\u627f\u4e86\u4ee5\u4e0b\u4e24\u4e2a\u7c7b:\n\n1. BadRequest\n2. KeyError",
+    "pos75": "\u5728 werkzeug \u4e2d,\u5f02\u5e38\u7c7b BadRequestKeyError \u540c\u65f6\u7ee7\u627f\u4e86\u4ee5\u4e0b\u4e24\u4e2a\u7c7b:\n\n1. BadRequest\n2. KeyError",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5f02\u5e38\u7c7b BadRequestKeyError \u540c\u65f6\u7ee7\u627f\u4e86\u4ee5\u4e0b\u4e24\u4e2a\u7c7b:\n\n1. BadRequest\n2. KeyError"
+   }
+  },
+  {
+   "id": "INH-01",
+   "keywords": [
+    "immutablelist",
+    "datastructures/structures.py"
+   ],
+   "category": "inheritance",
+   "ans": {
+    "pos0": "1. \u7c7b `Accept` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/accept.py` \u4e2d\u3002\n2. \u7c7b `Accept` \u7ee7\u627f\u81ea `CallbackDict`\u3002\n3. \u57fa\u7c7b `CallbackDict` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/structures.py` \u4e2d\u3002",
+    "pos25": "1. \u7c7b `Accept` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/accept.py`\u3002\n2. \u7c7b `Accept` \u7ee7\u627f\u81ea `CallbackDict`\u3002\n3. \u57fa\u7c7b `CallbackDict` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/structures.py`\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `Accept` \u5b9a\u4e49\u5728 `datastructures/accept.py` \u6587\u4ef6\u4e2d\u3002\u8981\u786e\u5b9a `Accept` \u7c7b\u7ee7\u627f\u81ea\u54ea\u4e2a\u7c7b\uff0c\u6211\u4eec\u9700\u8981\u67e5\u770b\u8be5\u6587\u4ef6\u7684\u5185\u5bb9\u3002\n\n\u7136\u800c\uff0c\u7531\u4e8e\u63d0\u4f9b\u7684\u4ee3\u7801\u7247\u6bb5\u4e0d\u5305\u62ec `datastructures/accept.py` \u7684\u5177\u4f53\u5185\u5bb9\uff0c\u6211\u4eec\u65e0\u6cd5\u76f4\u63a5\u4ece\u8fd9\u91cc\u5f97\u77e5 `Accept` \u7c7b\u7684\u7ee7\u627f\u5173\u7cfb\u3002\u901a\u5e38\u60c5\u51b5\u4e0b\uff0c\u7c7b\u7684\u7ee7\u627f\u5173\u7cfb\u4f1a\u5728\u7c7b\u5b9a\u4e49\u7684\u7b2c\u4e00\u884c\u4e2d\u660e\u786e\u6307\u51fa\uff0c\u4f8b\u5982\uff1a\n\n```python\nclass Accept(BaseClass):\n    pass\n```\n\n\u5728\u8fd9\u4e2a\u4f8b\u5b50\u4e2d\uff0c`Accept` \u7c7b\u7ee7\u627f\u81ea `BaseClass`\u3002\n\n\u4e3a\u4e86\u627e\u5230\u786e\u5207\u7684\u7b54\u6848\uff0c\u60a8\u9700\u8981\u67e5\u770b `datastructures/accept.py` \u6587\u4ef6\u4e2d\u7684 `Accept` \u7c7b\u5b9a\u4e49\u3002\u5982\u679c `Accept` \u7c7b\u786e\u5b9e\u7ee7\u627f\u81ea\u67d0\u4e2a\u7c7b\uff0c\u90a3\u4e48\u8fd9\u4e2a\u57fa\u7c7b\u5e94\u8be5\u4e5f\u4f1a\u5728\u540c\u4e00\u4e2a\u6587\u4ef6\u6216\u9879\u76ee\u5185\u7684\u5176\u4ed6\u6587\u4ef6\u4e2d\u5b9a\u4e49\u3002\u6839\u636e\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u53ef\u80fd\u7684\u57fa\u7c7b\u5b9a\u4e49\u5728\u4ee5\u4e0b\u6587\u4ef6\u4e2d\uff1a\n\n1. `datastructures/structures.py`\n2. \u5176\u4ed6\u672a\u5217\u51fa\u7684\u6587\u4ef6\uff0c\u4f46\u8fd9\u4e9b\u6587\u4ef6\u5e94\u8be5\u53ef\u4ee5\u901a\u8fc7 `datastructures/structures.py` \u6216\u5176\u4ed6\u5df2\u77e5\u6587\u4ef6\u95f4\u63a5\u8bbf\u95ee\u3002\n\n\u5982\u679c\u60a8\u80fd\u63d0\u4f9b `datastructures/accept.py` \u6587\u4ef6\u7684\u5177\u4f53\u5185\u5bb9\uff0c\u6211\u53ef\u4ee5\u5e2e\u52a9\u60a8\u66f4\u51c6\u786e\u5730\u786e\u5b9a `Accept` \u7c7b\u7684\u7ee7\u627f\u5173\u7cfb\u3002",
+    "pos75": "1. \u7c7b `Accept` \u7ee7\u627f\u81ea `ImmutableList`\u3002\n2. \u57fa\u7c7b `ImmutableList` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u7c7b Accept \u7ee7\u627f\u81ea\u57fa\u7c7b ImmutableList\u3002\n\n\u76f8\u5173\u9879\u76ee\u5185\u4f9d\u8d56\u6587\u4ef6/\u6a21\u5757\u5982\u4e0b:\n\n1. datastructures/accept.py\n2. datastructures/structures.py"
+   }
+  },
+  {
+   "id": "LOC-01",
+   "keywords": [
+    "datastructures/auth.py"
+   ],
+   "category": "symbol_location",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u7c7b Authorization \u5b9a\u4e49\u5728\u4ee5\u4e0b\u6587\u4ef6\u91cc:\n\n1. datastructures/auth.py",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `Authorization` \u5b9a\u4e49\u5728 `datastructures/auth.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `Authorization` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/auth.py` \u4e2d\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b Authorization \u5b9a\u4e49\u5728 datastructures/auth.py \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b Authorization \u5b9a\u4e49\u5728\u6587\u4ef6 datastructures/auth.py \u91cc\u3002"
+   }
+  },
+  {
+   "id": "LOC-02",
+   "keywords": [
+    "routing/converters.py"
+   ],
+   "category": "symbol_location",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `BaseConverter` \u5b9a\u4e49\u5728 `routing/converters.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `BaseConverter` \u5b9a\u4e49\u5728 `routing/converters.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u65e0\u6cd5\u627e\u5230\u7c7b `BaseConverter` \u7684\u5b9a\u4e49\u4f4d\u7f6e\u3002\u4f9d\u8d56\u56fe\u4e2d\u6ca1\u6709\u63d0\u5230 `BaseConverter` \u6216\u5176\u6240\u5728\u7684\u6587\u4ef6\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `BaseConverter` \u5b9a\u4e49\u5728 `routing/converters.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b BaseConverter \u5b9a\u4e49\u5728 routing/converters.py \u6587\u4ef6\u91cc\u3002"
+   }
+  },
+  {
+   "id": "LOC-03",
+   "keywords": [
+    "datastructures/structures.py"
+   ],
+   "category": "symbol_location",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u7c7b CombinedMultiDict \u5b9a\u4e49\u5728\u4ee5\u4e0b\u6587\u4ef6\u91cc:\n\n1. datastructures/structures.py",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `CombinedMultiDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `CombinedMultiDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `CombinedMultiDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b CombinedMultiDict \u5b9a\u4e49\u5728 datastructures/structures.py \u6587\u4ef6\u4e2d\u3002"
+   }
+  },
+  {
+   "id": "LOC-04",
+   "keywords": [
+    "datastructures/file_storage.py"
+   ],
+   "category": "symbol_location",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u7c7b FileStorage \u5b9a\u4e49\u5728\u4ee5\u4e0b\u6587\u4ef6\u91cc:\n\n1. datastructures/file_storage.py",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `FileStorage` \u5b9a\u4e49\u5728 `datastructures/file_storage.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `FileStorage` \u5b9a\u4e49\u5728 `datastructures/file_storage.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `FileStorage` \u5b9a\u4e49\u5728 `datastructures/file_storage.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b FileStorage \u5b9a\u4e49\u5728\u4ee5\u4e0b\u6587\u4ef6\u91cc:\n\n1. datastructures/file_storage.py"
+   }
+  },
+  {
+   "id": "LOC-05",
+   "keywords": [
+    "exceptions.py"
+   ],
+   "category": "symbol_location",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u6ca1\u6709\u76f4\u63a5\u63d0\u5230 HTTPException \u7c7b\u7684\u76f8\u5173\u4fe1\u606f\u3002\u56e0\u6b64\u65e0\u6cd5\u786e\u5b9a HTTPException \u7c7b\u5b9a\u4e49\u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b HTTPException \u5b9a\u4e49\u5728 exceptions.py \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b HTTPException \u5b9a\u4e49\u5728 exceptions.py \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b HTTPException \u5b9a\u4e49\u5728 exceptions.py \u6587\u4ef6\u91cc\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b HTTPException \u5b9a\u4e49\u5728 exceptions.py \u6587\u4ef6\u91cc\u3002"
+   }
+  },
+  {
+   "id": "INH-12",
+   "keywords": [
+    "contentsecuritypolicy",
+    "_cachecontrol"
+   ],
+   "category": "inheritance",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\u548c\u4ee3\u7801\u5185\u5bb9\uff0c\u5728 werkzeug \u4e2d\uff0c\u7ee7\u627f\uff08\u6df7\u5165\uff09\u4e86 CallbackDict \u7684\u7c7b\u4f4d\u4e8e\u4ee5\u4e0b\u9879\u76ee\u5185\u4f9d\u8d56\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. datastructures/auth.py\n   - WWWAuthenticate \u7c7b\u7ee7\u627f\u4e86 CallbackDict\n\n2. datastructures/structures.py\n   - CallbackDict \u7c7b\u672c\u8eab\u5b9a\u4e49\u5728\u6b64\u6587\u4ef6\u4e2d\uff0c\u4f46\u6ca1\u6709\u5176\u4ed6\u7c7b\u7ee7\u627f\u5b83\n\n\u56e0\u6b64\uff0c\u53ea\u6709 WWWAuthenticate \u7c7b\u5728\u9879\u76ee\u5185\u4f9d\u8d56\u7684\u6587\u4ef6\u4e2d\u7ee7\u627f\u4e86 CallbackDict\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\u548c\u4ee3\u7801\u5185\u5bb9\uff0c\u5728 werkzeug \u4e2d\uff0c\u7ee7\u627f\u6216\u6df7\u5165\u4e86 CallbackDict \u7684\u7c7b\u5305\u62ec\uff1a\n\n1. datastructures/structures.py \u4e2d\u7684 WWWAuthenticate \u7c7b",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\u548c\u4ee3\u7801\u7247\u6bb5\uff0c\u4ee5\u4e0b\u662f\u7ee7\u627f\u6216\u6df7\u5165\u4e86 `CallbackDict` \u7684\u7c7b\u6240\u5728\u7684\u9879\u76ee\u5185\u4f9d\u8d56\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `datastructures/auth.py` \u4e2d\u7684 `WWWAuthenticate` \u7c7b\u7ee7\u627f\u81ea `CallbackDict`\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u5728 werkzeug \u4e2d\u7ee7\u627f(\u6df7\u5165)\u4e86 CallbackDict \u7684\u7c7b\u6709:\n\n1. WWWAuthenticate (\u4f4d\u4e8e datastructures/auth.py \u6587\u4ef6\u4e2d)\n\n\u8fd9\u4e2a\u7c7b\u4f7f\u7528\u4e86 CallbackDict \u6765\u5b58\u50a8\u548c\u7ba1\u7406\u5176\u53c2\u6570\u5b57\u5178\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d\u7ee7\u627f(\u6df7\u5165)\u4e86 CallbackDict \u7684\u7c7b\u6709:\n\n1. ContentSecurityPolicy\n2. _CacheControl"
+   }
+  },
+  {
+   "id": "LOC-07",
+   "keywords": [
+    "routing/map.py"
+   ],
+   "category": "symbol_location",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `Map` \u5b9a\u4e49\u5728\u6587\u4ef6 `routing/map.py` \u4e2d\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `Map` \u5b9a\u4e49\u5728 `routing/map.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `Map` \u5b9a\u4e49\u5728 `routing/map.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b Map \u5b9a\u4e49\u5728 routing/map.py \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b Map \u5b9a\u4e49\u5728\u6587\u4ef6 routing/map.py \u91cc\u3002"
+   }
+  },
+  {
+   "id": "LOC-06",
+   "keywords": [
+    "datastructures/headers.py"
+   ],
+   "category": "symbol_location",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u7c7b Headers \u5b9a\u4e49\u5728\u4ee5\u4e0b\u6587\u4ef6\u91cc:\n\n1. datastructures/headers.py",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `Headers` \u5b9a\u4e49\u5728 `datastructures/headers.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `Headers` \u5b9a\u4e49\u5728 `datastructures/headers.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `Headers` \u5b9a\u4e49\u5728 `datastructures/headers.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b Headers \u5b9a\u4e49\u5728 datastructures/headers.py \u6587\u4ef6\u4e2d\u3002"
+   }
+  },
+  {
+   "id": "INH-11",
+   "keywords": [
+    "immutabledict",
+    "immutablemultidictmixin",
+    "immutabletypeconversiondict",
+    "requestcachecontrol"
+   ],
+   "category": "inheritance",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u7ee7\u627f(\u6df7\u5165)\u4e86 `ImmutableDictMixin` \u7684\u7c7b\u6240\u5728\u7684\u9879\u76ee\u5185\u4f9d\u8d56\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `datastructures/structures.py` \u4e2d\u7684 `ImmutableDict`\n2. `datastructures/structures.py` \u4e2d\u7684 `ImmutableMultiDict`\n3. `datastructures/structures.py` \u4e2d\u7684 `ImmutableTypeConversionDict`",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u7ee7\u627f(\u6df7\u5165)\u4e86 `ImmutableDictMixin` \u7684\u7c7b\u6240\u5728\u7684\u9879\u76ee\u5185\u4f9d\u8d56\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `datastructures/structures.py` - \u5305\u542b `ImmutableDict` \u7c7b\u3002\n2. `datastructures/structures.py` - \u5305\u542b `ImmutableMultiDict` \u7c7b\u3002\n3. `datastructures/structures.py` - \u5305\u542b `ImmutableTypeConversionDict` \u7c7b\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u7ee7\u627f(\u6df7\u5165)\u4e86 `ImmutableDictMixin` \u7684\u7c7b\u6240\u5728\u7684\u9879\u76ee\u5185\u4f9d\u8d56\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. `datastructures/structures.py` \u4e2d\u7684 `ImmutableDict`\n2. `datastructures/structures.py` \u4e2d\u7684 `ImmutableMultiDict`\n3. `datastructures/structures.py` \u4e2d\u7684 `ImmutableTypeConversionDict`",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u5728 werkzeug \u4e2d\u7ee7\u627f(\u6df7\u5165)\u4e86 ImmutableDictMixin \u7684\u7c7b\u6709:\n\n1. ImmutableDict (\u4f4d\u4e8e datastructures/structures.py)\n2. ImmutableMultiDict (\u4f4d\u4e8e datastructures/structures.py)\n3. ImmutableTypeConversionDict (\u4f4d\u4e8e datastructures/structures.py)",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u5728 werkzeug \u4e2d\u7ee7\u627f(\u6df7\u5165)\u4e86 ImmutableDictMixin \u7684\u7c7b\u6709:\n\n1. ImmutableDict\n2. ImmutableMultiDictMixin\n3. ImmutableTypeConversionDict\n4. RequestCacheControl"
+   }
+  },
+  {
+   "id": "INH-05",
+   "keywords": [
+    "callbackdict",
+    "datastructures/structures.py"
+   ],
+   "category": "inheritance",
+   "ans": {
+    "pos0": "1. \u7c7b `ContentSecurityPolicy` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/csp.py`\u3002\n2. \u7c7b `ContentSecurityPolicy` \u7ee7\u627f\u81ea `CallbackDict`\u3002\n3. \u57fa\u7c7b `CallbackDict` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/structures.py`\u3002",
+    "pos25": "1. \u7c7b `ContentSecurityPolicy` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/csp.py`\u3002\n2. \u7c7b `ContentSecurityPolicy` \u7ee7\u627f\u81ea `CallbackDict`\u3002\n3. \u57fa\u7c7b `CallbackDict` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/structures.py`\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `ContentSecurityPolicy` \u5b9a\u4e49\u5728 `datastructures/csp.py` \u6587\u4ef6\u4e2d\u3002\n\n\u8981\u786e\u5b9a `ContentSecurityPolicy` \u7ee7\u627f\u81ea\u54ea\u4e2a\u7c7b\uff0c\u6211\u4eec\u9700\u8981\u67e5\u770b `datastructures/csp.py` \u6587\u4ef6\u7684\u5185\u5bb9\u3002\u6839\u636e\u6587\u4ef6\u5185\u5bb9\uff0c\u6211\u4eec\u53ef\u4ee5\u770b\u5230\uff1a\n\n```python\nfrom .structures import CallbackDict\n\nclass ContentSecurityPolicy(CallbackDict):\n    # \u7c7b\u7684\u5b9e\u73b0\n```\n\n\u56e0\u6b64\uff0c`ContentSecurityPolicy` \u7ee7\u627f\u81ea `CallbackDict` \u7c7b\u3002\n\n`CallbackDict` \u7c7b\u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002\n\n\u603b\u7ed3\uff1a\n1. `ContentSecurityPolicy` \u7ee7\u627f\u81ea `CallbackDict` \u7c7b\u3002\n2. `CallbackDict` \u7c7b\u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "1. \u7c7b `ContentSecurityPolicy` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/csp.py`\u3002\n2. \u7c7b `ContentSecurityPolicy` \u7ee7\u627f\u81ea `CallbackDict`\u3002\n3. \u57fa\u7c7b `CallbackDict` \u5b9a\u4e49\u5728\u6587\u4ef6 `datastructures/structures.py`\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `ContentSecurityPolicy` \u5b9a\u4e49\u5728 `datastructures/csp.py` \u6587\u4ef6\u4e2d\u3002\u8981\u786e\u5b9a\u5b83\u7ee7\u627f\u81ea\u54ea\u4e2a\u7c7b\uff0c\u6211\u4eec\u9700\u8981\u67e5\u770b\u8be5\u6587\u4ef6\u7684\u5185\u5bb9\u3002\n\n\u7136\u800c\uff0c\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u5e76\u6ca1\u6709\u76f4\u63a5\u63d0\u4f9b `ContentSecurityPolicy` \u7684\u7ee7\u627f\u4fe1\u606f\u3002\u4f46\u6211\u4eec\u53ef\u4ee5\u6839\u636e\u4f9d\u8d56\u5173\u7cfb\u63a8\u65ad\u51fa\u53ef\u80fd\u7684\u7ee7\u627f\u8def\u5f84\u3002\n\n1. `datastructures/csp.py` \u6587\u4ef6\u4e2d\u5b9a\u4e49\u4e86 `ContentSecurityPolicy` \u7c7b\u3002\n2. \u4f9d\u8d56\u56fe\u5361\u7247\u663e\u793a `datastructures/csp.py` \u4f9d\u8d56\u4e8e `CallbackDict` \u548c `datastructures/structures.py`\u3002\n3. `CallbackDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002\n\n\u56e0\u6b64\uff0c\u53ef\u4ee5\u63a8\u6d4b `ContentSecurityPolicy` \u53ef\u80fd\u7ee7\u627f\u81ea `CallbackDict`\uff0c\u800c `CallbackDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002\n\n\u603b\u7ed3\uff1a\n- `ContentSecurityPolicy` \u7ee7\u627f\u81ea `CallbackDict`\u3002\n- `CallbackDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002"
+   }
+  },
+  {
+   "id": "LOC-10",
+   "keywords": [
+    "routing/rules.py"
+   ],
+   "category": "symbol_location",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b Rule \u5b9a\u4e49\u5728\u6587\u4ef6 routing/rules.py \u4e2d\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b Rule \u5b9a\u4e49\u5728\u6587\u4ef6 routing/rules.py \u4e2d\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b Rule \u5b9a\u4e49\u5728\u6587\u4ef6 routing/rules.py \u4e2d\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b Rule \u5b9a\u4e49\u5728 routing/rules.py \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b Rule \u5b9a\u4e49\u5728 routing/rules.py \u6587\u4ef6\u4e2d\u3002"
+   }
+  },
+  {
+   "id": "LOC-08",
+   "keywords": [
+    "routing/map.py"
+   ],
+   "category": "symbol_location",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `MapAdapter` \u6ca1\u6709\u76f4\u63a5\u51fa\u73b0\u5728\u4efb\u4f55\u5217\u51fa\u7684\u6587\u4ef6\u4e2d\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u63d0\u5230\u7684\u6587\u4ef6\u662f `routing/map.py`\uff0c\u4f46\u6ca1\u6709\u5177\u4f53\u8bf4\u660e `MapAdapter` \u7c7b\u662f\u5426\u5b9a\u4e49\u5728\u8be5\u6587\u4ef6\u4e2d\u3002\u8981\u786e\u5b9a `MapAdapter` \u7684\u786e\u5207\u4f4d\u7f6e\uff0c\u9700\u8981\u67e5\u770b `routing/map.py` \u6587\u4ef6\u7684\u5185\u5bb9\u6216\u8fdb\u4e00\u6b65\u7684\u4f9d\u8d56\u4fe1\u606f\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `MapAdapter` \u5b9a\u4e49\u5728 `routing/map.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `MapAdapter` \u5b9a\u4e49\u5728 `routing/map.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `MapAdapter` \u5b9a\u4e49\u5728 `routing/map.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b MapAdapter \u5b9a\u4e49\u5728\u6587\u4ef6 routing/map.py \u91cc\u3002"
+   }
+  },
+  {
+   "id": "LOC-09",
+   "keywords": [
+    "datastructures/structures.py"
+   ],
+   "category": "symbol_location",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u7c7b MultiDict \u5b9a\u4e49\u5728\u4ee5\u4e0b\u6587\u4ef6\u91cc:\n\n1. datastructures/structures.py",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `MultiDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `MultiDict` \u5b9a\u4e49\u5728 `datastructures/structures.py` \u6587\u4ef6\u4e2d\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u7c7b MultiDict \u5b9a\u4e49\u5728\u4ee5\u4e0b\u6587\u4ef6\u91cc:\n\n1. datastructures/structures.py",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b MultiDict \u5b9a\u4e49\u5728 datastructures/structures.py \u6587\u4ef6\u4e2d\u3002"
+   }
+  },
+  {
+   "id": "LOC-12",
+   "keywords": [
+    "middleware/lint.py"
+   ],
+   "category": "symbol_location",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u76f4\u63a5\u63d0\u5230\u7c7b `WSGIWarning` \u7684\u5b9a\u4e49\u4f4d\u7f6e\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u786e\u5b9a\u8be5\u7c7b\u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u5b9a\u4e49\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u65e0\u6cd5\u627e\u5230\u7c7b `WSGIWarning` \u7684\u5b9a\u4e49\u4f4d\u7f6e\u3002\u4f9d\u8d56\u56fe\u4e2d\u6ca1\u6709\u63d0\u53ca\u8be5\u7c7b\u7684\u76f8\u5173\u4fe1\u606f\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u65e0\u6cd5\u627e\u5230\u7c7b `WSGIWarning` \u7684\u5b9a\u4e49\u4f4d\u7f6e\u3002\u4f9d\u8d56\u56fe\u4e2d\u6ca1\u6709\u63d0\u53ca\u8be5\u7c7b\u7684\u76f8\u5173\u4fe1\u606f\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u65e0\u6cd5\u627e\u5230\u7c7b `WSGIWarning` \u7684\u5b9a\u4e49\u4f4d\u7f6e\u3002\u4f9d\u8d56\u56fe\u4e2d\u6ca1\u6709\u5305\u542b\u5173\u4e8e `WSGIWarning` \u7c7b\u7684\u4fe1\u606f\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `WSGIWarning` \u7684\u5b9a\u4e49\u5728 `middleware/lint.py` \u6587\u4ef6\u4e2d\u3002"
+   }
+  },
+  {
+   "id": "DAT-01",
+   "keywords": [
+    "debug/__init__.py"
+   ],
+   "category": "dataflow",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u627e\u5230\u4e0e\u5e38\u91cf PIN_TIME \u76f8\u5173\u7684\u4fe1\u606f\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u786e\u5b9a\u5e38\u91cf PIN_TIME \u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u5b9a\u4e49\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u627e\u5230\u4e0e\u5e38\u91cf PIN_TIME \u76f8\u5173\u7684\u4fe1\u606f\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u786e\u5b9a PIN_TIME \u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u5b9a\u4e49\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u65e0\u6cd5\u627e\u5230\u5e38\u91cf PIN_TIME \u7684\u5b9a\u4e49\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u6ca1\u6709\u63d0\u53ca\u4efb\u4f55\u5305\u542b PIN_TIME \u5e38\u91cf\u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u65e0\u6cd5\u627e\u5230\u5e38\u91cf PIN_TIME \u7684\u5b9a\u4e49\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u6ca1\u6709\u63d0\u53ca\u4efb\u4f55\u5305\u542b PIN_TIME \u5e38\u91cf\u7684\u6587\u4ef6\u6216\u6a21\u5757\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d,\u5e38\u91cf PIN_TIME \u5b9a\u4e49\u5728\u4ee5\u4e0b\u6587\u4ef6\u4e2d:\n\n1. debug/__init__.py"
+   }
+  },
+  {
+   "id": "LOC-11",
+   "keywords": [
+    "routing/matcher.py"
+   ],
+   "category": "symbol_location",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u627e\u5230\u4e0e\u7c7b `StateMachineMatcher` \u76f8\u5173\u7684\u4fe1\u606f\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u5217\u51fa\u4e86\u4ee5\u4e0b\u6587\u4ef6\u548c\u6a21\u5757\uff1a\n\n1. `routing/matcher.py`\n\n\u7531\u4e8e\u6ca1\u6709\u5173\u4e8e `StateMachineMatcher` \u7684\u4fe1\u606f\uff0c\u65e0\u6cd5\u786e\u5b9a\u8be5\u7c7b\u5b9a\u4e49\u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u3002\u5efa\u8bae\u68c0\u67e5\u5176\u4ed6\u6587\u4ef6\u6216\u63d0\u4f9b\u66f4\u591a\u7684\u4e0a\u4e0b\u6587\u4fe1\u606f\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `StateMachineMatcher` \u6ca1\u6709\u5728\u4efb\u4f55\u5217\u51fa\u7684\u6587\u4ef6\u4e2d\u5b9a\u4e49\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u786e\u5b9a\u8be5\u7c7b\u6240\u5728\u7684\u6587\u4ef6\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u627e\u5230\u4e0e `StateMachineMatcher` \u76f8\u5173\u7684\u4fe1\u606f\u3002\u56e0\u6b64\u65e0\u6cd5\u786e\u5b9a\u8be5\u7c7b\u5b9a\u4e49\u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u7c7b `StateMachineMatcher` \u6ca1\u6709\u5728\u4efb\u4f55\u5217\u51fa\u7684\u6587\u4ef6\u4e2d\u5b9a\u4e49\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u4ec5\u5217\u51fa\u4e86 `routing/matcher.py` \u6587\u4ef6\uff0c\u4f46\u6ca1\u6709\u63d0\u5230 `StateMachineMatcher` \u7c7b\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u786e\u5b9a\u8be5\u7c7b\u5b9a\u4e49\u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u7c7b StateMachineMatcher \u5b9a\u4e49\u5728 routing/matcher.py \u6587\u4ef6\u91cc\u3002"
+   }
+  },
+  {
+   "id": "DAT-02",
+   "keywords": [
+    "debug/repr.py"
+   ],
+   "category": "dataflow",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u65e0\u6cd5\u627e\u5230\u4e0e\u5e38\u91cf HELP_HTML \u76f8\u5173\u7684\u4fe1\u606f\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u5217\u51fa\u4e86 werkzeug \u9879\u76ee\u7684\u90e8\u5206\u6587\u4ef6\u548c\u6a21\u5757\uff0c\u4f46\u6ca1\u6709\u63d0\u53ca HELP_HTML \u5e38\u91cf\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u786e\u5b9a HELP_HTML \u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u5b9a\u4e49\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u65e0\u6cd5\u627e\u5230\u5e38\u91cf HELP_HTML \u7684\u5b9a\u4e49\u4f4d\u7f6e\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u6ca1\u6709\u63d0\u53ca HELP_HTML \u8fd9\u4e2a\u5e38\u91cf\u6216\u5176\u6240\u5728\u7684\u6587\u4ef6\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u65e0\u6cd5\u627e\u5230\u5e38\u91cf HELP_HTML \u7684\u5b9a\u4e49\u4f4d\u7f6e\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u6ca1\u6709\u5305\u542b\u5173\u4e8e HELP_HTML \u5e38\u91cf\u7684\u4fe1\u606f\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u65e0\u6cd5\u627e\u5230\u5e38\u91cf HELP_HTML \u7684\u5b9a\u4e49\u4f4d\u7f6e\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u6ca1\u6709\u5305\u542b\u4efb\u4f55\u5173\u4e8e HELP_HTML \u5e38\u91cf\u7684\u4fe1\u606f\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u65e0\u6cd5\u627e\u5230\u4e0e\u5e38\u91cf `HELP_HTML` \u76f8\u5173\u7684\u4fe1\u606f\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u6ca1\u6709\u63d0\u53ca `HELP_HTML` \u5e38\u91cf\u53ca\u5176\u5b9a\u4e49\u4f4d\u7f6e\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u786e\u5b9a `HELP_HTML` \u5e38\u91cf\u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u5b9a\u4e49\u3002"
+   }
+  },
+  {
+   "id": "DAT-03",
+   "keywords": [
+    "debug/repr.py"
+   ],
+   "category": "dataflow",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u6ca1\u6709\u627e\u5230\u4e0e\u5e38\u91cf OBJECT_DUMP_HTML \u76f8\u5173\u7684\u4fe1\u606f\u3002\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u5217\u51fa\u4e86\u4e0e werkzeug \u9879\u76ee\u76f8\u5173\u7684\u6587\u4ef6\u548c\u6a21\u5757,\u4f46\u6ca1\u6709\u63d0\u53ca OBJECT_DUMP_HTML \u5e38\u91cf\u3002\u56e0\u6b64,\u65e0\u6cd5\u786e\u5b9a\u8be5\u5e38\u91cf\u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u5b9a\u4e49\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u627e\u5230\u4e0e\u5e38\u91cf OBJECT_DUMP_HTML \u76f8\u5173\u7684\u4fe1\u606f\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u786e\u5b9a\u8be5\u5e38\u91cf\u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u5b9a\u4e49\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u627e\u5230\u4e0e\u5e38\u91cf OBJECT_DUMP_HTML \u76f8\u5173\u7684\u4fe1\u606f\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u786e\u5b9a\u8be5\u5e38\u91cf\u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u5b9a\u4e49\u3002",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u6ca1\u6709\u627e\u5230\u4e0e\u5e38\u91cf OBJECT_DUMP_HTML \u76f8\u5173\u7684\u4fe1\u606f\u3002\u56e0\u6b64\uff0c\u65e0\u6cd5\u786e\u5b9a\u8be5\u5e38\u91cf\u5728\u54ea\u4e2a\u6587\u4ef6\u4e2d\u5b9a\u4e49\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d,\u5e38\u91cf OBJECT_DUMP_HTML \u5b9a\u4e49\u5728\u6587\u4ef6 debug/repr.py \u4e2d\u3002"
+   }
+  },
+  {
+   "id": "IND-01",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "category": "indirect_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u5728 werkzeug \u4e2d,wrappers/response.py \u5e76\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u4f9d\u8d56 datastructures/mixins.py\u3002\u56e0\u6b64,\u6ca1\u6709\u4f9d\u8d56\u8def\u5f84\u7ecf\u8fc7\u4efb\u4f55\u4e2d\u95f4\u6587\u4ef6\u3002\n\n\u4f9d\u8d56\u56fe\u5361\u7247\u4e2d\u5217\u51fa\u7684\u4e0e wrappers/response.py \u76f8\u5173\u7684\u4f9d\u8d56\u5173\u7cfb\u53ea\u6709 datastructures/__init__.py,\u800c\u8fd9\u4e2a\u6587\u4ef6\u5e76\u6ca1\u6709\u8fdb\u4e00\u6b65\u4f9d\u8d56\u5230 datastructures/mixins.py\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`wrappers/response.py` \u5e76\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u4f9d\u8d56 `datastructures/mixins.py`\u3002\u56e0\u6b64\uff0c\u6ca1\u6709\u4f9d\u8d56\u8def\u5f84\u7ecf\u8fc7\u4efb\u4f55\u4e2d\u95f4\u6587\u4ef6\u3002\n\n\u76f8\u5173\u9879\u76ee\u5185\u4f9d\u8d56\u6587\u4ef6/\u6a21\u5757\uff1a\n- `wrappers/response.py`\n- `datastructures/__init__.py`\n\n\u7531\u4e8e `wrappers/response.py` \u6ca1\u6709\u4f9d\u8d56 `datastructures/mixins.py`\uff0c\u6240\u4ee5\u65e0\u6cd5\u63d0\u4f9b\u4f9d\u8d56\u8def\u5f84\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,wrappers/response.py \u5e76\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u4f9d\u8d56 datastructures/mixins.py\u3002\u56e0\u6b64,\u6ca1\u6709\u4f9d\u8d56\u8def\u5f84\u7ecf\u8fc7\u4efb\u4f55\u4e2d\u95f4\u6587\u4ef6\u3002\n\n\u76f8\u5173\u9879\u76ee\u5185\u4f9d\u8d56\u6587\u4ef6/\u6a21\u5757:\n- wrappers/response.py\n- datastructures/__init__.py",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,wrappers/response.py \u5e76\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u4f9d\u8d56 datastructures/mixins.py\u3002\u56e0\u6b64,\u6ca1\u6709\u7b26\u5408\u6761\u4ef6\u7684\u4f9d\u8d56\u8def\u5f84\u53ef\u4ee5\u5217\u51fa\u3002",
+    "pos100": "\u662f\u7684,wrappers/response.py \u95f4\u63a5\u4f9d\u8d56 datastructures/mixins.py\u3002\u4f9d\u8d56\u8def\u5f84\u5982\u4e0b:\n\nwrappers/response.py -> datastructures/__init__.py -> datastructures/mixins.py"
+   }
+  },
+  {
+   "id": "IND-03",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "category": "indirect_dep",
+   "ans": {
+    "pos0": "\u662f\u7684,\u5728 werkzeug \u4e2d,wrappers/request.py \u95f4\u63a5\u4f9d\u8d56 datastructures/structures.py\u3002\u4f9d\u8d56\u8def\u5f84\u7ecf\u8fc7\u4ee5\u4e0b\u4e2d\u95f4\u6587\u4ef6:\n\n1. datastructures/__init__.py",
+    "pos25": "\u662f\u7684,wrappers/request.py \u95f4\u63a5\u4f9d\u8d56 datastructures/structures.py\u3002\u4f9d\u8d56\u8def\u5f84\u5982\u4e0b:\n\n1. wrappers/request.py\n2. datastructures/__init__.py\n3. datastructures/structures.py",
+    "pos50": "\u662f\u7684,wrappers/request.py \u95f4\u63a5\u4f9d\u8d56 datastructures/structures.py\u3002\u4f9d\u8d56\u8def\u5f84\u5982\u4e0b:\n\n1. wrappers/request.py\n2. datastructures/__init__.py\n3. datastructures/structures.py",
+    "pos75": "\u662f\u7684,wrappers/request.py \u95f4\u63a5\u4f9d\u8d56 datastructures/structures.py\u3002\u4f9d\u8d56\u8def\u5f84\u5982\u4e0b:\n\n1. wrappers/request.py\n2. datastructures/__init__.py\n3. datastructures/structures.py",
+    "pos100": "\u662f\u7684,wrappers/request.py \u95f4\u63a5\u4f9d\u8d56 datastructures/structures.py\u3002\u4f9d\u8d56\u8def\u5f84\u5982\u4e0b:\n\nwrappers/request.py -> datastructures/__init__.py -> datastructures/structures.py"
+   }
+  },
+  {
+   "id": "IND-02",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "category": "indirect_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,`routing/map.py` \u95f4\u63a5\u4f9d\u8d56 `datastructures/structures.py`,\u4f9d\u8d56\u8def\u5f84\u7ecf\u8fc7 `datastructures/__init__.py`\u3002\n\n\u4ee5\u4e0b\u662f\u5b8c\u6574\u7684\u4f9d\u8d56\u8def\u5f84:\n\n1. `routing/map.py`\n2. `datastructures/__init__.py`\n3. `datastructures/structures.py`\n\n\u56e0\u6b64,`routing/map.py` \u901a\u8fc7 `datastructures/__init__.py` \u95f4\u63a5\u4f9d\u8d56 `datastructures/structures.py`\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u5728 werkzeug \u4e2d,routing/map.py \u5e76\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u4f9d\u8d56 datastructures/structures.py\u3002\u56e0\u6b64,\u6ca1\u6709\u4f9d\u8d56\u8def\u5f84\u7ecf\u8fc7\u4efb\u4f55\u4e2d\u95f4\u6587\u4ef6\u3002\n\n\u76f8\u5173\u9879\u76ee\u5185\u4f9d\u8d56\u6587\u4ef6/\u6a21\u5757:\n- routing/map.py\n- datastructures/__init__.py",
+    "pos50": "\u662f\u7684,\u5728 werkzeug \u4e2d,routing/map.py \u95f4\u63a5\u4f9d\u8d56 datastructures/structures.py\u3002\u4f9d\u8d56\u8def\u5f84\u5982\u4e0b:\n\n1. routing/map.py\n2. datastructures/__init__.py\n3. datastructures/structures.py",
+    "pos75": "\u662f\u7684,\u5728 werkzeug \u4e2d,routing/map.py \u95f4\u63a5\u4f9d\u8d56 datastructures/structures.py\u3002\u4f9d\u8d56\u8def\u5f84\u5982\u4e0b:\n\n1. routing/map.py\n2. datastructures/__init__.py\n3. datastructures/structures.py",
+    "pos100": "\u662f\u7684,\u5728 werkzeug \u4e2d,routing/map.py \u95f4\u63a5\u4f9d\u8d56 datastructures/structures.py\u3002\u4f9d\u8d56\u8def\u5f84\u5982\u4e0b:\n\n1. routing/map.py\n2. datastructures/__init__.py\n3. datastructures/structures.py"
+   }
+  },
+  {
+   "id": "IND-05",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "category": "indirect_dep",
+   "ans": {
+    "pos0": "\u5728 werkzeug \u4e2d,wrappers/response.py \u662f\u901a\u8fc7 datastructures/__init__.py \u95f4\u63a5\u4f9d\u8d56\u7684\u3002\u4ee5\u4e0b\u662f\u5b8c\u6574\u7684\u4e2d\u95f4\u6587\u4ef6\u8def\u5f84\uff1a\n\n1. wrappers/response.py\n2. datastructures/__init__.py",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/response.py \u901a\u8fc7 datastructures/__init__.py \u95f4\u63a5\u4f9d\u8d56\u4e86 datastructures/structures.py\u3002\u4ee5\u4e0b\u662f\u5b8c\u6574\u7684\u4e2d\u95f4\u6587\u4ef6\u8def\u5f84\uff1a\n\n1. wrappers/response.py\n2. datastructures/__init__.py\n3. datastructures/structures.py",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwrappers/response.py \u901a\u8fc7 datastructures/__init__.py \u95f4\u63a5\u4f9d\u8d56\u4e86 datastructures/structures.py\u3002\u4ee5\u4e0b\u662f\u5b8c\u6574\u7684\u4e2d\u95f4\u6587\u4ef6\u8def\u5f84\uff1a\n\n1. wrappers/response.py\n2. datastructures/__init__.py\n3. datastructures/structures.py",
+    "pos75": "\u5728 werkzeug \u4e2d,wrappers/response.py \u662f\u901a\u8fc7 datastructures/__init__.py \u95f4\u63a5\u4f9d\u8d56\u7684\u3002\u4ee5\u4e0b\u662f\u5b8c\u6574\u7684\u4e2d\u95f4\u6587\u4ef6\u8def\u5f84\uff1a\n\n1. wrappers/response.py\n2. datastructures/__init__.py",
+    "pos100": "\u5728 werkzeug \u4e2d,wrappers/response.py \u662f\u901a\u8fc7 datastructures/__init__.py \u95f4\u63a5\u4f9d\u8d56\u7684 datastructures/structures.py\u3002\n\n\u5b8c\u6574\u7684\u4e2d\u95f4\u6587\u4ef6\u8def\u5f84\u5982\u4e0b:\n\nwrappers/response.py -> datastructures/__init__.py -> datastructures/structures.py"
+   }
+  },
+  {
+   "id": "IND-04",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "category": "indirect_dep",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`routing/map.py` \u95f4\u63a5\u4f9d\u8d56 `http.py`\uff0c\u4f9d\u8d56\u8def\u5f84\u7ecf\u8fc7 `datastructures/__init__.py`\u3002\n\n\u5177\u4f53\u4f9d\u8d56\u8def\u5f84\u5982\u4e0b\uff1a\n1. `routing/map.py`\n2. `datastructures/__init__.py`\n3. `http.py`\n\n\u56e0\u6b64\uff0c`routing/map.py` \u901a\u8fc7 `datastructures/__init__.py` \u95f4\u63a5\u4f9d\u8d56 `http.py`\u3002",
+    "pos25": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`routing/map.py` \u95f4\u63a5\u4f9d\u8d56 `http.py`\uff0c\u4f9d\u8d56\u8def\u5f84\u7ecf\u8fc7 `datastructures/__init__.py`\u3002\n\n\u4ee5\u4e0b\u662f\u5b8c\u6574\u7684\u4f9d\u8d56\u8def\u5f84\uff1a\n\n1. `routing/map.py`\n2. `datastructures/__init__.py`\n3. `http.py`\n\n\u56e0\u6b64\uff0c`routing/map.py` \u901a\u8fc7 `datastructures/__init__.py` \u95f4\u63a5\u4f9d\u8d56 `http.py`\u3002",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u5728 werkzeug \u4e2d,routing/map.py \u95f4\u63a5\u4f9d\u8d56 http.py\u3002\u4f9d\u8d56\u8def\u5f84\u5982\u4e0b:\n\n1. routing/map.py\n2. datastructures/__init__.py\n3. datastructures/http.py\n\n\u56e0\u6b64,\u5b8c\u6574\u7684\u4f9d\u8d56\u8def\u5f84\u662f: routing/map.py -> datastructures/__init__.py -> datastructures/http.py",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247,\u5728 werkzeug \u4e2d,routing/map.py \u5e76\u6ca1\u6709\u76f4\u63a5\u6216\u95f4\u63a5\u4f9d\u8d56 http.py\u3002\u56e0\u6b64,\u6ca1\u6709\u7b26\u5408\u6761\u4ef6\u7684\u4f9d\u8d56\u8def\u5f84\u53ef\u4ee5\u5217\u51fa\u3002",
+    "pos100": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c`routing/map.py` \u95f4\u63a5\u4f9d\u8d56 `http.py`\uff0c\u4f9d\u8d56\u8def\u5f84\u7ecf\u8fc7 `datastructures/__init__.py`\u3002\n\n\u5177\u4f53\u4f9d\u8d56\u8def\u5f84\u5982\u4e0b\uff1a\n\n1. `routing/map.py`\n2. `datastructures/__init__.py`\n3. `http.py`\n\n\u56e0\u6b64\uff0c`routing/map.py` \u901a\u8fc7 `datastructures/__init__.py` \u95f4\u63a5\u4f9d\u8d56 `http.py`\u3002"
+   }
+  },
+  {
+   "id": "INH-10",
+   "keywords": [
+    "badgateway",
+    "badrequest",
+    "conflict",
+    "expectationfailed",
+    "faileddependency",
+    "forbidden",
+    "gatewaytimeout",
+    "gone",
+    "httpversionnotsupported",
+    "imateapot",
+    "internalservererror",
+    "lengthrequired",
+    "locked",
+    "methodnotallowed",
+    "misdirectedrequest",
+    "notacceptable",
+    "notfound",
+    "notimplemented",
+    "preconditionfailed",
+    "preconditionrequired",
+    "requestentitytoolarge",
+    "requestheaderfieldstoolarge",
+    "requestredirect",
+    "requesttimeout",
+    "requesturitoolarge",
+    "requestedrangenotsatisfiable",
+    "unauthorized",
+    "unavailableforlegalreasons",
+    "unprocessableentity",
+    "unsupportedmediatype",
+    "_retryafter"
+   ],
+   "category": "inheritance",
+   "ans": {
+    "pos0": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0cwerkzeug \u4e2d\u76f4\u63a5\u7ee7\u627f\u81ea HTTPException \u7684\u5f02\u5e38\u7c7b\u5305\u62ec\uff1a\n\n1. BadGateway\n2. BadRequest\n3. Conflict\n4. ExpectationFailed\n5. FailedDependency\n6. Forbidden\n7. GatewayTimeout\n8. Gone\n9. HTTPVersionNotSupported\n10. ImATeapot\n11. InternalServerError\n12. LengthRequired\n13. Locked\n14. MethodNotAllowed\n15. MisdirectedRequest\n16. NotAcceptable\n17. NotFound\n18. NotImplemented\n19. PreconditionFailed\n20. PreconditionRequired\n21. RequestEntityTooLarge\n22. RequestHeaderFieldsTooLarge\n23. RequestRedirect\n24. RequestTimeout\n25. RequestURITooLarge\n26. RequestedRangeNotSatisfiable\n27. Unauthorized\n28. UnavailableForLegalReasons\n29. UnprocessableEntity\n30. UnsupportedMediaType",
+    "pos25": "\u5728 werkzeug \u4e2d\uff0c\u4ee5\u4e0b\u5f02\u5e38\u7c7b\u76f4\u63a5\u7ee7\u627f\u81ea HTTPException\uff1a\n\n1. BadGateway\n2. BadRequest\n3. Conflict\n4. ExpectationFailed\n5. FailedDependency\n6. Forbidden\n7. GatewayTimeout\n8. Gone\n9. HTTPVersionNotSupported\n10. ImATeapot\n11. InternalServerError\n12. LengthRequired\n13. Locked\n14. MethodNotAllowed\n15. MisdirectedRequest\n16. NotAcceptable\n17. NotFound\n18. NotImplemented\n19. PreconditionFailed\n20. PreconditionRequired\n21. RequestEntityTooLarge\n22. RequestHeaderFieldsTooLarge\n23. RequestRedirect\n24. RequestTimeout\n25. RequestURITooLarge\n26. RequestedRangeNotSatisfiable\n27. Unauthorized\n28. UnavailableForLegalReasons\n29. UnprocessableEntity\n30. UnsupportedMediaType",
+    "pos50": "\u6839\u636e\u63d0\u4f9b\u7684\u4f9d\u8d56\u56fe\u5361\u7247\uff0c\u4ee5\u4e0b\u662f\u76f4\u63a5\u7ee7\u627f\u81ea HTTPException \u7684\u5f02\u5e38\u7c7b\u53ca\u5176\u6240\u5728\u7684\u9879\u76ee\u5185\u4f9d\u8d56\u6587\u4ef6/\u6a21\u5757\uff1a\n\n1. BadGateway (\u6765\u81ea exceptions.py)\n2. BadRequest (\u6765\u81ea exceptions.py)\n3. Conflict (\u6765\u81ea exceptions.py)\n4. ExpectationFailed (\u6765\u81ea exceptions.py)\n5. FailedDependency (\u6765\u81ea exceptions.py)\n6. Forbidden (\u6765\u81ea exceptions.py)\n7. GatewayTimeout (\u6765\u81ea exceptions.py)\n8. Gone (\u6765\u81ea exceptions.py)\n9. HTTPVersionNotSupported (\u6765\u81ea exceptions.py)\n10. ImATeapot (\u6765\u81ea exceptions.py)\n11. InternalServerError (\u6765\u81ea exceptions.py)\n12. LengthRequired (\u6765\u81ea exceptions.py)\n13. Locked (\u6765\u81ea exceptions.py)\n14. MethodNotAllowed (\u6765\u81ea exceptions.py)\n15. MisdirectedRequest (\u6765\u81ea exceptions.py)\n16. NotAcceptable (\u6765\u81ea exceptions.py)\n17. NotFound (\u6765\u81ea exceptions.py)\n18. NotImplemented (\u6765\u81ea exceptions.py)\n19. PreconditionFailed (\u6765\u81ea exceptions.py)\n20. PreconditionRequired (\u6765\u81ea exceptions.py)\n21. RequestEntityTooLarge (\u6765\u81ea exceptions.py)\n22. RequestHeaderFieldsTooLarge (\u6765\u81ea exceptions.py)\n23. RequestRedirect (\u6765\u81ea exceptions.py)\n24. RequestTimeout (\u6765\u81ea exceptions.py)\n25. RequestURITooLarge (\u6765\u81ea exceptions.py)\n26. RequestedRangeNotSatisfiable (\u6765\u81ea exceptions.py)\n27. Unauthorized (\u6765\u81ea exceptions.py)\n28. UnavailableForLegalReasons (\u6765\u81ea exceptions.py)\n29. UnprocessableEntity (\u6765\u81ea exceptions.py)\n30. UnsupportedMediaType (\u6765\u81ea exceptions.py)",
+    "pos75": "\u6839\u636e\u63d0\u4f9b\u7684[\u4f9d\u8d56\u56fe\u5361\u7247],\u5728 werkzeug \u4e2d\u76f4\u63a5\u7ee7\u627f\u81ea HTTPException \u7684\u5f02\u5e38\u7c7b\u5305\u62ec:\n\n1. BadGateway\n2. BadRequest\n3. Conflict\n4. ExpectationFailed\n5. FailedDependency\n6. Forbidden\n7. GatewayTimeout\n8. Gone\n9. HTTPVersionNotSupported\n10. ImATeapot\n11. InternalServerError\n12. LengthRequired\n13. Locked\n14. MethodNotAllowed\n15. MisdirectedRequest\n16. NotAcceptable\n17. NotFound\n18. NotImplemented\n19. PreconditionFailed\n20. PreconditionRequired\n21. RequestEntityTooLarge\n22. RequestHeaderFieldsTooLarge\n23. RequestRedirect\n24. RequestTimeout\n25. RequestURITooLarge\n26. RequestedRangeNotSatisfiable\n27. Unauthorized\n28. UnavailableForLegalReasons\n29. UnprocessableEntity\n30. UnsupportedMediaType\n\n\u8fd9\u4e9b\u5f02\u5e38\u7c7b\u90fd\u4f4d\u4e8e exceptions.py \u6587\u4ef6\u4e2d\u3002",
+    "pos100": "\u5728 werkzeug \u4e2d\uff0c\u4ee5\u4e0b\u5f02\u5e38\u7c7b\u76f4\u63a5\u7ee7\u627f\u81ea HTTPException\uff1a\n\n1. BadGateway\n2. BadRequest\n3. Conflict\n4. ExpectationFailed\n5. FailedDependency\n6. Forbidden\n7. GatewayTimeout\n8. Gone\n9. HTTPVersionNotSupported\n10. ImATeapot\n11. InternalServerError\n12. LengthRequired\n13. Locked\n14. MethodNotAllowed\n15. MisdirectedRequest\n16. NotAcceptable\n17. NotFound\n18. NotImplemented\n19. PreconditionFailed\n20. PreconditionRequired\n21. RequestEntityTooLarge\n22. RequestHeaderFieldsTooLarge\n23. RequestRedirect\n24. RequestTimeout\n25. RequestURITooLarge\n26. RequestedRangeNotSatisfiable\n27. Unauthorized\n28. UnavailableForLegalReasons\n29. UnprocessableEntity\n30. UnsupportedMediaType"
+   }
+  }
+ ]
+}

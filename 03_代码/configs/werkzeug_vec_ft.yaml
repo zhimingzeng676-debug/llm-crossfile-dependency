@@ -1,0 +1,9 @@
+name: werkzeug_vec_ft
+repo_root: repos/werkzeug
+commits_path: null
+index_dir: indexes/werkzeug_full_ft
+chunking: {strategy: function, include_graph_cards: true}
+embedder: {type: sentence_transformer, model_name: models/bge-small-zh-ft}
+backend: {type: local_rag, top_k: 5}
+llm: {type: api, model: Qwen/Qwen2.5-14B-Instruct, base_url: "http://localhost:8001/v1", temperature: 0.0}
+prompt_file: configs/prompts/plain.yaml

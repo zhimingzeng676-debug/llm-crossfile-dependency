@@ -1,0 +1,172 @@
+name: pe_domain
+system: "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n\
+  3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。"
+few_shot:
+- question: 在该项目中,_termui_impl.py 是否间接依赖 core.py?经过哪个中间文件?
+  answer: 是,_termui_impl.py 间接依赖 core.py:_termui_impl.py 直接 import 了中间文件 exceptions.py,而 exceptions.py 直接 import 了 core.py。中间文件是
+    exceptions.py。
+- question: 在该项目中,debug.py 是否间接依赖 async_utils.py?经过哪个中间文件?
+  answer: 是,debug.py 间接依赖 async_utils.py:debug.py 直接 import 了中间文件 runtime.py,而 runtime.py 直接 import 了 async_utils.py。中间文件是
+    runtime.py。
+- question: 在该项目中,sessions.py 是否间接依赖 __version__.py?经过哪个中间文件?
+  answer: 是,sessions.py 间接依赖 __version__.py:sessions.py 直接 import 了中间文件 utils.py,而 utils.py 直接 import 了 __version__.py。中间文件是
+    utils.py。
+- question: 在该项目中,wrappers.py 是否间接依赖 signals.py?经过哪个中间文件?
+  answer: 是,wrappers.py 间接依赖 signals.py:wrappers.py 直接 import 了中间文件 helpers.py,而 helpers.py 直接 import 了 signals.py。中间文件是 helpers.py。
+- question: 在该项目中,exceptions.py 是否间接依赖 _utils.py?经过哪个中间文件?
+  answer: 是,exceptions.py 间接依赖 _utils.py:exceptions.py 直接 import 了中间文件 core.py,而 core.py 直接 import 了 _utils.py。中间文件是 core.py。
+- question: 在该项目中,哪些文件 import(依赖)了 globals.py?请尽量列全。
+  answer: '以下文件依赖(import)了 globals.py:
+
+    1. __init__.py
+
+    2. app.py
+
+    3. blueprints.py
+
+    4. cli.py
+
+    5. ctx.py
+
+    6. debughelpers.py
+
+    7. helpers.py
+
+    8. json/__init__.py
+
+    9. logging.py
+
+    10. templating.py
+
+    11. views.py
+
+    12. wrappers.py'
+- question: 在该项目中,哪些文件 import(依赖)了 utils.py?请尽量列全。
+  answer: '以下文件依赖(import)了 utils.py:
+
+    1. __init__.py
+
+    2. _termui_impl.py
+
+    3. core.py
+
+    4. decorators.py
+
+    5. exceptions.py
+
+    6. shell_completion.py
+
+    7. termui.py
+
+    8. types.py'
+- question: 在该项目中,哪些文件 import(依赖)了 __version__.py?请尽量列全。
+  answer: '以下文件依赖(import)了 __version__.py:
+
+    1. __init__.py
+
+    2. utils.py'
+- question: 在该项目中,哪些文件 import(依赖)了 helpers.py?请尽量列全。
+  answer: '以下文件依赖(import)了 helpers.py:
+
+    1. __init__.py
+
+    2. app.py
+
+    3. blueprints.py
+
+    4. cli.py
+
+    5. sansio/app.py
+
+    6. sansio/scaffold.py
+
+    7. templating.py
+
+    8. wrappers.py'
+- question: 在该项目中,config.py 直接依赖(import)了哪些项目内模块?请列全。
+  answer: 'config.py 直接依赖以下项目内模块:
+
+    1. json/__init__.py — import
+
+    2. sansio/app.py — import
+
+    3. typing.py — import'
+- question: 在该项目中,cli.py 直接依赖(import)了哪些项目内模块?请列全。
+  answer: 'cli.py 直接依赖以下项目内模块:
+
+    1. app.py — import
+
+    2. globals.py — import
+
+    3. helpers.py — import
+
+    4. typing.py — import'
+- question: 在该项目中,shell_completion.py 直接依赖(import)了哪些项目内模块?请列全。
+  answer: 'shell_completion.py 直接依赖以下项目内模块:
+
+    1. core.py — import
+
+    2. utils.py — import'
+- question: 在该项目中,类 SandboxedEnvironment 继承自哪个文件里的哪个类?
+  answer: SandboxedEnvironment 继承自 environment.py 的 Environment 类(关系:跨文件继承)。
+- question: 在该项目中,类 Blueprint 继承自哪个文件里的哪个类?
+  answer: Blueprint 继承自 sansio/blueprints.py 的 Blueprint 类(关系:跨文件继承)。
+- question: 在该项目中,类 FrameSymbolVisitor 继承自哪个文件里的哪个类?
+  answer: FrameSymbolVisitor 继承自 visitor.py 的 NodeVisitor 类(关系:跨文件继承)。
+- question: 在该项目中,哪些类继承了 SandboxedFormatter?
+  answer: '以下类继承了 SandboxedFormatter:
+
+    1. SandboxedEscapeFormatter'
+- question: 在该项目中,哪些类继承了 InvalidJSONError?
+  answer: '以下类继承了 InvalidJSONError:
+
+    1. JSONDecodeError'
+- question: 在该项目中,哪些类继承了 Stmt?
+  answer: '以下类继承了 Stmt:
+
+    1. Output
+
+    2. Extends
+
+    3. For
+
+    4. If
+
+    5. Macro
+
+    6. CallBlock
+
+    7. FilterBlock
+
+    8. With
+
+    9. Block
+
+    10. Include
+
+    11. Import
+
+    12. FromImport
+
+    13. ExprStmt
+
+    14. Assign
+
+    15. AssignBlock
+
+    16. Continue
+
+    17. Break
+
+    18. Scope
+
+    19. OverlayScope
+
+    20. EvalContextModifier'
+- question: 在该项目中,类 ConnectionError 定义在哪个文件里?
+  answer: ConnectionError 定义于 exceptions.py。
+- question: 在该项目中,类 ConnectTimeout 定义在哪个文件里?
+  answer: ConnectTimeout 定义于 exceptions.py。
+- question: 在该项目中,类 Parser 定义在哪个文件里?
+  answer: Parser 定义于 parser.py。
+cot: true

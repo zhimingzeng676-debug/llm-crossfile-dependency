@@ -1,0 +1,21 @@
+# E9:与 best_stack 只差 rerank_scorer(lexical -> embedder)。
+# 三方对照:best_stack_norerank(无)/ best_stack(词面 rerank)/ 本配置(语义 rerank)。
+# 假设:换"更准的尺子"后 rerank 至少不再是负优化(E5 教训的反向验证)。
+name: best_stack_semrerank
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl
+chunking:
+  strategy: function
+  include_graph_cards: true
+embedder:
+  type: sentence_transformer
+  model_name: models/bge-small-en-v1.5  # M65 审计:英文/代码任务用 en(R@5 0.93≫zh 0.32),零成本;勿改回 zh(冒烟测试会拦)
+backend:
+  type: hybrid
+  top_k: 3
+  rerank: true
+  rerank_candidates: 10
+  rerank_scorer: embedder
+llm:
+  type: mock
+prompt_file: configs/prompts/plain.yaml

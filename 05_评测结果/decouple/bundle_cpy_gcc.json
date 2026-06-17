@@ -1,0 +1,72 @@
+[
+ {
+  "id": "CPY-C_F-15",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/atexitmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h",
+  "gold_kw": [
+   "Python.h"
+  ],
+  "notes": "(gcc -H真编译器独立解析,替换raw-line)"
+ },
+ {
+  "id": "CPY-C_F-16",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/binascii.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h",
+  "gold_kw": [
+   "Python.h"
+  ],
+  "notes": "(gcc -H真编译器独立解析,替换raw-line)"
+ },
+ {
+  "id": "CPY-C_F-17",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/cmathmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h",
+  "gold_kw": [
+   "Python.h"
+  ],
+  "notes": "(gcc -H真编译器独立解析,替换raw-line)"
+ },
+ {
+  "id": "CPY-C_F-18",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/gcmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h",
+  "gold_kw": [
+   "Python.h"
+  ],
+  "notes": "(gcc -H真编译器独立解析,替换raw-line)"
+ },
+ {
+  "id": "CPY-C_F-19",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/getbuildinfo.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h",
+  "gold_kw": [
+   "Python.h"
+  ],
+  "notes": "(gcc -H真编译器独立解析,替换raw-line)"
+ },
+ {
+  "id": "CPY-C_F-20",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/getpath_noop.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h",
+  "gold_kw": [
+   "Python.h"
+  ],
+  "notes": "(gcc -H真编译器独立解析,替换raw-line)"
+ },
+ {
+  "id": "CPY-C_F-21",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/grpmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h",
+  "gold_kw": [
+   "Python.h"
+  ],
+  "notes": "(gcc -H真编译器独立解析,替换raw-line)"
+ }
+]

@@ -1,0 +1,44 @@
+{
+ "deepseek": {
+  "baseline": {
+   "det": 0.2129,
+   "judge": 0.0357
+  },
+  "full": {
+   "det": 0.9821,
+   "judge": 0.9554
+  },
+  "pecot": {
+   "det": 0.9652,
+   "judge": 0.9313
+  }
+ },
+ "qwen3": {
+  "baseline": {
+   "det": 0.2046,
+   "judge": 0.1764
+  },
+  "full": {
+   "det": 0.9821,
+   "judge": 0.9464
+  },
+  "pecot": {
+   "det": 1.0,
+   "judge": 0.9625
+  }
+ },
+ "_14B_ref": {
+  "baseline": {
+   "det": 0.287,
+   "judge": 0.18
+  },
+  "full": {
+   "det": 0.885,
+   "judge": 0.96
+  },
+  "pecot": {
+   "det": 0.94,
+   "judge": 0.96
+  }
+ }
+}

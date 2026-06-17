@@ -1,0 +1,87 @@
+{
+ "stamp": "20260616_032224",
+ "n_edges_total": 157,
+ "n_edges_fetched_ok": 144,
+ "n_fetch_failed": 13,
+ "static_visible_rate": {
+  "strict_import_exact": 0.4792,
+  "med_import_or_package_or_relative": 0.8056,
+  "loose_incl_textual_stem": 0.875
+ },
+ "static_invisible_rate": {
+  "under_strict": 0.5208,
+  "under_med": 0.1944,
+  "under_loose": 0.125
+ },
+ "invisible_subtype_counts_under_med": {
+  "cross_dir_no_static_edge": 14,
+  "dynamic_or_registry_hint": 9,
+  "same_dir_sibling_no_static_edge": 5
+ },
+ "per_project_med": {
+  "PySnooper": {
+   "edges": 1,
+   "visible_med": 1
+  },
+  "ansible": {
+   "edges": 1,
+   "visible_med": 0
+  },
+  "black": {
+   "edges": 4,
+   "visible_med": 4
+  },
+  "cookiecutter": {
+   "edges": 3,
+   "visible_med": 3
+  },
+  "fastapi": {
+   "edges": 6,
+   "visible_med": 6
+  },
+  "httpie": {
+   "edges": 1,
+   "visible_med": 1
+  },
+  "keras": {
+   "edges": 20,
+   "visible_med": 16
+  },
+  "luigi": {
+   "edges": 1,
+   "visible_med": 1
+  },
+  "matplotlib": {
+   "edges": 11,
+   "visible_med": 3
+  },
+  "pandas": {
+   "edges": 55,
+   "visible_med": 54
+  },
+  "scrapy": {
+   "edges": 28,
+   "visible_med": 19
+  },
+  "spacy": {
+   "edges": 1,
+   "visible_med": 1
+  },
+  "thefuck": {
+   "edges": 7,
+   "visible_med": 3
+  },
+  "tornado": {
+   "edges": 3,
+   "visible_med": 2
+  },
+  "tqdm": {
+   "edges": 1,
+   "visible_med": 1
+  },
+  "youtube-dl": {
+   "edges": 1,
+   "visible_med": 1
+  }
+ }
+}

@@ -1,0 +1,362 @@
+[
+ {
+  "id": "CPY-PY_-0",
+  "category": "py_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/abc.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/_py_abc.py, Lib/warnings.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/abc.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-1",
+  "category": "py_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/antigravity.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/hashlib.py, Lib/webbrowser.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/antigravity.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-2",
+  "category": "py_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/base64.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/getopt.py, Lib/io.py, Lib/warnings.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/base64.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-3",
+  "category": "py_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/bz2.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/compression/_common/__init__.py, Lib/io.py, Lib/os.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/bz2.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-4",
+  "category": "py_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/calendar.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/_colorize.py, Lib/argparse.py, Lib/datetime.py, Lib/enum.py, Lib/locale.py, Lib/warnings.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/calendar.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-5",
+  "category": "py_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/code.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/argparse.py, Lib/codeop.py, Lib/traceback.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/code.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-6",
+  "category": "py_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/codecs.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/encodings/__init__.py, Lib/warnings.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/codecs.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-7",
+  "category": "py_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/codeop.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/__future__.py, Lib/warnings.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/codeop.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-8",
+  "category": "py_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/webbrowser.py?列出。",
+  "gold": "Lib/antigravity.py, Lib/idlelib/editor.py, Lib/idlelib/help_about.py, Lib/profiling/sampling/cli.py, Lib/pydoc.py, Lib/wsgiref/simple_server.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/webbrowser.py?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-9",
+  "category": "py_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/hashlib.py?列出。",
+  "gold": "Lib/antigravity.py, Lib/hmac.py, Lib/poplib.py, Lib/random.py, Lib/urllib/request.py, Lib/uuid.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/hashlib.py?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-10",
+  "category": "py_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/dis.py?列出。",
+  "gold": "Lib/bdb.py, Lib/modulefinder.py, Lib/trace.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/dis.py?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-11",
+  "category": "py_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/compression/_common/__init__.py?列出。",
+  "gold": "Lib/bz2.py, Lib/compression/zstd/_zstdfile.py, Lib/gzip.py, Lib/lzma.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/compression/_common/__init__.py?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-12",
+  "category": "py_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/encodings/__init__.py?列出。",
+  "gold": "Lib/codecs.py, Lib/locale.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/encodings/__init__.py?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-13",
+  "category": "py_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/py_compile.py?列出。",
+  "gold": "Lib/compileall.py, Lib/zipfile/__init__.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/py_compile.py?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-PY_-14",
+  "category": "py_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/concurrent/futures/process.py?列出。",
+  "gold": "Lib/compileall.py, Lib/concurrent/futures/__init__.py",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/concurrent/futures/process.py?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_F-15",
+  "category": "c_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Modules/atexitmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Include/internal/pycore_atexit.h, Include/internal/pycore_initconfig.h, Include/internal/pycore_interp.h, Include/internal/pycore_pystate.h",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Modules/atexitmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_F-16",
+  "category": "c_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Modules/binascii.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Include/internal/pycore_long.h, Include/internal/pycore_strhex.h",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Modules/binascii.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_F-17",
+  "category": "c_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Modules/cmathmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Include/internal/pycore_complexobject.h, Include/internal/pycore_pymath.h, Modules/_math.h",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Modules/cmathmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_F-18",
+  "category": "c_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Modules/gcmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Include/internal/pycore_gc.h, Include/internal/pycore_object.h, Include/internal/pycore_pystate.h",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Modules/gcmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_F-19",
+  "category": "c_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Modules/getbuildinfo.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Include/internal/pycore_pylifecycle.h",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Modules/getbuildinfo.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_F-20",
+  "category": "c_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Modules/getpath_noop.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Include/internal/pycore_pathconfig.h",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Modules/getpath_noop.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_F-21",
+  "category": "c_forward",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Modules/grpmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Modules/posixmodule.h",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Modules/grpmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_R-22",
+  "category": "c_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的文件 #include 了 Modules/hashlib.h?列出几个。",
+  "gold": "Modules/_hashopenssl.c, Modules/blake2module.c, Modules/hmacmodule.c, Modules/md5module.c, Modules/sha1module.c, Modules/sha2module.c, Modules/sha3module.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的文件 #include 了 Modules/hashlib.h?列出几个。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_R-23",
+  "category": "c_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的文件 #include 了 Modules/_hacl/internal/Hacl_Hash_Blake2s.h?列出几个。",
+  "gold": "Modules/_hacl/Hacl_HMAC.c, Modules/_hacl/Hacl_Hash_Blake2s.c, Modules/_hacl/Hacl_Streaming_HMAC.c, Modules/blake2module.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的文件 #include 了 Modules/_hacl/internal/Hacl_Hash_Blake2s.h?列出几个。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_R-24",
+  "category": "c_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的文件 #include 了 Modules/_hacl/internal/Hacl_Hash_Blake2s_Simd128.h?列出几个。",
+  "gold": "Modules/_hacl/Hacl_Hash_Blake2s_Simd128.c, Modules/_hacl/Hacl_Streaming_HMAC.c, Modules/blake2module.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的文件 #include 了 Modules/_hacl/internal/Hacl_Hash_Blake2s_Simd128.h?列出几个。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_R-25",
+  "category": "c_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的文件 #include 了 Modules/_hacl/internal/Hacl_Hash_Blake2b_Simd256.h?列出几个。",
+  "gold": "Modules/_hacl/Hacl_Hash_Blake2b_Simd256.c, Modules/_hacl/Hacl_Streaming_HMAC.c, Modules/blake2module.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的文件 #include 了 Modules/_hacl/internal/Hacl_Hash_Blake2b_Simd256.h?列出几个。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_R-26",
+  "category": "c_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的文件 #include 了 Include/internal/pycore_complexobject.h?列出几个。",
+  "gold": "Modules/cmathmodule.c, Objects/complexobject.c, Objects/stringlib/unicode_format.h",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的文件 #include 了 Include/internal/pycore_complexobject.h?列出几个。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-C_R-27",
+  "category": "c_reverse",
+  "difficulty": "medium",
+  "question": "在 CPython 中,哪些本仓库内的文件 #include 了 Include/internal/pycore_pymath.h?列出几个。",
+  "gold": "Include/internal/pycore_dtoa.h, Include/internal/pycore_interp_structs.h, Modules/cmathmodule.c, Modules/mathmodule.c, Objects/complexobject.c, Objects/floatobject.c, Python/pystrtod.c, Python/sysmodule.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,哪些本仓库内的文件 #include 了 Include/internal/pycore_pymath.h?列出几个。\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-XLA-28",
+  "category": "xlang",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/abc.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_abc.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/abc.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-XLA-29",
+  "category": "xlang",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/base64.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/binascii.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/base64.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-XLA-30",
+  "category": "xlang",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/cmd.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/readline.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/cmd.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-XLA-31",
+  "category": "xlang",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/code.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/readline.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/code.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-XLA-32",
+  "category": "xlang",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/csv.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_csv.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/csv.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-XLA-33",
+  "category": "xlang",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/dis.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_opcode.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/dis.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-XLA-34",
+  "category": "xlang",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/getpass.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/termios.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/getpass.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-XLA-35",
+  "category": "xlang",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/hmac.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_operator.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/hmac.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-XLA-36",
+  "category": "xlang",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/imaplib.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/binascii.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/imaplib.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-XLA-37",
+  "category": "xlang",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/mimetypes.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_winapi.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/mimetypes.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-XLA-38",
+  "category": "xlang",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/ntpath.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_winapi.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/ntpath.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ },
+ {
+  "id": "CPY-XLA-39",
+  "category": "xlang",
+  "difficulty": "medium",
+  "question": "在 CPython 中,Lib/opcode.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_opcode.c",
+  "notes": "(CPython大项目)",
+  "gen_prompt": "你是资深代码依赖分析专家,精通跨文件 import/include/继承/调用关系的静态分析。\n\n你是一个代码仓库依赖分析助手。请根据你对 CPython 的了解回答下面的跨文件依赖问题。如果不确定请明确说\"不确定\",不要臆造。\n\n问题:在 CPython 中,Lib/opcode.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?\n\n请一步步分析:① 先定位问题涉及的焦点文件/符号;② 梳理给定信息里与之相关的依赖边;③ 再据此给出准确答案。\n请给出答案。"
+ }
+]

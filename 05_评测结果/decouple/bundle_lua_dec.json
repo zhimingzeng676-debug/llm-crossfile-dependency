@@ -1,0 +1,88 @@
+[
+ {
+  "id": "c-FWD-1",
+  "category": "forward_dep",
+  "question": "在 lua 项目中,文件 lapi.h 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "llimits.h, lstate.h",
+  "gold_kw": [
+   "llimits.h",
+   "lstate.h"
+  ],
+  "notes": "(gcc -H 编译器独立解析直接includes)"
+ },
+ {
+  "id": "c-FWD-2",
+  "category": "forward_dep",
+  "question": "在 lua 项目中,文件 lauxlib.c 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "lauxlib.h, llimits.h, lprefix.h, lua.h",
+  "gold_kw": [
+   "lauxlib.h",
+   "llimits.h",
+   "lprefix.h",
+   "lua.h"
+  ],
+  "notes": "(gcc -H 编译器独立解析直接includes)"
+ },
+ {
+  "id": "c-FWD-3",
+  "category": "forward_dep",
+  "question": "在 lua 项目中,文件 lauxlib.h 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "lua.h, luaconf.h",
+  "gold_kw": [
+   "lua.h",
+   "luaconf.h"
+  ],
+  "notes": "(gcc -H 编译器独立解析直接includes)"
+ },
+ {
+  "id": "c-FWD-4",
+  "category": "forward_dep",
+  "question": "在 lua 项目中,文件 lbaselib.c 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "lauxlib.h, llimits.h, lprefix.h, lua.h, lualib.h",
+  "gold_kw": [
+   "lauxlib.h",
+   "llimits.h",
+   "lprefix.h",
+   "lua.h",
+   "lualib.h"
+  ],
+  "notes": "(gcc -H 编译器独立解析直接includes)"
+ },
+ {
+  "id": "c-FWD-6",
+  "category": "forward_dep",
+  "question": "在 lua 项目中,文件 lcode.h 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "llex.h, lopcodes.h, lparser.h",
+  "gold_kw": [
+   "llex.h",
+   "lopcodes.h",
+   "lparser.h"
+  ],
+  "notes": "(gcc -H 编译器独立解析直接includes)"
+ },
+ {
+  "id": "c-FWD-7",
+  "category": "forward_dep",
+  "question": "在 lua 项目中,文件 lcorolib.c 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "lauxlib.h, llimits.h, lprefix.h, lua.h, lualib.h",
+  "gold_kw": [
+   "lauxlib.h",
+   "llimits.h",
+   "lprefix.h",
+   "lua.h",
+   "lualib.h"
+  ],
+  "notes": "(gcc -H 编译器独立解析直接includes)"
+ },
+ {
+  "id": "c-FWD-8",
+  "category": "forward_dep",
+  "question": "在 lua 项目中,文件 lctype.c 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "lctype.h, lprefix.h",
+  "gold_kw": [
+   "lctype.h",
+   "lprefix.h"
+  ],
+  "notes": "(gcc -H 编译器独立解析直接includes)"
+ }
+]

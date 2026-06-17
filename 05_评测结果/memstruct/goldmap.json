@@ -1,0 +1,779 @@
+{
+ "FW00": {
+  "kind": "forward",
+  "seen_path": "__init__.py",
+  "unseen_path": "__init__.py",
+  "seen_gold": [
+   "serving",
+   "test",
+   "wrappers"
+  ],
+  "unseen_gold": [
+   "u33",
+   "u37",
+   "u42"
+  ]
+ },
+ "FW01": {
+  "kind": "forward",
+  "seen_path": "datastructures/auth.py",
+  "unseen_path": "u08/u03.py",
+  "seen_gold": [
+   "http",
+   "structures"
+  ],
+  "unseen_gold": [
+   "u15",
+   "u35"
+  ]
+ },
+ "FW02": {
+  "kind": "forward",
+  "seen_path": "datastructures/cache_control.py",
+  "unseen_path": "u08/u04.py",
+  "seen_gold": [
+   "mixins",
+   "structures"
+  ],
+  "unseen_gold": [
+   "u22",
+   "u35"
+  ]
+ },
+ "FW03": {
+  "kind": "forward",
+  "seen_path": "datastructures/csp.py",
+  "unseen_path": "u08/u07.py",
+  "seen_gold": [
+   "http",
+   "structures"
+  ],
+  "unseen_gold": [
+   "u15",
+   "u35"
+  ]
+ },
+ "FW04": {
+  "kind": "forward",
+  "seen_path": "datastructures/file_storage.py",
+  "unseen_path": "u08/u12.py",
+  "seen_gold": [
+   "_internal",
+   "headers",
+   "structures"
+  ],
+  "unseen_gold": [
+   "u00",
+   "u14",
+   "u35"
+  ]
+ },
+ "FW05": {
+  "kind": "forward",
+  "seen_path": "datastructures/headers.py",
+  "unseen_path": "u08/u14.py",
+  "seen_gold": [
+   "_internal",
+   "exceptions",
+   "mixins",
+   "structures"
+  ],
+  "unseen_gold": [
+   "u00",
+   "u11",
+   "u22",
+   "u35"
+  ]
+ },
+ "FW06": {
+  "kind": "forward",
+  "seen_path": "datastructures/structures.py",
+  "unseen_path": "u08/u35.py",
+  "seen_gold": [
+   "_internal",
+   "mixins"
+  ],
+  "unseen_gold": [
+   "u00",
+   "u22"
+  ]
+ },
+ "FW07": {
+  "kind": "forward",
+  "seen_path": "debug/console.py",
+  "unseen_path": "u09/u05.py",
+  "seen_gold": [
+   "repr",
+   "tbtools"
+  ],
+  "unseen_gold": [
+   "u26",
+   "u36"
+  ]
+ },
+ "FW08": {
+  "kind": "forward",
+  "seen_path": "debug/tbtools.py",
+  "unseen_path": "u09/u36.py",
+  "seen_gold": [
+   "console",
+   "utils"
+  ],
+  "unseen_gold": [
+   "u05",
+   "u41"
+  ]
+ },
+ "FW09": {
+  "kind": "forward",
+  "seen_path": "exceptions.py",
+  "unseen_path": "u11.py",
+  "seen_gold": [
+   "_internal",
+   "datastructures",
+   "http",
+   "request",
+   "response"
+  ],
+  "unseen_gold": [
+   "u00",
+   "u08",
+   "u15",
+   "u27",
+   "u28"
+  ]
+ },
+ "FW10": {
+  "kind": "forward",
+  "seen_path": "formparser.py",
+  "unseen_path": "u13.py",
+  "seen_gold": [
+   "_internal",
+   "datastructures",
+   "exceptions",
+   "http",
+   "multipart",
+   "wsgi"
+  ],
+  "unseen_gold": [
+   "u00",
+   "u08",
+   "u11",
+   "u15",
+   "u23",
+   "u43"
+  ]
+ },
+ "FW11": {
+  "kind": "forward",
+  "seen_path": "http.py",
+  "unseen_path": "u15.py",
+  "seen_gold": [
+   "_internal",
+   "sansio"
+  ],
+  "unseen_gold": [
+   "u00",
+   "u31"
+  ]
+ },
+ "FW12": {
+  "kind": "forward",
+  "seen_path": "middleware/http_proxy.py",
+  "unseen_path": "u21/u16.py",
+  "seen_gold": [
+   "datastructures",
+   "exceptions",
+   "http",
+   "wsgi"
+  ],
+  "unseen_gold": [
+   "u08",
+   "u11",
+   "u15",
+   "u43"
+  ]
+ },
+ "FW13": {
+  "kind": "forward",
+  "seen_path": "middleware/lint.py",
+  "unseen_path": "u21/u17.py",
+  "seen_gold": [
+   "datastructures",
+   "http",
+   "wsgi"
+  ],
+  "unseen_gold": [
+   "u08",
+   "u15",
+   "u43"
+  ]
+ },
+ "FW14": {
+  "kind": "forward",
+  "seen_path": "middleware/shared_data.py",
+  "unseen_path": "u21/u34.py",
+  "seen_gold": [
+   "http",
+   "security",
+   "utils",
+   "wsgi"
+  ],
+  "unseen_gold": [
+   "u15",
+   "u32",
+   "u41",
+   "u43"
+  ]
+ },
+ "FW15": {
+  "kind": "forward",
+  "seen_path": "routing/__init__.py",
+  "unseen_path": "u29/__init__.py",
+  "seen_gold": [
+   "converters",
+   "exceptions",
+   "map",
+   "matcher",
+   "rules"
+  ],
+  "unseen_gold": [
+   "u06",
+   "u11",
+   "u19",
+   "u20",
+   "u30"
+  ]
+ },
+ "FW16": {
+  "kind": "forward",
+  "seen_path": "routing/exceptions.py",
+  "unseen_path": "u29/u11.py",
+  "seen_gold": [
+   "map",
+   "request",
+   "response",
+   "rules",
+   "utils"
+  ],
+  "unseen_gold": [
+   "u19",
+   "u27",
+   "u28",
+   "u30",
+   "u41"
+  ]
+ },
+ "FW17": {
+  "kind": "forward",
+  "seen_path": "routing/matcher.py",
+  "unseen_path": "u29/u20.py",
+  "seen_gold": [
+   "converters",
+   "exceptions",
+   "rules"
+  ],
+  "unseen_gold": [
+   "u06",
+   "u11",
+   "u30"
+  ]
+ },
+ "FW18": {
+  "kind": "forward",
+  "seen_path": "routing/rules.py",
+  "unseen_path": "u29/u30.py",
+  "seen_gold": [
+   "converters",
+   "datastructures",
+   "map",
+   "urls"
+  ],
+  "unseen_gold": [
+   "u06",
+   "u08",
+   "u19",
+   "u39"
+  ]
+ },
+ "FW19": {
+  "kind": "forward",
+  "seen_path": "sansio/multipart.py",
+  "unseen_path": "u31/u23.py",
+  "seen_gold": [
+   "datastructures",
+   "exceptions",
+   "http"
+  ],
+  "unseen_gold": [
+   "u08",
+   "u11",
+   "u15"
+  ]
+ },
+ "FW20": {
+  "kind": "forward",
+  "seen_path": "sansio/request.py",
+  "unseen_path": "u31/u27.py",
+  "seen_gold": [
+   "datastructures",
+   "http",
+   "user_agent",
+   "utils"
+  ],
+  "unseen_gold": [
+   "u08",
+   "u15",
+   "u40",
+   "u41"
+  ]
+ },
+ "FW21": {
+  "kind": "forward",
+  "seen_path": "sansio/response.py",
+  "unseen_path": "u31/u28.py",
+  "seen_gold": [
+   "cache_control",
+   "datastructures",
+   "http",
+   "utils"
+  ],
+  "unseen_gold": [
+   "u04",
+   "u08",
+   "u15",
+   "u41"
+  ]
+ },
+ "FW22": {
+  "kind": "forward",
+  "seen_path": "sansio/utils.py",
+  "unseen_path": "u31/u41.py",
+  "seen_gold": [
+   "_internal",
+   "exceptions",
+   "http",
+   "urls"
+  ],
+  "unseen_gold": [
+   "u00",
+   "u11",
+   "u15",
+   "u39"
+  ]
+ },
+ "FW23": {
+  "kind": "forward",
+  "seen_path": "testapp.py",
+  "unseen_path": "u38.py",
+  "seen_gold": [
+   "request",
+   "response",
+   "serving"
+  ],
+  "unseen_gold": [
+   "u27",
+   "u28",
+   "u33"
+  ]
+ },
+ "FW24": {
+  "kind": "forward",
+  "seen_path": "wrappers/__init__.py",
+  "unseen_path": "u42/__init__.py",
+  "seen_gold": [
+   "request",
+   "response"
+  ],
+  "unseen_gold": [
+   "u27",
+   "u28"
+  ]
+ },
+ "FW25": {
+  "kind": "forward",
+  "seen_path": "wrappers/request.py",
+  "unseen_path": "u42/u27.py",
+  "seen_gold": [
+   "_internal",
+   "datastructures",
+   "exceptions",
+   "formparser",
+   "test",
+   "utils",
+   "wsgi"
+  ],
+  "unseen_gold": [
+   "u00",
+   "u08",
+   "u11",
+   "u13",
+   "u37",
+   "u41",
+   "u43"
+  ]
+ },
+ "FW26": {
+  "kind": "forward",
+  "seen_path": "wsgi.py",
+  "unseen_path": "u43.py",
+  "seen_gold": [
+   "exceptions",
+   "sansio",
+   "utils"
+  ],
+  "unseen_gold": [
+   "u11",
+   "u31",
+   "u41"
+  ]
+ },
+ "RV00": {
+  "kind": "reverse",
+  "seen_path": "datastructures/cache_control.py",
+  "unseen_path": "u08/u04.py",
+  "seen_gold": [
+   "datastructures",
+   "response"
+  ],
+  "unseen_gold": [
+   "u08",
+   "u28"
+  ]
+ },
+ "RV01": {
+  "kind": "reverse",
+  "seen_path": "datastructures/headers.py",
+  "unseen_path": "u08/u14.py",
+  "seen_gold": [
+   "datastructures",
+   "file_storage"
+  ],
+  "unseen_gold": [
+   "u08",
+   "u12"
+  ]
+ },
+ "RV02": {
+  "kind": "reverse",
+  "seen_path": "datastructures/mixins.py",
+  "unseen_path": "u08/u22.py",
+  "seen_gold": [
+   "cache_control",
+   "datastructures",
+   "headers",
+   "structures"
+  ],
+  "unseen_gold": [
+   "u04",
+   "u08",
+   "u14",
+   "u35"
+  ]
+ },
+ "RV03": {
+  "kind": "reverse",
+  "seen_path": "datastructures/structures.py",
+  "unseen_path": "u08/u35.py",
+  "seen_gold": [
+   "accept",
+   "auth",
+   "cache_control",
+   "csp",
+   "datastructures",
+   "file_storage",
+   "headers"
+  ],
+  "unseen_gold": [
+   "u02",
+   "u03",
+   "u04",
+   "u07",
+   "u08",
+   "u12",
+   "u14"
+  ]
+ },
+ "RV04": {
+  "kind": "reverse",
+  "seen_path": "debug/console.py",
+  "unseen_path": "u09/u05.py",
+  "seen_gold": [
+   "debug",
+   "tbtools"
+  ],
+  "unseen_gold": [
+   "u09",
+   "u36"
+  ]
+ },
+ "RV05": {
+  "kind": "reverse",
+  "seen_path": "debug/tbtools.py",
+  "unseen_path": "u09/u36.py",
+  "seen_gold": [
+   "console",
+   "debug",
+   "serving"
+  ],
+  "unseen_gold": [
+   "u05",
+   "u09",
+   "u33"
+  ]
+ },
+ "RV06": {
+  "kind": "reverse",
+  "seen_path": "routing/converters.py",
+  "unseen_path": "u29/u06.py",
+  "seen_gold": [
+   "map",
+   "matcher",
+   "routing",
+   "rules"
+  ],
+  "unseen_gold": [
+   "u19",
+   "u20",
+   "u29",
+   "u30"
+  ]
+ },
+ "RV07": {
+  "kind": "reverse",
+  "seen_path": "routing/exceptions.py",
+  "unseen_path": "u29/u11.py",
+  "seen_gold": [
+   "map",
+   "matcher",
+   "routing"
+  ],
+  "unseen_gold": [
+   "u19",
+   "u20",
+   "u29"
+  ]
+ },
+ "RV08": {
+  "kind": "reverse",
+  "seen_path": "routing/map.py",
+  "unseen_path": "u29/u19.py",
+  "seen_gold": [
+   "converters",
+   "exceptions",
+   "routing",
+   "rules"
+  ],
+  "unseen_gold": [
+   "u06",
+   "u11",
+   "u29",
+   "u30"
+  ]
+ },
+ "RV09": {
+  "kind": "reverse",
+  "seen_path": "routing/matcher.py",
+  "unseen_path": "u29/u20.py",
+  "seen_gold": [
+   "map",
+   "routing"
+  ],
+  "unseen_gold": [
+   "u19",
+   "u29"
+  ]
+ },
+ "RV10": {
+  "kind": "reverse",
+  "seen_path": "routing/rules.py",
+  "unseen_path": "u29/u30.py",
+  "seen_gold": [
+   "exceptions",
+   "map",
+   "matcher",
+   "routing"
+  ],
+  "unseen_gold": [
+   "u11",
+   "u19",
+   "u20",
+   "u29"
+  ]
+ },
+ "RV11": {
+  "kind": "reverse",
+  "seen_path": "sansio/__init__.py",
+  "unseen_path": "u31/__init__.py",
+  "seen_gold": [
+   "http",
+   "wsgi"
+  ],
+  "unseen_gold": [
+   "u15",
+   "u43"
+  ]
+ },
+ "RV12": {
+  "kind": "reverse",
+  "seen_path": "sansio/http.py",
+  "unseen_path": "u31/u15.py",
+  "seen_gold": [
+   "request",
+   "response"
+  ],
+  "unseen_gold": [
+   "u27",
+   "u28"
+  ]
+ },
+ "RV13": {
+  "kind": "reverse",
+  "seen_path": "sansio/multipart.py",
+  "unseen_path": "u31/u23.py",
+  "seen_gold": [
+   "formparser",
+   "test"
+  ],
+  "unseen_gold": [
+   "u13",
+   "u37"
+  ]
+ },
+ "RV14": {
+  "kind": "reverse",
+  "seen_path": "sansio/utils.py",
+  "unseen_path": "u31/u41.py",
+  "seen_gold": [
+   "debug",
+   "request",
+   "wsgi"
+  ],
+  "unseen_gold": [
+   "u09",
+   "u27",
+   "u43"
+  ]
+ },
+ "RV15": {
+  "kind": "reverse",
+  "seen_path": "security.py",
+  "unseen_path": "u32.py",
+  "seen_gold": [
+   "debug",
+   "shared_data",
+   "utils"
+  ],
+  "unseen_gold": [
+   "u09",
+   "u34",
+   "u41"
+  ]
+ },
+ "RV16": {
+  "kind": "reverse",
+  "seen_path": "serving.py",
+  "unseen_path": "u33.py",
+  "seen_gold": [
+   "testapp",
+   "werkzeug"
+  ],
+  "unseen_gold": [
+   "u38",
+   "werkzeug"
+  ]
+ },
+ "RV17": {
+  "kind": "reverse",
+  "seen_path": "test.py",
+  "unseen_path": "u37.py",
+  "seen_gold": [
+   "request",
+   "response",
+   "werkzeug"
+  ],
+  "unseen_gold": [
+   "u27",
+   "u28",
+   "werkzeug"
+  ]
+ },
+ "RV18": {
+  "kind": "reverse",
+  "seen_path": "urls.py",
+  "unseen_path": "u39.py",
+  "seen_gold": [
+   "map",
+   "response",
+   "rules",
+   "serving",
+   "test",
+   "utils"
+  ],
+  "unseen_gold": [
+   "u19",
+   "u28",
+   "u30",
+   "u33",
+   "u37",
+   "u41"
+  ]
+ },
+ "RV19": {
+  "kind": "reverse",
+  "seen_path": "utils.py",
+  "unseen_path": "u41.py",
+  "seen_gold": [
+   "debug",
+   "exceptions",
+   "request",
+   "response",
+   "shared_data",
+   "tbtools",
+   "test"
+  ],
+  "unseen_gold": [
+   "u09",
+   "u11",
+   "u27",
+   "u28",
+   "u34",
+   "u36",
+   "u37"
+  ]
+ },
+ "RV20": {
+  "kind": "reverse",
+  "seen_path": "wrappers/__init__.py",
+  "unseen_path": "u42/__init__.py",
+  "seen_gold": [
+   "utils",
+   "werkzeug"
+  ],
+  "unseen_gold": [
+   "u41",
+   "werkzeug"
+  ]
+ },
+ "RV21": {
+  "kind": "reverse",
+  "seen_path": "wrappers/response.py",
+  "unseen_path": "u42/u28.py",
+  "seen_gold": [
+   "debug",
+   "exceptions",
+   "test",
+   "testapp",
+   "utils",
+   "wrappers"
+  ],
+  "unseen_gold": [
+   "u09",
+   "u11",
+   "u37",
+   "u38",
+   "u41",
+   "u42"
+  ]
+ }
+}

@@ -1,0 +1,21 @@
+# 第二阶段"全家桶":把各消融里验证有效的组件叠在一起 ——
+# 真语义 embedding + 按函数切块 + 调用图卡片 + 混合检索 + 重排序。
+# 假设:组合 ≥ 单项最优。注意它不是严格消融(动了多个变量),
+# 用途是回答"全部叠满能到多少"以及"组合是否会互相打架"。
+name: best_stack
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl
+chunking:
+  strategy: function
+  include_graph_cards: true
+embedder:
+  type: sentence_transformer
+  model_name: models/bge-small-en-v1.5  # M65 审计:英文/代码任务用 en(R@5 0.93≫zh 0.32),零成本;勿改回 zh(冒烟测试会拦)
+backend:
+  type: hybrid
+  top_k: 3
+  rerank: true
+  rerank_candidates: 10
+llm:
+  type: mock
+prompt_file: configs/prompts/plain.yaml

@@ -1,0 +1,443 @@
+[
+ {
+  "id": "FW00",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 __init__.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "serving, test, wrappers",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 __init__.py\n它直接 import 的项目内模块(静态分析): serving, test, wrappers\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 __init__.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW01",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 datastructures/auth.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "http, structures",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 datastructures/auth.py\n它直接 import 的项目内模块(静态分析): http, structures\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 datastructures/auth.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW02",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 datastructures/cache_control.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "mixins, structures",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 datastructures/cache_control.py\n它直接 import 的项目内模块(静态分析): mixins, structures\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 datastructures/cache_control.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW03",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 datastructures/csp.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "http, structures",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 datastructures/csp.py\n它直接 import 的项目内模块(静态分析): http, structures\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 datastructures/csp.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW04",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 datastructures/file_storage.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "_internal, headers, structures",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 datastructures/file_storage.py\n它直接 import 的项目内模块(静态分析): _internal, headers, structures\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 datastructures/file_storage.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW05",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 datastructures/headers.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "_internal, exceptions, mixins, structures",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 datastructures/headers.py\n它直接 import 的项目内模块(静态分析): _internal, exceptions, mixins, structures\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 datastructures/headers.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW06",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 datastructures/structures.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "_internal, mixins",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 datastructures/structures.py\n它直接 import 的项目内模块(静态分析): _internal, mixins\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 datastructures/structures.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW07",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 debug/console.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "repr, tbtools",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 debug/console.py\n它直接 import 的项目内模块(静态分析): repr, tbtools\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 debug/console.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW08",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 debug/tbtools.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "console, utils",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 debug/tbtools.py\n它直接 import 的项目内模块(静态分析): console, utils\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 debug/tbtools.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW09",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 exceptions.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "_internal, datastructures, http, request, response",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 exceptions.py\n它直接 import 的项目内模块(静态分析): _internal, datastructures, http, request, response\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 exceptions.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW10",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 formparser.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "_internal, datastructures, exceptions, http, multipart, wsgi",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 formparser.py\n它直接 import 的项目内模块(静态分析): _internal, datastructures, exceptions, http, multipart, wsgi\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 formparser.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW11",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 http.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "_internal, sansio",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 http.py\n它直接 import 的项目内模块(静态分析): _internal, sansio\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 http.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW12",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 middleware/http_proxy.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "datastructures, exceptions, http, wsgi",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 middleware/http_proxy.py\n它直接 import 的项目内模块(静态分析): datastructures, exceptions, http, wsgi\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 middleware/http_proxy.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW13",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 middleware/lint.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "datastructures, http, wsgi",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 middleware/lint.py\n它直接 import 的项目内模块(静态分析): datastructures, http, wsgi\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 middleware/lint.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW14",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 middleware/shared_data.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "http, security, utils, wsgi",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 middleware/shared_data.py\n它直接 import 的项目内模块(静态分析): http, security, utils, wsgi\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 middleware/shared_data.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW15",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 routing/__init__.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "converters, exceptions, map, matcher, rules",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 routing/__init__.py\n它直接 import 的项目内模块(静态分析): converters, exceptions, map, matcher, rules\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 routing/__init__.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW16",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 routing/exceptions.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "map, request, response, rules, utils",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 routing/exceptions.py\n它直接 import 的项目内模块(静态分析): map, request, response, rules, utils\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 routing/exceptions.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW17",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 routing/matcher.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "converters, exceptions, rules",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 routing/matcher.py\n它直接 import 的项目内模块(静态分析): converters, exceptions, rules\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 routing/matcher.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW18",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 routing/rules.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "converters, datastructures, map, urls",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 routing/rules.py\n它直接 import 的项目内模块(静态分析): converters, datastructures, map, urls\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 routing/rules.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW19",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 sansio/multipart.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "datastructures, exceptions, http",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 sansio/multipart.py\n它直接 import 的项目内模块(静态分析): datastructures, exceptions, http\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 sansio/multipart.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW20",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 sansio/request.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "datastructures, http, user_agent, utils",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 sansio/request.py\n它直接 import 的项目内模块(静态分析): datastructures, http, user_agent, utils\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 sansio/request.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW21",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 sansio/response.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "cache_control, datastructures, http, utils",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 sansio/response.py\n它直接 import 的项目内模块(静态分析): cache_control, datastructures, http, utils\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 sansio/response.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW22",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 sansio/utils.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "_internal, exceptions, http, urls",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 sansio/utils.py\n它直接 import 的项目内模块(静态分析): _internal, exceptions, http, urls\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 sansio/utils.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW23",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 testapp.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "request, response, serving",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 testapp.py\n它直接 import 的项目内模块(静态分析): request, response, serving\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 testapp.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW24",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 wrappers/__init__.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "request, response",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 wrappers/__init__.py\n它直接 import 的项目内模块(静态分析): request, response\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 wrappers/__init__.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW25",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 wrappers/request.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "_internal, datastructures, exceptions, formparser, test, utils, wsgi",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 wrappers/request.py\n它直接 import 的项目内模块(静态分析): _internal, datastructures, exceptions, formparser, test, utils, wsgi\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 wrappers/request.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "FW26",
+  "difficulty": "medium",
+  "category": "forward",
+  "question": "在 werkzeug 项目 中,文件 wsgi.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。",
+  "gold": "exceptions, sansio, utils",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 wsgi.py\n它直接 import 的项目内模块(静态分析): exceptions, sansio, utils\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,文件 wsgi.py 直接依赖(import)了哪些项目内模块?只列模块名,逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV00",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 datastructures/cache_control.py?只列文件名(模块名),逗号分隔。",
+  "gold": "datastructures, response",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 datastructures/cache_control.py\n项目内直接 import 它的文件(静态分析): datastructures, response\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 datastructures/cache_control.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV01",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 datastructures/headers.py?只列文件名(模块名),逗号分隔。",
+  "gold": "datastructures, file_storage",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 datastructures/headers.py\n项目内直接 import 它的文件(静态分析): datastructures, file_storage\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 datastructures/headers.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV02",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 datastructures/mixins.py?只列文件名(模块名),逗号分隔。",
+  "gold": "cache_control, datastructures, headers, structures",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 datastructures/mixins.py\n项目内直接 import 它的文件(静态分析): cache_control, datastructures, headers, structures\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 datastructures/mixins.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV03",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 datastructures/structures.py?只列文件名(模块名),逗号分隔。",
+  "gold": "accept, auth, cache_control, csp, datastructures, file_storage, headers",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 datastructures/structures.py\n项目内直接 import 它的文件(静态分析): accept, auth, cache_control, csp, datastructures, file_storage, headers\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 datastructures/structures.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV04",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 debug/console.py?只列文件名(模块名),逗号分隔。",
+  "gold": "debug, tbtools",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 debug/console.py\n项目内直接 import 它的文件(静态分析): debug, tbtools\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 debug/console.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV05",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 debug/tbtools.py?只列文件名(模块名),逗号分隔。",
+  "gold": "console, debug, serving",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 debug/tbtools.py\n项目内直接 import 它的文件(静态分析): console, debug, serving\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 debug/tbtools.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV06",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 routing/converters.py?只列文件名(模块名),逗号分隔。",
+  "gold": "map, matcher, routing, rules",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 routing/converters.py\n项目内直接 import 它的文件(静态分析): map, matcher, routing, rules\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 routing/converters.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV07",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 routing/exceptions.py?只列文件名(模块名),逗号分隔。",
+  "gold": "map, matcher, routing",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 routing/exceptions.py\n项目内直接 import 它的文件(静态分析): map, matcher, routing\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 routing/exceptions.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV08",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 routing/map.py?只列文件名(模块名),逗号分隔。",
+  "gold": "converters, exceptions, routing, rules",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 routing/map.py\n项目内直接 import 它的文件(静态分析): converters, exceptions, routing, rules\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 routing/map.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV09",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 routing/matcher.py?只列文件名(模块名),逗号分隔。",
+  "gold": "map, routing",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 routing/matcher.py\n项目内直接 import 它的文件(静态分析): map, routing\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 routing/matcher.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV10",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 routing/rules.py?只列文件名(模块名),逗号分隔。",
+  "gold": "exceptions, map, matcher, routing",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 routing/rules.py\n项目内直接 import 它的文件(静态分析): exceptions, map, matcher, routing\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 routing/rules.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV11",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 sansio/__init__.py?只列文件名(模块名),逗号分隔。",
+  "gold": "http, wsgi",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 sansio/__init__.py\n项目内直接 import 它的文件(静态分析): http, wsgi\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 sansio/__init__.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV12",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 sansio/http.py?只列文件名(模块名),逗号分隔。",
+  "gold": "request, response",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 sansio/http.py\n项目内直接 import 它的文件(静态分析): request, response\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 sansio/http.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV13",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 sansio/multipart.py?只列文件名(模块名),逗号分隔。",
+  "gold": "formparser, test",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 sansio/multipart.py\n项目内直接 import 它的文件(静态分析): formparser, test\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 sansio/multipart.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV14",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 sansio/utils.py?只列文件名(模块名),逗号分隔。",
+  "gold": "debug, request, wsgi",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 sansio/utils.py\n项目内直接 import 它的文件(静态分析): debug, request, wsgi\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 sansio/utils.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV15",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 security.py?只列文件名(模块名),逗号分隔。",
+  "gold": "debug, shared_data, utils",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 security.py\n项目内直接 import 它的文件(静态分析): debug, shared_data, utils\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 security.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV16",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 serving.py?只列文件名(模块名),逗号分隔。",
+  "gold": "testapp, werkzeug",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 serving.py\n项目内直接 import 它的文件(静态分析): testapp, werkzeug\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 serving.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV17",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 test.py?只列文件名(模块名),逗号分隔。",
+  "gold": "request, response, werkzeug",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 test.py\n项目内直接 import 它的文件(静态分析): request, response, werkzeug\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 test.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV18",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 urls.py?只列文件名(模块名),逗号分隔。",
+  "gold": "map, response, rules, serving, test, utils",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 urls.py\n项目内直接 import 它的文件(静态分析): map, response, rules, serving, test, utils\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 urls.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV19",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 utils.py?只列文件名(模块名),逗号分隔。",
+  "gold": "debug, exceptions, request, response, shared_data, tbtools, test",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 utils.py\n项目内直接 import 它的文件(静态分析): debug, exceptions, request, response, shared_data, tbtools, test\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 utils.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV20",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 wrappers/__init__.py?只列文件名(模块名),逗号分隔。",
+  "gold": "utils, werkzeug",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 wrappers/__init__.py\n项目内直接 import 它的文件(静态分析): utils, werkzeug\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 wrappers/__init__.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ },
+ {
+  "id": "RV21",
+  "difficulty": "medium",
+  "category": "reverse",
+  "question": "在 werkzeug 项目 中,项目内哪些文件直接 import 了 wrappers/response.py?只列文件名(模块名),逗号分隔。",
+  "gold": "debug, exceptions, test, testapp, utils, wrappers",
+  "notes": "(memvsstruct)",
+  "gen_prompt": "你是代码依赖分析助手。请依据以下依赖卡片回答。\n\n[依赖卡片] 文件 wrappers/response.py\n项目内直接 import 它的文件(静态分析): debug, exceptions, test, testapp, utils, wrappers\n(注:静态依赖图导出)\n\n问题:在 werkzeug 项目 中,项目内哪些文件直接 import 了 wrappers/response.py?只列文件名(模块名),逗号分隔。\n请直接回答。"
+ }
+]

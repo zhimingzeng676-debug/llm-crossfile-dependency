@@ -1,0 +1,179 @@
+{
+ "stamp": "20260616_161451",
+ "bugfix": {
+  "label": "bugfix",
+  "n_total": 157,
+  "n_present": 109,
+  "n_absent": 48,
+  "stable_blindspot_precise": 0.5321,
+  "buckets": {
+   "1_visible_precise": 51,
+   "2_namematch_gap": 47,
+   "3_no_static_signal_dynamic": 5,
+   "3_no_static_signal_plain": 6
+  },
+  "bucket_frac": {
+   "1_visible_precise": 0.4679,
+   "2_namematch_gap": 0.4312,
+   "3_no_static_signal_dynamic": 0.0459,
+   "3_no_static_signal_plain": 0.055
+  }
+ },
+ "evo": {
+  "label": "evo",
+  "n_total": 1342,
+  "n_present": 633,
+  "n_absent": 709,
+  "stable_blindspot_precise": 0.6019,
+  "buckets": {
+   "1_visible_precise": 252,
+   "2_namematch_gap": 277,
+   "3_no_static_signal_dynamic": 52,
+   "3_no_static_signal_plain": 52
+  },
+  "bucket_frac": {
+   "1_visible_precise": 0.3981,
+   "2_namematch_gap": 0.4376,
+   "3_no_static_signal_dynamic": 0.0821,
+   "3_no_static_signal_plain": 0.0821
+  }
+ },
+ "parse_stats": {
+  "PySnooper": {
+   "n_files": 29,
+   "n_import_edges": 42,
+   "n_prec_call_pairs": 8,
+   "n_prec_inh_pairs": 1,
+   "calls_total": 1556,
+   "calls_resolved_xfile": 356
+  },
+  "ansible": {
+   "n_files": 1818,
+   "n_import_edges": 909,
+   "n_prec_call_pairs": 537,
+   "n_prec_inh_pairs": 93,
+   "calls_total": 41818,
+   "calls_resolved_xfile": 1416
+  },
+  "black": {
+   "n_files": 335,
+   "n_import_edges": 15,
+   "n_prec_call_pairs": 7,
+   "n_prec_inh_pairs": 1,
+   "calls_total": 4375,
+   "calls_resolved_xfile": 77
+  },
+  "cookiecutter": {
+   "n_files": 90,
+   "n_import_edges": 108,
+   "n_prec_call_pairs": 48,
+   "n_prec_inh_pairs": 0,
+   "calls_total": 1581,
+   "calls_resolved_xfile": 94
+  },
+  "fastapi": {
+   "n_files": 1121,
+   "n_import_edges": 1577,
+   "n_prec_call_pairs": 214,
+   "n_prec_inh_pairs": 12,
+   "calls_total": 9482,
+   "calls_resolved_xfile": 637
+  },
+  "httpie": {
+   "n_files": 133,
+   "n_import_edges": 374,
+   "n_prec_call_pairs": 134,
+   "n_prec_inh_pairs": 11,
+   "calls_total": 2973,
+   "calls_resolved_xfile": 652
+  },
+  "keras": {
+   "n_files": 970,
+   "n_import_edges": 3416,
+   "n_prec_call_pairs": 754,
+   "n_prec_inh_pairs": 255,
+   "calls_total": 67372,
+   "calls_resolved_xfile": 6319
+  },
+  "luigi": {
+   "n_files": 259,
+   "n_import_edges": 580,
+   "n_prec_call_pairs": 153,
+   "n_prec_inh_pairs": 54,
+   "calls_total": 16530,
+   "calls_resolved_xfile": 641
+  },
+  "matplotlib": {
+   "n_files": 910,
+   "n_import_edges": 168,
+   "n_prec_call_pairs": 44,
+   "n_prec_inh_pairs": 32,
+   "calls_total": 47332,
+   "calls_resolved_xfile": 172
+  },
+  "pandas": {
+   "n_files": 1509,
+   "n_import_edges": 5663,
+   "n_prec_call_pairs": 4089,
+   "n_prec_inh_pairs": 167,
+   "calls_total": 130784,
+   "calls_resolved_xfile": 26558
+  },
+  "sanic": {
+   "n_files": 332,
+   "n_import_edges": 890,
+   "n_prec_call_pairs": 399,
+   "n_prec_inh_pairs": 64,
+   "calls_total": 11102,
+   "calls_resolved_xfile": 2098
+  },
+  "scrapy": {
+   "n_files": 440,
+   "n_import_edges": 1754,
+   "n_prec_call_pairs": 840,
+   "n_prec_inh_pairs": 172,
+   "calls_total": 16053,
+   "calls_resolved_xfile": 3027
+  },
+  "spacy": {
+   "n_files": 876,
+   "n_import_edges": 1471,
+   "n_prec_call_pairs": 362,
+   "n_prec_inh_pairs": 100,
+   "calls_total": 14674,
+   "calls_resolved_xfile": 1087
+  },
+  "thefuck": {
+   "n_files": 416,
+   "n_import_edges": 729,
+   "n_prec_call_pairs": 415,
+   "n_prec_inh_pairs": 5,
+   "calls_total": 2972,
+   "calls_resolved_xfile": 1012
+  },
+  "tornado": {
+   "n_files": 107,
+   "n_import_edges": 398,
+   "n_prec_call_pairs": 218,
+   "n_prec_inh_pairs": 67,
+   "calls_total": 10744,
+   "calls_resolved_xfile": 1016
+  },
+  "tqdm": {
+   "n_files": 68,
+   "n_import_edges": 113,
+   "n_prec_call_pairs": 22,
+   "n_prec_inh_pairs": 18,
+   "calls_total": 2051,
+   "calls_resolved_xfile": 149
+  },
+  "youtube-dl": {
+   "n_files": 902,
+   "n_import_edges": 2989,
+   "n_prec_call_pairs": 991,
+   "n_prec_inh_pairs": 853,
+   "calls_total": 26267,
+   "calls_resolved_xfile": 4725
+  }
+ }
+}

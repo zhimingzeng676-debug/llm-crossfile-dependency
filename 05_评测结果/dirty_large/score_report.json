@@ -1,0 +1,215 @@
+{
+ "n_cases": 103,
+ "by_condition": {
+  "strict": {
+   "n": 103,
+   "detect": 0.074,
+   "complete": 0.01,
+   "gap": 0.065
+  },
+  "humble": {
+   "n": 103,
+   "detect": 0.99,
+   "complete": 0.417,
+   "gap": 0.573
+  },
+  "baseline": {
+   "n": 103,
+   "detect": 0.142,
+   "complete": 0.0,
+   "gap": 0.142
+  },
+  "humble_source": {
+   "n": 103,
+   "detect": 0.984,
+   "complete": 0.845,
+   "gap": 0.139
+  },
+  "humble_prompt": {
+   "n": 103,
+   "detect": 1.0,
+   "complete": 0.689,
+   "gap": 0.311
+  }
+ },
+ "by_type": {
+  "strict": {
+   "buildtag": {
+    "n": 8,
+    "detect": 0.083,
+    "complete": 0.0
+   },
+   "conditional": {
+    "n": 43,
+    "detect": 0.109,
+    "complete": 0.0
+   },
+   "dynamic": {
+    "n": 14,
+    "detect": 0.048,
+    "complete": 0.0
+   },
+   "ifdef": {
+    "n": 7,
+    "detect": 0.0,
+    "complete": 0.0
+   },
+   "reflection": {
+    "n": 31,
+    "detect": 0.054,
+    "complete": 0.032
+   }
+  },
+  "humble": {
+   "buildtag": {
+    "n": 8,
+    "detect": 0.958,
+    "complete": 0.167
+   },
+   "conditional": {
+    "n": 43,
+    "detect": 0.992,
+    "complete": 0.031
+   },
+   "dynamic": {
+    "n": 14,
+    "detect": 1.0,
+    "complete": 0.738
+   },
+   "ifdef": {
+    "n": 7,
+    "detect": 1.0,
+    "complete": 0.429
+   },
+   "reflection": {
+    "n": 31,
+    "detect": 0.989,
+    "complete": 0.871
+   }
+  },
+  "baseline": {
+   "buildtag": {
+    "n": 8,
+    "detect": 0.0,
+    "complete": 0.0
+   },
+   "conditional": {
+    "n": 43,
+    "detect": 0.202,
+    "complete": 0.0
+   },
+   "dynamic": {
+    "n": 14,
+    "detect": 0.214,
+    "complete": 0.0
+   },
+   "ifdef": {
+    "n": 7,
+    "detect": 0.0,
+    "complete": 0.0
+   },
+   "reflection": {
+    "n": 31,
+    "detect": 0.097,
+    "complete": 0.0
+   }
+  },
+  "humble_source": {
+   "buildtag": {
+    "n": 8,
+    "detect": 1.0,
+    "complete": 1.0
+   },
+   "conditional": {
+    "n": 43,
+    "detect": 0.992,
+    "complete": 0.891
+   },
+   "dynamic": {
+    "n": 14,
+    "detect": 1.0,
+    "complete": 0.81
+   },
+   "ifdef": {
+    "n": 7,
+    "detect": 1.0,
+    "complete": 0.857
+   },
+   "reflection": {
+    "n": 31,
+    "detect": 0.957,
+    "complete": 0.753
+   }
+  },
+  "humble_prompt": {
+   "buildtag": {
+    "n": 8,
+    "detect": 1.0,
+    "complete": 0.125
+   },
+   "conditional": {
+    "n": 43,
+    "detect": 1.0,
+    "complete": 0.907
+   },
+   "dynamic": {
+    "n": 14,
+    "detect": 1.0,
+    "complete": 0.5
+   },
+   "ifdef": {
+    "n": 7,
+    "detect": 1.0,
+    "complete": 0.429
+   },
+   "reflection": {
+    "n": 31,
+    "detect": 1.0,
+    "complete": 0.677
+   }
+  }
+ },
+ "mechanism": {
+  "humble": {
+   "n_determinable": 58,
+   "complete_determinable": 0.098,
+   "detect_determinable": 0.989
+  },
+  "humble_source": {
+   "n_determinable": 58,
+   "complete_determinable": 0.902,
+   "detect_determinable": 0.994
+  },
+  "humble_prompt": {
+   "n_determinable": 58,
+   "complete_determinable": 0.741,
+   "detect_determinable": 1.0
+  }
+ },
+ "stats": {
+  "humble_vs_strict_DETECT": {
+   "mean_a": 0.99,
+   "mean_b": 0.074,
+   "delta": 0.916,
+   "t": 40.889,
+   "p": 4.487010222347526e-65,
+   "n": 103
+  },
+  "humble_source_vs_humble_COMPLETE_determinable": {
+   "mean_a": 0.902,
+   "mean_b": 0.098,
+   "delta": 0.805,
+   "t": 18.213,
+   "p": 1.9650295451850683e-25,
+   "n": 58
+  },
+  "humble_prompt_vs_humble_COMPLETE_determinable": {
+   "mean_a": 0.741,
+   "mean_b": 0.098,
+   "delta": 0.644,
+   "t": 10.064,
+   "p": 2.979274989787989e-14,
+   "n": 58
+  }
+ }
+}

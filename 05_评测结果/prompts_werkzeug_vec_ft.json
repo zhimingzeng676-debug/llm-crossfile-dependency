@@ -1,0 +1,1660 @@
+[
+ {
+  "id": "FWD-01",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/headers.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/headers.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/mixins.py, datastructures/structures.py, exceptions.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py, datastructures/file_storage.py\n文件内定义的类: Headers, EnvironHeaders\n文件内定义的函数: __init__, __getitem__, __getitem__, __getitem__, __getitem__, _get_key, __eq__, lowered, get, get, get, get, get, get, getlist, getlist, getlist, get_all, items, keys, values, extend, __delitem__, _del_key, remove, pop, pop, pop, pop, pop\n\n[代码片段 2] 来源: datastructures/headers.py (第 473-475 行)\n文件: datastructures/headers.py\n函数: __setitem__\ndef __setitem__(\n        self, key: slice, value: cabc.Iterable[tuple[str, t.Any]]\n    ) -> None: ...\n\n[代码片段 3] 来源: datastructures/headers.py (第 469-469 行)\n文件: datastructures/headers.py\n函数: __setitem__\ndef __setitem__(self, key: str, value: t.Any) -> None: ...\n\n[代码片段 4] 来源: datastructures/headers.py (第 76-76 行)\n文件: datastructures/headers.py\n函数: __getitem__\ndef __getitem__(self, key: str) -> str: ...\n\n[代码片段 5] 来源: datastructures/headers.py (第 471-471 行)\n文件: datastructures/headers.py\n函数: __setitem__\ndef __setitem__(self, key: int, value: tuple[str, t.Any]) -> None: ...\n\n[问题] 在 werkzeug 中,datastructures/headers.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "datastructures/headers.py",
+   "datastructures/headers.py",
+   "datastructures/headers.py",
+   "datastructures/headers.py",
+   "datastructures/headers.py"
+  ],
+  "expected_sources": [
+   "datastructures/headers.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "mixins",
+    "structures",
+    "exceptions"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-02",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,formparser.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 文件 formparser.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: TStreamFactory, FormDataParser, MultiPartParser\n文件内定义的函数: __call__, default_stream_factory, parse_form_data, __init__, parse_from_environ, parse, _parse_multipart, _parse_urlencoded, __init__, fail, get_part_charset, start_file_streaming, parse, _chunk_iter\n\n[代码片段 2] 来源: formparser.py (第 270-289 行)\n文件: formparser.py\n函数: _parse_urlencoded\ndef _parse_urlencoded(\n        self,\n        stream: t.IO[bytes],\n        mimetype: str,\n        content_length: int | None,\n        options: dict[str, str],\n    ) -> t_parse_result:\n        if (\n            self.max_form_memory_size is not None\n            and content_length is not None\n            and content_length > self.max_form_memory_size\n        ):\n            raise RequestEntityTooLarge()\n\n        items = parse_qsl(\n            stream.read().decode(),\n            keep_blank_values=True,\n            errors=\"werkzeug.url_quote\",\n        )\n        return stream, self.cls(items), self.cls()\n\n[代码片段 3] 来源: formparser.py (第 41-47 行)\n文件: formparser.py\n函数: __call__\ndef __call__(\n            self,\n            total_content_length: int | None,\n            content_type: str | None,\n            filename: str | None,\n            content_length: int | None = None,\n        ) -> t.IO[bytes]: ...\n\n[代码片段 4] 来源: formparser.py (第 293-313 行)\n文件: formparser.py\n函数: __init__\ndef __init__(\n        self,\n        stream_factory: TStreamFactory | None = None,\n        max_form_memory_size: int | None = None,\n        cls: type[MultiDict[str, t.Any]] | None = None,\n        buffer_size: int = 64 * 1024,\n        max_form_parts: int | None = None,\n    ) -> None:\n        self.max_form_memory_size = max_form_memory_size\n        self.max_form_parts = max_form_parts\n\n        if stream_factory is None:\n            stream_factory = default_stream_factory\n\n        self.stream_factory = stream_factory\n\n        if cls is None:\n            cls = t.cast(\"type[MultiDict[str, t.Any]]\", MultiDict)\n\n        self.cls = cls\n        self.buffer_size = buffer_size\n\n[代码片段 5] 来源: formparser.py (第 170-192 行)\n文件: formparser.py\n函数: __init__\ndef __init__(\n        self,\n        stream_factory: TStreamFactory | None = None,\n        max_form_memory_size: int | None = None,\n        max_content_length: int | None = None,\n        cls: type[MultiDict[str, t.Any]] | None = None,\n        silent: bool = True,\n        *,\n        max_form_parts: int | None = None,\n    ) -> None:\n        if stream_factory is None:\n            stream_factory = default_stream_factory\n\n        self.stream_factory = stream_factory\n        self.max_form_memory_size = max_form_memory_size\n        self.max_content_length = max_content_length\n        self.max_form_parts = max_form_parts\n\n        if cls is None:\n            cls = t.cast(\"type[MultiDict[str, t.Any]]\", MultiDict)\n\n        self.cls = cls\n        self.silent = silent\n\n[问题] 在 werkzeug 中,formparser.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "formparser.py",
+   "formparser.py",
+   "formparser.py",
+   "formparser.py",
+   "formparser.py"
+  ],
+  "expected_sources": [
+   "formparser.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "http",
+    "multipart",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-03",
+  "category": "forward_dep",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,http.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 4] 来源: http.py (第 0-0 行)\n[依赖图卡片] 文件 http.py\n它依赖(import)的仓库内文件: _internal.py, sansio/__init__.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/auth.py, datastructures/csp.py, datastructures/etag.py, debug/__init__.py, exceptions.py, formparser.py, middleware/http_proxy.py, middleware/lint.py, middleware/proxy_fix.py, middleware/shared_data.py, sansio/http.py, sansio/multipart.py, sansio/request.py, sansio/response.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n文件内定义的类: COEP, COOP\n文件内定义的函数: quote_header_value, unquote_header_value, dump_options_header, dump_header, dump_csp_header, parse_list_header, parse_dict_header, parse_options_header, parse_accept_header, parse_accept_header, parse_accept_header, parse_cache_control_header, parse_cache_control_header, parse_cache_control_header, parse_csp_header, parse_csp_header, parse_csp_header, parse_set_header, parse_if_range_header, parse_range_header, parse_content_range_header, quote_etag, unquote_etag, unquote_etag, unquote_etag, parse_etags, generate_etag, parse_date, http_date, parse_age\n\n[代码片段 5] 来源: middleware/http_proxy.py (第 1-236 行)\n文件: middleware/http_proxy.py\n(模块级代码:import、常量、配置)\n\"\"\"\nBasic HTTP Proxy\n================\n\n.. autoclass:: ProxyMiddleware\n\n:copyright: 2007 Pallets\n:license: BSD-3-Clause\n\"\"\"\n\nfrom __future__ import annotations\n\nimport typing as t\nfrom http import client\nfrom urllib.parse import quote\nfrom urllib.parse import urlsplit\n\nfrom ..datastructures import EnvironHeaders\nfrom ..http import is_hop_by_hop_header\nfrom ..wsgi import get_input_stream\n\nif t.TYPE_CHECKING:\n    from _typeshed.wsgi import StartResponse\n    from _typeshed.wsgi import WSGIApplication\n    from _typeshed.wsgi import WSGIEnvironment\n\n\nclass ProxyMiddleware:\n    \"\"\"Proxy requests under a path to an external server, routing other\n    requests to the app.\n\n    This middleware can only proxy HTTP requests, as HTTP is the only\n    protocol handled by the WSGI server. Other protocols, such as\n    WebSocket requests, cannot be proxied at this layer. This should\n    only be used for development, in production a real proxy server\n    should be used.\n\n    The middleware takes a dict mapping a path prefix to a dict\n    describing the host to be proxied to::\n\n        app = ProxyMiddleware(app, {\n            \"/static/\": {\n                \"target\": \"http://127.0.0.1:5001/\",\n            }\n        })\n\n    Each host has the following options:\n\n    ``target``:\n        The target URL to dispatch to. This is required.\n    ``remove_prefix``:\n        Whether to remove the prefix from the URL before dispatching it\n        to the target. The default is ``False``.\n    ``host``:\n        ``\"<auto>\"`` (default):\n            The host header is automatically rewritten to the URL of the\n            target.\n        ``None``:\n            The host header is unmodified from the client request.\n        Any other value:\n            The host header is overwritten with the value.\n    ``headers``:\n        A dictionary of headers to be sent with the request to the\n        target. The default is ``{}``.\n    ``ssl_context``:\n        A :class:`ssl.SSLContext` defining how to verify requests if the\n        target is HTTPS. The default is ``None``.\n\n    In the example above, everything under ``\"/static/\"`` is proxied to\n    the server on port 5001. The host header is rewritten to the target,\n    and the ``\"/static/\"`` prefix is removed from the URLs.\n\n    :param app: The WSGI application to wrap.\n    :param targets: Proxy target configurations. See description above.\n    :param chunk_size: Size of chunks to read from input stream and\n        write to target.\n    :param timeout: Seconds before an operation to a target fails.\n\n    .. versionadded:: 0.14\n    \"\"\"\n\n[问题] 在 werkzeug 中,http.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "testapp.py",
+   "testapp.py",
+   "http.py",
+   "middleware/http_proxy.py"
+  ],
+  "expected_sources": [
+   "http.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "sansio"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-04",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,routing/map.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/map.py (第 0-0 行)\n[依赖图卡片] 文件 routing/map.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, routing/converters.py, routing/exceptions.py, routing/matcher.py, routing/rules.py, urls.py, wrappers/request.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/converters.py, routing/exceptions.py, routing/rules.py\n文件内定义的类: Map, MapAdapter\n文件内定义的函数: __init__, merge_slashes, merge_slashes, is_endpoint_expecting, _rules, iter_rules, add, bind, bind_to_environ, _get_wsgi_string, update, __repr__, __init__, dispatch, match, match, match, _handle_match, test, allowed_methods, get_host, get_default_redirect, encode_query_args, make_redirect_url, make_alias_redirect_url, _partial_build, build\n\n[代码片段 2] 来源: routing/map.py (第 94-124 行)\n文件: routing/map.py\n函数: __init__\ndef __init__(\n        self,\n        rules: t.Iterable[RuleFactory] | None = None,\n        default_subdomain: str = \"\",\n        strict_slashes: bool = True,\n        merge_slashes: bool = True,\n        redirect_defaults: bool = True,\n        converters: t.Mapping[str, type[BaseConverter]] | None = None,\n        sort_parameters: bool = False,\n        sort_key: t.Callable[[t.Any], t.Any] | None = None,\n        host_matching: bool = False,\n    ) -> None:\n        self._matcher = StateMachineMatcher(merge_slashes)\n        self._rules_by_endpoint: dict[t.Any, list[Rule]] = {}\n        self._remap = True\n        self._remap_lock = self.lock_class()\n\n        self.default_subdomain = default_subdomain\n        self.strict_slashes = strict_slashes\n        self.redirect_defaults = redirect_defaults\n        self.host_matching = host_matching\n\n        self.converters = self.default_converters.copy()\n        if converters:\n            self.converters.update(converters)\n\n        self.sort_parameters = sort_parameters\n        self.sort_key = sort_key\n\n        for rulefactory in rules or ():\n            self.add(rulefactory)\n\n[代码片段 3] 来源: routing/map.py (第 387-410 行)\n文件: routing/map.py\n函数: __init__\ndef __init__(\n        self,\n        map: Map,\n        server_name: str,\n        script_name: str,\n        subdomain: str | None,\n        url_scheme: str,\n        path_info: str,\n        default_method: str,\n        query_args: t.Mapping[str, t.Any] | str | None = None,\n    ):\n        self.map = map\n        self.server_name = server_name\n\n        if not script_name.endswith(\"/\"):\n            script_name += \"/\"\n\n        self.script_name = script_name\n        self.subdomain = subdomain\n        self.url_scheme = url_scheme\n        self.path_info = path_info\n        self.default_method = default_method\n        self.query_args = query_args\n        self.websocket = self.url_scheme in {\"ws\", \"wss\"}\n\n[代码片段 4] 来源: routing/map.py (第 170-181 行)\n文件: routing/map.py\n函数: add\ndef add(self, rulefactory: RuleFactory) -> None:\n        \"\"\"Add a new rule or factory to the map and bind it.  Requires that the\n        rule is not bound to another map.\n\n        :param rulefactory: a :class:`Rule` or :class:`RuleFactory`\n        \"\"\"\n        for rule in rulefactory.get_rules(self):\n            rule.bind(self)\n            if not rule.build_only:\n                self._matcher.add(rule)\n            self._rules_by_endpoint.setdefault(rule.endpoint, []).append(rule)\n        self._remap = True\n\n[代码片段 5] 来源: routing/map.py (第 1-928 行)\n文件: routing/map.py\n(模块级代码:import、常量、配置)\nfrom __future__ import annotations\n\nimport typing as t\nimport warnings\nfrom pprint import pformat\nfrom threading import Lock\nfrom urllib.parse import quote\nfrom urllib.parse import urljoin\nfrom urllib.parse import urlunsplit\n\nfrom .._internal import _get_environ\nfrom .._internal import _wsgi_decoding_dance\nfrom ..datastructures import ImmutableDict\nfrom ..datastructures import MultiDict\nfrom ..exceptions import BadHost\nfrom ..exceptions import HTTPException\nfrom ..exceptions import MethodNotAllowed\nfrom ..exceptions import NotFound\nfrom ..urls import _urlencode\nfrom ..wsgi import get_host\nfrom .converters import DEFAULT_CONVERTERS\nfrom .exceptions import BuildError\nfrom .exceptions import NoMatch\nfrom .exceptions import RequestAliasRedirect\nfrom .exceptions import RequestPath\nfrom .exceptions import RequestRedirect\nfrom .exceptions import WebsocketMismatch\nfrom .matcher import StateMachineMatcher\nfrom .rules import _simple_rule_re\nfrom .rules import Rule\n\nif t.TYPE_CHECKING:\n    from _typeshed.wsgi import WSGIApplication\n    from _typeshed.wsgi import WSGIEnvironment\n\n    from ..wrappers.request import Request\n    from .converters import BaseConverter\n    from .rules import RuleFactory\n\n\nclass Map:\n    \"\"\"The map class stores all the URL rules and some configuration\n    parameters.  Some of the configuration values are only stored on the\n    `Map` instance since those affect all rules, others are just defaults\n    and can be overridden for each rule.  Note that you have to specify all\n    arguments besides the `rules` as keyword arguments!\n\n    :param rules: sequence of url rules for this map.\n    :param default_subdomain: The default subdomain for rules without a\n                              subdomain defined.\n    :param strict_slashes: If a rule ends with a slash but the matched\n        URL does not, redirect to the URL with a trailing slash.\n    :param merge_slashes: Merge consecutive slashes when matching or\n        building URLs. Matches will redirect to the normalized URL.\n        Slashes in variable parts are not merged.\n    :param redirect_defaults: This will redirect to the default rule if it\n                              wasn't visited that way. This helps creating\n                              unique URLs.\n    :param converters: A dict of converters that adds additional converters\n                       to the list of converters. If you redefine one\n                       converter this will override the original one.\n    :param sort_parameters: If set to `True` the url parameters are sorted.\n                            See `url_encode` for more details.\n    :param sort_key: The sort key function for `url_encode`.\n    :param host_matching: if set to `True` it enables the host matching\n                          feature and disables the subdomain one.  If\n                          enabled the `host` parameter to rules is used\n                          instead of the `subdomain` one.\n\n    .. versionchanged:: 3.0\n        The ``charset`` and ``encoding_errors`` parameters were removed.\n\n    .. versionchanged:: 1.0\n        If ``url_scheme`` is ``ws`` or ``wss``, only WebSocket rules will match.\n\n    .. versionchanged:: 1.0\n        The ``merge_slashes`` parameter was added.\n\n    .. versionchanged:: 0.7\n        The ``encoding_errors`` and ``host_matching`` parameters were added.\n\n    .. versionchanged:: 0.5\n        The ``sort_parameters`` and ``sort_key``  parameters were added.\n    \"\"\"\n\n    #: A dict of default converters to be used.\n    default_converters = ImmutableDict(DEFAULT_CONVERTERS)\n\n    #: The type of lock to use when updating.\n    #:\n    #: .. versionadded:: 1.0\n    lock_class = Lock\n\n\n    @property\n\n    @merge_slashes.setter\n\n\n    @property\n\n\n\n\n\n\n\n\nclass MapAdapter:\n    \"\"\"Returned by :meth:`Map.bind` or :meth:`Map.bind_to_environ` and does\n    the URL matching and building based on runtime information.\n    \"\"\"\n\n\n\n    @t.overload\n\n    @t.overload\n\n[问题] 在 werkzeug 中,routing/map.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "routing/map.py",
+   "routing/map.py",
+   "routing/map.py",
+   "routing/map.py",
+   "routing/map.py"
+  ],
+  "expected_sources": [
+   "routing/map.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "converters",
+    "matcher",
+    "rules",
+    "urls",
+    "request",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-05",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/matcher.py (第 0-0 行)\n[依赖图卡片] 文件 routing/matcher.py\n它依赖(import)的仓库内文件: routing/converters.py, routing/exceptions.py, routing/rules.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/map.py\n文件内定义的类: SlashRequired, State, StateMachineMatcher\n文件内定义的函数: __init__, add, update, _update_state, match, _match\n\n[代码片段 2] 来源: routing/matcher.py (第 34-36 行)\n文件: routing/matcher.py\n函数: __init__\ndef __init__(self, merge_slashes: bool) -> None:\n        self._root = State()\n        self.merge_slashes = merge_slashes\n\n[代码片段 3] 来源: routing/matcher.py (第 1-202 行)\n文件: routing/matcher.py\n(模块级代码:import、常量、配置)\nfrom __future__ import annotations\n\nimport re\nimport typing as t\nfrom dataclasses import dataclass\nfrom dataclasses import field\n\nfrom .converters import ValidationError\nfrom .exceptions import NoMatch\nfrom .exceptions import RequestAliasRedirect\nfrom .exceptions import RequestPath\nfrom .rules import Rule\nfrom .rules import RulePart\n\n\nclass SlashRequired(Exception):\n    pass\n\n\n@dataclass\nclass State:\n    \"\"\"A representation of a rule state.\n\n    This includes the *rules* that correspond to the state and the\n    possible *static* and *dynamic* transitions to the next state.\n    \"\"\"\n\n    dynamic: list[tuple[RulePart, State]] = field(default_factory=list)\n    rules: list[Rule] = field(default_factory=list)\n    static: dict[str, State] = field(default_factory=dict)\n\n\nclass StateMachineMatcher:\n\n[代码片段 4] 来源: routing/matcher.py (第 69-202 行)\n文件: routing/matcher.py\n函数: match\ndef match(\n        self, domain: str, path: str, method: str, websocket: bool\n    ) -> tuple[Rule, t.MutableMapping[str, t.Any]]:\n        # To match to a rule we need to start at the root state and\n        # try to follow the transitions until we find a match, or find\n        # there is no transition to follow.\n\n        have_match_for = set()\n        websocket_mismatch = False\n\n        def _match(\n            state: State, parts: list[str], values: list[str]\n        ) -> tuple[Rule, list[str]] | None:\n            # This function is meant to be called recursively, and will attempt\n            # to match the head part to the state's transitions.\n            nonlocal have_match_for, websocket_mismatch\n\n            # The base case is when all parts have been matched via\n            # transitions. Hence if there is a rule with methods &\n            # websocket that work return it and the dynamic values\n            # extracted.\n            if parts == []:\n                for rule in state.rules:\n                    if rule.methods is not None and method not in rule.methods:\n                        have_match_for.update(rule.methods)\n                    elif rule.websocket != websocket:\n                        websocket_mismatch = True\n                    else:\n                        return rule, values\n\n                # Test if there is a match with this path with a\n                # trailing slash, if so raise an exception to report\n                # that matching is possible with an additional slash\n                if \"\" in state.static:\n                    for rule in state.static[\"\"].rules:\n                        if websocket == rule.websocket and (\n                            rule.methods is None or method in rule.methods\n                        ):\n                            if rule.strict_slashes:\n                                raise SlashRequired()\n                            else:\n                                return rule, values\n                return None\n\n            part = parts[0]\n            # To match this part try the static transitions first\n            if part in state.static:\n                rv = _match(state.static[part], parts[1:], values)\n                if rv is not None:\n                    return rv\n            # No match via the static transitions, so try the dynamic\n            # ones.\n            for test_part, new_state in state.dynamic:\n                target = part\n                remaining = parts[1:]\n                # A final part indicates a transition that always\n                # consumes the remaining parts i.e. transitions to a\n                # final state.\n                if test_part.final:\n                    target = \"/\".join(parts)\n                    remaining = []\n                match = re.compile(test_part.content).match(target)\n                if match is not None:\n                    if test_part.suffixed:\n                        # If a part_isolating=False part has a slash suffix, remove the\n                        # suffix from the match and check for the slash redirect next.\n                        suffix = match.groups()[-1]\n                        if suffix == \"/\":\n                            remaining = [\"\"]\n\n                    converter_groups = sorted(\n                        match.groupdict().items(), key=lambda entry: entry[0]\n                    )\n                    groups = [\n                        value\n                        for key, value in converter_groups\n                        if key[:11] == \"__werkzeug_\"\n                    ]\n                    rv = _match(new_state, remaining, values + groups)\n                    if rv is not None:\n                        return rv\n\n            # If there is no match and the only part left is a\n            # trailing slash (\"\") consider rules that aren't\n            # strict-slashes as these should match if there is a final\n            # slash part.\n            if parts == [\"\"]:\n                for rule in state.rules:\n                    if rule.strict_slashes:\n                        continue\n                    if rule.methods is not None and method not in rule.methods:\n                        have_match_for.update(rule.methods)\n                    elif rule.websocket != websocket:\n                        websocket_mismatch = True\n                    else:\n                        return rule, values\n\n            return None\n\n        try:\n            rv = _match(self._root, [domain, *path.split(\"/\")], [])\n        except SlashRequired:\n            raise RequestPath(f\"{path}/\") from None\n\n        if self.merge_slashes and rv is None:\n            # Try to match again, but with slashes merged\n            path = re.sub(\"/{2,}\", \"/\", path)\n            try:\n                rv = _match(self._root, [domain, *path.split(\"/\")], [])\n            except SlashRequired:\n                raise RequestPath(f\"{path}/\") from None\n            if rv is None or rv[0].merge_slashes is False:\n                raise NoMatch(have_match_for, websocket_mismatch)\n            else:\n                raise RequestPath(f\"{path}\")\n        elif rv is not None:\n            rule, values = rv\n\n            result = {}\n            for name, value in zip(rule._converters.keys(), values):\n                try:\n                    value = rule._converters[name].to_python(value)\n                except ValidationError:\n                    raise NoMatch(have_match_for, websocket_mismatch) from None\n                result[str(name)] = value\n            if rule.defaults:\n                result.update(rule.defaults)\n\n            if rule.alias and rule.map.redirect_defaults:\n                raise RequestAliasRedirect(result, rule.endpoint)\n\n            return rule, result\n\n        raise NoMatch(have_match_for, websocket_mismatch)\n\n[代码片段 5] 来源: routing/matcher.py (第 60-65 行)\n文件: routing/matcher.py\n函数: _update_state\ndef _update_state(state: State) -> None:\n            state.dynamic.sort(key=lambda entry: entry[0].weight)\n            for new_state in state.static.values():\n                _update_state(new_state)\n            for _, new_state in state.dynamic:\n                _update_state(new_state)\n\n[问题] 在 werkzeug 中,routing/matcher.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "routing/matcher.py",
+   "routing/matcher.py",
+   "routing/matcher.py",
+   "routing/matcher.py",
+   "routing/matcher.py"
+  ],
+  "expected_sources": [
+   "routing/matcher.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "converters",
+    "exceptions",
+    "rules"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-06",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: sansio/request.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/request.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, http.py, sansio/http.py, sansio/utils.py, user_agent.py, utils.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: Request\n文件内定义的函数: __init__, __repr__, args, access_route, full_path, is_secure, url, base_url, root_url, host_url, host, cookies, content_length, _parse_content_type, mimetype, mimetype_params, pragma, accept_mimetypes, accept_charsets, accept_encodings, accept_languages, cache_control, if_match, if_none_match, if_modified_since, if_unmodified_since, if_range, range, user_agent, authorization\n\n[代码片段 2] 来源: sansio/http.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/http.py\n它依赖(import)的仓库内文件: _internal.py, http.py\n它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n文件内定义的类: (无)\n文件内定义的函数: is_resource_modified, _cookie_unslash_replace, parse_cookie\n\n[代码片段 3] 来源: sansio/request.py (第 401-406 行)\n文件: sansio/request.py\n函数: cache_control\ndef cache_control(self) -> RequestCacheControl:\n        \"\"\"A :class:`~werkzeug.datastructures.RequestCacheControl` object\n        for the incoming cache control headers.\n        \"\"\"\n        cache_control = self.headers.get(\"Cache-Control\")\n        return parse_cache_control_header(cache_control, None, RequestCacheControl)\n\n[代码片段 4] 来源: sansio/request.py (第 158-177 行)\n文件: sansio/request.py\n函数: args\ndef args(self) -> MultiDict[str, str]:\n        \"\"\"The parsed URL parameters (the part in the URL after the question\n        mark).\n\n        By default an\n        :class:`~werkzeug.datastructures.ImmutableMultiDict`\n        is returned from this function.  This can be changed by setting\n        :attr:`parameter_storage_class` to a different type.  This might\n        be necessary if the order of the form data is important.\n\n        .. versionchanged:: 2.3\n            Invalid bytes remain percent encoded.\n        \"\"\"\n        return self.parameter_storage_class(\n            parse_qsl(\n                self.query_string.decode(),\n                keep_blank_values=True,\n                errors=\"werkzeug.url_quote\",\n            )\n        )\n\n[代码片段 5] 来源: sansio/request.py (第 261-270 行)\n文件: sansio/request.py\n函数: content_length\ndef content_length(self) -> int | None:\n        \"\"\"The Content-Length entity-header field indicates the size of the\n        entity-body in bytes or, in the case of the HEAD method, the size of\n        the entity-body that would have been sent had the request been a\n        GET.\n        \"\"\"\n        return get_content_length(\n            http_content_length=self.headers.get(\"Content-Length\"),\n            http_transfer_encoding=self.headers.get(\"Transfer-Encoding\"),\n        )\n\n[问题] 在 werkzeug 中,sansio/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "sansio/request.py",
+   "sansio/http.py",
+   "sansio/request.py",
+   "sansio/request.py",
+   "sansio/request.py"
+  ],
+  "expected_sources": [
+   "sansio/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures",
+    "http",
+    "utils",
+    "user_agent"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-07",
+  "category": "forward_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: sansio/response.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/response.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, datastructures/cache_control.py, http.py, utils.py\n它被这些文件依赖/使用(import 它的使用方): exceptions.py, wrappers/response.py\n文件内定义的类: Response\n文件内定义的函数: _set_property, fget, on_update, fset, __init__, __repr__, status_code, status_code, status, status, _clean_status, set_cookie, delete_cookie, is_json, mimetype, mimetype, mimetype_params, on_update, retry_after, retry_after, cache_control, on_update, set_etag, get_etag, content_range, on_update, content_range, www_authenticate, on_update, www_authenticate\n\n[代码片段 2] 来源: sansio/utils.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/utils.py\n它依赖(import)的仓库内文件: _internal.py, exceptions.py, http.py, urls.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, sansio/request.py, wsgi.py\n文件内定义的类: (无)\n文件内定义的函数: host_is_trusted, get_host, get_current_url, get_content_length\n\n[代码片段 3] 来源: sansio/response.py (第 527-547 行)\n文件: sansio/response.py\n函数: content_range\ndef content_range(self) -> ContentRange:\n        \"\"\"The ``Content-Range`` header as a\n        :class:`~werkzeug.datastructures.ContentRange` object. Available\n        even if the header is not set.\n\n        .. versionadded:: 0.7\n        \"\"\"\n\n        def on_update(rng: ContentRange) -> None:\n            if not rng:\n                del self.headers[\"content-range\"]\n            else:\n                self.headers[\"Content-Range\"] = rng.to_header()\n\n        rv = parse_content_range_header(self.headers.get(\"content-range\"), on_update)\n        # always provide a content range object to make the descriptor\n        # more user friendly.  It provides an unset() method that can be\n        # used to remove the header quickly.\n        if rv is None:\n            rv = ContentRange(None, None, None, on_update=on_update)\n        return rv\n\n[代码片段 4] 来源: sansio/http.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/http.py\n它依赖(import)的仓库内文件: _internal.py, http.py\n它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n文件内定义的类: (无)\n文件内定义的函数: is_resource_modified, _cookie_unslash_replace, parse_cookie\n\n[代码片段 5] 来源: sansio/response.py (第 662-683 行)\n文件: sansio/response.py\n函数: content_security_policy_report_only\ndef content_security_policy_report_only(self) -> ContentSecurityPolicy:\n        \"\"\"The ``Content-Security-policy-report-only`` header as a\n        :class:`~werkzeug.datastructures.ContentSecurityPolicy` object. Available\n        even if the header is not set.\n\n        The Content-Security-Policy-Report-Only header adds a csp policy\n        that is not enforced but is reported thereby helping detect\n        certain types of attacks.\n        \"\"\"\n\n        def on_update(csp: ContentSecurityPolicy) -> None:\n            if not csp:\n                del self.headers[\"content-security-policy-report-only\"]\n            else:\n                self.headers[\"Content-Security-policy-report-only\"] = csp.to_header()\n\n        rv = parse_csp_header(\n            self.headers.get(\"content-security-policy-report-only\"), on_update\n        )\n        if rv is None:\n            rv = ContentSecurityPolicy(None, on_update=on_update)\n        return rv\n\n[问题] 在 werkzeug 中,sansio/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "sansio/response.py",
+   "sansio/utils.py",
+   "sansio/response.py",
+   "sansio/http.py",
+   "sansio/response.py"
+  ],
+  "expected_sources": [
+   "sansio/response.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures",
+    "cache_control",
+    "http",
+    "utils"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-08",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,serving.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: serving.py (第 0-0 行)\n[依赖图卡片] 文件 serving.py\n它依赖(import)的仓库内文件: _internal.py, _reloader.py, debug/__init__.py, debug/tbtools.py, exceptions.py, http.py, middleware/shared_data.py, urls.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, testapp.py\n文件内定义的类: _SslDummy, ForkingMixIn, DechunkedInput, WSGIRequestHandler, BaseWSGIServer, ThreadedWSGIServer, ForkingWSGIServer\n文件内定义的函数: __getattr__, __init__, readable, read_chunk_len, readinto, server_version, make_environ, run_wsgi, write, start_response, execute, handle, connection_dropped, __getattr__, address_string, port_integer, log_request, log_error, log_message, log, _ansi_style, generate_adhoc_ssl_pair, make_ssl_devcert, generate_adhoc_ssl_context, load_ssl_context, is_ssl_error, select_address_family, get_sockaddr, get_interface_ip, __init__\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: serving.py (第 100-103 行)\n文件: serving.py\n函数: __init__\ndef __init__(self, rfile: t.IO[bytes]) -> None:\n        self._rfile = rfile\n        self._done = False\n        self._len = 0\n\n[代码片段 4] 来源: serving.py (第 889-904 行)\n文件: serving.py\n函数: __init__\ndef __init__(\n        self,\n        host: str,\n        port: int,\n        app: WSGIApplication,\n        processes: int = 40,\n        handler: type[WSGIRequestHandler] | None = None,\n        passthrough_errors: bool = False,\n        ssl_context: _TSSLContextArg | None = None,\n        fd: int | None = None,\n    ) -> None:\n        if not can_fork:\n            raise ValueError(\"Your platform does not support forking.\")\n\n        super().__init__(host, port, app, handler, passthrough_errors, ssl_context, fd)\n        self.max_children = processes\n\n[代码片段 5] 来源: serving.py (第 818-824 行)\n文件: serving.py\n函数: serve_forever\ndef serve_forever(self, poll_interval: float = 0.5) -> None:\n        try:\n            super().serve_forever(poll_interval=poll_interval)\n        except KeyboardInterrupt:\n            pass\n        finally:\n            self.server_close()\n\n[问题] 在 werkzeug 中,serving.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "serving.py",
+   "PROVENANCE.md",
+   "serving.py",
+   "serving.py",
+   "serving.py"
+  ],
+  "expected_sources": [
+   "serving.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "_reloader",
+    "debug",
+    "tbtools",
+    "exceptions",
+    "http",
+    "shared_data",
+    "urls"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-09",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,test.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 2] 来源: test.py (第 0-0 行)\n[依赖图卡片] 文件 test.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, http.py, sansio/multipart.py, urls.py, utils.py, wrappers/request.py, wrappers/response.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: EnvironBuilder, ClientRedirectError, Client, TestResponse, Cookie\n文件内定义的函数: stream_encode_multipart, write_binary, encode_multipart, _iter_data, __init__, from_environ, _add_file_from_data, _make_base_url, base_url, base_url, content_type, content_type, mimetype, mimetype, mimetype_params, on_update, content_length, content_length, _get_form, _set_form, form, form, files, files, input_stream, input_stream, query_string, query_string, args, args\n\n[代码片段 3] 来源: testapp.py (第 0-0 行)\n[依赖图卡片] 文件 testapp.py\n它依赖(import)的仓库内文件: serving.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: iter_sys_path, strip, strip, test_app, _get_werkzeug_version\n\n[代码片段 4] 来源: testapp.py (第 116-176 行)\n文件: testapp.py\n函数: test_app\ndef test_app(req: Request) -> Response:\n    \"\"\"Simple test application that dumps the environment.  You can use\n    it to check if Werkzeug is working properly:\n\n    .. sourcecode:: pycon\n\n        >>> from werkzeug.serving import run_simple\n        >>> from werkzeug.testapp import test_app\n        >>> run_simple('localhost', 3000, test_app)\n         * Running on http://localhost:3000/\n\n    The application displays important information from the WSGI environment,\n    the Python interpreter and the installed libraries.\n    \"\"\"\n    try:\n        import pkg_resources\n    except ImportError:\n        eggs: t.Iterable[t.Any] = ()\n    else:\n        eggs = sorted(\n            pkg_resources.working_set,\n            key=lambda x: x.project_name.lower(),\n        )\n    python_eggs = []\n    for egg in eggs:\n        try:\n            version = egg.version\n        except (ValueError, AttributeError):\n            version = \"unknown\"\n        python_eggs.append(\n            f\"<li>{escape(egg.project_name)} <small>[{escape(version)}]</small>\"\n        )\n\n    wsgi_env = []\n    sorted_environ = sorted(req.environ.items(), key=lambda x: repr(x[0]).lower())\n    for key, value in sorted_environ:\n        value = \"\".join(wrap(str(escape(repr(value)))))\n        wsgi_env.append(f\"<tr><th>{escape(key)}<td><code>{value}</code>\")\n\n    sys_path = []\n    for item, virtual, expanded in iter_sys_path():\n        css = []\n        if virtual:\n            css.append(\"virtual\")\n        if expanded:\n            css.append(\"exp\")\n        class_str = f' class=\"{\" \".join(css)}\"' if css else \"\"\n        sys_path.append(f\"<li{class_str}>{escape(item)}\")\n\n    context = {\n        \"python_version\": \"<br>\".join(escape(sys.version).splitlines()),\n        \"platform\": escape(sys.platform),\n        \"os\": escape(os.name),\n        \"api_version\": sys.api_version,\n        \"byteorder\": sys.byteorder,\n        \"werkzeug_version\": _get_werkzeug_version(),\n        \"python_eggs\": \"\\n\".join(python_eggs),\n        \"wsgi_env\": \"\\n\".join(wsgi_env),\n        \"sys_path\": \"\\n\".join(sys_path),\n    }\n    return Response(TEMPLATE % context, mimetype=\"text/html\")\n\n[代码片段 5] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[问题] 在 werkzeug 中,test.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "testapp.py",
+   "test.py",
+   "testapp.py",
+   "testapp.py",
+   "testapp.py"
+  ],
+  "expected_sources": [
+   "test.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "http",
+    "multipart",
+    "urls",
+    "utils",
+    "request",
+    "response",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-10",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/request.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/request.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, formparser.py, sansio/request.py, test.py, utils.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): _internal.py, debug/__init__.py, exceptions.py, routing/exceptions.py, routing/map.py, test.py, testapp.py, utils.py, wrappers/__init__.py, wrappers/response.py\n文件内定义的类: Request\n文件内定义的函数: __init__, from_values, application, application, _get_file_stream, want_form_data_parsed, make_form_data_parser, _load_form_data, _get_stream_for_parsing, close, __enter__, __exit__, stream, data, get_data, get_data, get_data, form, values, files, script_root, url_root, json, get_json, get_json, get_json, on_json_loading_failed\n\n[代码片段 2] 来源: wrappers/request.py (第 384-389 行)\n文件: wrappers/request.py\n函数: get_data\ndef get_data(\n        self,\n        cache: bool = True,\n        as_text: t.Literal[True] = ...,\n        parse_form_data: bool = False,\n    ) -> str: ...\n\n[代码片段 3] 来源: wrappers/request.py (第 376-381 行)\n文件: wrappers/request.py\n函数: get_data\ndef get_data(\n        self,\n        cache: bool = True,\n        as_text: t.Literal[False] = False,\n        parse_form_data: bool = False,\n    ) -> bytes: ...\n\n[代码片段 4] 来源: wrappers/__init__.py (第 1-3 行)\n文件: wrappers/__init__.py\n(模块级代码:import、常量、配置)\nfrom .request import Request as Request\nfrom .response import Response as Response\nfrom .response import ResponseStream as ResponseStream\n\n[代码片段 5] 来源: wrappers/request.py (第 449-475 行)\n文件: wrappers/request.py\n函数: values\ndef values(self) -> CombinedMultiDict[str, str]:\n        \"\"\"A :class:`werkzeug.datastructures.CombinedMultiDict` that\n        combines :attr:`args` and :attr:`form`.\n\n        For GET requests, only ``args`` are present, not ``form``.\n\n        .. versionchanged:: 2.0\n            For GET requests, only ``args`` are present, not ``form``.\n        \"\"\"\n        sources = [self.args]\n\n        if self.method != \"GET\":\n            # GET requests can have a body, and some caching proxies\n            # might not treat that differently than a normal GET\n            # request, allowing form data to \"invisibly\" affect the\n            # cache without indication in the query string / URL.\n            sources.append(self.form)\n\n        args = []\n\n        for d in sources:\n            if not isinstance(d, MultiDict):\n                d = MultiDict(d)\n\n            args.append(d)\n\n        return CombinedMultiDict(args)\n\n[问题] 在 werkzeug 中,wrappers/request.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "wrappers/request.py",
+   "wrappers/request.py",
+   "wrappers/request.py",
+   "wrappers/__init__.py",
+   "wrappers/request.py"
+  ],
+  "expected_sources": [
+   "wrappers/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "formparser",
+    "request",
+    "test",
+    "utils",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "FWD-11",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/response.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/response.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, exceptions.py, routing/exceptions.py, test.py, testapp.py, utils.py, wrappers/__init__.py\n文件内定义的类: Response, ResponseStream\n文件内定义的函数: _iter_encoded, __init__, call_on_close, __repr__, force_type, from_app, get_data, get_data, get_data, set_data, calculate_content_length, _ensure_sequence, make_sequence, iter_encoded, is_streamed, is_sequence, close, __enter__, __exit__, freeze, get_wsgi_headers, get_app_iter, get_wsgi_response, __call__, json, get_json, get_json, get_json, stream, _wrap_range_response\n\n[代码片段 2] 来源: wrappers/response.py (第 266-266 行)\n文件: wrappers/response.py\n函数: get_data\ndef get_data(self, as_text: t.Literal[True]) -> str: ...\n\n[代码片段 3] 来源: wrappers/__init__.py (第 1-3 行)\n文件: wrappers/__init__.py\n(模块级代码:import、常量、配置)\nfrom .request import Request as Request\nfrom .response import Response as Response\nfrom .response import ResponseStream as ResponseStream\n\n[代码片段 4] 来源: wrappers/response.py (第 804-806 行)\n文件: wrappers/response.py\n函数: __init__\ndef __init__(self, response: Response):\n        self.response = response\n        self.closed = False\n\n[代码片段 5] 来源: wrappers/response.py (第 410-411 行)\n文件: wrappers/response.py\n函数: __exit__\ndef __exit__(self, exc_type, exc_value, tb):  # type: ignore\n        self.close()\n\n[问题] 在 werkzeug 中,wrappers/response.py 这个文件直接依赖(import)了哪些项目内的模块?请列出文件。",
+  "retrieved_sources": [
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/__init__.py",
+   "wrappers/response.py",
+   "wrappers/response.py"
+  ],
+  "expected_sources": [
+   "wrappers/response.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "http",
+    "response",
+    "test",
+    "urls",
+    "utils",
+    "request",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-01",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 _internal.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 4] 来源: _internal.py (第 78-97 行)\n文件: _internal.py\n函数: _log\ndef _log(type: str, message: str, *args: t.Any, **kwargs: t.Any) -> None:\n    \"\"\"Log a message to the 'werkzeug' logger.\n\n    The logger is created the first time it is needed. If there is no\n    level set, it is set to :data:`logging.INFO`. If there is no handler\n    for the logger's effective level, a :class:`logging.StreamHandler`\n    is added.\n    \"\"\"\n    global _logger\n\n    if _logger is None:\n        _logger = logging.getLogger(\"werkzeug\")\n\n        if _logger.level == logging.NOTSET:\n            _logger.setLevel(logging.INFO)\n\n        if not _has_level_handler(_logger):\n            _logger.addHandler(_ColorStreamHandler())\n\n    getattr(_logger, type)(message.rstrip(), *args, **kwargs)\n\n[代码片段 5] 来源: _internal.py (第 0-0 行)\n[依赖图卡片] 文件 _internal.py\n它依赖(import)的仓库内文件: wrappers/request.py\n它被这些文件依赖/使用(import 它的使用方): _reloader.py, datastructures/file_storage.py, datastructures/headers.py, datastructures/mixins.py, datastructures/structures.py, debug/__init__.py, exceptions.py, formparser.py, http.py, routing/map.py, sansio/http.py, sansio/utils.py, serving.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: _Missing, _ColorStreamHandler, _DictAccessorProperty\n文件内定义的函数: __repr__, __reduce__, _wsgi_decoding_dance, _wsgi_encoding_dance, _get_environ, _has_level_handler, __init__, _log, _dt_as_utc, _dt_as_utc, _dt_as_utc, __init__, lookup, __get__, __get__, __get__, __set__, __delete__, __repr__, _plain_int\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 _internal.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "testapp.py",
+   "testapp.py",
+   "_internal.py",
+   "_internal.py"
+  ],
+  "expected_sources": [
+   "_internal.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_reloader",
+    "file_storage",
+    "headers",
+    "mixins",
+    "structures",
+    "debug",
+    "exceptions",
+    "formparser",
+    "http",
+    "map",
+    "utils",
+    "serving",
+    "test",
+    "request",
+    "response"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-02",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/__init__.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 4] 来源: datastructures/range.py (第 85-92 行)\n文件: datastructures/range.py\n函数: make_content_range\ndef make_content_range(self, length: int | None) -> ContentRange | None:\n        \"\"\"Creates a :class:`~werkzeug.datastructures.ContentRange` object\n        from the current range and given content length.\n        \"\"\"\n        rng = self.range_for_length(length)\n        if rng is not None:\n            return ContentRange(self.units, rng[0], rng[1], length)\n        return None\n\n[代码片段 5] 来源: datastructures/etag.py (第 0-0 行)\n[依赖图卡片] 文件 datastructures/etag.py\n它依赖(import)的仓库内文件: http.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/__init__.py\n文件内定义的类: ETags\n文件内定义的函数: __init__, as_set, is_weak, is_strong, contains_weak, contains, contains_raw, to_header, __call__, __bool__, __str__, __len__, __iter__, __contains__, __repr__\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 datastructures/__init__.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "testapp.py",
+   "testapp.py",
+   "datastructures/range.py",
+   "datastructures/etag.py"
+  ],
+  "expected_sources": [
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "map",
+    "rules",
+    "multipart",
+    "request",
+    "response",
+    "test",
+    "urls",
+    "utils"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-03",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/mixins.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: datastructures/mixins.py (第 48-49 行)\n文件: datastructures/mixins.py\n函数: __imul__\ndef __imul__(self, other: t.Any) -> t.NoReturn:\n        _immutable_error(self)\n\n[代码片段 2] 来源: datastructures/mixins.py (第 206-207 行)\n文件: datastructures/mixins.py\n函数: extend\ndef extend(self, arg: t.Any, /, **kwargs: t.Any) -> t.NoReturn:\n        _immutable_error(self)\n\n[代码片段 3] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 4] 来源: datastructures/mixins.py (第 212-213 行)\n文件: datastructures/mixins.py\n函数: __ior__\ndef __ior__(self, other: t.Any) -> t.NoReturn:\n        _immutable_error(self)\n\n[代码片段 5] 来源: datastructures/mixins.py (第 123-124 行)\n文件: datastructures/mixins.py\n函数: __ior__\ndef __ior__(self, other: t.Any) -> t.NoReturn:\n        _immutable_error(self)\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 datastructures/mixins.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "datastructures/mixins.py",
+   "datastructures/mixins.py",
+   "PROVENANCE.md",
+   "datastructures/mixins.py",
+   "datastructures/mixins.py"
+  ],
+  "expected_sources": [
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures",
+    "cache_control",
+    "headers",
+    "structures"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-04",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 datastructures/structures.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: datastructures/range.py (第 85-92 行)\n文件: datastructures/range.py\n函数: make_content_range\ndef make_content_range(self, length: int | None) -> ContentRange | None:\n        \"\"\"Creates a :class:`~werkzeug.datastructures.ContentRange` object\n        from the current range and given content length.\n        \"\"\"\n        rng = self.range_for_length(length)\n        if rng is not None:\n            return ContentRange(self.units, rng[0], rng[1], length)\n        return None\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 4] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 5] 来源: datastructures/structures.py (第 842-844 行)\n文件: datastructures/structures.py\n函数: __init__\ndef __init__(self, dicts: cabc.Iterable[MultiDict[K, V]] | None = None) -> None:\n        super().__init__()\n        self.dicts: list[MultiDict[K, V]] = list(dicts or ())\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 datastructures/structures.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "datastructures/range.py",
+   "testapp.py",
+   "testapp.py",
+   "datastructures/structures.py"
+  ],
+  "expected_sources": [
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures",
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "file_storage",
+    "headers"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-05",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 exceptions.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: exceptions.py (第 378-387 行)\n文件: exceptions.py\n函数: __init__\ndef __init__(\n        self,\n        valid_methods: t.Iterable[str] | None = None,\n        description: str | None = None,\n        response: SansIOResponse | None = None,\n    ) -> None:\n        \"\"\"Takes an optional list of valid http methods\n        starting with werkzeug 0.3 the list will be mandatory.\"\"\"\n        super().__init__(description=description, response=response)\n        self.valid_methods = valid_methods\n\n[代码片段 3] 来源: exceptions.py (第 0-0 行)\n[依赖图卡片] 文件 exceptions.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, http.py, sansio/response.py, wrappers/request.py, wrappers/response.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/headers.py, debug/__init__.py, formparser.py, middleware/http_proxy.py, routing/exceptions.py, routing/map.py, sansio/multipart.py, sansio/utils.py, serving.py, utils.py, wrappers/request.py, wrappers/response.py, wsgi.py\n文件内定义的类: HTTPException, BadRequest, BadRequestKeyError, ClientDisconnected, SecurityError, BadHost, Unauthorized, Forbidden, NotFound, MethodNotAllowed, NotAcceptable, RequestTimeout, Conflict, Gone, LengthRequired, PreconditionFailed, RequestEntityTooLarge, RequestURITooLarge, UnsupportedMediaType, RequestedRangeNotSatisfiable, ExpectationFailed, ImATeapot, MisdirectedRequest, UnprocessableEntity, Locked, FailedDependency, PreconditionRequired, _RetryAfter, TooManyRequests, RequestHeaderFieldsTooLarge, UnavailableForLegalReasons, InternalServerError, NotImplemented, BadGateway, ServiceUnavailable, GatewayTimeout, HTTPVersionNotSupported, Aborter\n文件内定义的函数: __init__, name, get_description, get_body, get_headers, get_response, get_response, get_response, __call__, __str__, __repr__, __init__, description, description, __init__, get_headers, __init__, get_headers, __init__, get_headers, __init__, get_headers, __init__, _find_exceptions, __init__, __call__, abort\n\n[代码片段 4] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 5] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 exceptions.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "exceptions.py",
+   "exceptions.py",
+   "testapp.py",
+   "testapp.py"
+  ],
+  "expected_sources": [
+   "exceptions.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "headers",
+    "debug",
+    "formparser",
+    "http_proxy",
+    "exceptions",
+    "map",
+    "multipart",
+    "utils",
+    "serving",
+    "request",
+    "response",
+    "wsgi"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-06",
+  "category": "reverse_dep",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 formparser.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 文件 formparser.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/multipart.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: TStreamFactory, FormDataParser, MultiPartParser\n文件内定义的函数: __call__, default_stream_factory, parse_form_data, __init__, parse_from_environ, parse, _parse_multipart, _parse_urlencoded, __init__, fail, get_part_charset, start_file_streaming, parse, _chunk_iter\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 270-289 行)\n文件: formparser.py\n函数: _parse_urlencoded\ndef _parse_urlencoded(\n        self,\n        stream: t.IO[bytes],\n        mimetype: str,\n        content_length: int | None,\n        options: dict[str, str],\n    ) -> t_parse_result:\n        if (\n            self.max_form_memory_size is not None\n            and content_length is not None\n            and content_length > self.max_form_memory_size\n        ):\n            raise RequestEntityTooLarge()\n\n        items = parse_qsl(\n            stream.read().decode(),\n            keep_blank_values=True,\n            errors=\"werkzeug.url_quote\",\n        )\n        return stream, self.cls(items), self.cls()\n\n[代码片段 4] 来源: formparser.py (第 41-47 行)\n文件: formparser.py\n函数: __call__\ndef __call__(\n            self,\n            total_content_length: int | None,\n            content_type: str | None,\n            filename: str | None,\n            content_length: int | None = None,\n        ) -> t.IO[bytes]: ...\n\n[代码片段 5] 来源: formparser.py (第 170-192 行)\n文件: formparser.py\n函数: __init__\ndef __init__(\n        self,\n        stream_factory: TStreamFactory | None = None,\n        max_form_memory_size: int | None = None,\n        max_content_length: int | None = None,\n        cls: type[MultiDict[str, t.Any]] | None = None,\n        silent: bool = True,\n        *,\n        max_form_parts: int | None = None,\n    ) -> None:\n        if stream_factory is None:\n            stream_factory = default_stream_factory\n\n        self.stream_factory = stream_factory\n        self.max_form_memory_size = max_form_memory_size\n        self.max_content_length = max_content_length\n        self.max_form_parts = max_form_parts\n\n        if cls is None:\n            cls = t.cast(\"type[MultiDict[str, t.Any]]\", MultiDict)\n\n        self.cls = cls\n        self.silent = silent\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 formparser.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "formparser.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "formparser.py",
+   "formparser.py"
+  ],
+  "expected_sources": [
+   "formparser.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "request"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-07",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 http.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 4] 来源: http.py (第 0-0 行)\n[依赖图卡片] 文件 http.py\n它依赖(import)的仓库内文件: _internal.py, sansio/__init__.py\n它被这些文件依赖/使用(import 它的使用方): datastructures/auth.py, datastructures/csp.py, datastructures/etag.py, debug/__init__.py, exceptions.py, formparser.py, middleware/http_proxy.py, middleware/lint.py, middleware/proxy_fix.py, middleware/shared_data.py, sansio/http.py, sansio/multipart.py, sansio/request.py, sansio/response.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n文件内定义的类: COEP, COOP\n文件内定义的函数: quote_header_value, unquote_header_value, dump_options_header, dump_header, dump_csp_header, parse_list_header, parse_dict_header, parse_options_header, parse_accept_header, parse_accept_header, parse_accept_header, parse_cache_control_header, parse_cache_control_header, parse_cache_control_header, parse_csp_header, parse_csp_header, parse_csp_header, parse_set_header, parse_if_range_header, parse_range_header, parse_content_range_header, quote_etag, unquote_etag, unquote_etag, unquote_etag, parse_etags, generate_etag, parse_date, http_date, parse_age\n\n[代码片段 5] 来源: middleware/http_proxy.py (第 110-221 行)\n文件: middleware/http_proxy.py\n函数: application\ndef application(\n            environ: WSGIEnvironment, start_response: StartResponse\n        ) -> t.Iterable[bytes]:\n            headers = list(EnvironHeaders(environ).items())\n            headers[:] = [\n                (k, v)\n                for k, v in headers\n                if not is_hop_by_hop_header(k)\n                and k.lower() not in (\"content-length\", \"host\")\n            ]\n            headers.append((\"Connection\", \"close\"))\n\n            if opts[\"host\"] == \"<auto>\":\n                headers.append((\"Host\", host))\n            elif opts[\"host\"] is None:\n                headers.append((\"Host\", environ[\"HTTP_HOST\"]))\n            else:\n                headers.append((\"Host\", opts[\"host\"]))\n\n            headers.extend(opts[\"headers\"].items())\n            remote_path = path\n\n            if opts[\"remove_prefix\"]:\n                remote_path = remote_path[len(prefix) :].lstrip(\"/\")\n                remote_path = f\"{target.path.rstrip('/')}/{remote_path}\"\n\n            content_length = environ.get(\"CONTENT_LENGTH\")\n            chunked = False\n\n            if content_length not in (\"\", None):\n                headers.append((\"Content-Length\", content_length))  # type: ignore\n            elif content_length is not None:\n                headers.append((\"Transfer-Encoding\", \"chunked\"))\n                chunked = True\n\n            try:\n                if target.scheme == \"http\":\n                    con = client.HTTPConnection(\n                        host, target.port or 80, timeout=self.timeout\n                    )\n                elif target.scheme == \"https\":\n                    con = client.HTTPSConnection(\n                        host,\n                        target.port or 443,\n                        timeout=self.timeout,\n                        context=opts[\"ssl_context\"],\n                    )\n                else:\n                    raise RuntimeError(\n                        \"Target scheme must be 'http' or 'https', got\"\n                        f\" {target.scheme!r}.\"\n                    )\n\n                con.connect()\n                # safe = https://url.spec.whatwg.org/#url-path-segment-string\n                # as well as percent for things that are already quoted\n                remote_url = quote(remote_path, safe=\"!$&'()*+,/:;=@%\")\n                querystring = environ[\"QUERY_STRING\"]\n\n                if querystring:\n                    remote_url = f\"{remote_url}?{querystring}\"\n\n                con.putrequest(environ[\"REQUEST_METHOD\"], remote_url, skip_host=True)\n\n                for k, v in headers:\n                    if k.lower() == \"connection\":\n                        v = \"close\"\n\n                    con.putheader(k, v)\n\n                con.endheaders()\n                stream = get_input_stream(environ)\n\n                while True:\n                    data = stream.read(self.chunk_size)\n\n                    if not data:\n                        break\n\n                    if chunked:\n                        con.send(b\"%x\\r\\n%s\\r\\n\" % (len(data), data))\n                    else:\n                        con.send(data)\n\n                resp = con.getresponse()\n            except OSError:\n                from ..exceptions import BadGateway\n\n                return BadGateway()(environ, start_response)\n\n            start_response(\n                f\"{resp.status} {resp.reason}\",\n                [\n                    (k.title(), v)\n                    for k, v in resp.getheaders()\n                    if not is_hop_by_hop_header(k)\n                ],\n            )\n\n            def read() -> t.Iterator[bytes]:\n                while True:\n                    try:\n                        data = resp.read(self.chunk_size)\n                    except OSError:\n                        break\n\n                    if not data:\n                        break\n\n                    yield data\n\n            return read()\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 http.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "testapp.py",
+   "testapp.py",
+   "http.py",
+   "middleware/http_proxy.py"
+  ],
+  "expected_sources": [
+   "http.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "auth",
+    "csp",
+    "etag",
+    "debug",
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "proxy_fix",
+    "shared_data",
+    "http",
+    "multipart",
+    "request",
+    "response",
+    "utils",
+    "serving",
+    "test"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-08",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 routing/rules.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 文件 routing/rules.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, routing/converters.py, routing/map.py, urls.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/exceptions.py, routing/map.py, routing/matcher.py\n文件内定义的类: Weighting, RulePart, RuleFactory, Subdomain, Submount, EndpointPrefix, RuleTemplate, RuleTemplateFactory, Rule\n文件内定义的函数: _find, _pythonize, parse_converter_args, get_rules, __init__, get_rules, __init__, get_rules, __init__, get_rules, __init__, __call__, __init__, get_rules, _prefix_names, __init__, empty, get_empty_kwargs, get_rules, refresh, bind, get_converter, _encode_query_vars, _parse_rule, compile, _get_func_code, _compile_builder, _convert, _parts, _join\n\n[代码片段 2] 来源: routing/rules.py (第 270-293 行)\n文件: routing/rules.py\n函数: get_rules\ndef get_rules(self, map: Map) -> t.Iterator[Rule]:\n        for rulefactory in self.rules:\n            for rule in rulefactory.get_rules(map):\n                new_defaults = subdomain = None\n                if rule.defaults:\n                    new_defaults = {}\n                    for key, value in rule.defaults.items():\n                        if isinstance(value, str):\n                            value = Template(value).substitute(self.context)\n                        new_defaults[key] = value\n                if rule.subdomain is not None:\n                    subdomain = Template(rule.subdomain).substitute(self.context)\n                new_endpoint = rule.endpoint\n                if isinstance(new_endpoint, str):\n                    new_endpoint = Template(new_endpoint).substitute(self.context)\n                yield Rule(\n                    Template(rule.rule).substitute(self.context),\n                    new_defaults,\n                    subdomain,\n                    rule.methods,\n                    rule.build_only,\n                    new_endpoint,\n                    rule.strict_slashes,\n                )\n\n[代码片段 3] 来源: routing/rules.py (第 250-251 行)\n文件: routing/rules.py\n函数: __init__\ndef __init__(self, rules: t.Iterable[Rule]) -> None:\n        self.rules = list(rules)\n\n[代码片段 4] 来源: routing/rules.py (第 172-177 行)\n文件: routing/rules.py\n函数: get_rules\ndef get_rules(self, map: Map) -> t.Iterator[Rule]:\n        for rulefactory in self.rules:\n            for rule in rulefactory.get_rules(map):\n                rule = rule.empty()\n                rule.subdomain = self.subdomain\n                yield rule\n\n[代码片段 5] 来源: routing/rules.py (第 198-203 行)\n文件: routing/rules.py\n函数: get_rules\ndef get_rules(self, map: Map) -> t.Iterator[Rule]:\n        for rulefactory in self.rules:\n            for rule in rulefactory.get_rules(map):\n                rule = rule.empty()\n                rule.rule = self.path + rule.rule\n                yield rule\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 routing/rules.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "routing/rules.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing",
+    "exceptions",
+    "map",
+    "matcher"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-09",
+  "category": "reverse_dep",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 sansio/request.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: sansio/request.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/request.py\n它依赖(import)的仓库内文件: datastructures/__init__.py, http.py, sansio/http.py, sansio/utils.py, user_agent.py, utils.py\n它被这些文件依赖/使用(import 它的使用方): wrappers/request.py\n文件内定义的类: Request\n文件内定义的函数: __init__, __repr__, args, access_route, full_path, is_secure, url, base_url, root_url, host_url, host, cookies, content_length, _parse_content_type, mimetype, mimetype_params, pragma, accept_mimetypes, accept_charsets, accept_encodings, accept_languages, cache_control, if_match, if_none_match, if_modified_since, if_unmodified_since, if_range, range, user_agent, authorization\n\n[代码片段 2] 来源: sansio/request.py (第 158-177 行)\n文件: sansio/request.py\n函数: args\ndef args(self) -> MultiDict[str, str]:\n        \"\"\"The parsed URL parameters (the part in the URL after the question\n        mark).\n\n        By default an\n        :class:`~werkzeug.datastructures.ImmutableMultiDict`\n        is returned from this function.  This can be changed by setting\n        :attr:`parameter_storage_class` to a different type.  This might\n        be necessary if the order of the form data is important.\n\n        .. versionchanged:: 2.3\n            Invalid bytes remain percent encoded.\n        \"\"\"\n        return self.parameter_storage_class(\n            parse_qsl(\n                self.query_string.decode(),\n                keep_blank_values=True,\n                errors=\"werkzeug.url_quote\",\n            )\n        )\n\n[代码片段 3] 来源: sansio/request.py (第 401-406 行)\n文件: sansio/request.py\n函数: cache_control\ndef cache_control(self) -> RequestCacheControl:\n        \"\"\"A :class:`~werkzeug.datastructures.RequestCacheControl` object\n        for the incoming cache control headers.\n        \"\"\"\n        cache_control = self.headers.get(\"Cache-Control\")\n        return parse_cache_control_header(cache_control, None, RequestCacheControl)\n\n[代码片段 4] 来源: sansio/http.py (第 0-0 行)\n[依赖图卡片] 文件 sansio/http.py\n它依赖(import)的仓库内文件: _internal.py, http.py\n它被这些文件依赖/使用(import 它的使用方): sansio/request.py\n文件内定义的类: (无)\n文件内定义的函数: is_resource_modified, _cookie_unslash_replace, parse_cookie\n\n[代码片段 5] 来源: sansio/request.py (第 466-476 行)\n文件: sansio/request.py\n函数: user_agent\ndef user_agent(self) -> UserAgent:\n        \"\"\"The user agent. Use ``user_agent.string`` to get the header\n        value. Set :attr:`user_agent_class` to a subclass of\n        :class:`~werkzeug.user_agent.UserAgent` to provide parsing for\n        the other properties or other extended data.\n\n        .. versionchanged:: 2.1\n            The built-in parser was removed. Set ``user_agent_class`` to a ``UserAgent``\n            subclass to parse data from the string.\n        \"\"\"\n        return self.user_agent_class(self.headers.get(\"User-Agent\", \"\"))\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 sansio/request.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "sansio/request.py",
+   "sansio/request.py",
+   "sansio/request.py",
+   "sansio/http.py",
+   "sansio/request.py"
+  ],
+  "expected_sources": [
+   "sansio/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "request"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-10",
+  "category": "reverse_dep",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 urls.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 3] 来源: urls.py (第 0-0 行)\n[依赖图卡片] 文件 urls.py\n它依赖(import)的仓库内文件: datastructures/__init__.py\n它被这些文件依赖/使用(import 它的使用方): routing/map.py, routing/rules.py, sansio/utils.py, serving.py, test.py, wrappers/response.py\n文件内定义的类: (无)\n文件内定义的函数: _codec_error_url_quote, _make_unquote_part, _unquote_partial, uri_to_iri, iri_to_uri, _decode_idna, _urlencode\n\n[代码片段 4] 来源: urls.py (第 37-45 行)\n文件: urls.py\n函数: _unquote_partial\ndef _unquote_partial(value: str) -> str:\n        parts = iter(pattern.split(value))\n        out = []\n\n        for part in parts:\n            out.append(unquote(part, \"utf-8\", \"werkzeug.url_quote\"))\n            out.append(next(parts, \"\"))\n\n        return \"\".join(out)\n\n[代码片段 5] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 urls.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "testapp.py",
+   "urls.py",
+   "urls.py",
+   "testapp.py"
+  ],
+  "expected_sources": [
+   "urls.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "map",
+    "rules",
+    "utils",
+    "serving",
+    "test",
+    "response"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-11",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 utils.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 文件 utils.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, security.py, wrappers/__init__.py, wrappers/request.py, wrappers/response.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, debug/tbtools.py, middleware/shared_data.py, routing/exceptions.py, sansio/request.py, sansio/response.py, test.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: cached_property, environ_property, header_property, ImportStringError\n文件内定义的函数: __init__, __set__, __get__, __delete__, lookup, lookup, get_content_type, secure_filename, redirect, append_slash_redirect, send_file, send_from_directory, import_string, find_modules, __init__, __repr__\n\n[代码片段 3] 来源: utils.py (第 653-681 行)\n文件: utils.py\n函数: __init__\ndef __init__(self, import_name: str, exception: BaseException) -> None:\n        self.import_name = import_name\n        self.exception = exception\n        msg = import_name\n        name = \"\"\n        tracked = []\n        for part in import_name.replace(\":\", \".\").split(\".\"):\n            name = f\"{name}.{part}\" if name else part\n            imported = import_string(name, silent=True)\n            if imported:\n                tracked.append((name, getattr(imported, \"__file__\", None)))\n            else:\n                track = [f\"- {n!r} found in {i!r}.\" for n, i in tracked]\n                track.append(f\"- {name!r} not found.\")\n                track_str = \"\\n\".join(track)\n                msg = (\n                    f\"import_string() failed for {import_name!r}. Possible reasons\"\n                    f\" are:\\n\\n\"\n                    \"- missing __init__.py in a package;\\n\"\n                    \"- package or module path not included in sys.path;\\n\"\n                    \"- duplicated package or module name taking precedence in\"\n                    \" sys.path;\\n\"\n                    \"- missing module, class, function or variable;\\n\\n\"\n                    f\"Debugged import:\\n\\n{track_str}\\n\\n\"\n                    f\"Original exception:\\n\\n{type(exception).__name__}: {exception}\"\n                )\n                break\n\n        super().__init__(msg)\n\n[代码片段 4] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 5] 来源: utils.py (第 71-80 行)\n文件: utils.py\n函数: __init__\ndef __init__(\n        self,\n        fget: t.Callable[[t.Any], _T],\n        name: str | None = None,\n        doc: str | None = None,\n    ) -> None:\n        super().__init__(fget, doc=doc)\n        self.__name__ = name or fget.__name__\n        self.slot_name = f\"_cache_{self.__name__}\"\n        self.__module__ = fget.__module__\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 utils.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "utils.py",
+   "utils.py",
+   "testapp.py",
+   "utils.py"
+  ],
+  "expected_sources": [
+   "utils.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "debug",
+    "tbtools",
+    "shared_data",
+    "exceptions",
+    "request",
+    "response",
+    "test"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-12",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 wrappers/request.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/request.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/request.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, formparser.py, sansio/request.py, test.py, utils.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): _internal.py, debug/__init__.py, exceptions.py, routing/exceptions.py, routing/map.py, test.py, testapp.py, utils.py, wrappers/__init__.py, wrappers/response.py\n文件内定义的类: Request\n文件内定义的函数: __init__, from_values, application, application, _get_file_stream, want_form_data_parsed, make_form_data_parser, _load_form_data, _get_stream_for_parsing, close, __enter__, __exit__, stream, data, get_data, get_data, get_data, form, values, files, script_root, url_root, json, get_json, get_json, get_json, on_json_loading_failed\n\n[代码片段 2] 来源: wrappers/request.py (第 449-475 行)\n文件: wrappers/request.py\n函数: values\ndef values(self) -> CombinedMultiDict[str, str]:\n        \"\"\"A :class:`werkzeug.datastructures.CombinedMultiDict` that\n        combines :attr:`args` and :attr:`form`.\n\n        For GET requests, only ``args`` are present, not ``form``.\n\n        .. versionchanged:: 2.0\n            For GET requests, only ``args`` are present, not ``form``.\n        \"\"\"\n        sources = [self.args]\n\n        if self.method != \"GET\":\n            # GET requests can have a body, and some caching proxies\n            # might not treat that differently than a normal GET\n            # request, allowing form data to \"invisibly\" affect the\n            # cache without indication in the query string / URL.\n            sources.append(self.form)\n\n        args = []\n\n        for d in sources:\n            if not isinstance(d, MultiDict):\n                d = MultiDict(d)\n\n            args.append(d)\n\n        return CombinedMultiDict(args)\n\n[代码片段 3] 来源: wrappers/request.py (第 430-446 行)\n文件: wrappers/request.py\n函数: form\ndef form(self) -> ImmutableMultiDict[str, str]:\n        \"\"\"The form parameters.  By default an\n        :class:`~werkzeug.datastructures.ImmutableMultiDict`\n        is returned from this function.  This can be changed by setting\n        :attr:`parameter_storage_class` to a different type.  This might\n        be necessary if the order of the form data is important.\n\n        Please keep in mind that file uploads will not end up here, but instead\n        in the :attr:`files` attribute.\n\n        .. versionchanged:: 0.9\n\n            Previous to Werkzeug 0.9 this would only contain form data for POST\n            and PUT requests.\n        \"\"\"\n        self._load_form_data()\n        return self.form\n\n[代码片段 4] 来源: wrappers/request.py (第 478-498 行)\n文件: wrappers/request.py\n函数: files\ndef files(self) -> ImmutableMultiDict[str, FileStorage]:\n        \"\"\":class:`~werkzeug.datastructures.MultiDict` object containing\n        all uploaded files.  Each key in :attr:`files` is the name from the\n        ``<input type=\"file\" name=\"\">``.  Each value in :attr:`files` is a\n        Werkzeug :class:`~werkzeug.datastructures.FileStorage` object.\n\n        It basically behaves like a standard file object you know from Python,\n        with the difference that it also has a\n        :meth:`~werkzeug.datastructures.FileStorage.save` function that can\n        store the file on the filesystem.\n\n        Note that :attr:`files` will only contain data if the request method was\n        POST, PUT or PATCH and the ``<form>`` that posted to the request had\n        ``enctype=\"multipart/form-data\"``.  It will be empty otherwise.\n\n        See the :class:`~werkzeug.datastructures.MultiDict` /\n        :class:`~werkzeug.datastructures.FileStorage` documentation for\n        more details about the used data structure.\n        \"\"\"\n        self._load_form_data()\n        return self.files\n\n[代码片段 5] 来源: wrappers/__init__.py (第 1-3 行)\n文件: wrappers/__init__.py\n(模块级代码:import、常量、配置)\nfrom .request import Request as Request\nfrom .response import Response as Response\nfrom .response import ResponseStream as ResponseStream\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 wrappers/request.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "wrappers/request.py",
+   "wrappers/request.py",
+   "wrappers/request.py",
+   "wrappers/request.py",
+   "wrappers/__init__.py"
+  ],
+  "expected_sources": [
+   "wrappers/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "debug",
+    "exceptions",
+    "map",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers",
+    "response"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "REV-13",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些文件 import(依赖)了 wsgi.py?请尽可能完整列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: wsgi.py (第 0-0 行)\n[依赖图卡片] 文件 wsgi.py\n它依赖(import)的仓库内文件: exceptions.py, sansio/__init__.py, sansio/utils.py\n它被这些文件依赖/使用(import 它的使用方): formparser.py, local.py, middleware/http_proxy.py, middleware/lint.py, middleware/shared_data.py, routing/map.py, test.py, utils.py, wrappers/request.py, wrappers/response.py\n文件内定义的类: ClosingIterator, FileWrapper, _RangeWrapper, LimitedStream\n文件内定义的函数: responder, get_current_url, _get_server, get_host, get_content_length, get_input_stream, get_path_info, __init__, __iter__, __next__, close, wrap_file, __init__, close, seekable, seek, tell, __iter__, __next__, __init__, __iter__, _next_chunk, _first_iteration, _next, __next__, close, __init__, is_exhausted, on_exhausted, on_disconnect\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 4] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 5] 来源: wsgi.py (第 369-385 行)\n文件: wsgi.py\n函数: __init__\ndef __init__(\n        self,\n        iterable: t.Iterable[bytes] | t.IO[bytes],\n        start_byte: int = 0,\n        byte_range: int | None = None,\n    ):\n        self.iterable = iter(iterable)\n        self.byte_range = byte_range\n        self.start_byte = start_byte\n        self.end_byte = None\n\n        if byte_range is not None:\n            self.end_byte = start_byte + byte_range\n\n        self.read_length = 0\n        self.seekable = hasattr(iterable, \"seekable\") and iterable.seekable()\n        self.end_reached = False\n\n[问题] 在 werkzeug 中,哪些文件 import(依赖)了 wsgi.py?请尽可能完整列出。",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "wsgi.py",
+   "testapp.py",
+   "testapp.py",
+   "wsgi.py"
+  ],
+  "expected_sources": [
+   "wsgi.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "formparser",
+    "local",
+    "http_proxy",
+    "lint",
+    "shared_data",
+    "map",
+    "test",
+    "utils",
+    "request",
+    "response"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-01",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Accept 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RulePart\n定义位置: routing/rules.py 第 28-42 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 类 ValidationError\n定义位置: routing/converters.py 第 12-15 行\n它继承自: ValueError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 Accept 继承自哪个类?那个基类定义在哪个文件?",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/converters.py"
+  ],
+  "expected_sources": [
+   "datastructures/accept.py",
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableList",
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-02",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 FileMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RulePart\n定义位置: routing/rules.py 第 28-42 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 类 ValidationError\n定义位置: routing/converters.py 第 12-15 行\n它继承自: ValueError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 FileMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/converters.py"
+  ],
+  "expected_sources": [
+   "datastructures/file_storage.py",
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "MultiDict",
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-03",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 EnvironHeaders 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RulePart\n定义位置: routing/rules.py 第 28-42 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 类 ValidationError\n定义位置: routing/converters.py 第 12-15 行\n它继承自: ValueError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 EnvironHeaders 继承自哪个类?那个基类定义在哪个文件?",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/converters.py"
+  ],
+  "expected_sources": [
+   "datastructures/headers.py",
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableHeadersMixin",
+    "datastructures/mixins.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-04",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 RequestCacheControl 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RulePart\n定义位置: routing/rules.py 第 28-42 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 类 ValidationError\n定义位置: routing/converters.py 第 12-15 行\n它继承自: ValueError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 RequestCacheControl 继承自哪个类?那个基类定义在哪个文件?",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/converters.py"
+  ],
+  "expected_sources": [
+   "datastructures/cache_control.py",
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableDictMixin",
+    "datastructures/mixins.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-05",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 ContentSecurityPolicy 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RulePart\n定义位置: routing/rules.py 第 28-42 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 类 ValidationError\n定义位置: routing/converters.py 第 12-15 行\n它继承自: ValueError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 ContentSecurityPolicy 继承自哪个类?那个基类定义在哪个文件?",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/converters.py"
+  ],
+  "expected_sources": [
+   "datastructures/csp.py",
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "CallbackDict",
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-06",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 CombinedMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RulePart\n定义位置: routing/rules.py 第 28-42 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/converters.py (第 0-0 行)\n[依赖图卡片] 类 ValidationError\n定义位置: routing/converters.py 第 12-15 行\n它继承自: ValueError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 CombinedMultiDict 继承自哪个类?那个基类定义在哪个文件?",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/rules.py",
+   "routing/converters.py"
+  ],
+  "expected_sources": [
+   "datastructures/structures.py",
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableMultiDictMixin",
+    "datastructures/mixins.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-07",
+  "category": "inheritance",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/request.py (第 449-475 行)\n文件: wrappers/request.py\n函数: values\ndef values(self) -> CombinedMultiDict[str, str]:\n        \"\"\"A :class:`werkzeug.datastructures.CombinedMultiDict` that\n        combines :attr:`args` and :attr:`form`.\n\n        For GET requests, only ``args`` are present, not ``form``.\n\n        .. versionchanged:: 2.0\n            For GET requests, only ``args`` are present, not ``form``.\n        \"\"\"\n        sources = [self.args]\n\n        if self.method != \"GET\":\n            # GET requests can have a body, and some caching proxies\n            # might not treat that differently than a normal GET\n            # request, allowing form data to \"invisibly\" affect the\n            # cache without indication in the query string / URL.\n            sources.append(self.form)\n\n        args = []\n\n        for d in sources:\n            if not isinstance(d, MultiDict):\n                d = MultiDict(d)\n\n            args.append(d)\n\n        return CombinedMultiDict(args)\n\n[代码片段 2] 来源: wrappers/request.py (第 384-389 行)\n文件: wrappers/request.py\n函数: get_data\ndef get_data(\n        self,\n        cache: bool = True,\n        as_text: t.Literal[True] = ...,\n        parse_form_data: bool = False,\n    ) -> str: ...\n\n[代码片段 3] 来源: wrappers/request.py (第 478-498 行)\n文件: wrappers/request.py\n函数: files\ndef files(self) -> ImmutableMultiDict[str, FileStorage]:\n        \"\"\":class:`~werkzeug.datastructures.MultiDict` object containing\n        all uploaded files.  Each key in :attr:`files` is the name from the\n        ``<input type=\"file\" name=\"\">``.  Each value in :attr:`files` is a\n        Werkzeug :class:`~werkzeug.datastructures.FileStorage` object.\n\n        It basically behaves like a standard file object you know from Python,\n        with the difference that it also has a\n        :meth:`~werkzeug.datastructures.FileStorage.save` function that can\n        store the file on the filesystem.\n\n        Note that :attr:`files` will only contain data if the request method was\n        POST, PUT or PATCH and the ``<form>`` that posted to the request had\n        ``enctype=\"multipart/form-data\"``.  It will be empty otherwise.\n\n        See the :class:`~werkzeug.datastructures.MultiDict` /\n        :class:`~werkzeug.datastructures.FileStorage` documentation for\n        more details about the used data structure.\n        \"\"\"\n        self._load_form_data()\n        return self.files\n\n[代码片段 4] 来源: wrappers/request.py (第 376-381 行)\n文件: wrappers/request.py\n函数: get_data\ndef get_data(\n        self,\n        cache: bool = True,\n        as_text: t.Literal[False] = False,\n        parse_form_data: bool = False,\n    ) -> bytes: ...\n\n[代码片段 5] 来源: wrappers/request.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/request.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, formparser.py, sansio/request.py, test.py, utils.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): _internal.py, debug/__init__.py, exceptions.py, routing/exceptions.py, routing/map.py, test.py, testapp.py, utils.py, wrappers/__init__.py, wrappers/response.py\n文件内定义的类: Request\n文件内定义的函数: __init__, from_values, application, application, _get_file_stream, want_form_data_parsed, make_form_data_parser, _load_form_data, _get_stream_for_parsing, close, __enter__, __exit__, stream, data, get_data, get_data, get_data, form, values, files, script_root, url_root, json, get_json, get_json, get_json, on_json_loading_failed\n\n[问题] 在 werkzeug 中,wrappers/request.py 里的 Request 类继承自哪个文件里的哪个类?",
+  "retrieved_sources": [
+   "wrappers/request.py",
+   "wrappers/request.py",
+   "wrappers/request.py",
+   "wrappers/request.py",
+   "wrappers/request.py"
+  ],
+  "expected_sources": [
+   "wrappers/request.py",
+   "sansio/request.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "sansio/request.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-08",
+  "category": "inheritance",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在哪个文件?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/response.py (第 266-266 行)\n文件: wrappers/response.py\n函数: get_data\ndef get_data(self, as_text: t.Literal[True]) -> str: ...\n\n[代码片段 2] 来源: wrappers/response.py (第 804-806 行)\n文件: wrappers/response.py\n函数: __init__\ndef __init__(self, response: Response):\n        self.response = response\n        self.closed = False\n\n[代码片段 3] 来源: wrappers/response.py (第 263-263 行)\n文件: wrappers/response.py\n函数: get_data\ndef get_data(self, as_text: t.Literal[False] = False) -> bytes: ...\n\n[代码片段 4] 来源: wrappers/response.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/response.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, exceptions.py, routing/exceptions.py, test.py, testapp.py, utils.py, wrappers/__init__.py\n文件内定义的类: Response, ResponseStream\n文件内定义的函数: _iter_encoded, __init__, call_on_close, __repr__, force_type, from_app, get_data, get_data, get_data, set_data, calculate_content_length, _ensure_sequence, make_sequence, iter_encoded, is_streamed, is_sequence, close, __enter__, __exit__, freeze, get_wsgi_headers, get_app_iter, get_wsgi_response, __call__, json, get_json, get_json, get_json, stream, _wrap_range_response\n\n[代码片段 5] 来源: wrappers/response.py (第 413-436 行)\n文件: wrappers/response.py\n函数: freeze\ndef freeze(self) -> None:\n        \"\"\"Make the response object ready to be pickled. Does the\n        following:\n\n        *   Buffer the response into a list, ignoring\n            :attr:`implicity_sequence_conversion` and\n            :attr:`direct_passthrough`.\n        *   Set the ``Content-Length`` header.\n        *   Generate an ``ETag`` header if one is not already set.\n\n        .. versionchanged:: 2.1\n            Removed the ``no_etag`` parameter.\n\n        .. versionchanged:: 2.0\n            An ``ETag`` header is always added.\n\n        .. versionchanged:: 0.6\n            The ``Content-Length`` header is set.\n        \"\"\"\n        # Always freeze the encoded response body, ignore\n        # implicit_sequence_conversion and direct_passthrough.\n        self.response = list(self.iter_encoded())\n        self.headers[\"Content-Length\"] = str(sum(map(len, self.response)))\n        self.add_etag()\n\n[问题] 在 werkzeug 中,wrappers/response.py 里的 Response 类的基类定义在哪个文件?",
+  "retrieved_sources": [
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/response.py"
+  ],
+  "expected_sources": [
+   "wrappers/response.py",
+   "sansio/response.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "sansio/response.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-09",
+  "category": "inheritance",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,异常类 BadRequestKeyError 同时继承了哪两个类?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 类 ImportStringError\n定义位置: utils.py 第 645-684 行\n它继承自: ImportError\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: middleware/dispatcher.py (第 0-0 行)\n[依赖图卡片] 类 DispatcherMiddleware\n定义位置: middleware/dispatcher.py 第 44-81 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,异常类 BadRequestKeyError 同时继承了哪两个类?",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "utils.py",
+   "middleware/dispatcher.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "exceptions.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "BadRequest",
+    "KeyError"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-10",
+  "category": "inheritance",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,有哪些异常类直接继承自 HTTPException?请尽量列出。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 4] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 类 ImportStringError\n定义位置: utils.py 第 645-684 行\n它继承自: ImportError\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,有哪些异常类直接继承自 HTTPException?请尽量列出。",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "testapp.py",
+   "testapp.py",
+   "utils.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "exceptions.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "BadGateway",
+    "BadRequest",
+    "Conflict",
+    "ExpectationFailed",
+    "FailedDependency",
+    "Forbidden",
+    "GatewayTimeout",
+    "Gone",
+    "HTTPVersionNotSupported",
+    "ImATeapot",
+    "InternalServerError",
+    "LengthRequired",
+    "Locked",
+    "MethodNotAllowed",
+    "MisdirectedRequest",
+    "NotAcceptable",
+    "NotFound",
+    "NotImplemented",
+    "PreconditionFailed",
+    "PreconditionRequired",
+    "RequestEntityTooLarge",
+    "RequestHeaderFieldsTooLarge",
+    "RequestRedirect",
+    "RequestTimeout",
+    "RequestURITooLarge",
+    "RequestedRangeNotSatisfiable",
+    "Unauthorized",
+    "UnavailableForLegalReasons",
+    "UnprocessableEntity",
+    "UnsupportedMediaType",
+    "_RetryAfter"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-11",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些类继承(混入)了 ImmutableDictMixin?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 类 ImportStringError\n定义位置: utils.py 第 645-684 行\n它继承自: ImportError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,哪些类继承(混入)了 ImmutableDictMixin?",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "testapp.py",
+   "testapp.py",
+   "routing/rules.py",
+   "utils.py"
+  ],
+  "expected_sources": [
+   "datastructures/mixins.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ImmutableDict",
+    "ImmutableMultiDictMixin",
+    "ImmutableTypeConversionDict",
+    "RequestCacheControl"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "INH-12",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在 werkzeug 中,哪些类继承(混入)了 CallbackDict?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 2] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: utils.py (第 0-0 行)\n[依赖图卡片] 类 ImportStringError\n定义位置: utils.py 第 645-684 行\n它继承自: ImportError\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,哪些类继承(混入)了 CallbackDict?",
+  "retrieved_sources": [
+   "PROVENANCE.md",
+   "testapp.py",
+   "testapp.py",
+   "routing/rules.py",
+   "utils.py"
+  ],
+  "expected_sources": [
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "ContentSecurityPolicy",
+    "_CacheControl"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-01",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Authorization 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 TStreamFactory\n定义位置: formparser.py 第 40-47 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 Authorization 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "datastructures/auth.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/auth.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-02",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 BaseConverter 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 TStreamFactory\n定义位置: formparser.py 第 40-47 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 BaseConverter 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "routing/converters.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/converters.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-03",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 CombinedMultiDict 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 TStreamFactory\n定义位置: formparser.py 第 40-47 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 CombinedMultiDict 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-04",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 FileStorage 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 TStreamFactory\n定义位置: formparser.py 第 40-47 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 FileStorage 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "datastructures/file_storage.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/file_storage.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-05",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 HTTPException 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 TStreamFactory\n定义位置: formparser.py 第 40-47 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 HTTPException 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "exceptions.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "exceptions.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-06",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Headers 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 TStreamFactory\n定义位置: formparser.py 第 40-47 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 Headers 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "datastructures/headers.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/headers.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-07",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Map 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 TStreamFactory\n定义位置: formparser.py 第 40-47 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 Map 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "routing/map.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/map.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-08",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 MapAdapter 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 TStreamFactory\n定义位置: formparser.py 第 40-47 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 MapAdapter 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "routing/map.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/map.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-09",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 MultiDict 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 TStreamFactory\n定义位置: formparser.py 第 40-47 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 MultiDict 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "datastructures/structures.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/structures.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-10",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 Rule 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 TStreamFactory\n定义位置: formparser.py 第 40-47 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 Rule 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "routing/rules.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/rules.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-11",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 StateMachineMatcher 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 TStreamFactory\n定义位置: formparser.py 第 40-47 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 StateMachineMatcher 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "routing/matcher.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "routing/matcher.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "LOC-12",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,类 WSGIWarning 定义在哪个文件里?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: formparser.py (第 0-0 行)\n[依赖图卡片] 类 TStreamFactory\n定义位置: formparser.py 第 40-47 行\n它继承自: Protocol\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 Weighting\n定义位置: routing/rules.py 第 20-24 行\n它继承自: NamedTuple\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: routing/rules.py (第 0-0 行)\n[依赖图卡片] 类 RuleTemplate\n定义位置: routing/rules.py 第 231-254 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在 werkzeug 中,类 WSGIWarning 定义在哪个文件里?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "formparser.py",
+   "routing/rules.py",
+   "routing/rules.py"
+  ],
+  "expected_sources": [
+   "middleware/lint.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "middleware/lint.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "DAT-01",
+  "category": "dataflow",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,常量 PIN_TIME 在哪个文件中定义?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 4] 来源: datastructures/etag.py (第 33-35 行)\n[调用图卡片] 函数 is_weak\n定义位置: datastructures/etag.py 第 33-35 行\n它调用的仓库内函数: (无)\n它被这些函数调用: contains_weak [datastructures/etag.py]\n\n[代码片段 5] 来源: local.py (第 366-368 行)\n[调用图卡片] 函数 i_op\n定义位置: local.py 第 366-368 行\n它调用的仓库内函数: (无)\n它被这些函数调用: (没有仓库内调用方)\n\n[问题] 在 werkzeug 中,常量 PIN_TIME 在哪个文件中定义?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "testapp.py",
+   "datastructures/etag.py",
+   "local.py"
+  ],
+  "expected_sources": [
+   "debug/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "debug/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "DAT-02",
+  "category": "dataflow",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,常量 HELP_HTML 在哪个文件中定义?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 4] 来源: datastructures/etag.py (第 33-35 行)\n[调用图卡片] 函数 is_weak\n定义位置: datastructures/etag.py 第 33-35 行\n它调用的仓库内函数: (无)\n它被这些函数调用: contains_weak [datastructures/etag.py]\n\n[代码片段 5] 来源: local.py (第 366-368 行)\n[调用图卡片] 函数 i_op\n定义位置: local.py 第 366-368 行\n它调用的仓库内函数: (无)\n它被这些函数调用: (没有仓库内调用方)\n\n[问题] 在 werkzeug 中,常量 HELP_HTML 在哪个文件中定义?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "testapp.py",
+   "datastructures/etag.py",
+   "local.py"
+  ],
+  "expected_sources": [
+   "debug/repr.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "debug/repr.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "DAT-03",
+  "category": "dataflow",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在 werkzeug 中,常量 OBJECT_DUMP_HTML 在哪个文件中定义?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: testapp.py (第 182-188 行)\n[调用图卡片] 函数 _get_werkzeug_version\n定义位置: testapp.py 第 182-188 行\n它调用的仓库内函数: (无)\n它被这些函数调用: test_app [testapp.py]\n\n[代码片段 2] 来源: PROVENANCE.md (第 1-14 行)\n# werkzeug 来源与版本(可复现凭证)\n\n- **包名**:Werkzeug\n- **版本**:3.1.8(`pip show werkzeug` / dist-info METADATA 一致)\n- **来源**:从 conda 环境 `y` 的 site-packages 复制(等价于 `pip install werkzeug==3.1.8`)\n- **官方仓库**:https://github.com/pallets/werkzeug/(对应 tag 3.1.8)\n- **复制范围**:整个包(52 个 .py 文件,6 个子包),已剔除 `__pycache__`\n- **复制时间**:M1-2(2026-06-13)\n\n## 为什么用 pip 版本而不是 git clone\n当前网络对 GitHub 不稳(前几夜 pip 清华源 SSL 都被掐过)。pip 版本与某个 git\ntag 一一对应(3.1.8 = release tag),版本号即可复现锚点,等价于固定 commit。\n重装命令:`pip install werkzeug==3.1.8 -i https://mirrors.aliyun.com/pypi/simple/`,\n然后把 site-packages/werkzeug 复制到这里。\n\n[代码片段 3] 来源: testapp.py (第 182-188 行)\n文件: testapp.py\n函数: _get_werkzeug_version\ndef _get_werkzeug_version() -> str:\n    global _werkzeug_version\n\n    if not _werkzeug_version:\n        _werkzeug_version = importlib.metadata.version(\"werkzeug\")\n\n    return _werkzeug_version\n\n[代码片段 4] 来源: datastructures/etag.py (第 33-35 行)\n[调用图卡片] 函数 is_weak\n定义位置: datastructures/etag.py 第 33-35 行\n它调用的仓库内函数: (无)\n它被这些函数调用: contains_weak [datastructures/etag.py]\n\n[代码片段 5] 来源: datastructures/headers.py (第 548-559 行)\n[调用图卡片] 函数 __ior__\n定义位置: datastructures/headers.py 第 548-559 行\n它调用的仓库内函数: update\n它被这些函数调用: (没有仓库内调用方)\n\n[问题] 在 werkzeug 中,常量 OBJECT_DUMP_HTML 在哪个文件中定义?",
+  "retrieved_sources": [
+   "testapp.py",
+   "PROVENANCE.md",
+   "testapp.py",
+   "datastructures/etag.py",
+   "datastructures/headers.py"
+  ],
+  "expected_sources": [
+   "debug/repr.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "debug/repr.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-01",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/response.py 是否(间接)依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/response.py (第 266-266 行)\n文件: wrappers/response.py\n函数: get_data\ndef get_data(self, as_text: t.Literal[True]) -> str: ...\n\n[代码片段 2] 来源: wrappers/response.py (第 263-263 行)\n文件: wrappers/response.py\n函数: get_data\ndef get_data(self, as_text: t.Literal[False] = False) -> bytes: ...\n\n[代码片段 3] 来源: wrappers/response.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/response.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, exceptions.py, routing/exceptions.py, test.py, testapp.py, utils.py, wrappers/__init__.py\n文件内定义的类: Response, ResponseStream\n文件内定义的函数: _iter_encoded, __init__, call_on_close, __repr__, force_type, from_app, get_data, get_data, get_data, set_data, calculate_content_length, _ensure_sequence, make_sequence, iter_encoded, is_streamed, is_sequence, close, __enter__, __exit__, freeze, get_wsgi_headers, get_app_iter, get_wsgi_response, __call__, json, get_json, get_json, get_json, stream, _wrap_range_response\n\n[代码片段 4] 来源: wrappers/response.py (第 804-806 行)\n文件: wrappers/response.py\n函数: __init__\ndef __init__(self, response: Response):\n        self.response = response\n        self.closed = False\n\n[代码片段 5] 来源: wrappers/response.py (第 410-411 行)\n文件: wrappers/response.py\n函数: __exit__\ndef __exit__(self, exc_type, exc_value, tb):  # type: ignore\n        self.close()\n\n[问题] 在 werkzeug 中,wrappers/response.py 是否(间接)依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/response.py"
+  ],
+  "expected_sources": [
+   "wrappers/response.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-02",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,routing/map.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/map.py (第 0-0 行)\n[依赖图卡片] 文件 routing/map.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, routing/converters.py, routing/exceptions.py, routing/matcher.py, routing/rules.py, urls.py, wrappers/request.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/converters.py, routing/exceptions.py, routing/rules.py\n文件内定义的类: Map, MapAdapter\n文件内定义的函数: __init__, merge_slashes, merge_slashes, is_endpoint_expecting, _rules, iter_rules, add, bind, bind_to_environ, _get_wsgi_string, update, __repr__, __init__, dispatch, match, match, match, _handle_match, test, allowed_methods, get_host, get_default_redirect, encode_query_args, make_redirect_url, make_alias_redirect_url, _partial_build, build\n\n[代码片段 2] 来源: routing/map.py (第 94-124 行)\n文件: routing/map.py\n函数: __init__\ndef __init__(\n        self,\n        rules: t.Iterable[RuleFactory] | None = None,\n        default_subdomain: str = \"\",\n        strict_slashes: bool = True,\n        merge_slashes: bool = True,\n        redirect_defaults: bool = True,\n        converters: t.Mapping[str, type[BaseConverter]] | None = None,\n        sort_parameters: bool = False,\n        sort_key: t.Callable[[t.Any], t.Any] | None = None,\n        host_matching: bool = False,\n    ) -> None:\n        self._matcher = StateMachineMatcher(merge_slashes)\n        self._rules_by_endpoint: dict[t.Any, list[Rule]] = {}\n        self._remap = True\n        self._remap_lock = self.lock_class()\n\n        self.default_subdomain = default_subdomain\n        self.strict_slashes = strict_slashes\n        self.redirect_defaults = redirect_defaults\n        self.host_matching = host_matching\n\n        self.converters = self.default_converters.copy()\n        if converters:\n            self.converters.update(converters)\n\n        self.sort_parameters = sort_parameters\n        self.sort_key = sort_key\n\n        for rulefactory in rules or ():\n            self.add(rulefactory)\n\n[代码片段 3] 来源: routing/map.py (第 387-410 行)\n文件: routing/map.py\n函数: __init__\ndef __init__(\n        self,\n        map: Map,\n        server_name: str,\n        script_name: str,\n        subdomain: str | None,\n        url_scheme: str,\n        path_info: str,\n        default_method: str,\n        query_args: t.Mapping[str, t.Any] | str | None = None,\n    ):\n        self.map = map\n        self.server_name = server_name\n\n        if not script_name.endswith(\"/\"):\n            script_name += \"/\"\n\n        self.script_name = script_name\n        self.subdomain = subdomain\n        self.url_scheme = url_scheme\n        self.path_info = path_info\n        self.default_method = default_method\n        self.query_args = query_args\n        self.websocket = self.url_scheme in {\"ws\", \"wss\"}\n\n[代码片段 4] 来源: routing/map.py (第 787-826 行)\n文件: routing/map.py\n函数: _partial_build\ndef _partial_build(\n        self,\n        endpoint: t.Any,\n        values: t.Mapping[str, t.Any],\n        method: str | None,\n        append_unknown: bool,\n    ) -> tuple[str, str, bool] | None:\n        \"\"\"Helper for :meth:`build`.  Returns subdomain and path for the\n        rule that accepts this endpoint, values and method.\n\n        :internal:\n        \"\"\"\n        # in case the method is none, try with the default method first\n        if method is None:\n            rv = self._partial_build(\n                endpoint, values, self.default_method, append_unknown\n            )\n            if rv is not None:\n                return rv\n\n        # Default method did not match or a specific method is passed.\n        # Check all for first match with matching host. If no matching\n        # host is found, go with first result.\n        first_match = None\n\n        for rule in self.map._rules_by_endpoint.get(endpoint, ()):\n            if rule.suitable_for(values, method):\n                build_rv = rule.build(values, append_unknown)\n\n                if build_rv is not None:\n                    rv = (build_rv[0], build_rv[1], rule.websocket)\n                    if self.map.host_matching:\n                        if rv[0] == self.server_name:\n                            return rv\n                        elif first_match is None:\n                            first_match = rv\n                    else:\n                        return rv\n\n        return first_match\n\n[代码片段 5] 来源: routing/map.py (第 170-181 行)\n文件: routing/map.py\n函数: add\ndef add(self, rulefactory: RuleFactory) -> None:\n        \"\"\"Add a new rule or factory to the map and bind it.  Requires that the\n        rule is not bound to another map.\n\n        :param rulefactory: a :class:`Rule` or :class:`RuleFactory`\n        \"\"\"\n        for rule in rulefactory.get_rules(self):\n            rule.bind(self)\n            if not rule.build_only:\n                self._matcher.add(rule)\n            self._rules_by_endpoint.setdefault(rule.endpoint, []).append(rule)\n        self._remap = True\n\n[问题] 在 werkzeug 中,routing/map.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "routing/map.py",
+   "routing/map.py",
+   "routing/map.py",
+   "routing/map.py",
+   "routing/map.py"
+  ],
+  "expected_sources": [
+   "routing/map.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-03",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/request.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/request.py (第 384-389 行)\n文件: wrappers/request.py\n函数: get_data\ndef get_data(\n        self,\n        cache: bool = True,\n        as_text: t.Literal[True] = ...,\n        parse_form_data: bool = False,\n    ) -> str: ...\n\n[代码片段 2] 来源: wrappers/request.py (第 376-381 行)\n文件: wrappers/request.py\n函数: get_data\ndef get_data(\n        self,\n        cache: bool = True,\n        as_text: t.Literal[False] = False,\n        parse_form_data: bool = False,\n    ) -> bytes: ...\n\n[代码片段 3] 来源: wrappers/request.py (第 449-475 行)\n文件: wrappers/request.py\n函数: values\ndef values(self) -> CombinedMultiDict[str, str]:\n        \"\"\"A :class:`werkzeug.datastructures.CombinedMultiDict` that\n        combines :attr:`args` and :attr:`form`.\n\n        For GET requests, only ``args`` are present, not ``form``.\n\n        .. versionchanged:: 2.0\n            For GET requests, only ``args`` are present, not ``form``.\n        \"\"\"\n        sources = [self.args]\n\n        if self.method != \"GET\":\n            # GET requests can have a body, and some caching proxies\n            # might not treat that differently than a normal GET\n            # request, allowing form data to \"invisibly\" affect the\n            # cache without indication in the query string / URL.\n            sources.append(self.form)\n\n        args = []\n\n        for d in sources:\n            if not isinstance(d, MultiDict):\n                d = MultiDict(d)\n\n            args.append(d)\n\n        return CombinedMultiDict(args)\n\n[代码片段 4] 来源: wrappers/request.py (第 478-498 行)\n文件: wrappers/request.py\n函数: files\ndef files(self) -> ImmutableMultiDict[str, FileStorage]:\n        \"\"\":class:`~werkzeug.datastructures.MultiDict` object containing\n        all uploaded files.  Each key in :attr:`files` is the name from the\n        ``<input type=\"file\" name=\"\">``.  Each value in :attr:`files` is a\n        Werkzeug :class:`~werkzeug.datastructures.FileStorage` object.\n\n        It basically behaves like a standard file object you know from Python,\n        with the difference that it also has a\n        :meth:`~werkzeug.datastructures.FileStorage.save` function that can\n        store the file on the filesystem.\n\n        Note that :attr:`files` will only contain data if the request method was\n        POST, PUT or PATCH and the ``<form>`` that posted to the request had\n        ``enctype=\"multipart/form-data\"``.  It will be empty otherwise.\n\n        See the :class:`~werkzeug.datastructures.MultiDict` /\n        :class:`~werkzeug.datastructures.FileStorage` documentation for\n        more details about the used data structure.\n        \"\"\"\n        self._load_form_data()\n        return self.files\n\n[代码片段 5] 来源: wrappers/request.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/request.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, formparser.py, sansio/request.py, test.py, utils.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): _internal.py, debug/__init__.py, exceptions.py, routing/exceptions.py, routing/map.py, test.py, testapp.py, utils.py, wrappers/__init__.py, wrappers/response.py\n文件内定义的类: Request\n文件内定义的函数: __init__, from_values, application, application, _get_file_stream, want_form_data_parsed, make_form_data_parser, _load_form_data, _get_stream_for_parsing, close, __enter__, __exit__, stream, data, get_data, get_data, get_data, form, values, files, script_root, url_root, json, get_json, get_json, get_json, on_json_loading_failed\n\n[问题] 在 werkzeug 中,wrappers/request.py 是否(间接)依赖 datastructures/structures.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "wrappers/request.py",
+   "wrappers/request.py",
+   "wrappers/request.py",
+   "wrappers/request.py",
+   "wrappers/request.py"
+  ],
+  "expected_sources": [
+   "wrappers/request.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-04",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,routing/map.py 是否(间接)依赖 http.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: routing/map.py (第 0-0 行)\n[依赖图卡片] 文件 routing/map.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, routing/converters.py, routing/exceptions.py, routing/matcher.py, routing/rules.py, urls.py, wrappers/request.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): routing/__init__.py, routing/converters.py, routing/exceptions.py, routing/rules.py\n文件内定义的类: Map, MapAdapter\n文件内定义的函数: __init__, merge_slashes, merge_slashes, is_endpoint_expecting, _rules, iter_rules, add, bind, bind_to_environ, _get_wsgi_string, update, __repr__, __init__, dispatch, match, match, match, _handle_match, test, allowed_methods, get_host, get_default_redirect, encode_query_args, make_redirect_url, make_alias_redirect_url, _partial_build, build\n\n[代码片段 2] 来源: routing/map.py (第 94-124 行)\n文件: routing/map.py\n函数: __init__\ndef __init__(\n        self,\n        rules: t.Iterable[RuleFactory] | None = None,\n        default_subdomain: str = \"\",\n        strict_slashes: bool = True,\n        merge_slashes: bool = True,\n        redirect_defaults: bool = True,\n        converters: t.Mapping[str, type[BaseConverter]] | None = None,\n        sort_parameters: bool = False,\n        sort_key: t.Callable[[t.Any], t.Any] | None = None,\n        host_matching: bool = False,\n    ) -> None:\n        self._matcher = StateMachineMatcher(merge_slashes)\n        self._rules_by_endpoint: dict[t.Any, list[Rule]] = {}\n        self._remap = True\n        self._remap_lock = self.lock_class()\n\n        self.default_subdomain = default_subdomain\n        self.strict_slashes = strict_slashes\n        self.redirect_defaults = redirect_defaults\n        self.host_matching = host_matching\n\n        self.converters = self.default_converters.copy()\n        if converters:\n            self.converters.update(converters)\n\n        self.sort_parameters = sort_parameters\n        self.sort_key = sort_key\n\n        for rulefactory in rules or ():\n            self.add(rulefactory)\n\n[代码片段 3] 来源: routing/map.py (第 387-410 行)\n文件: routing/map.py\n函数: __init__\ndef __init__(\n        self,\n        map: Map,\n        server_name: str,\n        script_name: str,\n        subdomain: str | None,\n        url_scheme: str,\n        path_info: str,\n        default_method: str,\n        query_args: t.Mapping[str, t.Any] | str | None = None,\n    ):\n        self.map = map\n        self.server_name = server_name\n\n        if not script_name.endswith(\"/\"):\n            script_name += \"/\"\n\n        self.script_name = script_name\n        self.subdomain = subdomain\n        self.url_scheme = url_scheme\n        self.path_info = path_info\n        self.default_method = default_method\n        self.query_args = query_args\n        self.websocket = self.url_scheme in {\"ws\", \"wss\"}\n\n[代码片段 4] 来源: routing/map.py (第 742-745 行)\n文件: routing/map.py\n函数: encode_query_args\ndef encode_query_args(self, query_args: t.Mapping[str, t.Any] | str) -> str:\n        if not isinstance(query_args, str):\n            return _urlencode(query_args)\n        return query_args\n\n[代码片段 5] 来源: routing/map.py (第 787-826 行)\n文件: routing/map.py\n函数: _partial_build\ndef _partial_build(\n        self,\n        endpoint: t.Any,\n        values: t.Mapping[str, t.Any],\n        method: str | None,\n        append_unknown: bool,\n    ) -> tuple[str, str, bool] | None:\n        \"\"\"Helper for :meth:`build`.  Returns subdomain and path for the\n        rule that accepts this endpoint, values and method.\n\n        :internal:\n        \"\"\"\n        # in case the method is none, try with the default method first\n        if method is None:\n            rv = self._partial_build(\n                endpoint, values, self.default_method, append_unknown\n            )\n            if rv is not None:\n                return rv\n\n        # Default method did not match or a specific method is passed.\n        # Check all for first match with matching host. If no matching\n        # host is found, go with first result.\n        first_match = None\n\n        for rule in self.map._rules_by_endpoint.get(endpoint, ()):\n            if rule.suitable_for(values, method):\n                build_rv = rule.build(values, append_unknown)\n\n                if build_rv is not None:\n                    rv = (build_rv[0], build_rv[1], rule.websocket)\n                    if self.map.host_matching:\n                        if rv[0] == self.server_name:\n                            return rv\n                        elif first_match is None:\n                            first_match = rv\n                    else:\n                        return rv\n\n        return first_match\n\n[问题] 在 werkzeug 中,routing/map.py 是否(间接)依赖 http.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?",
+  "retrieved_sources": [
+   "routing/map.py",
+   "routing/map.py",
+   "routing/map.py",
+   "routing/map.py",
+   "routing/map.py"
+  ],
+  "expected_sources": [
+   "routing/map.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "IND-05",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在 werkzeug 中,wrappers/response.py 是直接 import 了 datastructures/structures.py,还是通过 datastructures/__init__.py 间接依赖的?给出完整的中间文件路径。",
+  "prompt": "你是一个代码仓库助手,根据给出的代码片段准确回答问题。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: wrappers/response.py (第 266-266 行)\n文件: wrappers/response.py\n函数: get_data\ndef get_data(self, as_text: t.Literal[True]) -> str: ...\n\n[代码片段 2] 来源: wrappers/response.py (第 263-263 行)\n文件: wrappers/response.py\n函数: get_data\ndef get_data(self, as_text: t.Literal[False] = False) -> bytes: ...\n\n[代码片段 3] 来源: wrappers/response.py (第 0-0 行)\n[依赖图卡片] 文件 wrappers/response.py\n它依赖(import)的仓库内文件: _internal.py, datastructures/__init__.py, exceptions.py, http.py, sansio/response.py, test.py, urls.py, utils.py, wrappers/request.py, wsgi.py\n它被这些文件依赖/使用(import 它的使用方): debug/__init__.py, exceptions.py, routing/exceptions.py, test.py, testapp.py, utils.py, wrappers/__init__.py\n文件内定义的类: Response, ResponseStream\n文件内定义的函数: _iter_encoded, __init__, call_on_close, __repr__, force_type, from_app, get_data, get_data, get_data, set_data, calculate_content_length, _ensure_sequence, make_sequence, iter_encoded, is_streamed, is_sequence, close, __enter__, __exit__, freeze, get_wsgi_headers, get_app_iter, get_wsgi_response, __call__, json, get_json, get_json, get_json, stream, _wrap_range_response\n\n[代码片段 4] 来源: wrappers/response.py (第 804-806 行)\n文件: wrappers/response.py\n函数: __init__\ndef __init__(self, response: Response):\n        self.response = response\n        self.closed = False\n\n[代码片段 5] 来源: wrappers/response.py (第 144-177 行)\n文件: wrappers/response.py\n函数: __init__\ndef __init__(\n        self,\n        response: t.Iterable[bytes] | bytes | t.Iterable[str] | str | None = None,\n        status: int | str | HTTPStatus | None = None,\n        headers: t.Mapping[str, str | t.Iterable[str]]\n        | t.Iterable[tuple[str, str]]\n        | None = None,\n        mimetype: str | None = None,\n        content_type: str | None = None,\n        direct_passthrough: bool = False,\n    ) -> None:\n        super().__init__(\n            status=status,\n            headers=headers,\n            mimetype=mimetype,\n            content_type=content_type,\n        )\n\n        #: Pass the response body directly through as the WSGI iterable.\n        #: This can be used when the body is a binary file or other\n        #: iterator of bytes, to skip some unnecessary checks. Use\n        #: :func:`~werkzeug.utils.send_file` instead of setting this\n        #: manually.\n        self.direct_passthrough = direct_passthrough\n        self._on_close: list[t.Callable[[], t.Any]] = []\n\n        # we set the response after the headers so that if a class changes\n        # the charset attribute, the data is set in the correct charset.\n        if response is None:\n            self.response = []\n        elif isinstance(response, (str, bytes, bytearray)):\n            self.set_data(response)\n        else:\n            self.response = response\n\n[问题] 在 werkzeug 中,wrappers/response.py 是直接 import 了 datastructures/structures.py,还是通过 datastructures/__init__.py 间接依赖的?给出完整的中间文件路径。",
+  "retrieved_sources": [
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/response.py",
+   "wrappers/response.py"
+  ],
+  "expected_sources": [
+   "wrappers/response.py",
+   "datastructures/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "datastructures/__init__.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ }
+]

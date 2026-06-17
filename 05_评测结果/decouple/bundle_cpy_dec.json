@@ -1,0 +1,295 @@
+[
+ {
+  "id": "CPY-PY_-0",
+  "category": "py_forward",
+  "question": "在 CPython 中,Lib/abc.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "_py_abc.py, warnings.py",
+  "gold_kw": [
+   "_py_abc.py",
+   "warnings.py"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-PY_-1",
+  "category": "py_forward",
+  "question": "在 CPython 中,Lib/antigravity.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "hashlib.py, webbrowser.py",
+  "gold_kw": [
+   "hashlib.py",
+   "webbrowser.py"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-PY_-2",
+  "category": "py_forward",
+  "question": "在 CPython 中,Lib/base64.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "io.py, warnings.py",
+  "gold_kw": [
+   "io.py",
+   "warnings.py"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-PY_-3",
+  "category": "py_forward",
+  "question": "在 CPython 中,Lib/bz2.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "__init__.py, io.py, os.py",
+  "gold_kw": [
+   "__init__.py",
+   "io.py",
+   "os.py"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-PY_-4",
+  "category": "py_forward",
+  "question": "在 CPython 中,Lib/calendar.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "_colorize.py, argparse.py, datetime.py, enum.py, locale.py, warnings.py",
+  "gold_kw": [
+   "_colorize.py",
+   "argparse.py",
+   "datetime.py",
+   "enum.py",
+   "locale.py",
+   "warnings.py"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-PY_-5",
+  "category": "py_forward",
+  "question": "在 CPython 中,Lib/code.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "argparse.py, codeop.py, traceback.py",
+  "gold_kw": [
+   "argparse.py",
+   "codeop.py",
+   "traceback.py"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-PY_-6",
+  "category": "py_forward",
+  "question": "在 CPython 中,Lib/codecs.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "__init__.py, warnings.py",
+  "gold_kw": [
+   "__init__.py",
+   "warnings.py"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-PY_-7",
+  "category": "py_forward",
+  "question": "在 CPython 中,Lib/codeop.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "__future__.py, warnings.py",
+  "gold_kw": [
+   "__future__.py",
+   "warnings.py"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-C_F-15",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/atexitmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h, pycore_atexit.h, pycore_initconfig.h, pycore_interp.h, pycore_pystate.h",
+  "gold_kw": [
+   "Python.h",
+   "pycore_atexit.h",
+   "pycore_initconfig.h",
+   "pycore_interp.h",
+   "pycore_pystate.h"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-C_F-16",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/binascii.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h, binascii.c.h, pycore_long.h, pycore_strhex.h",
+  "gold_kw": [
+   "Python.h",
+   "binascii.c.h",
+   "pycore_long.h",
+   "pycore_strhex.h"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-C_F-17",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/cmathmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h, _math.h, cmathmodule.c.h, pycore_complexobject.h, pycore_pymath.h",
+  "gold_kw": [
+   "Python.h",
+   "_math.h",
+   "cmathmodule.c.h",
+   "pycore_complexobject.h",
+   "pycore_pymath.h"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-C_F-18",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/gcmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h, gcmodule.c.h, pycore_gc.h, pycore_object.h, pycore_pystate.h",
+  "gold_kw": [
+   "Python.h",
+   "gcmodule.c.h",
+   "pycore_gc.h",
+   "pycore_object.h",
+   "pycore_pystate.h"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-C_F-19",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/getbuildinfo.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h, pycore_pylifecycle.h",
+  "gold_kw": [
+   "Python.h",
+   "pycore_pylifecycle.h"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-C_F-20",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/getpath_noop.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h, pycore_pathconfig.h",
+  "gold_kw": [
+   "Python.h",
+   "pycore_pathconfig.h"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-C_F-21",
+  "category": "c_forward",
+  "question": "在 CPython 中,Modules/grpmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Python.h, grpmodule.c.h, posixmodule.h",
+  "gold_kw": [
+   "Python.h",
+   "grpmodule.c.h",
+   "posixmodule.h"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-XLA-28",
+  "category": "xlang",
+  "question": "在 CPython 中,Lib/abc.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "_abc.c",
+  "gold_kw": [
+   "_abc.c"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-XLA-29",
+  "category": "xlang",
+  "question": "在 CPython 中,Lib/base64.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "",
+  "gold_kw": [],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-XLA-30",
+  "category": "xlang",
+  "question": "在 CPython 中,Lib/cmd.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "",
+  "gold_kw": [],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-XLA-31",
+  "category": "xlang",
+  "question": "在 CPython 中,Lib/code.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "",
+  "gold_kw": [],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-XLA-32",
+  "category": "xlang",
+  "question": "在 CPython 中,Lib/csv.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "_csv.c",
+  "gold_kw": [
+   "_csv.c"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-XLA-33",
+  "category": "xlang",
+  "question": "在 CPython 中,Lib/dis.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "_opcode.c",
+  "gold_kw": [
+   "_opcode.c"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-XLA-34",
+  "category": "xlang",
+  "question": "在 CPython 中,Lib/getpass.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "",
+  "gold_kw": [],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-XLA-35",
+  "category": "xlang",
+  "question": "在 CPython 中,Lib/hmac.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "_operator.c",
+  "gold_kw": [
+   "_operator.c"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-XLA-36",
+  "category": "xlang",
+  "question": "在 CPython 中,Lib/imaplib.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "",
+  "gold_kw": [],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-XLA-37",
+  "category": "xlang",
+  "question": "在 CPython 中,Lib/mimetypes.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "_winapi.c",
+  "gold_kw": [
+   "_winapi.c"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-XLA-38",
+  "category": "xlang",
+  "question": "在 CPython 中,Lib/ntpath.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "_winapi.c",
+  "gold_kw": [
+   "_winapi.c"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ },
+ {
+  "id": "CPY-XLA-39",
+  "category": "xlang",
+  "question": "在 CPython 中,Lib/opcode.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "_opcode.c",
+  "gold_kw": [
+   "_opcode.c"
+  ],
+  "notes": "(独立raw-line抽取+人工抽验,非原ast途径)"
+ }
+]

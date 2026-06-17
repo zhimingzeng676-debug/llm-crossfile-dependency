@@ -1,0 +1,74 @@
+[
+ {
+  "id": "XIND-01",
+  "answer": "是,__init__.py 间接依赖 _internal.py:__init__.py 直接 import 了中间文件 debug/console.py,而 debug/console.py 直接 import 了 _internal.py。中间文件是 debug/console.py。"
+ },
+ {
+  "id": "XIND-02",
+  "answer": "是,__init__.py 间接依赖 datastructures/__init__.py:__init__.py 直接 import 了中间文件 datastructures/structures.py,而 datastructures/structures.py 直接 import 了 datastructures/__init__.py。中间文件是 datastructures/structures.py。"
+ },
+ {
+  "id": "XIND-03",
+  "answer": "是,__init__.py 间接依赖 wrappers/request.py:__init__.py 直接 import 了中间文件 debug/console.py,而 debug/console.py 直接 import 了 wrappers/request.py。中间文件是 debug/console.py。"
+ },
+ {
+  "id": "XIND-04",
+  "answer": "是,_internal.py 间接依赖 datastructures/__init__.py:_internal.py 直接 import 了中间文件 wrappers/request.py,而 wrappers/request.py 直接 import 了 datastructures/__init__.py。中间文件是 wrappers/request.py。"
+ },
+ {
+  "id": "XIND-05",
+  "answer": "是,_reloader.py 间接依赖 wrappers/request.py:_reloader.py 直接 import 了中间文件 _internal.py,而 _internal.py 直接 import 了 wrappers/request.py。中间文件是 _internal.py。"
+ },
+ {
+  "id": "XIND-06",
+  "answer": "是,datastructures/__init__.py 间接依赖 http.py:datastructures/__init__.py 直接 import 了中间文件 datastructures/accept.py,而 datastructures/accept.py 直接 import 了 http.py。中间文件是 datastructures/accept.py。"
+ },
+ {
+  "id": "XIND-07",
+  "answer": "是,datastructures/__init__.py 间接依赖 _internal.py:datastructures/__init__.py 直接 import 了中间文件 datastructures/headers.py,而 datastructures/headers.py 直接 import 了 _internal.py。中间文件是 datastructures/headers.py。"
+ },
+ {
+  "id": "XIND-08",
+  "answer": "是,datastructures/__init__.py 间接依赖 exceptions.py:datastructures/__init__.py 直接 import 了中间文件 datastructures/headers.py,而 datastructures/headers.py 直接 import 了 exceptions.py。中间文件是 datastructures/headers.py。"
+ },
+ {
+  "id": "XIND-09",
+  "answer": "是,datastructures/accept.py 间接依赖 _internal.py:datastructures/accept.py 直接 import 了中间文件 datastructures/structures.py,而 datastructures/structures.py 直接 import 了 _internal.py。中间文件是 datastructures/structures.py。"
+ },
+ {
+  "id": "XIND-10",
+  "answer": "是,datastructures/auth.py 间接依赖 _internal.py:datastructures/auth.py 直接 import 了中间文件 structures.py,而 structures.py 直接 import 了 _internal.py。中间文件是 structures.py。"
+ },
+ {
+  "id": "XIND-11",
+  "answer": "是,datastructures/auth.py 间接依赖 sansio/__init__.py:datastructures/auth.py 直接 import 了中间文件 datastructures/structures.py,而 datastructures/structures.py 直接 import 了 sansio/__init__.py。中间文件是 datastructures/structures.py。"
+ },
+ {
+  "id": "XIND-12",
+  "answer": "是,datastructures/cache_control.py 间接依赖 _internal.py:datastructures/cache_control.py 直接 import 了中间文件 datastructures/mixins.py,而 datastructures/mixins.py 直接 import 了 _internal.py。中间文件是 datastructures/mixins.py。"
+ },
+ {
+  "id": "XIND-13",
+  "answer": "是,datastructures/csp.py 间接依赖 _internal.py:datastructures/csp.py 直接 import 了中间文件 http.py,而 http.py 直接 import 了 _internal.py。中间文件是 http.py。"
+ },
+ {
+  "id": "XIND-14",
+  "answer": "是,datastructures/csp.py 间接依赖 sansio/__init__.py:datastructures/csp.py 直接 import 了中间文件 http.py,而 http.py 直接 import 了 sansio/__init__.py。中间文件是 http.py。"
+ },
+ {
+  "id": "XIND-15",
+  "answer": "是,datastructures/etag.py 间接依赖 _internal.py:etag.py 直接 import 了中间文件 http.py,而 http.py 直接 import 了 _internal.py。中间文件是 http.py。"
+ },
+ {
+  "id": "XIND-16",
+  "answer": "是,datastructures/file_storage.py 间接依赖 wrappers/request.py:datastructures/file_storage.py 直接 import 了中间文件 datastructures/headers.py,而 datastructures/headers.py 直接 import 了 wrappers/request.py。中间文件是 datastructures/headers.py。"
+ },
+ {
+  "id": "XIND-17",
+  "answer": "是,datastructures/file_storage.py 间接依赖 datastructures/mixins.py:datastructures/file_storage.py 直接 import 了中间文件 datastructures/headers.py,而 datastructures/headers.py 直接 import 了 datastructures/mixins.py。中间文件是 datastructures/headers.py。"
+ },
+ {
+  "id": "XIND-18",
+  "answer": "是,datastructures/headers.py 间接依赖 wrappers/request.py:datastructures/headers.py 直接 import 了中间文件 datastructures/mixins.py,而 datastructures/mixins.py 直接 import 了 wrappers/request.py。中间文件是 datastructures/mixins.py。"
+ }
+]

@@ -1,0 +1,463 @@
+{
+ "summary": {
+  "n": 56,
+  "det_recall_baseline": 0.2871,
+  "det_recall_rag": 0.5816,
+  "det_recall_delta": 0.2945,
+  "ttest_t": 3.515,
+  "ttest_p": 0.0008877487602656899,
+  "allkw_acc_baseline": 0.125,
+  "allkw_acc_rag": 0.5179,
+  "allkw_acc_delta": 0.3929
+ },
+ "rows": [
+  {
+   "id": "FWD-01",
+   "cat": "forward_dep",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "FWD-02",
+   "cat": "forward_dep",
+   "recall_base": 0.333,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "FWD-03",
+   "cat": "forward_dep",
+   "recall_base": 0.0,
+   "recall_rag": 0.5,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "FWD-04",
+   "cat": "forward_dep",
+   "recall_base": 0.333,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "FWD-05",
+   "cat": "forward_dep",
+   "recall_base": 0.667,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "FWD-06",
+   "cat": "forward_dep",
+   "recall_base": 0.25,
+   "recall_rag": 0.75,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "FWD-07",
+   "cat": "forward_dep",
+   "recall_base": 0.5,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "FWD-08",
+   "cat": "forward_dep",
+   "recall_base": 0.75,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "FWD-09",
+   "cat": "forward_dep",
+   "recall_base": 0.111,
+   "recall_rag": 0.111,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "FWD-10",
+   "cat": "forward_dep",
+   "recall_base": 0.375,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "FWD-11",
+   "cat": "forward_dep",
+   "recall_base": 0.4,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "REV-01",
+   "cat": "reverse_dep",
+   "recall_base": 0.333,
+   "recall_rag": 0.133,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "REV-02",
+   "cat": "reverse_dep",
+   "recall_base": 0.25,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "REV-03",
+   "cat": "reverse_dep",
+   "recall_base": 1.0,
+   "recall_rag": 1.0,
+   "allkw_base": 1.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "REV-04",
+   "cat": "reverse_dep",
+   "recall_base": 0.571,
+   "recall_rag": 0.714,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "REV-05",
+   "cat": "reverse_dep",
+   "recall_base": 0.417,
+   "recall_rag": 0.167,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "REV-06",
+   "cat": "reverse_dep",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "REV-07",
+   "cat": "reverse_dep",
+   "recall_base": 0.353,
+   "recall_rag": 0.235,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "REV-08",
+   "cat": "reverse_dep",
+   "recall_base": 0.75,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "REV-09",
+   "cat": "reverse_dep",
+   "recall_base": 1.0,
+   "recall_rag": 1.0,
+   "allkw_base": 1.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "REV-10",
+   "cat": "reverse_dep",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "REV-11",
+   "cat": "reverse_dep",
+   "recall_base": 0.571,
+   "recall_rag": 0.143,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "REV-12",
+   "cat": "reverse_dep",
+   "recall_base": 0.222,
+   "recall_rag": 0.556,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "REV-13",
+   "cat": "reverse_dep",
+   "recall_base": 0.3,
+   "recall_rag": 0.1,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "INH-01",
+   "cat": "inheritance",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "INH-02",
+   "cat": "inheritance",
+   "recall_base": 0.5,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "INH-03",
+   "cat": "inheritance",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "INH-04",
+   "cat": "inheritance",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "INH-05",
+   "cat": "inheritance",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "INH-06",
+   "cat": "inheritance",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "INH-07",
+   "cat": "inheritance",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "INH-08",
+   "cat": "inheritance",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "INH-09",
+   "cat": "inheritance",
+   "recall_base": 1.0,
+   "recall_rag": 1.0,
+   "allkw_base": 1.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "INH-10",
+   "cat": "inheritance",
+   "recall_base": 0.839,
+   "recall_rag": 0.161,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "INH-11",
+   "cat": "inheritance",
+   "recall_base": 0.25,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "INH-12",
+   "cat": "inheritance",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "LOC-01",
+   "cat": "symbol_location",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "LOC-02",
+   "cat": "symbol_location",
+   "recall_base": 0.0,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "LOC-03",
+   "cat": "symbol_location",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "LOC-04",
+   "cat": "symbol_location",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "LOC-05",
+   "cat": "symbol_location",
+   "recall_base": 1.0,
+   "recall_rag": 0.0,
+   "allkw_base": 1.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "LOC-06",
+   "cat": "symbol_location",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "LOC-07",
+   "cat": "symbol_location",
+   "recall_base": 0.0,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "LOC-08",
+   "cat": "symbol_location",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "LOC-09",
+   "cat": "symbol_location",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "LOC-10",
+   "cat": "symbol_location",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "LOC-11",
+   "cat": "symbol_location",
+   "recall_base": 1.0,
+   "recall_rag": 0.0,
+   "allkw_base": 1.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "LOC-12",
+   "cat": "symbol_location",
+   "recall_base": 0.0,
+   "recall_rag": 1.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "DAT-01",
+   "cat": "dataflow",
+   "recall_base": 0.0,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "DAT-02",
+   "cat": "dataflow",
+   "recall_base": 0.0,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "DAT-03",
+   "cat": "dataflow",
+   "recall_base": 0.0,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "IND-01",
+   "cat": "indirect_dep",
+   "recall_base": 0.0,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "IND-02",
+   "cat": "indirect_dep",
+   "recall_base": 0.0,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "IND-03",
+   "cat": "indirect_dep",
+   "recall_base": 1.0,
+   "recall_rag": 1.0,
+   "allkw_base": 1.0,
+   "allkw_rag": 1.0
+  },
+  {
+   "id": "IND-04",
+   "cat": "indirect_dep",
+   "recall_base": 0.0,
+   "recall_rag": 0.0,
+   "allkw_base": 0.0,
+   "allkw_rag": 0.0
+  },
+  {
+   "id": "IND-05",
+   "cat": "indirect_dep",
+   "recall_base": 1.0,
+   "recall_rag": 0.0,
+   "allkw_base": 1.0,
+   "allkw_rag": 0.0
+  }
+ ]
+}

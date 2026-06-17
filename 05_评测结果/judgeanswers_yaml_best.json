@@ -1,0 +1,106 @@
+[
+ {
+  "id": "R-REV-01",
+  "answer": "{\"hit\": 4, \"total\": 10, \"score\": 0.4, \"reason\": \"遗漏了6个正确文件名\"}"
+ },
+ {
+  "id": "R-REV-02",
+  "answer": "{\"hit\": 6, \"total\": 6, \"score\": 1.0, \"reason\": \"全部要点命中，无遗漏或错误\"}"
+ },
+ {
+  "id": "R-REV-03",
+  "answer": "{\"hit\": 5, \"total\": 5, \"score\": 1.0, \"reason\": \"全部要点命中，无遗漏或错误\"}"
+ },
+ {
+  "id": "R-REV-04",
+  "answer": "{\"hit\": 1, \"total\": 3, \"score\": 0.33, \"reason\": \"遗漏parser和scanner,误判间接导入\"}"
+ },
+ {
+  "id": "R-REV-05",
+  "answer": "{\"hit\": 3, \"total\": 3, \"score\": 1.0, \"reason\": \"完全命中所有要点，无遗漏或错误\"}"
+ },
+ {
+  "id": "R-REV-06",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点，无遗漏或错误\"}"
+ },
+ {
+  "id": "R-FWD-01",
+  "answer": "{\"hit\": 5, \"total\": 6, \"score\": 0.8333333333333334, \"reason\": \"缺少tokens和error模块\"}"
+ },
+ {
+  "id": "R-FWD-02",
+  "answer": "{\"hit\": 6, \"total\": 6, \"score\": 1.0, \"reason\": \"全部要点命中，无遗漏或错误\"}"
+ },
+ {
+  "id": "R-FWD-03",
+  "answer": "{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"全部要点命中，无遗漏或错误\"}"
+ },
+ {
+  "id": "R-FWD-04",
+  "answer": "{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"全部要点命中，无遗漏或错误\"}"
+ },
+ {
+  "id": "R-FWD-05",
+  "answer": "{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"全部要点命中，无遗漏或错误\"}"
+ },
+ {
+  "id": "R-INH-01",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-02",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-03",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"未提及MarkedYAMLError所在文件\"}"
+ },
+ {
+  "id": "R-INH-04",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-05",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-INH-06",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"完全命中所有要点\"}"
+ },
+ {
+  "id": "R-LOC-01",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名loader.py\"}"
+ },
+ {
+  "id": "R-LOC-02",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名dumper.py\"}"
+ },
+ {
+  "id": "R-LOC-03",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名nodes.py\"}"
+ },
+ {
+  "id": "R-LOC-04",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名tokens.py\"}"
+ },
+ {
+  "id": "R-LOC-05",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名constructor.py\"}"
+ },
+ {
+  "id": "R-LOC-06",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名constructor.py\"}"
+ },
+ {
+  "id": "R-IND-01",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中cyaml.py\"}"
+ },
+ {
+  "id": "R-IND-02",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中了constructor.py作为中介文件\"}"
+ },
+ {
+  "id": "R-IND-03",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中emitter.py\"}"
+ }
+]

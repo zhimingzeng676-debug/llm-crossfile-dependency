@@ -1,0 +1,929 @@
+[
+ {
+  "id": "L-con-CPython-0",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Doc/conf.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "_tkinter via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Doc/conf.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-1",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Doc/tools/extensions/pyspecific.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "sphinx via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Doc/tools/extensions/pyspecific.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-2",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/_ios_support.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "ctypes via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/_ios_support.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-3",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/_pydecimal.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "locale via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/_pydecimal.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-4",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/_pyio.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "locale via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/_pyio.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-5",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/_pylong.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "_decimal via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/_pylong.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-6",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/_pyrepl/windows_console.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "nt via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/_pyrepl/windows_console.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-7",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/asyncio/__main__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "readline via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/asyncio/__main__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-8",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/asyncio/base_events.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "ssl via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/asyncio/base_events.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-9",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/asyncio/futures.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "_asyncio via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/asyncio/futures.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-10",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/asyncio/selector_events.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "ssl via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/asyncio/selector_events.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-11",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/asyncio/sslproto.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "ssl via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/asyncio/sslproto.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-12",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/asyncio/tasks.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "_asyncio via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/asyncio/tasks.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-13",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/bisect.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "_bisect via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/bisect.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-14",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/code.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "readline via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/code.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-15",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/codecs.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "_codecs via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/codecs.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-16",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/concurrent/futures/__init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "_interpreters via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/concurrent/futures/__init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-17",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/concurrent/futures/process.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "multiprocessing via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/concurrent/futures/process.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-18",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/ctypes/macholib/dyld.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "_ctypes via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/ctypes/macholib/dyld.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-19",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/datetime.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "_datetime via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/datetime.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-20",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/dbm/__init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "dbm via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/dbm/__init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-21",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/decimal.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "_decimal/_decimal via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/decimal.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-22",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/ensurepip/__init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "zlib via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/ensurepip/__init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-23",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/ftplib.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "ssl via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/ftplib.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-24",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/functools.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "_functools via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/functools.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-CPython-25",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 CPython 中,若要裁剪 Lib/getpass.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "msvcrt via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/getpass.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-0",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 CPython 中,若要裁剪 Lib/_py_warnings.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/_py_warnings.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-1",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 CPython 中,若要裁剪 Lib/_pyrepl/_module_completer.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/_pyrepl/_module_completer.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-2",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 CPython 中,若要裁剪 Lib/dbm/__init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/dbm/__init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-3",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 CPython 中,若要裁剪 Lib/encodings/__init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/encodings/__init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-4",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 CPython 中,若要裁剪 Lib/idlelib/editor.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/idlelib/editor.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-5",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 CPython 中,若要裁剪 Lib/idlelib/pyshell.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/idlelib/pyshell.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-6",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 CPython 中,若要裁剪 Lib/idlelib/run.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/idlelib/run.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-7",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 CPython 中,若要裁剪 Lib/importlib/_bootstrap.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/importlib/_bootstrap.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-8",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 CPython 中,若要裁剪 Lib/importlib/resources/_common.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/importlib/resources/_common.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-CPython-9",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 CPython 中,若要裁剪 Lib/importlib/util.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/importlib/util.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-0",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 CPython 中,若要裁剪 Lib/_pyrepl/_module_completer.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/_pyrepl/_module_completer.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-1",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 CPython 中,若要裁剪 Lib/idlelib/editor.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/idlelib/editor.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-2",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 CPython 中,若要裁剪 Lib/idlelib/idle_test/htest.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/idlelib/idle_test/htest.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-3",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 CPython 中,若要裁剪 Lib/importlib/_bootstrap.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/importlib/_bootstrap.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-4",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 CPython 中,若要裁剪 Lib/importlib/_bootstrap_external.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/importlib/_bootstrap_external.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-5",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 CPython 中,若要裁剪 Lib/pickle.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/pickle.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-6",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 CPython 中,若要裁剪 Lib/pydoc.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/pydoc.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-CPython-7",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 CPython 中,若要裁剪 Lib/unittest/loader.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 CPython 中,若要裁剪 Lib/unittest/loader.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-flask-0",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 flask 中,若要裁剪 app.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "asgiref via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 flask 中,若要裁剪 app.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-flask-1",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 flask 中,若要裁剪 cli.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "dotenv via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 flask 中,若要裁剪 cli.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-flask-0",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 flask 中,若要裁剪 cli.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 flask 中,若要裁剪 cli.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-flask-1",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 flask 中,若要裁剪 helpers.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 flask 中,若要裁剪 helpers.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-flask-0",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 flask 中,若要裁剪 cli.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 flask 中,若要裁剪 cli.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-flask-1",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 flask 中,若要裁剪 helpers.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 flask 中,若要裁剪 helpers.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-flask-2",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 flask 中,若要裁剪 sansio/app.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 flask 中,若要裁剪 sansio/app.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-requests-0",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 requests 中,若要裁剪 __init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "charset_normalizer via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 requests 中,若要裁剪 __init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-requests-1",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 requests 中,若要裁剪 adapters.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "urllib3 via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 requests 中,若要裁剪 adapters.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-requests-2",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 requests 中,若要裁剪 cookies.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "threading via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 requests 中,若要裁剪 cookies.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-requests-3",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 requests 中,若要裁剪 help.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "charset_normalizer via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 requests 中,若要裁剪 help.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-requests-4",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 requests 中,若要裁剪 utils.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "winreg via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 requests 中,若要裁剪 utils.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-requests-0",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 requests 中,若要裁剪 compat.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 requests 中,若要裁剪 compat.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-dyn-requests-1",
+  "difficulty": "hard",
+  "category": "dynamic",
+  "question": "在 requests 中,若要裁剪 packages.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时数据 via __import__/importlib",
+  "notes": "(M46 dynamic)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 requests 中,若要裁剪 packages.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-0",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 pydantic 中,若要裁剪 _internal/_typing_extra.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "typing via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 _internal/_typing_extra.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-1",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 pydantic 中,若要裁剪 mypy.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "mypy via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 mypy.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-2",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 pydantic 中,若要裁剪 networks.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "email_validator via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 networks.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-3",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 pydantic 中,若要裁剪 v1/_hypothesis_plugin.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "email_validator via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 v1/_hypothesis_plugin.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-4",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 pydantic 中,若要裁剪 v1/dataclasses.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "functools via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 v1/dataclasses.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-5",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 pydantic 中,若要裁剪 v1/env_settings.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "dotenv via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 v1/env_settings.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-6",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 pydantic 中,若要裁剪 v1/mypy.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "mypy via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 v1/mypy.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-7",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 pydantic 中,若要裁剪 v1/networks.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "email_validator via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 v1/networks.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-8",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 pydantic 中,若要裁剪 v1/typing.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "typing via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 v1/typing.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-con-pydantic-9",
+  "difficulty": "hard",
+  "category": "conditional",
+  "question": "在 pydantic 中,若要裁剪 v1/version.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "cython via try/except",
+  "notes": "(M46 conditional)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 v1/version.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-pydantic-0",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 pydantic 中,若要裁剪 __init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 __init__.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-pydantic-1",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 pydantic 中,若要裁剪 _internal/_typing_extra.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 _internal/_typing_extra.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-pydantic-2",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 pydantic 中,若要裁剪 _internal/_validators.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 _internal/_validators.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-pydantic-3",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 pydantic 中,若要裁剪 v1/utils.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时确定 via getattr/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 pydantic 中,若要裁剪 v1/utils.py 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-0",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "在 go_gin 中,若要裁剪 binding/binding.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "nomsgpack via go:build/+build",
+  "notes": "(M46 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 binding/binding.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-1",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "在 go_gin 中,若要裁剪 binding/binding_nomsgpack.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "nomsgpack via go:build/+build",
+  "notes": "(M46 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 binding/binding_nomsgpack.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-go-0",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 go_gin 中,若要裁剪 binding/default_validator.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via reflect/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 binding/default_validator.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-go-1",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 go_gin 中,若要裁剪 binding/form_mapping.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via reflect/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 binding/form_mapping.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-2",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "在 go_gin 中,若要裁剪 binding/msgpack.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "nomsgpack via go:build/+build",
+  "notes": "(M46 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 binding/msgpack.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-go-2",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 go_gin 中,若要裁剪 binding/multipart_form_mapping.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via reflect/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 binding/multipart_form_mapping.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-go-3",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 go_gin 中,若要裁剪 binding/plain.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via reflect/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 binding/plain.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-3",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "在 go_gin 中,若要裁剪 codec/json/go_json.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "go_json via go:build/+build",
+  "notes": "(M46 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 codec/json/go_json.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-4",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "在 go_gin 中,若要裁剪 codec/json/json.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "jsoniter via go:build/+build",
+  "notes": "(M46 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 codec/json/json.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-5",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "在 go_gin 中,若要裁剪 codec/json/jsoniter.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "jsoniter via go:build/+build",
+  "notes": "(M46 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 codec/json/jsoniter.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-6",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "在 go_gin 中,若要裁剪 codec/json/sonic.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "sonic via go:build/+build",
+  "notes": "(M46 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 codec/json/sonic.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-bld-go-7",
+  "difficulty": "hard",
+  "category": "buildtag",
+  "question": "在 go_gin 中,若要裁剪 context_appengine.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "appengine via go:build/+build",
+  "notes": "(M46 buildtag)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 context_appengine.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-go-4",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 go_gin 中,若要裁剪 errors.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via reflect/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 errors.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ref-go-5",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 go_gin 中,若要裁剪 testdata/protoexample/test.pb.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via reflect/反射",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 go_gin 中,若要裁剪 testdata/protoexample/test.pb.go 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-0",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 java_gson 中,若要裁剪 extras/src/main/java/com/google/gson/interceptors/InterceptorFactory.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via 反射/reflect",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 java_gson 中,若要裁剪 extras/src/main/java/com/google/gson/interceptors/InterceptorFactory.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-1",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 java_gson 中,若要裁剪 extras/src/main/java/com/google/gson/typeadapters/PostConstructAdapterFactory.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via 反射/reflect",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 java_gson 中,若要裁剪 extras/src/main/java/com/google/gson/typeadapters/PostConstructAdapterFactory.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-2",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 java_gson 中,若要裁剪 extras/src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via 反射/reflect",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 java_gson 中,若要裁剪 extras/src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-3",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/FieldAttributes.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via 反射/reflect",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/FieldAttributes.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-4",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/Gson.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via 反射/reflect",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/Gson.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-5",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/GsonBuilder.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via 反射/reflect",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/GsonBuilder.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-6",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via 反射/reflect",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-7",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via 反射/reflect",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-8",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via 反射/reflect",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-jref-java-9",
+  "difficulty": "hard",
+  "category": "reflection",
+  "question": "在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "运行时/运行时类型 via 反射/reflect",
+  "notes": "(M46 reflection)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 java_gson 中,若要裁剪 gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-0",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "在 c_lua 中,若要裁剪 lauxlib.c 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "wait/LUA_USE_POSIX via #ifdef/#if",
+  "notes": "(M46 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 c_lua 中,若要裁剪 lauxlib.c 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-1",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "在 c_lua 中,若要裁剪 liolib.c 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "types/LUA_USE_POSIX via #ifdef/#if",
+  "notes": "(M46 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 c_lua 中,若要裁剪 liolib.c 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-2",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "在 c_lua 中,若要裁剪 loslib.c 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "unistd/LUA_USE_POSIX via #ifdef/#if",
+  "notes": "(M46 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 c_lua 中,若要裁剪 loslib.c 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-3",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "在 c_lua 中,若要裁剪 lua.c 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "unistd/LUA_USE_POSIX via #ifdef/#if",
+  "notes": "(M46 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 c_lua 中,若要裁剪 lua.c 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-4",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "在 c_lua 中,若要裁剪 lvm.c 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "ljumptab/LUA_USE_JUMPTABLE via #ifdef/#if",
+  "notes": "(M46 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 c_lua 中,若要裁剪 lvm.c 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-5",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "在 c_lua 中,若要裁剪 onelua.c 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "ltests.c/LUA_DEBUG via #ifdef/#if",
+  "notes": "(M46 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 c_lua 中,若要裁剪 onelua.c 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ },
+ {
+  "id": "L-ifd-c-6",
+  "difficulty": "hard",
+  "category": "ifdef",
+  "question": "在 c_lua 中,若要裁剪 lapi.h 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。",
+  "gold": "assert/LUA_USE_APICHECK via #ifdef/#if",
+  "notes": "(M46 ifdef)",
+  "gen_prompt": "你是代码依赖分析助手。请根据你对该项目源码的了解回答。不确定就说\"不确定\",不要臆造。\n\n问题:在 c_lua 中,若要裁剪 lapi.h 的依赖(打包时只保留它运行时真正会用到的模块),哪些模块是必需的?裁掉依赖卡片里未列出的模块是否安全?请明确说明\"安全\"或\"不安全/有风险\"并简述理由。\n请直接回答。"
+ }
+]

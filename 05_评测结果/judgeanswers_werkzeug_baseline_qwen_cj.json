@@ -1,0 +1,226 @@
+[
+ {
+  "id": "FWD-01",
+  "answer": "{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"所有要点均正确\"}"
+ },
+ {
+  "id": "FWD-02",
+  "answer": "{\"hit\": 6, \"total\": 6, \"score\": 1.0, \"reason\": \"所有要点均命中\"}"
+ },
+ {
+  "id": "FWD-03",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"只命中一个要点，遗漏了一个要点\"}"
+ },
+ {
+  "id": "FWD-04",
+  "answer": "```json\n{\"hit\": 0, \"total\": 10, \"score\": 0.0, \"reason\": \"未找到依赖模块\"}\n```"
+ },
+ {
+  "id": "FWD-05",
+  "answer": "{\"hit\": 3, \"total\": 3, \"score\": 1.0, \"reason\": \"所有要点均命中\"}"
+ },
+ {
+  "id": "FWD-06",
+  "answer": "{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"所有要点均正确\"}"
+ },
+ {
+  "id": "FWD-07",
+  "answer": "```json\n{\"hit\": 0, \"total\": 4, \"score\": 0.0, \"reason\": \"未找到依赖模块\"}\n```"
+ },
+ {
+  "id": "FWD-08",
+  "answer": "```json\n{\"hit\": 0, \"total\": 8, \"score\": 0.0, \"reason\": \"未找到相关依赖\"}\n```"
+ },
+ {
+  "id": "FWD-09",
+  "answer": "```json\n{\"hit\": 0, \"total\": 9, \"score\": 0.0, \"reason\": \"未找到依赖模块\"}\n```"
+ },
+ {
+  "id": "FWD-10",
+  "answer": "```json\n{\"hit\": 0, \"total\": 8, \"score\": 0.0, \"reason\": \"未找到依赖模块\"}\n```"
+ },
+ {
+  "id": "FWD-11",
+  "answer": "```json\n{\"hit\": 0, \"total\": 10, \"score\": 0.0, \"reason\": \"未找到依赖模块\"}\n```"
+ },
+ {
+  "id": "REV-01",
+  "answer": "{\"hit\": 1, \"total\": 17, \"score\": 0.06, \"reason\": \"仅找到一个文件导入，遗漏16个要点\"}"
+ },
+ {
+  "id": "REV-02",
+  "answer": "```json\n{\"hit\": 0, \"total\": 14, \"score\": 0.0, \"reason\": \"未找到任何依赖文件\"}\n```"
+ },
+ {
+  "id": "REV-03",
+  "answer": "```json\n{\"hit\": 0, \"total\": 4, \"score\": 0.0, \"reason\": \"未找到相关依赖\"}\n```"
+ },
+ {
+  "id": "REV-04",
+  "answer": "```json\n{\"hit\": 0, \"total\": 7, \"score\": 0.0, \"reason\": \"未找到任何依赖文件\"}\n```"
+ },
+ {
+  "id": "REV-05",
+  "answer": "{\"hit\": 1, \"total\": 13, \"score\": 0.0769, \"reason\": \"仅命中1个要点，其余遗漏\"}"
+ },
+ {
+  "id": "REV-06",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到依赖关系\"}\n```"
+ },
+ {
+  "id": "REV-07",
+  "answer": "{\"hit\": 3, \"total\": 18, \"score\": 0.167, \"reason\": \"仅命中3个要点，遗漏15个\"}"
+ },
+ {
+  "id": "REV-08",
+  "answer": "```json\n{\"hit\": 0, \"total\": 4, \"score\": 0.0, \"reason\": \"未找到相关依赖\"}\n```"
+ },
+ {
+  "id": "REV-09",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到依赖关系\"}\n```"
+ },
+ {
+  "id": "REV-10",
+  "answer": "{\"hit\": 2, \"total\": 6, \"score\": 0.33, \"reason\": \"仅命中2个要点，遗漏4个\"}"
+ },
+ {
+  "id": "REV-11",
+  "answer": "```json\n{\"hit\": 0, \"total\": 7, \"score\": 0.0, \"reason\": \"未找到任何依赖\"}\n```"
+ },
+ {
+  "id": "REV-12",
+  "answer": "{\"hit\": 2, \"total\": 10, \"score\": 0.2, \"reason\": \"仅列出了2个要点，遗漏了8个要点\"}"
+ },
+ {
+  "id": "REV-13",
+  "answer": "```json\n{\"hit\": 3, \"total\": 10, \"score\": 0.3, \"reason\": \"部分文件正确，遗漏了7个文件\"}\n```"
+ },
+ {
+  "id": "INH-01",
+  "answer": "```json\n{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未找到继承关系和文件名\"}\n```"
+ },
+ {
+  "id": "INH-02",
+  "answer": "```json\n{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未找到继承关系和文件名\"}\n```"
+ },
+ {
+  "id": "INH-03",
+  "answer": "```json\n{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未找到继承关系和文件名\"}\n```"
+ },
+ {
+  "id": "INH-04",
+  "answer": "```json\n{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未找到继承关系和文件名\"}\n```"
+ },
+ {
+  "id": "INH-05",
+  "answer": "```json\n{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未找到继承关系和文件名\"}\n```"
+ },
+ {
+  "id": "INH-06",
+  "answer": "```json\n{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未找到相关继承关系和文件名\"}\n```"
+ },
+ {
+  "id": "INH-07",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到正确继承关系\"}\n```"
+ },
+ {
+  "id": "INH-08",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"Response基类不在wrappers/__init__.py\"}\n```"
+ },
+ {
+  "id": "INH-09",
+  "answer": "```json\n{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未找到相关继承关系\"}\n```"
+ },
+ {
+  "id": "INH-10",
+  "answer": "```json\n{\"hit\": 0, \"total\": 31, \"score\": 0.0, \"reason\": \"未找到任何异常类\"}\n```"
+ },
+ {
+  "id": "INH-11",
+  "answer": "```json\n{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"所有要点均命中\"}\n```"
+ },
+ {
+  "id": "INH-12",
+  "answer": "```json\n{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未找到继承关系\"}\n```"
+ },
+ {
+  "id": "LOC-01",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "LOC-02",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "LOC-03",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到文件名\"}\n```"
+ },
+ {
+  "id": "LOC-04",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "LOC-05",
+  "answer": "```json\n{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确回答了文件名\"}\n```"
+ },
+ {
+  "id": "LOC-06",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到文件名\"}\n```"
+ },
+ {
+  "id": "LOC-07",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "LOC-08",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "LOC-09",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确指出文件位置\"}"
+ },
+ {
+  "id": "LOC-10",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "LOC-11",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "LOC-12",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "DAT-01",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "DAT-02",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "DAT-03",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关文件\"}\n```"
+ },
+ {
+  "id": "IND-01",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到依赖路径\"}\n```"
+ },
+ {
+  "id": "IND-02",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到依赖路径\"}\n```"
+ },
+ {
+  "id": "IND-03",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到依赖路径\"}\n```"
+ },
+ {
+  "id": "IND-04",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到依赖路径\"}\n```"
+ },
+ {
+  "id": "IND-05",
+  "answer": "```json\n{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未找到相关依赖信息\"}\n```"
+ }
+]

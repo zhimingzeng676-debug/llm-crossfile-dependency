@@ -1,0 +1,74 @@
+[
+ {
+  "id": "XIND-01",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,__init__.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] serving.py\n[补充说明 — 标准答案的完整描述] 间接依赖:__init__.py -> serving.py -> ... -> _internal.py。中间文件 serving.py。\n\n[模型回答]\n是,__init__.py 间接依赖 _internal.py:__init__.py 直接 import 了中间文件 debug/console.py,而 debug/console.py 直接 import 了 _internal.py。中间文件是 debug/console.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-02",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,__init__.py 是否间接依赖 datastructures/__init__.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] test.py\n[补充说明 — 标准答案的完整描述] 间接依赖:__init__.py -> test.py -> ... -> datastructures/__init__.py。中间文件 test.py。\n\n[模型回答]\n是,__init__.py 间接依赖 datastructures/__init__.py:__init__.py 直接 import 了中间文件 datastructures/structures.py,而 datastructures/structures.py 直接 import 了 datastructures/__init__.py。中间文件是 datastructures/structures.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-03",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,__init__.py 是否间接依赖 wrappers/request.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] wrappers/__init__.py\n[补充说明 — 标准答案的完整描述] 间接依赖:__init__.py -> wrappers/__init__.py -> ... -> wrappers/request.py。中间文件 wrappers/__init__.py。\n\n[模型回答]\n是,__init__.py 间接依赖 wrappers/request.py:__init__.py 直接 import 了中间文件 debug/console.py,而 debug/console.py 直接 import 了 wrappers/request.py。中间文件是 debug/console.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-04",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,_internal.py 是否间接依赖 datastructures/__init__.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] wrappers/request.py\n[补充说明 — 标准答案的完整描述] 间接依赖:_internal.py -> wrappers/request.py -> ... -> datastructures/__init__.py。中间文件 wrappers/request.py。\n\n[模型回答]\n是,_internal.py 间接依赖 datastructures/__init__.py:_internal.py 直接 import 了中间文件 wrappers/request.py,而 wrappers/request.py 直接 import 了 datastructures/__init__.py。中间文件是 wrappers/request.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-05",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,_reloader.py 是否间接依赖 wrappers/request.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] _internal.py\n[补充说明 — 标准答案的完整描述] 间接依赖:_reloader.py -> _internal.py -> ... -> wrappers/request.py。中间文件 _internal.py。\n\n[模型回答]\n是,_reloader.py 间接依赖 wrappers/request.py:_reloader.py 直接 import 了中间文件 _internal.py,而 _internal.py 直接 import 了 wrappers/request.py。中间文件是 _internal.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-06",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/__init__.py 是否间接依赖 http.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] datastructures/auth.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/__init__.py -> datastructures/auth.py -> ... -> http.py。中间文件 datastructures/auth.py。\n\n[模型回答]\n是,datastructures/__init__.py 间接依赖 http.py:datastructures/__init__.py 直接 import 了中间文件 datastructures/accept.py,而 datastructures/accept.py 直接 import 了 http.py。中间文件是 datastructures/accept.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-07",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/__init__.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] datastructures/file_storage.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/__init__.py -> datastructures/file_storage.py -> ... -> _internal.py。中间文件 datastructures/file_storage.py。\n\n[模型回答]\n是,datastructures/__init__.py 间接依赖 _internal.py:datastructures/__init__.py 直接 import 了中间文件 datastructures/headers.py,而 datastructures/headers.py 直接 import 了 _internal.py。中间文件是 datastructures/headers.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-08",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/__init__.py 是否间接依赖 exceptions.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] datastructures/headers.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/__init__.py -> datastructures/headers.py -> ... -> exceptions.py。中间文件 datastructures/headers.py。\n\n[模型回答]\n是,datastructures/__init__.py 间接依赖 exceptions.py:datastructures/__init__.py 直接 import 了中间文件 datastructures/headers.py,而 datastructures/headers.py 直接 import 了 exceptions.py。中间文件是 datastructures/headers.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-09",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/accept.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] datastructures/structures.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/accept.py -> datastructures/structures.py -> ... -> _internal.py。中间文件 datastructures/structures.py。\n\n[模型回答]\n是,datastructures/accept.py 间接依赖 _internal.py:datastructures/accept.py 直接 import 了中间文件 datastructures/structures.py,而 datastructures/structures.py 直接 import 了 _internal.py。中间文件是 datastructures/structures.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-10",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/auth.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] datastructures/structures.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/auth.py -> datastructures/structures.py -> ... -> _internal.py。中间文件 datastructures/structures.py。\n\n[模型回答]\n是,datastructures/auth.py 间接依赖 _internal.py:datastructures/auth.py 直接 import 了中间文件 structures.py,而 structures.py 直接 import 了 _internal.py。中间文件是 structures.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-11",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/auth.py 是否间接依赖 sansio/__init__.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] http.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/auth.py -> http.py -> ... -> sansio/__init__.py。中间文件 http.py。\n\n[模型回答]\n是,datastructures/auth.py 间接依赖 sansio/__init__.py:datastructures/auth.py 直接 import 了中间文件 datastructures/structures.py,而 datastructures/structures.py 直接 import 了 sansio/__init__.py。中间文件是 datastructures/structures.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-12",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/cache_control.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] datastructures/mixins.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/cache_control.py -> datastructures/mixins.py -> ... -> _internal.py。中间文件 datastructures/mixins.py。\n\n[模型回答]\n是,datastructures/cache_control.py 间接依赖 _internal.py:datastructures/cache_control.py 直接 import 了中间文件 datastructures/mixins.py,而 datastructures/mixins.py 直接 import 了 _internal.py。中间文件是 datastructures/mixins.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-13",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/csp.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] datastructures/structures.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/csp.py -> datastructures/structures.py -> ... -> _internal.py。中间文件 datastructures/structures.py。\n\n[模型回答]\n是,datastructures/csp.py 间接依赖 _internal.py:datastructures/csp.py 直接 import 了中间文件 http.py,而 http.py 直接 import 了 _internal.py。中间文件是 http.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-14",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/csp.py 是否间接依赖 sansio/__init__.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] http.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/csp.py -> http.py -> ... -> sansio/__init__.py。中间文件 http.py。\n\n[模型回答]\n是,datastructures/csp.py 间接依赖 sansio/__init__.py:datastructures/csp.py 直接 import 了中间文件 http.py,而 http.py 直接 import 了 sansio/__init__.py。中间文件是 http.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-15",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/etag.py 是否间接依赖 _internal.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] http.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/etag.py -> http.py -> ... -> _internal.py。中间文件 http.py。\n\n[模型回答]\n是,datastructures/etag.py 间接依赖 _internal.py:etag.py 直接 import 了中间文件 http.py,而 http.py 直接 import 了 _internal.py。中间文件是 http.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-16",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/file_storage.py 是否间接依赖 wrappers/request.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] _internal.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/file_storage.py -> _internal.py -> ... -> wrappers/request.py。中间文件 _internal.py。\n\n[模型回答]\n是,datastructures/file_storage.py 间接依赖 wrappers/request.py:datastructures/file_storage.py 直接 import 了中间文件 datastructures/headers.py,而 datastructures/headers.py 直接 import 了 wrappers/request.py。中间文件是 datastructures/headers.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-17",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/file_storage.py 是否间接依赖 datastructures/mixins.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] datastructures/headers.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/file_storage.py -> datastructures/headers.py -> ... -> datastructures/mixins.py。中间文件 datastructures/headers.py。\n\n[模型回答]\n是,datastructures/file_storage.py 间接依赖 datastructures/mixins.py:datastructures/file_storage.py 直接 import 了中间文件 datastructures/headers.py,而 datastructures/headers.py 直接 import 了 datastructures/mixins.py。中间文件是 datastructures/headers.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ },
+ {
+  "id": "XIND-18",
+  "prompt": "你是代码依赖分析评测裁判,只负责判断\"模型回答\"是否答对了\"标准答案要点\"。\n评分标准(务必遵守):\n- 命中正确的文件名/符号名/依赖或继承关系即算答对,**不计较措辞、语言、格式**;\n- 模型多列了正确的额外信息**不扣分**;\n- 只有**遗漏了要点**或给出**矛盾/错误**信息才扣分;\n- 对\"列出多个\"的问题,按命中要点的**比例**打分(命中数/要点总数)。\n\n[问题] 在 werkzeug 中,datastructures/headers.py 是否间接依赖 wrappers/request.py?如果是,依赖路径恰好经过哪个中间文件(给出完整路径)?\n\n[标准答案要点 — 必须命中这些] _internal.py\n[补充说明 — 标准答案的完整描述] 间接依赖:datastructures/headers.py -> _internal.py -> ... -> wrappers/request.py。中间文件 _internal.py。\n\n[模型回答]\n是,datastructures/headers.py 间接依赖 wrappers/request.py:datastructures/headers.py 直接 import 了中间文件 datastructures/mixins.py,而 datastructures/mixins.py 直接 import 了 wrappers/request.py。中间文件是 datastructures/mixins.py。\n\n只输出一行 JSON,不要任何额外文字:\n{\"hit\": <命中要点数,整数>, \"total\": <要点总数,整数>, \"score\": <hit/total,0到1小数>, \"reason\": \"<20字内理由>\"}"
+ }
+]

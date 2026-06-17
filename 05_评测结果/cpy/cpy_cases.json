@@ -1,0 +1,512 @@
+[
+ {
+  "id": "CPY-PY_-0",
+  "category": "py_forward",
+  "focal": "Lib/abc.py",
+  "question": "在 CPython 中,Lib/abc.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/_py_abc.py, Lib/warnings.py",
+  "gold_kw": [
+   "_py_abc.py",
+   "warnings.py"
+  ],
+  "gold_card": "Lib/abc.py"
+ },
+ {
+  "id": "CPY-PY_-1",
+  "category": "py_forward",
+  "focal": "Lib/antigravity.py",
+  "question": "在 CPython 中,Lib/antigravity.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/hashlib.py, Lib/webbrowser.py",
+  "gold_kw": [
+   "hashlib.py",
+   "webbrowser.py"
+  ],
+  "gold_card": "Lib/antigravity.py"
+ },
+ {
+  "id": "CPY-PY_-2",
+  "category": "py_forward",
+  "focal": "Lib/base64.py",
+  "question": "在 CPython 中,Lib/base64.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/getopt.py, Lib/io.py, Lib/warnings.py",
+  "gold_kw": [
+   "getopt.py",
+   "io.py",
+   "warnings.py"
+  ],
+  "gold_card": "Lib/base64.py"
+ },
+ {
+  "id": "CPY-PY_-3",
+  "category": "py_forward",
+  "focal": "Lib/bz2.py",
+  "question": "在 CPython 中,Lib/bz2.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/compression/_common/__init__.py, Lib/io.py, Lib/os.py",
+  "gold_kw": [
+   "__init__.py",
+   "io.py",
+   "os.py"
+  ],
+  "gold_card": "Lib/bz2.py"
+ },
+ {
+  "id": "CPY-PY_-4",
+  "category": "py_forward",
+  "focal": "Lib/calendar.py",
+  "question": "在 CPython 中,Lib/calendar.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/_colorize.py, Lib/argparse.py, Lib/datetime.py, Lib/enum.py, Lib/locale.py, Lib/warnings.py",
+  "gold_kw": [
+   "_colorize.py",
+   "argparse.py",
+   "datetime.py",
+   "enum.py",
+   "locale.py",
+   "warnings.py"
+  ],
+  "gold_card": "Lib/calendar.py"
+ },
+ {
+  "id": "CPY-PY_-5",
+  "category": "py_forward",
+  "focal": "Lib/code.py",
+  "question": "在 CPython 中,Lib/code.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/argparse.py, Lib/codeop.py, Lib/traceback.py",
+  "gold_kw": [
+   "argparse.py",
+   "codeop.py",
+   "traceback.py"
+  ],
+  "gold_card": "Lib/code.py"
+ },
+ {
+  "id": "CPY-PY_-6",
+  "category": "py_forward",
+  "focal": "Lib/codecs.py",
+  "question": "在 CPython 中,Lib/codecs.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/encodings/__init__.py, Lib/warnings.py",
+  "gold_kw": [
+   "__init__.py",
+   "warnings.py"
+  ],
+  "gold_card": "Lib/codecs.py"
+ },
+ {
+  "id": "CPY-PY_-7",
+  "category": "py_forward",
+  "focal": "Lib/codeop.py",
+  "question": "在 CPython 中,Lib/codeop.py 这个文件直接 import 了哪些本仓库内的 Python 文件/模块?列出。",
+  "gold": "Lib/__future__.py, Lib/warnings.py",
+  "gold_kw": [
+   "__future__.py",
+   "warnings.py"
+  ],
+  "gold_card": "Lib/codeop.py"
+ },
+ {
+  "id": "CPY-PY_-8",
+  "category": "py_reverse",
+  "focal": "Lib/webbrowser.py",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/webbrowser.py?列出。",
+  "gold": "Lib/antigravity.py, Lib/idlelib/editor.py, Lib/idlelib/help_about.py, Lib/profiling/sampling/cli.py, Lib/pydoc.py, Lib/wsgiref/simple_server.py",
+  "gold_kw": [
+   "antigravity.py",
+   "editor.py",
+   "help_about.py",
+   "cli.py",
+   "pydoc.py",
+   "simple_server.py"
+  ],
+  "gold_card": "Lib/webbrowser.py"
+ },
+ {
+  "id": "CPY-PY_-9",
+  "category": "py_reverse",
+  "focal": "Lib/hashlib.py",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/hashlib.py?列出。",
+  "gold": "Lib/antigravity.py, Lib/hmac.py, Lib/poplib.py, Lib/random.py, Lib/urllib/request.py, Lib/uuid.py",
+  "gold_kw": [
+   "antigravity.py",
+   "hmac.py",
+   "poplib.py",
+   "random.py",
+   "request.py",
+   "uuid.py"
+  ],
+  "gold_card": "Lib/hashlib.py"
+ },
+ {
+  "id": "CPY-PY_-10",
+  "category": "py_reverse",
+  "focal": "Lib/dis.py",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/dis.py?列出。",
+  "gold": "Lib/bdb.py, Lib/modulefinder.py, Lib/trace.py",
+  "gold_kw": [
+   "bdb.py",
+   "modulefinder.py",
+   "trace.py"
+  ],
+  "gold_card": "Lib/dis.py"
+ },
+ {
+  "id": "CPY-PY_-11",
+  "category": "py_reverse",
+  "focal": "Lib/compression/_common/__init__.py",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/compression/_common/__init__.py?列出。",
+  "gold": "Lib/bz2.py, Lib/compression/zstd/_zstdfile.py, Lib/gzip.py, Lib/lzma.py",
+  "gold_kw": [
+   "bz2.py",
+   "_zstdfile.py",
+   "gzip.py",
+   "lzma.py"
+  ],
+  "gold_card": "Lib/compression/_common/__init__.py"
+ },
+ {
+  "id": "CPY-PY_-12",
+  "category": "py_reverse",
+  "focal": "Lib/encodings/__init__.py",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/encodings/__init__.py?列出。",
+  "gold": "Lib/codecs.py, Lib/locale.py",
+  "gold_kw": [
+   "codecs.py",
+   "locale.py"
+  ],
+  "gold_card": "Lib/encodings/__init__.py"
+ },
+ {
+  "id": "CPY-PY_-13",
+  "category": "py_reverse",
+  "focal": "Lib/py_compile.py",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/py_compile.py?列出。",
+  "gold": "Lib/compileall.py, Lib/zipfile/__init__.py",
+  "gold_kw": [
+   "compileall.py",
+   "__init__.py"
+  ],
+  "gold_card": "Lib/py_compile.py"
+ },
+ {
+  "id": "CPY-PY_-14",
+  "category": "py_reverse",
+  "focal": "Lib/concurrent/futures/process.py",
+  "question": "在 CPython 中,哪些本仓库内的 Python 文件 import 了 Lib/concurrent/futures/process.py?列出。",
+  "gold": "Lib/compileall.py, Lib/concurrent/futures/__init__.py",
+  "gold_kw": [
+   "compileall.py",
+   "__init__.py"
+  ],
+  "gold_card": "Lib/concurrent/futures/process.py"
+ },
+ {
+  "id": "CPY-C_F-15",
+  "category": "c_forward",
+  "focal": "Modules/atexitmodule.c",
+  "question": "在 CPython 中,Modules/atexitmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Include/internal/pycore_atexit.h, Include/internal/pycore_initconfig.h, Include/internal/pycore_interp.h, Include/internal/pycore_pystate.h",
+  "gold_kw": [
+   "Python.h",
+   "pycore_atexit.h",
+   "pycore_initconfig.h",
+   "pycore_interp.h",
+   "pycore_pystate.h"
+  ],
+  "gold_card": "Modules/atexitmodule.c"
+ },
+ {
+  "id": "CPY-C_F-16",
+  "category": "c_forward",
+  "focal": "Modules/binascii.c",
+  "question": "在 CPython 中,Modules/binascii.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Include/internal/pycore_long.h, Include/internal/pycore_strhex.h",
+  "gold_kw": [
+   "Python.h",
+   "pycore_long.h",
+   "pycore_strhex.h"
+  ],
+  "gold_card": "Modules/binascii.c"
+ },
+ {
+  "id": "CPY-C_F-17",
+  "category": "c_forward",
+  "focal": "Modules/cmathmodule.c",
+  "question": "在 CPython 中,Modules/cmathmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Include/internal/pycore_complexobject.h, Include/internal/pycore_pymath.h, Modules/_math.h",
+  "gold_kw": [
+   "Python.h",
+   "pycore_complexobject.h",
+   "pycore_pymath.h",
+   "_math.h"
+  ],
+  "gold_card": "Modules/cmathmodule.c"
+ },
+ {
+  "id": "CPY-C_F-18",
+  "category": "c_forward",
+  "focal": "Modules/gcmodule.c",
+  "question": "在 CPython 中,Modules/gcmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Include/internal/pycore_gc.h, Include/internal/pycore_object.h, Include/internal/pycore_pystate.h",
+  "gold_kw": [
+   "Python.h",
+   "pycore_gc.h",
+   "pycore_object.h",
+   "pycore_pystate.h"
+  ],
+  "gold_card": "Modules/gcmodule.c"
+ },
+ {
+  "id": "CPY-C_F-19",
+  "category": "c_forward",
+  "focal": "Modules/getbuildinfo.c",
+  "question": "在 CPython 中,Modules/getbuildinfo.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Include/internal/pycore_pylifecycle.h",
+  "gold_kw": [
+   "Python.h",
+   "pycore_pylifecycle.h"
+  ],
+  "gold_card": "Modules/getbuildinfo.c"
+ },
+ {
+  "id": "CPY-C_F-20",
+  "category": "c_forward",
+  "focal": "Modules/getpath_noop.c",
+  "question": "在 CPython 中,Modules/getpath_noop.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Include/internal/pycore_pathconfig.h",
+  "gold_kw": [
+   "Python.h",
+   "pycore_pathconfig.h"
+  ],
+  "gold_card": "Modules/getpath_noop.c"
+ },
+ {
+  "id": "CPY-C_F-21",
+  "category": "c_forward",
+  "focal": "Modules/grpmodule.c",
+  "question": "在 CPython 中,Modules/grpmodule.c 这个 C 文件 #include 了哪些本仓库内的头文件?列出。",
+  "gold": "Include/Python.h, Modules/posixmodule.h",
+  "gold_kw": [
+   "Python.h",
+   "posixmodule.h"
+  ],
+  "gold_card": "Modules/grpmodule.c"
+ },
+ {
+  "id": "CPY-C_R-22",
+  "category": "c_reverse",
+  "focal": "Modules/hashlib.h",
+  "question": "在 CPython 中,哪些本仓库内的文件 #include 了 Modules/hashlib.h?列出几个。",
+  "gold": "Modules/_hashopenssl.c, Modules/blake2module.c, Modules/hmacmodule.c, Modules/md5module.c, Modules/sha1module.c, Modules/sha2module.c, Modules/sha3module.c",
+  "gold_kw": [
+   "_hashopenssl.c",
+   "blake2module.c",
+   "hmacmodule.c",
+   "md5module.c",
+   "sha1module.c",
+   "sha2module.c",
+   "sha3module.c"
+  ],
+  "gold_card": "Modules/hashlib.h"
+ },
+ {
+  "id": "CPY-C_R-23",
+  "category": "c_reverse",
+  "focal": "Modules/_hacl/internal/Hacl_Hash_Blake2s.h",
+  "question": "在 CPython 中,哪些本仓库内的文件 #include 了 Modules/_hacl/internal/Hacl_Hash_Blake2s.h?列出几个。",
+  "gold": "Modules/_hacl/Hacl_HMAC.c, Modules/_hacl/Hacl_Hash_Blake2s.c, Modules/_hacl/Hacl_Streaming_HMAC.c, Modules/blake2module.c",
+  "gold_kw": [
+   "Hacl_HMAC.c",
+   "Hacl_Hash_Blake2s.c",
+   "Hacl_Streaming_HMAC.c",
+   "blake2module.c"
+  ],
+  "gold_card": "Modules/_hacl/internal/Hacl_Hash_Blake2s.h"
+ },
+ {
+  "id": "CPY-C_R-24",
+  "category": "c_reverse",
+  "focal": "Modules/_hacl/internal/Hacl_Hash_Blake2s_Simd128.h",
+  "question": "在 CPython 中,哪些本仓库内的文件 #include 了 Modules/_hacl/internal/Hacl_Hash_Blake2s_Simd128.h?列出几个。",
+  "gold": "Modules/_hacl/Hacl_Hash_Blake2s_Simd128.c, Modules/_hacl/Hacl_Streaming_HMAC.c, Modules/blake2module.c",
+  "gold_kw": [
+   "Hacl_Hash_Blake2s_Simd128.c",
+   "Hacl_Streaming_HMAC.c",
+   "blake2module.c"
+  ],
+  "gold_card": "Modules/_hacl/internal/Hacl_Hash_Blake2s_Simd128.h"
+ },
+ {
+  "id": "CPY-C_R-25",
+  "category": "c_reverse",
+  "focal": "Modules/_hacl/internal/Hacl_Hash_Blake2b_Simd256.h",
+  "question": "在 CPython 中,哪些本仓库内的文件 #include 了 Modules/_hacl/internal/Hacl_Hash_Blake2b_Simd256.h?列出几个。",
+  "gold": "Modules/_hacl/Hacl_Hash_Blake2b_Simd256.c, Modules/_hacl/Hacl_Streaming_HMAC.c, Modules/blake2module.c",
+  "gold_kw": [
+   "Hacl_Hash_Blake2b_Simd256.c",
+   "Hacl_Streaming_HMAC.c",
+   "blake2module.c"
+  ],
+  "gold_card": "Modules/_hacl/internal/Hacl_Hash_Blake2b_Simd256.h"
+ },
+ {
+  "id": "CPY-C_R-26",
+  "category": "c_reverse",
+  "focal": "Include/internal/pycore_complexobject.h",
+  "question": "在 CPython 中,哪些本仓库内的文件 #include 了 Include/internal/pycore_complexobject.h?列出几个。",
+  "gold": "Modules/cmathmodule.c, Objects/complexobject.c, Objects/stringlib/unicode_format.h",
+  "gold_kw": [
+   "cmathmodule.c",
+   "complexobject.c",
+   "unicode_format.h"
+  ],
+  "gold_card": "Include/internal/pycore_complexobject.h"
+ },
+ {
+  "id": "CPY-C_R-27",
+  "category": "c_reverse",
+  "focal": "Include/internal/pycore_pymath.h",
+  "question": "在 CPython 中,哪些本仓库内的文件 #include 了 Include/internal/pycore_pymath.h?列出几个。",
+  "gold": "Include/internal/pycore_dtoa.h, Include/internal/pycore_interp_structs.h, Modules/cmathmodule.c, Modules/mathmodule.c, Objects/complexobject.c, Objects/floatobject.c, Python/pystrtod.c, Python/sysmodule.c",
+  "gold_kw": [
+   "pycore_dtoa.h",
+   "pycore_interp_structs.h",
+   "cmathmodule.c",
+   "mathmodule.c",
+   "complexobject.c",
+   "floatobject.c",
+   "pystrtod.c",
+   "sysmodule.c"
+  ],
+  "gold_card": "Include/internal/pycore_pymath.h"
+ },
+ {
+  "id": "CPY-XLA-28",
+  "category": "xlang",
+  "focal": "Lib/abc.py",
+  "question": "在 CPython 中,Lib/abc.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_abc.c",
+  "gold_kw": [
+   "_abc.c"
+  ],
+  "gold_card": "Lib/abc.py"
+ },
+ {
+  "id": "CPY-XLA-29",
+  "category": "xlang",
+  "focal": "Lib/base64.py",
+  "question": "在 CPython 中,Lib/base64.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/binascii.c",
+  "gold_kw": [
+   "binascii.c"
+  ],
+  "gold_card": "Lib/base64.py"
+ },
+ {
+  "id": "CPY-XLA-30",
+  "category": "xlang",
+  "focal": "Lib/cmd.py",
+  "question": "在 CPython 中,Lib/cmd.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/readline.c",
+  "gold_kw": [
+   "readline.c"
+  ],
+  "gold_card": "Lib/cmd.py"
+ },
+ {
+  "id": "CPY-XLA-31",
+  "category": "xlang",
+  "focal": "Lib/code.py",
+  "question": "在 CPython 中,Lib/code.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/readline.c",
+  "gold_kw": [
+   "readline.c"
+  ],
+  "gold_card": "Lib/code.py"
+ },
+ {
+  "id": "CPY-XLA-32",
+  "category": "xlang",
+  "focal": "Lib/csv.py",
+  "question": "在 CPython 中,Lib/csv.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_csv.c",
+  "gold_kw": [
+   "_csv.c"
+  ],
+  "gold_card": "Lib/csv.py"
+ },
+ {
+  "id": "CPY-XLA-33",
+  "category": "xlang",
+  "focal": "Lib/dis.py",
+  "question": "在 CPython 中,Lib/dis.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_opcode.c",
+  "gold_kw": [
+   "_opcode.c"
+  ],
+  "gold_card": "Lib/dis.py"
+ },
+ {
+  "id": "CPY-XLA-34",
+  "category": "xlang",
+  "focal": "Lib/getpass.py",
+  "question": "在 CPython 中,Lib/getpass.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/termios.c",
+  "gold_kw": [
+   "termios.c"
+  ],
+  "gold_card": "Lib/getpass.py"
+ },
+ {
+  "id": "CPY-XLA-35",
+  "category": "xlang",
+  "focal": "Lib/hmac.py",
+  "question": "在 CPython 中,Lib/hmac.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_operator.c",
+  "gold_kw": [
+   "_operator.c"
+  ],
+  "gold_card": "Lib/hmac.py"
+ },
+ {
+  "id": "CPY-XLA-36",
+  "category": "xlang",
+  "focal": "Lib/imaplib.py",
+  "question": "在 CPython 中,Lib/imaplib.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/binascii.c",
+  "gold_kw": [
+   "binascii.c"
+  ],
+  "gold_card": "Lib/imaplib.py"
+ },
+ {
+  "id": "CPY-XLA-37",
+  "category": "xlang",
+  "focal": "Lib/mimetypes.py",
+  "question": "在 CPython 中,Lib/mimetypes.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_winapi.c",
+  "gold_kw": [
+   "_winapi.c"
+  ],
+  "gold_card": "Lib/mimetypes.py"
+ },
+ {
+  "id": "CPY-XLA-38",
+  "category": "xlang",
+  "focal": "Lib/ntpath.py",
+  "question": "在 CPython 中,Lib/ntpath.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_winapi.c",
+  "gold_kw": [
+   "_winapi.c"
+  ],
+  "gold_card": "Lib/ntpath.py"
+ },
+ {
+  "id": "CPY-XLA-39",
+  "category": "xlang",
+  "focal": "Lib/opcode.py",
+  "question": "在 CPython 中,Lib/opcode.py 依赖(import)了哪个 C 扩展模块?该扩展由哪个 C 源文件(Modules/*.c)实现?",
+  "gold": "Modules/_opcode.c",
+  "gold_kw": [
+   "_opcode.c"
+  ],
+  "gold_card": "Lib/opcode.py"
+ }
+]

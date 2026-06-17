@@ -1,0 +1,207 @@
+{
+ "stamp": "20260616_155622",
+ "ambig_cap": 5,
+ "bugfix_repoparser": {
+  "n_total": 157,
+  "n_present": 109,
+  "n_absent": 48,
+  "visible": {
+   "import": 0.4587,
+   "call": 0.7615,
+   "full": 0.7615
+  },
+  "invisible": {
+   "import": 0.5413,
+   "call": 0.2385,
+   "full": 0.2385
+  }
+ },
+ "evo_repoparser": {
+  "n_total": 1342,
+  "n_present": 633,
+  "n_absent": 709,
+  "visible": {
+   "import": 0.3902,
+   "call": 0.6825,
+   "full": 0.6935
+  },
+  "invisible": {
+   "import": 0.6098,
+   "call": 0.3175,
+   "full": 0.3065
+  }
+ },
+ "per_project_parse_stats": {
+  "PySnooper": {
+   "n_files": 29,
+   "n_func": 457,
+   "n_class": 75,
+   "n_import_edges": 42,
+   "n_call_file_pairs": 60,
+   "n_class_file_pairs": 3,
+   "skipped_ambig_call": 6,
+   "skipped_ambig_class": 0
+  },
+  "ansible": {
+   "n_files": 1818,
+   "n_func": 10785,
+   "n_class": 2042,
+   "n_import_edges": 909,
+   "n_call_file_pairs": 12252,
+   "n_class_file_pairs": 496,
+   "skipped_ambig_call": 6776,
+   "skipped_ambig_class": 236
+  },
+  "black": {
+   "n_files": 335,
+   "n_func": 2548,
+   "n_class": 450,
+   "n_import_edges": 15,
+   "n_call_file_pairs": 280,
+   "n_class_file_pairs": 9,
+   "skipped_ambig_call": 71,
+   "skipped_ambig_class": 5
+  },
+  "cookiecutter": {
+   "n_files": 90,
+   "n_func": 461,
+   "n_class": 39,
+   "n_import_edges": 108,
+   "n_call_file_pairs": 93,
+   "n_class_file_pairs": 0,
+   "skipped_ambig_call": 3,
+   "skipped_ambig_class": 0
+  },
+  "fastapi": {
+   "n_files": 1121,
+   "n_func": 4713,
+   "n_class": 703,
+   "n_import_edges": 1577,
+   "n_call_file_pairs": 843,
+   "n_class_file_pairs": 49,
+   "skipped_ambig_call": 1861,
+   "skipped_ambig_class": 11
+  },
+  "httpie": {
+   "n_files": 133,
+   "n_func": 1066,
+   "n_class": 176,
+   "n_import_edges": 374,
+   "n_call_file_pairs": 472,
+   "n_class_file_pairs": 14,
+   "skipped_ambig_call": 38,
+   "skipped_ambig_class": 0
+  },
+  "keras": {
+   "n_files": 970,
+   "n_func": 14773,
+   "n_class": 1757,
+   "n_import_edges": 3416,
+   "n_call_file_pairs": 4827,
+   "n_class_file_pairs": 800,
+   "skipped_ambig_call": 24254,
+   "skipped_ambig_class": 54
+  },
+  "luigi": {
+   "n_files": 259,
+   "n_func": 5032,
+   "n_class": 1494,
+   "n_import_edges": 580,
+   "n_call_file_pairs": 1620,
+   "n_class_file_pairs": 612,
+   "skipped_ambig_call": 2478,
+   "skipped_ambig_class": 233
+  },
+  "matplotlib": {
+   "n_files": 910,
+   "n_func": 11025,
+   "n_class": 1132,
+   "n_import_edges": 168,
+   "n_call_file_pairs": 6548,
+   "n_class_file_pairs": 230,
+   "skipped_ambig_call": 6609,
+   "skipped_ambig_class": 0
+  },
+  "pandas": {
+   "n_files": 1509,
+   "n_func": 30699,
+   "n_class": 2254,
+   "n_import_edges": 5663,
+   "n_call_file_pairs": 19343,
+   "n_class_file_pairs": 272,
+   "skipped_ambig_call": 22487,
+   "skipped_ambig_class": 0
+  },
+  "sanic": {
+   "n_files": 332,
+   "n_func": 3788,
+   "n_class": 325,
+   "n_import_edges": 890,
+   "n_call_file_pairs": 2320,
+   "n_class_file_pairs": 79,
+   "skipped_ambig_call": 1841,
+   "skipped_ambig_class": 0
+  },
+  "scrapy": {
+   "n_files": 440,
+   "n_func": 5175,
+   "n_class": 1348,
+   "n_import_edges": 1754,
+   "n_call_file_pairs": 2949,
+   "n_class_file_pairs": 182,
+   "skipped_ambig_call": 1701,
+   "skipped_ambig_class": 85
+  },
+  "spacy": {
+   "n_files": 876,
+   "n_func": 3582,
+   "n_class": 288,
+   "n_import_edges": 1471,
+   "n_call_file_pairs": 1535,
+   "n_class_file_pairs": 101,
+   "skipped_ambig_call": 1422,
+   "skipped_ambig_class": 0
+  },
+  "thefuck": {
+   "n_files": 416,
+   "n_func": 1462,
+   "n_class": 40,
+   "n_import_edges": 729,
+   "n_call_file_pairs": 301,
+   "n_class_file_pairs": 5,
+   "skipped_ambig_call": 813,
+   "skipped_ambig_class": 0
+  },
+  "tornado": {
+   "n_files": 107,
+   "n_func": 3218,
+   "n_class": 744,
+   "n_import_edges": 398,
+   "n_call_file_pairs": 994,
+   "n_class_file_pairs": 117,
+   "skipped_ambig_call": 1489,
+   "skipped_ambig_class": 0
+  },
+  "tqdm": {
+   "n_files": 68,
+   "n_func": 486,
+   "n_class": 59,
+   "n_import_edges": 113,
+   "n_call_file_pairs": 153,
+   "n_class_file_pairs": 12,
+   "skipped_ambig_call": 143,
+   "skipped_ambig_class": 0
+  },
+  "youtube-dl": {
+   "n_files": 902,
+   "n_func": 4109,
+   "n_class": 1677,
+   "n_import_edges": 2989,
+   "n_call_file_pairs": 1553,
+   "n_class_file_pairs": 1612,
+   "skipped_ambig_call": 11902,
+   "skipped_ambig_class": 0
+  }
+ },
+ "note": "HEAD-based. bug-fix edges originally measured at fixed_commit; here re-judged at HEAD (files moved/renamed since become absent_at_head)."
+}

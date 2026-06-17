@@ -1,0 +1,26 @@
+{
+ "humble": {
+  "strict": 0.301,
+  "humble": 1.0
+ },
+ "xlang": {
+  "go": {
+   "baseline": 0.0455,
+   "full": 0.9848,
+   "lift": 0.9394,
+   "n": 22
+  },
+  "java": {
+   "baseline": 0.1786,
+   "full": 0.75,
+   "lift": 0.5714,
+   "n": 28
+  },
+  "c": {
+   "baseline": 0.1364,
+   "full": 1.0,
+   "lift": 0.8636,
+   "n": 22
+  }
+ }
+}

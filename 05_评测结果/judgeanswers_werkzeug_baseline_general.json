@@ -1,0 +1,226 @@
+[
+ {
+  "id": "FWD-01",
+  "answer": "{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"全部要点命中，无遗漏或错误\"}"
+ },
+ {
+  "id": "FWD-02",
+  "answer": "{\"hit\": 6, \"total\": 6, \"score\": 1.0, \"reason\": \"完全命中所有要点，无遗漏或错误\"}"
+ },
+ {
+  "id": "FWD-03",
+  "answer": "{\"hit\": 2, \"total\": 2, \"score\": 1.0, \"reason\": \"正确列出所有依赖模块，无多余错误\"}"
+ },
+ {
+  "id": "FWD-04",
+  "answer": "{\"hit\": 0, \"total\": 8, \"score\": 0, \"reason\": \"未提供任何正确依赖信息\"}"
+ },
+ {
+  "id": "FWD-05",
+  "answer": "{\"hit\": 3, \"total\": 3, \"score\": 1.0, \"reason\": \"完全命中所有要点，无遗漏或错误\"}"
+ },
+ {
+  "id": "FWD-06",
+  "answer": "{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"未命中.sansio/http.py,.sansio/utils.py但非要点\"}"
+ },
+ {
+  "id": "FWD-07",
+  "answer": "{\"hit\": 0, \"total\": 4, \"score\": 0, \"reason\": \"未提供正确依赖模块,信息完全缺失\"}"
+ },
+ {
+  "id": "FWD-08",
+  "answer": "{\"hit\": 0, \"total\": 8, \"score\": 0, \"reason\": \"未提供正确依赖模块列表\"}"
+ },
+ {
+  "id": "FWD-09",
+  "answer": "{\"hit\": 0, \"total\": 9, \"score\": 0, \"reason\": \"未命中任何要点，且给出了错误文件名\"}"
+ },
+ {
+  "id": "FWD-10",
+  "answer": "{\"hit\": 0, \"total\": 8, \"score\": 0, \"reason\": \"未提供正确依赖模块列表\"}"
+ },
+ {
+  "id": "FWD-11",
+  "answer": "{\"hit\": 0, \"total\": 10, \"score\": 0, \"reason\": \"未提供任何正确依赖信息\"}"
+ },
+ {
+  "id": "REV-01",
+  "answer": "{\"hit\": 1, \"total\": 17, \"score\": 0.06, \"reason\": \"仅列出一个文件，遗漏大量要点\"}"
+ },
+ {
+  "id": "REV-02",
+  "answer": "{\"hit\": 0, \"total\": 14, \"score\": 0, \"reason\": \"未提供正确文件名，完全遗漏要点\"}"
+ },
+ {
+  "id": "REV-03",
+  "answer": "{\"hit\": 0, \"total\": 4, \"score\": 0, \"reason\": \"未提供正确文件名，信息完全缺失\"}"
+ },
+ {
+  "id": "REV-04",
+  "answer": "{\"hit\": 0, \"total\": 7, \"score\": 0, \"reason\": \"未提供正确文件名，信息为空\"}"
+ },
+ {
+  "id": "REV-05",
+  "answer": "{\"hit\": 1, \"total\": 13, \"score\": 0.08, \"reason\": \"遗漏了大部分依赖文件\"}"
+ },
+ {
+  "id": "REV-06",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0, \"reason\": \"未提供正确文件名\"}"
+ },
+ {
+  "id": "REV-07",
+  "answer": "{\"hit\": 2, \"total\": 18, \"score\": 0.11, \"reason\": \"遗漏大量要点，仅命中两个\"}"
+ },
+ {
+  "id": "REV-08",
+  "answer": "{\"hit\": 0, \"total\": 4, \"score\": 0, \"reason\": \"未提供正确文件名，信息完全缺失\"}"
+ },
+ {
+  "id": "REV-09",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0, \"reason\": \"未提供正确文件名\"}"
+ },
+ {
+  "id": "REV-10",
+  "answer": "{\"hit\": 0, \"total\": 6, \"score\": 0, \"reason\": \"未提供正确文件名,信息全错\"}"
+ },
+ {
+  "id": "REV-11",
+  "answer": "{\"hit\": 0, \"total\": 6, \"score\": 0, \"reason\": \"未提供任何正确文件名\"}"
+ },
+ {
+  "id": "REV-12",
+  "answer": "{\"hit\": 1, \"total\": 8, \"score\": 0.125, \"reason\": \"遗漏了多个正确文件名\"}"
+ },
+ {
+  "id": "REV-13",
+  "answer": "{\"hit\": 0, \"total\": 10, \"score\": 0, \"reason\": \"未命中任何要点，给出错误结论\"}"
+ },
+ {
+  "id": "INH-01",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0, \"reason\": \"未提供任何正确信息\"}"
+ },
+ {
+  "id": "INH-02",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0, \"reason\": \"未提供任何正确信息\"}"
+ },
+ {
+  "id": "INH-03",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0, \"reason\": \"未提及正确基类和文件\"}"
+ },
+ {
+  "id": "INH-04",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0, \"reason\": \"未提供任何正确信息\"}"
+ },
+ {
+  "id": "INH-05",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0, \"reason\": \"未提供任何正确信息\"}"
+ },
+ {
+  "id": "INH-06",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0, \"reason\": \"未提供任何正确信息\"}"
+ },
+ {
+  "id": "INH-07",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供任何正确信息\"}"
+ },
+ {
+  "id": "INH-08",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供正确文件名sansio/response.py\"}"
+ },
+ {
+  "id": "INH-09",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0, \"reason\": \"未提供任何继承信息\"}"
+ },
+ {
+  "id": "INH-10",
+  "answer": "{\"hit\": 0, \"total\": 31, \"score\": 0, \"reason\": \"未提供任何具体异常类名称\"}"
+ },
+ {
+  "id": "INH-11",
+  "answer": "{\"hit\": 4, \"total\": 4, \"score\": 1.0, \"reason\": \"全部要点命中，无多余错误信息\"}"
+ },
+ {
+  "id": "INH-12",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0, \"reason\": \"未命中任何要点，且未提供相关信息\"}"
+ },
+ {
+  "id": "LOC-01",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供正确文件名\"}"
+ },
+ {
+  "id": "LOC-02",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供正确文件名\"}"
+ },
+ {
+  "id": "LOC-03",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0, \"reason\": \"未提供正确文件名\"}"
+ },
+ {
+  "id": "LOC-04",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供正确文件名\"}"
+ },
+ {
+  "id": "LOC-05",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名exceptions.py\"}"
+ },
+ {
+  "id": "LOC-06",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供正确文件名\"}"
+ },
+ {
+  "id": "LOC-07",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名routing/map.py\"}"
+ },
+ {
+  "id": "LOC-08",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供正确文件名routing/map.py\"}"
+ },
+ {
+  "id": "LOC-09",
+  "answer": "{\"hit\": 1, \"total\": 1, \"score\": 1.0, \"reason\": \"正确命中文件名datastructures/structures.py\"}"
+ },
+ {
+  "id": "LOC-10",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供正确文件名，且声明未找到\"}"
+ },
+ {
+  "id": "LOC-11",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供正确文件名routing/matcher.py\"}"
+ },
+ {
+  "id": "LOC-12",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0, \"reason\": \"未提供正确文件名\"}"
+ },
+ {
+  "id": "DAT-01",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供正确文件名\"}"
+ },
+ {
+  "id": "DAT-02",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供正确文件名\"}"
+ },
+ {
+  "id": "DAT-03",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供正确文件名\"}"
+ },
+ {
+  "id": "IND-01",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"未准确指出中间文件为datastructures/__init__.py\"}"
+ },
+ {
+  "id": "IND-02",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0.0, \"reason\": \"未提供依赖路径和中间文件\"}"
+ },
+ {
+  "id": "IND-03",
+  "answer": "{\"hit\": 1, \"total\": 2, \"score\": 0.5, \"reason\": \"提及间接依赖,未准确指出中间文件\"}"
+ },
+ {
+  "id": "IND-04",
+  "answer": "{\"hit\": 0, \"total\": 2, \"score\": 0, \"reason\": \"未提及datastructures/__init__.py,无命中\"}"
+ },
+ {
+  "id": "IND-05",
+  "answer": "{\"hit\": 0, \"total\": 1, \"score\": 0.0, \"reason\": \"未提供任何相关文件路径或依赖关系\"}"
+ }
+]

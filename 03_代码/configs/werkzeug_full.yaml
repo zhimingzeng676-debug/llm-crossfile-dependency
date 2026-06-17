@@ -1,0 +1,21 @@
+# werkzeug 强栈:图卡片 + cross-encoder rerank。看真实项目上"全家桶"的天花板。
+# 注意:cross-encoder 在 56 用例 × 候选 上 CPU 较慢(数分钟),仅作上限测量。
+name: werkzeug_full
+repo_root: repos/werkzeug
+commits_path: null
+chunking:
+  strategy: function
+  include_graph_cards: true
+embedder:
+  type: sentence_transformer
+  model_name: models/bge-small-en-v1.5  # M65 审计:英文/代码任务用 en(R@5 0.93≫zh 0.32),零成本;勿改回 zh(冒烟测试会拦)
+backend:
+  type: hybrid
+  top_k: 5
+  rerank: true
+  rerank_candidates: 12
+  rerank_scorer: cross_encoder
+  rerank_model: models/bge-reranker-base
+llm:
+  type: mock
+prompt_file: configs/prompts/plain.yaml

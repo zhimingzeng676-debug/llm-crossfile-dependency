@@ -1,0 +1,18 @@
+# 消融实验:块变小(40 行 -> 15 行),其余与 baseline 相同。
+# 假设:小块检索更精准但上下文更碎,看哪种效应占上风。
+name: small_chunks
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl
+chunking:
+  strategy: fixed
+  chunk_lines: 15
+  overlap: 5
+embedder:
+  type: hashing
+  dim: 512
+backend:
+  type: local_rag
+  top_k: 3
+llm:
+  type: mock
+prompt_file: configs/prompts/plain.yaml

@@ -1,0 +1,967 @@
+[
+ {
+  "id": "R-REV-01",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 typing.py?请尽量列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_import_utils.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_import_utils.py\n它依赖(import)的仓库内文件: fields.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_fields.py, _internal/_generate_schema.py, _internal/_known_annotated_metadata.py, _internal/_model_construction.py, _internal/_std_types_schema.py, _internal/_utils.py, deprecated/json.py\n文件内定义的类: (无)\n文件内定义的函数: import_cached_base_model, import_cached_field_info\n\n[代码片段 2] 来源: deprecated/tools.py (第 0-0 行)\n[依赖图卡片] 文件 deprecated/tools.py\n它依赖(import)的仓库内文件: json.py, json_schema.py, type_adapter.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: (无)\n文件内定义的函数: parse_obj_as, schema_of, schema_json_of\n\n[代码片段 3] 来源: _internal/_forward_ref.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_forward_ref.py\n它依赖(import)的仓库内文件: dataclasses.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_generate_schema.py, _internal/_generics.py\n文件内定义的类: PydanticRecursiveRef\n文件内定义的函数: __call__, __or__, __ror__\n\n[代码片段 4] 来源: _internal/_serializers.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_serializers.py\n它依赖(import)的仓库内文件: typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_generate_schema.py, _internal/_std_types_schema.py\n文件内定义的类: (无)\n文件内定义的函数: serialize_sequence_via_list\n\n[代码片段 5] 来源: v1/annotated_types.py (第 0-0 行)\n[依赖图卡片] 文件 v1/annotated_types.py\n它依赖(import)的仓库内文件: typing.py, v1/fields.py, v1/main.py, v1/typing.py\n它被这些文件依赖/使用(import 它的使用方): v1/__init__.py, v1/validators.py\n文件内定义的类: (无)\n文件内定义的函数: is_legacy_typeddict, is_legacy_typeddict, create_model_from_typeddict, create_model_from_namedtuple\n\n[问题] 在该项目中,哪些文件 import(依赖)了 typing.py?请尽量列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_import_utils.py",
+   "deprecated/tools.py",
+   "_internal/_forward_ref.py",
+   "_internal/_serializers.py",
+   "v1/annotated_types.py"
+  ],
+  "expected_sources": [
+   "typing.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__init__",
+    "_config",
+    "_core_metadata",
+    "_core_utils",
+    "_dataclasses",
+    "_decorators",
+    "_decorators_v1",
+    "_discriminated_union",
+    "_docs_extraction",
+    "_fields",
+    "_forward_ref",
+    "_generate_schema",
+    "_generics",
+    "_import_utils",
+    "_known_annotated_metadata",
+    "_mock_val_ser",
+    "_model_construction",
+    "_repr",
+    "_schema_generation_shared",
+    "_serializers",
+    "_signature",
+    "_std_types_schema",
+    "_typing_extra",
+    "_utils",
+    "_validate_call",
+    "_validators",
+    "_migration",
+    "aliases",
+    "annotated_handlers",
+    "color",
+    "config",
+    "dataclasses",
+    "class_validators",
+    "copy_internals",
+    "decorator",
+    "json",
+    "parse",
+    "tools",
+    "pipeline",
+    "fields",
+    "functional_serializers",
+    "functional_validators",
+    "json_schema",
+    "main",
+    "mypy",
+    "networks",
+    "plugin",
+    "_loader",
+    "_schema_validator",
+    "root_model",
+    "type_adapter",
+    "types",
+    "_hypothesis_plugin",
+    "annotated_types",
+    "datetime_parse",
+    "env_settings",
+    "error_wrappers",
+    "errors",
+    "generics",
+    "schema",
+    "typing",
+    "utils",
+    "validators",
+    "validate_call_decorator"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-02",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 warnings.py?请尽量列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: experimental/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 experimental/__init__.py\n它依赖(import)的仓库内文件: warnings.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 2] 来源: deprecated/parse.py (第 0-0 行)\n[依赖图卡片] 文件 deprecated/parse.py\n它依赖(import)的仓库内文件: json.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): main.py\n文件内定义的类: Protocol\n文件内定义的函数: load_str_bytes, load_file\n\n[代码片段 3] 来源: deprecated/tools.py (第 0-0 行)\n[依赖图卡片] 文件 deprecated/tools.py\n它依赖(import)的仓库内文件: json.py, json_schema.py, type_adapter.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: (无)\n文件内定义的函数: parse_obj_as, schema_of, schema_json_of\n\n[代码片段 4] 来源: _migration.py (第 0-0 行)\n[依赖图卡片] 文件 _migration.py\n它依赖(import)的仓库内文件: _internal/_validators.py, errors.py, typing.py, version.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, class_validators.py, config.py, dataclasses.py, datetime_parse.py, decorator.py, env_settings.py, error_wrappers.py, errors.py, generics.py, json.py, main.py, networks.py, parse.py, schema.py, tools.py, types.py, typing.py, utils.py, validators.py\n文件内定义的类: (无)\n文件内定义的函数: getattr_migration, wrapper\n\n[代码片段 5] 来源: deprecated/config.py (第 0-0 行)\n[依赖图卡片] 文件 deprecated/config.py\n它依赖(import)的仓库内文件: _internal/__init__.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: _ConfigMetaclass, BaseConfig, _ExtraMeta, Extra\n文件内定义的函数: __getattr__, __getattr__, __init_subclass__, __getattribute__\n\n[问题] 在该项目中,哪些文件 import(依赖)了 warnings.py?请尽量列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "experimental/__init__.py",
+   "deprecated/parse.py",
+   "deprecated/tools.py",
+   "_migration.py",
+   "deprecated/config.py"
+  ],
+  "expected_sources": [
+   "warnings.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__init__",
+    "_config",
+    "_dataclasses",
+    "_fields",
+    "_generate_schema",
+    "_model_construction",
+    "_typing_extra",
+    "_migration",
+    "color",
+    "dataclasses",
+    "class_validators",
+    "config",
+    "decorator",
+    "json",
+    "parse",
+    "tools",
+    "experimental",
+    "fields",
+    "json_schema",
+    "main",
+    "mypy",
+    "_loader",
+    "types",
+    "env_settings",
+    "schema",
+    "utils"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-03",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 _internal/__init__.py?请尽量列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: deprecated/config.py (第 0-0 行)\n[依赖图卡片] 文件 deprecated/config.py\n它依赖(import)的仓库内文件: _internal/__init__.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: _ConfigMetaclass, BaseConfig, _ExtraMeta, Extra\n文件内定义的函数: __getattr__, __getattr__, __init_subclass__, __getattribute__\n\n[代码片段 2] 来源: _internal/_repr.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_repr.py\n它依赖(import)的仓库内文件: _internal/__init__.py, types.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_fields.py, fields.py\n文件内定义的类: PlainRepr, Representation\n文件内定义的函数: __repr__, __repr_args__, __repr_name__, __repr_str__, __pretty__, __rich_repr__, __str__, __repr__, display_as_type\n\n[代码片段 3] 来源: aliases.py (第 0-0 行)\n[依赖图卡片] 文件 aliases.py\n它依赖(import)的仓库内文件: _internal/__init__.py, dataclasses.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, _internal/_config.py, _internal/_generate_schema.py, config.py, fields.py, main.py\n文件内定义的类: AliasPath, AliasChoices, AliasGenerator\n文件内定义的函数: __init__, convert_to_aliases, search_dict_for_path, __init__, convert_to_aliases, _generate_alias, generate_aliases\n\n[代码片段 4] 来源: _internal/_utils.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_utils.py\n它依赖(import)的仓库内文件: _internal/__init__.py, _internal/_import_utils.py, dataclasses.py, main.py, types.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_generate_schema.py, _internal/_generics.py, _internal/_model_construction.py, _internal/_signature.py, _internal/_typing_extra.py, config.py, dataclasses.py, deprecated/copy_internals.py, main.py\n文件内定义的类: ValueItems, ClassAttribute, SafeGetItemProxy\n文件内定义的函数: sequence_like, lenient_isinstance, lenient_issubclass, is_model_class, is_valid_identifier, deep_update, update_not_none, unique_list, __init__, is_excluded, is_included, for_element, _normalize_indexes, merge, _coerce_items, _coerce_value, is_true, __repr_args__, ClassAttribute, __init__, __get__, smart_deepcopy, all_identical, __getitem__, __contains__\n\n[代码片段 5] 来源: _internal/_validate_call.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_validate_call.py\n它依赖(import)的仓库内文件: _internal/__init__.py, _internal/_config.py, config.py, plugin/_schema_validator.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_model_construction.py\n文件内定义的类: ValidateCallWrapper\n文件内定义的函数: __init__, return_val_wrapper, __call__\n\n[问题] 在该项目中,哪些文件 import(依赖)了 _internal/__init__.py?请尽量列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "deprecated/config.py",
+   "_internal/_repr.py",
+   "aliases.py",
+   "_internal/_utils.py",
+   "_internal/_validate_call.py"
+  ],
+  "expected_sources": [
+   "_internal/__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_core_utils",
+    "_dataclasses",
+    "_discriminated_union",
+    "_fields",
+    "_generate_schema",
+    "_repr",
+    "_std_types_schema",
+    "_utils",
+    "_validate_call",
+    "aliases",
+    "color",
+    "dataclasses",
+    "class_validators",
+    "config",
+    "copy_internals",
+    "decorator",
+    "fields",
+    "functional_serializers",
+    "functional_validators",
+    "json_schema",
+    "main",
+    "mypy",
+    "networks",
+    "root_model",
+    "type_adapter",
+    "types",
+    "validate_call_decorator",
+    "version"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-04",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 types.py?请尽量列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_repr.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_repr.py\n它依赖(import)的仓库内文件: _internal/__init__.py, types.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_fields.py, fields.py\n文件内定义的类: PlainRepr, Representation\n文件内定义的函数: __repr__, __repr_args__, __repr_name__, __repr_str__, __pretty__, __rich_repr__, __str__, __repr__, display_as_type\n\n[代码片段 2] 来源: v1/json.py (第 0-0 行)\n[依赖图卡片] 文件 v1/json.py\n它依赖(import)的仓库内文件: dataclasses.py, types.py, typing.py, v1/color.py, v1/main.py, v1/networks.py, v1/types.py\n它被这些文件依赖/使用(import 它的使用方): v1/error_wrappers.py, v1/main.py, v1/schema.py\n文件内定义的类: (无)\n文件内定义的函数: isoformat, decimal_encoder, pydantic_encoder, custom_pydantic_encoder, timedelta_isoformat\n\n[代码片段 3] 来源: _internal/_import_utils.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_import_utils.py\n它依赖(import)的仓库内文件: fields.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_fields.py, _internal/_generate_schema.py, _internal/_known_annotated_metadata.py, _internal/_model_construction.py, _internal/_std_types_schema.py, _internal/_utils.py, deprecated/json.py\n文件内定义的类: (无)\n文件内定义的函数: import_cached_base_model, import_cached_field_info\n\n[代码片段 4] 来源: deprecated/json.py (第 0-0 行)\n[依赖图卡片] 文件 deprecated/json.py\n它依赖(import)的仓库内文件: _internal/_import_utils.py, color.py, dataclasses.py, networks.py, types.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): main.py\n文件内定义的类: (无)\n文件内定义的函数: isoformat, decimal_encoder, pydantic_encoder, custom_pydantic_encoder, timedelta_isoformat\n\n[代码片段 5] 来源: generics.py (第 0-0 行)\n[依赖图卡片] 文件 generics.py\n它依赖(import)的仓库内文件: _migration.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[问题] 在该项目中,哪些文件 import(依赖)了 types.py?请尽量列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_repr.py",
+   "v1/json.py",
+   "_internal/_import_utils.py",
+   "deprecated/json.py",
+   "generics.py"
+  ],
+  "expected_sources": [
+   "types.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__init__",
+    "_discriminated_union",
+    "_generate_schema",
+    "_generics",
+    "_model_construction",
+    "_repr",
+    "_std_types_schema",
+    "_typing_extra",
+    "_utils",
+    "dataclasses",
+    "class_validators",
+    "json",
+    "pipeline",
+    "functional_validators",
+    "main",
+    "_hypothesis_plugin",
+    "generics",
+    "types",
+    "typing",
+    "utils"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-05",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 dataclasses.py?请尽量列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_mock_val_ser.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_mock_val_ser.py\n它依赖(import)的仓库内文件: dataclasses.py, errors.py, main.py, plugin/_schema_validator.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_dataclasses.py, _internal/_generate_schema.py, _internal/_model_construction.py\n文件内定义的类: MockCoreSchema, MockValSer\n文件内定义的函数: __init__, __getitem__, __len__, __iter__, _get_built, rebuild, __init__, __getattr__, rebuild, set_model_mocks, attempt_rebuild_fn, handler, set_dataclass_mocks, attempt_rebuild_fn, handler\n\n[代码片段 2] 来源: _internal/_dataclasses.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_dataclasses.py\n它依赖(import)的仓库内文件: _internal/__init__.py, _internal/_fields.py, _internal/_generate_schema.py, _internal/_generics.py, _internal/_mock_val_ser.py, _internal/_schema_generation_shared.py, _internal/_signature.py, config.py, dataclasses.py, errors.py, fields.py, plugin/_schema_validator.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_fields.py, _internal/_generate_schema.py, _internal/_typing_extra.py, dataclasses.py, json_schema.py\n文件内定义的类: StandardDataclass, PydanticDataclass\n文件内定义的函数: __init__, set_dataclass_fields, complete_dataclass, __init__, validated_setattr, is_builtin_dataclass\n\n[代码片段 3] 来源: _internal/_forward_ref.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_forward_ref.py\n它依赖(import)的仓库内文件: dataclasses.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_generate_schema.py, _internal/_generics.py\n文件内定义的类: PydanticRecursiveRef\n文件内定义的函数: __call__, __or__, __ror__\n\n[代码片段 4] 来源: _internal/_fields.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_fields.py\n它依赖(import)的仓库内文件: _internal/__init__.py, _internal/_config.py, _internal/_dataclasses.py, _internal/_decorators.py, _internal/_docs_extraction.py, _internal/_import_utils.py, _internal/_repr.py, _internal/_typing_extra.py, dataclasses.py, errors.py, fields.py, main.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_dataclasses.py, _internal/_generate_schema.py, _internal/_known_annotated_metadata.py, _internal/_model_construction.py\n文件内定义的类: PydanticMetadata, _PydanticGeneralMetadata\n文件内定义的函数: pydantic_general_metadata, _general_metadata_cls, __init__, _update_fields_from_docstrings, collect_model_fields, _warn_on_nested_alias_in_annotation, _is_finalvar_with_default_val, collect_dataclass_fields, is_valid_field_name, is_valid_privateattr_name\n\n[代码片段 5] 来源: _internal/_signature.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_signature.py\n它依赖(import)的仓库内文件: _internal/_config.py, _internal/_utils.py, dataclasses.py, fields.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_dataclasses.py, _internal/_model_construction.py\n文件内定义的类: (无)\n文件内定义的函数: _field_name_for_signature, _process_param_defaults, _generate_signature_parameters, generate_pydantic_signature\n\n[问题] 在该项目中,哪些文件 import(依赖)了 dataclasses.py?请尽量列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_mock_val_ser.py",
+   "_internal/_dataclasses.py",
+   "_internal/_forward_ref.py",
+   "_internal/_fields.py",
+   "_internal/_signature.py"
+  ],
+  "expected_sources": [
+   "dataclasses.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_dataclasses",
+    "_decorators",
+    "_fields",
+    "_forward_ref",
+    "_generate_schema",
+    "_mock_val_ser",
+    "_signature",
+    "_std_types_schema",
+    "_typing_extra",
+    "_utils",
+    "aliases",
+    "json",
+    "pipeline",
+    "fields",
+    "functional_serializers",
+    "functional_validators",
+    "json_schema",
+    "networks",
+    "type_adapter",
+    "types",
+    "dataclasses",
+    "schema"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-REV-06",
+  "category": "reverse_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,哪些文件 import(依赖)了 errors.py?请尽量列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _migration.py (第 0-0 行)\n[依赖图卡片] 文件 _migration.py\n它依赖(import)的仓库内文件: _internal/_validators.py, errors.py, typing.py, version.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, class_validators.py, config.py, dataclasses.py, datetime_parse.py, decorator.py, env_settings.py, error_wrappers.py, errors.py, generics.py, json.py, main.py, networks.py, parse.py, schema.py, tools.py, types.py, typing.py, utils.py, validators.py\n文件内定义的类: (无)\n文件内定义的函数: getattr_migration, wrapper\n\n[代码片段 2] 来源: v1/error_wrappers.py (第 0-0 行)\n[依赖图卡片] 文件 v1/error_wrappers.py\n它依赖(import)的仓库内文件: json.py, typing.py, v1/config.py, v1/json.py, v1/types.py, v1/typing.py, v1/utils.py\n它被这些文件依赖/使用(import 它的使用方): v1/__init__.py, v1/dataclasses.py, v1/fields.py, v1/main.py\n文件内定义的类: _ErrorDictRequired, ErrorDict, ErrorWrapper, ValidationError\n文件内定义的函数: __init__, loc_tuple, __repr_args__, __init__, errors, json, __str__, __repr_args__, display_errors, _display_error_loc, _display_error_type_and_ctx, flatten_errors, error_dict, get_exc_type, _get_exc_type\n\n[代码片段 3] 来源: error_wrappers.py (第 0-0 行)\n[依赖图卡片] 文件 error_wrappers.py\n它依赖(import)的仓库内文件: _migration.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 4] 来源: version.py (第 0-0 行)\n[依赖图卡片] 文件 version.py\n它依赖(import)的仓库内文件: _internal/__init__.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, _internal/_generate_schema.py, _migration.py, errors.py, mypy.py, warnings.py\n文件内定义的类: (无)\n文件内定义的函数: version_short, version_info, parse_mypy_version\n\n[代码片段 5] 来源: generics.py (第 0-0 行)\n[依赖图卡片] 文件 generics.py\n它依赖(import)的仓库内文件: _migration.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[问题] 在该项目中,哪些文件 import(依赖)了 errors.py?请尽量列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_migration.py",
+   "v1/error_wrappers.py",
+   "error_wrappers.py",
+   "version.py",
+   "generics.py"
+  ],
+  "expected_sources": [
+   "errors.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "__init__",
+    "_config",
+    "_dataclasses",
+    "_decorators",
+    "_decorators_v1",
+    "_discriminated_union",
+    "_fields",
+    "_generate_schema",
+    "_mock_val_ser",
+    "_model_construction",
+    "_std_types_schema",
+    "_migration",
+    "config",
+    "dataclasses",
+    "class_validators",
+    "decorator",
+    "fields",
+    "functional_validators",
+    "json_schema",
+    "main",
+    "type_adapter",
+    "types"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-01",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,_internal/_generate_schema.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_forward_ref.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_forward_ref.py\n它依赖(import)的仓库内文件: dataclasses.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_generate_schema.py, _internal/_generics.py\n文件内定义的类: PydanticRecursiveRef\n文件内定义的函数: __call__, __or__, __ror__\n\n[代码片段 2] 来源: _internal/_docs_extraction.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_docs_extraction.py\n它依赖(import)的仓库内文件: typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_fields.py, _internal/_generate_schema.py\n文件内定义的类: DocstringVisitor\n文件内定义的函数: __init__, visit, visit_AnnAssign, visit_Expr, _dedent_source_lines, _extract_source_from_frame, extract_docstrings_from_cls\n\n[代码片段 3] 来源: _internal/_core_metadata.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_core_metadata.py\n它依赖(import)的仓库内文件: _internal/_schema_generation_shared.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_generate_schema.py\n文件内定义的类: CoreMetadata, CoreMetadataHandler\n文件内定义的函数: __init__, metadata, build_metadata_dict\n\n[代码片段 4] 来源: _internal/_serializers.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_serializers.py\n它依赖(import)的仓库内文件: typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_generate_schema.py, _internal/_std_types_schema.py\n文件内定义的类: (无)\n文件内定义的函数: serialize_sequence_via_list\n\n[代码片段 5] 来源: _internal/_schema_generation_shared.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_schema_generation_shared.py\n它依赖(import)的仓库内文件: _internal/_core_utils.py, _internal/_generate_schema.py, annotated_handlers.py, json_schema.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_config.py, _internal/_core_metadata.py, _internal/_dataclasses.py, _internal/_generate_schema.py, _internal/_model_construction.py, _internal/_std_types_schema.py, color.py, json_schema.py\n文件内定义的类: GenerateJsonSchemaHandler, CallbackGetCoreSchemaHandler\n文件内定义的函数: __init__, __call__, resolve_ref_schema, __init__, __call__, _get_types_namespace, generate_schema, field_name, resolve_ref_schema\n\n[问题] 在该项目中,_internal/_generate_schema.py 直接依赖(import)了哪些项目内模块?请列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_forward_ref.py",
+   "_internal/_docs_extraction.py",
+   "_internal/_core_metadata.py",
+   "_internal/_serializers.py",
+   "_internal/_schema_generation_shared.py"
+  ],
+  "expected_sources": [
+   "_internal/_generate_schema.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "_config",
+    "_core_metadata",
+    "_core_utils",
+    "_dataclasses",
+    "_decorators",
+    "_docs_extraction",
+    "_fields",
+    "_forward_ref",
+    "_generics",
+    "_import_utils",
+    "_mock_val_ser",
+    "_schema_generation_shared",
+    "_serializers",
+    "_std_types_schema",
+    "_typing_extra",
+    "_utils",
+    "_validators",
+    "aliases",
+    "annotated_handlers",
+    "config",
+    "dataclasses",
+    "errors",
+    "fields",
+    "functional_validators",
+    "json_schema",
+    "main",
+    "root_model",
+    "types",
+    "typing",
+    "version",
+    "warnings"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-02",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,__init__.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: deprecated/config.py (第 0-0 行)\n[依赖图卡片] 文件 deprecated/config.py\n它依赖(import)的仓库内文件: _internal/__init__.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: _ConfigMetaclass, BaseConfig, _ExtraMeta, Extra\n文件内定义的函数: __getattr__, __getattr__, __init_subclass__, __getattribute__\n\n[代码片段 2] 来源: root_model.py (第 0-0 行)\n[依赖图卡片] 文件 root_model.py\n它依赖(import)的仓库内文件: _internal/__init__.py, fields.py, main.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, _internal/_generate_schema.py, _internal/_model_construction.py\n文件内定义的类: _RootModelMetaclass, RootModel\n文件内定义的函数: __init_subclass__, __init__, model_construct, __getstate__, __setstate__, __copy__, __deepcopy__, model_dump, __eq__, __repr_args__\n\n[代码片段 3] 来源: functional_serializers.py (第 0-0 行)\n[依赖图卡片] 文件 functional_serializers.py\n它依赖(import)的仓库内文件: _internal/__init__.py, annotated_handlers.py, dataclasses.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py\n文件内定义的类: PlainSerializer, WrapSerializer, SerializeAsAny\n文件内定义的函数: __get_pydantic_core_schema__, __get_pydantic_core_schema__, field_serializer, field_serializer, field_serializer, dec, model_serializer, model_serializer, model_serializer, model_serializer, dec, __class_getitem__, __get_pydantic_core_schema__\n\n[代码片段 4] 来源: v1/env_settings.py (第 0-0 行)\n[依赖图卡片] 文件 v1/env_settings.py\n它依赖(import)的仓库内文件: typing.py, v1/config.py, v1/fields.py, v1/main.py, v1/types.py, v1/typing.py, v1/utils.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): v1/__init__.py\n文件内定义的类: SettingsError, BaseSettings, Config, InitSettingsSource, EnvSettingsSource, SecretsSettingsSource\n文件内定义的函数: __init__, _build_values, prepare_field, customise_sources, parse_env_var, __init__, __call__, __repr__, __init__, __call__, _read_env_files, field_is_complex, explode_env_vars, __repr__, __init__, __call__, __repr__, read_env_file, find_case_path\n\n[代码片段 5] 来源: aliases.py (第 0-0 行)\n[依赖图卡片] 文件 aliases.py\n它依赖(import)的仓库内文件: _internal/__init__.py, dataclasses.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, _internal/_config.py, _internal/_generate_schema.py, config.py, fields.py, main.py\n文件内定义的类: AliasPath, AliasChoices, AliasGenerator\n文件内定义的函数: __init__, convert_to_aliases, search_dict_for_path, __init__, convert_to_aliases, _generate_alias, generate_aliases\n\n[问题] 在该项目中,__init__.py 直接依赖(import)了哪些项目内模块?请列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "deprecated/config.py",
+   "root_model.py",
+   "functional_serializers.py",
+   "v1/env_settings.py",
+   "aliases.py"
+  ],
+  "expected_sources": [
+   "__init__.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_generate_schema",
+    "_migration",
+    "aliases",
+    "annotated_handlers",
+    "config",
+    "class_validators",
+    "tools",
+    "errors",
+    "fields",
+    "functional_serializers",
+    "functional_validators",
+    "json_schema",
+    "main",
+    "networks",
+    "root_model",
+    "type_adapter",
+    "types",
+    "typing",
+    "validate_call_decorator",
+    "version",
+    "warnings"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-03",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,_internal/_model_construction.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_validate_call.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_validate_call.py\n它依赖(import)的仓库内文件: _internal/__init__.py, _internal/_config.py, config.py, plugin/_schema_validator.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_model_construction.py\n文件内定义的类: ValidateCallWrapper\n文件内定义的函数: __init__, return_val_wrapper, __call__\n\n[代码片段 2] 来源: root_model.py (第 0-0 行)\n[依赖图卡片] 文件 root_model.py\n它依赖(import)的仓库内文件: _internal/__init__.py, fields.py, main.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, _internal/_generate_schema.py, _internal/_model_construction.py\n文件内定义的类: _RootModelMetaclass, RootModel\n文件内定义的函数: __init_subclass__, __init__, model_construct, __getstate__, __setstate__, __copy__, __deepcopy__, model_dump, __eq__, __repr_args__\n\n[代码片段 3] 来源: _internal/_import_utils.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_import_utils.py\n它依赖(import)的仓库内文件: fields.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_fields.py, _internal/_generate_schema.py, _internal/_known_annotated_metadata.py, _internal/_model_construction.py, _internal/_std_types_schema.py, _internal/_utils.py, deprecated/json.py\n文件内定义的类: (无)\n文件内定义的函数: import_cached_base_model, import_cached_field_info\n\n[代码片段 4] 来源: _internal/_signature.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_signature.py\n它依赖(import)的仓库内文件: _internal/_config.py, _internal/_utils.py, dataclasses.py, fields.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_dataclasses.py, _internal/_model_construction.py\n文件内定义的类: (无)\n文件内定义的函数: _field_name_for_signature, _process_param_defaults, _generate_signature_parameters, generate_pydantic_signature\n\n[代码片段 5] 来源: _internal/_mock_val_ser.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_mock_val_ser.py\n它依赖(import)的仓库内文件: dataclasses.py, errors.py, main.py, plugin/_schema_validator.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_dataclasses.py, _internal/_generate_schema.py, _internal/_model_construction.py\n文件内定义的类: MockCoreSchema, MockValSer\n文件内定义的函数: __init__, __getitem__, __len__, __iter__, _get_built, rebuild, __init__, __getattr__, rebuild, set_model_mocks, attempt_rebuild_fn, handler, set_dataclass_mocks, attempt_rebuild_fn, handler\n\n[问题] 在该项目中,_internal/_model_construction.py 直接依赖(import)了哪些项目内模块?请列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_validate_call.py",
+   "root_model.py",
+   "_internal/_import_utils.py",
+   "_internal/_signature.py",
+   "_internal/_mock_val_ser.py"
+  ],
+  "expected_sources": [
+   "_internal/_model_construction.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_config",
+    "_decorators",
+    "_fields",
+    "_generate_schema",
+    "_generics",
+    "_import_utils",
+    "_mock_val_ser",
+    "_schema_generation_shared",
+    "_signature",
+    "_typing_extra",
+    "_utils",
+    "_validate_call",
+    "errors",
+    "fields",
+    "main",
+    "_schema_validator",
+    "root_model",
+    "types",
+    "typing",
+    "warnings"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-04",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,main.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: deprecated/json.py (第 0-0 行)\n[依赖图卡片] 文件 deprecated/json.py\n它依赖(import)的仓库内文件: _internal/_import_utils.py, color.py, dataclasses.py, networks.py, types.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): main.py\n文件内定义的类: (无)\n文件内定义的函数: isoformat, decimal_encoder, pydantic_encoder, custom_pydantic_encoder, timedelta_isoformat\n\n[代码片段 2] 来源: deprecated/__init__.py (第 0-0 行)\n[依赖图卡片] 文件 deprecated/__init__.py\n它依赖(import)的仓库内文件: (无)\n它被这些文件依赖/使用(import 它的使用方): main.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 3] 来源: deprecated/parse.py (第 0-0 行)\n[依赖图卡片] 文件 deprecated/parse.py\n它依赖(import)的仓库内文件: json.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): main.py\n文件内定义的类: Protocol\n文件内定义的函数: load_str_bytes, load_file\n\n[代码片段 4] 来源: json.py (第 0-0 行)\n[依赖图卡片] 文件 json.py\n它依赖(import)的仓库内文件: _migration.py\n它被这些文件依赖/使用(import 它的使用方): deprecated/parse.py, deprecated/tools.py, main.py, v1/_hypothesis_plugin.py, v1/config.py, v1/error_wrappers.py, v1/parse.py, v1/tools.py\n文件内定义的类: (无)\n文件内定义的函数: (无)\n\n[代码片段 5] 来源: v1/parse.py (第 0-0 行)\n[依赖图卡片] 文件 v1/parse.py\n它依赖(import)的仓库内文件: json.py, typing.py, v1/types.py\n它被这些文件依赖/使用(import 它的使用方): v1/__init__.py, v1/main.py, v1/tools.py\n文件内定义的类: Protocol\n文件内定义的函数: load_str_bytes, load_file\n\n[问题] 在该项目中,main.py 直接依赖(import)了哪些项目内模块?请列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "deprecated/json.py",
+   "deprecated/__init__.py",
+   "deprecated/parse.py",
+   "json.py",
+   "v1/parse.py"
+  ],
+  "expected_sources": [
+   "main.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "_utils",
+    "_migration",
+    "aliases",
+    "annotated_handlers",
+    "config",
+    "deprecated",
+    "json",
+    "parse",
+    "errors",
+    "fields",
+    "json_schema",
+    "_schema_validator",
+    "types",
+    "typing",
+    "warnings"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-FWD-05",
+  "category": "forward_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,_internal/_dataclasses.py 直接依赖(import)了哪些项目内模块?请列全。",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_dataclasses.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_dataclasses.py\n它依赖(import)的仓库内文件: _internal/__init__.py, _internal/_fields.py, _internal/_generate_schema.py, _internal/_generics.py, _internal/_mock_val_ser.py, _internal/_schema_generation_shared.py, _internal/_signature.py, config.py, dataclasses.py, errors.py, fields.py, plugin/_schema_validator.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_fields.py, _internal/_generate_schema.py, _internal/_typing_extra.py, dataclasses.py, json_schema.py\n文件内定义的类: StandardDataclass, PydanticDataclass\n文件内定义的函数: __init__, set_dataclass_fields, complete_dataclass, __init__, validated_setattr, is_builtin_dataclass\n\n[代码片段 2] 来源: dataclasses.py (第 0-0 行)\n[依赖图卡片] 文件 dataclasses.py\n它依赖(import)的仓库内文件: _internal/__init__.py, _internal/_dataclasses.py, _internal/_utils.py, _migration.py, config.py, errors.py, fields.py, types.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_dataclasses.py, _internal/_decorators.py, _internal/_fields.py, _internal/_forward_ref.py, _internal/_generate_schema.py, _internal/_mock_val_ser.py, _internal/_signature.py, _internal/_std_types_schema.py, _internal/_typing_extra.py, _internal/_utils.py, aliases.py, deprecated/json.py, experimental/pipeline.py, fields.py, functional_serializers.py, functional_validators.py, json_schema.py, networks.py, type_adapter.py, types.py, v1/dataclasses.py, v1/json.py, v1/schema.py\n文件内定义的类: (无)\n文件内定义的函数: dataclass, dataclass, dataclass, dataclass, dataclass, make_pydantic_fields_compatible, create_dataclass, _call_initvar, rebuild_dataclass, is_pydantic_dataclass\n\n[代码片段 3] 来源: _internal/_mock_val_ser.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_mock_val_ser.py\n它依赖(import)的仓库内文件: dataclasses.py, errors.py, main.py, plugin/_schema_validator.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_dataclasses.py, _internal/_generate_schema.py, _internal/_model_construction.py\n文件内定义的类: MockCoreSchema, MockValSer\n文件内定义的函数: __init__, __getitem__, __len__, __iter__, _get_built, rebuild, __init__, __getattr__, rebuild, set_model_mocks, attempt_rebuild_fn, handler, set_dataclass_mocks, attempt_rebuild_fn, handler\n\n[代码片段 4] 来源: _internal/_forward_ref.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_forward_ref.py\n它依赖(import)的仓库内文件: dataclasses.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_generate_schema.py, _internal/_generics.py\n文件内定义的类: PydanticRecursiveRef\n文件内定义的函数: __call__, __or__, __ror__\n\n[代码片段 5] 来源: _internal/_signature.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_signature.py\n它依赖(import)的仓库内文件: _internal/_config.py, _internal/_utils.py, dataclasses.py, fields.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_dataclasses.py, _internal/_model_construction.py\n文件内定义的类: (无)\n文件内定义的函数: _field_name_for_signature, _process_param_defaults, _generate_signature_parameters, generate_pydantic_signature\n\n[问题] 在该项目中,_internal/_dataclasses.py 直接依赖(import)了哪些项目内模块?请列全。\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_dataclasses.py",
+   "dataclasses.py",
+   "_internal/_mock_val_ser.py",
+   "_internal/_forward_ref.py",
+   "_internal/_signature.py"
+  ],
+  "expected_sources": [
+   "_internal/_dataclasses.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal",
+    "_fields",
+    "_generate_schema",
+    "_generics",
+    "_mock_val_ser",
+    "_schema_generation_shared",
+    "_signature",
+    "config",
+    "dataclasses",
+    "errors",
+    "fields",
+    "_schema_validator",
+    "typing",
+    "warnings"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-01",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 PydanticMetadata 继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_fields.py (第 0-0 行)\n[依赖图卡片] 类 PydanticMetadata\n定义位置: _internal/_fields.py 第 32-35 行\n它继承自: Representation [_internal/_repr.py]\n继承它的子类: _PydanticGeneralMetadata [_internal/_fields.py]\n\n[代码片段 2] 来源: _internal/_fields.py (第 0-0 行)\n[依赖图卡片] 类 _PydanticGeneralMetadata\n定义位置: _internal/_fields.py 第 55-59 行\n它继承自: PydanticMetadata [_internal/_fields.py], BaseMetadata\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: _internal/_repr.py (第 0-0 行)\n[依赖图卡片] 类 Representation\n定义位置: _internal/_repr.py 第 29-83 行\n它继承自: (无基类)\n继承它的子类: PydanticMetadata [_internal/_fields.py]\n\n[代码片段 4] 来源: networks.py (第 0-0 行)\n[依赖图卡片] 类 UrlConstraints\n定义位置: networks.py 第 58-87 行\n它继承自: PydanticMetadata\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: types.py (第 0-0 行)\n[依赖图卡片] 类 FailFast\n定义位置: types.py 第 3045-3074 行\n它继承自: PydanticMetadata, BaseMetadata\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 PydanticMetadata 继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_fields.py",
+   "_internal/_fields.py",
+   "_internal/_repr.py",
+   "networks.py",
+   "types.py"
+  ],
+  "expected_sources": [
+   "_internal/_fields.py",
+   "_internal/_repr.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "Representation",
+    "_internal/_repr.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-02",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 GenerateJsonSchemaHandler 继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_schema_generation_shared.py (第 0-0 行)\n[依赖图卡片] 类 GenerateJsonSchemaHandler\n定义位置: _internal/_schema_generation_shared.py 第 21-62 行\n它继承自: GetJsonSchemaHandler [annotated_handlers.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: annotated_handlers.py (第 0-0 行)\n[依赖图卡片] 类 GetJsonSchemaHandler\n定义位置: annotated_handlers.py 第 23-62 行\n它继承自: (无基类)\n继承它的子类: GenerateJsonSchemaHandler [_internal/_schema_generation_shared.py]\n\n[代码片段 3] 来源: json_schema.py (第 0-0 行)\n[依赖图卡片] 类 GenerateJsonSchema\n定义位置: json_schema.py 第 233-2240 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: _internal/_schema_generation_shared.py (第 0-0 行)\n[依赖图卡片] 类 CallbackGetCoreSchemaHandler\n定义位置: _internal/_schema_generation_shared.py 第 65-125 行\n它继承自: GetCoreSchemaHandler [annotated_handlers.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: annotated_handlers.py (第 0-0 行)\n[依赖图卡片] 类 GetCoreSchemaHandler\n定义位置: annotated_handlers.py 第 65-121 行\n它继承自: (无基类)\n继承它的子类: CallbackGetCoreSchemaHandler [_internal/_schema_generation_shared.py]\n\n[问题] 在该项目中,类 GenerateJsonSchemaHandler 继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_schema_generation_shared.py",
+   "annotated_handlers.py",
+   "json_schema.py",
+   "_internal/_schema_generation_shared.py",
+   "annotated_handlers.py"
+  ],
+  "expected_sources": [
+   "_internal/_schema_generation_shared.py",
+   "annotated_handlers.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "GetJsonSchemaHandler",
+    "annotated_handlers.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-03",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 CallbackGetCoreSchemaHandler 继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_schema_generation_shared.py (第 0-0 行)\n[依赖图卡片] 类 CallbackGetCoreSchemaHandler\n定义位置: _internal/_schema_generation_shared.py 第 65-125 行\n它继承自: GetCoreSchemaHandler [annotated_handlers.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: annotated_handlers.py (第 0-0 行)\n[依赖图卡片] 类 GetCoreSchemaHandler\n定义位置: annotated_handlers.py 第 65-121 行\n它继承自: (无基类)\n继承它的子类: CallbackGetCoreSchemaHandler [_internal/_schema_generation_shared.py]\n\n[代码片段 3] 来源: annotated_handlers.py (第 0-0 行)\n[依赖图卡片] 类 GetJsonSchemaHandler\n定义位置: annotated_handlers.py 第 23-62 行\n它继承自: (无基类)\n继承它的子类: GenerateJsonSchemaHandler [_internal/_schema_generation_shared.py]\n\n[代码片段 4] 来源: _internal/_schema_generation_shared.py (第 0-0 行)\n[依赖图卡片] 类 GenerateJsonSchemaHandler\n定义位置: _internal/_schema_generation_shared.py 第 21-62 行\n它继承自: GetJsonSchemaHandler [annotated_handlers.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: _internal/_core_utils.py (第 0-0 行)\n[依赖图卡片] 类 _WalkCoreSchema\n定义位置: _internal/_core_utils.py 第 184-396 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 CallbackGetCoreSchemaHandler 继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_schema_generation_shared.py",
+   "annotated_handlers.py",
+   "annotated_handlers.py",
+   "_internal/_schema_generation_shared.py",
+   "_internal/_core_utils.py"
+  ],
+  "expected_sources": [
+   "_internal/_schema_generation_shared.py",
+   "annotated_handlers.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "GetCoreSchemaHandler",
+    "annotated_handlers.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-04",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 DecoratorBaseModel 继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: deprecated/decorator.py (第 0-0 行)\n[依赖图卡片] 类 DecoratorBaseModel\n定义位置: deprecated/decorator.py 第 238-277 行\n它继承自: BaseModel [main.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: v1/decorator.py (第 0-0 行)\n[依赖图卡片] 类 DecoratorBaseModel\n定义位置: v1/decorator.py 第 226-262 行\n它继承自: BaseModel [v1/main.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: v1/main.py (第 0-0 行)\n[依赖图卡片] 类 BaseModel\n定义位置: v1/main.py 第 310-916 行\n它继承自: Representation [v1/utils.py]\n继承它的子类: DecoratorBaseModel [v1/decorator.py], BaseSettings [v1/env_settings.py], GenericModel [v1/generics.py]\n\n[代码片段 4] 来源: main.py (第 0-0 行)\n[依赖图卡片] 类 BaseModel\n定义位置: main.py 第 81-1454 行\n它继承自: (无基类)\n继承它的子类: DecoratorBaseModel [deprecated/decorator.py], RootModel [root_model.py]\n\n[代码片段 5] 来源: _internal/_decorators.py (第 0-0 行)\n[依赖图卡片] 类 Decorator\n定义位置: _internal/_decorators.py 第 213-283 行\n它继承自: Generic\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 DecoratorBaseModel 继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "deprecated/decorator.py",
+   "v1/decorator.py",
+   "v1/main.py",
+   "main.py",
+   "_internal/_decorators.py"
+  ],
+  "expected_sources": [
+   "deprecated/decorator.py",
+   "main.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "BaseModel",
+    "main.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-05",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 RootModel 继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: root_model.py (第 0-0 行)\n[依赖图卡片] 类 RootModel\n定义位置: root_model.py 第 35-154 行\n它继承自: BaseModel [main.py], Generic\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: root_model.py (第 0-0 行)\n[依赖图卡片] 类 _RootModelMetaclass\n定义位置: root_model.py 第 26-26 行\n它继承自: ModelMetaclass\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: main.py (第 0-0 行)\n[依赖图卡片] 类 BaseModel\n定义位置: main.py 第 81-1454 行\n它继承自: (无基类)\n继承它的子类: DecoratorBaseModel [deprecated/decorator.py], RootModel [root_model.py]\n\n[代码片段 4] 来源: v1/generics.py (第 0-0 行)\n[依赖图卡片] 类 GenericModel\n定义位置: v1/generics.py 第 64-248 行\n它继承自: BaseModel [v1/main.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: mypy.py (第 0-0 行)\n[依赖图卡片] 类 PydanticModelField\n定义位置: mypy.py 第 320-448 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 RootModel 继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "root_model.py",
+   "root_model.py",
+   "main.py",
+   "v1/generics.py",
+   "mypy.py"
+  ],
+  "expected_sources": [
+   "root_model.py",
+   "main.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "BaseModel",
+    "main.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-INH-06",
+  "category": "inheritance",
+  "difficulty": "medium",
+  "priority": "P1",
+  "question": "在该项目中,类 Color 继承自哪个文件里的哪个类?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: v1/color.py (第 0-0 行)\n[依赖图卡片] 类 Color\n定义位置: v1/color.py 第 63-205 行\n它继承自: Representation [v1/utils.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: color.py (第 0-0 行)\n[依赖图卡片] 类 Color\n定义位置: color.py 第 77-255 行\n它继承自: Representation\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: v1/errors.py (第 0-0 行)\n[依赖图卡片] 类 ColorError\n定义位置: v1/errors.py 第 598-599 行\n它继承自: PydanticValueError [v1/errors.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: v1/utils.py (第 0-0 行)\n[依赖图卡片] 类 Representation\n定义位置: v1/utils.py 第 361-418 行\n它继承自: (无基类)\n继承它的子类: Color [v1/color.py], ErrorWrapper [v1/error_wrappers.py], ValidationError [v1/error_wrappers.py], FieldInfo [v1/fields.py], ModelField [v1/fields.py], ModelPrivateAttr [v1/fields.py], BaseModel [v1/main.py], NameEmail [v1/networks.py], GetterDict [v1/utils.py], ValueItems [v1/utils.py]\n\n[代码片段 5] 来源: color.py (第 0-0 行)\n[依赖图卡片] 类 RGBA\n定义位置: color.py 第 33-47 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Color 继承自哪个文件里的哪个类?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "v1/color.py",
+   "color.py",
+   "v1/errors.py",
+   "v1/utils.py",
+   "color.py"
+  ],
+  "expected_sources": [
+   "v1/color.py",
+   "v1/utils.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "Representation",
+    "v1/utils.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-01",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 _SecretField 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: types.py (第 0-0 行)\n[依赖图卡片] 类 _SecretField\n定义位置: types.py 第 1625-1679 行\n它继承自: _SecretBase [types.py]\n继承它的子类: SecretStr [types.py], SecretBytes [types.py]\n\n[代码片段 2] 来源: v1/types.py (第 0-0 行)\n[依赖图卡片] 类 SecretField\n定义位置: v1/types.py 第 850-872 行\n它继承自: ABC\n继承它的子类: SecretStr [v1/types.py], SecretBytes [v1/types.py]\n\n[代码片段 3] 来源: v1/types.py (第 0-0 行)\n[依赖图卡片] 类 SecretStr\n定义位置: v1/types.py 第 875-916 行\n它继承自: SecretField [v1/types.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: types.py (第 0-0 行)\n[依赖图卡片] 类 SecretStr\n定义位置: types.py 第 1682-1713 行\n它继承自: _SecretField [types.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: types.py (第 0-0 行)\n[依赖图卡片] 类 _SecretBase\n定义位置: types.py 第 1487-1512 行\n它继承自: Generic\n继承它的子类: Secret [types.py], _SecretField [types.py]\n\n[问题] 在该项目中,类 _SecretField 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "types.py",
+   "v1/types.py",
+   "v1/types.py",
+   "types.py",
+   "types.py"
+  ],
+  "expected_sources": [
+   "types.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "types.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-02",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 ValidatedFunction 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: v1/decorator.py (第 0-0 行)\n[依赖图卡片] 类 ValidatedFunction\n定义位置: v1/decorator.py 第 60-264 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: deprecated/decorator.py (第 0-0 行)\n[依赖图卡片] 类 ValidatedFunction\n定义位置: deprecated/decorator.py 第 75-279 行\n它继承自: (无基类)\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: v1/decorator.py (第 0-0 行)\n[依赖图卡片] 文件 v1/decorator.py\n它依赖(import)的仓库内文件: typing.py, v1/__init__.py, v1/config.py, v1/errors.py, v1/main.py, v1/typing.py, v1/utils.py\n它被这些文件依赖/使用(import 它的使用方): v1/__init__.py\n文件内定义的类: ValidatedFunction, CustomConfig, DecoratorBaseModel, Config\n文件内定义的函数: validate_arguments, validate_arguments, validate_arguments, validate, wrapper_function, __init__, init_model_instance, call, build_values, execute, create_model, check_args, check_kwargs, check_positional_only, check_duplicate_kwargs\n\n[代码片段 4] 来源: deprecated/decorator.py (第 0-0 行)\n[依赖图卡片] 文件 deprecated/decorator.py\n它依赖(import)的仓库内文件: _internal/__init__.py, alias_generators.py, errors.py, functional_validators.py, main.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: ValidatedFunction, DecoratorBaseModel\n文件内定义的函数: validate_arguments, validate_arguments, validate_arguments, validate, wrapper_function, __init__, init_model_instance, call, build_values, execute, create_model, check_args, check_kwargs, check_positional_only, check_duplicate_kwargs\n\n[代码片段 5] 来源: v1/decorator.py (第 30-51 行)\n文件: v1/decorator.py\n函数: validate_arguments\ndef validate_arguments(func: Optional['AnyCallableT'] = None, *, config: 'ConfigType' = None) -> Any:\n    \"\"\"\n    Decorator to validate the arguments passed to a function.\n    \"\"\"\n\n    def validate(_func: 'AnyCallable') -> 'AnyCallable':\n        vd = ValidatedFunction(_func, config)\n\n        @wraps(_func)\n        def wrapper_function(*args: Any, **kwargs: Any) -> Any:\n            return vd.call(*args, **kwargs)\n\n        wrapper_function.vd = vd  # type: ignore\n        wrapper_function.validate = vd.init_model_instance  # type: ignore\n        wrapper_function.raw_function = vd.raw_function  # type: ignore\n        wrapper_function.model = vd.model  # type: ignore\n        return wrapper_function\n\n    if func:\n        return validate(func)\n    else:\n        return validate\n\n[问题] 在该项目中,类 ValidatedFunction 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "v1/decorator.py",
+   "deprecated/decorator.py",
+   "v1/decorator.py",
+   "deprecated/decorator.py",
+   "v1/decorator.py"
+  ],
+  "expected_sources": [
+   "deprecated/decorator.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "deprecated/decorator.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-03",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 Config 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: v1/config.py (第 0-0 行)\n[依赖图卡片] 类 Config\n定义位置: v1/config.py 第 161-162 行\n它继承自: BaseConfig [v1/config.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: v1/env_settings.py (第 0-0 行)\n[依赖图卡片] 类 Config\n定义位置: v1/env_settings.py 第 82-132 行\n它继承自: BaseConfig [v1/config.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 3] 来源: v1/decorator.py (第 0-0 行)\n[依赖图卡片] 类 Config\n定义位置: v1/decorator.py 第 261-262 行\n它继承自: CustomConfig [v1/decorator.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 4] 来源: config.py (第 0-0 行)\n[依赖图卡片] 类 ConfigDict\n定义位置: config.py 第 33-1013 行\n它继承自: TypedDict\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: v1/config.py (第 0-0 行)\n[依赖图卡片] 类 ConfigDict\n定义位置: v1/config.py 第 46-74 行\n它继承自: TypedDict\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 Config 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "v1/config.py",
+   "v1/env_settings.py",
+   "v1/decorator.py",
+   "config.py",
+   "v1/config.py"
+  ],
+  "expected_sources": [
+   "v1/decorator.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "v1/decorator.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-04",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 PostgresDsn 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: v1/networks.py (第 0-0 行)\n[依赖图卡片] 类 PostgresDsn\n定义位置: v1/networks.py 第 487-501 行\n它继承自: MultiHostDsn [v1/networks.py]\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: v1/networks.py (第 0-0 行)\n[依赖图卡片] 类 MultiHostDsn\n定义位置: v1/networks.py 第 423-484 行\n它继承自: AnyUrl [v1/networks.py]\n继承它的子类: PostgresDsn [v1/networks.py]\n\n[代码片段 3] 来源: v1/networks.py (第 0-0 行)\n[依赖图卡片] 文件 v1/networks.py\n它依赖(import)的仓库内文件: typing.py, v1/__init__.py, v1/config.py, v1/fields.py, v1/typing.py, v1/utils.py, v1/validators.py\n它被这些文件依赖/使用(import 它的使用方): v1/__init__.py, v1/json.py, v1/schema.py\n文件内定义的类: Parts, HostParts, Parts, AnyUrl, AnyHttpUrl, HttpUrl, FileUrl, MultiHostDsn, PostgresDsn, CockroachDsn, AmqpDsn, RedisDsn, MongoDsn, KafkaDsn, EmailStr, NameEmail, IPvAnyAddress, IPvAnyInterface, IPvAnyNetwork\n文件内定义的函数: url_regex, multi_host_url_regex, ascii_domain_regex, int_domain_regex, host_regex, __new__, __init__, build, __modify_schema__, __get_validators__, validate, _build_url, _match_url, _validate_port, validate_parts, validate_host, get_default_parts, apply_default_parts, __repr__, get_default_parts, __init__, _match_url, validate_parts, _build_url, get_default_parts, get_default_parts, get_default_parts, stricturl, import_email_validator, __modify_schema__\n\n[代码片段 4] 来源: v1/dataclasses.py (第 310-320 行)\n文件: v1/dataclasses.py\n函数: new_post_init\ndef new_post_init(self: 'Dataclass', *args: Any, **kwargs: Any) -> None:\n            if config.post_init_call == 'before_validation':\n                post_init(self, *args, **kwargs)\n\n            if self.__class__.__pydantic_run_validation__:\n                self.__pydantic_validate_values__()\n                if hasattr(self, '__post_init_post_parse__'):\n                    self.__post_init_post_parse__(*args, **kwargs)\n\n            if config.post_init_call == 'after_validation':\n                post_init(self, *args, **kwargs)\n\n[代码片段 5] 来源: _internal/_docs_extraction.py (第 0-0 行)\n[依赖图卡片] 类 DocstringVisitor\n定义位置: _internal/_docs_extraction.py 第 11-37 行\n它继承自: NodeVisitor\n继承它的子类: (没有仓库内子类)\n\n[问题] 在该项目中,类 PostgresDsn 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "v1/networks.py",
+   "v1/networks.py",
+   "v1/networks.py",
+   "v1/dataclasses.py",
+   "_internal/_docs_extraction.py"
+  ],
+  "expected_sources": [
+   "v1/networks.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "v1/networks.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-05",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 MissingDefinitionForUnionRef 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_discriminated_union.py (第 0-0 行)\n[依赖图卡片] 类 MissingDefinitionForUnionRef\n定义位置: _internal/_discriminated_union.py 第 20-27 行\n它继承自: Exception\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: _internal/_discriminated_union.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_discriminated_union.py\n它依赖(import)的仓库内文件: _internal/__init__.py, _internal/_core_utils.py, errors.py, types.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): (没有仓库内使用方)\n文件内定义的类: MissingDefinitionForUnionRef, _ApplyInferredDiscriminator\n文件内定义的函数: __init__, set_discriminator_in_metadata, apply_discriminators, inner, apply_discriminator, __init__, apply, _apply_to_root, _handle_choice, _is_discriminator_shared, _infer_discriminator_values_for_choice, _infer_discriminator_values_for_typed_dict_choice, _infer_discriminator_values_for_model_choice, _infer_discriminator_values_for_dataclass_choice, _infer_discriminator_values_for_field, _infer_discriminator_values_for_inner_schema, _set_unique_choice_for_values\n\n[代码片段 3] 来源: _internal/_discriminated_union.py (第 1-503 行)\n文件: _internal/_discriminated_union.py\n(模块级代码:import、常量、配置)\nfrom __future__ import annotations as _annotations\n\nfrom typing import TYPE_CHECKING, Any, Hashable, Sequence\n\nfrom pydantic_core import CoreSchema, core_schema\n\nfrom ..errors import PydanticUserError\nfrom . import _core_utils\nfrom ._core_utils import (\n    CoreSchemaField,\n    collect_definitions,\n)\n\nif TYPE_CHECKING:\n    from ..types import Discriminator\n\nCORE_SCHEMA_METADATA_DISCRIMINATOR_PLACEHOLDER_KEY = 'pydantic.internal.union_discriminator'\n\n\nclass MissingDefinitionForUnionRef(Exception):\n    \"\"\"Raised when applying a discriminated union discriminator to a schema\n    requires a definition that is not yet defined\n    \"\"\"\n\n\n\n\n\n\n\n\n\nclass _ApplyInferredDiscriminator:\n    \"\"\"This class is used to convert an input schema containing a union schema into one where that union is\n    replaced with a tagged-union, with all the associated debugging and performance benefits.\n\n    This is done by:\n    * Validating that the input schema is compatible with the provided discriminator\n    * Introspecting the schema to determine which discriminator values should map to which union choices\n    * Handling various edge cases such as 'definitions', 'default', 'nullable' schemas, and more\n\n    I have chosen to implement the conversion algorithm in this class, rather than a function,\n    to make it easier to maintain state while recursively walking the provided CoreSchema.\n    \"\"\"\n\n[代码片段 4] 来源: _internal/_discriminated_union.py (第 61-97 行)\n文件: _internal/_discriminated_union.py\n函数: apply_discriminator\ndef apply_discriminator(\n    schema: core_schema.CoreSchema,\n    discriminator: str | Discriminator,\n    definitions: dict[str, core_schema.CoreSchema] | None = None,\n) -> core_schema.CoreSchema:\n    \"\"\"Applies the discriminator and returns a new core schema.\n\n    Args:\n        schema: The input schema.\n        discriminator: The name of the field which will serve as the discriminator.\n        definitions: A mapping of schema ref to schema.\n\n    Returns:\n        The new core schema.\n\n    Raises:\n        TypeError:\n            - If `discriminator` is used with invalid union variant.\n            - If `discriminator` is used with `Union` type with one variant.\n            - If `discriminator` value mapped to multiple choices.\n        MissingDefinitionForUnionRef:\n            If the definition for ref is missing.\n        PydanticUserError:\n            - If a model in union doesn't have a discriminator field.\n            - If discriminator field has a non-string alias.\n            - If discriminator fields have different aliases.\n            - If discriminator field not of type `Literal`.\n    \"\"\"\n    from ..types import Discriminator\n\n    if isinstance(discriminator, Discriminator):\n        if isinstance(discriminator.discriminator, str):\n            discriminator = discriminator.discriminator\n        else:\n            return discriminator._convert_schema(schema)\n\n    return _ApplyInferredDiscriminator(discriminator, definitions or {}).apply(schema)\n\n[代码片段 5] 来源: _internal/_generate_schema.py (第 568-584 行)\n文件: _internal/_generate_schema.py\n函数: _apply_discriminator_to_union\ndef _apply_discriminator_to_union(\n        self, schema: CoreSchema, discriminator: str | Discriminator | None\n    ) -> CoreSchema:\n        if discriminator is None:\n            return schema\n        try:\n            return _discriminated_union.apply_discriminator(\n                schema,\n                discriminator,\n            )\n        except _discriminated_union.MissingDefinitionForUnionRef:\n            # defer until defs are resolved\n            _discriminated_union.set_discriminator_in_metadata(\n                schema,\n                discriminator,\n            )\n            return schema\n\n[问题] 在该项目中,类 MissingDefinitionForUnionRef 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_discriminated_union.py",
+   "_internal/_discriminated_union.py",
+   "_internal/_discriminated_union.py",
+   "_internal/_discriminated_union.py",
+   "_internal/_generate_schema.py"
+  ],
+  "expected_sources": [
+   "_internal/_discriminated_union.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal/_discriminated_union.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-LOC-06",
+  "category": "symbol_location",
+  "difficulty": "easy",
+  "priority": "P1",
+  "question": "在该项目中,类 LimitedDict 定义在哪个文件里?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_generics.py (第 0-0 行)\n[依赖图卡片] 类 LimitedDict\n定义位置: _internal/_generics.py 第 39-40 行\n它继承自: dict, MutableMapping\n继承它的子类: (没有仓库内子类)\n\n[代码片段 2] 来源: _internal/_generics.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_generics.py\n它依赖(import)的仓库内文件: _internal/_core_utils.py, _internal/_forward_ref.py, _internal/_typing_extra.py, _internal/_utils.py, main.py, types.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_dataclasses.py, _internal/_generate_schema.py, _internal/_model_construction.py\n文件内定义的类: LimitedDict, LimitedDict, DeepChainMap, DeepChainMap, PydanticGenericMetadata\n文件内定义的函数: __init__, __init__, __setitem__, clear, __setitem__, __delitem__, create_generic_submodel, _get_caller_frame_info, iter_contained_typevars, get_args, get_origin, get_standard_typevars_map, get_model_typevars_map, replace_types, has_instance_in_type, check_parameters_count, generic_recursion_self_type, recursively_defined_type_refs, get_cached_generic_type_early, get_cached_generic_type_late, set_cached_generic_type, _union_orderings_key, _early_cache_key, _late_cache_key\n\n[代码片段 3] 来源: _internal/_generics.py (第 1-518 行)\n文件: _internal/_generics.py\n(模块级代码:import、常量、配置)\nfrom __future__ import annotations\n\nimport sys\nimport types\nimport typing\nfrom collections import ChainMap\nfrom contextlib import contextmanager\nfrom contextvars import ContextVar\nfrom types import prepare_class\nfrom typing import TYPE_CHECKING, Any, Iterator, List, Mapping, MutableMapping, Tuple, TypeVar\nfrom weakref import WeakValueDictionary\n\nimport typing_extensions\n\nfrom ._core_utils import get_type_ref\nfrom ._forward_ref import PydanticRecursiveRef\nfrom ._typing_extra import TypeVarType, typing_base\nfrom ._utils import all_identical, is_model_class\n\nif sys.version_info >= (3, 10):\n    from typing import _UnionGenericAlias  # type: ignore[attr-defined]\n\nif TYPE_CHECKING:\n    from ..main import BaseModel\n\nGenericTypesCacheKey = Tuple[Any, Any, Tuple[Any, ...]]\n\n# Note: We want to remove LimitedDict, but to do this, we'd need to improve the handling of generics caching.\n#   Right now, to handle recursive generics, we some types must remain cached for brief periods without references.\n#   By chaining the WeakValuesDict with a LimitedDict, we have a way to retain caching for all types with references,\n#   while also retaining a limited number of types even without references. This is generally enough to build\n#   specific recursive generic models without losing required items out of the cache.\n\nKT = TypeVar('KT')\nVT = TypeVar('VT')\n_LIMITED_DICT_SIZE = 100\nif TYPE_CHECKING:\n\n    class LimitedDict(dict, MutableMapping[KT, VT]):\n\nelse:\n\n    class LimitedDict(dict):\n        \"\"\"Limit the size/length of a dict used for caching to avoid unlimited increase in memory usage.\n\n        Since the dict is ordered, and we always remove elements from the beginning, this is effectively a FIFO cache.\n        \"\"\"\n\n\n\n\n# weak dictionaries allow the dynamically created parametrized versions of generic models to get collected\n# once they are no longer referenced by the caller.\nif sys.version_info >= (3, 9):  # Typing for weak dictionaries available at 3.9\n    GenericTypesCache = WeakValueDictionary[GenericTypesCacheKey, 'type[BaseModel]']\nelse:\n    GenericTypesCache = WeakValueDictionary\n\nif TYPE_CHECKING:\n\n    class DeepChainMap(ChainMap[KT, VT]):  # type: ignore\n        ...\n\nelse:\n\n    class DeepChainMap(ChainMap):\n        \"\"\"Variant of ChainMap that allows direct updates to inner scopes.\n\n        Taken from https://docs.python.org/3/library/collections.html#collections.ChainMap,\n        with some light modifications for this use case.\n        \"\"\"\n\n\n\n\n\n# Despite the fact that LimitedDict _seems_ no longer necessary, I'm very nervous to actually remove it\n# and discover later on that we need to re-add all this infrastructure...\n# _GENERIC_TYPES_CACHE = DeepChainMap(GenericTypesCache(), LimitedDict())\n\n_GENERIC_TYPES_CACHE = GenericTypesCache()\n\n\nclass PydanticGenericMetadata(typing_extensions.TypedDict):\n    origin: type[BaseModel] | None  # analogous to typing._GenericAlias.__origin__\n    args: tuple[Any, ...]  # analogous to typing._GenericAlias.__args__\n    parameters: tuple[type[Any], ...]  # analogous to typing.Generic.__parameters__\n\n\n\n\n\n\nDictValues: type[Any] = {}.values().__class__\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n_generic_recursion_cache: ContextVar[set[str] | None] = ContextVar('_generic_recursion_cache', default=None)\n\n\n@contextmanager\n\n[代码片段 4] 来源: v1/networks.py (第 0-0 行)\n[依赖图卡片] 类 Parts\n定义位置: v1/networks.py 第 44-54 行\n它继承自: TypedDict\n继承它的子类: (没有仓库内子类)\n\n[代码片段 5] 来源: fields.py (第 0-0 行)\n[依赖图卡片] 类 _FromFieldInfoInputs\n定义位置: fields.py 第 47-84 行\n它继承自: TypedDict\n继承它的子类: _FieldInfoInputs [fields.py]\n\n[问题] 在该项目中,类 LimitedDict 定义在哪个文件里?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_generics.py",
+   "_internal/_generics.py",
+   "_internal/_generics.py",
+   "v1/networks.py",
+   "fields.py"
+  ],
+  "expected_sources": [
+   "_internal/_generics.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal/_generics.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-IND-01",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,__init__.py 是否间接依赖 _internal/_schema_generation_shared.py?经过哪个中间文件(完整路径)?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_schema_generation_shared.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_schema_generation_shared.py\n它依赖(import)的仓库内文件: _internal/_core_utils.py, _internal/_generate_schema.py, annotated_handlers.py, json_schema.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_config.py, _internal/_core_metadata.py, _internal/_dataclasses.py, _internal/_generate_schema.py, _internal/_model_construction.py, _internal/_std_types_schema.py, color.py, json_schema.py\n文件内定义的类: GenerateJsonSchemaHandler, CallbackGetCoreSchemaHandler\n文件内定义的函数: __init__, __call__, resolve_ref_schema, __init__, __call__, _get_types_namespace, generate_schema, field_name, resolve_ref_schema\n\n[代码片段 2] 来源: _internal/_dataclasses.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_dataclasses.py\n它依赖(import)的仓库内文件: _internal/__init__.py, _internal/_fields.py, _internal/_generate_schema.py, _internal/_generics.py, _internal/_mock_val_ser.py, _internal/_schema_generation_shared.py, _internal/_signature.py, config.py, dataclasses.py, errors.py, fields.py, plugin/_schema_validator.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_fields.py, _internal/_generate_schema.py, _internal/_typing_extra.py, dataclasses.py, json_schema.py\n文件内定义的类: StandardDataclass, PydanticDataclass\n文件内定义的函数: __init__, set_dataclass_fields, complete_dataclass, __init__, validated_setattr, is_builtin_dataclass\n\n[代码片段 3] 来源: _internal/_config.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_config.py\n它依赖(import)的仓库内文件: _internal/_schema_generation_shared.py, aliases.py, config.py, errors.py, fields.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_fields.py, _internal/_generate_schema.py, _internal/_model_construction.py, _internal/_signature.py, _internal/_validate_call.py\n文件内定义的类: ConfigWrapper, ConfigWrapperStack\n文件内定义的函数: __init__, for_model, __getattr__, core_config, __repr__, __init__, tail, push, prepare_config, check_deprecated\n\n[代码片段 4] 来源: annotated_handlers.py (第 0-0 行)\n[依赖图卡片] 文件 annotated_handlers.py\n它依赖(import)的仓库内文件: json_schema.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, _internal/_generate_schema.py, _internal/_known_annotated_metadata.py, _internal/_schema_generation_shared.py, functional_serializers.py, functional_validators.py, json_schema.py, main.py, networks.py, types.py\n文件内定义的类: GetJsonSchemaHandler, GetCoreSchemaHandler\n文件内定义的函数: __call__, resolve_ref_schema, __call__, generate_schema, resolve_ref_schema, field_name, _get_types_namespace\n\n[代码片段 5] 来源: _internal/_core_metadata.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_core_metadata.py\n它依赖(import)的仓库内文件: _internal/_schema_generation_shared.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_generate_schema.py\n文件内定义的类: CoreMetadata, CoreMetadataHandler\n文件内定义的函数: __init__, metadata, build_metadata_dict\n\n[问题] 在该项目中,__init__.py 是否间接依赖 _internal/_schema_generation_shared.py?经过哪个中间文件(完整路径)?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_schema_generation_shared.py",
+   "_internal/_dataclasses.py",
+   "_internal/_config.py",
+   "annotated_handlers.py",
+   "_internal/_core_metadata.py"
+  ],
+  "expected_sources": [
+   "__init__.py",
+   "_internal/_generate_schema.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal/_generate_schema.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-IND-02",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,_internal/_config.py 是否间接依赖 _internal/_core_utils.py?经过哪个中间文件(完整路径)?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_schema_generation_shared.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_schema_generation_shared.py\n它依赖(import)的仓库内文件: _internal/_core_utils.py, _internal/_generate_schema.py, annotated_handlers.py, json_schema.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_config.py, _internal/_core_metadata.py, _internal/_dataclasses.py, _internal/_generate_schema.py, _internal/_model_construction.py, _internal/_std_types_schema.py, color.py, json_schema.py\n文件内定义的类: GenerateJsonSchemaHandler, CallbackGetCoreSchemaHandler\n文件内定义的函数: __init__, __call__, resolve_ref_schema, __init__, __call__, _get_types_namespace, generate_schema, field_name, resolve_ref_schema\n\n[代码片段 2] 来源: config.py (第 0-0 行)\n[依赖图卡片] 文件 config.py\n它依赖(import)的仓库内文件: _internal/_generate_schema.py, _internal/_utils.py, _migration.py, aliases.py, errors.py, fields.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): __init__.py, _internal/_config.py, _internal/_dataclasses.py, _internal/_generate_schema.py, _internal/_validate_call.py, dataclasses.py, fields.py, json_schema.py, main.py, type_adapter.py, validate_call_decorator.py\n文件内定义的类: ConfigDict\n文件内定义的函数: with_config, inner\n\n[代码片段 3] 来源: _internal/_config.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_config.py\n它依赖(import)的仓库内文件: _internal/_schema_generation_shared.py, aliases.py, config.py, errors.py, fields.py, typing.py, warnings.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_fields.py, _internal/_generate_schema.py, _internal/_model_construction.py, _internal/_signature.py, _internal/_validate_call.py\n文件内定义的类: ConfigWrapper, ConfigWrapperStack\n文件内定义的函数: __init__, for_model, __getattr__, core_config, __repr__, __init__, tail, push, prepare_config, check_deprecated\n\n[代码片段 4] 来源: _internal/_signature.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_signature.py\n它依赖(import)的仓库内文件: _internal/_config.py, _internal/_utils.py, dataclasses.py, fields.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_dataclasses.py, _internal/_model_construction.py\n文件内定义的类: (无)\n文件内定义的函数: _field_name_for_signature, _process_param_defaults, _generate_signature_parameters, generate_pydantic_signature\n\n[代码片段 5] 来源: _internal/_validate_call.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_validate_call.py\n它依赖(import)的仓库内文件: _internal/__init__.py, _internal/_config.py, config.py, plugin/_schema_validator.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_model_construction.py\n文件内定义的类: ValidateCallWrapper\n文件内定义的函数: __init__, return_val_wrapper, __call__\n\n[问题] 在该项目中,_internal/_config.py 是否间接依赖 _internal/_core_utils.py?经过哪个中间文件(完整路径)?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_schema_generation_shared.py",
+   "config.py",
+   "_internal/_config.py",
+   "_internal/_signature.py",
+   "_internal/_validate_call.py"
+  ],
+  "expected_sources": [
+   "_internal/_config.py",
+   "_internal/_schema_generation_shared.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal/_schema_generation_shared.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ },
+ {
+  "id": "R-IND-03",
+  "category": "indirect_dep",
+  "difficulty": "hard",
+  "priority": "P1",
+  "question": "在该项目中,_internal/_core_metadata.py 是否间接依赖 _internal/_core_utils.py?经过哪个中间文件(完整路径)?",
+  "prompt": "你是代码库跨文件依赖分析专家。回答依赖类问题时严格遵守:\n1. 只依据提供的[依赖图卡片]和代码片段作答,不使用记忆里的旧版本结构,不臆测;\n2. 上下文里没有的信息,明确说\"提供的信息中未包含\",绝不编造文件名/类名;\n3. 输出结构化:每条关系写成「文件路径 — 符号名 — 关系类型」;\"列出多个\"的问题\n   用编号列表逐条列全,不要只举几个例子;\n4. 遇到别名(import ... as)时,先把别名还原成它指向的真实模块/类,再回答。\n\n请根据以下检索到的代码仓库片段回答问题。如果片段中没有答案依据,请明确说\"检索结果中没有找到\",不要编造。\n\n[代码片段 1] 来源: _internal/_schema_generation_shared.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_schema_generation_shared.py\n它依赖(import)的仓库内文件: _internal/_core_utils.py, _internal/_generate_schema.py, annotated_handlers.py, json_schema.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_config.py, _internal/_core_metadata.py, _internal/_dataclasses.py, _internal/_generate_schema.py, _internal/_model_construction.py, _internal/_std_types_schema.py, color.py, json_schema.py\n文件内定义的类: GenerateJsonSchemaHandler, CallbackGetCoreSchemaHandler\n文件内定义的函数: __init__, __call__, resolve_ref_schema, __init__, __call__, _get_types_namespace, generate_schema, field_name, resolve_ref_schema\n\n[代码片段 2] 来源: _internal/_core_metadata.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_core_metadata.py\n它依赖(import)的仓库内文件: _internal/_schema_generation_shared.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_generate_schema.py\n文件内定义的类: CoreMetadata, CoreMetadataHandler\n文件内定义的函数: __init__, metadata, build_metadata_dict\n\n[代码片段 3] 来源: _internal/_forward_ref.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_forward_ref.py\n它依赖(import)的仓库内文件: dataclasses.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_generate_schema.py, _internal/_generics.py\n文件内定义的类: PydanticRecursiveRef\n文件内定义的函数: __call__, __or__, __ror__\n\n[代码片段 4] 来源: _internal/_core_utils.py (第 161-168 行)\n文件: _internal/_core_utils.py\n函数: _is_schema_valid\ndef _is_schema_valid(s: core_schema.CoreSchema, recurse: Recurse) -> core_schema.CoreSchema:\n        nonlocal invalid\n        if 'metadata' in s:\n            metadata = s['metadata']\n            if HAS_INVALID_SCHEMAS_METADATA_KEY in metadata:\n                invalid = metadata[HAS_INVALID_SCHEMAS_METADATA_KEY]\n                return s\n        return recurse(s, _is_schema_valid)\n\n[代码片段 5] 来源: _internal/_import_utils.py (第 0-0 行)\n[依赖图卡片] 文件 _internal/_import_utils.py\n它依赖(import)的仓库内文件: fields.py, typing.py\n它被这些文件依赖/使用(import 它的使用方): _internal/_fields.py, _internal/_generate_schema.py, _internal/_known_annotated_metadata.py, _internal/_model_construction.py, _internal/_std_types_schema.py, _internal/_utils.py, deprecated/json.py\n文件内定义的类: (无)\n文件内定义的函数: import_cached_base_model, import_cached_field_info\n\n[问题] 在该项目中,_internal/_core_metadata.py 是否间接依赖 _internal/_core_utils.py?经过哪个中间文件(完整路径)?\n\n请先一步步分析:1) 哪个片段和问题最相关;2) 从中能得到什么信息;最后再给出结论。",
+  "retrieved_sources": [
+   "_internal/_schema_generation_shared.py",
+   "_internal/_core_metadata.py",
+   "_internal/_forward_ref.py",
+   "_internal/_core_utils.py",
+   "_internal/_import_utils.py"
+  ],
+  "expected_sources": [
+   "_internal/_core_metadata.py",
+   "_internal/_schema_generation_shared.py"
+  ],
+  "judge": {
+   "type": "keyword_all",
+   "keywords": [
+    "_internal/_schema_generation_shared.py"
+   ],
+   "pattern": "",
+   "groups": []
+  }
+ }
+]

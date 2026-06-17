@@ -1,0 +1,24 @@
+# 真 LLM 评测模板(拿到 API key 后即可用,本配置在没有 key 时会报清晰错误)
+# 用法:
+#   1. $env:LLM_API_KEY = "sk-..."
+#   2. 按你的服务商改 model / base_url(任何 OpenAI 兼容端点都行)
+#   3. python scripts/run_eval.py configs/llm_api_template.yaml
+# PE 对比(真 LLM 下 few-shot/CoT 才生效):复制本文件,把 prompt_file 换成
+# configs/prompts/cot.yaml / fewshot_cot.yaml,跑 run_ablation 并排对比。
+name: llm_api
+repo_root: mock_repo
+commits_path: data/mock_commits.jsonl
+chunking:
+  strategy: function
+  include_graph_cards: true
+embedder:
+  type: sentence_transformer
+  model_name: models/bge-small-en-v1.5  # M65 审计:英文/代码任务用 en(R@5 0.93≫zh 0.32),零成本;勿改回 zh(冒烟测试会拦)
+backend:
+  type: hybrid
+  top_k: 3
+llm:
+  type: api
+  model: hunyuan-turbo                                  # 例:deepseek-chat / gpt-4o-mini
+  base_url: https://api.hunyuan.cloud.tencent.com/v1    # 例:https://api.deepseek.com/v1
+prompt_file: configs/prompts/fewshot_cot.yaml

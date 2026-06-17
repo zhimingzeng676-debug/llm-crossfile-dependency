@@ -1,0 +1,293 @@
+[
+ {
+  "id": "java-FWD-0",
+  "category": "forward_dep",
+  "focal": "com/google/gson/FieldNamingStrategy.java",
+  "question": "在 google-gson 项目中,文件 com/google/gson/FieldNamingStrategy.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "com/google/gson/annotations/SerializedName.java",
+  "gold_kw": [
+   "SerializedName.java"
+  ]
+ },
+ {
+  "id": "java-FWD-1",
+  "category": "forward_dep",
+  "focal": "com/google/gson/FormattingStyle.java",
+  "question": "在 google-gson 项目中,文件 com/google/gson/FormattingStyle.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "com/google/gson/stream/JsonWriter.java",
+  "gold_kw": [
+   "JsonWriter.java"
+  ]
+ },
+ {
+  "id": "java-FWD-4",
+  "category": "forward_dep",
+  "focal": "com/google/gson/JsonArray.java",
+  "question": "在 google-gson 项目中,文件 com/google/gson/JsonArray.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "com/google/gson/internal/NonNullElementWrapperList.java",
+  "gold_kw": [
+   "NonNullElementWrapperList.java"
+  ]
+ },
+ {
+  "id": "java-FWD-5",
+  "category": "forward_dep",
+  "focal": "com/google/gson/JsonElement.java",
+  "question": "在 google-gson 项目中,文件 com/google/gson/JsonElement.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "com/google/gson/internal/Streams.java, com/google/gson/stream/JsonWriter.java",
+  "gold_kw": [
+   "Streams.java",
+   "JsonWriter.java"
+  ]
+ },
+ {
+  "id": "java-FWD-6",
+  "category": "forward_dep",
+  "focal": "com/google/gson/JsonObject.java",
+  "question": "在 google-gson 项目中,文件 com/google/gson/JsonObject.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "com/google/gson/internal/LinkedTreeMap.java",
+  "gold_kw": [
+   "LinkedTreeMap.java"
+  ]
+ },
+ {
+  "id": "java-FWD-7",
+  "category": "forward_dep",
+  "focal": "com/google/gson/JsonParser.java",
+  "question": "在 google-gson 项目中,文件 com/google/gson/JsonParser.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "com/google/gson/internal/Streams.java, com/google/gson/stream/JsonReader.java, com/google/gson/stream/JsonToken.java, com/google/gson/stream/MalformedJsonException.java",
+  "gold_kw": [
+   "Streams.java",
+   "JsonReader.java",
+   "JsonToken.java",
+   "MalformedJsonException.java"
+  ]
+ },
+ {
+  "id": "java-FWD-8",
+  "category": "forward_dep",
+  "focal": "com/google/gson/JsonPrimitive.java",
+  "question": "在 google-gson 项目中,文件 com/google/gson/JsonPrimitive.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "com/google/gson/internal/LazilyParsedNumber.java, com/google/gson/internal/NumberLimits.java",
+  "gold_kw": [
+   "LazilyParsedNumber.java",
+   "NumberLimits.java"
+  ]
+ },
+ {
+  "id": "java-REV-51",
+  "category": "reverse_dep",
+  "focal": "com/google/gson/ExclusionStrategy.java",
+  "question": "在 google-gson 项目中,哪些本仓库内的文件依赖(import/include/引用)了 com/google/gson/ExclusionStrategy.java?列出文件。",
+  "gold": "com/google/gson/internal/Excluder.java",
+  "gold_kw": [
+   "Excluder.java"
+  ]
+ },
+ {
+  "id": "java-REV-52",
+  "category": "reverse_dep",
+  "focal": "com/google/gson/FieldAttributes.java",
+  "question": "在 google-gson 项目中,哪些本仓库内的文件依赖(import/include/引用)了 com/google/gson/FieldAttributes.java?列出文件。",
+  "gold": "com/google/gson/internal/Excluder.java",
+  "gold_kw": [
+   "Excluder.java"
+  ]
+ },
+ {
+  "id": "java-REV-53",
+  "category": "reverse_dep",
+  "focal": "com/google/gson/FieldNamingStrategy.java",
+  "question": "在 google-gson 项目中,哪些本仓库内的文件依赖(import/include/引用)了 com/google/gson/FieldNamingStrategy.java?列出文件。",
+  "gold": "com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java",
+  "gold_kw": [
+   "ReflectiveTypeAdapterFactory.java"
+  ]
+ },
+ {
+  "id": "java-REV-54",
+  "category": "reverse_dep",
+  "focal": "com/google/gson/FormattingStyle.java",
+  "question": "在 google-gson 项目中,哪些本仓库内的文件依赖(import/include/引用)了 com/google/gson/FormattingStyle.java?列出文件。",
+  "gold": "com/google/gson/stream/JsonWriter.java",
+  "gold_kw": [
+   "JsonWriter.java"
+  ]
+ },
+ {
+  "id": "java-REV-56",
+  "category": "reverse_dep",
+  "focal": "com/google/gson/GsonBuilder.java",
+  "question": "在 google-gson 项目中,哪些本仓库内的文件依赖(import/include/引用)了 com/google/gson/GsonBuilder.java?列出文件。",
+  "gold": "com/google/gson/Gson.java, com/google/gson/annotations/JsonAdapter.java, com/google/gson/annotations/Since.java, com/google/gson/annotations/Until.java",
+  "gold_kw": [
+   "Gson.java",
+   "JsonAdapter.java",
+   "Since.java",
+   "Until.java"
+  ]
+ },
+ {
+  "id": "java-REV-57",
+  "category": "reverse_dep",
+  "focal": "com/google/gson/InstanceCreator.java",
+  "question": "在 google-gson 项目中,哪些本仓库内的文件依赖(import/include/引用)了 com/google/gson/InstanceCreator.java?列出文件。",
+  "gold": "com/google/gson/annotations/JsonAdapter.java, com/google/gson/internal/ConstructorConstructor.java",
+  "gold_kw": [
+   "JsonAdapter.java",
+   "ConstructorConstructor.java"
+  ]
+ },
+ {
+  "id": "java-REV-58",
+  "category": "reverse_dep",
+  "focal": "com/google/gson/JsonArray.java",
+  "question": "在 google-gson 项目中,哪些本仓库内的文件依赖(import/include/引用)了 com/google/gson/JsonArray.java?列出文件。",
+  "gold": "com/google/gson/internal/bind/JsonElementTypeAdapter.java, com/google/gson/internal/bind/JsonTreeReader.java, com/google/gson/internal/bind/JsonTreeWriter.java",
+  "gold_kw": [
+   "JsonElementTypeAdapter.java",
+   "JsonTreeReader.java",
+   "JsonTreeWriter.java"
+  ]
+ },
+ {
+  "id": "java-LOC-119",
+  "category": "symbol_location",
+  "focal": "com/google/gson/ExclusionStrategy.java",
+  "question": "在 google-gson 项目中,符号 ExclusionStrategy(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "com/google/gson/ExclusionStrategy.java",
+  "gold_kw": [
+   "ExclusionStrategy.java"
+  ]
+ },
+ {
+  "id": "java-LOC-120",
+  "category": "symbol_location",
+  "focal": "com/google/gson/FieldAttributes.java",
+  "question": "在 google-gson 项目中,符号 FieldAttributes(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "com/google/gson/FieldAttributes.java",
+  "gold_kw": [
+   "FieldAttributes.java"
+  ]
+ },
+ {
+  "id": "java-LOC-121",
+  "category": "symbol_location",
+  "focal": "com/google/gson/FieldNamingPolicy.java",
+  "question": "在 google-gson 项目中,符号 FieldNamingPolicy(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "com/google/gson/FieldNamingPolicy.java",
+  "gold_kw": [
+   "FieldNamingPolicy.java"
+  ]
+ },
+ {
+  "id": "java-LOC-122",
+  "category": "symbol_location",
+  "focal": "com/google/gson/FieldNamingStrategy.java",
+  "question": "在 google-gson 项目中,符号 FieldNamingStrategy(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "com/google/gson/FieldNamingStrategy.java",
+  "gold_kw": [
+   "FieldNamingStrategy.java"
+  ]
+ },
+ {
+  "id": "java-LOC-123",
+  "category": "symbol_location",
+  "focal": "com/google/gson/FormattingStyle.java",
+  "question": "在 google-gson 项目中,符号 FormattingStyle(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "com/google/gson/FormattingStyle.java",
+  "gold_kw": [
+   "FormattingStyle.java"
+  ]
+ },
+ {
+  "id": "java-LOC-124",
+  "category": "symbol_location",
+  "focal": "com/google/gson/Gson.java",
+  "question": "在 google-gson 项目中,符号 Gson(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "com/google/gson/Gson.java",
+  "gold_kw": [
+   "Gson.java"
+  ]
+ },
+ {
+  "id": "java-LOC-125",
+  "category": "symbol_location",
+  "focal": "com/google/gson/Gson.java",
+  "question": "在 google-gson 项目中,符号 FutureTypeAdapter(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "com/google/gson/Gson.java",
+  "gold_kw": [
+   "Gson.java"
+  ]
+ },
+ {
+  "id": "java-LOC-126",
+  "category": "symbol_location",
+  "focal": "com/google/gson/GsonBuilder.java",
+  "question": "在 google-gson 项目中,符号 GsonBuilder(类/类型/函数/结构体)定义在哪个文件里?",
+  "gold": "com/google/gson/GsonBuilder.java",
+  "gold_kw": [
+   "GsonBuilder.java"
+  ]
+ },
+ {
+  "id": "java-INH-230",
+  "category": "inheritance",
+  "focal": "com/google/gson/Gson.java",
+  "question": "在 google-gson 项目中,类/接口 FutureTypeAdapter 继承(extends)或实现(implements)了什么?",
+  "gold": "SerializationDelegatingTypeAdapter",
+  "gold_kw": [
+   "SerializationDelegatingTypeAdapter"
+  ]
+ },
+ {
+  "id": "java-INH-231",
+  "category": "inheritance",
+  "focal": "com/google/gson/JsonArray.java",
+  "question": "在 google-gson 项目中,类/接口 JsonArray 继承(extends)或实现(implements)了什么?",
+  "gold": "JsonElement",
+  "gold_kw": [
+   "JsonElement"
+  ]
+ },
+ {
+  "id": "java-INH-232",
+  "category": "inheritance",
+  "focal": "com/google/gson/JsonIOException.java",
+  "question": "在 google-gson 项目中,类/接口 JsonIOException 继承(extends)或实现(implements)了什么?",
+  "gold": "JsonParseException",
+  "gold_kw": [
+   "JsonParseException"
+  ]
+ },
+ {
+  "id": "java-INH-233",
+  "category": "inheritance",
+  "focal": "com/google/gson/JsonNull.java",
+  "question": "在 google-gson 项目中,类/接口 JsonNull 继承(extends)或实现(implements)了什么?",
+  "gold": "JsonElement",
+  "gold_kw": [
+   "JsonElement"
+  ]
+ },
+ {
+  "id": "java-INH-234",
+  "category": "inheritance",
+  "focal": "com/google/gson/JsonObject.java",
+  "question": "在 google-gson 项目中,类/接口 JsonObject 继承(extends)或实现(implements)了什么?",
+  "gold": "JsonElement",
+  "gold_kw": [
+   "JsonElement"
+  ]
+ },
+ {
+  "id": "java-INH-235",
+  "category": "inheritance",
+  "focal": "com/google/gson/JsonParseException.java",
+  "question": "在 google-gson 项目中,类/接口 JsonParseException 继承(extends)或实现(implements)了什么?",
+  "gold": "RuntimeException",
+  "gold_kw": [
+   "RuntimeException"
+  ]
+ }
+]

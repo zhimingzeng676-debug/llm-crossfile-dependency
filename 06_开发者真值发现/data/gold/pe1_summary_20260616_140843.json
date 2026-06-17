@@ -1,0 +1,801 @@
+{
+ "PySnooper": {
+  "n_commits_mined": 332,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 46,
+    "n_pairs": 28,
+    "rules": {
+     "S3_C0.3": 10,
+     "S5_C0.4": 5,
+     "S8_C0.5": 3,
+     "S10_C0.6": 2
+    }
+   },
+   "8": {
+    "n_commits_used": 49,
+    "n_pairs": 37,
+    "rules": {
+     "S3_C0.3": 13,
+     "S5_C0.4": 9,
+     "S8_C0.5": 3,
+     "S10_C0.6": 3
+    }
+   },
+   "16": {
+    "n_commits_used": 49,
+    "n_pairs": 37,
+    "rules": {
+     "S3_C0.3": 13,
+     "S5_C0.4": 9,
+     "S8_C0.5": 3,
+     "S10_C0.6": 3
+    }
+   },
+   "32": {
+    "n_commits_used": 49,
+    "n_pairs": 37,
+    "rules": {
+     "S3_C0.3": 13,
+     "S5_C0.4": 9,
+     "S8_C0.5": 3,
+     "S10_C0.6": 3
+    }
+   }
+  }
+ },
+ "ansible": {
+  "n_commits_mined": 30000,
+  "commit_cap": 30000,
+  "cap_hit": true,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 3145,
+    "n_pairs": 4641,
+    "rules": {
+     "S3_C0.3": 330,
+     "S5_C0.4": 101,
+     "S8_C0.5": 30,
+     "S10_C0.6": 18
+    }
+   },
+   "8": {
+    "n_commits_used": 3812,
+    "n_pairs": 12145,
+    "rules": {
+     "S3_C0.3": 924,
+     "S5_C0.4": 255,
+     "S8_C0.5": 80,
+     "S10_C0.6": 36
+    }
+   },
+   "16": {
+    "n_commits_used": 4279,
+    "n_pairs": 33498,
+    "rules": {
+     "S3_C0.3": 2518,
+     "S5_C0.4": 757,
+     "S8_C0.5": 198,
+     "S10_C0.6": 76
+    }
+   },
+   "32": {
+    "n_commits_used": 4542,
+    "n_pairs": 75424,
+    "rules": {
+     "S3_C0.3": 7360,
+     "S5_C0.4": 2371,
+     "S8_C0.5": 596,
+     "S10_C0.6": 225
+    }
+   }
+  }
+ },
+ "black": {
+  "n_commits_mined": 2243,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 250,
+    "n_pairs": 181,
+    "rules": {
+     "S3_C0.3": 28,
+     "S5_C0.4": 13,
+     "S8_C0.5": 9,
+     "S10_C0.6": 4
+    }
+   },
+   "8": {
+    "n_commits_used": 272,
+    "n_pairs": 349,
+    "rules": {
+     "S3_C0.3": 54,
+     "S5_C0.4": 18,
+     "S8_C0.5": 9,
+     "S10_C0.6": 4
+    }
+   },
+   "16": {
+    "n_commits_used": 283,
+    "n_pairs": 581,
+    "rules": {
+     "S3_C0.3": 150,
+     "S5_C0.4": 55,
+     "S8_C0.5": 11,
+     "S10_C0.6": 4
+    }
+   },
+   "32": {
+    "n_commits_used": 289,
+    "n_pairs": 942,
+    "rules": {
+     "S3_C0.3": 328,
+     "S5_C0.4": 136,
+     "S8_C0.5": 43,
+     "S10_C0.6": 9
+    }
+   }
+  }
+ },
+ "cookiecutter": {
+  "n_commits_mined": 2566,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 183,
+    "n_pairs": 108,
+    "rules": {
+     "S3_C0.3": 21,
+     "S5_C0.4": 11,
+     "S8_C0.5": 3,
+     "S10_C0.6": 3
+    }
+   },
+   "8": {
+    "n_commits_used": 195,
+    "n_pairs": 152,
+    "rules": {
+     "S3_C0.3": 38,
+     "S5_C0.4": 15,
+     "S8_C0.5": 8,
+     "S10_C0.6": 3
+    }
+   },
+   "16": {
+    "n_commits_used": 203,
+    "n_pairs": 219,
+    "rules": {
+     "S3_C0.3": 95,
+     "S5_C0.4": 53,
+     "S8_C0.5": 21,
+     "S10_C0.6": 9
+    }
+   },
+   "32": {
+    "n_commits_used": 207,
+    "n_pairs": 272,
+    "rules": {
+     "S3_C0.3": 188,
+     "S5_C0.4": 117,
+     "S8_C0.5": 57,
+     "S10_C0.6": 27
+    }
+   }
+  }
+ },
+ "fastapi": {
+  "n_commits_mined": 7305,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 203,
+    "n_pairs": 321,
+    "rules": {
+     "S3_C0.3": 24,
+     "S5_C0.4": 6,
+     "S8_C0.5": 2,
+     "S10_C0.6": 1
+    }
+   },
+   "8": {
+    "n_commits_used": 271,
+    "n_pairs": 1074,
+    "rules": {
+     "S3_C0.3": 64,
+     "S5_C0.4": 24,
+     "S8_C0.5": 7,
+     "S10_C0.6": 2
+    }
+   },
+   "16": {
+    "n_commits_used": 309,
+    "n_pairs": 2381,
+    "rules": {
+     "S3_C0.3": 204,
+     "S5_C0.4": 94,
+     "S8_C0.5": 34,
+     "S10_C0.6": 18
+    }
+   },
+   "32": {
+    "n_commits_used": 320,
+    "n_pairs": 4942,
+    "rules": {
+     "S3_C0.3": 292,
+     "S5_C0.4": 145,
+     "S8_C0.5": 44,
+     "S10_C0.6": 26
+    }
+   }
+  }
+ },
+ "httpie": {
+  "n_commits_mined": 1690,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 255,
+    "n_pairs": 227,
+    "rules": {
+     "S3_C0.3": 27,
+     "S5_C0.4": 12,
+     "S8_C0.5": 5,
+     "S10_C0.6": 3
+    }
+   },
+   "8": {
+    "n_commits_used": 306,
+    "n_pairs": 512,
+    "rules": {
+     "S3_C0.3": 65,
+     "S5_C0.4": 23,
+     "S8_C0.5": 13,
+     "S10_C0.6": 5
+    }
+   },
+   "16": {
+    "n_commits_used": 323,
+    "n_pairs": 950,
+    "rules": {
+     "S3_C0.3": 113,
+     "S5_C0.4": 47,
+     "S8_C0.5": 16,
+     "S10_C0.6": 7
+    }
+   },
+   "32": {
+    "n_commits_used": 329,
+    "n_pairs": 1377,
+    "rules": {
+     "S3_C0.3": 172,
+     "S5_C0.4": 79,
+     "S8_C0.5": 29,
+     "S10_C0.6": 10
+    }
+   }
+  }
+ },
+ "keras": {
+  "n_commits_mined": 11232,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 2050,
+    "n_pairs": 2802,
+    "rules": {
+     "S3_C0.3": 226,
+     "S5_C0.4": 58,
+     "S8_C0.5": 28,
+     "S10_C0.6": 17
+    }
+   },
+   "8": {
+    "n_commits_used": 2635,
+    "n_pairs": 7513,
+    "rules": {
+     "S3_C0.3": 782,
+     "S5_C0.4": 304,
+     "S8_C0.5": 141,
+     "S10_C0.6": 86
+    }
+   },
+   "16": {
+    "n_commits_used": 2956,
+    "n_pairs": 15405,
+    "rules": {
+     "S3_C0.3": 1918,
+     "S5_C0.4": 709,
+     "S8_C0.5": 320,
+     "S10_C0.6": 217
+    }
+   },
+   "32": {
+    "n_commits_used": 3033,
+    "n_pairs": 25079,
+    "rules": {
+     "S3_C0.3": 3217,
+     "S5_C0.4": 1053,
+     "S8_C0.5": 367,
+     "S10_C0.6": 229
+    }
+   }
+  }
+ },
+ "luigi": {
+  "n_commits_mined": 3046,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 405,
+    "n_pairs": 395,
+    "rules": {
+     "S3_C0.3": 45,
+     "S5_C0.4": 13,
+     "S8_C0.5": 4,
+     "S10_C0.6": 1
+    }
+   },
+   "8": {
+    "n_commits_used": 481,
+    "n_pairs": 988,
+    "rules": {
+     "S3_C0.3": 125,
+     "S5_C0.4": 38,
+     "S8_C0.5": 12,
+     "S10_C0.6": 2
+    }
+   },
+   "16": {
+    "n_commits_used": 501,
+    "n_pairs": 1640,
+    "rules": {
+     "S3_C0.3": 168,
+     "S5_C0.4": 50,
+     "S8_C0.5": 16,
+     "S10_C0.6": 4
+    }
+   },
+   "32": {
+    "n_commits_used": 511,
+    "n_pairs": 2129,
+    "rules": {
+     "S3_C0.3": 376,
+     "S5_C0.4": 145,
+     "S8_C0.5": 40,
+     "S10_C0.6": 9
+    }
+   }
+  }
+ },
+ "matplotlib": {
+  "n_commits_mined": 30000,
+  "commit_cap": 30000,
+  "cap_hit": true,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 3811,
+    "n_pairs": 3494,
+    "rules": {
+     "S3_C0.3": 271,
+     "S5_C0.4": 82,
+     "S8_C0.5": 26,
+     "S10_C0.6": 18
+    }
+   },
+   "8": {
+    "n_commits_used": 4477,
+    "n_pairs": 8145,
+    "rules": {
+     "S3_C0.3": 576,
+     "S5_C0.4": 158,
+     "S8_C0.5": 52,
+     "S10_C0.6": 28
+    }
+   },
+   "16": {
+    "n_commits_used": 4787,
+    "n_pairs": 16627,
+    "rules": {
+     "S3_C0.3": 1148,
+     "S5_C0.4": 270,
+     "S8_C0.5": 74,
+     "S10_C0.6": 36
+    }
+   },
+   "32": {
+    "n_commits_used": 4967,
+    "n_pairs": 37936,
+    "rules": {
+     "S3_C0.3": 2858,
+     "S5_C0.4": 684,
+     "S8_C0.5": 114,
+     "S10_C0.6": 43
+    }
+   }
+  }
+ },
+ "pandas": {
+  "n_commits_mined": 30000,
+  "commit_cap": 30000,
+  "cap_hit": true,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 5694,
+    "n_pairs": 4355,
+    "rules": {
+     "S3_C0.3": 271,
+     "S5_C0.4": 110,
+     "S8_C0.5": 46,
+     "S10_C0.6": 21
+    }
+   },
+   "8": {
+    "n_commits_used": 6846,
+    "n_pairs": 9461,
+    "rules": {
+     "S3_C0.3": 496,
+     "S5_C0.4": 221,
+     "S8_C0.5": 104,
+     "S10_C0.6": 50
+    }
+   },
+   "16": {
+    "n_commits_used": 7332,
+    "n_pairs": 17324,
+    "rules": {
+     "S3_C0.3": 804,
+     "S5_C0.4": 309,
+     "S8_C0.5": 136,
+     "S10_C0.6": 64
+    }
+   },
+   "32": {
+    "n_commits_used": 7535,
+    "n_pairs": 29301,
+    "rules": {
+     "S3_C0.3": 1453,
+     "S5_C0.4": 511,
+     "S8_C0.5": 190,
+     "S10_C0.6": 75
+    }
+   }
+  }
+ },
+ "sanic": {
+  "n_commits_mined": 2117,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 390,
+    "n_pairs": 430,
+    "rules": {
+     "S3_C0.3": 45,
+     "S5_C0.4": 16,
+     "S8_C0.5": 3,
+     "S10_C0.6": 1
+    }
+   },
+   "8": {
+    "n_commits_used": 469,
+    "n_pairs": 1058,
+    "rules": {
+     "S3_C0.3": 105,
+     "S5_C0.4": 37,
+     "S8_C0.5": 16,
+     "S10_C0.6": 4
+    }
+   },
+   "16": {
+    "n_commits_used": 500,
+    "n_pairs": 1812,
+    "rules": {
+     "S3_C0.3": 197,
+     "S5_C0.4": 69,
+     "S8_C0.5": 37,
+     "S10_C0.6": 15
+    }
+   },
+   "32": {
+    "n_commits_used": 508,
+    "n_pairs": 3212,
+    "rules": {
+     "S3_C0.3": 270,
+     "S5_C0.4": 88,
+     "S8_C0.5": 36,
+     "S10_C0.6": 20
+    }
+   }
+  }
+ },
+ "scrapy": {
+  "n_commits_mined": 9029,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 1254,
+    "n_pairs": 1697,
+    "rules": {
+     "S3_C0.3": 127,
+     "S5_C0.4": 40,
+     "S8_C0.5": 16,
+     "S10_C0.6": 10
+    }
+   },
+   "8": {
+    "n_commits_used": 1528,
+    "n_pairs": 4660,
+    "rules": {
+     "S3_C0.3": 326,
+     "S5_C0.4": 81,
+     "S8_C0.5": 26,
+     "S10_C0.6": 14
+    }
+   },
+   "16": {
+    "n_commits_used": 1626,
+    "n_pairs": 8245,
+    "rules": {
+     "S3_C0.3": 566,
+     "S5_C0.4": 154,
+     "S8_C0.5": 43,
+     "S10_C0.6": 20
+    }
+   },
+   "32": {
+    "n_commits_used": 1676,
+    "n_pairs": 15309,
+    "rules": {
+     "S3_C0.3": 940,
+     "S5_C0.4": 234,
+     "S8_C0.5": 69,
+     "S10_C0.6": 25
+    }
+   }
+  }
+ },
+ "spacy": {
+  "n_commits_mined": 14211,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 1105,
+    "n_pairs": 1350,
+    "rules": {
+     "S3_C0.3": 112,
+     "S5_C0.4": 39,
+     "S8_C0.5": 10,
+     "S10_C0.6": 2
+    }
+   },
+   "8": {
+    "n_commits_used": 1296,
+    "n_pairs": 3132,
+    "rules": {
+     "S3_C0.3": 272,
+     "S5_C0.4": 62,
+     "S8_C0.5": 20,
+     "S10_C0.6": 9
+    }
+   },
+   "16": {
+    "n_commits_used": 1392,
+    "n_pairs": 6153,
+    "rules": {
+     "S3_C0.3": 684,
+     "S5_C0.4": 227,
+     "S8_C0.5": 59,
+     "S10_C0.6": 22
+    }
+   },
+   "32": {
+    "n_commits_used": 1428,
+    "n_pairs": 11128,
+    "rules": {
+     "S3_C0.3": 1136,
+     "S5_C0.4": 414,
+     "S8_C0.5": 122,
+     "S10_C0.6": 43
+    }
+   }
+  }
+ },
+ "thefuck": {
+  "n_commits_mined": 1292,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 168,
+    "n_pairs": 211,
+    "rules": {
+     "S3_C0.3": 25,
+     "S5_C0.4": 7,
+     "S8_C0.5": 2,
+     "S10_C0.6": 0
+    }
+   },
+   "8": {
+    "n_commits_used": 194,
+    "n_pairs": 516,
+    "rules": {
+     "S3_C0.3": 45,
+     "S5_C0.4": 16,
+     "S8_C0.5": 4,
+     "S10_C0.6": 1
+    }
+   },
+   "16": {
+    "n_commits_used": 202,
+    "n_pairs": 780,
+    "rules": {
+     "S3_C0.3": 72,
+     "S5_C0.4": 22,
+     "S8_C0.5": 7,
+     "S10_C0.6": 1
+    }
+   },
+   "32": {
+    "n_commits_used": 207,
+    "n_pairs": 1614,
+    "rules": {
+     "S3_C0.3": 150,
+     "S5_C0.4": 29,
+     "S8_C0.5": 6,
+     "S10_C0.6": 1
+    }
+   }
+  }
+ },
+ "tornado": {
+  "n_commits_mined": 3932,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 550,
+    "n_pairs": 353,
+    "rules": {
+     "S3_C0.3": 41,
+     "S5_C0.4": 10,
+     "S8_C0.5": 3,
+     "S10_C0.6": 3
+    }
+   },
+   "8": {
+    "n_commits_used": 624,
+    "n_pairs": 649,
+    "rules": {
+     "S3_C0.3": 72,
+     "S5_C0.4": 27,
+     "S8_C0.5": 6,
+     "S10_C0.6": 3
+    }
+   },
+   "16": {
+    "n_commits_used": 669,
+    "n_pairs": 1168,
+    "rules": {
+     "S3_C0.3": 176,
+     "S5_C0.4": 56,
+     "S8_C0.5": 27,
+     "S10_C0.6": 7
+    }
+   },
+   "32": {
+    "n_commits_used": 687,
+    "n_pairs": 1399,
+    "rules": {
+     "S3_C0.3": 467,
+     "S5_C0.4": 218,
+     "S8_C0.5": 78,
+     "S10_C0.6": 27
+    }
+   }
+  }
+ },
+ "tqdm": {
+  "n_commits_mined": 1770,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 190,
+    "n_pairs": 139,
+    "rules": {
+     "S3_C0.3": 23,
+     "S5_C0.4": 11,
+     "S8_C0.5": 5,
+     "S10_C0.6": 4
+    }
+   },
+   "8": {
+    "n_commits_used": 205,
+    "n_pairs": 264,
+    "rules": {
+     "S3_C0.3": 35,
+     "S5_C0.4": 15,
+     "S8_C0.5": 8,
+     "S10_C0.6": 4
+    }
+   },
+   "16": {
+    "n_commits_used": 210,
+    "n_pairs": 367,
+    "rules": {
+     "S3_C0.3": 54,
+     "S5_C0.4": 18,
+     "S8_C0.5": 11,
+     "S10_C0.6": 5
+    }
+   },
+   "32": {
+    "n_commits_used": 213,
+    "n_pairs": 566,
+    "rules": {
+     "S3_C0.3": 125,
+     "S5_C0.4": 37,
+     "S8_C0.5": 13,
+     "S10_C0.6": 8
+    }
+   }
+  }
+ },
+ "youtube-dl": {
+  "n_commits_mined": 17609,
+  "commit_cap": 30000,
+  "cap_hit": false,
+  "by_tangle": {
+   "4": {
+    "n_commits_used": 2540,
+    "n_pairs": 2225,
+    "rules": {
+     "S3_C0.3": 148,
+     "S5_C0.4": 32,
+     "S8_C0.5": 8,
+     "S10_C0.6": 3
+    }
+   },
+   "8": {
+    "n_commits_used": 2619,
+    "n_pairs": 2841,
+    "rules": {
+     "S3_C0.3": 199,
+     "S5_C0.4": 39,
+     "S8_C0.5": 12,
+     "S10_C0.6": 6
+    }
+   },
+   "16": {
+    "n_commits_used": 2643,
+    "n_pairs": 4112,
+    "rules": {
+     "S3_C0.3": 229,
+     "S5_C0.4": 43,
+     "S8_C0.5": 14,
+     "S10_C0.6": 5
+    }
+   },
+   "32": {
+    "n_commits_used": 2655,
+    "n_pairs": 7006,
+    "rules": {
+     "S3_C0.3": 288,
+     "S5_C0.4": 50,
+     "S8_C0.5": 14,
+     "S10_C0.6": 5
+    }
+   }
+  }
+ }
+}

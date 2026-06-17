@@ -1,0 +1,8 @@
+# M12 自评估:无RAG + 自评估prompt(无上下文条件,核心:abstain vs 瞎猜)。
+name: werkzeug_sa_norag
+repo_root: repos/werkzeug
+commits_path: null
+embedder: {type: hashing, dim: 512}
+backend: {type: none, top_k: 5}
+llm: {type: api, model: Qwen/Qwen2.5-14B-Instruct, base_url: "http://localhost:8001/v1", temperature: 0.0}
+prompt_file: configs/prompts/selfassess.yaml

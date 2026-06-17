@@ -1,0 +1,200 @@
+[
+ {
+  "id": "D2-dyn-0",
+  "category": "dynamic",
+  "difficulty": "hard",
+  "question": "Lib/pickle.py 在 unpickling 时通过 __import__ 动态导入的模块由什么决定?能否静态确定具体模块名?",
+  "gold": "由被反序列化对象的模块名(运行时数据)决定;无法静态确定(__import__(module) 的 module 是运行时变量)。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/pickle.py\n它import的模块(静态分析): _compat_pickle, _pickle, argparse, codecs, copyreg, functools, io, itertools, pprint, struct, sys, types\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/pickle.py 在 unpickling 时通过 __import__ 动态导入的模块由什么决定?能否静态确定具体模块名?\n请直接回答。"
+ },
+ {
+  "id": "D2-dyn-1",
+  "category": "dynamic",
+  "difficulty": "hard",
+  "question": "Lib/pydoc.py 通过 importlib.import_module 动态导入的模块能否静态确定?",
+  "gold": "不能;目标是运行时传入的模块名,静态无法确定。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/pydoc.py\n它import的模块(静态分析): __future__, _pyrepl, annotationlib, ast, builtins, collections, email, getopt, http, importlib, inspect, io, os, pkgutil, platform, pydoc_data, re, reprlib, select, sys, sysconfig, textwrap, threading, time, tokenize, traceback, urllib, warnings, webbrowser\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/pydoc.py 通过 importlib.import_module 动态导入的模块能否静态确定?\n请直接回答。"
+ },
+ {
+  "id": "D2-dyn-2",
+  "category": "dynamic",
+  "difficulty": "hard",
+  "question": "Lib/inspect.py 是否存在静态 import 列表之外的运行时动态导入?",
+  "gold": "存在;用 importlib 在运行时按需导入,目标运行时定。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/inspect.py\n它import的模块(静态分析): (无)\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/inspect.py 是否存在静态 import 列表之外的运行时动态导入?\n请直接回答。"
+ },
+ {
+  "id": "D2-dyn-3",
+  "category": "dynamic",
+  "difficulty": "hard",
+  "question": "Lib/pkgutil.py 是否依赖只能在运行时确定的动态导入(importlib)?",
+  "gold": "是;按运行时包名动态导入,静态 import 列表不含这些目标。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/pkgutil.py\n它import的模块(静态分析): (无)\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/pkgutil.py 是否依赖只能在运行时确定的动态导入(importlib)?\n请直接回答。"
+ },
+ {
+  "id": "D2-dyn-4",
+  "category": "dynamic",
+  "difficulty": "hard",
+  "question": "Lib/runpy.py 运行的目标模块能否从静态 import 确定?",
+  "gold": "不能;runpy 按运行时给定的模块/路径动态加载,目标静态不可知。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/runpy.py\n它import的模块(静态分析): importlib, io, os, pkgutil, sys, warnings\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/runpy.py 运行的目标模块能否从静态 import 确定?\n请直接回答。"
+ },
+ {
+  "id": "D2-dyn-5",
+  "category": "dynamic",
+  "difficulty": "hard",
+  "question": "在 importlib 包中,模块按名称字符串动态加载——这种依赖能否静态列出?",
+  "gold": "不能;importlib 的核心就是运行时按字符串加载,依赖目标静态不可枚举。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/importlib/__init__.py\n它import的模块(静态分析): _bootstrap, _frozen_importlib, _frozen_importlib_external, _imp, sys\n(注:本卡片由静态 import 分析生成)\n\n问题:在 importlib 包中,模块按名称字符串动态加载——这种依赖能否静态列出?\n请直接回答。"
+ },
+ {
+  "id": "D2-ref-6",
+  "category": "reflection",
+  "difficulty": "hard",
+  "question": "若代码用 getattr(module, name) 按运行时字符串取属性,该依赖能否静态分析列出?",
+  "gold": "不能;getattr 的 name 是运行时字符串,静态分析无法确定取的是哪个符号。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/operator.py\n它import的模块(静态分析): _operator, builtins, functools\n(注:本卡片由静态 import 分析生成)\n\n问题:若代码用 getattr(module, name) 按运行时字符串取属性,该依赖能否静态分析列出?\n请直接回答。"
+ },
+ {
+  "id": "D2-ref-7",
+  "category": "reflection",
+  "difficulty": "hard",
+  "question": "通过 getattr/setattr 反射访问的成员依赖,静态 import 卡片能否覆盖?",
+  "gold": "不能;反射访问的目标运行时定,不在静态 import/符号表里。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/enum.py\n它import的模块(静态分析): builtins, inspect, sys, types\n(注:本卡片由静态 import 分析生成)\n\n问题:通过 getattr/setattr 反射访问的成员依赖,静态 import 卡片能否覆盖?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-8",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/_pyio.py 对 locale 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;locale 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/_pyio.py\n它import的模块(静态分析): _thread, abc, codecs, errno, io, locale, msvcrt, os, stat, sys, warnings\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/_pyio.py 对 locale 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-9",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/_pylong.py 对 _decimal 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;_decimal 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/_pylong.py\n它import的模块(静态分析): _decimal, collections, decimal, itertools, re\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/_pylong.py 对 _decimal 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-10",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/ftplib.py 对 ssl 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;ssl 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/ftplib.py\n它import的模块(静态分析): netrc, re, socket, ssl, sys\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/ftplib.py 对 ssl 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-11",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/functools.py 对 cmp_to_key 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;cmp_to_key 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/functools.py\n它import的模块(静态分析): _functools, _thread, abc, annotationlib, collections, operator, reprlib, types, typing, weakref\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/functools.py 对 cmp_to_key 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-12",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/getpass.py 对 msvcrt 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;msvcrt 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/getpass.py\n它import的模块(静态分析): contextlib, io, msvcrt, os, pwd, sys, termios, warnings\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/getpass.py 对 msvcrt 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-13",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/hmac.py 对 _hmac 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;_hmac 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/hmac.py\n它import的模块(静态分析): _hashlib, _hmac, _operator, hashlib, warnings\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/hmac.py 对 _hmac 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-14",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/io.py 对 _WindowsConsoleIO 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;_WindowsConsoleIO 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/io.py\n它import的模块(静态分析): _collections_abc, _io, abc\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/io.py 对 _WindowsConsoleIO 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-15",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/locale.py 对 getencoding 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;getencoding 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/locale.py\n它import的模块(静态分析): _collections_abc, _locale, builtins, encodings, functools, os, re, sys, warnings\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/locale.py 对 getencoding 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-16",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/mailbox.py 对 fcntl 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;fcntl 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/mailbox.py\n它import的模块(静态分析): calendar, contextlib, copy, email, errno, fcntl, io, os, socket, time, types, warnings\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/mailbox.py 对 fcntl 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-17",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/mimetypes.py 对 _mimetypes_read_windows_registry 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;_mimetypes_read_windows_registry 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/mimetypes.py\n它import的模块(静态分析): _winapi, argparse, os, posixpath, sys, urllib, winreg\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/mimetypes.py 对 _mimetypes_read_windows_registry 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-18",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/ntpath.py 对 _getvolumepathname 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;_getvolumepathname 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/ntpath.py\n它import的模块(静态分析): _winapi, genericpath, nt, os, re, sys\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/ntpath.py 对 _getvolumepathname 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-19",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/os.py 对 _have_functions 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;_have_functions 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/os.py\n它import的模块(静态分析): _collections_abc, abc, io, nt, ntpath, os, posix, posixpath, stat, subprocess, sys, warnings\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/os.py 对 _have_functions 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-20",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/pdb.py 对 readline 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;readline 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/pdb.py\n它import的模块(静态分析): (无)\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/pdb.py 对 readline 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ },
+ {
+  "id": "D2-con-21",
+  "category": "conditional",
+  "difficulty": "hard",
+  "question": "Lib/platform.py 对 _wmi 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?",
+  "gold": "可选/条件依赖;_wmi 在 try/except ImportError 中导入,缺失时降级,非硬依赖。",
+  "notes": "(脏-strict只信卡片)",
+  "gen_prompt": "你是代码依赖分析助手。请仅依据以下依赖卡片回答问题。卡片没有就说\"根据卡片没有找到\",不要臆造。\n\n[依赖卡片] 文件 Lib/platform.py\n它import的模块(静态分析): _ios_support, _wmi, argparse, collections, ctypes, functools, itertools, os, plistlib, re, socket, struct, subprocess, sys, vms_lib, warnings, winreg\n(注:本卡片由静态 import 分析生成)\n\n问题:Lib/platform.py 对 _wmi 的依赖是硬依赖还是可选/条件依赖(缺失时降级)?\n请直接回答。"
+ }
+]

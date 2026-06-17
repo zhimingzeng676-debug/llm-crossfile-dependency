@@ -1,0 +1,53 @@
+{
+ "qwen14b": {
+  "baseline": {
+   "recall": 0.2873,
+   "hard": 0.2814,
+   "n": 56
+  },
+  "full": {
+   "recall": 0.885,
+   "hard": 0.7734,
+   "n": 56
+  },
+  "pecot": {
+   "recall": 0.94,
+   "hard": 0.8704,
+   "n": 56
+  }
+ },
+ "intern7b": {
+  "baseline": {
+   "recall": 0.3123,
+   "hard": 0.3711,
+   "n": 56
+  },
+  "full": {
+   "recall": 0.8851,
+   "hard": 0.8396,
+   "n": 56
+  },
+  "pecot": {
+   "recall": 0.8483,
+   "hard": 0.726,
+   "n": 56
+  }
+ },
+ "coder14b": {
+  "baseline": {
+   "recall": 0.1657,
+   "hard": 0.1262,
+   "n": 56
+  },
+  "full": {
+   "recall": 0.9268,
+   "hard": 0.8292,
+   "n": 56
+  },
+  "pecot": {
+   "recall": 0.9643,
+   "hard": 0.9167,
+   "n": 56
+  }
+ }
+}

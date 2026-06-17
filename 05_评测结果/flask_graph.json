@@ -1,0 +1,6278 @@
+{
+  "functions": [
+    {
+      "name": "__getattr__",
+      "file": "__init__.py",
+      "start_line": 47,
+      "end_line": 61,
+      "calls": [
+        "warn",
+        "version",
+        "AttributeError"
+      ]
+    },
+    {
+      "name": "_make_timedelta",
+      "file": "app.py",
+      "start_line": 74,
+      "end_line": 78,
+      "calls": [
+        "isinstance",
+        "timedelta"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "app.py",
+      "start_line": 226,
+      "end_line": 279,
+      "calls": [
+        "__init__",
+        "super",
+        "AppGroup",
+        "bool",
+        "ref",
+        "add_url_rule",
+        "send_static_file",
+        "self_ref"
+      ]
+    },
+    {
+      "name": "get_send_file_max_age",
+      "file": "app.py",
+      "start_line": 281,
+      "end_line": 306,
+      "calls": [
+        "isinstance",
+        "int",
+        "total_seconds"
+      ]
+    },
+    {
+      "name": "send_static_file",
+      "file": "app.py",
+      "start_line": 308,
+      "end_line": 328,
+      "calls": [
+        "RuntimeError",
+        "get_send_file_max_age",
+        "send_from_directory",
+        "cast"
+      ]
+    },
+    {
+      "name": "open_resource",
+      "file": "app.py",
+      "start_line": 330,
+      "end_line": 361,
+      "calls": [
+        "ValueError",
+        "join",
+        "open"
+      ]
+    },
+    {
+      "name": "open_instance_resource",
+      "file": "app.py",
+      "start_line": 363,
+      "end_line": 383,
+      "calls": [
+        "join",
+        "open"
+      ]
+    },
+    {
+      "name": "create_jinja_environment",
+      "file": "app.py",
+      "start_line": 385,
+      "end_line": 423,
+      "calls": [
+        "dict",
+        "jinja_environment",
+        "update"
+      ]
+    },
+    {
+      "name": "create_url_adapter",
+      "file": "app.py",
+      "start_line": 425,
+      "end_line": 476,
+      "calls": [
+        "get_host",
+        "bind_to_environ",
+        "bind"
+      ]
+    },
+    {
+      "name": "raise_routing_exception",
+      "file": "app.py",
+      "start_line": 478,
+      "end_line": 504,
+      "calls": [
+        "isinstance",
+        "FormDataRoutingRedirect"
+      ]
+    },
+    {
+      "name": "update_template_context",
+      "file": "app.py",
+      "start_line": 506,
+      "end_line": 532,
+      "calls": [
+        "chain",
+        "reversed",
+        "copy",
+        "update",
+        "ensure_sync"
+      ]
+    },
+    {
+      "name": "make_shell_context",
+      "file": "app.py",
+      "start_line": 534,
+      "end_line": 544,
+      "calls": [
+        "update",
+        "processor"
+      ]
+    },
+    {
+      "name": "run",
+      "file": "app.py",
+      "start_line": 546,
+      "end_line": 667,
+      "calls": [
+        "get",
+        "is_running_from_reloader",
+        "secho",
+        "get_load_dotenv",
+        "load_dotenv",
+        "get_debug_flag",
+        "bool",
+        "partition",
+        "int",
+        "setdefault",
+        "show_server_banner",
+        "run_simple",
+        "cast"
+      ]
+    },
+    {
+      "name": "test_client",
+      "file": "app.py",
+      "start_line": 669,
+      "end_line": 725,
+      "calls": [
+        "cls"
+      ]
+    },
+    {
+      "name": "test_cli_runner",
+      "file": "app.py",
+      "start_line": 727,
+      "end_line": 742,
+      "calls": [
+        "cls"
+      ]
+    },
+    {
+      "name": "handle_http_exception",
+      "file": "app.py",
+      "start_line": 744,
+      "end_line": 777,
+      "calls": [
+        "isinstance",
+        "_find_error_handler",
+        "ensure_sync"
+      ]
+    },
+    {
+      "name": "handle_user_exception",
+      "file": "app.py",
+      "start_line": 779,
+      "end_line": 809,
+      "calls": [
+        "isinstance",
+        "trap_http_exception",
+        "handle_http_exception",
+        "_find_error_handler",
+        "ensure_sync"
+      ]
+    },
+    {
+      "name": "handle_exception",
+      "file": "app.py",
+      "start_line": 811,
+      "end_line": 862,
+      "calls": [
+        "exc_info",
+        "send",
+        "log_exception",
+        "InternalServerError",
+        "_find_error_handler",
+        "ensure_sync",
+        "finalize_request"
+      ]
+    },
+    {
+      "name": "log_exception",
+      "file": "app.py",
+      "start_line": 864,
+      "end_line": 877,
+      "calls": [
+        "error"
+      ]
+    },
+    {
+      "name": "dispatch_request",
+      "file": "app.py",
+      "start_line": 879,
+      "end_line": 902,
+      "calls": [
+        "raise_routing_exception",
+        "getattr",
+        "make_default_options_response",
+        "ensure_sync"
+      ]
+    },
+    {
+      "name": "full_dispatch_request",
+      "file": "app.py",
+      "start_line": 904,
+      "end_line": 920,
+      "calls": [
+        "send",
+        "preprocess_request",
+        "dispatch_request",
+        "handle_user_exception",
+        "finalize_request"
+      ]
+    },
+    {
+      "name": "finalize_request",
+      "file": "app.py",
+      "start_line": 922,
+      "end_line": 951,
+      "calls": [
+        "make_response",
+        "process_response",
+        "send",
+        "exception"
+      ]
+    },
+    {
+      "name": "make_default_options_response",
+      "file": "app.py",
+      "start_line": 953,
+      "end_line": 964,
+      "calls": [
+        "allowed_methods",
+        "response_class",
+        "update"
+      ]
+    },
+    {
+      "name": "ensure_sync",
+      "file": "app.py",
+      "start_line": 966,
+      "end_line": 978,
+      "calls": [
+        "iscoroutinefunction",
+        "async_to_sync"
+      ]
+    },
+    {
+      "name": "async_to_sync",
+      "file": "app.py",
+      "start_line": 980,
+      "end_line": 1001,
+      "calls": [
+        "RuntimeError",
+        "asgiref_async_to_sync"
+      ]
+    },
+    {
+      "name": "url_for",
+      "file": "app.py",
+      "start_line": 1003,
+      "end_line": 1127,
+      "calls": [
+        "get",
+        "create_url_adapter",
+        "RuntimeError",
+        "ValueError",
+        "inject_url_defaults",
+        "build",
+        "update",
+        "handle_url_build_error",
+        "_url_quote"
+      ]
+    },
+    {
+      "name": "make_response",
+      "file": "app.py",
+      "start_line": 1129,
+      "end_line": 1269,
+      "calls": [
+        "isinstance",
+        "len",
+        "TypeError",
+        "response_class",
+        "response",
+        "callable",
+        "force_type",
+        "with_traceback",
+        "type",
+        "exc_info",
+        "cast",
+        "update"
+      ]
+    },
+    {
+      "name": "preprocess_request",
+      "file": "app.py",
+      "start_line": 1271,
+      "end_line": 1296,
+      "calls": [
+        "reversed",
+        "url_func",
+        "ensure_sync"
+      ]
+    },
+    {
+      "name": "process_response",
+      "file": "app.py",
+      "start_line": 1298,
+      "end_line": 1324,
+      "calls": [
+        "_get_current_object",
+        "ensure_sync",
+        "chain",
+        "reversed",
+        "is_null_session",
+        "save_session"
+      ]
+    },
+    {
+      "name": "do_teardown_request",
+      "file": "app.py",
+      "start_line": 1326,
+      "end_line": 1358,
+      "calls": [
+        "exc_info",
+        "chain",
+        "reversed",
+        "ensure_sync",
+        "send"
+      ]
+    },
+    {
+      "name": "do_teardown_appcontext",
+      "file": "app.py",
+      "start_line": 1360,
+      "end_line": 1384,
+      "calls": [
+        "exc_info",
+        "reversed",
+        "ensure_sync",
+        "send"
+      ]
+    },
+    {
+      "name": "app_context",
+      "file": "app.py",
+      "start_line": 1386,
+      "end_line": 1405,
+      "calls": [
+        "AppContext"
+      ]
+    },
+    {
+      "name": "request_context",
+      "file": "app.py",
+      "start_line": 1407,
+      "end_line": 1421,
+      "calls": [
+        "RequestContext"
+      ]
+    },
+    {
+      "name": "test_request_context",
+      "file": "app.py",
+      "start_line": 1423,
+      "end_line": 1477,
+      "calls": [
+        "EnvironBuilder",
+        "request_context",
+        "get_environ",
+        "close"
+      ]
+    },
+    {
+      "name": "wsgi_app",
+      "file": "app.py",
+      "start_line": 1479,
+      "end_line": 1527,
+      "calls": [
+        "request_context",
+        "push",
+        "full_dispatch_request",
+        "handle_exception",
+        "exc_info",
+        "response",
+        "get",
+        "should_ignore_error",
+        "pop"
+      ]
+    },
+    {
+      "name": "__call__",
+      "file": "app.py",
+      "start_line": 1529,
+      "end_line": 1536,
+      "calls": [
+        "wsgi_app"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "blueprints.py",
+      "start_line": 19,
+      "end_line": 53,
+      "calls": [
+        "__init__",
+        "super",
+        "AppGroup"
+      ]
+    },
+    {
+      "name": "get_send_file_max_age",
+      "file": "blueprints.py",
+      "start_line": 55,
+      "end_line": 80,
+      "calls": [
+        "isinstance",
+        "int",
+        "total_seconds"
+      ]
+    },
+    {
+      "name": "send_static_file",
+      "file": "blueprints.py",
+      "start_line": 82,
+      "end_line": 102,
+      "calls": [
+        "RuntimeError",
+        "get_send_file_max_age",
+        "send_from_directory",
+        "cast"
+      ]
+    },
+    {
+      "name": "open_resource",
+      "file": "blueprints.py",
+      "start_line": 104,
+      "end_line": 128,
+      "calls": [
+        "ValueError",
+        "join",
+        "open"
+      ]
+    },
+    {
+      "name": "find_best_app",
+      "file": "cli.py",
+      "start_line": 41,
+      "end_line": 91,
+      "calls": [
+        "getattr",
+        "isinstance",
+        "values",
+        "len",
+        "NoAppException",
+        "isfunction",
+        "app_factory",
+        "_called_with_wrong_args"
+      ]
+    },
+    {
+      "name": "_called_with_wrong_args",
+      "file": "cli.py",
+      "start_line": 94,
+      "end_line": 117,
+      "calls": [
+        "exc_info"
+      ]
+    },
+    {
+      "name": "find_app_by_string",
+      "file": "cli.py",
+      "start_line": 120,
+      "end_line": 197,
+      "calls": [
+        "parse",
+        "strip",
+        "NoAppException",
+        "isinstance",
+        "literal_eval",
+        "getattr",
+        "isfunction",
+        "attr",
+        "_called_with_wrong_args"
+      ]
+    },
+    {
+      "name": "prepare_import",
+      "file": "cli.py",
+      "start_line": 200,
+      "end_line": 226,
+      "calls": [
+        "realpath",
+        "splitext",
+        "basename",
+        "dirname",
+        "split",
+        "append",
+        "exists",
+        "join",
+        "insert"
+      ]
+    },
+    {
+      "name": "locate_app",
+      "file": "cli.py",
+      "start_line": 230,
+      "end_line": 232,
+      "calls": []
+    },
+    {
+      "name": "locate_app",
+      "file": "cli.py",
+      "start_line": 236,
+      "end_line": 238,
+      "calls": []
+    },
+    {
+      "name": "locate_app",
+      "file": "cli.py",
+      "start_line": 241,
+      "end_line": 264,
+      "calls": [
+        "__import__",
+        "exc_info",
+        "NoAppException",
+        "format_exc",
+        "find_best_app",
+        "find_app_by_string"
+      ]
+    },
+    {
+      "name": "get_version",
+      "file": "cli.py",
+      "start_line": 267,
+      "end_line": 280,
+      "calls": [
+        "version",
+        "echo",
+        "python_version",
+        "exit"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "cli.py",
+      "start_line": 305,
+      "end_line": 331,
+      "calls": [
+        "get_load_dotenv"
+      ]
+    },
+    {
+      "name": "load_app",
+      "file": "cli.py",
+      "start_line": 333,
+      "end_line": 372,
+      "calls": [
+        "create_app",
+        "split",
+        "prepare_import",
+        "locate_app",
+        "NoAppException",
+        "get_debug_flag"
+      ]
+    },
+    {
+      "name": "with_appcontext",
+      "file": "cli.py",
+      "start_line": 380,
+      "end_line": 402,
+      "calls": [
+        "load_app",
+        "ensure_object",
+        "with_resource",
+        "app_context",
+        "invoke",
+        "update_wrapper"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "cli.py",
+      "start_line": 395,
+      "end_line": 400,
+      "calls": [
+        "load_app",
+        "ensure_object",
+        "with_resource",
+        "app_context",
+        "invoke"
+      ]
+    },
+    {
+      "name": "command",
+      "file": "cli.py",
+      "start_line": 413,
+      "end_line": 427,
+      "calls": [
+        "pop",
+        "with_appcontext",
+        "command",
+        "super"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "cli.py",
+      "start_line": 422,
+      "end_line": 425,
+      "calls": [
+        "with_appcontext",
+        "command",
+        "super"
+      ]
+    },
+    {
+      "name": "group",
+      "file": "cli.py",
+      "start_line": 429,
+      "end_line": 437,
+      "calls": [
+        "setdefault",
+        "group",
+        "super"
+      ]
+    },
+    {
+      "name": "_set_app",
+      "file": "cli.py",
+      "start_line": 440,
+      "end_line": 446,
+      "calls": [
+        "ensure_object"
+      ]
+    },
+    {
+      "name": "_set_debug",
+      "file": "cli.py",
+      "start_line": 468,
+      "end_line": 482,
+      "calls": [
+        "get_parameter_source"
+      ]
+    },
+    {
+      "name": "_env_file_callback",
+      "file": "cli.py",
+      "start_line": 493,
+      "end_line": 512,
+      "calls": [
+        "BadParameter",
+        "load_dotenv"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "cli.py",
+      "start_line": 563,
+      "end_line": 598,
+      "calls": [
+        "list",
+        "pop",
+        "extend",
+        "append",
+        "setdefault",
+        "__init__",
+        "super",
+        "add_command"
+      ]
+    },
+    {
+      "name": "_load_plugin_commands",
+      "file": "cli.py",
+      "start_line": 600,
+      "end_line": 615,
+      "calls": [
+        "entry_points",
+        "add_command",
+        "load"
+      ]
+    },
+    {
+      "name": "get_command",
+      "file": "cli.py",
+      "start_line": 617,
+      "end_line": 642,
+      "calls": [
+        "_load_plugin_commands",
+        "get_command",
+        "super",
+        "ensure_object",
+        "load_app",
+        "secho",
+        "format_message",
+        "_get_current_object",
+        "with_resource",
+        "app_context"
+      ]
+    },
+    {
+      "name": "list_commands",
+      "file": "cli.py",
+      "start_line": 644,
+      "end_line": 663,
+      "calls": [
+        "_load_plugin_commands",
+        "set",
+        "list_commands",
+        "super",
+        "ensure_object",
+        "update",
+        "load_app",
+        "secho",
+        "format_message",
+        "format_exc",
+        "sorted"
+      ]
+    },
+    {
+      "name": "make_context",
+      "file": "cli.py",
+      "start_line": 665,
+      "end_line": 684,
+      "calls": [
+        "ScriptInfo",
+        "make_context",
+        "super"
+      ]
+    },
+    {
+      "name": "parse_args",
+      "file": "cli.py",
+      "start_line": 686,
+      "end_line": 696,
+      "calls": [
+        "len",
+        "get_help_option_names",
+        "handle_parse_result",
+        "parse_args",
+        "super"
+      ]
+    },
+    {
+      "name": "_path_is_ancestor",
+      "file": "cli.py",
+      "start_line": 699,
+      "end_line": 703,
+      "calls": [
+        "join",
+        "lstrip",
+        "len"
+      ]
+    },
+    {
+      "name": "load_dotenv",
+      "file": "cli.py",
+      "start_line": 706,
+      "end_line": 771,
+      "calls": [
+        "isfile",
+        "secho",
+        "find_dotenv",
+        "dotenv_values",
+        "items",
+        "bool"
+      ]
+    },
+    {
+      "name": "show_server_banner",
+      "file": "cli.py",
+      "start_line": 774,
+      "end_line": 785,
+      "calls": [
+        "is_running_from_reloader",
+        "echo"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "cli.py",
+      "start_line": 796,
+      "end_line": 797,
+      "calls": [
+        "Path"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "cli.py",
+      "start_line": 799,
+      "end_line": 833,
+      "calls": [
+        "BadParameter",
+        "path_type",
+        "lower",
+        "STRING",
+        "import_string",
+        "isinstance"
+      ]
+    },
+    {
+      "name": "_validate_key",
+      "file": "cli.py",
+      "start_line": 836,
+      "end_line": 872,
+      "calls": [
+        "get",
+        "isinstance",
+        "BadParameter"
+      ]
+    },
+    {
+      "name": "convert",
+      "file": "cli.py",
+      "start_line": 881,
+      "end_line": 887,
+      "calls": [
+        "split_envvar_value",
+        "super",
+        "super_convert"
+      ]
+    },
+    {
+      "name": "run_command",
+      "file": "cli.py",
+      "start_line": 943,
+      "end_line": 1001,
+      "calls": [
+        "load_app",
+        "is_running_from_reloader",
+        "print_exc",
+        "get_debug_flag",
+        "show_server_banner",
+        "run_simple"
+      ]
+    },
+    {
+      "name": "app",
+      "file": "cli.py",
+      "start_line": 971,
+      "end_line": 974,
+      "calls": []
+    },
+    {
+      "name": "shell_command",
+      "file": "cli.py",
+      "start_line": 1009,
+      "end_line": 1053,
+      "calls": [
+        "get",
+        "isfile",
+        "open",
+        "eval",
+        "compile",
+        "read",
+        "update",
+        "make_shell_context",
+        "getattr",
+        "set_completer",
+        "Completer",
+        "interactive_hook",
+        "interact"
+      ]
+    },
+    {
+      "name": "routes_command",
+      "file": "cli.py",
+      "start_line": 1069,
+      "end_line": 1115,
+      "calls": [
+        "list",
+        "iter_rules",
+        "echo",
+        "set",
+        "any",
+        "join",
+        "sorted",
+        "append",
+        "sort",
+        "itemgetter",
+        "index",
+        "insert",
+        "max",
+        "len",
+        "range",
+        "enumerate",
+        "format"
+      ]
+    },
+    {
+      "name": "main",
+      "file": "cli.py",
+      "start_line": 1130,
+      "end_line": 1131,
+      "calls": [
+        "main"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "config.py",
+      "start_line": 23,
+      "end_line": 27,
+      "calls": []
+    },
+    {
+      "name": "__get__",
+      "file": "config.py",
+      "start_line": 30,
+      "end_line": 30,
+      "calls": []
+    },
+    {
+      "name": "__get__",
+      "file": "config.py",
+      "start_line": 33,
+      "end_line": 33,
+      "calls": []
+    },
+    {
+      "name": "__get__",
+      "file": "config.py",
+      "start_line": 35,
+      "end_line": 44,
+      "calls": [
+        "get_converter"
+      ]
+    },
+    {
+      "name": "__set__",
+      "file": "config.py",
+      "start_line": 46,
+      "end_line": 47,
+      "calls": []
+    },
+    {
+      "name": "__init__",
+      "file": "config.py",
+      "start_line": 94,
+      "end_line": 100,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "from_envvar",
+      "file": "config.py",
+      "start_line": 102,
+      "end_line": 124,
+      "calls": [
+        "get",
+        "RuntimeError",
+        "from_pyfile"
+      ]
+    },
+    {
+      "name": "from_prefixed_env",
+      "file": "config.py",
+      "start_line": 126,
+      "end_line": 185,
+      "calls": [
+        "sorted",
+        "startswith",
+        "removeprefix",
+        "loads",
+        "split"
+      ]
+    },
+    {
+      "name": "from_pyfile",
+      "file": "config.py",
+      "start_line": 187,
+      "end_line": 216,
+      "calls": [
+        "join",
+        "ModuleType",
+        "open",
+        "exec",
+        "compile",
+        "read",
+        "from_object"
+      ]
+    },
+    {
+      "name": "from_object",
+      "file": "config.py",
+      "start_line": 218,
+      "end_line": 254,
+      "calls": [
+        "isinstance",
+        "import_string",
+        "dir",
+        "isupper",
+        "getattr"
+      ]
+    },
+    {
+      "name": "from_file",
+      "file": "config.py",
+      "start_line": 256,
+      "end_line": 302,
+      "calls": [
+        "join",
+        "open",
+        "load",
+        "from_mapping"
+      ]
+    },
+    {
+      "name": "from_mapping",
+      "file": "config.py",
+      "start_line": 304,
+      "end_line": 321,
+      "calls": [
+        "update",
+        "items",
+        "isupper"
+      ]
+    },
+    {
+      "name": "get_namespace",
+      "file": "config.py",
+      "start_line": 323,
+      "end_line": 364,
+      "calls": [
+        "items",
+        "startswith",
+        "len",
+        "lower"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "config.py",
+      "start_line": 366,
+      "end_line": 367,
+      "calls": [
+        "type",
+        "__repr__"
+      ]
+    },
+    {
+      "name": "__getattr__",
+      "file": "ctx.py",
+      "start_line": 52,
+      "end_line": 56,
+      "calls": [
+        "AttributeError"
+      ]
+    },
+    {
+      "name": "__setattr__",
+      "file": "ctx.py",
+      "start_line": 58,
+      "end_line": 59,
+      "calls": []
+    },
+    {
+      "name": "__delattr__",
+      "file": "ctx.py",
+      "start_line": 61,
+      "end_line": 65,
+      "calls": [
+        "AttributeError"
+      ]
+    },
+    {
+      "name": "get",
+      "file": "ctx.py",
+      "start_line": 67,
+      "end_line": 76,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "pop",
+      "file": "ctx.py",
+      "start_line": 78,
+      "end_line": 90,
+      "calls": [
+        "pop"
+      ]
+    },
+    {
+      "name": "setdefault",
+      "file": "ctx.py",
+      "start_line": 92,
+      "end_line": 102,
+      "calls": [
+        "setdefault"
+      ]
+    },
+    {
+      "name": "__contains__",
+      "file": "ctx.py",
+      "start_line": 104,
+      "end_line": 105,
+      "calls": []
+    },
+    {
+      "name": "__iter__",
+      "file": "ctx.py",
+      "start_line": 107,
+      "end_line": 108,
+      "calls": [
+        "iter"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "ctx.py",
+      "start_line": 110,
+      "end_line": 114,
+      "calls": [
+        "get",
+        "__repr__"
+      ]
+    },
+    {
+      "name": "after_this_request",
+      "file": "ctx.py",
+      "start_line": 117,
+      "end_line": 149,
+      "calls": [
+        "get",
+        "RuntimeError",
+        "append"
+      ]
+    },
+    {
+      "name": "copy_current_request_context",
+      "file": "ctx.py",
+      "start_line": 155,
+      "end_line": 193,
+      "calls": [
+        "get",
+        "RuntimeError",
+        "copy",
+        "ensure_sync",
+        "update_wrapper"
+      ]
+    },
+    {
+      "name": "wrapper",
+      "file": "ctx.py",
+      "start_line": 189,
+      "end_line": 191,
+      "calls": [
+        "ensure_sync"
+      ]
+    },
+    {
+      "name": "has_request_context",
+      "file": "ctx.py",
+      "start_line": 196,
+      "end_line": 225,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "has_app_context",
+      "file": "ctx.py",
+      "start_line": 228,
+      "end_line": 235,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "ctx.py",
+      "start_line": 245,
+      "end_line": 249,
+      "calls": [
+        "create_url_adapter",
+        "app_ctx_globals_class"
+      ]
+    },
+    {
+      "name": "push",
+      "file": "ctx.py",
+      "start_line": 251,
+      "end_line": 254,
+      "calls": [
+        "append",
+        "set",
+        "send"
+      ]
+    },
+    {
+      "name": "pop",
+      "file": "ctx.py",
+      "start_line": 256,
+      "end_line": 272,
+      "calls": [
+        "len",
+        "exc_info",
+        "do_teardown_appcontext",
+        "get",
+        "reset",
+        "pop",
+        "AssertionError",
+        "send"
+      ]
+    },
+    {
+      "name": "__enter__",
+      "file": "ctx.py",
+      "start_line": 274,
+      "end_line": 276,
+      "calls": [
+        "push"
+      ]
+    },
+    {
+      "name": "__exit__",
+      "file": "ctx.py",
+      "start_line": 278,
+      "end_line": 284,
+      "calls": [
+        "pop"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "ctx.py",
+      "start_line": 309,
+      "end_line": 335,
+      "calls": [
+        "request_class",
+        "create_url_adapter"
+      ]
+    },
+    {
+      "name": "copy",
+      "file": "ctx.py",
+      "start_line": 337,
+      "end_line": 355,
+      "calls": [
+        "__class__"
+      ]
+    },
+    {
+      "name": "match_request",
+      "file": "ctx.py",
+      "start_line": 357,
+      "end_line": 365,
+      "calls": [
+        "match"
+      ]
+    },
+    {
+      "name": "session",
+      "file": "ctx.py",
+      "start_line": 368,
+      "end_line": 375,
+      "calls": []
+    },
+    {
+      "name": "push",
+      "file": "ctx.py",
+      "start_line": 377,
+      "end_line": 404,
+      "calls": [
+        "get",
+        "app_context",
+        "push",
+        "append",
+        "set",
+        "open_session",
+        "make_null_session",
+        "match_request"
+      ]
+    },
+    {
+      "name": "pop",
+      "file": "ctx.py",
+      "start_line": 406,
+      "end_line": 441,
+      "calls": [
+        "len",
+        "exc_info",
+        "do_teardown_request",
+        "getattr",
+        "request_close",
+        "get",
+        "pop",
+        "reset",
+        "AssertionError"
+      ]
+    },
+    {
+      "name": "__enter__",
+      "file": "ctx.py",
+      "start_line": 443,
+      "end_line": 445,
+      "calls": [
+        "push"
+      ]
+    },
+    {
+      "name": "__exit__",
+      "file": "ctx.py",
+      "start_line": 447,
+      "end_line": 453,
+      "calls": [
+        "pop"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "ctx.py",
+      "start_line": 455,
+      "end_line": 459,
+      "calls": [
+        "type"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "debughelpers.py",
+      "start_line": 28,
+      "end_line": 44,
+      "calls": [
+        "getlist",
+        "join",
+        "repr",
+        "append"
+      ]
+    },
+    {
+      "name": "__str__",
+      "file": "debughelpers.py",
+      "start_line": 46,
+      "end_line": 47,
+      "calls": []
+    },
+    {
+      "name": "__init__",
+      "file": "debughelpers.py",
+      "start_line": 57,
+      "end_line": 78,
+      "calls": [
+        "isinstance",
+        "partition",
+        "append",
+        "__init__",
+        "super",
+        "join"
+      ]
+    },
+    {
+      "name": "attach_enctype_error_multidict",
+      "file": "debughelpers.py",
+      "start_line": 81,
+      "end_line": 104,
+      "calls": [
+        "__getitem__",
+        "super",
+        "with_traceback",
+        "DebugFilesKeyError"
+      ]
+    },
+    {
+      "name": "__getitem__",
+      "file": "debughelpers.py",
+      "start_line": 91,
+      "end_line": 100,
+      "calls": [
+        "__getitem__",
+        "super",
+        "with_traceback",
+        "DebugFilesKeyError"
+      ]
+    },
+    {
+      "name": "_dump_loader_info",
+      "file": "debughelpers.py",
+      "start_line": 107,
+      "end_line": 121,
+      "calls": [
+        "type",
+        "sorted",
+        "items",
+        "startswith",
+        "isinstance",
+        "all"
+      ]
+    },
+    {
+      "name": "explain_template_loading_attempts",
+      "file": "debughelpers.py",
+      "start_line": 124,
+      "end_line": 178,
+      "calls": [
+        "enumerate",
+        "isinstance",
+        "repr",
+        "append",
+        "_dump_loader_info",
+        "info",
+        "join"
+      ]
+    },
+    {
+      "name": "get_debug_flag",
+      "file": "helpers.py",
+      "start_line": 28,
+      "end_line": 33,
+      "calls": [
+        "get",
+        "bool",
+        "lower"
+      ]
+    },
+    {
+      "name": "get_load_dotenv",
+      "file": "helpers.py",
+      "start_line": 36,
+      "end_line": 48,
+      "calls": [
+        "get",
+        "lower"
+      ]
+    },
+    {
+      "name": "stream_with_context",
+      "file": "helpers.py",
+      "start_line": 52,
+      "end_line": 54,
+      "calls": []
+    },
+    {
+      "name": "stream_with_context",
+      "file": "helpers.py",
+      "start_line": 58,
+      "end_line": 60,
+      "calls": []
+    },
+    {
+      "name": "stream_with_context",
+      "file": "helpers.py",
+      "start_line": 63,
+      "end_line": 143,
+      "calls": [
+        "iter",
+        "generator_or_function",
+        "stream_with_context",
+        "update_wrapper",
+        "get",
+        "RuntimeError",
+        "hasattr",
+        "close",
+        "generator",
+        "next"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "helpers.py",
+      "start_line": 108,
+      "end_line": 110,
+      "calls": [
+        "generator_or_function",
+        "stream_with_context"
+      ]
+    },
+    {
+      "name": "generator",
+      "file": "helpers.py",
+      "start_line": 114,
+      "end_line": 136,
+      "calls": [
+        "get",
+        "RuntimeError",
+        "hasattr",
+        "close"
+      ]
+    },
+    {
+      "name": "make_response",
+      "file": "helpers.py",
+      "start_line": 146,
+      "end_line": 192,
+      "calls": [
+        "response_class",
+        "len",
+        "make_response"
+      ]
+    },
+    {
+      "name": "url_for",
+      "file": "helpers.py",
+      "start_line": 195,
+      "end_line": 246,
+      "calls": [
+        "url_for"
+      ]
+    },
+    {
+      "name": "redirect",
+      "file": "helpers.py",
+      "start_line": 249,
+      "end_line": 270,
+      "calls": [
+        "redirect",
+        "_wz_redirect"
+      ]
+    },
+    {
+      "name": "abort",
+      "file": "helpers.py",
+      "start_line": 273,
+      "end_line": 293,
+      "calls": [
+        "aborter",
+        "_wz_abort"
+      ]
+    },
+    {
+      "name": "get_template_attribute",
+      "file": "helpers.py",
+      "start_line": 296,
+      "end_line": 315,
+      "calls": [
+        "getattr",
+        "get_template"
+      ]
+    },
+    {
+      "name": "flash",
+      "file": "helpers.py",
+      "start_line": 318,
+      "end_line": 349,
+      "calls": [
+        "get",
+        "append",
+        "_get_current_object",
+        "send"
+      ]
+    },
+    {
+      "name": "get_flashed_messages",
+      "file": "helpers.py",
+      "start_line": 352,
+      "end_line": 391,
+      "calls": [
+        "pop",
+        "list",
+        "filter"
+      ]
+    },
+    {
+      "name": "_prepare_send_file_kwargs",
+      "file": "helpers.py",
+      "start_line": 394,
+      "end_line": 404,
+      "calls": [
+        "get",
+        "update"
+      ]
+    },
+    {
+      "name": "send_file",
+      "file": "helpers.py",
+      "start_line": 407,
+      "end_line": 530,
+      "calls": [
+        "send_file",
+        "_prepare_send_file_kwargs"
+      ]
+    },
+    {
+      "name": "send_from_directory",
+      "file": "helpers.py",
+      "start_line": 533,
+      "end_line": 574,
+      "calls": [
+        "send_from_directory",
+        "_prepare_send_file_kwargs"
+      ]
+    },
+    {
+      "name": "get_root_path",
+      "file": "helpers.py",
+      "start_line": 577,
+      "end_line": 631,
+      "calls": [
+        "get",
+        "hasattr",
+        "dirname",
+        "abspath",
+        "find_spec",
+        "getcwd",
+        "get_filename",
+        "__import__",
+        "getattr",
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "_split_blueprint_path",
+      "file": "helpers.py",
+      "start_line": 635,
+      "end_line": 641,
+      "calls": [
+        "extend",
+        "_split_blueprint_path",
+        "rpartition"
+      ]
+    },
+    {
+      "name": "dumps",
+      "file": "json/__init__.py",
+      "start_line": 13,
+      "end_line": 44,
+      "calls": [
+        "dumps",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "dump",
+      "file": "json/__init__.py",
+      "start_line": 47,
+      "end_line": 74,
+      "calls": [
+        "dump",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "loads",
+      "file": "json/__init__.py",
+      "start_line": 77,
+      "end_line": 105,
+      "calls": [
+        "loads"
+      ]
+    },
+    {
+      "name": "load",
+      "file": "json/__init__.py",
+      "start_line": 108,
+      "end_line": 135,
+      "calls": [
+        "load"
+      ]
+    },
+    {
+      "name": "jsonify",
+      "file": "json/__init__.py",
+      "start_line": 138,
+      "end_line": 170,
+      "calls": [
+        "response"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "json/provider.py",
+      "start_line": 38,
+      "end_line": 39,
+      "calls": [
+        "proxy"
+      ]
+    },
+    {
+      "name": "dumps",
+      "file": "json/provider.py",
+      "start_line": 41,
+      "end_line": 47,
+      "calls": []
+    },
+    {
+      "name": "dump",
+      "file": "json/provider.py",
+      "start_line": 49,
+      "end_line": 57,
+      "calls": [
+        "write",
+        "dumps"
+      ]
+    },
+    {
+      "name": "loads",
+      "file": "json/provider.py",
+      "start_line": 59,
+      "end_line": 65,
+      "calls": []
+    },
+    {
+      "name": "load",
+      "file": "json/provider.py",
+      "start_line": 67,
+      "end_line": 73,
+      "calls": [
+        "loads",
+        "read"
+      ]
+    },
+    {
+      "name": "_prepare_response_obj",
+      "file": "json/provider.py",
+      "start_line": 75,
+      "end_line": 87,
+      "calls": [
+        "TypeError",
+        "len"
+      ]
+    },
+    {
+      "name": "response",
+      "file": "json/provider.py",
+      "start_line": 89,
+      "end_line": 105,
+      "calls": [
+        "_prepare_response_obj",
+        "response_class",
+        "dumps"
+      ]
+    },
+    {
+      "name": "_default",
+      "file": "json/provider.py",
+      "start_line": 108,
+      "end_line": 121,
+      "calls": [
+        "isinstance",
+        "http_date",
+        "str",
+        "is_dataclass",
+        "asdict",
+        "hasattr",
+        "__html__",
+        "TypeError",
+        "type"
+      ]
+    },
+    {
+      "name": "dumps",
+      "file": "json/provider.py",
+      "start_line": 166,
+      "end_line": 179,
+      "calls": [
+        "setdefault",
+        "dumps"
+      ]
+    },
+    {
+      "name": "loads",
+      "file": "json/provider.py",
+      "start_line": 181,
+      "end_line": 187,
+      "calls": [
+        "loads"
+      ]
+    },
+    {
+      "name": "response",
+      "file": "json/provider.py",
+      "start_line": 189,
+      "end_line": 215,
+      "calls": [
+        "_prepare_response_obj",
+        "setdefault",
+        "response_class",
+        "dumps"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "json/tag.py",
+      "start_line": 69,
+      "end_line": 71,
+      "calls": []
+    },
+    {
+      "name": "check",
+      "file": "json/tag.py",
+      "start_line": 73,
+      "end_line": 75,
+      "calls": []
+    },
+    {
+      "name": "to_json",
+      "file": "json/tag.py",
+      "start_line": 77,
+      "end_line": 80,
+      "calls": []
+    },
+    {
+      "name": "to_python",
+      "file": "json/tag.py",
+      "start_line": 82,
+      "end_line": 85,
+      "calls": []
+    },
+    {
+      "name": "tag",
+      "file": "json/tag.py",
+      "start_line": 87,
+      "end_line": 90,
+      "calls": [
+        "to_json"
+      ]
+    },
+    {
+      "name": "check",
+      "file": "json/tag.py",
+      "start_line": 103,
+      "end_line": 108,
+      "calls": [
+        "isinstance",
+        "len",
+        "next",
+        "iter"
+      ]
+    },
+    {
+      "name": "to_json",
+      "file": "json/tag.py",
+      "start_line": 110,
+      "end_line": 112,
+      "calls": [
+        "next",
+        "iter",
+        "tag"
+      ]
+    },
+    {
+      "name": "to_python",
+      "file": "json/tag.py",
+      "start_line": 114,
+      "end_line": 116,
+      "calls": [
+        "next",
+        "iter"
+      ]
+    },
+    {
+      "name": "check",
+      "file": "json/tag.py",
+      "start_line": 122,
+      "end_line": 123,
+      "calls": [
+        "isinstance"
+      ]
+    },
+    {
+      "name": "to_json",
+      "file": "json/tag.py",
+      "start_line": 125,
+      "end_line": 128,
+      "calls": [
+        "tag",
+        "items"
+      ]
+    },
+    {
+      "name": "check",
+      "file": "json/tag.py",
+      "start_line": 137,
+      "end_line": 138,
+      "calls": [
+        "isinstance"
+      ]
+    },
+    {
+      "name": "to_json",
+      "file": "json/tag.py",
+      "start_line": 140,
+      "end_line": 141,
+      "calls": [
+        "tag"
+      ]
+    },
+    {
+      "name": "to_python",
+      "file": "json/tag.py",
+      "start_line": 143,
+      "end_line": 144,
+      "calls": [
+        "tuple"
+      ]
+    },
+    {
+      "name": "check",
+      "file": "json/tag.py",
+      "start_line": 150,
+      "end_line": 151,
+      "calls": [
+        "isinstance"
+      ]
+    },
+    {
+      "name": "to_json",
+      "file": "json/tag.py",
+      "start_line": 153,
+      "end_line": 154,
+      "calls": [
+        "tag"
+      ]
+    },
+    {
+      "name": "check",
+      "file": "json/tag.py",
+      "start_line": 163,
+      "end_line": 164,
+      "calls": [
+        "isinstance"
+      ]
+    },
+    {
+      "name": "to_json",
+      "file": "json/tag.py",
+      "start_line": 166,
+      "end_line": 167,
+      "calls": [
+        "decode",
+        "b64encode"
+      ]
+    },
+    {
+      "name": "to_python",
+      "file": "json/tag.py",
+      "start_line": 169,
+      "end_line": 170,
+      "calls": [
+        "b64decode"
+      ]
+    },
+    {
+      "name": "check",
+      "file": "json/tag.py",
+      "start_line": 181,
+      "end_line": 182,
+      "calls": [
+        "callable",
+        "getattr"
+      ]
+    },
+    {
+      "name": "to_json",
+      "file": "json/tag.py",
+      "start_line": 184,
+      "end_line": 185,
+      "calls": [
+        "str",
+        "__html__"
+      ]
+    },
+    {
+      "name": "to_python",
+      "file": "json/tag.py",
+      "start_line": 187,
+      "end_line": 188,
+      "calls": [
+        "Markup"
+      ]
+    },
+    {
+      "name": "check",
+      "file": "json/tag.py",
+      "start_line": 195,
+      "end_line": 196,
+      "calls": [
+        "isinstance"
+      ]
+    },
+    {
+      "name": "to_json",
+      "file": "json/tag.py",
+      "start_line": 198,
+      "end_line": 199,
+      "calls": []
+    },
+    {
+      "name": "to_python",
+      "file": "json/tag.py",
+      "start_line": 201,
+      "end_line": 202,
+      "calls": [
+        "UUID"
+      ]
+    },
+    {
+      "name": "check",
+      "file": "json/tag.py",
+      "start_line": 209,
+      "end_line": 210,
+      "calls": [
+        "isinstance"
+      ]
+    },
+    {
+      "name": "to_json",
+      "file": "json/tag.py",
+      "start_line": 212,
+      "end_line": 213,
+      "calls": [
+        "http_date"
+      ]
+    },
+    {
+      "name": "to_python",
+      "file": "json/tag.py",
+      "start_line": 215,
+      "end_line": 216,
+      "calls": [
+        "parse_date"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "json/tag.py",
+      "start_line": 249,
+      "end_line": 254,
+      "calls": [
+        "register"
+      ]
+    },
+    {
+      "name": "register",
+      "file": "json/tag.py",
+      "start_line": 256,
+      "end_line": 287,
+      "calls": [
+        "tag_class",
+        "KeyError",
+        "append",
+        "insert"
+      ]
+    },
+    {
+      "name": "tag",
+      "file": "json/tag.py",
+      "start_line": 289,
+      "end_line": 295,
+      "calls": [
+        "check",
+        "tag"
+      ]
+    },
+    {
+      "name": "untag",
+      "file": "json/tag.py",
+      "start_line": 297,
+      "end_line": 307,
+      "calls": [
+        "len",
+        "next",
+        "iter",
+        "to_python"
+      ]
+    },
+    {
+      "name": "_untag_scan",
+      "file": "json/tag.py",
+      "start_line": 309,
+      "end_line": 319,
+      "calls": [
+        "isinstance",
+        "_untag_scan",
+        "items",
+        "untag"
+      ]
+    },
+    {
+      "name": "dumps",
+      "file": "json/tag.py",
+      "start_line": 321,
+      "end_line": 323,
+      "calls": [
+        "dumps",
+        "tag"
+      ]
+    },
+    {
+      "name": "loads",
+      "file": "json/tag.py",
+      "start_line": 325,
+      "end_line": 327,
+      "calls": [
+        "_untag_scan",
+        "loads"
+      ]
+    },
+    {
+      "name": "wsgi_errors_stream",
+      "file": "logging.py",
+      "start_line": 16,
+      "end_line": 28,
+      "calls": []
+    },
+    {
+      "name": "has_level_handler",
+      "file": "logging.py",
+      "start_line": 31,
+      "end_line": 47,
+      "calls": [
+        "getEffectiveLevel",
+        "any"
+      ]
+    },
+    {
+      "name": "create_logger",
+      "file": "logging.py",
+      "start_line": 58,
+      "end_line": 79,
+      "calls": [
+        "getLogger",
+        "setLevel",
+        "has_level_handler",
+        "addHandler"
+      ]
+    },
+    {
+      "name": "_make_timedelta",
+      "file": "sansio/app.py",
+      "start_line": 52,
+      "end_line": 56,
+      "calls": [
+        "isinstance",
+        "timedelta"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "sansio/app.py",
+      "start_line": 282,
+      "end_line": 411,
+      "calls": [
+        "__init__",
+        "super",
+        "auto_find_instance_path",
+        "isabs",
+        "ValueError",
+        "make_config",
+        "make_aborter",
+        "json_provider_class",
+        "url_map_class"
+      ]
+    },
+    {
+      "name": "_check_setup_finished",
+      "file": "sansio/app.py",
+      "start_line": 413,
+      "end_line": 423,
+      "calls": [
+        "AssertionError"
+      ]
+    },
+    {
+      "name": "name",
+      "file": "sansio/app.py",
+      "start_line": 426,
+      "end_line": 440,
+      "calls": [
+        "getattr",
+        "splitext",
+        "basename"
+      ]
+    },
+    {
+      "name": "logger",
+      "file": "sansio/app.py",
+      "start_line": 443,
+      "end_line": 467,
+      "calls": [
+        "create_logger"
+      ]
+    },
+    {
+      "name": "jinja_env",
+      "file": "sansio/app.py",
+      "start_line": 470,
+      "end_line": 477,
+      "calls": [
+        "create_jinja_environment"
+      ]
+    },
+    {
+      "name": "create_jinja_environment",
+      "file": "sansio/app.py",
+      "start_line": 479,
+      "end_line": 480,
+      "calls": [
+        "NotImplementedError"
+      ]
+    },
+    {
+      "name": "make_config",
+      "file": "sansio/app.py",
+      "start_line": 482,
+      "end_line": 496,
+      "calls": [
+        "dict",
+        "get_debug_flag",
+        "config_class"
+      ]
+    },
+    {
+      "name": "make_aborter",
+      "file": "sansio/app.py",
+      "start_line": 498,
+      "end_line": 508,
+      "calls": [
+        "aborter_class"
+      ]
+    },
+    {
+      "name": "auto_find_instance_path",
+      "file": "sansio/app.py",
+      "start_line": 510,
+      "end_line": 521,
+      "calls": [
+        "find_package",
+        "join"
+      ]
+    },
+    {
+      "name": "create_global_jinja_loader",
+      "file": "sansio/app.py",
+      "start_line": 523,
+      "end_line": 534,
+      "calls": [
+        "DispatchingJinjaLoader"
+      ]
+    },
+    {
+      "name": "select_jinja_autoescape",
+      "file": "sansio/app.py",
+      "start_line": 536,
+      "end_line": 547,
+      "calls": [
+        "endswith"
+      ]
+    },
+    {
+      "name": "debug",
+      "file": "sansio/app.py",
+      "start_line": 550,
+      "end_line": 560,
+      "calls": []
+    },
+    {
+      "name": "debug",
+      "file": "sansio/app.py",
+      "start_line": 563,
+      "end_line": 567,
+      "calls": []
+    },
+    {
+      "name": "register_blueprint",
+      "file": "sansio/app.py",
+      "start_line": 570,
+      "end_line": 595,
+      "calls": [
+        "register"
+      ]
+    },
+    {
+      "name": "iter_blueprints",
+      "file": "sansio/app.py",
+      "start_line": 597,
+      "end_line": 602,
+      "calls": [
+        "values"
+      ]
+    },
+    {
+      "name": "add_url_rule",
+      "file": "sansio/app.py",
+      "start_line": 605,
+      "end_line": 661,
+      "calls": [
+        "_endpoint_from_view_func",
+        "pop",
+        "getattr",
+        "isinstance",
+        "TypeError",
+        "upper",
+        "set",
+        "add",
+        "url_rule_class",
+        "get",
+        "AssertionError"
+      ]
+    },
+    {
+      "name": "template_filter",
+      "file": "sansio/app.py",
+      "start_line": 664,
+      "end_line": 683,
+      "calls": [
+        "add_template_filter"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "sansio/app.py",
+      "start_line": 679,
+      "end_line": 681,
+      "calls": [
+        "add_template_filter"
+      ]
+    },
+    {
+      "name": "add_template_filter",
+      "file": "sansio/app.py",
+      "start_line": 686,
+      "end_line": 695,
+      "calls": []
+    },
+    {
+      "name": "template_test",
+      "file": "sansio/app.py",
+      "start_line": 698,
+      "end_line": 724,
+      "calls": [
+        "add_template_test"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "sansio/app.py",
+      "start_line": 720,
+      "end_line": 722,
+      "calls": [
+        "add_template_test"
+      ]
+    },
+    {
+      "name": "add_template_test",
+      "file": "sansio/app.py",
+      "start_line": 727,
+      "end_line": 738,
+      "calls": []
+    },
+    {
+      "name": "template_global",
+      "file": "sansio/app.py",
+      "start_line": 741,
+      "end_line": 762,
+      "calls": [
+        "add_template_global"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "sansio/app.py",
+      "start_line": 758,
+      "end_line": 760,
+      "calls": [
+        "add_template_global"
+      ]
+    },
+    {
+      "name": "add_template_global",
+      "file": "sansio/app.py",
+      "start_line": 765,
+      "end_line": 776,
+      "calls": []
+    },
+    {
+      "name": "teardown_appcontext",
+      "file": "sansio/app.py",
+      "start_line": 779,
+      "end_line": 810,
+      "calls": [
+        "append"
+      ]
+    },
+    {
+      "name": "shell_context_processor",
+      "file": "sansio/app.py",
+      "start_line": 813,
+      "end_line": 821,
+      "calls": [
+        "append"
+      ]
+    },
+    {
+      "name": "_find_error_handler",
+      "file": "sansio/app.py",
+      "start_line": 823,
+      "end_line": 846,
+      "calls": [
+        "_get_exc_class_and_code",
+        "type",
+        "get"
+      ]
+    },
+    {
+      "name": "trap_http_exception",
+      "file": "sansio/app.py",
+      "start_line": 848,
+      "end_line": 881,
+      "calls": [
+        "isinstance"
+      ]
+    },
+    {
+      "name": "should_ignore_error",
+      "file": "sansio/app.py",
+      "start_line": 883,
+      "end_line": 891,
+      "calls": []
+    },
+    {
+      "name": "redirect",
+      "file": "sansio/app.py",
+      "start_line": 893,
+      "end_line": 909,
+      "calls": [
+        "_wz_redirect"
+      ]
+    },
+    {
+      "name": "inject_url_defaults",
+      "file": "sansio/app.py",
+      "start_line": 911,
+      "end_line": 930,
+      "calls": [
+        "chain",
+        "reversed",
+        "_split_blueprint_path",
+        "rpartition",
+        "func"
+      ]
+    },
+    {
+      "name": "handle_url_build_error",
+      "file": "sansio/app.py",
+      "start_line": 932,
+      "end_line": 964,
+      "calls": [
+        "handler",
+        "exc_info"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "sansio/blueprints.py",
+      "start_line": 41,
+      "end_line": 85,
+      "calls": [
+        "get",
+        "dict",
+        "update"
+      ]
+    },
+    {
+      "name": "add_url_rule",
+      "file": "sansio/blueprints.py",
+      "start_line": 87,
+      "end_line": 116,
+      "calls": [
+        "join",
+        "rstrip",
+        "lstrip",
+        "setdefault",
+        "_endpoint_from_view_func",
+        "dict",
+        "pop",
+        "add_url_rule"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "sansio/blueprints.py",
+      "start_line": 174,
+      "end_line": 211,
+      "calls": [
+        "__init__",
+        "super",
+        "ValueError"
+      ]
+    },
+    {
+      "name": "_check_setup_finished",
+      "file": "sansio/blueprints.py",
+      "start_line": 213,
+      "end_line": 221,
+      "calls": [
+        "AssertionError"
+      ]
+    },
+    {
+      "name": "record",
+      "file": "sansio/blueprints.py",
+      "start_line": 224,
+      "end_line": 230,
+      "calls": [
+        "append"
+      ]
+    },
+    {
+      "name": "record_once",
+      "file": "sansio/blueprints.py",
+      "start_line": 233,
+      "end_line": 244,
+      "calls": [
+        "func",
+        "record",
+        "update_wrapper"
+      ]
+    },
+    {
+      "name": "wrapper",
+      "file": "sansio/blueprints.py",
+      "start_line": 240,
+      "end_line": 242,
+      "calls": [
+        "func"
+      ]
+    },
+    {
+      "name": "make_setup_state",
+      "file": "sansio/blueprints.py",
+      "start_line": 246,
+      "end_line": 253,
+      "calls": [
+        "BlueprintSetupState"
+      ]
+    },
+    {
+      "name": "register_blueprint",
+      "file": "sansio/blueprints.py",
+      "start_line": 256,
+      "end_line": 271,
+      "calls": [
+        "ValueError",
+        "append"
+      ]
+    },
+    {
+      "name": "register",
+      "file": "sansio/blueprints.py",
+      "start_line": 273,
+      "end_line": 377,
+      "calls": [
+        "get",
+        "lstrip",
+        "ValueError",
+        "any",
+        "values",
+        "make_setup_state",
+        "add_url_rule",
+        "_merge_blueprint_funcs",
+        "deferred",
+        "update",
+        "add_command",
+        "copy",
+        "rstrip",
+        "register"
+      ]
+    },
+    {
+      "name": "_merge_blueprint_funcs",
+      "file": "sansio/blueprints.py",
+      "start_line": 379,
+      "end_line": 410,
+      "calls": [
+        "items",
+        "extend",
+        "defaultdict"
+      ]
+    },
+    {
+      "name": "extend",
+      "file": "sansio/blueprints.py",
+      "start_line": 380,
+      "end_line": 386,
+      "calls": [
+        "items",
+        "extend"
+      ]
+    },
+    {
+      "name": "add_url_rule",
+      "file": "sansio/blueprints.py",
+      "start_line": 413,
+      "end_line": 441,
+      "calls": [
+        "ValueError",
+        "hasattr",
+        "record",
+        "add_url_rule"
+      ]
+    },
+    {
+      "name": "app_template_filter",
+      "file": "sansio/blueprints.py",
+      "start_line": 444,
+      "end_line": 458,
+      "calls": [
+        "add_app_template_filter"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "sansio/blueprints.py",
+      "start_line": 454,
+      "end_line": 456,
+      "calls": [
+        "add_app_template_filter"
+      ]
+    },
+    {
+      "name": "add_app_template_filter",
+      "file": "sansio/blueprints.py",
+      "start_line": 461,
+      "end_line": 475,
+      "calls": [
+        "record_once"
+      ]
+    },
+    {
+      "name": "register_template",
+      "file": "sansio/blueprints.py",
+      "start_line": 472,
+      "end_line": 473,
+      "calls": []
+    },
+    {
+      "name": "app_template_test",
+      "file": "sansio/blueprints.py",
+      "start_line": 478,
+      "end_line": 494,
+      "calls": [
+        "add_app_template_test"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "sansio/blueprints.py",
+      "start_line": 490,
+      "end_line": 492,
+      "calls": [
+        "add_app_template_test"
+      ]
+    },
+    {
+      "name": "add_app_template_test",
+      "file": "sansio/blueprints.py",
+      "start_line": 497,
+      "end_line": 513,
+      "calls": [
+        "record_once"
+      ]
+    },
+    {
+      "name": "register_template",
+      "file": "sansio/blueprints.py",
+      "start_line": 510,
+      "end_line": 511,
+      "calls": []
+    },
+    {
+      "name": "app_template_global",
+      "file": "sansio/blueprints.py",
+      "start_line": 516,
+      "end_line": 532,
+      "calls": [
+        "add_app_template_global"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "sansio/blueprints.py",
+      "start_line": 528,
+      "end_line": 530,
+      "calls": [
+        "add_app_template_global"
+      ]
+    },
+    {
+      "name": "add_app_template_global",
+      "file": "sansio/blueprints.py",
+      "start_line": 535,
+      "end_line": 551,
+      "calls": [
+        "record_once"
+      ]
+    },
+    {
+      "name": "register_template",
+      "file": "sansio/blueprints.py",
+      "start_line": 548,
+      "end_line": 549,
+      "calls": []
+    },
+    {
+      "name": "before_app_request",
+      "file": "sansio/blueprints.py",
+      "start_line": 554,
+      "end_line": 561,
+      "calls": [
+        "record_once",
+        "append",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "after_app_request",
+      "file": "sansio/blueprints.py",
+      "start_line": 564,
+      "end_line": 571,
+      "calls": [
+        "record_once",
+        "append",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "teardown_app_request",
+      "file": "sansio/blueprints.py",
+      "start_line": 574,
+      "end_line": 581,
+      "calls": [
+        "record_once",
+        "append",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "app_context_processor",
+      "file": "sansio/blueprints.py",
+      "start_line": 584,
+      "end_line": 593,
+      "calls": [
+        "record_once",
+        "append",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "app_errorhandler",
+      "file": "sansio/blueprints.py",
+      "start_line": 596,
+      "end_line": 610,
+      "calls": [
+        "errorhandler",
+        "record_once"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "sansio/blueprints.py",
+      "start_line": 603,
+      "end_line": 608,
+      "calls": [
+        "errorhandler",
+        "record_once"
+      ]
+    },
+    {
+      "name": "from_blueprint",
+      "file": "sansio/blueprints.py",
+      "start_line": 604,
+      "end_line": 605,
+      "calls": [
+        "errorhandler"
+      ]
+    },
+    {
+      "name": "app_url_value_preprocessor",
+      "file": "sansio/blueprints.py",
+      "start_line": 613,
+      "end_line": 622,
+      "calls": [
+        "record_once",
+        "append",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "app_url_defaults",
+      "file": "sansio/blueprints.py",
+      "start_line": 625,
+      "end_line": 632,
+      "calls": [
+        "record_once",
+        "append",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "setupmethod",
+      "file": "sansio/scaffold.py",
+      "start_line": 42,
+      "end_line": 49,
+      "calls": [
+        "_check_setup_finished",
+        "f",
+        "cast",
+        "update_wrapper"
+      ]
+    },
+    {
+      "name": "wrapper_func",
+      "file": "sansio/scaffold.py",
+      "start_line": 45,
+      "end_line": 47,
+      "calls": [
+        "_check_setup_finished",
+        "f"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "sansio/scaffold.py",
+      "start_line": 75,
+      "end_line": 215,
+      "calls": [
+        "get_root_path",
+        "defaultdict"
+      ]
+    },
+    {
+      "name": "__repr__",
+      "file": "sansio/scaffold.py",
+      "start_line": 217,
+      "end_line": 218,
+      "calls": [
+        "type"
+      ]
+    },
+    {
+      "name": "_check_setup_finished",
+      "file": "sansio/scaffold.py",
+      "start_line": 220,
+      "end_line": 221,
+      "calls": []
+    },
+    {
+      "name": "static_folder",
+      "file": "sansio/scaffold.py",
+      "start_line": 224,
+      "end_line": 231,
+      "calls": [
+        "join"
+      ]
+    },
+    {
+      "name": "static_folder",
+      "file": "sansio/scaffold.py",
+      "start_line": 234,
+      "end_line": 238,
+      "calls": [
+        "rstrip",
+        "fspath"
+      ]
+    },
+    {
+      "name": "has_static_folder",
+      "file": "sansio/scaffold.py",
+      "start_line": 241,
+      "end_line": 246,
+      "calls": []
+    },
+    {
+      "name": "static_url_path",
+      "file": "sansio/scaffold.py",
+      "start_line": 249,
+      "end_line": 262,
+      "calls": [
+        "basename",
+        "rstrip"
+      ]
+    },
+    {
+      "name": "static_url_path",
+      "file": "sansio/scaffold.py",
+      "start_line": 265,
+      "end_line": 269,
+      "calls": [
+        "rstrip"
+      ]
+    },
+    {
+      "name": "jinja_loader",
+      "file": "sansio/scaffold.py",
+      "start_line": 272,
+      "end_line": 282,
+      "calls": [
+        "FileSystemLoader",
+        "join"
+      ]
+    },
+    {
+      "name": "_method_route",
+      "file": "sansio/scaffold.py",
+      "start_line": 284,
+      "end_line": 293,
+      "calls": [
+        "TypeError",
+        "route"
+      ]
+    },
+    {
+      "name": "get",
+      "file": "sansio/scaffold.py",
+      "start_line": 296,
+      "end_line": 301,
+      "calls": [
+        "_method_route"
+      ]
+    },
+    {
+      "name": "post",
+      "file": "sansio/scaffold.py",
+      "start_line": 304,
+      "end_line": 309,
+      "calls": [
+        "_method_route"
+      ]
+    },
+    {
+      "name": "put",
+      "file": "sansio/scaffold.py",
+      "start_line": 312,
+      "end_line": 317,
+      "calls": [
+        "_method_route"
+      ]
+    },
+    {
+      "name": "delete",
+      "file": "sansio/scaffold.py",
+      "start_line": 320,
+      "end_line": 325,
+      "calls": [
+        "_method_route"
+      ]
+    },
+    {
+      "name": "patch",
+      "file": "sansio/scaffold.py",
+      "start_line": 328,
+      "end_line": 333,
+      "calls": [
+        "_method_route"
+      ]
+    },
+    {
+      "name": "route",
+      "file": "sansio/scaffold.py",
+      "start_line": 336,
+      "end_line": 365,
+      "calls": [
+        "pop",
+        "add_url_rule"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "sansio/scaffold.py",
+      "start_line": 360,
+      "end_line": 363,
+      "calls": [
+        "pop",
+        "add_url_rule"
+      ]
+    },
+    {
+      "name": "add_url_rule",
+      "file": "sansio/scaffold.py",
+      "start_line": 368,
+      "end_line": 433,
+      "calls": []
+    },
+    {
+      "name": "endpoint",
+      "file": "sansio/scaffold.py",
+      "start_line": 436,
+      "end_line": 457,
+      "calls": []
+    },
+    {
+      "name": "decorator",
+      "file": "sansio/scaffold.py",
+      "start_line": 453,
+      "end_line": 455,
+      "calls": []
+    },
+    {
+      "name": "before_request",
+      "file": "sansio/scaffold.py",
+      "start_line": 460,
+      "end_line": 484,
+      "calls": [
+        "append",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "after_request",
+      "file": "sansio/scaffold.py",
+      "start_line": 487,
+      "end_line": 505,
+      "calls": [
+        "append",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "teardown_request",
+      "file": "sansio/scaffold.py",
+      "start_line": 508,
+      "end_line": 539,
+      "calls": [
+        "append",
+        "setdefault"
+      ]
+    },
+    {
+      "name": "context_processor",
+      "file": "sansio/scaffold.py",
+      "start_line": 542,
+      "end_line": 556,
+      "calls": [
+        "append"
+      ]
+    },
+    {
+      "name": "url_value_preprocessor",
+      "file": "sansio/scaffold.py",
+      "start_line": 559,
+      "end_line": 581,
+      "calls": [
+        "append"
+      ]
+    },
+    {
+      "name": "url_defaults",
+      "file": "sansio/scaffold.py",
+      "start_line": 584,
+      "end_line": 595,
+      "calls": [
+        "append"
+      ]
+    },
+    {
+      "name": "errorhandler",
+      "file": "sansio/scaffold.py",
+      "start_line": 598,
+      "end_line": 639,
+      "calls": [
+        "register_error_handler"
+      ]
+    },
+    {
+      "name": "decorator",
+      "file": "sansio/scaffold.py",
+      "start_line": 635,
+      "end_line": 637,
+      "calls": [
+        "register_error_handler"
+      ]
+    },
+    {
+      "name": "register_error_handler",
+      "file": "sansio/scaffold.py",
+      "start_line": 642,
+      "end_line": 654,
+      "calls": [
+        "_get_exc_class_and_code"
+      ]
+    },
+    {
+      "name": "_get_exc_class_and_code",
+      "file": "sansio/scaffold.py",
+      "start_line": 657,
+      "end_line": 698,
+      "calls": [
+        "isinstance",
+        "ValueError",
+        "TypeError",
+        "issubclass"
+      ]
+    },
+    {
+      "name": "_endpoint_from_view_func",
+      "file": "sansio/scaffold.py",
+      "start_line": 701,
+      "end_line": 706,
+      "calls": []
+    },
+    {
+      "name": "_find_package_path",
+      "file": "sansio/scaffold.py",
+      "start_line": 709,
+      "end_line": 751,
+      "calls": [
+        "partition",
+        "find_spec",
+        "ValueError",
+        "getcwd",
+        "Path",
+        "commonpath",
+        "next",
+        "is_relative_to",
+        "dirname"
+      ]
+    },
+    {
+      "name": "find_package",
+      "file": "sansio/scaffold.py",
+      "start_line": 754,
+      "end_line": 792,
+      "calls": [
+        "_find_package_path",
+        "abspath",
+        "is_relative_to",
+        "PurePath",
+        "split",
+        "lower",
+        "basename",
+        "dirname"
+      ]
+    },
+    {
+      "name": "permanent",
+      "file": "sessions.py",
+      "start_line": 28,
+      "end_line": 30,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "permanent",
+      "file": "sessions.py",
+      "start_line": 33,
+      "end_line": 34,
+      "calls": [
+        "bool"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "sessions.py",
+      "start_line": 73,
+      "end_line": 80,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "on_update",
+      "file": "sessions.py",
+      "start_line": 77,
+      "end_line": 78,
+      "calls": []
+    },
+    {
+      "name": "_fail",
+      "file": "sessions.py",
+      "start_line": 89,
+      "end_line": 94,
+      "calls": [
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "make_null_session",
+      "file": "sessions.py",
+      "start_line": 150,
+      "end_line": 160,
+      "calls": [
+        "null_session_class"
+      ]
+    },
+    {
+      "name": "is_null_session",
+      "file": "sessions.py",
+      "start_line": 162,
+      "end_line": 169,
+      "calls": [
+        "isinstance"
+      ]
+    },
+    {
+      "name": "get_cookie_name",
+      "file": "sessions.py",
+      "start_line": 171,
+      "end_line": 173,
+      "calls": []
+    },
+    {
+      "name": "get_cookie_domain",
+      "file": "sessions.py",
+      "start_line": 175,
+      "end_line": 185,
+      "calls": []
+    },
+    {
+      "name": "get_cookie_path",
+      "file": "sessions.py",
+      "start_line": 187,
+      "end_line": 193,
+      "calls": []
+    },
+    {
+      "name": "get_cookie_httponly",
+      "file": "sessions.py",
+      "start_line": 195,
+      "end_line": 200,
+      "calls": []
+    },
+    {
+      "name": "get_cookie_secure",
+      "file": "sessions.py",
+      "start_line": 202,
+      "end_line": 206,
+      "calls": []
+    },
+    {
+      "name": "get_cookie_samesite",
+      "file": "sessions.py",
+      "start_line": 208,
+      "end_line": 213,
+      "calls": []
+    },
+    {
+      "name": "get_cookie_partitioned",
+      "file": "sessions.py",
+      "start_line": 215,
+      "end_line": 221,
+      "calls": []
+    },
+    {
+      "name": "get_expiration_time",
+      "file": "sessions.py",
+      "start_line": 223,
+      "end_line": 231,
+      "calls": [
+        "now"
+      ]
+    },
+    {
+      "name": "should_set_cookie",
+      "file": "sessions.py",
+      "start_line": 233,
+      "end_line": 247,
+      "calls": []
+    },
+    {
+      "name": "open_session",
+      "file": "sessions.py",
+      "start_line": 249,
+      "end_line": 261,
+      "calls": [
+        "NotImplementedError"
+      ]
+    },
+    {
+      "name": "save_session",
+      "file": "sessions.py",
+      "start_line": 263,
+      "end_line": 270,
+      "calls": [
+        "NotImplementedError"
+      ]
+    },
+    {
+      "name": "_lazy_sha1",
+      "file": "sessions.py",
+      "start_line": 276,
+      "end_line": 281,
+      "calls": [
+        "sha1"
+      ]
+    },
+    {
+      "name": "get_signing_serializer",
+      "file": "sessions.py",
+      "start_line": 303,
+      "end_line": 321,
+      "calls": [
+        "extend",
+        "append",
+        "URLSafeTimedSerializer"
+      ]
+    },
+    {
+      "name": "open_session",
+      "file": "sessions.py",
+      "start_line": 323,
+      "end_line": 335,
+      "calls": [
+        "get_signing_serializer",
+        "get",
+        "get_cookie_name",
+        "session_class",
+        "int",
+        "total_seconds",
+        "loads"
+      ]
+    },
+    {
+      "name": "save_session",
+      "file": "sessions.py",
+      "start_line": 337,
+      "end_line": 385,
+      "calls": [
+        "get_cookie_name",
+        "get_cookie_domain",
+        "get_cookie_path",
+        "get_cookie_secure",
+        "get_cookie_partitioned",
+        "get_cookie_samesite",
+        "get_cookie_httponly",
+        "add",
+        "delete_cookie",
+        "should_set_cookie",
+        "get_expiration_time",
+        "dumps",
+        "get_signing_serializer",
+        "dict",
+        "set_cookie"
+      ]
+    },
+    {
+      "name": "_default_template_ctx_processor",
+      "file": "templating.py",
+      "start_line": 24,
+      "end_line": 37,
+      "calls": [
+        "get"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "templating.py",
+      "start_line": 46,
+      "end_line": 50,
+      "calls": [
+        "create_global_jinja_loader",
+        "__init__"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "templating.py",
+      "start_line": 58,
+      "end_line": 59,
+      "calls": []
+    },
+    {
+      "name": "get_source",
+      "file": "templating.py",
+      "start_line": 61,
+      "end_line": 66,
+      "calls": [
+        "_get_source_explained",
+        "_get_source_fast"
+      ]
+    },
+    {
+      "name": "_get_source_explained",
+      "file": "templating.py",
+      "start_line": 68,
+      "end_line": 90,
+      "calls": [
+        "_iter_loaders",
+        "get_source",
+        "append",
+        "explain_template_loading_attempts",
+        "TemplateNotFound"
+      ]
+    },
+    {
+      "name": "_get_source_fast",
+      "file": "templating.py",
+      "start_line": 92,
+      "end_line": 100,
+      "calls": [
+        "_iter_loaders",
+        "get_source",
+        "TemplateNotFound"
+      ]
+    },
+    {
+      "name": "_iter_loaders",
+      "file": "templating.py",
+      "start_line": 102,
+      "end_line": 110,
+      "calls": [
+        "iter_blueprints"
+      ]
+    },
+    {
+      "name": "list_templates",
+      "file": "templating.py",
+      "start_line": 112,
+      "end_line": 124,
+      "calls": [
+        "set",
+        "update",
+        "list_templates",
+        "iter_blueprints",
+        "add",
+        "list"
+      ]
+    },
+    {
+      "name": "_render",
+      "file": "templating.py",
+      "start_line": 127,
+      "end_line": 136,
+      "calls": [
+        "update_template_context",
+        "send",
+        "render"
+      ]
+    },
+    {
+      "name": "render_template",
+      "file": "templating.py",
+      "start_line": 139,
+      "end_line": 151,
+      "calls": [
+        "_get_current_object",
+        "get_or_select_template",
+        "_render"
+      ]
+    },
+    {
+      "name": "render_template_string",
+      "file": "templating.py",
+      "start_line": 154,
+      "end_line": 163,
+      "calls": [
+        "_get_current_object",
+        "from_string",
+        "_render"
+      ]
+    },
+    {
+      "name": "_stream",
+      "file": "templating.py",
+      "start_line": 166,
+      "end_line": 186,
+      "calls": [
+        "update_template_context",
+        "send",
+        "generate",
+        "stream_with_context"
+      ]
+    },
+    {
+      "name": "generate",
+      "file": "templating.py",
+      "start_line": 174,
+      "end_line": 178,
+      "calls": [
+        "generate",
+        "send"
+      ]
+    },
+    {
+      "name": "stream_template",
+      "file": "templating.py",
+      "start_line": 189,
+      "end_line": 205,
+      "calls": [
+        "_get_current_object",
+        "get_or_select_template",
+        "_stream"
+      ]
+    },
+    {
+      "name": "stream_template_string",
+      "file": "templating.py",
+      "start_line": 208,
+      "end_line": 220,
+      "calls": [
+        "_get_current_object",
+        "from_string",
+        "_stream"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "testing.py",
+      "start_line": 49,
+      "end_line": 86,
+      "calls": [
+        "bool",
+        "get",
+        "urlsplit",
+        "lstrip",
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "json_dumps",
+      "file": "testing.py",
+      "start_line": 88,
+      "end_line": 94,
+      "calls": [
+        "dumps"
+      ]
+    },
+    {
+      "name": "_get_werkzeug_version",
+      "file": "testing.py",
+      "start_line": 100,
+      "end_line": 106,
+      "calls": [
+        "version"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "testing.py",
+      "start_line": 125,
+      "end_line": 133,
+      "calls": [
+        "__init__",
+        "super",
+        "ExitStack",
+        "_get_werkzeug_version"
+      ]
+    },
+    {
+      "name": "session_transaction",
+      "file": "testing.py",
+      "start_line": 136,
+      "end_line": 183,
+      "calls": [
+        "TypeError",
+        "test_request_context",
+        "_add_cookies_to_wsgi",
+        "open_session",
+        "RuntimeError",
+        "response_class",
+        "is_null_session",
+        "save_session",
+        "_update_cookies_from_response",
+        "partition",
+        "getlist"
+      ]
+    },
+    {
+      "name": "_copy_environ",
+      "file": "testing.py",
+      "start_line": 185,
+      "end_line": 191,
+      "calls": []
+    },
+    {
+      "name": "_request_from_builder_args",
+      "file": "testing.py",
+      "start_line": 193,
+      "end_line": 202,
+      "calls": [
+        "_copy_environ",
+        "get",
+        "EnvironBuilder",
+        "get_request",
+        "close"
+      ]
+    },
+    {
+      "name": "open",
+      "file": "testing.py",
+      "start_line": 204,
+      "end_line": 247,
+      "calls": [
+        "isinstance",
+        "copy",
+        "_copy_environ",
+        "get_request",
+        "from_environ",
+        "_request_from_builder_args",
+        "close",
+        "open",
+        "super",
+        "enter_context",
+        "clear"
+      ]
+    },
+    {
+      "name": "__enter__",
+      "file": "testing.py",
+      "start_line": 249,
+      "end_line": 253,
+      "calls": [
+        "RuntimeError"
+      ]
+    },
+    {
+      "name": "__exit__",
+      "file": "testing.py",
+      "start_line": 255,
+      "end_line": 262,
+      "calls": [
+        "close"
+      ]
+    },
+    {
+      "name": "__init__",
+      "file": "testing.py",
+      "start_line": 271,
+      "end_line": 273,
+      "calls": [
+        "__init__",
+        "super"
+      ]
+    },
+    {
+      "name": "invoke",
+      "file": "testing.py",
+      "start_line": 275,
+      "end_line": 298,
+      "calls": [
+        "ScriptInfo",
+        "invoke",
+        "super"
+      ]
+    },
+    {
+      "name": "dispatch_request",
+      "file": "views.py",
+      "start_line": 78,
+      "end_line": 83,
+      "calls": [
+        "NotImplementedError"
+      ]
+    },
+    {
+      "name": "as_view",
+      "file": "views.py",
+      "start_line": 86,
+      "end_line": 135,
+      "calls": [
+        "view_class",
+        "ensure_sync",
+        "cls",
+        "decorator"
+      ]
+    },
+    {
+      "name": "view",
+      "file": "views.py",
+      "start_line": 106,
+      "end_line": 110,
+      "calls": [
+        "view_class",
+        "ensure_sync"
+      ]
+    },
+    {
+      "name": "view",
+      "file": "views.py",
+      "start_line": 115,
+      "end_line": 116,
+      "calls": [
+        "ensure_sync"
+      ]
+    },
+    {
+      "name": "__init_subclass__",
+      "file": "views.py",
+      "start_line": 165,
+      "end_line": 180,
+      "calls": [
+        "__init_subclass__",
+        "super",
+        "set",
+        "getattr",
+        "update",
+        "hasattr",
+        "add",
+        "upper"
+      ]
+    },
+    {
+      "name": "dispatch_request",
+      "file": "views.py",
+      "start_line": 182,
+      "end_line": 191,
+      "calls": [
+        "getattr",
+        "lower",
+        "ensure_sync"
+      ]
+    },
+    {
+      "name": "max_content_length",
+      "file": "wrappers.py",
+      "start_line": 60,
+      "end_line": 86,
+      "calls": [
+        "super"
+      ]
+    },
+    {
+      "name": "max_content_length",
+      "file": "wrappers.py",
+      "start_line": 89,
+      "end_line": 90,
+      "calls": []
+    },
+    {
+      "name": "max_form_memory_size",
+      "file": "wrappers.py",
+      "start_line": 93,
+      "end_line": 113,
+      "calls": [
+        "super"
+      ]
+    },
+    {
+      "name": "max_form_memory_size",
+      "file": "wrappers.py",
+      "start_line": 116,
+      "end_line": 117,
+      "calls": []
+    },
+    {
+      "name": "max_form_parts",
+      "file": "wrappers.py",
+      "start_line": 120,
+      "end_line": 140,
+      "calls": [
+        "super"
+      ]
+    },
+    {
+      "name": "max_form_parts",
+      "file": "wrappers.py",
+      "start_line": 143,
+      "end_line": 144,
+      "calls": []
+    },
+    {
+      "name": "endpoint",
+      "file": "wrappers.py",
+      "start_line": 147,
+      "end_line": 159,
+      "calls": []
+    },
+    {
+      "name": "blueprint",
+      "file": "wrappers.py",
+      "start_line": 162,
+      "end_line": 178,
+      "calls": [
+        "rpartition"
+      ]
+    },
+    {
+      "name": "blueprints",
+      "file": "wrappers.py",
+      "start_line": 181,
+      "end_line": 195,
+      "calls": [
+        "_split_blueprint_path"
+      ]
+    },
+    {
+      "name": "_load_form_data",
+      "file": "wrappers.py",
+      "start_line": 197,
+      "end_line": 210,
+      "calls": [
+        "_load_form_data",
+        "super",
+        "attach_enctype_error_multidict"
+      ]
+    },
+    {
+      "name": "on_json_loading_failed",
+      "file": "wrappers.py",
+      "start_line": 212,
+      "end_line": 219,
+      "calls": [
+        "on_json_loading_failed",
+        "super",
+        "BadRequest"
+      ]
+    },
+    {
+      "name": "max_cookie_size",
+      "file": "wrappers.py",
+      "start_line": 247,
+      "end_line": 257,
+      "calls": [
+        "super"
+      ]
+    }
+  ],
+  "call_edges": [
+    {
+      "caller": "__init__",
+      "callee": "add_url_rule"
+    },
+    {
+      "caller": "__init__",
+      "callee": "send_static_file"
+    },
+    {
+      "caller": "send_static_file",
+      "callee": "get_send_file_max_age"
+    },
+    {
+      "caller": "send_static_file",
+      "callee": "send_from_directory"
+    },
+    {
+      "caller": "open_resource",
+      "callee": "open"
+    },
+    {
+      "caller": "open_instance_resource",
+      "callee": "open"
+    },
+    {
+      "caller": "update_template_context",
+      "callee": "copy"
+    },
+    {
+      "caller": "update_template_context",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "run",
+      "callee": "get"
+    },
+    {
+      "caller": "run",
+      "callee": "get_load_dotenv"
+    },
+    {
+      "caller": "run",
+      "callee": "load_dotenv"
+    },
+    {
+      "caller": "run",
+      "callee": "get_debug_flag"
+    },
+    {
+      "caller": "run",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "run",
+      "callee": "show_server_banner"
+    },
+    {
+      "caller": "handle_http_exception",
+      "callee": "_find_error_handler"
+    },
+    {
+      "caller": "handle_http_exception",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "handle_user_exception",
+      "callee": "trap_http_exception"
+    },
+    {
+      "caller": "handle_user_exception",
+      "callee": "handle_http_exception"
+    },
+    {
+      "caller": "handle_user_exception",
+      "callee": "_find_error_handler"
+    },
+    {
+      "caller": "handle_user_exception",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "handle_exception",
+      "callee": "log_exception"
+    },
+    {
+      "caller": "handle_exception",
+      "callee": "_find_error_handler"
+    },
+    {
+      "caller": "handle_exception",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "handle_exception",
+      "callee": "finalize_request"
+    },
+    {
+      "caller": "dispatch_request",
+      "callee": "raise_routing_exception"
+    },
+    {
+      "caller": "dispatch_request",
+      "callee": "make_default_options_response"
+    },
+    {
+      "caller": "dispatch_request",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "full_dispatch_request",
+      "callee": "preprocess_request"
+    },
+    {
+      "caller": "full_dispatch_request",
+      "callee": "dispatch_request"
+    },
+    {
+      "caller": "full_dispatch_request",
+      "callee": "handle_user_exception"
+    },
+    {
+      "caller": "full_dispatch_request",
+      "callee": "finalize_request"
+    },
+    {
+      "caller": "finalize_request",
+      "callee": "make_response"
+    },
+    {
+      "caller": "finalize_request",
+      "callee": "process_response"
+    },
+    {
+      "caller": "ensure_sync",
+      "callee": "async_to_sync"
+    },
+    {
+      "caller": "url_for",
+      "callee": "get"
+    },
+    {
+      "caller": "url_for",
+      "callee": "create_url_adapter"
+    },
+    {
+      "caller": "url_for",
+      "callee": "inject_url_defaults"
+    },
+    {
+      "caller": "url_for",
+      "callee": "handle_url_build_error"
+    },
+    {
+      "caller": "make_response",
+      "callee": "response"
+    },
+    {
+      "caller": "preprocess_request",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "process_response",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "process_response",
+      "callee": "is_null_session"
+    },
+    {
+      "caller": "process_response",
+      "callee": "save_session"
+    },
+    {
+      "caller": "do_teardown_request",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "do_teardown_appcontext",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "test_request_context",
+      "callee": "request_context"
+    },
+    {
+      "caller": "wsgi_app",
+      "callee": "request_context"
+    },
+    {
+      "caller": "wsgi_app",
+      "callee": "push"
+    },
+    {
+      "caller": "wsgi_app",
+      "callee": "full_dispatch_request"
+    },
+    {
+      "caller": "wsgi_app",
+      "callee": "handle_exception"
+    },
+    {
+      "caller": "wsgi_app",
+      "callee": "response"
+    },
+    {
+      "caller": "wsgi_app",
+      "callee": "get"
+    },
+    {
+      "caller": "wsgi_app",
+      "callee": "should_ignore_error"
+    },
+    {
+      "caller": "wsgi_app",
+      "callee": "pop"
+    },
+    {
+      "caller": "__call__",
+      "callee": "wsgi_app"
+    },
+    {
+      "caller": "send_static_file",
+      "callee": "get_send_file_max_age"
+    },
+    {
+      "caller": "send_static_file",
+      "callee": "send_from_directory"
+    },
+    {
+      "caller": "open_resource",
+      "callee": "open"
+    },
+    {
+      "caller": "find_best_app",
+      "callee": "_called_with_wrong_args"
+    },
+    {
+      "caller": "find_app_by_string",
+      "callee": "_called_with_wrong_args"
+    },
+    {
+      "caller": "locate_app",
+      "callee": "find_best_app"
+    },
+    {
+      "caller": "locate_app",
+      "callee": "find_app_by_string"
+    },
+    {
+      "caller": "__init__",
+      "callee": "get_load_dotenv"
+    },
+    {
+      "caller": "load_app",
+      "callee": "prepare_import"
+    },
+    {
+      "caller": "load_app",
+      "callee": "locate_app"
+    },
+    {
+      "caller": "load_app",
+      "callee": "get_debug_flag"
+    },
+    {
+      "caller": "with_appcontext",
+      "callee": "load_app"
+    },
+    {
+      "caller": "with_appcontext",
+      "callee": "app_context"
+    },
+    {
+      "caller": "with_appcontext",
+      "callee": "invoke"
+    },
+    {
+      "caller": "decorator",
+      "callee": "load_app"
+    },
+    {
+      "caller": "decorator",
+      "callee": "app_context"
+    },
+    {
+      "caller": "decorator",
+      "callee": "invoke"
+    },
+    {
+      "caller": "command",
+      "callee": "pop"
+    },
+    {
+      "caller": "command",
+      "callee": "with_appcontext"
+    },
+    {
+      "caller": "decorator",
+      "callee": "with_appcontext"
+    },
+    {
+      "caller": "decorator",
+      "callee": "command"
+    },
+    {
+      "caller": "group",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "_env_file_callback",
+      "callee": "load_dotenv"
+    },
+    {
+      "caller": "__init__",
+      "callee": "pop"
+    },
+    {
+      "caller": "__init__",
+      "callee": "extend"
+    },
+    {
+      "caller": "__init__",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "_load_plugin_commands",
+      "callee": "load"
+    },
+    {
+      "caller": "get_command",
+      "callee": "_load_plugin_commands"
+    },
+    {
+      "caller": "get_command",
+      "callee": "load_app"
+    },
+    {
+      "caller": "get_command",
+      "callee": "app_context"
+    },
+    {
+      "caller": "list_commands",
+      "callee": "_load_plugin_commands"
+    },
+    {
+      "caller": "list_commands",
+      "callee": "load_app"
+    },
+    {
+      "caller": "_validate_key",
+      "callee": "get"
+    },
+    {
+      "caller": "run_command",
+      "callee": "load_app"
+    },
+    {
+      "caller": "run_command",
+      "callee": "get_debug_flag"
+    },
+    {
+      "caller": "run_command",
+      "callee": "show_server_banner"
+    },
+    {
+      "caller": "shell_command",
+      "callee": "get"
+    },
+    {
+      "caller": "shell_command",
+      "callee": "open"
+    },
+    {
+      "caller": "shell_command",
+      "callee": "make_shell_context"
+    },
+    {
+      "caller": "from_envvar",
+      "callee": "get"
+    },
+    {
+      "caller": "from_envvar",
+      "callee": "from_pyfile"
+    },
+    {
+      "caller": "from_prefixed_env",
+      "callee": "loads"
+    },
+    {
+      "caller": "from_pyfile",
+      "callee": "open"
+    },
+    {
+      "caller": "from_pyfile",
+      "callee": "from_object"
+    },
+    {
+      "caller": "from_file",
+      "callee": "open"
+    },
+    {
+      "caller": "from_file",
+      "callee": "load"
+    },
+    {
+      "caller": "from_file",
+      "callee": "from_mapping"
+    },
+    {
+      "caller": "__repr__",
+      "callee": "get"
+    },
+    {
+      "caller": "after_this_request",
+      "callee": "get"
+    },
+    {
+      "caller": "copy_current_request_context",
+      "callee": "get"
+    },
+    {
+      "caller": "copy_current_request_context",
+      "callee": "copy"
+    },
+    {
+      "caller": "copy_current_request_context",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "wrapper",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "has_request_context",
+      "callee": "get"
+    },
+    {
+      "caller": "has_app_context",
+      "callee": "get"
+    },
+    {
+      "caller": "__init__",
+      "callee": "create_url_adapter"
+    },
+    {
+      "caller": "pop",
+      "callee": "do_teardown_appcontext"
+    },
+    {
+      "caller": "pop",
+      "callee": "get"
+    },
+    {
+      "caller": "__enter__",
+      "callee": "push"
+    },
+    {
+      "caller": "__exit__",
+      "callee": "pop"
+    },
+    {
+      "caller": "__init__",
+      "callee": "create_url_adapter"
+    },
+    {
+      "caller": "push",
+      "callee": "get"
+    },
+    {
+      "caller": "push",
+      "callee": "app_context"
+    },
+    {
+      "caller": "push",
+      "callee": "open_session"
+    },
+    {
+      "caller": "push",
+      "callee": "make_null_session"
+    },
+    {
+      "caller": "push",
+      "callee": "match_request"
+    },
+    {
+      "caller": "pop",
+      "callee": "do_teardown_request"
+    },
+    {
+      "caller": "pop",
+      "callee": "get"
+    },
+    {
+      "caller": "__enter__",
+      "callee": "push"
+    },
+    {
+      "caller": "__exit__",
+      "callee": "pop"
+    },
+    {
+      "caller": "attach_enctype_error_multidict",
+      "callee": "__getitem__"
+    },
+    {
+      "caller": "explain_template_loading_attempts",
+      "callee": "_dump_loader_info"
+    },
+    {
+      "caller": "get_debug_flag",
+      "callee": "get"
+    },
+    {
+      "caller": "get_load_dotenv",
+      "callee": "get"
+    },
+    {
+      "caller": "stream_with_context",
+      "callee": "get"
+    },
+    {
+      "caller": "stream_with_context",
+      "callee": "generator"
+    },
+    {
+      "caller": "decorator",
+      "callee": "stream_with_context"
+    },
+    {
+      "caller": "generator",
+      "callee": "get"
+    },
+    {
+      "caller": "flash",
+      "callee": "get"
+    },
+    {
+      "caller": "get_flashed_messages",
+      "callee": "pop"
+    },
+    {
+      "caller": "_prepare_send_file_kwargs",
+      "callee": "get"
+    },
+    {
+      "caller": "send_file",
+      "callee": "_prepare_send_file_kwargs"
+    },
+    {
+      "caller": "send_from_directory",
+      "callee": "_prepare_send_file_kwargs"
+    },
+    {
+      "caller": "get_root_path",
+      "callee": "get"
+    },
+    {
+      "caller": "_split_blueprint_path",
+      "callee": "extend"
+    },
+    {
+      "caller": "dumps",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "dump",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "jsonify",
+      "callee": "response"
+    },
+    {
+      "caller": "dump",
+      "callee": "dumps"
+    },
+    {
+      "caller": "load",
+      "callee": "loads"
+    },
+    {
+      "caller": "response",
+      "callee": "_prepare_response_obj"
+    },
+    {
+      "caller": "response",
+      "callee": "dumps"
+    },
+    {
+      "caller": "dumps",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "response",
+      "callee": "_prepare_response_obj"
+    },
+    {
+      "caller": "response",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "response",
+      "callee": "dumps"
+    },
+    {
+      "caller": "tag",
+      "callee": "to_json"
+    },
+    {
+      "caller": "to_json",
+      "callee": "tag"
+    },
+    {
+      "caller": "to_json",
+      "callee": "tag"
+    },
+    {
+      "caller": "to_json",
+      "callee": "tag"
+    },
+    {
+      "caller": "to_json",
+      "callee": "tag"
+    },
+    {
+      "caller": "__init__",
+      "callee": "register"
+    },
+    {
+      "caller": "tag",
+      "callee": "check"
+    },
+    {
+      "caller": "untag",
+      "callee": "to_python"
+    },
+    {
+      "caller": "_untag_scan",
+      "callee": "untag"
+    },
+    {
+      "caller": "dumps",
+      "callee": "tag"
+    },
+    {
+      "caller": "loads",
+      "callee": "_untag_scan"
+    },
+    {
+      "caller": "create_logger",
+      "callee": "has_level_handler"
+    },
+    {
+      "caller": "__init__",
+      "callee": "auto_find_instance_path"
+    },
+    {
+      "caller": "__init__",
+      "callee": "make_config"
+    },
+    {
+      "caller": "__init__",
+      "callee": "make_aborter"
+    },
+    {
+      "caller": "logger",
+      "callee": "create_logger"
+    },
+    {
+      "caller": "jinja_env",
+      "callee": "create_jinja_environment"
+    },
+    {
+      "caller": "make_config",
+      "callee": "get_debug_flag"
+    },
+    {
+      "caller": "auto_find_instance_path",
+      "callee": "find_package"
+    },
+    {
+      "caller": "register_blueprint",
+      "callee": "register"
+    },
+    {
+      "caller": "add_url_rule",
+      "callee": "_endpoint_from_view_func"
+    },
+    {
+      "caller": "add_url_rule",
+      "callee": "pop"
+    },
+    {
+      "caller": "add_url_rule",
+      "callee": "get"
+    },
+    {
+      "caller": "template_filter",
+      "callee": "add_template_filter"
+    },
+    {
+      "caller": "decorator",
+      "callee": "add_template_filter"
+    },
+    {
+      "caller": "template_test",
+      "callee": "add_template_test"
+    },
+    {
+      "caller": "decorator",
+      "callee": "add_template_test"
+    },
+    {
+      "caller": "template_global",
+      "callee": "add_template_global"
+    },
+    {
+      "caller": "decorator",
+      "callee": "add_template_global"
+    },
+    {
+      "caller": "_find_error_handler",
+      "callee": "_get_exc_class_and_code"
+    },
+    {
+      "caller": "_find_error_handler",
+      "callee": "get"
+    },
+    {
+      "caller": "inject_url_defaults",
+      "callee": "_split_blueprint_path"
+    },
+    {
+      "caller": "__init__",
+      "callee": "get"
+    },
+    {
+      "caller": "add_url_rule",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "add_url_rule",
+      "callee": "_endpoint_from_view_func"
+    },
+    {
+      "caller": "add_url_rule",
+      "callee": "pop"
+    },
+    {
+      "caller": "record_once",
+      "callee": "record"
+    },
+    {
+      "caller": "register",
+      "callee": "get"
+    },
+    {
+      "caller": "register",
+      "callee": "make_setup_state"
+    },
+    {
+      "caller": "register",
+      "callee": "add_url_rule"
+    },
+    {
+      "caller": "register",
+      "callee": "_merge_blueprint_funcs"
+    },
+    {
+      "caller": "register",
+      "callee": "copy"
+    },
+    {
+      "caller": "_merge_blueprint_funcs",
+      "callee": "extend"
+    },
+    {
+      "caller": "add_url_rule",
+      "callee": "record"
+    },
+    {
+      "caller": "app_template_filter",
+      "callee": "add_app_template_filter"
+    },
+    {
+      "caller": "decorator",
+      "callee": "add_app_template_filter"
+    },
+    {
+      "caller": "add_app_template_filter",
+      "callee": "record_once"
+    },
+    {
+      "caller": "app_template_test",
+      "callee": "add_app_template_test"
+    },
+    {
+      "caller": "decorator",
+      "callee": "add_app_template_test"
+    },
+    {
+      "caller": "add_app_template_test",
+      "callee": "record_once"
+    },
+    {
+      "caller": "app_template_global",
+      "callee": "add_app_template_global"
+    },
+    {
+      "caller": "decorator",
+      "callee": "add_app_template_global"
+    },
+    {
+      "caller": "add_app_template_global",
+      "callee": "record_once"
+    },
+    {
+      "caller": "before_app_request",
+      "callee": "record_once"
+    },
+    {
+      "caller": "before_app_request",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "after_app_request",
+      "callee": "record_once"
+    },
+    {
+      "caller": "after_app_request",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "teardown_app_request",
+      "callee": "record_once"
+    },
+    {
+      "caller": "teardown_app_request",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "app_context_processor",
+      "callee": "record_once"
+    },
+    {
+      "caller": "app_context_processor",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "app_errorhandler",
+      "callee": "errorhandler"
+    },
+    {
+      "caller": "app_errorhandler",
+      "callee": "record_once"
+    },
+    {
+      "caller": "decorator",
+      "callee": "errorhandler"
+    },
+    {
+      "caller": "decorator",
+      "callee": "record_once"
+    },
+    {
+      "caller": "from_blueprint",
+      "callee": "errorhandler"
+    },
+    {
+      "caller": "app_url_value_preprocessor",
+      "callee": "record_once"
+    },
+    {
+      "caller": "app_url_value_preprocessor",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "app_url_defaults",
+      "callee": "record_once"
+    },
+    {
+      "caller": "app_url_defaults",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "setupmethod",
+      "callee": "_check_setup_finished"
+    },
+    {
+      "caller": "wrapper_func",
+      "callee": "_check_setup_finished"
+    },
+    {
+      "caller": "__init__",
+      "callee": "get_root_path"
+    },
+    {
+      "caller": "_method_route",
+      "callee": "route"
+    },
+    {
+      "caller": "get",
+      "callee": "_method_route"
+    },
+    {
+      "caller": "post",
+      "callee": "_method_route"
+    },
+    {
+      "caller": "put",
+      "callee": "_method_route"
+    },
+    {
+      "caller": "delete",
+      "callee": "_method_route"
+    },
+    {
+      "caller": "patch",
+      "callee": "_method_route"
+    },
+    {
+      "caller": "route",
+      "callee": "pop"
+    },
+    {
+      "caller": "route",
+      "callee": "add_url_rule"
+    },
+    {
+      "caller": "decorator",
+      "callee": "pop"
+    },
+    {
+      "caller": "decorator",
+      "callee": "add_url_rule"
+    },
+    {
+      "caller": "before_request",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "after_request",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "teardown_request",
+      "callee": "setdefault"
+    },
+    {
+      "caller": "errorhandler",
+      "callee": "register_error_handler"
+    },
+    {
+      "caller": "decorator",
+      "callee": "register_error_handler"
+    },
+    {
+      "caller": "register_error_handler",
+      "callee": "_get_exc_class_and_code"
+    },
+    {
+      "caller": "find_package",
+      "callee": "_find_package_path"
+    },
+    {
+      "caller": "permanent",
+      "callee": "get"
+    },
+    {
+      "caller": "get_signing_serializer",
+      "callee": "extend"
+    },
+    {
+      "caller": "open_session",
+      "callee": "get_signing_serializer"
+    },
+    {
+      "caller": "open_session",
+      "callee": "get"
+    },
+    {
+      "caller": "open_session",
+      "callee": "get_cookie_name"
+    },
+    {
+      "caller": "open_session",
+      "callee": "loads"
+    },
+    {
+      "caller": "save_session",
+      "callee": "get_cookie_name"
+    },
+    {
+      "caller": "save_session",
+      "callee": "get_cookie_domain"
+    },
+    {
+      "caller": "save_session",
+      "callee": "get_cookie_path"
+    },
+    {
+      "caller": "save_session",
+      "callee": "get_cookie_secure"
+    },
+    {
+      "caller": "save_session",
+      "callee": "get_cookie_partitioned"
+    },
+    {
+      "caller": "save_session",
+      "callee": "get_cookie_samesite"
+    },
+    {
+      "caller": "save_session",
+      "callee": "get_cookie_httponly"
+    },
+    {
+      "caller": "save_session",
+      "callee": "should_set_cookie"
+    },
+    {
+      "caller": "save_session",
+      "callee": "get_expiration_time"
+    },
+    {
+      "caller": "save_session",
+      "callee": "dumps"
+    },
+    {
+      "caller": "save_session",
+      "callee": "get_signing_serializer"
+    },
+    {
+      "caller": "_default_template_ctx_processor",
+      "callee": "get"
+    },
+    {
+      "caller": "__init__",
+      "callee": "create_global_jinja_loader"
+    },
+    {
+      "caller": "get_source",
+      "callee": "_get_source_explained"
+    },
+    {
+      "caller": "get_source",
+      "callee": "_get_source_fast"
+    },
+    {
+      "caller": "_get_source_explained",
+      "callee": "_iter_loaders"
+    },
+    {
+      "caller": "_get_source_explained",
+      "callee": "get_source"
+    },
+    {
+      "caller": "_get_source_explained",
+      "callee": "explain_template_loading_attempts"
+    },
+    {
+      "caller": "_get_source_fast",
+      "callee": "_iter_loaders"
+    },
+    {
+      "caller": "_get_source_fast",
+      "callee": "get_source"
+    },
+    {
+      "caller": "_iter_loaders",
+      "callee": "iter_blueprints"
+    },
+    {
+      "caller": "list_templates",
+      "callee": "iter_blueprints"
+    },
+    {
+      "caller": "_render",
+      "callee": "update_template_context"
+    },
+    {
+      "caller": "render_template",
+      "callee": "_render"
+    },
+    {
+      "caller": "render_template_string",
+      "callee": "_render"
+    },
+    {
+      "caller": "_stream",
+      "callee": "update_template_context"
+    },
+    {
+      "caller": "_stream",
+      "callee": "generate"
+    },
+    {
+      "caller": "_stream",
+      "callee": "stream_with_context"
+    },
+    {
+      "caller": "stream_template",
+      "callee": "_stream"
+    },
+    {
+      "caller": "stream_template_string",
+      "callee": "_stream"
+    },
+    {
+      "caller": "__init__",
+      "callee": "get"
+    },
+    {
+      "caller": "json_dumps",
+      "callee": "dumps"
+    },
+    {
+      "caller": "__init__",
+      "callee": "_get_werkzeug_version"
+    },
+    {
+      "caller": "session_transaction",
+      "callee": "test_request_context"
+    },
+    {
+      "caller": "session_transaction",
+      "callee": "open_session"
+    },
+    {
+      "caller": "session_transaction",
+      "callee": "is_null_session"
+    },
+    {
+      "caller": "session_transaction",
+      "callee": "save_session"
+    },
+    {
+      "caller": "_request_from_builder_args",
+      "callee": "_copy_environ"
+    },
+    {
+      "caller": "_request_from_builder_args",
+      "callee": "get"
+    },
+    {
+      "caller": "open",
+      "callee": "copy"
+    },
+    {
+      "caller": "open",
+      "callee": "_copy_environ"
+    },
+    {
+      "caller": "open",
+      "callee": "_request_from_builder_args"
+    },
+    {
+      "caller": "as_view",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "as_view",
+      "callee": "decorator"
+    },
+    {
+      "caller": "view",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "view",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "dispatch_request",
+      "callee": "ensure_sync"
+    },
+    {
+      "caller": "blueprints",
+      "callee": "_split_blueprint_path"
+    },
+    {
+      "caller": "_load_form_data",
+      "callee": "attach_enctype_error_multidict"
+    }
+  ],
+  "imports": {
+    "__init__.py": [
+      "typing",
+      ".",
+      ".app",
+      ".blueprints",
+      ".config",
+      ".ctx",
+      ".globals",
+      ".helpers",
+      ".json",
+      ".signals",
+      ".templating",
+      ".wrappers",
+      "importlib.metadata",
+      "warnings"
+    ],
+    "__main__.py": [
+      ".cli"
+    ],
+    "app.py": [
+      "collections.abc",
+      "os",
+      "sys",
+      "typing",
+      "weakref",
+      "datetime",
+      "inspect",
+      "itertools",
+      "types",
+      "urllib.parse",
+      "click",
+      "werkzeug.datastructures",
+      "werkzeug.exceptions",
+      "werkzeug.routing",
+      "werkzeug.serving",
+      "werkzeug.wrappers",
+      "werkzeug.wsgi",
+      ".",
+      ".ctx",
+      ".globals",
+      ".helpers",
+      ".sansio.app",
+      ".sansio.scaffold",
+      ".sessions",
+      ".signals",
+      ".templating",
+      ".wrappers",
+      "_typeshed.wsgi",
+      ".testing",
+      ".typing",
+      ".debughelpers",
+      "asgiref.sync"
+    ],
+    "blueprints.py": [
+      "os",
+      "typing",
+      "datetime",
+      ".cli",
+      ".globals",
+      ".helpers",
+      ".sansio.blueprints",
+      ".sansio.scaffold",
+      ".wrappers"
+    ],
+    "cli.py": [
+      "ast",
+      "collections.abc",
+      "importlib.metadata",
+      "inspect",
+      "os",
+      "platform",
+      "re",
+      "sys",
+      "traceback",
+      "typing",
+      "functools",
+      "operator",
+      "types",
+      "click",
+      "click.core",
+      "werkzeug",
+      "werkzeug.serving",
+      "werkzeug.utils",
+      ".globals",
+      ".helpers",
+      "ssl",
+      "_typeshed.wsgi",
+      ".app",
+      ".",
+      "dotenv",
+      "importlib",
+      "importlib_metadata",
+      "cryptography",
+      "code",
+      "readline",
+      "rlcompleter"
+    ],
+    "config.py": [
+      "errno",
+      "json",
+      "os",
+      "types",
+      "typing",
+      "werkzeug.utils",
+      "typing_extensions",
+      ".sansio.app"
+    ],
+    "ctx.py": [
+      "contextvars",
+      "sys",
+      "typing",
+      "functools",
+      "types",
+      "werkzeug.exceptions",
+      ".",
+      ".globals",
+      ".signals",
+      "_typeshed.wsgi",
+      ".app",
+      ".sessions",
+      ".wrappers"
+    ],
+    "debughelpers.py": [
+      "typing",
+      "jinja2.loaders",
+      "werkzeug.routing",
+      ".blueprints",
+      ".globals",
+      ".sansio.app",
+      ".sansio.scaffold",
+      ".wrappers"
+    ],
+    "globals.py": [
+      "typing",
+      "contextvars",
+      "werkzeug.local",
+      ".app",
+      ".ctx",
+      ".sessions",
+      ".wrappers"
+    ],
+    "helpers.py": [
+      "importlib.util",
+      "os",
+      "sys",
+      "typing",
+      "datetime",
+      "functools",
+      "werkzeug.utils",
+      "werkzeug.exceptions",
+      "werkzeug.wrappers",
+      ".globals",
+      ".signals",
+      ".wrappers"
+    ],
+    "json/__init__.py": [
+      "json",
+      "typing",
+      "..globals",
+      ".provider",
+      "..wrappers"
+    ],
+    "json/provider.py": [
+      "dataclasses",
+      "decimal",
+      "json",
+      "typing",
+      "uuid",
+      "weakref",
+      "datetime",
+      "werkzeug.http",
+      "werkzeug.sansio.response",
+      "..sansio.app"
+    ],
+    "json/tag.py": [
+      "typing",
+      "base64",
+      "datetime",
+      "uuid",
+      "markupsafe",
+      "werkzeug.http",
+      "..json"
+    ],
+    "logging.py": [
+      "logging",
+      "sys",
+      "typing",
+      "werkzeug.local",
+      ".globals",
+      ".sansio.app"
+    ],
+    "sansio/app.py": [
+      "logging",
+      "os",
+      "sys",
+      "typing",
+      "datetime",
+      "itertools",
+      "werkzeug.exceptions",
+      "werkzeug.routing",
+      "werkzeug.sansio.response",
+      "werkzeug.utils",
+      "..",
+      "..config",
+      "..ctx",
+      "..helpers",
+      "..json.provider",
+      "..logging",
+      "..templating",
+      ".scaffold",
+      "werkzeug.wrappers",
+      "..testing",
+      ".blueprints"
+    ],
+    "sansio/blueprints.py": [
+      "os",
+      "typing",
+      "collections",
+      "functools",
+      "..",
+      ".scaffold",
+      ".app"
+    ],
+    "sansio/scaffold.py": [
+      "importlib.util",
+      "os",
+      "pathlib",
+      "sys",
+      "typing",
+      "collections",
+      "functools",
+      "jinja2",
+      "werkzeug.exceptions",
+      "werkzeug.utils",
+      "..",
+      "..helpers",
+      "..templating",
+      "click"
+    ],
+    "sessions.py": [
+      "collections.abc",
+      "hashlib",
+      "typing",
+      "datetime",
+      "itsdangerous",
+      "werkzeug.datastructures",
+      ".json.tag",
+      "typing_extensions",
+      ".app",
+      ".wrappers"
+    ],
+    "signals.py": [
+      "blinker"
+    ],
+    "templating.py": [
+      "typing",
+      "jinja2",
+      ".globals",
+      ".helpers",
+      ".signals",
+      ".app",
+      ".sansio.app",
+      ".sansio.scaffold",
+      ".debughelpers"
+    ],
+    "testing.py": [
+      "importlib.metadata",
+      "typing",
+      "contextlib",
+      "copy",
+      "types",
+      "urllib.parse",
+      "werkzeug.test",
+      "click.testing",
+      "werkzeug.wrappers",
+      ".cli",
+      ".sessions",
+      "_typeshed.wsgi",
+      ".app"
+    ],
+    "typing.py": [
+      "collections.abc",
+      "typing",
+      "_typeshed.wsgi",
+      "werkzeug.datastructures",
+      "werkzeug.sansio.response"
+    ],
+    "views.py": [
+      "typing",
+      ".",
+      ".globals"
+    ],
+    "wrappers.py": [
+      "typing",
+      "werkzeug.exceptions",
+      "werkzeug.wrappers",
+      ".",
+      ".globals",
+      ".helpers",
+      "werkzeug.routing",
+      ".debughelpers"
+    ]
+  },
+  "import_edges": [
+    {
+      "importer": "__init__.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "app.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "blueprints.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "config.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "ctx.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "helpers.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "json/__init__.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "signals.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "templating.py"
+    },
+    {
+      "importer": "__init__.py",
+      "imported": "wrappers.py"
+    },
+    {
+      "importer": "__main__.py",
+      "imported": "cli.py"
+    },
+    {
+      "importer": "app.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "app.py",
+      "imported": "ctx.py"
+    },
+    {
+      "importer": "app.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "app.py",
+      "imported": "helpers.py"
+    },
+    {
+      "importer": "app.py",
+      "imported": "sansio/app.py"
+    },
+    {
+      "importer": "app.py",
+      "imported": "sansio/scaffold.py"
+    },
+    {
+      "importer": "app.py",
+      "imported": "sessions.py"
+    },
+    {
+      "importer": "app.py",
+      "imported": "signals.py"
+    },
+    {
+      "importer": "app.py",
+      "imported": "templating.py"
+    },
+    {
+      "importer": "app.py",
+      "imported": "wrappers.py"
+    },
+    {
+      "importer": "app.py",
+      "imported": "testing.py"
+    },
+    {
+      "importer": "app.py",
+      "imported": "debughelpers.py"
+    },
+    {
+      "importer": "blueprints.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "blueprints.py",
+      "imported": "cli.py"
+    },
+    {
+      "importer": "blueprints.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "blueprints.py",
+      "imported": "helpers.py"
+    },
+    {
+      "importer": "blueprints.py",
+      "imported": "sansio/blueprints.py"
+    },
+    {
+      "importer": "blueprints.py",
+      "imported": "sansio/scaffold.py"
+    },
+    {
+      "importer": "blueprints.py",
+      "imported": "wrappers.py"
+    },
+    {
+      "importer": "cli.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "cli.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "cli.py",
+      "imported": "helpers.py"
+    },
+    {
+      "importer": "cli.py",
+      "imported": "app.py"
+    },
+    {
+      "importer": "config.py",
+      "imported": "json/__init__.py"
+    },
+    {
+      "importer": "config.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "config.py",
+      "imported": "sansio/app.py"
+    },
+    {
+      "importer": "ctx.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "ctx.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "ctx.py",
+      "imported": "signals.py"
+    },
+    {
+      "importer": "ctx.py",
+      "imported": "app.py"
+    },
+    {
+      "importer": "ctx.py",
+      "imported": "sessions.py"
+    },
+    {
+      "importer": "ctx.py",
+      "imported": "wrappers.py"
+    },
+    {
+      "importer": "debughelpers.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "debughelpers.py",
+      "imported": "blueprints.py"
+    },
+    {
+      "importer": "debughelpers.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "debughelpers.py",
+      "imported": "sansio/app.py"
+    },
+    {
+      "importer": "debughelpers.py",
+      "imported": "sansio/scaffold.py"
+    },
+    {
+      "importer": "debughelpers.py",
+      "imported": "wrappers.py"
+    },
+    {
+      "importer": "globals.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "globals.py",
+      "imported": "app.py"
+    },
+    {
+      "importer": "globals.py",
+      "imported": "ctx.py"
+    },
+    {
+      "importer": "globals.py",
+      "imported": "sessions.py"
+    },
+    {
+      "importer": "globals.py",
+      "imported": "wrappers.py"
+    },
+    {
+      "importer": "helpers.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "helpers.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "helpers.py",
+      "imported": "signals.py"
+    },
+    {
+      "importer": "helpers.py",
+      "imported": "wrappers.py"
+    },
+    {
+      "importer": "json/__init__.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "json/__init__.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "json/__init__.py",
+      "imported": "json/provider.py"
+    },
+    {
+      "importer": "json/__init__.py",
+      "imported": "wrappers.py"
+    },
+    {
+      "importer": "json/provider.py",
+      "imported": "json/__init__.py"
+    },
+    {
+      "importer": "json/provider.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "json/provider.py",
+      "imported": "sansio/app.py"
+    },
+    {
+      "importer": "json/tag.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "json/tag.py",
+      "imported": "json/__init__.py"
+    },
+    {
+      "importer": "logging.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "logging.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "logging.py",
+      "imported": "sansio/app.py"
+    },
+    {
+      "importer": "sansio/app.py",
+      "imported": "logging.py"
+    },
+    {
+      "importer": "sansio/app.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "sansio/app.py",
+      "imported": "config.py"
+    },
+    {
+      "importer": "sansio/app.py",
+      "imported": "ctx.py"
+    },
+    {
+      "importer": "sansio/app.py",
+      "imported": "helpers.py"
+    },
+    {
+      "importer": "sansio/app.py",
+      "imported": "json/provider.py"
+    },
+    {
+      "importer": "sansio/app.py",
+      "imported": "templating.py"
+    },
+    {
+      "importer": "sansio/app.py",
+      "imported": "sansio/scaffold.py"
+    },
+    {
+      "importer": "sansio/app.py",
+      "imported": "testing.py"
+    },
+    {
+      "importer": "sansio/app.py",
+      "imported": "sansio/blueprints.py"
+    },
+    {
+      "importer": "sansio/blueprints.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "sansio/blueprints.py",
+      "imported": "sansio/scaffold.py"
+    },
+    {
+      "importer": "sansio/blueprints.py",
+      "imported": "sansio/app.py"
+    },
+    {
+      "importer": "sansio/scaffold.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "sansio/scaffold.py",
+      "imported": "helpers.py"
+    },
+    {
+      "importer": "sansio/scaffold.py",
+      "imported": "templating.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "json/tag.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "app.py"
+    },
+    {
+      "importer": "sessions.py",
+      "imported": "wrappers.py"
+    },
+    {
+      "importer": "templating.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "templating.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "templating.py",
+      "imported": "helpers.py"
+    },
+    {
+      "importer": "templating.py",
+      "imported": "signals.py"
+    },
+    {
+      "importer": "templating.py",
+      "imported": "app.py"
+    },
+    {
+      "importer": "templating.py",
+      "imported": "sansio/app.py"
+    },
+    {
+      "importer": "templating.py",
+      "imported": "sansio/scaffold.py"
+    },
+    {
+      "importer": "templating.py",
+      "imported": "debughelpers.py"
+    },
+    {
+      "importer": "testing.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "testing.py",
+      "imported": "cli.py"
+    },
+    {
+      "importer": "testing.py",
+      "imported": "sessions.py"
+    },
+    {
+      "importer": "testing.py",
+      "imported": "app.py"
+    },
+    {
+      "importer": "views.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "views.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "wrappers.py",
+      "imported": "typing.py"
+    },
+    {
+      "importer": "wrappers.py",
+      "imported": "globals.py"
+    },
+    {
+      "importer": "wrappers.py",
+      "imported": "helpers.py"
+    },
+    {
+      "importer": "wrappers.py",
+      "imported": "debughelpers.py"
+    }
+  ],
+  "classes": [
+    {
+      "name": "Flask",
+      "file": "app.py",
+      "start_line": 81,
+      "end_line": 1536,
+      "bases": [
+        "App"
+      ]
+    },
+    {
+      "name": "Blueprint",
+      "file": "blueprints.py",
+      "start_line": 18,
+      "end_line": 128,
+      "bases": [
+        "SansioBlueprint"
+      ]
+    },
+    {
+      "name": "NoAppException",
+      "file": "cli.py",
+      "start_line": 37,
+      "end_line": 38,
+      "bases": [
+        "UsageError"
+      ]
+    },
+    {
+      "name": "ScriptInfo",
+      "file": "cli.py",
+      "start_line": 293,
+      "end_line": 372,
+      "bases": []
+    },
+    {
+      "name": "AppGroup",
+      "file": "cli.py",
+      "start_line": 405,
+      "end_line": 437,
+      "bases": [
+        "Group"
+      ]
+    },
+    {
+      "name": "FlaskGroup",
+      "file": "cli.py",
+      "start_line": 531,
+      "end_line": 696,
+      "bases": [
+        "AppGroup"
+      ]
+    },
+    {
+      "name": "CertParamType",
+      "file": "cli.py",
+      "start_line": 788,
+      "end_line": 833,
+      "bases": [
+        "ParamType"
+      ]
+    },
+    {
+      "name": "SeparatedPathType",
+      "file": "cli.py",
+      "start_line": 875,
+      "end_line": 887,
+      "bases": [
+        "Path"
+      ]
+    },
+    {
+      "name": "ConfigAttribute",
+      "file": "config.py",
+      "start_line": 20,
+      "end_line": 47,
+      "bases": [
+        "Generic"
+      ]
+    },
+    {
+      "name": "Config",
+      "file": "config.py",
+      "start_line": 50,
+      "end_line": 367,
+      "bases": [
+        "dict"
+      ]
+    },
+    {
+      "name": "_AppCtxGlobals",
+      "file": "ctx.py",
+      "start_line": 29,
+      "end_line": 114,
+      "bases": []
+    },
+    {
+      "name": "AppContext",
+      "file": "ctx.py",
+      "start_line": 238,
+      "end_line": 284,
+      "bases": []
+    },
+    {
+      "name": "RequestContext",
+      "file": "ctx.py",
+      "start_line": 287,
+      "end_line": 459,
+      "bases": []
+    },
+    {
+      "name": "UnexpectedUnicodeError",
+      "file": "debughelpers.py",
+      "start_line": 17,
+      "end_line": 20,
+      "bases": [
+        "AssertionError",
+        "UnicodeError"
+      ]
+    },
+    {
+      "name": "DebugFilesKeyError",
+      "file": "debughelpers.py",
+      "start_line": 23,
+      "end_line": 47,
+      "bases": [
+        "KeyError",
+        "AssertionError"
+      ]
+    },
+    {
+      "name": "FormDataRoutingRedirect",
+      "file": "debughelpers.py",
+      "start_line": 50,
+      "end_line": 78,
+      "bases": [
+        "AssertionError"
+      ]
+    },
+    {
+      "name": "newcls",
+      "file": "debughelpers.py",
+      "start_line": 90,
+      "end_line": 100,
+      "bases": [
+        "oldcls"
+      ]
+    },
+    {
+      "name": "JSONProvider",
+      "file": "json/provider.py",
+      "start_line": 19,
+      "end_line": 105,
+      "bases": []
+    },
+    {
+      "name": "DefaultJSONProvider",
+      "file": "json/provider.py",
+      "start_line": 124,
+      "end_line": 215,
+      "bases": [
+        "JSONProvider"
+      ]
+    },
+    {
+      "name": "JSONTag",
+      "file": "json/tag.py",
+      "start_line": 60,
+      "end_line": 90,
+      "bases": []
+    },
+    {
+      "name": "TagDict",
+      "file": "json/tag.py",
+      "start_line": 93,
+      "end_line": 116,
+      "bases": [
+        "JSONTag"
+      ]
+    },
+    {
+      "name": "PassDict",
+      "file": "json/tag.py",
+      "start_line": 119,
+      "end_line": 130,
+      "bases": [
+        "JSONTag"
+      ]
+    },
+    {
+      "name": "TagTuple",
+      "file": "json/tag.py",
+      "start_line": 133,
+      "end_line": 144,
+      "bases": [
+        "JSONTag"
+      ]
+    },
+    {
+      "name": "PassList",
+      "file": "json/tag.py",
+      "start_line": 147,
+      "end_line": 156,
+      "bases": [
+        "JSONTag"
+      ]
+    },
+    {
+      "name": "TagBytes",
+      "file": "json/tag.py",
+      "start_line": 159,
+      "end_line": 170,
+      "bases": [
+        "JSONTag"
+      ]
+    },
+    {
+      "name": "TagMarkup",
+      "file": "json/tag.py",
+      "start_line": 173,
+      "end_line": 188,
+      "bases": [
+        "JSONTag"
+      ]
+    },
+    {
+      "name": "TagUUID",
+      "file": "json/tag.py",
+      "start_line": 191,
+      "end_line": 202,
+      "bases": [
+        "JSONTag"
+      ]
+    },
+    {
+      "name": "TagDateTime",
+      "file": "json/tag.py",
+      "start_line": 205,
+      "end_line": 216,
+      "bases": [
+        "JSONTag"
+      ]
+    },
+    {
+      "name": "TaggedJSONSerializer",
+      "file": "json/tag.py",
+      "start_line": 219,
+      "end_line": 327,
+      "bases": []
+    },
+    {
+      "name": "App",
+      "file": "sansio/app.py",
+      "start_line": 59,
+      "end_line": 964,
+      "bases": [
+        "Scaffold"
+      ]
+    },
+    {
+      "name": "BlueprintSetupState",
+      "file": "sansio/blueprints.py",
+      "start_line": 34,
+      "end_line": 116,
+      "bases": []
+    },
+    {
+      "name": "Blueprint",
+      "file": "sansio/blueprints.py",
+      "start_line": 119,
+      "end_line": 632,
+      "bases": [
+        "Scaffold"
+      ]
+    },
+    {
+      "name": "Scaffold",
+      "file": "sansio/scaffold.py",
+      "start_line": 52,
+      "end_line": 698,
+      "bases": []
+    },
+    {
+      "name": "SessionMixin",
+      "file": "sessions.py",
+      "start_line": 24,
+      "end_line": 54,
+      "bases": [
+        "MutableMapping"
+      ]
+    },
+    {
+      "name": "SecureCookieSession",
+      "file": "sessions.py",
+      "start_line": 57,
+      "end_line": 80,
+      "bases": [
+        "CallbackDict",
+        "SessionMixin"
+      ]
+    },
+    {
+      "name": "NullSession",
+      "file": "sessions.py",
+      "start_line": 83,
+      "end_line": 97,
+      "bases": [
+        "SecureCookieSession"
+      ]
+    },
+    {
+      "name": "SessionInterface",
+      "file": "sessions.py",
+      "start_line": 100,
+      "end_line": 270,
+      "bases": []
+    },
+    {
+      "name": "SecureCookieSessionInterface",
+      "file": "sessions.py",
+      "start_line": 284,
+      "end_line": 385,
+      "bases": [
+        "SessionInterface"
+      ]
+    },
+    {
+      "name": "Environment",
+      "file": "templating.py",
+      "start_line": 40,
+      "end_line": 50,
+      "bases": [
+        "BaseEnvironment"
+      ]
+    },
+    {
+      "name": "DispatchingJinjaLoader",
+      "file": "templating.py",
+      "start_line": 53,
+      "end_line": 124,
+      "bases": [
+        "BaseLoader"
+      ]
+    },
+    {
+      "name": "EnvironBuilder",
+      "file": "testing.py",
+      "start_line": 27,
+      "end_line": 94,
+      "bases": [
+        "EnvironBuilder"
+      ]
+    },
+    {
+      "name": "FlaskClient",
+      "file": "testing.py",
+      "start_line": 109,
+      "end_line": 262,
+      "bases": [
+        "Client"
+      ]
+    },
+    {
+      "name": "FlaskCliRunner",
+      "file": "testing.py",
+      "start_line": 265,
+      "end_line": 298,
+      "bases": [
+        "CliRunner"
+      ]
+    },
+    {
+      "name": "View",
+      "file": "views.py",
+      "start_line": 16,
+      "end_line": 135,
+      "bases": []
+    },
+    {
+      "name": "MethodView",
+      "file": "views.py",
+      "start_line": 138,
+      "end_line": 191,
+      "bases": [
+        "View"
+      ]
+    },
+    {
+      "name": "Request",
+      "file": "wrappers.py",
+      "start_line": 18,
+      "end_line": 219,
+      "bases": [
+        "RequestBase"
+      ]
+    },
+    {
+      "name": "Response",
+      "file": "wrappers.py",
+      "start_line": 222,
+      "end_line": 257,
+      "bases": [
+        "ResponseBase"
+      ]
+    }
+  ],
+  "class_edges": [
+    {
+      "sub": "Flask",
+      "base": "App"
+    },
+    {
+      "sub": "FlaskGroup",
+      "base": "AppGroup"
+    },
+    {
+      "sub": "DefaultJSONProvider",
+      "base": "JSONProvider"
+    },
+    {
+      "sub": "TagDict",
+      "base": "JSONTag"
+    },
+    {
+      "sub": "PassDict",
+      "base": "JSONTag"
+    },
+    {
+      "sub": "TagTuple",
+      "base": "JSONTag"
+    },
+    {
+      "sub": "PassList",
+      "base": "JSONTag"
+    },
+    {
+      "sub": "TagBytes",
+      "base": "JSONTag"
+    },
+    {
+      "sub": "TagMarkup",
+      "base": "JSONTag"
+    },
+    {
+      "sub": "TagUUID",
+      "base": "JSONTag"
+    },
+    {
+      "sub": "TagDateTime",
+      "base": "JSONTag"
+    },
+    {
+      "sub": "App",
+      "base": "Scaffold"
+    },
+    {
+      "sub": "Blueprint",
+      "base": "Scaffold"
+    },
+    {
+      "sub": "SecureCookieSession",
+      "base": "SessionMixin"
+    },
+    {
+      "sub": "NullSession",
+      "base": "SecureCookieSession"
+    },
+    {
+      "sub": "SecureCookieSessionInterface",
+      "base": "SessionInterface"
+    },
+    {
+      "sub": "MethodView",
+      "base": "View"
+    }
+  ],
+  "constants": [
+    {
+      "name": "F",
+      "file": "cli.py",
+      "line": 377,
+      "comment": ""
+    },
+    {
+      "name": "T",
+      "file": "config.py",
+      "line": 17,
+      "comment": ""
+    },
+    {
+      "name": "F",
+      "file": "ctx.py",
+      "line": 152,
+      "comment": ""
+    },
+    {
+      "name": "F",
+      "file": "sansio/scaffold.py",
+      "line": 27,
+      "comment": ""
+    },
+    {
+      "name": "F",
+      "file": "views.py",
+      "line": 9,
+      "comment": ""
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+[
+ {
+  "id": "java-FWD-0",
+  "category": "forward_dep",
+  "question": "在 google-gson 项目中,文件 com/google/gson/FieldNamingStrategy.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "SerializedName.java",
+  "gold_kw": [
+   "SerializedName.java"
+  ],
+  "notes": "(javalang真解析器独立抽import)"
+ },
+ {
+  "id": "java-FWD-1",
+  "category": "forward_dep",
+  "question": "在 google-gson 项目中,文件 com/google/gson/FormattingStyle.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "JsonWriter.java",
+  "gold_kw": [
+   "JsonWriter.java"
+  ],
+  "notes": "(javalang真解析器独立抽import)"
+ },
+ {
+  "id": "java-FWD-4",
+  "category": "forward_dep",
+  "question": "在 google-gson 项目中,文件 com/google/gson/JsonArray.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "NonNullElementWrapperList.java",
+  "gold_kw": [
+   "NonNullElementWrapperList.java"
+  ],
+  "notes": "(javalang真解析器独立抽import)"
+ },
+ {
+  "id": "java-FWD-5",
+  "category": "forward_dep",
+  "question": "在 google-gson 项目中,文件 com/google/gson/JsonElement.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "JsonWriter.java, Streams.java",
+  "gold_kw": [
+   "JsonWriter.java",
+   "Streams.java"
+  ],
+  "notes": "(javalang真解析器独立抽import)"
+ },
+ {
+  "id": "java-FWD-6",
+  "category": "forward_dep",
+  "question": "在 google-gson 项目中,文件 com/google/gson/JsonObject.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "LinkedTreeMap.java",
+  "gold_kw": [
+   "LinkedTreeMap.java"
+  ],
+  "notes": "(javalang真解析器独立抽import)"
+ },
+ {
+  "id": "java-FWD-7",
+  "category": "forward_dep",
+  "question": "在 google-gson 项目中,文件 com/google/gson/JsonParser.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "JsonReader.java, JsonToken.java, MalformedJsonException.java, Streams.java",
+  "gold_kw": [
+   "JsonReader.java",
+   "JsonToken.java",
+   "MalformedJsonException.java",
+   "Streams.java"
+  ],
+  "notes": "(javalang真解析器独立抽import)"
+ },
+ {
+  "id": "java-FWD-8",
+  "category": "forward_dep",
+  "question": "在 google-gson 项目中,文件 com/google/gson/JsonPrimitive.java 直接依赖(import/include/引用)了哪些本仓库内的文件?列出文件。",
+  "gold": "LazilyParsedNumber.java, NumberLimits.java",
+  "gold_kw": [
+   "LazilyParsedNumber.java",
+   "NumberLimits.java"
+  ],
+  "notes": "(javalang真解析器独立抽import)"
+ },
+ {
+  "id": "java-INH-230",
+  "category": "inheritance",
+  "question": "在 google-gson 项目中,类/接口 FutureTypeAdapter 继承(extends)或实现(implements)了什么?",
+  "gold": "SerializationDelegatingTypeAdapter",
+  "gold_kw": [
+   "SerializationDelegatingTypeAdapter"
+  ],
+  "notes": "(javalang真解析器独立抽继承)"
+ },
+ {
+  "id": "java-INH-231",
+  "category": "inheritance",
+  "question": "在 google-gson 项目中,类/接口 JsonArray 继承(extends)或实现(implements)了什么?",
+  "gold": "JsonElement",
+  "gold_kw": [
+   "JsonElement"
+  ],
+  "notes": "(javalang真解析器独立抽继承)"
+ },
+ {
+  "id": "java-INH-232",
+  "category": "inheritance",
+  "question": "在 google-gson 项目中,类/接口 JsonIOException 继承(extends)或实现(implements)了什么?",
+  "gold": "JsonParseException",
+  "gold_kw": [
+   "JsonParseException"
+  ],
+  "notes": "(javalang真解析器独立抽继承)"
+ },
+ {
+  "id": "java-INH-233",
+  "category": "inheritance",
+  "question": "在 google-gson 项目中,类/接口 JsonNull 继承(extends)或实现(implements)了什么?",
+  "gold": "JsonElement",
+  "gold_kw": [
+   "JsonElement"
+  ],
+  "notes": "(javalang真解析器独立抽继承)"
+ },
+ {
+  "id": "java-INH-234",
+  "category": "inheritance",
+  "question": "在 google-gson 项目中,类/接口 JsonObject 继承(extends)或实现(implements)了什么?",
+  "gold": "JsonElement",
+  "gold_kw": [
+   "JsonElement"
+  ],
+  "notes": "(javalang真解析器独立抽继承)"
+ },
+ {
+  "id": "java-INH-235",
+  "category": "inheritance",
+  "question": "在 google-gson 项目中,类/接口 JsonParseException 继承(extends)或实现(implements)了什么?",
+  "gold": "RuntimeException",
+  "gold_kw": [
+   "RuntimeException"
+  ],
+  "notes": "(javalang真解析器独立抽继承)"
+ }
+]

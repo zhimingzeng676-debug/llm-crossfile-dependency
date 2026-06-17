@@ -1,0 +1,735 @@
+{
+ "decouple_rate": 0.8700564971751412,
+ "decouple_n_tokens": 177,
+ "rows": [
+  {
+   "id": "FWD-01",
+   "cat": "forward_dep",
+   "gold": [
+    "_internal",
+    "exceptions",
+    "mixins",
+    "structures"
+   ],
+   "ast": [
+    "_internal",
+    "exceptions",
+    "mixins",
+    "structures"
+   ],
+   "match": "4/4"
+  },
+  {
+   "id": "FWD-02",
+   "cat": "forward_dep",
+   "gold": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "http",
+    "multipart",
+    "wsgi"
+   ],
+   "ast": [
+    "__init__",
+    "_internal",
+    "exceptions",
+    "http",
+    "multipart",
+    "wsgi"
+   ],
+   "match": "5/6"
+  },
+  {
+   "id": "FWD-03",
+   "cat": "forward_dep",
+   "gold": [
+    "_internal",
+    "sansio"
+   ],
+   "ast": [
+    "__init__",
+    "_internal"
+   ],
+   "match": "1/2"
+  },
+  {
+   "id": "FWD-04",
+   "cat": "forward_dep",
+   "gold": [
+    "_internal",
+    "converters",
+    "datastructures",
+    "exceptions",
+    "matcher",
+    "request",
+    "rules",
+    "urls",
+    "wsgi"
+   ],
+   "ast": [
+    "__init__",
+    "_internal",
+    "converters",
+    "exceptions",
+    "matcher",
+    "request",
+    "rules",
+    "urls",
+    "wsgi"
+   ],
+   "match": "8/9"
+  },
+  {
+   "id": "FWD-05",
+   "cat": "forward_dep",
+   "gold": [
+    "converters",
+    "exceptions",
+    "rules"
+   ],
+   "ast": [
+    "converters",
+    "exceptions",
+    "rules"
+   ],
+   "match": "3/3"
+  },
+  {
+   "id": "FWD-06",
+   "cat": "forward_dep",
+   "gold": [
+    "datastructures",
+    "http",
+    "user_agent",
+    "utils"
+   ],
+   "ast": [
+    "__init__",
+    "http",
+    "user_agent",
+    "utils"
+   ],
+   "match": "3/4"
+  },
+  {
+   "id": "FWD-07",
+   "cat": "forward_dep",
+   "gold": [
+    "cache_control",
+    "datastructures",
+    "http",
+    "utils"
+   ],
+   "ast": [
+    "__init__",
+    "cache_control",
+    "http",
+    "utils"
+   ],
+   "match": "3/4"
+  },
+  {
+   "id": "FWD-08",
+   "cat": "forward_dep",
+   "gold": [
+    "_internal",
+    "_reloader",
+    "debug",
+    "exceptions",
+    "http",
+    "shared_data",
+    "tbtools",
+    "urls"
+   ],
+   "ast": [
+    "__init__",
+    "_internal",
+    "_reloader",
+    "exceptions",
+    "http",
+    "shared_data",
+    "tbtools",
+    "urls"
+   ],
+   "match": "7/8"
+  },
+  {
+   "id": "FWD-09",
+   "cat": "forward_dep",
+   "gold": [
+    "_internal",
+    "datastructures",
+    "http",
+    "multipart",
+    "request",
+    "response",
+    "urls",
+    "utils",
+    "wsgi"
+   ],
+   "ast": [
+    "__init__",
+    "_internal",
+    "http",
+    "multipart",
+    "request",
+    "response",
+    "urls",
+    "utils",
+    "wsgi"
+   ],
+   "match": "8/9"
+  },
+  {
+   "id": "FWD-10",
+   "cat": "forward_dep",
+   "gold": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "formparser",
+    "request",
+    "test",
+    "utils",
+    "wsgi"
+   ],
+   "ast": [
+    "__init__",
+    "_internal",
+    "exceptions",
+    "formparser",
+    "request",
+    "test",
+    "utils",
+    "wsgi"
+   ],
+   "match": "7/8"
+  },
+  {
+   "id": "FWD-11",
+   "cat": "forward_dep",
+   "gold": [
+    "_internal",
+    "datastructures",
+    "exceptions",
+    "http",
+    "request",
+    "response",
+    "test",
+    "urls",
+    "utils",
+    "wsgi"
+   ],
+   "ast": [
+    "__init__",
+    "_internal",
+    "exceptions",
+    "http",
+    "request",
+    "response",
+    "test",
+    "urls",
+    "utils",
+    "wsgi"
+   ],
+   "match": "9/10"
+  },
+  {
+   "id": "REV-01",
+   "cat": "reverse_dep",
+   "gold": [
+    "_reloader",
+    "debug",
+    "exceptions",
+    "file_storage",
+    "formparser",
+    "headers",
+    "http",
+    "map",
+    "mixins",
+    "request",
+    "response",
+    "serving",
+    "structures",
+    "test",
+    "utils"
+   ],
+   "ast": [
+    "__init__",
+    "_reloader",
+    "exceptions",
+    "file_storage",
+    "formparser",
+    "headers",
+    "http",
+    "map",
+    "mixins",
+    "request",
+    "response",
+    "serving",
+    "structures",
+    "test",
+    "utils"
+   ],
+   "match": "14/15"
+  },
+  {
+   "id": "REV-02",
+   "cat": "reverse_dep",
+   "gold": [
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "map",
+    "multipart",
+    "request",
+    "response",
+    "rules",
+    "test",
+    "urls",
+    "utils"
+   ],
+   "ast": [
+    "exceptions",
+    "formparser",
+    "http_proxy",
+    "lint",
+    "map",
+    "multipart",
+    "request",
+    "response",
+    "rules",
+    "test",
+    "urls",
+    "utils"
+   ],
+   "match": "12/12"
+  },
+  {
+   "id": "REV-03",
+   "cat": "reverse_dep",
+   "gold": [
+    "cache_control",
+    "datastructures",
+    "headers",
+    "structures"
+   ],
+   "ast": [
+    "__init__",
+    "cache_control",
+    "headers",
+    "structures"
+   ],
+   "match": "3/4"
+  },
+  {
+   "id": "REV-04",
+   "cat": "reverse_dep",
+   "gold": [
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "datastructures",
+    "file_storage",
+    "headers"
+   ],
+   "ast": [
+    "__init__",
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "file_storage",
+    "headers"
+   ],
+   "match": "6/7"
+  },
+  {
+   "id": "REV-05",
+   "cat": "reverse_dep",
+   "gold": [
+    "debug",
+    "exceptions",
+    "formparser",
+    "headers",
+    "http_proxy",
+    "map",
+    "multipart",
+    "request",
+    "response",
+    "serving",
+    "utils",
+    "wsgi"
+   ],
+   "ast": [
+    "__init__",
+    "exceptions",
+    "formparser",
+    "headers",
+    "http_proxy",
+    "map",
+    "multipart",
+    "request",
+    "response",
+    "serving",
+    "utils",
+    "wsgi"
+   ],
+   "match": "11/12"
+  },
+  {
+   "id": "REV-06",
+   "cat": "reverse_dep",
+   "gold": [
+    "request"
+   ],
+   "ast": [
+    "request"
+   ],
+   "match": "1/1"
+  },
+  {
+   "id": "REV-07",
+   "cat": "reverse_dep",
+   "gold": [
+    "auth",
+    "csp",
+    "debug",
+    "etag",
+    "exceptions",
+    "formparser",
+    "http",
+    "http_proxy",
+    "lint",
+    "multipart",
+    "proxy_fix",
+    "request",
+    "response",
+    "serving",
+    "shared_data",
+    "test",
+    "utils"
+   ],
+   "ast": [
+    "__init__",
+    "auth",
+    "csp",
+    "etag",
+    "exceptions",
+    "formparser",
+    "http",
+    "http_proxy",
+    "lint",
+    "multipart",
+    "proxy_fix",
+    "request",
+    "response",
+    "serving",
+    "shared_data",
+    "test",
+    "utils"
+   ],
+   "match": "16/17"
+  },
+  {
+   "id": "REV-08",
+   "cat": "reverse_dep",
+   "gold": [
+    "exceptions",
+    "map",
+    "matcher",
+    "routing"
+   ],
+   "ast": [
+    "__init__",
+    "exceptions",
+    "map",
+    "matcher"
+   ],
+   "match": "3/4"
+  },
+  {
+   "id": "REV-09",
+   "cat": "reverse_dep",
+   "gold": [
+    "request"
+   ],
+   "ast": [
+    "request"
+   ],
+   "match": "1/1"
+  },
+  {
+   "id": "REV-10",
+   "cat": "reverse_dep",
+   "gold": [
+    "map",
+    "response",
+    "rules",
+    "serving",
+    "test",
+    "utils"
+   ],
+   "ast": [
+    "map",
+    "response",
+    "rules",
+    "serving",
+    "test",
+    "utils"
+   ],
+   "match": "6/6"
+  },
+  {
+   "id": "REV-11",
+   "cat": "reverse_dep",
+   "gold": [
+    "debug",
+    "exceptions",
+    "request",
+    "response",
+    "shared_data",
+    "tbtools",
+    "test"
+   ],
+   "ast": [
+    "__init__",
+    "exceptions",
+    "request",
+    "response",
+    "shared_data",
+    "tbtools",
+    "test"
+   ],
+   "match": "6/7"
+  },
+  {
+   "id": "REV-12",
+   "cat": "reverse_dep",
+   "gold": [
+    "_internal",
+    "debug",
+    "exceptions",
+    "map",
+    "response",
+    "test",
+    "testapp",
+    "utils",
+    "wrappers"
+   ],
+   "ast": [
+    "__init__",
+    "_internal",
+    "exceptions",
+    "map",
+    "response",
+    "test",
+    "testapp",
+    "utils"
+   ],
+   "match": "7/9"
+  },
+  {
+   "id": "REV-13",
+   "cat": "reverse_dep",
+   "gold": [
+    "formparser",
+    "http_proxy",
+    "lint",
+    "local",
+    "map",
+    "request",
+    "response",
+    "shared_data",
+    "test",
+    "utils"
+   ],
+   "ast": [
+    "formparser",
+    "http_proxy",
+    "lint",
+    "local",
+    "map",
+    "request",
+    "response",
+    "shared_data",
+    "test",
+    "utils"
+   ],
+   "match": "10/10"
+  },
+  {
+   "id": "IND-01",
+   "cat": "indirect_dep",
+   "gold": [
+    "datastructures/__init__.py"
+   ],
+   "ast": [
+    "__init__",
+    "_internal",
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "etag",
+    "exceptions",
+    "file_storage",
+    "formparser",
+    "headers",
+    "http",
+    "mixins",
+    "multipart",
+    "range",
+    "request",
+    "response",
+    "security",
+    "structures",
+    "test",
+    "urls",
+    "utils",
+    "wsgi"
+   ],
+   "match": "0/1"
+  },
+  {
+   "id": "IND-02",
+   "cat": "indirect_dep",
+   "gold": [
+    "datastructures/__init__.py"
+   ],
+   "ast": [
+    "__init__",
+    "_internal",
+    "accept",
+    "auth",
+    "cache_control",
+    "converters",
+    "csp",
+    "etag",
+    "exceptions",
+    "file_storage",
+    "formparser",
+    "headers",
+    "http",
+    "map",
+    "matcher",
+    "mixins",
+    "range",
+    "request",
+    "response",
+    "rules",
+    "structures",
+    "test",
+    "urls",
+    "utils",
+    "wsgi"
+   ],
+   "match": "0/1"
+  },
+  {
+   "id": "IND-03",
+   "cat": "indirect_dep",
+   "gold": [
+    "datastructures/__init__.py"
+   ],
+   "ast": [
+    "__init__",
+    "_internal",
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "etag",
+    "exceptions",
+    "file_storage",
+    "formparser",
+    "headers",
+    "http",
+    "mixins",
+    "multipart",
+    "range",
+    "request",
+    "response",
+    "security",
+    "structures",
+    "test",
+    "urls",
+    "user_agent",
+    "utils",
+    "wsgi"
+   ],
+   "match": "0/1"
+  },
+  {
+   "id": "IND-04",
+   "cat": "indirect_dep",
+   "gold": [
+    "datastructures/__init__.py"
+   ],
+   "ast": [
+    "__init__",
+    "_internal",
+    "accept",
+    "auth",
+    "cache_control",
+    "converters",
+    "csp",
+    "etag",
+    "exceptions",
+    "file_storage",
+    "formparser",
+    "headers",
+    "http",
+    "map",
+    "matcher",
+    "mixins",
+    "range",
+    "request",
+    "response",
+    "rules",
+    "structures",
+    "test",
+    "urls",
+    "utils",
+    "wsgi"
+   ],
+   "match": "0/1"
+  },
+  {
+   "id": "IND-05",
+   "cat": "indirect_dep",
+   "gold": [
+    "datastructures/__init__.py"
+   ],
+   "ast": [
+    "__init__",
+    "_internal",
+    "accept",
+    "auth",
+    "cache_control",
+    "csp",
+    "etag",
+    "exceptions",
+    "file_storage",
+    "formparser",
+    "headers",
+    "http",
+    "mixins",
+    "multipart",
+    "range",
+    "request",
+    "response",
+    "security",
+    "structures",
+    "test",
+    "urls",
+    "utils",
+    "wsgi"
+   ],
+   "match": "0/1"
+  }
+ ]
+}

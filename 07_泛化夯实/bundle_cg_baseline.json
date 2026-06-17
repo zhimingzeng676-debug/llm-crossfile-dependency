@@ -1,0 +1,302 @@
+[
+ {
+  "id": "CG-00",
+  "caller": "is_resource_modified",
+  "file": "sansio/http.py",
+  "question": "在 werkzeug 项目中,函数 `is_resource_modified`(定义于 sansio/http.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "_dt_as_utc, parse_date, parse_etags, parse_if_range_header, unquote_etag",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] sansio/http.py 中的 is_resource_modified:\ndef is_resource_modified(\n    http_range: str | None = None,\n    http_if_range: str | None = None,\n    http_if_modified_since: str | None = None,\n    http_if_none_match: str | None = None,\n    http_if_match: str | None = None,\n    etag: str | None = None,\n    data: bytes | None = None,\n    last_modified: datetime | str | None = None,\n    ignore_if_range: bool = True,\n) -> bool:\n    \"\"\"Convenience method for conditional requests.\n    :param http_range: Range HTTP header\n    :param http_if_range: If-Range HTTP header\n    :param http_if_modified_since: If-Modified-Since HTTP header\n    :param http_if_none_match: If-None-Match HTTP header\n    :param http_if_match: If-Match HTTP header\n    :param etag: the etag for the response for comparison.\n    :param data: or alternatively the data of the response to automatically\n                 generate an etag using :func:`generate_etag`.\n    :param last_modified: an optional date of the last modification.\n    :param ignore_if_range: If `False`, `If-Range` header will be taken into\n                            account.\n    :return: `True` if the resource was modified, otherwise `False`.\n\n    .. versionadded:: 2.2\n    \"\"\"\n    if etag is None and data is not None:\n        etag = generate_etag(data)\n    elif data is not None:\n        raise TypeError(\"both data and etag given\")\n\n    unmodified = False\n    if isinstance(last_modified, str):\n        last_modified = parse_date(last_modified)\n\n    # HTTP doesn't use microsecond, remove it to avoid false positive\n    # comparisons. Mark naive datetimes as UTC.\n    if last_modified is not None:\n        last_modified = _dt_as_utc(last_modified.replace(microsecond=0))\n\n    if_range = None\n    if not ignore_if_range and http_range is not None:\n        # https://tools.ietf.org/html/rfc7233#section-\n\n问题:在 werkzeug 项目中,函数 `is_resource_modified`(定义于 sansio/http.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-01",
+  "caller": "make_conditional",
+  "file": "wrappers/response.py",
+  "question": "在 werkzeug 项目中,函数 `make_conditional`(定义于 wrappers/response.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "_get_environ, http_date, parse_etags",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] wrappers/response.py 中的 make_conditional:\ndef make_conditional(\n        self,\n        request_or_environ: WSGIEnvironment | Request,\n        accept_ranges: bool | str = False,\n        complete_length: int | None = None,\n    ) -> Response:\n        \"\"\"Make the response conditional to the request.  This method works\n        best if an etag was defined for the response already.  The `add_etag`\n        method can be used to do that.  If called without etag just the date\n        header is set.\n\n        This does nothing if the request method in the request or environ is\n        anything but GET or HEAD.\n\n        For optimal performance when handling range requests, it's recommended\n        that your response data object implements `seekable`, `seek` and `tell`\n        methods as described by :py:class:`io.IOBase`.  Objects returned by\n        :meth:`~werkzeug.wsgi.wrap_file` automatically implement those methods.\n\n        It does not remove the body of the response because that's something\n        the :meth:`__call__` function does for us automatically.\n\n        Returns self so that you can do ``return resp.make_conditional(req)``\n        but modifies the object in-place.\n\n        :param request_or_environ: a request object or WSGI environment to be\n                                   used to make the response conditional\n                                   against.\n        :param accept_ranges: This parameter dictates the value of\n                              `Accept-Ranges` header. If ``False`` (default),\n                              the header is not set. If ``True``, it will be set\n                              to ``\"bytes\"``. If it's a string, it will use this\n                              value.\n        :param complete_length: Will be used only in valid Range Requests.\n                                It will se\n\n问题:在 werkzeug 项目中,函数 `make_conditional`(定义于 wrappers/response.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-02",
+  "caller": "to_header",
+  "file": "datastructures/auth.py",
+  "question": "在 werkzeug 项目中,函数 `to_header`(定义于 datastructures/auth.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "dump_header, quote_header_value",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] datastructures/auth.py 中的 to_header:\ndef to_header(self) -> str:\n        \"\"\"Produce a ``WWW-Authenticate`` header value representing this data.\"\"\"\n        if self.token is not None:\n            return f\"{self.type.title()} {self.token}\"\n\n        if not self.parameters:\n            return self.type.title()\n\n        if self.type == \"digest\":\n            items = []\n\n            for key, value in self.parameters.items():\n                if key in {\"realm\", \"domain\", \"nonce\", \"opaque\", \"qop\"}:\n                    value = quote_header_value(value, allow_token=False)\n                else:\n                    value = quote_header_value(value)\n\n                items.append(f\"{key}={value}\")\n\n            return f\"Digest {', '.join(items)}\"\n\n        return f\"{self.type.title()} {dump_header(self.parameters)}\"\n\n问题:在 werkzeug 项目中,函数 `to_header`(定义于 datastructures/auth.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-03",
+  "caller": "parse_from_environ",
+  "file": "formparser.py",
+  "question": "在 werkzeug 项目中,函数 `parse_from_environ`(定义于 formparser.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "get_input_stream, parse_options_header",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] formparser.py 中的 parse_from_environ:\ndef parse_from_environ(self, environ: WSGIEnvironment) -> t_parse_result:\n        \"\"\"Parses the information from the environment as form data.\n\n        :param environ: the WSGI environment to be used for parsing.\n        :return: A tuple in the form ``(stream, form, files)``.\n        \"\"\"\n        stream = get_input_stream(environ, max_content_length=self.max_content_length)\n        content_length = get_content_length(environ)\n        mimetype, options = parse_options_header(environ.get(\"CONTENT_TYPE\"))\n        return self.parse(\n            stream,\n            content_length=content_length,\n            mimetype=mimetype,\n            options=options,\n        )\n\n问题:在 werkzeug 项目中,函数 `parse_from_environ`(定义于 formparser.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-04",
+  "caller": "proxy_to",
+  "file": "middleware/http_proxy.py",
+  "question": "在 werkzeug 项目中,函数 `proxy_to`(定义于 middleware/http_proxy.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "get_input_stream, is_hop_by_hop_header",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] middleware/http_proxy.py 中的 proxy_to:\ndef proxy_to(\n        self, opts: dict[str, t.Any], path: str, prefix: str\n    ) -> WSGIApplication:\n        target = urlsplit(opts[\"target\"])\n        # socket can handle unicode host, but header must be ascii\n        host = target.hostname.encode(\"idna\").decode(\"ascii\")\n\n        def application(\n            environ: WSGIEnvironment, start_response: StartResponse\n        ) -> t.Iterable[bytes]:\n            headers = list(EnvironHeaders(environ).items())\n            headers[:] = [\n                (k, v)\n                for k, v in headers\n                if not is_hop_by_hop_header(k)\n                and k.lower() not in (\"content-length\", \"host\")\n            ]\n            headers.append((\"Connection\", \"close\"))\n\n            if opts[\"host\"] == \"<auto>\":\n                headers.append((\"Host\", host))\n            elif opts[\"host\"] is None:\n                headers.append((\"Host\", environ[\"HTTP_HOST\"]))\n            else:\n                headers.append((\"Host\", opts[\"host\"]))\n\n            headers.extend(opts[\"headers\"].items())\n            remote_path = path\n\n            if opts[\"remove_prefix\"]:\n                remote_path = remote_path[len(prefix) :].lstrip(\"/\")\n                remote_path = f\"{target.path.rstrip('/')}/{remote_path}\"\n\n            content_length = environ.get(\"CONTENT_LENGTH\")\n            chunked = False\n\n            if content_length not in (\"\", None):\n                headers.append((\"Content-Length\", content_length))  # type: ignore\n            elif content_length is not None:\n                headers.append((\"Transfer-Encoding\", \"chunked\"))\n                chunked = True\n\n            try:\n                if target.scheme == \"http\":\n                    con = client.HTTPConnection(\n                        host, target.port or 80, timeout=self.timeout\n       \n\n问题:在 werkzeug 项目中,函数 `proxy_to`(定义于 middleware/http_proxy.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-05",
+  "caller": "application",
+  "file": "middleware/http_proxy.py",
+  "question": "在 werkzeug 项目中,函数 `application`(定义于 middleware/http_proxy.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "get_input_stream, is_hop_by_hop_header",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] middleware/http_proxy.py 中的 application:\ndef application(\n            environ: WSGIEnvironment, start_response: StartResponse\n        ) -> t.Iterable[bytes]:\n            headers = list(EnvironHeaders(environ).items())\n            headers[:] = [\n                (k, v)\n                for k, v in headers\n                if not is_hop_by_hop_header(k)\n                and k.lower() not in (\"content-length\", \"host\")\n            ]\n            headers.append((\"Connection\", \"close\"))\n\n            if opts[\"host\"] == \"<auto>\":\n                headers.append((\"Host\", host))\n            elif opts[\"host\"] is None:\n                headers.append((\"Host\", environ[\"HTTP_HOST\"]))\n            else:\n                headers.append((\"Host\", opts[\"host\"]))\n\n            headers.extend(opts[\"headers\"].items())\n            remote_path = path\n\n            if opts[\"remove_prefix\"]:\n                remote_path = remote_path[len(prefix) :].lstrip(\"/\")\n                remote_path = f\"{target.path.rstrip('/')}/{remote_path}\"\n\n            content_length = environ.get(\"CONTENT_LENGTH\")\n            chunked = False\n\n            if content_length not in (\"\", None):\n                headers.append((\"Content-Length\", content_length))  # type: ignore\n            elif content_length is not None:\n                headers.append((\"Transfer-Encoding\", \"chunked\"))\n                chunked = True\n\n            try:\n                if target.scheme == \"http\":\n                    con = client.HTTPConnection(\n                        host, target.port or 80, timeout=self.timeout\n                    )\n                elif target.scheme == \"https\":\n                    con = client.HTTPSConnection(\n                        host,\n                        target.port or 443,\n                        timeout=self.timeout,\n                        context=opts[\"ssl_context\n\n问题:在 werkzeug 项目中,函数 `application`(定义于 middleware/http_proxy.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-06",
+  "caller": "bind_to_environ",
+  "file": "routing/map.py",
+  "question": "在 werkzeug 项目中,函数 `bind_to_environ`(定义于 routing/map.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "_get_environ, _wsgi_decoding_dance",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] routing/map.py 中的 bind_to_environ:\ndef bind_to_environ(\n        self,\n        environ: WSGIEnvironment | Request,\n        server_name: str | None = None,\n        subdomain: str | None = None,\n    ) -> MapAdapter:\n        \"\"\"Like :meth:`bind` but you can pass it an WSGI environment and it\n        will fetch the information from that dictionary.  Note that because of\n        limitations in the protocol there is no way to get the current\n        subdomain and real `server_name` from the environment.  If you don't\n        provide it, Werkzeug will use `SERVER_NAME` and `SERVER_PORT` (or\n        `HTTP_HOST` if provided) as used `server_name` with disabled subdomain\n        feature.\n\n        If `subdomain` is `None` but an environment and a server name is\n        provided it will calculate the current subdomain automatically.\n        Example: `server_name` is ``'example.com'`` and the `SERVER_NAME`\n        in the wsgi `environ` is ``'staging.dev.example.com'`` the calculated\n        subdomain will be ``'staging.dev'``.\n\n        If the object passed as environ has an environ attribute, the value of\n        this attribute is used instead.  This allows you to pass request\n        objects.  Additionally `PATH_INFO` added as a default of the\n        :class:`MapAdapter` so that you don't have to pass the path info to\n        the match method.\n\n        .. versionchanged:: 1.0.0\n            If the passed server name specifies port 443, it will match\n            if the incoming scheme is ``https`` without a port.\n\n        .. versionchanged:: 1.0.0\n            A warning is shown when the passed server name does not\n            match the incoming WSGI server name.\n\n        .. versionchanged:: 0.8\n           This will no longer raise a ValueError when an unexpected server\n           name was passed.\n\n        .. versioncha\n\n问题:在 werkzeug 项目中,函数 `bind_to_environ`(定义于 routing/map.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-07",
+  "caller": "_encode_query_vars",
+  "file": "routing/rules.py",
+  "question": "在 werkzeug 项目中,函数 `_encode_query_vars`(定义于 routing/rules.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "_urlencode, iter_multi_items",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] routing/rules.py 中的 _encode_query_vars:\ndef _encode_query_vars(self, query_vars: t.Mapping[str, t.Any]) -> str:\n        items: t.Iterable[tuple[str, str]] = iter_multi_items(query_vars)\n\n        if self.map.sort_parameters:\n            items = sorted(items, key=self.map.sort_key)\n\n        return _urlencode(items)\n\n问题:在 werkzeug 项目中,函数 `_encode_query_vars`(定义于 routing/rules.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-08",
+  "caller": "_set_property",
+  "file": "sansio/response.py",
+  "question": "在 werkzeug 项目中,函数 `_set_property`(定义于 sansio/response.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "dump_header, parse_set_header",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] sansio/response.py 中的 _set_property:\ndef _set_property(name: str, doc: str | None = None) -> property:\n    def fget(self: Response) -> HeaderSet:\n        def on_update(header_set: HeaderSet) -> None:\n            if not header_set and name in self.headers:\n                del self.headers[name]\n            elif header_set:\n                self.headers[name] = header_set.to_header()\n\n        return parse_set_header(self.headers.get(name), on_update)\n\n    def fset(\n        self: Response,\n        value: None | (str | dict[str, str | int] | t.Iterable[str]),\n    ) -> None:\n        if not value:\n            del self.headers[name]\n        elif isinstance(value, str):\n            self.headers[name] = value\n        else:\n            self.headers[name] = dump_header(value)\n\n    return property(fget, fset, doc=doc)\n\n问题:在 werkzeug 项目中,函数 `_set_property`(定义于 sansio/response.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-09",
+  "caller": "mimetype_params",
+  "file": "sansio/response.py",
+  "question": "在 werkzeug 项目中,函数 `mimetype_params`(定义于 sansio/response.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "dump_options_header, parse_options_header",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] sansio/response.py 中的 mimetype_params:\ndef mimetype_params(self) -> dict[str, str]:\n        \"\"\"The mimetype parameters as dict. For example if the\n        content type is ``text/html; charset=utf-8`` the params would be\n        ``{'charset': 'utf-8'}``.\n\n        .. versionadded:: 0.5\n        \"\"\"\n\n        def on_update(d: CallbackDict[str, str]) -> None:\n            self.headers[\"Content-Type\"] = dump_options_header(self.mimetype, d)\n\n        d = parse_options_header(self.headers.get(\"content-type\", \"\"))[1]\n        return CallbackDict(d, on_update)\n\n问题:在 werkzeug 项目中,函数 `mimetype_params`(定义于 sansio/response.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-10",
+  "caller": "get_content_length",
+  "file": "sansio/utils.py",
+  "question": "在 werkzeug 项目中,函数 `get_content_length`(定义于 sansio/utils.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "_plain_int, parse_set_header",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] sansio/utils.py 中的 get_content_length:\ndef get_content_length(\n    http_content_length: str | None = None,\n    http_transfer_encoding: str | None = None,\n) -> int | None:\n    \"\"\"Return the ``Content-Length`` header value as an int. If the header is not given\n    or the ``Transfer-Encoding`` header is ``chunked``, ``None`` is returned to indicate\n    a streaming request. If the value is not an integer, or negative, 0 is returned.\n\n    :param http_content_length: The Content-Length HTTP header.\n    :param http_transfer_encoding: The Transfer-Encoding HTTP header.\n\n    .. versionadded:: 2.2\n    \"\"\"\n    if (\n        http_transfer_encoding is not None\n        and \"chunked\" in parse_set_header(http_transfer_encoding)\n    ) or http_content_length is None:\n        return None\n\n    try:\n        return max(0, _plain_int(http_content_length))\n    except ValueError:\n        return 0\n\n问题:在 werkzeug 项目中,函数 `get_content_length`(定义于 sansio/utils.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-11",
+  "caller": "make_environ",
+  "file": "serving.py",
+  "question": "在 werkzeug 项目中,函数 `make_environ`(定义于 serving.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "_wsgi_encoding_dance, parse_set_header",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] serving.py 中的 make_environ:\ndef make_environ(self) -> WSGIEnvironment:\n        request_url = urlsplit(self.path)\n        url_scheme = \"http\" if self.server.ssl_context is None else \"https\"\n\n        if not self.client_address:\n            self.client_address = (\"<local>\", 0)\n        elif isinstance(self.client_address, str):\n            self.client_address = (self.client_address, 0)\n\n        # If there was no scheme but the path started with two slashes,\n        # the first segment may have been incorrectly parsed as the\n        # netloc, prepend it to the path again.\n        if not request_url.scheme and request_url.netloc:\n            path_info = f\"/{request_url.netloc}{request_url.path}\"\n        else:\n            path_info = request_url.path\n\n        path_info = unquote(path_info)\n\n        environ: WSGIEnvironment = {\n            \"wsgi.version\": (1, 0),\n            \"wsgi.url_scheme\": url_scheme,\n            \"wsgi.input\": self.rfile,\n            \"wsgi.errors\": sys.stderr,\n            \"wsgi.multithread\": self.server.multithread,\n            \"wsgi.multiprocess\": self.server.multiprocess,\n            \"wsgi.run_once\": False,\n            \"werkzeug.socket\": self.connection,\n            \"SERVER_SOFTWARE\": self.server_version,\n            \"REQUEST_METHOD\": self.command,\n            \"SCRIPT_NAME\": \"\",\n            \"PATH_INFO\": _wsgi_encoding_dance(path_info),\n            \"QUERY_STRING\": _wsgi_encoding_dance(request_url.query),\n            # Non-standard, added by mod_wsgi, uWSGI\n            \"REQUEST_URI\": _wsgi_encoding_dance(self.path),\n            # Non-standard, added by gunicorn\n            \"RAW_URI\": _wsgi_encoding_dance(self.path),\n            \"REMOTE_ADDR\": self.address_string(),\n            \"REMOTE_PORT\": self.port_integer(),\n            \"SERVER_NAME\": self.server.server_address[0],\n            \"SE\n\n问题:在 werkzeug 项目中,函数 `make_environ`(定义于 serving.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-12",
+  "caller": "run_simple",
+  "file": "serving.py",
+  "question": "在 werkzeug 项目中,函数 `run_simple`(定义于 serving.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "_log, run_with_reloader",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] serving.py 中的 run_simple:\ndef run_simple(\n    hostname: str,\n    port: int,\n    application: WSGIApplication,\n    use_reloader: bool = False,\n    use_debugger: bool = False,\n    use_evalex: bool = True,\n    extra_files: t.Iterable[str] | None = None,\n    exclude_patterns: t.Iterable[str] | None = None,\n    reloader_interval: int = 1,\n    reloader_type: str = \"auto\",\n    threaded: bool = False,\n    processes: int = 1,\n    request_handler: type[WSGIRequestHandler] | None = None,\n    static_files: dict[str, str | tuple[str, str]] | None = None,\n    passthrough_errors: bool = False,\n    ssl_context: _TSSLContextArg | None = None,\n) -> None:\n    \"\"\"Start a development server for a WSGI application. Various\n    optional features can be enabled.\n\n    .. warning::\n\n        Do not use the development server when deploying to production.\n        It is intended for use only during local development. It is not\n        designed to be particularly efficient, stable, or secure.\n\n    :param hostname: The host to bind to, for example ``'localhost'``.\n        Can be a domain, IPv4 or IPv6 address, or file path starting\n        with ``unix://`` for a Unix socket.\n    :param port: The port to bind to, for example ``8080``. Using ``0``\n        tells the OS to pick a random free port.\n    :param application: The WSGI application to run.\n    :param use_reloader: Use a reloader process to restart the server\n        process when files are changed.\n    :param use_debugger: Use Werkzeug's debugger, which will show\n        formatted tracebacks on unhandled exceptions.\n    :param use_evalex: Make the debugger interactive. A Python terminal\n        can be opened for any frame in the traceback. Some protection is\n        provided by requiring a PIN, but this should never be enabled\n        on a publicly visible server.\n    :p\n\n问题:在 werkzeug 项目中,函数 `run_simple`(定义于 serving.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-13",
+  "caller": "mimetype_params",
+  "file": "test.py",
+  "question": "在 werkzeug 项目中,函数 `mimetype_params`(定义于 test.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "dump_options_header, parse_options_header",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] test.py 中的 mimetype_params:\ndef mimetype_params(self) -> t.Mapping[str, str]:\n        \"\"\"The mimetype parameters as dict.  For example if the\n        content type is ``text/html; charset=utf-8`` the params would be\n        ``{'charset': 'utf-8'}``.\n\n        .. versionadded:: 0.14\n        \"\"\"\n\n        def on_update(d: CallbackDict[str, str]) -> None:\n            self.headers[\"Content-Type\"] = dump_options_header(self.mimetype, d)\n\n        d = parse_options_header(self.headers.get(\"content-type\", \"\"))[1]\n        return CallbackDict(d, on_update)\n\n问题:在 werkzeug 项目中,函数 `mimetype_params`(定义于 test.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-14",
+  "caller": "get_environ",
+  "file": "test.py",
+  "question": "在 werkzeug 项目中,函数 `get_environ`(定义于 test.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "_urlencode, _wsgi_encoding_dance",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] test.py 中的 get_environ:\ndef get_environ(self) -> WSGIEnvironment:\n        \"\"\"Return the built environ.\n\n        .. versionchanged:: 0.15\n            The content type and length headers are set based on\n            input stream detection. Previously this only set the WSGI\n            keys.\n        \"\"\"\n        input_stream = self.input_stream\n        content_length = self.content_length\n\n        mimetype = self.mimetype\n        content_type = self.content_type\n\n        if input_stream is not None:\n            start_pos = input_stream.tell()\n            input_stream.seek(0, 2)\n            end_pos = input_stream.tell()\n            input_stream.seek(start_pos)\n            content_length = end_pos - start_pos\n        elif mimetype == \"multipart/form-data\":\n            input_stream, content_length, boundary = stream_encode_multipart(\n                CombinedMultiDict([self.form, self.files])\n            )\n            content_type = f'{mimetype}; boundary=\"{boundary}\"'\n        elif mimetype == \"application/x-www-form-urlencoded\":\n            form_encoded = _urlencode(self.form).encode(\"ascii\")\n            content_length = len(form_encoded)\n            input_stream = BytesIO(form_encoded)\n        else:\n            input_stream = BytesIO()\n\n        result: WSGIEnvironment = {}\n        if self.environ_base:\n            result.update(self.environ_base)\n\n        def _path_encode(x: str) -> str:\n            return _wsgi_encoding_dance(unquote(x))\n\n        raw_uri = _wsgi_encoding_dance(self.request_uri)\n        result.update(\n            {\n                \"REQUEST_METHOD\": self.method,\n                \"SCRIPT_NAME\": _path_encode(self.script_root),\n                \"PATH_INFO\": _path_encode(self.path),\n                \"QUERY_STRING\": _wsgi_encoding_dance(self.query_string),\n                # Non-standard, add\n\n问题:在 werkzeug 项目中,函数 `get_environ`(定义于 test.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-15",
+  "caller": "get_wsgi_headers",
+  "file": "wrappers/response.py",
+  "question": "在 werkzeug 项目中,函数 `get_wsgi_headers`(定义于 wrappers/response.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "iri_to_uri, remove_entity_headers",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] wrappers/response.py 中的 get_wsgi_headers:\ndef get_wsgi_headers(self, environ: WSGIEnvironment) -> Headers:\n        \"\"\"This is automatically called right before the response is started\n        and returns headers modified for the given environment.  It returns a\n        copy of the headers from the response with some modifications applied\n        if necessary.\n\n        For example the location header (if present) is joined with the root\n        URL of the environment.  Also the content length is automatically set\n        to zero here for certain status codes.\n\n        .. versionchanged:: 0.6\n           Previously that function was called `fix_headers` and modified\n           the response object in place.  Also since 0.6, IRIs in location\n           and content-location headers are handled properly.\n\n           Also starting with 0.6, Werkzeug will attempt to set the content\n           length if it is able to figure it out on its own.  This is the\n           case if all the strings in the response iterable are already\n           encoded and the iterable is buffered.\n\n        :param environ: the WSGI environment of the request.\n        :return: returns a new :class:`~werkzeug.datastructures.Headers`\n                 object.\n        \"\"\"\n        headers = Headers(self.headers)\n        location: str | None = None\n        content_location: str | None = None\n        content_length: str | int | None = None\n        status = self.status_code\n\n        # iterate over the headers to find all values in one go.  Because\n        # get_wsgi_headers is used each response that gives us a tiny\n        # speedup.\n        for key, value in headers:\n            ikey = key.lower()\n            if ikey == \"location\":\n                location = value\n            elif ikey == \"content-location\":\n                content_location = value\n   \n\n问题:在 werkzeug 项目中,函数 `get_wsgi_headers`(定义于 wrappers/response.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-16",
+  "caller": "restart_with_reloader",
+  "file": "_reloader.py",
+  "question": "在 werkzeug 项目中,函数 `restart_with_reloader`(定义于 _reloader.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "_log",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] _reloader.py 中的 restart_with_reloader:\ndef restart_with_reloader(self) -> int:\n        \"\"\"Spawn a new Python interpreter with the same arguments as the\n        current one, but running the reloader thread.\n        \"\"\"\n        while True:\n            _log(\"info\", f\" * Restarting with {self.name}\")\n            args = _get_args_for_reloading()\n            new_environ = os.environ.copy()\n            new_environ[\"WERKZEUG_RUN_MAIN\"] = \"true\"\n            exit_code = subprocess.call(args, env=new_environ, close_fds=False)\n\n            if exit_code != 3:\n                return exit_code\n\n问题:在 werkzeug 项目中,函数 `restart_with_reloader`(定义于 _reloader.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-17",
+  "caller": "log_reload",
+  "file": "_reloader.py",
+  "question": "在 werkzeug 项目中,函数 `log_reload`(定义于 _reloader.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "_log",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] _reloader.py 中的 log_reload:\ndef log_reload(self, filename: str | bytes) -> None:\n        filename = os.path.abspath(filename)\n        _log(\"info\", f\" * Detected change in {filename!r}, reloading\")\n\n问题:在 werkzeug 项目中,函数 `log_reload`(定义于 _reloader.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-18",
+  "caller": "from_header",
+  "file": "datastructures/auth.py",
+  "question": "在 werkzeug 项目中,函数 `from_header`(定义于 datastructures/auth.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "parse_dict_header",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] datastructures/auth.py 中的 from_header:\ndef from_header(cls, value: str | None) -> te.Self | None:\n        \"\"\"Parse an ``Authorization`` header value and return an instance, or ``None``\n        if the value is empty.\n\n        :param value: The header value to parse.\n\n        .. versionadded:: 2.3\n        \"\"\"\n        if not value:\n            return None\n\n        scheme, _, rest = value.partition(\" \")\n        scheme = scheme.lower()\n        rest = rest.strip()\n\n        if scheme == \"basic\":\n            try:\n                username, _, password = base64.b64decode(rest).decode().partition(\":\")\n            except (binascii.Error, UnicodeError):\n                return None\n\n            return cls(scheme, {\"username\": username, \"password\": password})\n\n        if \"=\" in rest.rstrip(\"=\"):\n            # = that is not trailing, this is parameters.\n            return cls(scheme, parse_dict_header(rest), None)\n\n        # No = or only trailing =, this is a token.\n        return cls(scheme, None, rest)\n\n问题:在 werkzeug 项目中,函数 `from_header`(定义于 datastructures/auth.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-19",
+  "caller": "to_header",
+  "file": "datastructures/auth.py",
+  "question": "在 werkzeug 项目中,函数 `to_header`(定义于 datastructures/auth.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "dump_header",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] datastructures/auth.py 中的 to_header:\ndef to_header(self) -> str:\n        \"\"\"Produce an ``Authorization`` header value representing this data.\n\n        .. versionadded:: 2.0\n        \"\"\"\n        if self.type == \"basic\":\n            value = base64.b64encode(\n                f\"{self.username}:{self.password}\".encode()\n            ).decode(\"ascii\")\n            return f\"Basic {value}\"\n\n        if self.token is not None:\n            return f\"{self.type.title()} {self.token}\"\n\n        return f\"{self.type.title()} {dump_header(self.parameters)}\"\n\n问题:在 werkzeug 项目中,函数 `to_header`(定义于 datastructures/auth.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-20",
+  "caller": "from_header",
+  "file": "datastructures/auth.py",
+  "question": "在 werkzeug 项目中,函数 `from_header`(定义于 datastructures/auth.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "parse_dict_header",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] datastructures/auth.py 中的 from_header:\ndef from_header(cls, value: str | None) -> te.Self | None:\n        \"\"\"Parse a ``WWW-Authenticate`` header value and return an instance, or ``None``\n        if the value is empty.\n\n        :param value: The header value to parse.\n\n        .. versionadded:: 2.3\n        \"\"\"\n        if not value:\n            return None\n\n        scheme, _, rest = value.partition(\" \")\n        scheme = scheme.lower()\n        rest = rest.strip()\n\n        if \"=\" in rest.rstrip(\"=\"):\n            # = that is not trailing, this is parameters.\n            return cls(scheme, parse_dict_header(rest), None)\n\n        # No = or only trailing =, this is a token.\n        return cls(scheme, None, rest)\n\n问题:在 werkzeug 项目中,函数 `from_header`(定义于 datastructures/auth.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-21",
+  "caller": "to_header",
+  "file": "datastructures/csp.py",
+  "question": "在 werkzeug 项目中,函数 `to_header`(定义于 datastructures/csp.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "dump_csp_header",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] datastructures/csp.py 中的 to_header:\ndef to_header(self) -> str:\n        \"\"\"Convert the stored values into a cache control header.\"\"\"\n        from ..http import dump_csp_header\n\n        return dump_csp_header(self)\n\n问题:在 werkzeug 项目中,函数 `to_header`(定义于 datastructures/csp.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-22",
+  "caller": "contains_raw",
+  "file": "datastructures/etag.py",
+  "question": "在 werkzeug 项目中,函数 `contains_raw`(定义于 datastructures/etag.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "unquote_etag",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] datastructures/etag.py 中的 contains_raw:\ndef contains_raw(self, etag: str) -> bool:\n        \"\"\"When passed a quoted tag it will check if this tag is part of the\n        set.  If the tag is weak it is checked against weak and strong tags,\n        otherwise strong only.\"\"\"\n        from ..http import unquote_etag\n\n        etag, weak = unquote_etag(etag)\n        if weak:\n            return self.contains_weak(etag)\n        return self.contains(etag)\n\n问题:在 werkzeug 项目中,函数 `contains_raw`(定义于 datastructures/etag.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-23",
+  "caller": "content_length",
+  "file": "datastructures/file_storage.py",
+  "question": "在 werkzeug 项目中,函数 `content_length`(定义于 datastructures/file_storage.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "_plain_int",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] datastructures/file_storage.py 中的 content_length:\ndef content_length(self) -> int:\n        \"\"\"The content-length sent in the header.  Usually not available\"\"\"\n        if \"content-length\" in self.headers:\n            try:\n                return _plain_int(self.headers[\"content-length\"])\n            except ValueError:\n                pass\n\n        return 0\n\n问题:在 werkzeug 项目中,函数 `content_length`(定义于 datastructures/file_storage.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-24",
+  "caller": "extend",
+  "file": "datastructures/headers.py",
+  "question": "在 werkzeug 项目中,函数 `extend`(定义于 datastructures/headers.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "iter_multi_items",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] datastructures/headers.py 中的 extend:\ndef extend(\n        self,\n        arg: (\n            Headers\n            | MultiDict[str, t.Any]\n            | cabc.Mapping[str, t.Any | list[t.Any] | tuple[t.Any, ...] | set[t.Any]]\n            | cabc.Iterable[tuple[str, t.Any]]\n            | None\n        ) = None,\n        /,\n        **kwargs: str,\n    ) -> None:\n        \"\"\"Extend headers in this object with items from another object\n        containing header items as well as keyword arguments.\n\n        To replace existing keys instead of extending, use\n        :meth:`update` instead.\n\n        If provided, the first argument can be another :class:`Headers`\n        object, a :class:`MultiDict`, :class:`dict`, or iterable of\n        pairs.\n\n        .. versionchanged:: 1.0\n            Support :class:`MultiDict`. Allow passing ``kwargs``.\n        \"\"\"\n        if arg is not None:\n            for key, value in iter_multi_items(arg):\n                self.add(key, value)\n\n        for key, value in iter_multi_items(kwargs):\n            self.add(key, value)\n\n问题:在 werkzeug 项目中,函数 `extend`(定义于 datastructures/headers.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-25",
+  "caller": "display_console",
+  "file": "debug/__init__.py",
+  "question": "在 werkzeug 项目中,函数 `display_console`(定义于 debug/__init__.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "render_console_html",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] debug/__init__.py 中的 display_console:\ndef display_console(self, request: Request) -> Response:\n        \"\"\"Display a standalone shell.\"\"\"\n        if not self.check_host_trust(request.environ):\n            return SecurityError()  # type: ignore[return-value]\n\n        if 0 not in self.frames:\n            if self.console_init_func is None:\n                ns = {}\n            else:\n                ns = dict(self.console_init_func())\n            ns.setdefault(\"app\", self.app)\n            self.frames[0] = _ConsoleFrame(ns)\n        is_trusted = bool(self.check_pin_trust(request.environ))\n        return Response(\n            render_console_html(secret=self.secret, evalex_trusted=is_trusted),\n            mimetype=\"text/html\",\n        )\n\n问题:在 werkzeug 项目中,函数 `display_console`(定义于 debug/__init__.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-26",
+  "caller": "get_resource",
+  "file": "debug/__init__.py",
+  "question": "在 werkzeug 项目中,函数 `get_resource`(定义于 debug/__init__.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "send_file",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] debug/__init__.py 中的 get_resource:\ndef get_resource(self, request: Request, filename: str) -> Response:\n        \"\"\"Return a static resource from the shared folder.\"\"\"\n        path = join(\"shared\", basename(filename))\n\n        try:\n            data = pkgutil.get_data(__package__, path)\n        except OSError:\n            return NotFound()  # type: ignore[return-value]\n        else:\n            if data is None:\n                return NotFound()  # type: ignore[return-value]\n\n            etag = str(adler32(data) & 0xFFFFFFFF)\n            return send_file(\n                BytesIO(data), request.environ, download_name=filename, etag=etag\n            )\n\n问题:在 werkzeug 项目中,函数 `get_resource`(定义于 debug/__init__.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-27",
+  "caller": "check_host_trust",
+  "file": "debug/__init__.py",
+  "question": "在 werkzeug 项目中,函数 `check_host_trust`(定义于 debug/__init__.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "host_is_trusted",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] debug/__init__.py 中的 check_host_trust:\ndef check_host_trust(self, environ: WSGIEnvironment) -> bool:\n        return host_is_trusted(environ.get(\"HTTP_HOST\"), self.trusted_hosts)\n\n问题:在 werkzeug 项目中,函数 `check_host_trust`(定义于 debug/__init__.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-28",
+  "caller": "log_pin_request",
+  "file": "debug/__init__.py",
+  "question": "在 werkzeug 项目中,函数 `log_pin_request`(定义于 debug/__init__.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "_log",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] debug/__init__.py 中的 log_pin_request:\ndef log_pin_request(self, request: Request) -> Response:\n        \"\"\"Log the pin if needed.\"\"\"\n        if not self.check_host_trust(request.environ):\n            return SecurityError()  # type: ignore[return-value]\n\n        if self.pin_logging and self.pin is not None:\n            _log(\n                \"info\", \" * To enable the debugger you need to enter the security pin:\"\n            )\n            _log(\"info\", \" * Debugger pin code: %s\", self.pin)\n        return Response(\"\")\n\n问题:在 werkzeug 项目中,函数 `log_pin_request`(定义于 debug/__init__.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ },
+ {
+  "id": "CG-29",
+  "caller": "displayhook",
+  "file": "debug/console.py",
+  "question": "在 werkzeug 项目中,函数 `displayhook`(定义于 debug/console.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。",
+  "gold": "debug_repr",
+  "difficulty": "medium",
+  "category": "callgraph",
+  "gen_prompt": "你是代码调用关系分析助手。根据提供的信息准确回答问题,只列出函数名。\n\n[函数源码] debug/console.py 中的 displayhook:\ndef displayhook(obj: object) -> None:\n        try:\n            stream = _stream.get()\n        except LookupError:\n            return _displayhook(obj)  # type: ignore\n\n        # stream._write bypasses escaping as debug_repr is\n        # already generating HTML for us.\n        if obj is not None:\n            _ipy.get().locals[\"_\"] = obj\n            stream._write(debug_repr(obj))\n\n问题:在 werkzeug 项目中,函数 `displayhook`(定义于 debug/console.py)调用了哪些【定义在其它文件】的项目内函数?只列出函数名,逐条列全。\n请直接回答。"
+ }
+]
